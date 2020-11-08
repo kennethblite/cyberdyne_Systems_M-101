@@ -1,0 +1,124 @@
+﻿#chatWithChatmanHeading{
+	background-image: url('../images/PersonalitiesPage/HeadingText.png');
+}
+#chatWithChatmanMain{
+	width: 970px;
+	height: 549px;
+	padding: 0px 2px 2px 2px;
+}
+#row1{
+	height: 50%;
+}
+#freeSpace{
+	height: 100%;
+	width: 5px;
+	float: left;
+}
+#row2{
+	height: 50%;
+}
+.area{
+	background-color: #CCCCCC;
+	border-radius: 17px;
+	float: left;
+	padding: 4px;
+	margin-top: 4px;
+}
+.areaContentWrapper{
+	background-color: #000000;
+	border-radius: 15px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/*
+ * Personality area
+ */
+#personalityArea{
+	width: 474px;
+	height: 262px;
+	float: left;
+}
+#personalityAreaWrapper{
+	background: url('../images/PersonalitiesPage/PersonalityAreaBackgound.png') no-repeat #280b0b;
+	background-position: 0px 149px;
+}
+#personalityAreaHeading{
+	background-image: url('../images/PersonalitiesPage/personalityAreaHeading.png');
+}
+#personalityListControl{	
+	border-radius: 15px;
+	width: 100%;
+	height: 160px;
+	overflow: hidden;
+	padding-top: 20px;
+}
+#personalityStuffButtons{
+	position: absolute;	
+	bottom: 13px;
+	width: 100%;
+	height: 20px;
+}
+#personalityStuffButtons .pushButtonBlue{
+	width: 120px;
+}
+#newPersonalityButton{
+	right: 10px;
+}
+#downloadButton{
+	left: 10px;
+}
+
+/*
+ * Chatman Brainpower Area
+ */
+#chatmanBrainpowerArea{	
+	width: 474px;
+	height: 262px;
+	float: left;	
+}
+#chatmanBrainpowerHeading{
+	background-image: url('../images/chatmanBrainpowerHeading.png');
+}
+
+
+/*
+ * ActionBrowser control
+ */
+#actionBrowserArea{
+	width: 961px;
+	height: 266px;
+}
+#actionBrowserWrapper{
+	width: 100%;
+	height: 100%;
+}
+#actionBrowserHeading{
+	height: 33px;
+}
+#actionBrowserContent{
+	background: url('../images/PersonalitiesPage/ChitChatsBackground.png') no-repeat  #0d0d0d;	
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	height: 233px;
+}
+#actionListControl{
+	width: 100%;
+	height: 182px;
+	overflow: hidden;
+}
+
+/* RTL support */
+.RTL #newPersonalityButton{
+	left: 10px;
+	right: auto;
+}
+.RTL #downloadButton{
+	right: 10px;
+	left: auto;
+}
+.RTL #personalityArea, 
+.RTL #freeSpace, 
+.RTL #chatmanBrainpowerArea{
+	float: right;
+}

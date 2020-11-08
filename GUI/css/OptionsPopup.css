@@ -1,0 +1,47 @@
+﻿#optionsContent{	
+	padding: 7px 2px;
+	width: 360px;
+	font-weight: bold;
+}
+.buttonContainer{
+	margin-top: 17px;
+}
+#timeSelectTable{
+	margin-left: 28px;
+	margin-right: 20px;
+}
+#runOnButton, #speakButton, #resetPersonalitiesButton, #resetAllDataButton{
+	font-size: 16pt;
+	font-weight: bold;
+	position: relative;
+	padding: 7px 13px;
+	width: 302px;
+}
+#saveButton{
+	right: 2px;
+	bottom: 0px;
+}
+#saveButtonContainer{
+	height: 80px;
+}
+.checkMark{
+	visibility: hidden;
+	top: 6px;
+	left: -3px;
+}
+.checked{
+	visibility: visible;
+}
+.timeSelectorControl{
+	height: 42px;
+	width: 215px;
+}
+
+/* RTL support */
+.RTL #saveButton{
+	right:auto;
+	left: 2px;
+}
+.RTL .checkMark{
+	left: 3px;
+}

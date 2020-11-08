@@ -1,0 +1,22 @@
+﻿#personalitySearchContainer{
+	width: 220px;
+	height: 60px;
+}
+#personalitySearchContainer > div{
+	margin-top: 5px;
+}
+#personalitySearchWords{
+	color: #2D6AB4;
+}
+.selectedSearchWord{
+	font-weight: bold;
+}
+#personalitySearchTextBox{
+	width: 150px;
+	height: 18px;
+}
+#personalitySearchSelect{
+	display: none;
+	width: 154px;
+	height: 24px;
+}

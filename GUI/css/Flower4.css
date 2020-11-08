@@ -1,0 +1,38 @@
+﻿.flower4Container{
+	width: 27px;
+	height: 128px;
+	text-align: center;	
+	direction: ltr !important;
+}
+.flower4Container *{
+	direction: ltr !important;
+}
+.flower4Inner{
+	position: absolute;
+	top: 7px;
+	left: 9px;
+	-webkit-transition: all 0.7s linear;
+	-webkit-transform-origin: 5px 6px;
+}
+.flower4Base{
+	left: 14px;
+	top: 26px;
+}
+
+@-webkit-keyframes flower4spin{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);		
+	}
+}
+
+@-webkit-keyframes flower4spinBack{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(-360deg);		
+	}
+}

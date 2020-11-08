@@ -1,0 +1,102 @@
+﻿#chatWithFriendsHeading{
+	background-image: url('../images/ChatWithFriendsPage/HeadingText.png');
+}
+#chatWithFriendsMain{
+	width: 970px;
+	height: 530px;
+	padding: 0px 2px 2px 2px;
+}
+#advertiseContainer{
+	text-align: center;
+	margin-top: 20px;
+}
+#topViewsContainer{
+	padding: 20px 87px;
+	height: 120px;
+	margin-top: 20px;
+	text-align: center;
+}
+#bottomViewsContainer{
+	margin-top: 25px;
+	padding: 0px 50px 20px;
+	height: 133px;
+	text-align: center;
+	margin-left: 42px;
+}
+.softwareView{
+	height: 120px;
+	width: 120px;
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.softwareView *{
+	cursor: pointer;
+}
+.image{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;	
+}
+#bottomViewsContainer > .softwareView{
+	margin-left: -2px;
+	margin-right: 34px;
+} 
+#facebookView, #gmailView{
+	width: 200px;
+}
+.middleText{
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+	width: 100%;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.descriptionContainter{
+	text-align: center;
+	margin-top: 5px;
+}
+.exclamationPoint{
+	margin-left: 10px;
+	top: 3px;
+	display: none;
+}
+#bottom{
+	margin-top: 80px;
+	padding: 10px 20px;
+}
+#bottom .labelText{
+	float: right;
+}
+.labelText{
+	cursor: pointer;
+}
+#macButtons{
+	display: none;
+	position: absolute;
+	top: -34px;
+}
+.browserIcon{
+	top: 16px;
+	margin-left: 10px;
+}
+
+/* RTL support */
+.RTL #anotherProgramText{
+	float: left;
+}
+.RTL  #bottomViewsContainer > .softwareView{
+	margin-left: 34px;
+	margin-right: -2px;
+} 
+.RTL #installExensionsButton{
+	right: 10px;
+}
+.RTL #bottomViewsContainer{
+	margin-left: 0;
+	margin-right: 40px;
+}

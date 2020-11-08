@@ -1,0 +1,104 @@
+﻿.chatmanFigureContainer{
+	width: 157px;
+	height: 183px;
+	padding-top: 15px;
+	padding-left: 25px;	
+	padding-right: 25px;	
+}
+.chatmanFigureContainer > *{
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.leftEyeBack{
+	position: absolute;
+	top: 47px;
+	left: 43px;
+}
+.rightEyeBack{
+	position: absolute;
+	top: 47px;
+	right: 43px;	
+}
+.leftEye{
+	position: absolute;
+	top: 62px;
+	left: 50px;
+}
+.rightEye{
+	position: absolute;
+	top: 62px;
+	right: 49px;
+}
+
+.leftHand{
+	position: absolute;
+	top: 72px;
+	left: 2px;
+	-webkit-transform-origin: right top;
+}
+.rightHand{
+	position: absolute;
+	top: 72px;
+	right: 0px;
+	-webkit-transform-origin: left top;
+}
+.leftEar{
+	position: absolute;
+	top: 0px;
+	left: 32px;
+	-webkit-transform-origin: center bottom;
+}
+.rightEar{
+	position: absolute;
+	right: 32px;
+	top: 0px;
+	-webkit-transform-origin: center bottom;
+}
+.leftEyelid{
+	position: absolute;
+	left: -15px;
+	bottom: 0px;
+}
+.rightEyelid{
+	position: absolute;
+	right: -15px;
+	bottom: 0px;
+}
+.eyelidsContainer{
+	position: absolute;
+	width: 127px;
+	top: 48px;
+	left: 40px;
+	overflow: hidden;
+	height: 15px;	
+}
+.mouth{
+	position: absolute;
+	width: 113px;
+	height: 30px;
+	top: 115px;
+	left: 53px;
+}
+.chatmanLed{
+	width: 7px;
+	height: 7px;
+	border-radius: 7px;
+	background-color: #F22020;
+	float: left;
+	margin: 3px 3px 0px;
+	visibility: hidden;
+}
+.leftEyeClicker{
+	position: absolute;
+	width: 45px;
+	height: 40px;
+	top: 53px;
+	left: 48px;
+}
+.rightEyeClicker{
+	position: absolute;
+	width: 45px;
+	height: 40px;
+	top: 53px;
+	right: 48px;
+}

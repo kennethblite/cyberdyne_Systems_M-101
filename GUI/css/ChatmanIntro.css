@@ -1,0 +1,1494 @@
+﻿*{
+	/*-webkit-backface-visibility: hidden;*/
+}
+#mainBox{
+	background-color: #e5e5e5;
+	border-spacing: 3px;
+	border: 2px solid #5D5F59;
+	width: 338px;	
+	padding: 5px;
+}
+#topPanel{
+	width: 100%;
+	height: 37px;
+	top: 4px;
+}
+#mainPanel{
+	border-radius: 7px;
+	width: 100%;
+	height: 435px;
+	background-color: White;
+	overflow: hidden;
+}
+#scenesContainer{
+	left: 0px;
+	height: 100%;
+	width: 9000px;
+	-webkit-transition: left 1s ease-in-out;
+}
+#connectChatmanMessageBackground{
+	background-color: #afd2ea;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	display: none;
+	opacity: 0.65;
+}
+#connectMessageText{	
+	font-size: 24pt;
+	width: 100%;
+	position: absolute;
+	top: 160px;
+	text-align: center;	
+	display: none;
+	z-index: 4;
+}
+#roundedRect{
+	border: 5px solid #afd2ea;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	display: inline-block;
+	padding: 10px;
+}
+.pushButtonBlue{
+	font-size: 14pt;
+}
+.pushButtonBlue, .pushButtonRed{
+	font-size: 14pt;
+	border-width: 2px;
+}
+.pushButtonBlue:active, .pushButtonRed:active{
+	border-width: 2px;
+}
+/*
+ * Top Panel
+ */
+#topPanel > *{
+	float: left;
+}
+.separator{
+	background-color: #f4f4f4;
+	width: 2px;
+	height: 22px;
+	margin-top: 2px;
+	margin-left: 7px;
+	margin-right: 7px;
+}
+#chatmanLogo{
+	background: url('../images/ChatmanLogo.png');
+	background-size: 100%;
+	width: 70px;
+	height: 37px;
+	top: -7px;
+	margin-left: 0px;
+	margin-right: 5px;
+}
+#chatmanStateControl{	
+	width: 14px;
+	height: 14px;
+	padding: 7px 0px;
+}
+#volumeControl{
+	
+}
+
+/* Link */
+.link{
+	width: 30px;
+	height: 30px;
+	top: -4px;
+	-webkit-transform: scale(1);
+	-webkit-transition: all 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	background-size: 100%;
+}
+.link:hover{
+	-webkit-transform: scale(1.2);
+}
+#parentsInformationLink{
+	background: url('../images/toolsBarParents.png') center no-repeat;
+}
+#fixProblemLink{
+	background: url('../images/toolsBarFixAProblem.png') center no-repeat;
+	/*width: 30px;*/
+}
+#faqLink{
+	background: url('../images/toolsBarQuestion.png') center no-repeat;
+	/*width: 28px;*/
+}
+#closeCross{
+	background: url('../images/Intro/redCross.png') center no-repeat no-repeat;
+	width: 13px;
+}
+
+/*
+ * SCENES
+ */
+
+.scene{
+	height: 100%;
+	width: 658px;
+	float: left;
+}
+.sceneContent{
+	width: 338px;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 2;	
+}
+.sceneContentBottom{
+	background-color: #e6e6e6;
+	width: 100%;
+	height: 97px;
+	bottom: 0px;
+	left: 0px;
+	padding-top: 12px;
+}
+.scene *{
+	position: absolute;
+}
+.textScroller{
+	margin-top: 30px;
+}
+#runOnStartupCheckBoxControl{
+	top: 417px;
+	left: 14px;
+}
+.playAgainLink{
+	width: 100%;
+	text-align: center;
+	top: 75px;		
+	font-weight: bold;
+	font-size: 11pt;
+}
+/*-----  Scenes Buttons  --------*/
+.buttonContainer{
+	text-align: center;
+	width: 100%;
+}
+.buttonContainer > *{
+	font-size: 14pt;
+	padding: 6pt 8pt !important;
+	position: relative !important;	
+}
+.backButton{
+	font-size: 13pt !important;
+	left: 15px;
+	width: 100px; 
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.nextButton{
+	font-size: 13pt !important;
+	right: 18px;
+	width: 160px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.nextButton *, .backButton *{
+	position: relative;
+}
+.backArrow{
+	margin-top: 3px;
+	margin-right: 5px;
+	position: relative;
+}
+.nextArrow{
+	margin-top: 3px;
+	margin-left: 5px;
+}
+.mainButton{
+	top: 11px;
+	left: 107px;
+}
+.scene .personalityName{
+	margin-top: -20px;
+}
+.navigationButtonLocked{
+	background-color: #808080 !important;
+}
+/*-----  Scenes Text  --------*/
+.bottomText{
+	top: 52px;
+	bottom: 5px;
+	left: 0px;
+	right: 0px;
+	text-align: justify;
+	padding: 0px 15px;
+}
+.introTextBox{
+	border-radius: 15px;
+	border: 1px solid #ff0000;
+	box-shadow: 3px 3px rgba(204, 204, 204, 0.7);
+	font-size: 18pt;
+	left: 26px;
+	top: 190px;
+	width: 77%;
+	padding: 20px 8px 0px 15px;	
+}
+
+/*
+ * SCENE 1
+ */
+#scene1Content{
+	background: url('../images/Intro/Scene1-Welcome.png') no-repeat;
+	background-position: center 49px;
+}
+#scene1Images{
+	background:  url('../images/Intro/chatmanFigure.png') no-repeat,
+				 url('../images/Intro/Scene1.png') no-repeat;
+	background-position: 79px 206px, -30px 203px;	
+}
+#scene1Sun{
+	top: -135px;
+	left: -267px;
+}
+#readyButton{
+	bottom: 60px;
+	left: 105px;
+	font-size: 12pt;
+	height: auto;
+	width: 117px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#lemmeText{
+	width: 341px;
+	text-align: center;
+	bottom: 25px;	
+	font-size: 11pt;
+	position: absolute;
+}
+#scene1 .sceneContentBottom{
+	background-color: transparent;
+}
+#windTurner{
+	top: -130px;
+	right: -120px;
+}
+#flower21{
+	width: 29px;
+	height: 41px;
+	top: 223px;
+	left: 1px;
+	overflow: hidden;
+}
+#flower22{
+	width: 29px;
+	height: 46px;
+	top: 223px;
+	left: 211px;
+	overflow: hidden;
+}
+#flower23{
+	width: 29px;
+	height: 81px;
+	top: 122px;
+	left: 485px;
+	overflow: hidden;
+}
+#flower11{
+	width: 29px;
+	height: 90px;
+	top: 157px;
+	left: 393px;
+	overflow: hidden;
+}
+#flower12{
+	width: 29px;
+	height: 45px;
+	top: 222px;
+	left: 555px;
+	overflow: hidden;
+}
+/* Start animation */
+#scene1StartAnim{
+	z-index: 5;
+	background-color: #FFFFFF;	
+	/*display: none;*/
+}
+#cloud1{
+	left: 64px;
+	top: 122px;
+	-webkit-transform: scale(1.8);
+	-webkit-transition: all 4s  linear;
+	-webkit-backface-visibility: hidden;
+}
+#cloud2{
+	left: 19px;
+	top: 152px;
+	-webkit-transform: scale(0.5);
+	-webkit-transition: all 4s  linear;
+	-webkit-backface-visibility: hidden;
+}
+#cloud3{
+	left: 73px;
+	top: 141px;
+	-webkit-transform: scale(1.5);
+	-webkit-transition: all 4s  linear;
+	-webkit-backface-visibility: hidden;
+}
+#fan{
+	left: -70px;
+	top: -40px;
+	-webkit-transform: rotate(-90deg);
+	-webkit-transition: all 4s  linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-origin: 50% 100%;
+}
+#runOnStartupCheckBoxControl{
+	z-index: 100;
+}
+@-webkit-keyframes rotationAnimation{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);		
+	}
+}
+.scene1SunAnimation{
+	-webkit-animation: rotationAnimation 10s infinite linear;
+}
+
+/*
+ * SCENE 2
+ */
+#scene2Content{
+	background:  url('../images/Intro/Scene2-Okay.png') no-repeat;
+	background-position: 65% 43px;	
+}
+#scene2MainImage{
+	left: -136px;
+	bottom: -11px;
+}
+#scene2Text, #scene2Text1{
+	width: 100%;
+	top: 174px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#scene2ButtonContainer{
+	top: 326px;
+	-webkit-transition: top 0.4s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+#yesButton, #noButton{
+	min-width: 80px;
+	position: relative;
+}
+#noButton{
+	margin-left: 15px;
+}
+#skipButton{
+	font-size: 8pt;
+	right: 10px;
+	visibility: hidden;
+}
+#scene2StoryScroller{
+	width: 100%;
+	height: 64%;
+}
+.scene2WindTurnerAnimation{
+	-webkit-animation: rotationAnimation 7s infinite linear;
+}
+#whiteCirclesLargeScene2{
+	left: 133px;
+	top: 32px;
+	-webkit-transition: left 3s ease-in-out; 
+	-webkit-backface-visibility: hidden;
+}
+#whiteCirclesSmallScene2{
+	left: 107px;
+	top: 59px;
+	-webkit-transition: left 0.3s ease-in-out; 
+	-webkit-backface-visibility: hidden;
+}
+/*
+ * SCENE 3
+ */
+#scene3{
+	width: 604px;
+}
+#scene3Content{
+	background:  url('../images/Intro/Scene3-What.png') no-repeat;
+	background-position: center 59px;	
+}
+#scene3MainImage{
+	left: -157px;
+	top: -58px;
+}
+/* white circles and animation */
+#whiteCirclesLarge{
+	left: 130px;
+	top: 32px;
+	-webkit-transition: left 3s ease-in-out; 
+	-webkit-backface-visibility: hidden;
+}
+#whiteCirclesSmall{
+	left: 77px;
+	top: 59px;
+	-webkit-transition: left 0.3s ease-in-out; 
+	-webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes circlesAnim{
+	0%{		
+	}
+	50%{
+		left: -115px;
+	}
+	100%{
+		left: -115px;
+	}
+}
+@-webkit-keyframes circlesSmallAnim{
+	0%{		
+	}
+	15%{
+		left: -115px;
+	}
+	100%{
+		left: -115px;
+	}
+}
+/* ballons and animation */
+#ballonOrange, #ballonOrangeSmall{
+	top: 217px;
+	left: 629px;
+	-webkit-transition: left 0.3s linear; 
+	-webkit-backface-visibility: hidden;
+}
+#ballonOrangeSmall{
+	-webkit-transform: scale(0.7);
+	left: 635px;
+}
+#ballonRed, #ballonRedSmall1, #ballonRedSmall2{
+	top: 249px;
+	left: 517px;
+	-webkit-transition: left 0.3s linear; 
+	-webkit-backface-visibility: hidden;
+}
+#ballonRedSmall1{
+	left: 502px;
+	-webkit-transform: scale(0.7);
+}
+#ballonRedSmall2{
+	left: 522px;
+	-webkit-transform: scale(0.7);
+}
+
+@-webkit-keyframes balooonsFly{
+	0%{		
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	15%{
+		margin-left: -20px;
+		margin-top: -35px;
+	}
+	30%{
+		margin-left: 0px;
+		margin-top: -70px;
+	}
+	45%{
+		margin-left: 20px;
+		margin-top: -105px;
+	}
+	60%{
+		margin-left: -10px;
+		margin-top: -140px;
+	}
+	75%{
+		margin-left: 30px;
+		margin-top: -175px;
+	}
+	100%{
+		margin-left: 10px;
+		margin-top: -220px;
+	}
+}
+
+/*
+ * SCENE 4
+ */
+#scene4Content{
+	background:  url('../images/Intro/Scene4-Are.png') no-repeat;
+	background-position: center 59px;
+	z-index: 10;	
+}
+#scene4MainImage{
+	left: -263px;
+	top: -16px;
+}
+#scene4ButtonContainer{
+	top: 330px;
+	-webkit-transition: top 0.4s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+#girlButton{
+	margin-left: 21px;
+}
+#flower31{
+	width: 29px;
+	height: 146px;
+	top: 157px;
+	left: 393px;
+	overflow: hidden;
+}
+#flower32{
+	width: 29px;
+	height: 146px;
+	top: 38px;
+	left: 464px;
+	overflow: hidden;
+}
+
+/*
+ * SCENE 5
+ */
+#scene5{
+	width: 638px;
+}
+#scene5Content{	
+	background:  url('../images/Intro/Scene5-Choose.png') no-repeat;
+	background-position: center 30px;
+}
+#scene5FirstImage{
+	left: -13px;
+	top: 125px;
+}
+#scene5MainImage{
+	left: -255px;
+	top: 2px;
+	z-index: 2;
+}
+#scene5Text1{
+	width: 80%;
+	top: 135px;
+	text-align: center;
+	padding: 0 10%;
+	font-weight: bold;
+}
+#chooseChatmateContainer{
+	width: 100%;
+	top: 195px;
+	text-align: center;
+}
+#chooseChatmateContainer > *{
+	position: relative;
+}
+.miniPersonalityControl{
+	display: inline-block;
+	width: 95px;
+	height: 120px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+.miniPersonalityControl:hover{
+	background-color: #e6e6e6;
+	border: 1px solid #b8b8b8;	
+}
+.miniPersonalityControlSelected{
+	background-color: #cccccc;
+	border: 1px solid #afafaf;	
+}
+
+/*
+ * SCENE 6
+ */
+#scene6 {
+	width: 631px;
+}
+#scene6Content{	
+	background:  url('../images/Intro/Scene6-Give.png') no-repeat;
+	background-position: center 80px;
+}
+#bigScene678Img{
+	left: -190px;
+	top: -10px;
+	z-index: 1;
+}
+#scene6Give{
+	left: 360px;
+	top: 10px;
+}
+#whiteBall1{
+	width: 23px;
+	height: 23px;
+	left: 59px;
+	top: -4px;
+	-webkit-transform-origin: 12px 14px;
+}
+#whiteBall2{
+	width: 15px;
+	height: 15px;
+	left: 30px;
+	top: 79px;	
+	-webkit-transform-origin: 5px 6px;
+}
+#whiteBall3{
+	width: 15px;
+	height: 15px;
+	left: 41px;
+	top: 166px;	
+	-webkit-transform-origin: 5px 6px;
+}
+.whiteBall{
+	width: 100%;
+	height: 100%;
+}
+#ballsOrange, #ballsBlue{
+	top: 59px;
+	left: 532px;
+	-webkit-transition: all 3s linear;
+	-webkit-backface-visibility: hidden;
+}
+#ballsBlue{
+	left: 502px;
+}
+
+@-webkit-keyframes ballsFalling{
+	0%{		
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	15%{
+		margin-left: -20px;
+		margin-top: 30px;
+	}
+	30%{
+		margin-left: 0px;
+		margin-top: 60px;
+	}
+	45%{
+		margin-left: 20px;
+		margin-top: 90px;
+	}
+	60%{
+		margin-left: 0px;
+		margin-top: 120px;
+	}
+	75%{
+		margin-left: -20px;
+		margin-top: 150px;
+	}
+	100%{
+		margin-left: 0px;
+		margin-top: 250px;
+	}
+}
+@-webkit-keyframes ballRotate{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);		
+	}
+}
+
+#personalityIcon{	
+	height: 79px;
+	left: 125px;
+	top: -20px;
+	width: 79px;
+}
+#scene6 .personalityName{
+	display: none;
+}
+
+/*
+ * SCENE 7
+ */
+#scene7{
+	width: 601px;
+}
+#scene7Content{	
+	background:  url('../images/Intro/Scene7-Thats.png') no-repeat;
+	background-position: center 59px;
+}
+#scene7MainImage{
+	left: -176px;
+	top: -109px;
+}
+#scene7ThatsImage{
+	top: 32px;
+	left: 384px;
+}
+#flower41{
+	width: 29px;
+	height: 146px;
+	top: 286px;
+	left: 275px;
+	overflow: hidden;
+}
+#flower42{
+	width: 29px;
+	height: 146px;
+	top: 264px;
+	left: 306px;
+	overflow: hidden;
+}
+/*
+ * SCENE 8
+ */
+#chatmanConversationControl *{
+	position: relative;	
+}
+#scene8MainImage{
+	left: 360px;
+	top: 2px;
+}
+#chatmanConversationControl{	
+	top: 97px;
+	left: 3px;
+	display: none;
+}
+#chatWithChatmanButton{
+	position: absolute;
+	top: -90px;
+}
+/* conversation control html's styles */
+.chatmanConversationContainer{
+	width: 323px;
+	height: 207px;
+}
+.chatContainer{
+	height: 295px;
+	border-radius: 15px;
+	background-color: #ffffff;
+	padding-left: 5px;
+	padding-right: 25px;
+	overflow: hidden;
+}
+.calloutsContainer{	
+	border-radius: 15px;
+	background-color: #ffffff;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 70px;	
+	top: 0px;
+	height: 68px;
+	overflow-y: scroll;
+}
+.scrollBar{
+	width: 18px;
+	height: 100%;
+	background-color: #F2F2F2;
+	border: 1px solid #CCCCCC;
+	border-radius: 15px;
+	position: absolute;
+	top: 0px;
+	right: 0px;	
+}
+.upArrow, .downArrow{
+	width: 13px;
+	height: 8px;
+	position: absolute;
+	left: 2px;
+}
+.upArrow{
+	background: url('../images/conversationSliderUpArrow.png') no-repeat;
+	top: 4px;
+}
+.downArrow{
+	background: url('../images/conversationSliderDownArrow.png') no-repeat;
+	bottom: 4px;
+}
+.sliderContainer{
+	left: 2px;
+	position: absolute;
+	top: 17px;
+	bottom: 17px;
+}
+.textBoxLabel{
+	height: 20px;
+	color: #535353;
+	font-size: 10pt;
+	padding-top: 5px;
+}
+.textForm{
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: #ffffff;
+	height: 33px;
+	padding: 4px; 
+}
+#sayButton{
+	font-size: 14pt;	
+	padding: 2px 8px;
+	position: absolute;
+	margin-left: 3px;
+}
+.textBox{
+	width: 240px;
+	height: 21px;
+	border: 2px solid #CCCCCC;
+	border-radius: 7px;
+	padding-top: 4px;
+	padding-left: 3px;
+}
+/* callouts */
+.callOutContainer{	
+	border-radius: 13px;
+	padding: 3px 3px 3px 5px;
+	margin-top: 2px;
+	font-size: 9pt;	
+	visibility: hidden;
+}
+.whoContainer{
+	display: table-cell;
+	height: 100%;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+.messageContainer{
+	display: table-cell;
+	width: 100%	;
+}
+.roundedEdge{
+	width: 36px;
+	height: 23px;
+	position: absolute;	
+	bottom: -17px;
+	position: absolute !important;
+}
+
+ /* Styles for different states of callouts*/
+.userCallOutRoundedEdge{	
+	background: url(../images/userCalloutEdge.gif) no-repeat;
+	right: 0px;
+}
+.chatmanCallOutRoundedEdge{	
+	background: url(../images/chatmanCallOutEdge.gif) no-repeat;
+	left: 0px;	
+}
+.userCallOut{
+	border-bottom-right-radius: 0px;
+	color: #ffffff;
+	background-color: #0045f1;
+	margin-left: 16px;
+}
+.chatmanCallOut{
+	border-bottom-left-radius: 0px;
+	color: #000000;
+	background-color: #ffcc03;
+	margin-right: 16px;	
+}
+
+/* second  demo */
+#friendContainer{
+	background: url('../images/Intro/letsBeFriends.png') no-repeat,  url('../images/Intro/letsBeFriendsText.png') no-repeat;
+	background-position: center 80px, center 0px;	
+	width: 100%;
+	height: 293px;
+	display: none;
+}
+#chatmanImage{
+	left: 101px;
+	top: 88px;
+}
+#friendshipBar{
+	background-color: #39B54A; 	
+	bottom: 24px;
+	height: 150px;
+	right: 95px;
+	width: 15px;
+}
+
+/*
+ * SCENE 9
+ */
+#scene9{
+	width: 626px;
+}
+#chatWithFriendsDemo{
+	background: url('../images/Intro/friendsChating.png') no-repeat;
+	background-size: 100%;
+	top: 111px;
+	left: 3px;
+	width: 331px;
+	height: 208px;
+}
+#chatWithFriendsDemo > *{
+	visibility: hidden;
+}
+#messagesContainer{
+	top: 18px;
+	left: 17px;
+	width: 237px;
+}
+#messagesContainer *{
+	position:  relative;
+}
+#jakeWrittingText{
+	top: 127px;
+	left: 17px;
+}
+#messageTyping{
+	top: 149px;
+	left: 17px;
+}
+.boldText{
+	font-weight: bold;
+}
+.boldText.messageDemo2{
+	margin-top: 2px;
+}
+#note{
+	bottom: 82px;
+	right: 7px;
+}
+#note > *{
+	position: relative;
+}
+#bubbles{
+	position: absolute;
+	right: 40px;
+	bottom: -40px;	
+}
+
+/*
+ * SCENE 10
+ */
+#scene10{
+	width: 623px;
+}
+#chatmanBrainpower{
+	background: url('../images/Intro/scene10Brainpower.png') no-repeat;
+	width: 324px;
+	height: 224px;
+	top: 95px;
+	left: 7px;
+}
+#chatmanBrainpower > .pushButtonBlue{
+	font-size: 9pt;
+}
+#newChitChatButton{
+	left: 209px;
+	top: 143px;	
+	width: 97px;
+}
+#newWordsButton{
+	top: 182px;
+	left: 209px;
+	width: 97px;
+}
+#score{
+	top: 33px;
+	left: 119px;
+	font-weight: bold;
+	font-size: 9pt;
+}
+#score > *{
+	position: relative;
+}
+#brainpowerImage{
+	top: 37px;
+	left: 19px;
+	width: 90px;
+	height: 90px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+#bar1{	
+	top: 146px;
+	left: 10px;
+	height: 19px;
+	width: 194px;	
+}
+#bar2{	
+	top: 185px;
+	left: 10px;
+	height: 19px;
+	width: 194px;	
+}
+#bar1Level{
+	background-color: #f88a1b;
+	width: 40%;
+	height: 100%;
+}
+#bar2Level{
+	background-color: #f4661e;
+	width: 20%;
+	height: 100%;
+}
+#newWords{
+	width: 200px;
+	top: 207px;	
+	font-size: 8pt;
+	left: 13px;
+}
+#newChitChats{
+	width: 200px;
+	top: 168px;
+	font-size: 8pt;
+	left: 13px;
+}
+#newChitChats *, #newWords *{
+	position: relative;
+}
+
+@-webkit-keyframes buttonScaling{
+	0%{
+		-webkit-transform: scale(1);
+	}	
+	50%{
+		-webkit-transform: scale(1.2);
+	}	
+	100%{
+		-webkit-transform: scale(1);
+	}
+}
+
+/* Chatman Audio Area */
+#audioArea{
+	width: 317px;
+	height: 162px;
+	top: 95px;
+	left: 7px;
+	display: none;
+}
+#audioArea *{
+	position: relative;
+}
+#audioContainer{
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+#audioContainer > li{
+	margin-top: 7px;
+}
+#timeText{
+	font-weight: bold;
+	color: #848585;
+	font-size: 10pt;
+}
+#recorderVolumeControl{
+	position: absolute !important;
+	right: 0px;
+	top: 0px;
+}
+#audioContainer #playerContainer {
+	height: 20px;
+	margin-top: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.audioButton{
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: 5px;
+	-webkit-transform: scale(1);
+	-webkit-transition: -webkit-transform ease-in-out 0.4s;
+	-webkit-backface-visibility: hidden;
+}
+.audioButton:hover{
+	-webkit-transform: scale(1.2);
+	-webkit-transition: -webkit-transform ease-in-out 0.2s;
+	-webkit-backface-visibility: hidden;
+}
+.audioButtondisabled.audioButton:hover{
+	-webkit-transform: scale(1);
+}
+#playButton{
+	background: url('../images/audioPlayButton.png') no-repeat;
+}
+#stopButton{
+	background: url('../images/audioStopButton.png') no-repeat;
+}
+#recordButton{
+	background: url('../images/audioRecordButton.png') no-repeat;
+}
+#audioTimeline{	
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+	height: 3px;	
+	top: 17px;
+	right: 7px;
+	left: 85px;
+	position: absolute !important;
+	overflow: hidden;
+}
+#timeProgress{
+	background-color: #ff0000;
+	position: absolute !important;
+	top: 0px;
+	left: 0px;
+	height: 3px;
+	-webkit-transition: all 2s linear;
+	-webkit-backface-visibility: hidden;
+}
+
+#saveButton{
+	top: 4px;	
+	overflow: hidden;
+	position: absolute;
+	font-size: 10pt;
+	width: 70px;
+}
+#audioControl{
+	padding: 3px 10px;
+	height: 125px;
+}
+#playChitChatButton{
+	right: 10px;
+	bottom: 14px;
+	width: 130px;
+	position: absolute;
+	font-size: 10pt;
+}
+.hidden{
+	visibility: hidden;
+}
+#chitChatContainer{
+	top: 122px;
+	left: 49px;
+	display: none;
+}
+#actionButton{
+	left: 61px;
+}
+/* action button */
+.actionButtonContainer{
+	width: 124px;
+	height: 29px;
+	display: inline-block;
+	z-index: 2;
+}
+.actionButtonContainerHover /*this class is added to capture button like on hover */{
+ 	z-index: 4;
+ }
+.actionButton{
+	border: 2px #828282 solid;
+	border-radius: 15px;
+	background-color: #cccccc;	
+	position: relative;
+	left: 7px;
+	width: 106px;
+	height: 22px;
+	font-family: Arial;
+	font-size: 10pt;
+	-webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, left 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.actionButtonLong .actionButton{
+	width: 232px;
+}
+
+/* hover/select styles */
+.actionButtonContainerHover .actionButton {
+	border-color: #0065b1;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a7cee9), to(#6bacda));
+	width: 120px;
+	height: 25px;
+	left: 0px;
+	-webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, left 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.actionName{	
+	left: 20px;
+	right: 5px;
+	top: 50%;
+	margin-top: -6pt;
+	position: absolute;
+	white-space: nowrap;
+	overflow: hidden;	
+	text-overflow: ellipsis;
+}
+.ellipsis{
+	position: absolute;
+	top: 3px;
+	right: 7px;
+}
+.btnActionInfo{
+	border: 1px #63a8d5 solid;
+	border-radius: 11px;
+	background: url(../images/actionInfo.gif) 3px center no-repeat #ffffff;
+	top: 50%;
+	margin-top: -6px;
+	margin-left: 5px;
+	width: 11px;
+	height: 11px;
+}
+/* CLOUD */
+#cloud{
+	background-image: url("../images/cloud.png");
+	width: 247px;
+	height: 81px;
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;	
+	position: absolute;
+	z-index: -1;
+	top: 13px;
+}
+#cloud > span{
+	position: absolute;	
+}
+#cloud > span:hover{
+	color: #0065b1;
+}
+#editLink{
+	color: #0065b1;
+}
+#editLink:hover{
+	color: #0065b1;
+}
+#shareLink{
+	color: #d91c1c;
+}
+#shareLink:hover{
+	color: #0065b1;
+}
+
+#cursor{
+	height: 20px;
+	-webkit-transition: all 0.7s linear;
+	-webkit-backface-visibility: hidden;
+}
+
+
+/*
+ * SCENE 11
+ */
+#scene11{
+	width: 630px;
+}
+#imagesContainer1{
+	width: 660px;
+	visibility: hidden;
+	left: 353px;
+	top: 113px;	
+}
+#imagesContainer2{
+	width: 923px;
+	visibility: hidden;
+	left: -644px;
+	top: 113px;
+}
+#imagesContainer1 > *, #imagesContainer2 > *{
+	margin: 0px 11px;
+	position: relative;
+}
+@-webkit-keyframes slidingImages1{
+	0%{
+		left: 353px;
+		visibility: visible;
+	}	
+	100%{
+		left: -660px;
+		visibility: visible;
+	}
+}
+@-webkit-keyframes slidingImages2{
+	0%{
+		left: -923px;
+		visibility: visible;
+	}	
+	100%{
+		left: 353px;
+		visibility: visible;
+	}
+}
+#arcadeLogo{
+	left: 38px;
+	top: 238px;
+	display: none;
+}
+
+/*
+ * SCENE 12
+ */
+#scene11{
+	width: 630px;
+}
+#scene12Content{
+	z-index: 10;
+}
+#imagesContainer3{
+	width: 689px;
+	visibility: hidden;
+	left: 353px;
+	top: 113px;	
+}
+@-webkit-keyframes slidingImages3{
+	0%{
+		left: 353px;
+		visibility: visible;
+	}	
+	100%{
+		left: -689px;
+		visibility: visible;
+	}
+}
+#reminderArea{
+	width: 280px;
+	height: 162px;
+	top: 125px;
+	left: 26px;
+	display: none;
+}
+#reminderArea *{
+	position: relative;
+}
+#reminderWrapper{
+	background: url('../images/Intro/remindersBackgr.png') no-repeat #FFFFFF bottom right;	
+}
+#datePickerContainer{
+	width: 100px;
+	height: 40px;
+	color: #61a6d7;
+	border: 1px solid #61a6d7;
+	background-color: #f0f0ea;
+	display: inline-block;
+	margin-right: 10px;
+}
+#line2{
+	font-weight: bold;
+	font-size: 14pt;
+	bottom: 3px;
+}
+#line1, #line2{
+	height: 50%;
+	margin-right: 20px;
+	text-align: center;	
+}
+#line1{
+	top: 3px;
+}
+#arrowColumn{
+	border-left: 1px solid #61a6d7;
+	background: url('../images/DatePickerTriangle.png') no-repeat center #e6e6e6;
+	height: 100%;
+	width: 19px;
+	margin-left: 80px;
+	margin-top: -40px;
+}
+#datePickerContainer{
+	margin-left: 10px;
+}
+#timeImage{
+	top: 4px;
+	margin-left: 10px;
+}
+@-webkit-keyframes scalings{
+	0%{
+		-webkit-transform: scale(1);
+	}
+	50%{
+		-webkit-transform: scale(1.2);
+	}
+	100%{
+		-webkit-transform: scale(1);
+	}
+}
+.line{
+	top: 2px;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+.line img{
+	top: 3px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+#remindersButton{
+	display: none;
+}
+
+/*
+ * SCENE 13
+ */
+ #scene13 *{
+	-webkit-backface-visibility: hidden;
+ }
+#scene13MainImage{
+	top: -90px;
+	left: -99px;
+}
+#congratImg{
+	top: -58px;
+}
+#myChatmanArea{
+	top: 186px;
+	z-index: 1;
+	text-align: center;
+	border-radius: 10px;
+	border: 3px solid #F04623;
+	background-color: white;
+	padding: 11px 0px 13px;
+	margin: 0px 3px;
+	line-height: 8pt;
+}
+#myChatmanArea *{
+	position: relative;
+}
+#myChatmanArea > *{
+	cursor: pointer;
+}
+#myChatmanImage{
+	vertical-align: middle;
+}
+#letsGoButton{
+	width: 182px;
+	line-height: 17pt;
+}
+#scene13 .backButton {
+	width: 86px;
+}
+#whiteBall131{
+	width: 16px;
+	height: 16px;
+	left: 311px;
+	top: -296px;
+	-webkit-transform-origin: 7px 8px;
+}
+#whiteBall132{
+	width: 7px;
+	height: 7px;
+	left: 76px;
+	top: -75px;
+	-webkit-transform-origin: 3px 4px;	
+}
+#whiteBall133{
+	width: 15px;
+	height: 15px;
+	left: 85px;
+	top: -117px;
+	-webkit-transform-origin: 7px 7px;
+}
+#confetti1{
+	left: 35px;
+	top: -366px;
+}
+#confetti2{
+	left: 116px;
+	top: -366px;
+}
+#confetti3{
+	left: 290px;
+	top: -366px;
+}
+@-webkit-keyframes confettiFalling{
+	0%{		
+		margin-left: 0px;
+		margin-top: 0px;
+	}	
+	100%{
+		margin-left: 10px;
+		margin-top: 650px;
+	}
+}

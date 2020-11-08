@@ -1,0 +1,27 @@
+﻿.flower3Container{
+	width: 27px;
+	height: 128px;
+	text-align: center;
+	direction: ltr !important;	
+}
+.flower3Container *{
+	direction: ltr !important;
+}
+.flower3Inner{
+	position: absolute;
+	top: 6px;
+	left: 6px;
+}
+.flower3Base{
+	left: 13px;
+	top: 38px;
+}
+
+@-webkit-keyframes flower3spin{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);		
+	}
+}

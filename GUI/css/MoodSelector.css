@@ -1,0 +1,118 @@
+﻿.moodSelectorContainer{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#e6e6e8));
+	/*border: 2px solid;
+	border-color: transparent;*/
+	width: 98px;
+	height: 98px;
+	border-radius: 50px;
+	-webkit-transition: -webkit-transform 0.4s ease-in-out;
+	z-index: 2;	
+}
+.moodSelectorInCircle{
+	-webkit-transform: scale(2);
+	border: 0px !important;	
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#e6e6e8)) !important;
+	z-index: 3;
+}
+.moodSelectorOutCircle{
+	z-index: 1;
+}
+.moodSelectorName{
+	position: absolute;
+	/*width: 100%;*/
+	text-align: center;
+	top: 46px;
+	font-size: 20pt;
+	line-height: 20pt;
+	left: 12px;
+	right: 12px;
+	text-align: center;	
+	-webkit-transition: top 0.3s linear, left 0.3s linear;
+	-webkit-backface-visibility: hidden;
+	/*font-weight: bold;*/
+}
+.moodSelectorInCircle .moodSelectorName{
+	top: 43px !important;
+	left: 20px !important;
+}
+.zeroState .moodSelectorName{
+	top: 39px;
+	left: 10px;
+	right: 10px;
+}
+.moodLevelName{
+	position: absolute;
+	top: 30%;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+.moodSelectorInCircle .moodLevelName, .moodSelectorOutCircle .moodLevelName{
+	-webkit-transform: scale(0.75);
+}
+
+.moodLevelImage{
+	-webkit-transform: scale(0.5);
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	background-repeat: no-repeat;
+}
+
+.moodSelectorInCircle .moodLevelImage{
+	opacity: 1;
+}
+
+/*
+ * Mood levels
+ */
+.moodLevel1{
+	background-image: url('../images/moodSelectorArc1.png');
+	width: 36px;
+	height: 48px;
+	top: 42px;
+	left: -2px;
+}
+.moodLevel1:hover{
+	background-image: url('../images/moodSelectorArc1Hover.png');	
+}
+
+.moodLevel2{
+	background-image: url('../images/moodSelectorArc2.png');
+	width: 39px;
+	height: 45px;
+	top: 21px;
+	left: -3px;
+}
+.moodLevel2:hover{
+	background-image: url('../images/moodSelectorArc2Hover.png');	
+}
+
+.moodLevel3{
+	background-image: url('../images/moodSelectorArc3.png');
+	width: 72px;
+	height: 52px;
+	top: -6px;
+	left: -8px;
+}
+.moodLevel3:hover{
+	background-image: url('../images/moodSelectorArc3Hover.png');	
+}
+
+.moodLevel4{
+	background-image: url('../images/moodSelectorArc4.png');
+	width: 88px;
+	height: 76px;
+	top: -12px;
+	left: 24px;
+}
+.moodLevel4:hover{
+	background-image: url('../images/moodSelectorArc4Hover.png');	
+}
+
+/* RTL support */
+.RTL .moodSelectorControl{
+	margin-left: 0px;
+	margin-right: 5px;
+}

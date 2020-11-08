@@ -1,0 +1,21 @@
+﻿.whiteBallContainer{
+	width: 30px;
+	height: 30px;
+	direction: ltr !important;
+}
+.whiteBallContainer *{
+	direction: ltr !important;
+}
+.whiteBall{
+	left: 0px;
+	top: 0px;
+}
+
+@-webkit-keyframes ballRotate{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);		
+	}
+}

@@ -1,0 +1,213 @@
+﻿/*body{
+	overflow: hidden;
+}*/
+
+#chatWithChatmanHeading{
+	background-image: url('../images/ChatWithChatmanPage/HeadingText.png');
+}
+#chatWithChatmanMain{
+	width: 967px;
+	height: 550px;
+	padding: 0px 2px 2px 2px;
+	overflow: hidden;
+}
+#column1{
+	width: 50%;
+	float: left;
+}
+#column2{
+	width: 50%;
+	float: left;
+	left: 4px;
+}
+.area{
+	background-color: #009933;
+	border-radius: 17px;
+	padding: 4px;
+	margin-top: 4px;
+}
+
+/*
+ * Personality area
+ */
+#personalityArea{
+	width: 474px;
+	height: 117px;
+}
+#singlePersonalitySelectorControl{
+	background-color: #595959
+	border-radius: 15px;
+	width: 360px;
+	height: 117px;
+	overflow: hidden;
+}
+#personalityStuffButtons{
+	position: absolute;
+	right: 10px;
+	top: 25px;
+	width: 102px;
+}
+#personalityStuffButtons .pushButtonBlue{
+	margin-top: 12px;
+	width: 92px;
+	left: 0px;
+}
+#personalititesButton{
+	top: 35px;
+}
+
+
+/*
+ * Chat area
+ */
+#chatArea{
+	width: 474px;
+	height: 411px;
+}
+
+
+/*
+ * Chatman Brainpower Area
+ */
+#chatmanBrainpowerArea{	
+	width: 474px;
+	height: 262px;	
+}
+#chatmanBrainpowerWrapper{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#chatmanBrainpowerHeading{
+	background-image: url('../images/chatmanBrainpowerHeading.png');
+}
+
+/*
+ * Tab control
+ */
+#tabArea{
+	width: 474px;
+	height: 266px;
+}
+#tabContainer{
+	width: 100%;
+	height: 100%;
+	left: 1px;
+}
+#tabButtonsContainer{
+	height: 33px;
+	left: -3px;
+	width: 101%;
+}
+#tabContentContainer{
+	background-color: #0d0d0d;
+	border: 5px solid #00579E;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	width: 463px;
+	height: 223px;
+	
+}
+.tabButton{
+	background-color: #63A6D6;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	float: left;
+	margin-left: 3px;
+	width: 116px;
+	height: 31px;
+}
+.selectedTabButton{
+	background-color: #00579E;
+	height: 35px;
+}
+/*------ tab content -----*/
+.tabContent{
+	width: 100%;
+	height: 100%;
+	background-color: #0d0d0d;
+	position: absolute;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	visibility:hidden;
+}
+.selectedTabContent{
+	visibility: visible;
+}
+.tabContentTop{
+	font-size: 9pt;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-left: 7px;
+}
+#playAroundControl{
+	top: 8px;
+	left: -5px;
+	height: 200px;
+}
+.actionListControl{
+	width: 100%;
+	height: 182px;
+	overflow: hidden;
+}
+#myChitChatShareButton{
+	right: 10px;
+	bottom: 15px;
+	width: 50px;
+}
+/* tab heading texts */
+#playAroundTab{
+	background-image: url('../images/ChatWithChatmanPage/playAroundHeaderText.png');
+}
+#myChitChatTab{
+	background-image: url('../images/ChatWithChatmanPage/myChatmanHeadingText.png');
+}
+#downloadedTab{
+	background-image: url('../images/ChatWithChatmanPage/downloadedHeadingText.png');
+}
+#sharedTab{
+	background-image: url('../images/ChatWithChatmanPage/sharedHeadingText.png');
+}
+
+#menuHider{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 30px;
+	height: 30px;
+	background-color: Black;
+}
+
+/* RTL support */
+.RTL #personalityStuffButtons{
+	left: 10px;
+	right: auto;
+}
+.RTL #tabButtonsContainer{
+	right: 0px;
+	left: auto;
+}
+.RTL #myChitChatShareButton{
+	left: 10px;
+	right: auto;
+}
+.RTL #column1, .RTL #column2{
+	float: right;
+}
+.RTL #column2{
+	left: auto;
+	right: 2px;
+}
+.RTL .tabButton{
+	float: right;
+}
+.RTL #menuHider{
+	position: absolute;
+	bottom: 1px;
+	left: -4px;
+	right: auto;	
+}

@@ -1,0 +1,124 @@
+﻿#welcomeHeading{
+	background-image: url('../images/WelcomePage/welcomeHeaderText.png');
+}
+#welcomeMain{
+	background-image: url('../images/WelcomePage/WelcomePage_background.png');
+	width: 961px;
+	height: 556px;
+	padding-left: 13px;
+}
+#welcomeText{
+	top: 70px;
+	color: #21610B;
+}
+#learnPropose{
+	top: 85px;
+	color: #21610B;
+}
+#learnPropose .pushButtonRed{
+	margin: 0 10px;
+}
+
+/* Registration Panel */
+#registrationPanel{
+	position: absolute;
+	left: 554px;
+	top: 0px;
+	z-index: 1;
+	border-radius: 10px;
+	border: 4px solid #F04623;
+	background-color: white;
+	padding: 0px;	
+	display: none;
+}
+/*
+ * ThingsToDoFirst and containment
+ */
+#thingsTodoFirst{
+	top: 130px;
+	left: 52px;
+}
+.pageLink{
+	border-radius: 7px;
+	box-shadow: 11px 13px 2px -4px #6E0000;
+	float: left;
+	width: 236px;
+	height: 119px;
+	margin-left: -22px;
+	-webkit-transform: scale(0.85);
+	-webkit-transition: -webkit-transform 0.2s ease-in-out, box-shadow 0.1s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.pageLink:hover:active{
+	box-shadow: 0px 0px #6E0000;
+	/*top: 4px;
+	left: 4px;*/
+	-webkit-transform: scale(0.85);	
+}
+.pageLink:hover{
+	box-shadow: 0px 0px;
+	z-index: 5;
+	-webkit-transform: scale(1);	
+}
+
+
+#chatWithChatmanWP{
+	background-image: url('../images/WelcomePage/big_btn01.png');
+}
+#playGamesWP{
+	background-image: url('../images/WelcomePage/big_btn02.png');
+}
+#chatWithFriendsWP{
+	background-image: url('../images/WelcomePage/big_btn03.png');
+}
+#setYourProfileWP{
+	background-image: url('../images/WelcomePage/big_btn04.png');
+}
+
+/*
+ * thingsTodoNext and containment
+ */
+#thingsTodoNext{
+	height: 165px;
+	position: absolute;
+	bottom: 33px;
+	padding-top: 14px;
+	left: 67px;
+}
+.todoItem{
+	border: 2px solid #FFFFFF;
+	border-radius: 7px;
+	box-shadow: 4px 2px #003153;
+	background-color: #003153;
+	width: 87px;
+	height: 87px;
+	float: left;
+	margin-left: 12px;
+	-webkit-transform: scale(1);
+	-webkit-transition: -webkit-transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.todoItem:hover:active{
+	box-shadow: 0px 0px #6E0000;
+	-webkit-transform: scale(1);	
+}
+.todoItem:hover{
+	box-shadow: 0px 0px #6E0000;
+	z-index: 5;
+	-webkit-transform: scale(1.2);
+	-webkit-transition: -webkit-transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* RTL support */
+.RTL #welcomeMain{
+	padding-right: 40px;
+	padding-left: 0;
+}
+.RTL .pageLink{
+	margin-right: -7px;
+	margin-left: 0;
+	float: right;
+}
+.RTL .todoItem{
+	float: right;
+}

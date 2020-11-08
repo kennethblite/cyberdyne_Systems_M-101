@@ -1,0 +1,48 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>	
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+    <link href="css/GamesAndMore.css" rel="stylesheet" type="text/css" />    
+
+    <script src="js/Pages/GamesAndMore.js"  type="text/javascript"></script>
+    <!--END REMOVE-->
+</head>
+<body>
+	<div id="gamesAndMoreContainer">	
+	    <div id="gamesAndMoreHeading" class="pageHeading">
+	        <div class="pageHeaderHelp"></div>
+	    </div>
+	    
+	    <div id="gamesAndMoreMain">
+	        
+	        <ul id="advertisingText" class="advertisingText">
+	            <li>Hey you! Time to play or get busy on the web or with homework?</li>
+                <li>You've landed at the right place!</li>
+                <li>What would you like to do?</li> 
+            </ul>
+            
+            <div id="bigButtonsArea">
+                <span id="games" class="bigButton" onclick="executeCommand('', 'NavigateChatmanGamesWeb', '')"></span>
+                <span id="cinema" class="bigButton" onclick="executeCommand('', 'NavigateVideosWeb', '')"></span>
+                <span id="homeworkHelp" class="bigButton" onclick="executeCommand('', 'NavigateHomeworkHelp','')"></span>
+                
+                <span id="photosAndVideos" class="bigButton" style="opacity: 0.5;" onclick="/*executeCommand('', 'NavigatePhotosAndVideos','')*/"></span>
+                <span id="searchImages" class="bigButton" onclick="executeCommand('', 'NavigateSearchImages','')"></span>
+                <span id="searchCoolWebsites" class="bigButton" onclick="executeCommand('', 'NavigateSearchCoolWebsites','')"></span>
+            </div>
+	    </div>   
+	</div>
+</body>
+</html>

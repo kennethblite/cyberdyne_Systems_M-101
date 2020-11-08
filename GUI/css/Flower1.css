@@ -1,0 +1,36 @@
+﻿.flower1Container{
+	width: 23px;
+	height: 128px;
+	text-align: center;
+	direction: ltr !important;
+}
+.flower1Container *{
+	direction: ltr !important;
+}
+.flower1Inner{
+	position: absolute;
+	top: 5px;
+	left: 6px;
+}
+.flower1Base{
+	left: 10px;
+	top: 20px;
+}
+
+@-webkit-keyframes flower1spin{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);		
+	}
+}
+
+@-webkit-keyframes flower1spin1{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(-360deg);		
+	}
+}

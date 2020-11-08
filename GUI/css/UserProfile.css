@@ -1,0 +1,221 @@
+﻿#profileHeading{
+	background-image: url('../images/UserProfilePage/HeadingText.png');
+}
+#userProfileMain{
+	width: 970px;
+	height: 550px;
+	padding: 0px 2px 2px 2px;	
+}
+#topPart{
+	height: 165px;
+	width: 100%;
+	padding-top: 10px;
+	background: url('../images/UserProfilePage/backgr.png') no-repeat;
+	background-position: 700px -32px;
+}
+
+#iLikeArea{	
+	width: 962px;	
+	height: 340px;
+	margin-top: 0px;
+}
+input[type=text], select{
+	border: 2px solid #CCCCCC;
+	border-radius: 5px;
+}
+.helper{
+	top: 3px;
+	visibility: hidden;
+}
+#saveButton{
+	right: 12px;
+	bottom: 4px;
+}
+.focusedControl{
+	outline: 2px solid red;
+}
+textarea{
+	 -webkit-tab-size:0;
+}
+/*----- TOP PART-----*/
+#line2{
+	margin-top: 13px;
+}
+#line3{
+	margin-top: 41px;
+}
+#imageColumn{
+	width: 124px;
+	float: left;
+	margin-left: 10px;
+}
+#userDataColumn{	
+	float: left;
+	margin-left: 30px;
+}
+#imageContainer{
+	width: 120px;
+	height: 120px;
+	border: 2px solid #A1C3E4;
+	border-radius: 10px;
+}
+#userIcon{
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+}
+#uploadButton{
+	width: 110px;
+	margin-top: 10px;
+}
+.genderImage{
+	top: 13px;
+	margin-left: 8px;
+	box-shadow: 3px 3px #003C6E;
+	border-radius: 9px;
+	display: inline-block;
+	vertical-align: top;
+	width: 41px;
+	height: 41px;
+}
+#boyImage{	
+	background: url('../images/UserProfilePage/boy.png') no-repeat;
+}
+#girlImage{
+	background: url('../images/UserProfilePage/girl.png') no-repeat;
+}
+#boyImage.selected{
+	background: url('../images/UserProfilePage/boySelected.png') no-repeat;
+}
+#girlImage.selected{
+	background: url('../images/UserProfilePage/girlSelected.png') no-repeat;
+}
+.genderImage.selected{
+	box-shadow: none;
+	top: 15px;
+	width: 42px;
+	height: 42px;
+}
+#countryCombobox{
+	display: inline-block;
+	width: 180px;
+}
+.fileDialog {
+	opacity: 0;
+	position: absolute;
+	width: 116px;
+	left: 0px;
+	height: 20px;
+	padding: 0px;
+}
+#datePickerControl{
+	display: inline-block;
+	top: 10px;
+	left: 10px;
+}
+#zipCodeLabel{
+	margin-left: 30px;
+}
+.negative{
+	border: 2px solid #F04623;
+}
+.positive{
+	border: 2px solid green;
+}
+
+/*---- I LIKE part --------*/
+.iLikeMode{
+	margin-top: 3px !important; 
+	height: 516px !important;
+}
+.iLikeMode #iLikeHeading{
+	display: none;
+}
+#iLikeContent{
+	margin-left: 10px;
+	margin-top: 3px;
+}
+#iLikeContent textarea{
+	width: 225px;
+	height: 36px;	
+	border-radius: 5px;
+}
+#iLikeTable{
+	width: 100%;
+	overflow-y: scroll;
+	text-align:center;
+}
+.iLikeMode #iLikeTable img{
+	width: 32px;
+}
+#iLikeTable tr td:first-child{
+	max-width: 100px;	
+}
+#iLikeTableWrapper{
+	height: 300px;
+	overflow-y: scroll;
+	width: 677px;
+}
+.iLikeMode #iLikeTableWrapper{
+	height: auto;
+	overflow-y: visible;
+}
+#zipCodeTextBox{
+	width: 90px;
+}
+#danceImage{
+	position: absolute;
+	right: 0px;
+	top: 30px;
+}
+#countryComboBox{
+	width: 173px;
+}
+.ui-autocomplete {
+	max-height: 108px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+	/* add padding to account for vertical scrollbar */
+	padding-right: 20px;
+	font-size: 10pt;
+}
+
+.ui-autocomplete > .ui-menu-item{
+	width: 107%;
+}
+
+/* Track below and above */
+::-webkit-scrollbar-track-piece {
+    background-color: #F2F2F2;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+
+/* RTL support */
+.RTL #imageColumn, .RTL #userDataColumn{
+	float:  right;
+}
+.RTL #imageColumn{
+	margin-left: 0;
+	margin-right: 10px;
+}
+.RTL #userDataColumn{
+	margin-right: 30px;
+	margin-left: 0px;
+}
+.RTL #danceImage{
+	left: 0px;
+	right: auto;
+}
+.RTL #iLikeTable{
+	padding-right: 20px;
+}
+.RTL #zipCodeLabel{
+	margin-right: 30px;
+	margin-left: auto;
+}
+.RTL #saveButton{
+	left: 12px;
+	right: auto;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<link href="css/MoodWords.css" rel="stylesheet" type="text/css" />
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+
+<!-- Requirements  -->
+<link href="css/AutoScrollingList.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/AutoScrollingList.js" type="text/javascript"></script>
+<!--<link href="js/plugins/jquery-ui-1.8.11.custom/css/ui-lightness/jquery-ui-1.8.11.custom.css" rel="stylesheet" type="text/css" />
+<script src="js/plugins/jquery-ui-1.8.11.custom/js/jquery-ui-1.8.11.custom.min.js" type="text/javascript"></script>-->
+<!-- Template -->
+<script id="autoScrollingListTemplate" type="text/x-jquery-tmpl">
+	<div class="autoScrollingContainer">
+    <span class="leftScroller"></span>
+    <span class="rightScroller"></span>
+    
+    <div class="itemsContainer"></div>
+
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/MoodGraphicalDisplay.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/MoodGraphicalDisplay.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="moodItemTemplate" type="text/x-jquery-tmpl">
+  <div class="moodItemContainer">
+    <img src="images/Moods/${MoodName}.png" class="moodImage" />
+    <div class="moodName">${MoodName}</div>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/SimpleText.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/SimpleText.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="simpleTextTemplate" type="text/x-jquery-tmpl">
+  <span class="simpleTextContainer"></span>
+</script>
+<!-- Requirements  -->
+<link href="css/WaitOverlap.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/WaitOverlap.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="waitOverlapTemplate" type="text/x-jquery-tmpl">
+  <div class="waitOverlapContainer">
+    <div class="backgroundOverlap"></div>
+    <div class="waitMessageContainer">
+      <div class="waitText">Please wait...</div>
+      <div class="waitImageContainer"><img src="images/loading_bar.gif" /></div>
+    </div>    
+  </div>
+</script>
+    
+    <script src="js/Pages/MoodWords.js" type="text/javascript"></script>
+    <script src="js/Data/dummyDeclaration.js" type="text/javascript"></script>
+    <!--END REMOVE-->
+</head>
+<body>
+	<div id="moodWordsContainer">
+	    <div id="moodWordsHeading" class="pageHeading">	        
+	        <div class="pageHeaderHelp"></div>
+	    </div>
+	    
+	    <div id="moodWordsMain">
+	        <div id="row1" class="area">
+	            <div class="labelText">Select a mood and teach me some new words:</div>
+	            <div id="moodListControl"></div>
+	        </div>
+	        
+	        
+	        <div id="row2" class="area">
+	            <div id="wordsHeaderText">
+	                <span class="labelText">New <span id="moodNameLabel" class="moodNameText"></span> words:</span>
+	                <input  id="addWordTextBox" type="text" maxlength="100" tabindex="0"/>
+	                <div id="addButton" class="pushButtonBlue">ADD</div>
+	                <div id="wordsHelper" class="pageHeaderHelp"></div>
+	            </div>
+	            <textarea id="moodWordsTextBox"  tabindex="1"></textarea>
+	            <div class="labelText">I know many other words but please teach me more. I love responding to new words!</div>     
+	        </div>
+	        
+	        <div id="row3">
+	            <div id="goBackButton" class="pushButtonBlue bigButton" onclick="executeCommand('', 'GoBack', '')">GO BACK</div>	            
+	            <div id="saveButton" class="pushButtonRed bigButton" onclick="executeCommand('', 'SaveUserData', Page.getUserInputJSON())">SAVE</div>
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>

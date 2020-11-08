@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>		
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+    
+    <link href="css/ChatmanIntro.css" rel="stylesheet" type="text/css" />
+<!-- Requirements  -->
+<link href="css/ChatmanState.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ChatmanState.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="chatmanStateTemplate" type="text/x-jquery-tmpl">
+    <div class="chatmanState"></div>
+</script>
+<!-- Requirements  -->
+<link href="css/VolumeControl.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/VolumeControl.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="volumeControlTemplate" type="text/x-jquery-tmpl">
+  <div id="volumeContainer" style="overflow: visible;">
+    <img class="speakerImage" {{if IsMuted}}src="images/speakerMute.png"{{else}}src="images/speaker.gif"{{/if}} onclick="speakerImageClick.call(this, event)"/>
+    <div id="scaleContainer">
+      <div id="onColor" style="left: ${(VolumeLevel * 38) / 100 - 38}px;"></div>
+      <div id="scaleGrid" style="background: {{if IsIntro}} url('images/volumeControlScaleGrid.png') {{else}} url('images/scaleGrid1.gif') {{/if}};"></div>
+    </div>
+    {{if IsIntro}}
+    
+    {{else}}
+        <img class="deviceImage" style="display:inline-block; height: 15px" {{if DefaultAudioDevice=="PC"}}src="images/AUDIO_PC.png"{{else}}src="images/AUDIO_CM.png"{{/if}} onclick="audioImageClick.call(this, event)"/>
+        {{/if}}
+      </div>
+</script>
+<!-- Requirements  -->
+<link href="css/TextScroller.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/TextScroller.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="textScrollerTemplate" type="text/x-jquery-tmpl">
+  <div class="textScrollerContainer">
+    <div class="textContainer">
+      ${Text}
+    </div>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/MiniPersonalityButton.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/MiniPersonalityButton.js" type="text/javascript"></script>
+<script src="js/Controls/ImageManager.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="miniPersonalityButtonTemplate" type="text/x-jquery-tmpl">
+    <div class="miniPersonalityButton">
+      <div class="personalityName">${Name}</div>      
+      <div class="roundBackground"></div>
+      <div class="miniPersonalityIconContainer">
+        <div class="backImages"></div>
+        <img src="images/Personalities/${BaseIconID}.png" alt="" class="miniPersonalityIcon" />
+        <div class="frontImages"></div>
+      </div>      
+    </div>
+</script>
+<!-- Requirements  -->
+<link href="css/Flower2.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/Flower2.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="flower2Template" type="text/x-jquery-tmpl">
+  <div class="flower2Container">
+	<img class="flower2Leaves" src="images/Intro/Controls/Flower2Leaves.png" />
+	<img class="flower2Body" src="images/Intro/Controls/Flower2Body.png" />
+	<img class="flower2Base" src="images/Intro/Controls/Flower2Base.png" />
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/Flower1.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/Flower1.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="flower1Template" type="text/x-jquery-tmpl">
+  <div class="flower1Container">
+	<img class="flower1Leaves" src="images/Intro/Controls/Flower1Body.png" />
+	<img class="flower1Inner" src="images/Intro/Controls/Flower1Inner.png" />
+	<img class="flower1Base" src="images/Intro/Controls/Flower1Base.png" />
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/Flower3.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/Flower3.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="flower3Template" type="text/x-jquery-tmpl">
+  <div class="flower3Container">
+	<img class="flower3Body" src="images/Intro/Controls/Flower3Body.png" />
+	<img class="flower3Inner" src="images/Intro/Controls/Flower3Inner.png" />
+	<img class="flower3Base" src="images/Intro/Controls/Flower3Base.png" />
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/Flower4.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/Flower4.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="flower4Template" type="text/x-jquery-tmpl">
+  <div class="flower4Container">
+	<img class="flower4Body" src="images/Intro/Controls/Flower4Body.png" />
+	<img class="flower4Inner" src="images/Intro/Controls/Flower4Inner.png" />
+	<img class="flower4Base" src="images/Intro/Controls/Flower4Base.png" />  
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/WhiteBall.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/WhiteBall.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="whiteBallTemplate" type="text/x-jquery-tmpl">
+  <div class="whiteBallContainer">
+	  <img class="whiteBall" src="images/Intro/Controls/WhiteBall.png" />
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/CheckBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/CheckBox.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="checkBoxTemplate" type="text/x-jquery-tmpl">
+  <div class="checkBoxContainer">
+    <div class="checkBox"></div>
+    <div class="checkMark"></div>
+    <span class="checkBoxText"></span>
+  </div>
+</script>
+
+    <script src="js/Resources/IntroResourcesStrings.js" type="text/javascript"></script>
+    <script src="js/Pages/IntroPersonalityData.js" type="text/javascript"></script>
+    <script src="js/Infrastructure/jquery.tipTip.js" type="text/javascript"></script>
+    <link href="css/Infrastructure/tipTip.css" rel="stylesheet" type="text/css" />
+     
+    <script src="js/Pages/ChatmanIntro.js" type="text/javascript"></script>    
+    <script src="js/Pages/BaseScene.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene1.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene2.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene3.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene4.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene5.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene6.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene7.js" type="text/javascript"></script>
+    <script src="js/Infrastructure/LevelColor.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene8.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene9.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene10.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene11.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene12.js" type="text/javascript"></script>
+    <script src="js/Pages/Scene13.js" type="text/javascript"></script>
+    <script src="js/Data/dummyDeclaration.js" type="text/javascript"></script>
+    <!--END REMOVE-->
+    
+    <!--TO REMOVE RELEASE-->
+    <script src="js/Infrastructure/Debugger.js" type="text/javascript"></script>
+    <!--END REMOVE RELEASE-->
+</head>
+<body>
+    <script id="debugger" type="text/html">
+        <div id="debuggerContainer" style="position: absolute; left: 0px; top: 0px; background: white; width: 100%; z-index:99999999999;">
+            <form onsubmit="var output; try { output = document.getElementById('output'); var input = document.getElementById('input'); output.innerHTML = input.value + ' => ' + eval(input.value); } catch (e) { output.innerHTML = e; }; return false;" >
+              Debugger:&nbsp; <div id="output"></div>
+              <input id="input" name="input" value="" style="-webkit-user-select: auto; width: 300px;" onkeydown=" if(event.keyCode == 113) $(this).parent().remove();" />
+            </form>
+            <a href="#" onclick="document.body.removeChild(document.getElementById('debuggerContainer'));">Hide</a>
+        </div>
+    </script>
+	
+	<div id="mainBox" dragElement>
+	    <div id="topPanel" dragElement>
+	        <span id="chatmanLogo" dragElement></span>
+	        <span id="chatmanStateControl"></span>
+	        <span class="separator"></span>	        
+	        <span id="volumeControl"></span>
+	        <span class="separator"></span>
+	        <span id="parentsInformationLink" class="link" title="Parents area" onclick="executeCommand('', 'NavigateParentsWeb', '')"></span>
+	        <span class="separator"></span>
+	        <span id="fixProblemLink" class="link" title="Fix a problem" onclick="executeCommand('', 'NavigateChatmanProblemWebSite', '')"></span>
+	        <span class="separator"></span>
+	        <span id="faqLink" class="link" title="Got a question?" onclick="executeCommand('', 'NavigateFaqWebSite', '')"></span>
+	        <span class="separator"></span>
+	        <span id="closeCross" title="Exit" class="link" onclick="executeCommand('', 'Close', '')"></span>
+	    </div>
+	    
+	    <div id="mainPanel">
+	        <div id="scenesContainer">
+	            <!------------  SCENE 1 ----------------->
+	            <div id="scene1" class="scene">
+	                <div id="scene1StartAnim" class="sceneContent">
+	                    <img id="cloud1" src="images/Intro/Cloud1.png" />	                    
+	                    <img id="cloud3" src="images/Intro/Cloud3.png" />
+	                    <img id="cloud2" src="images/Intro/Cloud2.png" />
+	                    <img id="fan" src="images/Intro/Fan.png" />
+	                </div>
+	                
+	                <img id="scene1Sun" src="images/Intro/Sun.png" />	                    
+	                <div id="scene1Images" class="scene"></div>
+	                
+	                <div id="scene1Content" class="sceneContent">                    
+	                    
+	                    <div id="flower21"></div>
+	                    <div id="flower22"></div>
+	                    <div id="flower23"></div>	                    
+	                    <div id="flower11"></div>
+	                    <div id="flower12"></div>
+	                    
+	                    <div id="runOnStartupCheckBoxControl"></div>
+	                    
+	                    <div class="sceneContentBottom">
+	                        <div id="readyButton" class="pushButtonBlue">Ready to hear my story?</div>
+	                        <div id="lemmeText">Lemme tell you how I got here. It's a crazy story!</div>
+	                    </div>	                    
+	                </div>
+	                <img src="images/Intro/WindTurner.png" id="windTurner" />
+	            </div>
+    	        <!------------  SCENE 2 ----------------->
+	            <div id="scene2" class="scene">
+	                <img id="scene2MainImage" src="images/Intro/Scene2.png" hasRTL />                
+	                
+	                <div id="scene2Content" class="sceneContent">	                 
+	                    <img id="whiteCirclesLargeScene2" src="images/Intro/Controls/WhiteCirclesLarge.png" />
+	                    <img id="whiteCirclesSmallScene2" src="images/Intro/Controls/WhiteCirclesSmall.png" />	                
+	                   
+	                    <div id="scene2Text">Can you hear me well?</div>
+	                    <div id="scene2Text1" style="display: none;">Can you see me moving?</div>
+	                    
+	                    <div id="scene2ButtonContainer" class="buttonContainer">
+	                        <div id="yesButton" class="pushButtonBlue">Yes</div>
+	                        <div id="noButton" class="pushButtonBlue">No</div>
+	                    </div>
+	                    
+	                    <div class="sceneContentBottom">
+	                        <div id="skipButton" class="pushButtonRed">Skip the story - Move on</div>
+	                        <div id="scene2StoryScroller" class="textScroller"></div>	                        
+	                    </div>	
+	                </div>
+	                <div class="sceneContentBottom"></div>
+	            </div>
+	            <!------------  SCENE 3 ----------------->
+	            <div id="scene3" class="scene">
+	                <img id="scene3MainImage" src="images/Intro/Scene3.png" hasRTL />             
+	                
+	                <div id="scene3Content" class="sceneContent">
+	                    <img id="whiteCirclesLarge" src="images/Intro/Controls/WhiteCirclesLarge.png" />
+	                    <img id="whiteCirclesSmall" src="images/Intro/Controls/WhiteCirclesSmall.png" />
+	                    
+	                    <img id="ballonOrange" src="images/Intro/Controls/BalloonOrange.png" />
+	                    <img id="ballonOrangeSmall" src="images/Intro/Controls/BalloonOrange.png" />
+	                    <img id="ballonRed" src="images/Intro/Controls/BalloonRed.png" />
+	                    <img id="ballonRedSmall1" src="images/Intro/Controls/BalloonRed.png" />
+	                    <img id="ballonRedSmall2" src="images/Intro/Controls/BalloonRed.png" />
+	                    
+	                    <input id="nameTextBox" class="introTextBox" type="text" />
+	                    <div class="sceneContentBottom">
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                        
+	                        <div id="scene3Scroller" class="bottomText"></div>
+	                    </div>	
+	                </div>
+	                <div class="sceneContentBottom"></div>
+	            </div>
+	            <!------------  SCENE 4 ----------------->
+	            <div id="scene4" class="scene">
+	                <img id="scene4MainImage" src="images/Intro/Scene4.png" hasRTL />	                
+	                
+	                <div id="scene4Content" class="sceneContent">
+	                    <div id="flower31"></div>
+	                    <div id="flower32"></div>	                
+	                
+	                    <div id="scene4ButtonContainer" class="buttonContainer">                    
+	                        <div id="boyButton" class="pushButtonBlue">I'm a boy</div>
+	                        <div id="girlButton" class="pushButtonBlue">I'm a girl</div>
+	                    </div>
+	                    
+	                    <div class="sceneContentBottom">
+                            <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                        
+	                        <div id="scene4Scroller" class="bottomText"></div>
+	                    </div>	
+	                </div> 
+	                
+	                <div class="sceneContentBottom" style="z-index: 9"></div>                     
+	            </div>
+	            <!------------  SCENE 5 ----------------->
+	            <div id="scene5" class="scene">
+	                <img id="scene5FirstImage" src="images/Intro/Scene5First.png" hasRTL />
+	                <img id="scene5MainImage" src="images/Intro/Scene5.png" hasRTL />	                
+	                
+	                <div id="scene5Content" class="sceneContent">	                    
+	                    <div id="scene5Text1">
+	                        My personality is what I say and do.
+                            I have lots of them so just pick one for now
+                            and you can always change it later.
+                        </div>
+                        
+                        <div id="chooseChatmateContainer">                            
+                        </div>
+	                    
+	                    <div class="sceneContentBottom">
+                            <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                        
+	                        <div id="scene5Scroller" class="bottomText"></div>
+	                    </div>	
+	                </div>
+	                
+	                <div class="sceneContentBottom"></div>                     
+	            </div>
+	            <!------------  SCENE 6 ----------------->
+	            <div id="scene6" class="scene">
+	                <img id="bigScene678Img" src="images/Intro/Scene6.png" hasRTL />	                
+	                
+	                <div id="scene6Content" class="sceneContent">	                    
+	                    <div id="personalityIcon"></div>
+	                    
+	                    <div id="whiteBall1"><img class="whiteBall" src="images/Intro/Controls/WhiteBall.png" /></div>
+	                    <div id="whiteBall2"><img class="whiteBall" src="images/Intro/Controls/WhiteBall.png" /></div>
+	                    <div id="whiteBall3"><img class="whiteBall" src="images/Intro/Controls/WhiteBall.png" /></div>
+	                    
+	                    <input id="chatmanNameTextBox" class="introTextBox" type="text" />
+	                    <img id="ballsOrange" src="images/Intro/Controls/BallsOrange.png" />
+	                    <img id="ballsBlue" src="images/Intro/Controls/BallsBlue.png" />
+	                    
+	                    <div class="sceneContentBottom">
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                        
+	                        <div id="scene6Scroller" class="bottomText"></div>
+	                    </div>
+	                </div>	  
+	                
+	                <div class="sceneContentBottom"></div>              
+	            </div>
+	            <!------------  SCENE 7 ----------------->
+	            <div id="scene7" class="scene">      
+	                <img id="scene7MainImage" src="images/Intro/Scene7.png" hasRTL />	                
+	                
+	                <div id="scene7Content" class="sceneContent">	                    
+                        <div id="flower41"></div>
+                        <div id="flower42"></div>
+                        
+	                    <div class="sceneContentBottom">
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                       
+	                        <div id="scene7Scroller" class="bottomText"></div>
+	                    </div>	
+	                </div>	   
+	                
+	                <div class="sceneContentBottom"></div>
+	            </div>
+	            
+	            <!------------  SCENE 8 ----------------->
+	            <div id="scene8" class="scene">      
+	                <img id="scene8MainImage" src="images/Intro/Scene8.png" hasRTL />                
+	                
+	                <div id="scene8Content" class="sceneContent">	                    
+	                    
+	                    <div id="chatmanConversationControl" class="area">
+	                        <img id="chatWithChatmanButton" class="mainButton" src="images/Intro/chatWithChatman.png" />
+	                    
+	                          <div class="chatmanConversationContainer">     
+                                  <div class="calloutsContainer">
+                                      <div id="callout0" class="callOutContainer userCallOut">
+                                        <div class="whoContainer">You: </div>
+                                        <div class="messageContainer">What's up?</div>
+                                        <div class="roundedEdge userCallOutRoundedEdge"></div>
+                                      </div>                                      
+                                      <div id="callout1" class="callOutContainer chatmanCallOut">
+                                        <div class="whoContainer">Chatman: </div>
+                                        <div class="messageContainer" id="Scene8CC1Text"></div>
+                                        <div class="roundedEdge chatmanCallOutRoundedEdge"></div>
+                                      </div>
+                                      <div  id="callout2" class="callOutContainer userCallOut">
+                                        <div class="whoContainer">You: </div>
+                                        <div class="messageContainer">:-)</div>
+                                        <div class="roundedEdge userCallOutRoundedEdge"></div>
+                                      </div>                                      
+                                      <div id="callout3" class="callOutContainer chatmanCallOut">
+                                        <div class="whoContainer">Chatman: </div>
+                                        <div class="messageContainer" id="Scene8CC2Text"></div>
+                                        <div class="roundedEdge chatmanCallOutRoundedEdge"></div>
+                                      </div>
+                                  </div>
+                                  <div class="textBoxLabel">
+                                    Hey Chatman, I want to say:
+                                  </div>
+
+                                  <form class="textForm">
+                                    <textarea id="conversationTextBox" class="textBox"></textarea>
+                                    <div id="sayButton" class="pushButtonRed">SAY</div>
+                                  </form>    
+                              </div>
+	                    </div>
+	                    
+	                    <div id="friendContainer">	                        
+	                        <img id="chatmanImage" />
+	                        <div id="friendshipBar"></div>
+	                    </div>
+	                    
+	                    <div class="sceneContentBottom">
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                       
+	                        <div id="scene8Scroller" class="bottomText"></div>
+	                        <div class="playAgainLink linkButton hidden">Play again</div>
+	                    </div>	
+	                </div>	   
+	                
+	                <div class="sceneContentBottom"></div>
+	            </div>
+	            
+	            <!------------  SCENE 9 ----------------->
+	            <div id="scene9" class="scene">      
+	                <img id="scene9MainImage" src="images/Intro/Scene9.png" hasRTL />	    
+	                <img id="chatWithFriendsButton" class="mainButton" src="images/Intro/chatWithFriendsl.png" />            
+	                
+	                <div id="scene9Content" class="sceneContent">
+	                    <div id="chatWithFriendsButton"></div>
+	                    
+	                    <div id="chatWithFriendsDemo">
+	                        <div id="messagesContainer">
+	                            <div class="boldText messageDemo1">You say:</div>
+	                            <div class="messageDemo1">Hey there! Whasup?</div>
+	                            <div class="boldText messageDemo2">Jake says:</div> 
+	                            <div class="messageDemo2"><span>I'm all good. :-) what r u up 2 this </span><span id="wkendWord">wkend</span></div>
+	                        </div>
+	                        <div id="jakeWrittingText">Jake is writing a message</div>
+	                        <div id="messageTyping">Hey there! Whasup?</div>
+	                        
+	                        <div id="note" class="tooltip">
+	                            <div>Did you see what I just did?</div>
+	                            <div>Am I cool or what?!</div>
+	                            <img id="bubbles" src="images/Intro/scene9bubbles.png" />
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="sceneContentBottom">
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                       
+	                        <div id="scene9Scroller" class="bottomText"></div>
+	                        <div class="playAgainLink linkButton hidden">Play again</div>
+	                    </div>	
+	                </div>	   
+	                
+	                <div class="sceneContentBottom"></div>
+	            </div>
+	            
+	            <!------------  SCENE 10 ----------------->
+	            <div id="scene10" class="scene">      
+	                <img id="scene10MainImage" src="images/Intro/Scene10.png" hasRTL />     
+	                <img class="mainButton" src="images/Intro/Personalities.png" />
+	                
+	                <div id="scene10Content" class="sceneContent">	                    
+	                    <div id="chatmanBrainpower">
+	                        <div id="brainpowerImage"></div>
+	                        <div id="score"><span>SCORE: </span><span id="scoreText">125</span></div>
+	                        
+	                        <div id="bar1"><div id="bar1Level"></div></div>
+	                        <div id="newChitChats"><span id="newChitChatNumber">6</span> <span> New Chit Chats</span></div>
+	                        
+	                        <div id="bar2"><div id="bar2Level"></div></div>
+	                        <div id="newWords"><span id="newWordsNumber">4</span> <span> New Words</span></div>
+	                        
+	                        <div id="newChitChatButton" class="pushButtonBlue">NEW CHIT CHAT</div>
+	                        <div id="newWordsButton" class="pushButtonBlue">NEW WORDS</div>
+	                    </div>
+	                    
+	                    <div id="audioArea" class="area">
+	                        <div id="audioWrapper" class="areaWrapper">              
+                                <div id="audioHeading" class="areaHeading">        
+                                    <span class="areaHeadingText">NEW CHIT CHAT</span>
+                                </div>
+	                            <div id="audioControl">
+	                                <ul id="audioContainer">
+                                        <li>
+                                          <span id="labelText">Time</span>
+                                          <span id="timeText">00:00</span>
+                                          <div id="recorderVolumeControl"></div>
+                                        </li>
+                                        
+                                        <!-- Area is required, it is in common styles -->    
+                                        <li id="playerContainer" class="area">
+                                          <span id="recordButton" class="audioButton" title="Record"></span>
+                                          <span id="stopButton" class="audioButton" title="Stop"></span>
+                                          <span id="playButton" class="audioButton" title="Play"></span>
+                                          <span id="audioTimeline">
+                                            <div id="timeProgress"></div>
+                                          </span>
+                                        </li>
+                                        
+                                        <li>
+                                          <div id="saveButton" class=" pushButtonBlue">SAVE</div>
+                                        </li>
+                                      </ul>
+	                            </div>
+	                            <div id="playChitChatButton" class="pushButtonRed">PLAY CHIT CHAT</div>
+	                        </div>                        
+	                    </div>
+	                    
+	                    <div id="chitChatContainer">
+	                        <div id="actionButton" class="actionButtonContainer  actionButtonContainerHover">
+		                        <div class="actionButton">
+  		                        <div class="btnActionInfo"></div>
+			                        <span class="actionName" title="${Description}">New Chit Chat</span>      
+		                        </div>
+	                        </div>
+                            <div id="cloud">
+                                <span id="editLink" command="EditActionClicked" style="top: 27px; left: 110px;">Edit</span>
+                                <span id="shareLink" command="ShareActionClicked" style="top: 27px; left: 20px;">Share</span>
+                                <span command="PlayActionClicked" style="top: 27px; right: 20px;">Play</span>
+                                <span command="CloneActionClicked" style="bottom: 15px; left: 80px;">Clone </span>
+                                <span command="DeleteActionClicked" style="bottom: 15px; right: 75px;">Delete</span>    
+                            </div>
+                            <img id="cursor" src="images/Intro/vector-mouse-cursor.png" />
+	                    </div>
+	                    
+	                    <div class="sceneContentBottom">
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                       
+	                        <div id="scene10Scroller" class="bottomText"></div>
+	                        <div class="playAgainLink linkButton hidden">Play again</div>
+	                    </div>	
+	                </div>	   
+	                
+	                <div class="sceneContentBottom"></div>
+	            </div>
+	            
+	            <!------------  SCENE 11 ----------------->
+	            <div id="scene11" class="scene">      
+	                <img id="scene11MainImage"  src="images/Intro/Scene11.png" hasRTL />	                
+	                <img class="mainButton" src="images/Intro/gamesAndMore.png" />
+	                
+	                <div id="scene11Content" class="sceneContent">	                    
+	                    <div id="imagesContainer1">
+                            <img src="images/Intro/joystick.png" />
+                            <img src="images/Intro/balls.png" />
+                            <img src="images/Intro/trophie.png" />
+	                    </div>
+	                    
+	                   <div id="imagesContainer2">
+                            <img src="images/Intro/SearchCoolWesites.png" />
+                            <img src="images/Intro/SearchImages.png" />
+                            <img src="images/Intro/HomeworkHelp.png" />
+	                    </div>
+	                    
+	                    <img id="arcadeLogo" src="images/Intro/arcageLogo.png" />
+	                    
+	                    <div class="sceneContentBottom">
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                       
+	                        <div id="scene11Scroller" class="bottomText"></div>
+	                        <div class="playAgainLink linkButton hidden">Play again</div>
+	                    </div>	
+	                </div>	   
+	                
+	                <div class="sceneContentBottom"></div>
+	            </div>
+	            
+	            
+	            <!------------  SCENE 12 ----------------->
+	            <div id="scene12" class="scene">      
+	                <img id="scene12MainImage"  src="images/Intro/Scene12.png" hasRTL />	                
+	                
+	                <div id="scene12Content" class="sceneContent">	                    
+	                    <img id="appsAndDownButton" class="mainButton" src="images/Intro/appsAndDown.png" />
+	                    <img id="remindersButton" class="mainButton" src="images/Intro/reminders.png" />
+	                    
+	                    <div id="imagesContainer3">
+                            <img src="images/Intro/slidingImagesScene12.png" />                            
+	                    </div>	
+
+	                     <div id="reminderArea" class="area">
+	                        <div id="reminderWrapper" class="areaWrapper">
+                                <div id="reminderHeading" class="areaHeading">
+                                    <span class="areaHeadingText">WHEN SHOULD I REMIND YOU?</span>
+                                </div>
+                                
+                                <div id="remindersContent"> 
+                                    <div>
+                                        <div id="datePickerContainer">
+                                            <div id="line1">May 2010</div>
+                                            <div id="line2">26</div>
+                                            <div id="arrowColumn"></div>                                         
+                                         </div>
+                                         <span>at</span>
+                                         <img id="timeImage" src="images/Intro/timeControlImage.png" />
+                                    </div>
+                                    <div class="line">
+                                        <img id="sunImage" src="images/sun.png" /><span>In the morning(AM)</span>
+                                    </div>
+                                    <div class="line">
+                                        <img id="moonImage" src="images/moon.png" /><span>Afternoon(PM)</span>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+	                    
+	                    <div class="sceneContentBottom">
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span> B A C K</span></div>
+	                        <div class="pushButtonRed nextButton"><span>N E X T </span><img class="nextArrow" src="images/Intro/nextArrow.png"></div>	                       
+	                        <div id="scene12Scroller" class="bottomText"></div>
+	                        <div class="playAgainLink linkButton hidden">Play again</div>
+	                    </div>	
+	                </div>	   
+	                
+	                <div class="sceneContentBottom" style="z-index: 9;"></div>
+	            </div>
+	            
+	            <!------------  SCENE 13 ----------------->
+	            <div id="scene13" class="scene"> 
+	                <img id="scene13MainImage"  src="images/Intro/bigSun.png" />	
+	                <img id="congratImg"  src="images/Intro/congratulations.png" />	
+	                <div id="scene13Content" class="sceneContent">
+	                    <div id="myChatmanArea">
+	                        <span>Register now at</span> <img id="myChatmanImage" src="images/mychatman.png" onclick="executeCommand('', 'NavigateRegistration', '')" /> <span>and start downloading more chit chats and apps today!</span>
+	                    </div>
+	                    
+	                    <img id="confetti1" src="images/Intro/confetti1.png" />
+	                    <img id="confetti2" src="images/Intro/confetti2.png" />
+	                    <img id="confetti3" src="images/Intro/confetti3.png" />	                    
+	                    	                    
+	                    <div class="sceneContentBottom">	                        
+	                        <div id="whiteBall131"><img class="whiteBall" src="images/Intro/Controls/WhiteBall.png" /></div>
+	                        <div id="whiteBall132"><img class="whiteBall" src="images/Intro/Controls/WhiteBall.png" /></div>
+	                        <div id="whiteBall133"><img class="whiteBall" src="images/Intro/Controls/WhiteBall.png" /></div>                        
+	                    
+	                        <div class="pushButtonRed backButton"><img class="backArrow" src="images/Intro/backArrow.png"><span>BACK</span></div>
+	                        <div id="letsGoButton" class="pushButtonRed nextButton" onclick="executeCommand('', 'IntroFinished', Page.getInputJSON());">LET'S GO CHAT, MAN!</div>	                        
+	                        <div id="scene13Scroller" class="bottomText"></div>	                        
+	                    </div>	
+	                </div>	   
+	            </div>            
+	        </div>
+	        
+	        <!-- message of chatman disconnection -->
+	        <div id="connectChatmanMessageBackground"></div>
+	        <div id="connectMessageText">
+	                <div id="roundedRect"><div>Please connect</div><div>your Chatman!</div></div>
+	        </div>
+	    </div>    
+	</div>
+	
+</body>
+</html>

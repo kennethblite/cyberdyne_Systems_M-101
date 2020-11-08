@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>		
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+    <link href="css/ChatmanMain.css" rel="stylesheet" type="text/css" />    
+
+<!-- Requirements  -->
+<link href="css/ActivePersonalityView.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ActivePersonalityView.js" type="text/javascript"></script>
+<script src="js/Controls/ImageManager.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="activePersonalityViewTemplate" type="text/x-jquery-tmpl">
+    <div class="activePersonalityView">
+      <div class="roundBackground"></div>
+      
+      <div class="backImages"></div>
+      <img src="images/Personalities/${BaseIconID}.png" alt="" class="activePersonalityIcon" />
+      <div class="frontImages"></div>
+    </div>
+</script>
+<!-- Requirements  -->
+<link href="css/ChatmanName.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ChatmanName.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="chatmanNameTemplate" type="text/x-jquery-tmpl">
+  <div class="chatmanNameContainer">
+    <div class="activePerconalityViewControl"></div>
+    <div class="chatmanName">${Name}</div>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/ChatmanState.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ChatmanState.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="chatmanStateTemplate" type="text/x-jquery-tmpl">
+    <div class="chatmanState"></div>
+</script>
+<!-- Requirements  -->
+<link href="css/VolumeControl.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/VolumeControl.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="volumeControlTemplate" type="text/x-jquery-tmpl">
+  <div id="volumeContainer" style="overflow: visible;">
+    <img class="speakerImage" {{if IsMuted}}src="images/speakerMute.png"{{else}}src="images/speaker.gif"{{/if}} onclick="speakerImageClick.call(this, event)"/>
+    <div id="scaleContainer">
+      <div id="onColor" style="left: ${(VolumeLevel * 38) / 100 - 38}px;"></div>
+      <div id="scaleGrid" style="background: {{if IsIntro}} url('images/volumeControlScaleGrid.png') {{else}} url('images/scaleGrid1.gif') {{/if}};"></div>
+    </div>
+    {{if IsIntro}}
+    
+    {{else}}
+        <img class="deviceImage" style="display:inline-block; height: 15px" {{if DefaultAudioDevice=="PC"}}src="images/AUDIO_PC.png"{{else}}src="images/AUDIO_CM.png"{{/if}} onclick="audioImageClick.call(this, event)"/>
+        {{/if}}
+      </div>
+</script>
+<!-- Requirements  -->
+<link href="css/FriendshipBar.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/LevelColor.js" type="text/javascript"></script>
+<script src="js/Controls/FriendshipBar.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="friendshipBarTemplate" type="text/x-jquery-tmpl">
+    <div class="friendshipBar">
+      <div class="friendshipBarLevel">
+        <img class="triangle down" src="images/down.png" />
+        <img class="triangle up" src="images/up.png" />
+      </div>
+    </div>
+</script>
+<!-- Requirements  -->
+<link href="css/MainPanelButtons.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/MainPanelButtons.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="mainPanelButtonsTemplate" type="text/x-jquery-tmpl">  
+  <div id="mainPanelButtonsContainer">
+    
+    <div class="panelButtonContainer">
+      <div id="chatWithChatmanButton" class="mainPanelButton"  role="NavigateChatWithChatman">
+        <img src="images/ChatWithChatman.png" class="panelButtonImage" />
+      </div>
+    </div>
+
+    <div class="panelButtonContainer">
+      <div id="personalitiesButton" class="mainPanelButton"  role="NavigatePersonalities">
+        <img src="images/Personalities.png" class="panelButtonImage"/>
+      </div>
+    </div>
+
+    <div class="panelButtonContainer">
+      <div id="gamesButton" class="mainPanelButton"  role="NavigateGamesAndMore">
+        <img src="images/GamesMore.png" class="panelButtonImage"/>
+      </div>
+    </div>
+
+    <div class="panelButtonContainer">
+      <div id="chatWithFriendsButton" class="mainPanelButton"  role="NavigateChatWithFriends">
+        <img src="images/ChatWithFriends.png" class="panelButtonImage"/>
+      </div>
+    </div>
+
+    <div class="panelButtonContainer">
+      <div id="remindersButton" class="mainPanelButton"  role="NavigateReminders">
+        <img src="images/Reminders.png" class="panelButtonImage"/>
+      </div>
+    </div>
+
+    <div class="panelButtonContainer">
+      <div id="appsDownloadsButton" class="mainPanelButton" role="NavigateAppsAndDownloads">
+        <img src="images/AppsDownloads.png" class="panelButtonImage"/>
+      </div>
+    </div>
+  </div>  
+</script>
+<!-- Requirements  -->
+<link href="css/myChatmanStatus.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/MyChatmanStatus.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="myChatmanStatusTemplate" type="text/x-jquery-tmpl">
+  <div class="myChatmanStatusContainer">    
+    <div class="underText">
+        <a class="myChatmanLink"><img src="images/MyChatmanCom.png" /></a>
+      {{if ShowConnect}}
+        <div class="connectButton pushButtonRed">CONNECT</div>
+        <div class="shareButton pushButtonBlue">SHARE</div>
+      {{/if}}
+
+      {{if ShowRegister}}
+        <div class="registerButton pushButtonRed">CONNECT</div>
+        <div class="shareButton pushButtonBlue">SHARE</div>
+      {{/if}}
+      
+      {{if ShowText}}
+        <div class="moneyPanel">          
+          <span class="text">${Text}</span>
+        </div>
+      {{/if}}      
+     </div>
+    
+    <div class="promoTextControl"></div>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/ToolsBar.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ToolsBar.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="toolsBarTemplate" type="text/x-jquery-tmpl">
+  <div id="toolsBarContainer">
+   <div class="topBar">
+        <div class="tool" onclick="executeCommand('', 'NavigateOptions', '')" name="options" title="Options">
+          <img class="toolImage" src="images/optionsToolBarButton.png" />          
+        </div>
+        <div class="tool" onclick="executeCommand('', 'NavigateWebSettings', '')" name="website" title="Web site settings">
+          <img class="toolImage" src="images/websiteOptionsToolBarButton.png" />
+        </div>
+        <div class="tool" onclick="executeCommand('', 'NavigateAboutChatman', '')" name="about" title="About Chatman">
+          <img class="toolImage" src="images/aboutToolbarButton.png" />
+        </div>
+        <div class="tool" style="visibility: hidden;">
+        </div>
+        <div class="tool" style="visibility: hidden;">
+        </div>
+        <div class="redTriangle"></div>
+    </div>
+
+    <div class="bottomBar">
+        <div class="tool" onclick="executeCommand('', 'NavigateParentsArea', '')" name="parentsInformation"  title="Information for parents" >
+          <img class="toolImage" src="images/toolsBarParents.png" />
+        </div>
+        <div class="tool" onclick="executeCommand('', 'NavigateChatmanProblemWebSite', '')" name="fixProblems"  title="Fix a problem" >
+          <img class="toolImage" src="images/toolsBarFixAProblem.png" />
+        </div>      
+        <div class="tool" onclick="executeCommand('', 'NavigatePushButtonPage', '')" name="pushButton" title="My head button" >
+          <img class="toolImage" src="images/toolsBarPushButton.png"/>
+        </div>
+        <div class="tool" onclick="executeCommand('', 'NavigateFaqWebSite', '')" name="question" title="Got a question?">
+          <img class="toolImage" src="images/toolsBarQuestion.png" />
+        </div>
+        <div class="tool" onclick="executeCommand('', 'NavigateIntro', '')" name="runIntro"   title="Run Introduction">
+          <img class="toolImage" src="images/toolsBarRunIntro.png"/>
+        </div>
+    </div>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/ProfileLink.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ProfileLink.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="profileLinkTemplate" type="text/x-jquery-tmpl">
+  <div class="profileLinkContainer">
+    <img class="profileIcon" src="{{if Gender=='Male'}} images/ProfileIconBoy.png {{else}} images/ProfileIconGirl.png {{/if}}"  onclick="executeCommand('profileLink', 'NavigateUserProfile', '')" />
+    <div class="profileText" onclick="executeCommand('profileLink', 'NavigateUserProfile', '')">Hi ${UserName}!</div>    
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/SimpleText.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/SimpleText.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="simpleTextTemplate" type="text/x-jquery-tmpl">
+  <span class="simpleTextContainer"></span>
+</script>
+<!-- Requirements  -->
+<link href="css/WaitOverlap.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/WaitOverlap.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="waitOverlapTemplate" type="text/x-jquery-tmpl">
+  <div class="waitOverlapContainer">
+    <div class="backgroundOverlap"></div>
+    <div class="waitMessageContainer">
+      <div class="waitText">Please wait...</div>
+      <div class="waitImageContainer"><img src="images/loading_bar.gif" /></div>
+    </div>    
+  </div>
+</script>
+     
+    <script src="js/Infrastructure/jquery.tipTip.js" type="text/javascript"></script>
+    <link href="css/Infrastructure/tipTip.css" rel="stylesheet" type="text/css" />
+    <script src="js/Infrastructure/NavigationManager.js" type="text/javascript"></script>       
+    <script src="js/Pages/ChatmanMain.js" type="text/javascript"></script>
+    <script src="js/Data/dummyDeclaration.js" type="text/javascript"></script>
+    <!--END REMOVE-->
+    
+    <!--TO REMOVE RELEASE-->
+    <script src="js/Infrastructure/Debugger.js" type="text/javascript"></script>
+    <!--END REMOVE RELEASE-->
+    <script src="js/Infrastructure/CommunicationApi.js" type="text/javascript"></script>
+</head>
+<body>
+    <script id="debugger" type="text/html">
+        <div id="debuggerContainer" style="position: absolute; left: 0px; top: 0px; background: white; width: 900px; z-index:99999999999;">
+            <form onsubmit="var output; try { output = document.getElementById('output'); var input = document.getElementById('input'); output.innerHTML = input.value + ' => ' + eval(input.value); } catch (e) { output.innerHTML = e; }; return false;" >
+              Debugger:&nbsp; <div id="output"></div>
+              <input id="input" name="input" value="" style="-webkit-user-select: auto; width: 300px;" onkeydown=" if(event.keyCode == 113) $(this).parent().remove();" />
+            </form>
+            <a href="#" onclick="document.body.removeChild(document.getElementById('debuggerContainer'));">Hide</a>
+        </div>
+    </script>
+	<table id="mainGrid" dragElement >  
+	    <tr>
+	        <td id="column1">
+	            <div id="chatmanNameControl"></div>
+	            <div id="chatmanStateControl"></div>
+	            <div id="activePersonalityViewControl" onclick="executeCommand('', 'ShowCurrentPersonalityInfo', '')"></div>
+	            <div id="volumeControl"></div>
+	        </td>
+	        <td id="column2">
+	            <div id="friendshipBarControl" dragElement ></div>
+	        </td>
+	        <td id="column3">
+	            <div id="column3InnerContainer" dragElement >
+	                <div id="mainPanelButtonsControl"></div>
+	                <div id="statusAndToolsContainer">
+	                    <div id="chatmanStatusControl"></div>
+	                    <div id="toolsBarControl"></div>
+	                </div>
+	            </div>
+	        </td>
+	        <td id="column4" dragElement>
+	            <div id="chatmanLogo" onclick="executeCommand('','NavigateWelcomePage', '')" dragElement></div>
+	            <div id="profileLinkControl"></div>
+	            <div id="browserButtonsContainer">
+	                <img src="images/browserBackButton.png" onclick="executeCommand('', 'BrowseBack', '')" />
+	                <img src="images/browserNextButton.png" onclick="executeCommand('', 'BrowseForward', '')" />
+	                <img src="images/browserCloseButton.png" onclick="executeCommand('', 'BrowseClose', '')" />
+	            </div>
+	            <hr id="browserLine" />
+	            
+	            <div id="minimizeButton" onclick="executeCommand('','Minimize', '')"></div>
+	            <div id="closeButton" onclick="executeCommand('','Close', '')"></div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td colspan="4">
+	            <div id="pagePlaceholder">               
+	                <iframe id="contentFrame" src="Blank.html" class="selectedFrame"  frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    <iframe id="welcomeFrame"  frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    <iframe id="chatWithChatmanFrame"  frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    <iframe id="personalitiesFrame"  frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    <iframe id="remindersFrame"  frameborder="0" width="100%" height="100%" scrolling="no"></iframe>                    
+                    <iframe id="popupFrame"  frameborder="0" width="101%" height="100%" scrolling="no"></iframe>
+                    <iframe id="messageBoxFrame"  frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    
+                    <!-- message of chatman disconnection -->
+                    <div id="connectChatmanMessageBackground"></div>
+                </div>                
+	        </td>
+	    </tr>	    
+	</table>
+</body>
+</html>

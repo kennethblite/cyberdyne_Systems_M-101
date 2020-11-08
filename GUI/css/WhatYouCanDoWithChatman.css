@@ -1,0 +1,119 @@
+﻿.pageMain{
+	width: 880px;
+	height: 546px;
+	padding-left: 43px;
+	padding-right: 50px;
+	padding-top: 10px;
+	overflow: scroll;
+	background-attachment:fixed;
+	background-image:url('../images/WhatCanYouDo/backgroundTr.png');
+}
+input{
+	margin: 0px 10px 0px 0px;
+}
+#whatCanYouHeading{
+	background-image: url('../images/WhatCanYouDo/heading.png');
+}
+.headingText{
+	color: #2D6AB4;
+	line-height: 33px;	
+	font-weight: bold;
+	font-size: 14pt;
+}
+#headerPart{
+	margin-left: 5px;
+}
+#mainList{
+	list-style-image: url('../images/WhatCanYouDo/bullet.png');
+	padding-left: 33px;
+}
+#mainList > li{
+	margin-bottom: 25px;
+}
+.areaheadingtext{
+	margin-left: 0px;	
+}
+.sayDemoArea{
+	margin: 5px 0px;
+}
+.readMoreLink, .tryItLink{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.readMoreLink{
+	margin-left: 0px;
+	margin-bottom: 10px;
+	margin-top: 2px;
+	display: inline-block;
+}
+.advertisingtext {	
+	margin-bottom: 10px;
+	text-align: justify;
+}
+#myChatamanText{
+	font-size: 33pt;
+	font-weight: bold;	
+	cursor: pointer;
+}
+#goBackButton{
+	position: fixed;
+	right: 30px;
+	bottom: 10px;
+	z-index: 10;
+}
+
+.notVeryLarge
+{
+    width:150px;
+}
+.withoutMargin
+{
+    margin: 0px;
+}
+.doubleBottomMargin
+{
+    margin-bottom: 20px;
+}
+.bigLink
+{
+    font-size: 36pt;
+}
+.withoutRightMargin
+{
+    margin-right: 0px;
+    padding: 0px;
+}
+.middleImage
+{
+    width: 100px;
+}
+img
+{
+    cursor: pointer;
+}
+.noCursor
+{
+    cursor: auto;
+}
+.linkToChatman
+{
+    cursor: pointer;
+}
+.smallImage
+{
+    width: 75px;
+}
+.bigImage{
+	height: 169px;
+}
+
+
+/* For inline elements */
+.bottomAlign{
+	vertical-align: bottom;	
+}
+.middleAlign{
+	vertical-align: middle;
+}

@@ -1,0 +1,160 @@
+﻿.callOutContainer{	
+	border-radius: 13px;
+	padding: 8px 3px 8px 5px;
+	margin-top: 2px;
+	font-size: 9pt;
+	display: table;
+}
+.whoContainer{
+	display: table-cell;
+	height: 100%;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+.messageContainer{
+	display: table-cell;
+	padding-right: 40px;
+	width: 100%;	
+}
+.roundedEdge{
+	width: 36px;
+	height: 23px;
+	position: absolute;	
+	bottom: -17px;
+}
+.callOutContainer .actionButtonContainer{
+	position: absolute;
+}
+/* Buttons for chatman callout */
+.calloutsButtonsContainer{
+	right: 10px;
+	width: 120px;
+	text-align: center;
+	position:absolute;
+	top: 6px;
+	bottom: 0px;
+}
+.calloutsButtonsContainer > *{
+	position: relative;
+}
+.addWordButton, .addChitChatButton{
+	position: absolute;
+	right: 23px;
+	top: 4px;
+	z-index: 1000;
+}
+.upButton, .downButton{
+	position: relative;
+}
+.upButton{
+	top: -1px;
+}
+.downButton{
+	top: 5px;
+}
+.goButton {
+	position: absolute;
+	right: 23px;
+	top: 4px;
+	min-width: 27px;
+	z-index: 1;
+}
+.editAnswerButton, .deleteAnswerButton{
+	background: url('../images/Pencil.png') no-repeat;
+	background-size: 100%;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	-webkit-transition: -webkit-transform 0.2s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.deleteAnswerButton{
+	background: url('../images/ChatmanMainRedCross.png') no-repeat;
+	top: 16px;
+}
+.editAnswerButton:hover, .deleteAnswerButton:hover{
+	-webkit-transform: scale(1.2);
+}
+.yesButton, .noButton{
+	float: right;
+	position: relative;
+	left: -5px;
+	z-index: 10;
+}
+.noButton{
+	left: 0px;
+}
+/* Proactive buttons */ 
+.proactiveCalloutsButtonsContainer{	
+	left: -10px;
+	width: 120%;
+}
+.proactiveCalloutsButtonsContainer > .pushButtonBlue{
+	margin-top: 6px;
+	position: relative;	
+	margin-left: 10px;
+}
+.proactiveCalloutText{
+	color: #0045F1;
+}
+/*
+ * Styles for different states of callouts
+ */ 
+.userCallOutRoundedEdge{	
+	background: url(../images/userCalloutEdge.gif) no-repeat;
+	right: 0px;
+}
+.chatmanCallOutRoundedEdge{	
+	background: url(../images/chatmanCallOutEdge.gif) no-repeat;
+	left: 0px;
+}
+.userCallOut{
+	border-bottom-right-radius: 0px;
+	color: #ffffff;
+	background-color: #0045f1;
+	margin-left: 16px;
+}
+.chatmanCallOut{
+	border-bottom-left-radius: 0px;
+	color: #000000;
+	background-color: #ffcc03;
+	margin-right: 16px;	
+}
+
+/* RTL support */
+.RTL .goButton{
+	left: 23px;
+	right: auto;
+}
+.RTL .addWordButton, .RTL .addChitChatButton{
+	right: auto;	
+	left: 23px;
+}
+.RTL .callOutContainer .actionButtonLong{
+	margin-right: -278px;
+}
+.RTL .calloutsButtonsContainer{
+	right: auto;
+	left: 10px;
+}
+.RTL .yesButton, .RTL .noButton{
+	left: 5px;
+	float: left;
+}
+
+/*
+ * Animations
+ */
+@-webkit-keyframes buttonScaling{
+	0%{
+		-webkit-transform: scale(1);
+	}	
+	50%{
+		-webkit-transform: scale(1.2);
+	}	
+	100%{
+		-webkit-transform: scale(1);
+	}
+}

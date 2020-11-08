@@ -1,0 +1,98 @@
+﻿#moodWordsHeading{
+	background-image: url('../images/MoodWordsPage/HeadingText.png');
+}
+
+/*
+ * Main Structure
+ */
+#moodWordsMain{
+	width: 964px;
+	height: 552px;
+	padding: 0px 5px;
+}
+#row1{
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 12px;
+	
+}
+#row2{
+	margin-top: 5px;	
+	padding: 10px 10px 5px;
+}
+#row3{
+	top: 3px;
+}
+input, textarea{
+	margin: 0px;
+}	
+
+/*
+ * Mood area
+ */
+.moodNameText{
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000000;
+}
+#moodListControl{
+	border: 1px solid #abadb3;
+	background-color: #ffffff;
+	padding-top: 20px;
+	margin-top: 8px;
+	width: 100%;
+	height: 160px;
+	overflow: hidden;
+}
+
+/*
+ * Words
+ */
+#addWordTextBox{
+	left: 10px;
+}
+#addButton{
+	position: relative;
+	width: 40px;
+	top: -3px;
+	left: 20px;
+}
+#wordsHeaderText{
+	margin-bottom: 10px;
+}
+#moodWordsTextBox{
+	width: 938px;
+	height: 194px;
+}
+#wordsHelper{
+	height: 19px;
+	right: 0px;
+}
+
+/*
+ * Bottom buttons
+ */
+#goBackButton{
+	left: 10px;
+}
+#saveButton{
+	right: 10px;
+}
+
+/* RTL support */
+.RTL #addWordTextBox{
+	left: auto;
+	right: 10px;
+}
+.RTL #addButton{
+	right: 20px;
+	left: auto;
+}
+.RTL #goBackButton{
+	left: auto;
+	right: 10px;
+}
+.RTL #saveButton{
+	left: 10px;
+	right: auto;
+}

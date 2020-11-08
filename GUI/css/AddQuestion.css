@@ -1,0 +1,25 @@
+﻿#addQuestionContainer{
+	padding-bottom: 10px;
+}
+
+input{
+	width: 300px;
+}
+.heading{
+	margin-top: 10px;
+}
+#saveButton{
+	right: 2px;
+}
+#buttonContainer{
+	height: 15px;
+}
+.areaHeadingText{
+	display: none;
+}
+
+/* RTL support */
+.RTL #saveButton{
+	left: 2px;
+	right: auto;
+}

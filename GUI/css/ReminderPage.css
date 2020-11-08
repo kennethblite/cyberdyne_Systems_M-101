@@ -1,0 +1,303 @@
+﻿#reminderHeading{
+	background-image: url('../images/ReminderPage/HeadingText.png');
+}
+#reminderMain{
+	width: 970px;
+	height: 550px;
+	padding: 0px 2px 2px 2px;
+}
+.areaContentWrapper{
+	background-color: #f0f0f0;
+	border-radius: 15px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+h4{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+table{
+	padding: 0px;
+	border-spacing: 0px;
+}
+#step1, #step2{	
+	position: absolute;
+	top: 0px;
+	left: 2px;
+	right: 2px;	
+	bottom: 2px;
+}
+/*
+ * What area
+ */
+#whatArea{
+	height: 250px;
+}
+#col1{
+	width: 757px;
+	margin-left: 5px;
+	margin-top: 3px;	
+}
+#whatTextBox{
+	width: 832px;
+	height: 68px;
+}
+.reminder{
+	float: left;
+	margin-left: 4px;
+	margin-top: 4px;
+	background-color: #A1C3E4;
+	border: 2px solid #0070B2;
+	border-radius: 5px;
+	height: 25px;
+	line-height: 23px;
+	padding: 0px 7px 0px 0px;
+	color: #FFFFFF;
+	font-size: 10pt;
+	font-weight: bold;
+	cursor: pointer;
+}
+.reminder *{
+	cursor: pointer;
+}
+.reminderSmallImage{
+	float: left;
+	margin-right: 5px;
+	border-right: 2px solid #0070B2;
+}
+#col2{
+	position: absolute;
+	right: 6px;
+	top: 34px;
+	width: 104px;
+	height: 110px;
+}
+#imageContainer{
+	width: 100px;
+	height: 100px;
+	border: 2px solid #0070B2;
+	border-radius: 6px;
+}
+#reminderImage{
+	width: 100%;
+	height: 100%;
+}
+#changeButton{
+	position: relative;
+	margin-top: 3px;
+	width: 91px;
+}
+/*
+ * When area
+ */
+#whenArea{	
+	height: 200px;
+}
+#whenContent{
+	padding: 5px;
+}
+#atWord{
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.scheduleButton{
+	border: 2px solid #FFFFFF;
+	border-radius: 5px;
+	background-color: #61A6D7;
+	box-shadow: 2px 2px 2px #003c6e;
+	display: inline-block;
+	width: 69px;
+	height: 45px;
+	padding: 0px 4px;
+	color: #FFFFFF;	
+	vertical-align: top;
+	text-align: center;
+	font-weight: bold;
+}
+.scheduleButtonSelected{
+	border: 2px solid #0061a7;
+	color: #0061a7;	
+	box-shadow: 0px 0px;
+	width: 71px;
+	height: 47px;
+}
+.wrap1{
+	position: absolute;
+	left: 4px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.wrap2{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/*
+ * Bottom buttons
+ */
+#nextButton{
+	bottom: 10px;
+	right: 10px;
+	width: 60px;
+}
+#goBackButton{
+	bottom: 10px;
+	left: 10px;
+	width: 130px;
+}
+/*
+ ****** STEP 2 ****** 
+ */
+#step2{
+	padding: 5px; 
+	padding-bottom: 0px;	
+	padding-left: 10px;
+	visibility: hidden;	
+}
+.radioContent{
+	display: none;
+	padding: 6px 17px;
+}
+.checkBoxControl{
+	margin-right: 10px;
+	float: left;
+}
+.item{
+	margin-top: 10px;
+}
+.item:nth-child(3){
+	font-weight: bold;
+}
+#moodListControl{
+	width: 923px;
+	height: 155px;
+	border: 1px solid #ABADB3;
+	padding-top: 30px;
+	overflow: hidden;
+	margin-top: 10px;
+
+}
+#header1, #header2{
+	position: absolute;	
+	font-weight: bold;
+	font-size: 11pt;
+	max-width: 300px;
+}
+#header1{	
+	top: 19px;
+	left: 20px;	
+}
+#header2{	
+	top: 207px;
+	left: 20px;	
+}
+.numberImage{
+	float: left;
+	margin-right: 7px;
+}
+#audioControl{
+	background-color: #f2f2f2;
+	border: 1px solid #cccccc;
+	position: absolute;
+	top: 209px;
+	left: 257px;
+	padding: 3px 10px;
+	height: 125px;
+	width: 400px;
+}
+#playChitChatButton{
+	top: 305px;
+	left: 554px;
+	width: 100px;
+}
+#backButton{
+	bottom: 11px;
+	left: 10px;
+	width: 60px;
+}
+#saveButton{
+	bottom: 11px;
+	right: 10px;
+	width: 60px;
+}
+
+/*
+ * Image Chooser popup
+ */
+#imageChooserPopup{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	visibility: hidden;
+}
+#popupContent{		
+	height: 377px;
+	width: 738px;
+	overflow-y: scroll;	
+}
+.remindImage{
+	/*float: left;*/
+	border: 2px solid transparent;
+	margin: 8px;
+	border-radius: 6px;	
+}
+.remindImageSelected{
+	border: 2px solid #0070b2;
+}
+
+/* RTL support */
+.RTL #col1{
+	margin-right: 5px;
+	margin-left: 0px;
+}
+.RTL #col2{
+	right: auto;
+	left: 6px;
+}
+.RTL .reminder{
+	float: right;
+	padding-left: 7px;
+	padding-right: 0px;
+}
+.RTL .reminderSmallImage{
+	float: right;
+	margin-right: 0px;
+	margin-left: 5px;
+	border-left: 2px solid #0070B2;
+	border-right: 0px;
+}
+.RTL #nextButton{
+	right: auto;
+	left: 10px;
+}
+.RTL #goBackButton{
+	right: 10px;
+	left: auto;
+}
+.RTL #header1, .RTL #header2{
+	right: 20px;
+	left: auto;
+}
+.RTL #audioControl{
+	/*left: 125px;*/
+}
+.RTL #playChitChatButton{
+	right: 582px;
+	left: auto;
+}
+.RTL #backButton{	
+	right: 10px;
+	left: auto;	
+}
+.RTL #saveButton{	
+	left: 10px;
+	right: auto;	
+}

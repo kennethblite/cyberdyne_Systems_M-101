@@ -1,0 +1,71 @@
+﻿.myChatmanStatusContainer{
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D9D9D9), to(#FCFCFC), color-stop(.7,#DEDEDE));
+	border-radius: 5px;
+	border: 2px solid #999999;
+	width: 282px;
+	height: 51px;
+}
+.promoTextControl{
+	margin-top: -2px;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: center;
+	line-height: 20px;
+	height: 25px;
+	overflow: hidden;
+}
+.underText{
+	padding: 0px 3px 0px 5px;	
+	height: 23px;
+	margin-top: 5px;	
+}
+.underText .pushButtonRed{
+	position: absolute;
+	bottom: 2px;
+	right: 5px;
+}
+.underText .pushButtonBlue{
+	background: url('../images/ChatmanStatusShareIcon.png') no-repeat left, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#A0C5E5), to(#D8E6F4));	
+	position: absolute;
+	padding-left: 23px;
+	right: 5px;
+	bottom: 2px;
+	color: #00579E;
+	border-color: #00579E;
+	visibility: hidden;
+}
+.moneyPanel{
+	display: table-cell;
+	right: 10px;
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+	top: 3px;
+}
+.moneyPanel > *{
+	vertical-align:middle;
+	cursor: inherit;
+}
+
+.myChatmanLink > * {
+	cursor: pointer;
+}
+
+.connectButton{
+	
+}
+
+.RTL .underText .pushButtonRed{
+	right: auto;
+	left: 5px;
+}
+.RTL .moneyPanel{
+	left: 10px;
+	right: auto;
+}
+.RTL .moneyPanel > *{
+	float: left;
+}
+.RTL .scoreText{
+	top: 3px;
+}

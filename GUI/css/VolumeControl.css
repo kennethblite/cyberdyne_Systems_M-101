@@ -1,0 +1,24 @@
+﻿#volumeContainer{
+	padding: 3px 0px;
+	/*width: 85px;*/
+	height: 18px;
+}
+#scaleContainer{
+	background-color: #deebf7;
+	overflow: hidden;
+	display: inline-block;
+	height: 16px;
+	width: 39px;
+}
+#scaleGrid {	
+	height: 100%;
+	width: 100%;
+}
+#onColor{
+	background-color: #5e9cca;
+	position: absolute;
+	top: 0px;
+	left: -39px;
+	width: 39px;
+	height: 17px;
+}

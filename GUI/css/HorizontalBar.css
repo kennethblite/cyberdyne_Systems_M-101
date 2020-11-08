@@ -1,0 +1,12 @@
+﻿.horizontalBar{
+	width: 144px;
+	height: 19px;
+	border: 3px solid #00579E;
+	border-radius: 5px;
+}
+.barLevel{
+	position: absolute;
+	height: 19px;
+	width: 0px;
+	max-width: 158px;
+}

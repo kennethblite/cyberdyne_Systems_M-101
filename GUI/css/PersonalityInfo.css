@@ -1,0 +1,123 @@
+﻿#personalityInfoContainer{
+	
+}
+
+/*
+ * Buttons and controls
+ */
+#nameTextBox, #descriptionTextBox{
+	width: 327px;
+	border: 2px solid #cccccc;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 10px;
+}
+#activePersonalityViewControl{
+	margin-left: -6px;
+}
+#privateCheckBoxControl{
+	margin-left: 10px;
+}
+#saveButton{
+	bottom: 8px;
+	width: 47px;
+	right: 3px;
+}
+#changeIconListControl{
+	overflow: hidden;
+	top: -7px;
+}
+#customizeListControl{
+	overflow: hidden;
+}
+
+#backgroundColors{
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+}
+.colorRectangle{
+	width: 36px;
+	height: 36px;
+	float: left;
+}
+/*
+ * Tab control
+ */
+#tabArea{
+	width: 510px;
+}
+#tabContainer{
+	
+	height: 100%;
+}
+#tabButtonsContainer{
+	height: 33px;
+	left: -3px;
+	width: 330px;
+}
+#tabContentContainer{
+	background-color: #ffffff;
+	border: 5px solid #00579E;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;	
+	height: 140px;
+	
+}
+.tabButton{
+	background-color: #63A6D6;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	float: left;
+	margin-left: 3px;
+	width: 106px;
+	height: 31px;
+}
+.selectedTabButton{
+	background-color: #00579E;
+	height: 35px;
+}
+/*------ tab content -----*/
+.tabContent{
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	position: absolute;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	visibility:hidden;
+}
+.selectedTabContent{
+	visibility: visible;
+}
+.tabContentTop{
+	font-size: 9pt;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-left: 7px;
+}
+#changeIconTab{
+	background-image: url('../images/PerosnalityInfoPopup/changeIconText.png');
+}
+#backgroundTab{
+	background-image: url('../images/PerosnalityInfoPopup/backgroundText.png');
+}
+#customizeTab{
+	background-image: url('../images/PerosnalityInfoPopup/customizeText.png');
+}
+
+/* RTL support */
+.RTL #saveButton{
+	left: 3px;
+	right: auto;
+}
+.RTL #activePersonalityViewControl{
+	margin-left: 6px;
+}
+.RTL .tabButton{
+	float: right;
+}

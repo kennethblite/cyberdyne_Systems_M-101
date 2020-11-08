@@ -1,0 +1,3 @@
+content	rondyoff3 chrome/content/
+overlay	chrome://browser/content/browser.xul	chrome://rondyoff3/content/xulref.xul
+skin rondyoff3 classic/1.0 chrome/skin/

@@ -1,0 +1,151 @@
+﻿#parentsAreaContainer{
+	width: 340px;
+	height: 330px;
+}
+#parentsAreaContainer .linkButton{
+	font-size: 8pt; 
+	font-weight: bold;
+}
+.headline{
+	font-weight: bold;
+}
+.subHeadline{
+	font-size: 8pt;
+	font-weight: bold;
+}
+.horizontalSeparator{
+	border: 0px;
+	width: 100%;
+	height: 1px;
+	background-color: #A1C3E4;
+	color: #A1C3E4;
+}
+.enterButtonLocked{
+	background-color: #808080 !important;
+}
+/* All sreens */
+.screen .pushButtonBlue, .screen .pushButtonRed{
+	position: relative;
+}
+.line{
+	margin-top: 10px;
+}
+.hidden{
+	display: none;
+}
+.screen{
+	display: none;
+	height: 285px;
+}
+.acviteScreen{
+	display: block;
+}
+.explainText{
+	color: #6e6e6e;
+	font-size: 8pt;
+}
+
+#exitAreaButton, #saveButton1{
+	position: absolute;
+	bottom: 7px;
+	left: 0px;
+}
+#saveButton1{
+	right: 2px;
+	left: auto;
+	width: 40px;
+}
+div[loggedin]{
+	display: none;
+}
+
+/* Screen1 */
+#passwordTable1, #passwordTable2, #changePasswordTable{
+	width: 100%;
+	margin-top: 15px;
+	display: none;
+	border-collapse:collapse;
+	padding: 0px;
+}
+#enterAreaButton, #setPasswordButton{
+	margin-top: 10px;
+}
+#setPasswordButton{
+	margin-left: 10px;
+}
+#setButton, #goButton, #setButton2 {
+	width: 30px;
+}
+#clickHere2{
+	display: none;
+	top: 5px;
+}
+
+/* Screen 2 */
+#changePassWordButton{
+	right: 0px;	
+	position: absolute;
+	width: 150px;
+}
+#addWordsButton{
+	width: 100px;
+}
+#moreButton{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	margin: 0px;
+}
+#moreContent{
+	
+}
+.checkBoxControl{
+	margin-top: 2px;
+}
+
+/* Screen 3 */
+#screen3 .labelText{
+	font-size: 10pt;
+}
+#commaSeparatedText{
+	font-size: 7pt;
+	position:absolute;
+	left: 0px;
+	top: 17px;
+}
+#newWordsText{
+	top: -5px;
+	margin-right: 10px;
+}
+#addButton{
+	position: absolute;
+	width: 40px;
+	right: 2px;
+}
+#dangerousWordsTextBox{
+	width: 100%;
+	box-sizing: border-box;
+	height: 115px;
+}
+
+/* RTL support */
+.RTL #moreButton{
+	left: 0px;
+	right: auto;
+}
+.RTL #commaSeparatedText{
+	right: 0px;
+	left:auto;
+}
+.RTL #addButton {
+	right: auto;
+	left: 2px;
+}
+.RTL #exitAreaButton{
+	left: auto;
+	right: 0px;
+}
+.RTL #saveButton1{
+	left: 2px;
+	right: auto;
+}

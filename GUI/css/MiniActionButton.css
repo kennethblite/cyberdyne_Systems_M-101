@@ -1,0 +1,52 @@
+﻿.miniActionButtonContainer{
+	width: 124px;
+	height: 30px;	
+	display: inline-block;
+}
+/* modifier style - another elements styles are changed then element are nested to element with this class */
+.miniActionButtonLong{
+	width: 186px;
+	height: 30px;
+	display: inline-block;
+}
+/*
+ * Button styles
+ */
+.miniActionButton{
+	border: 2px #828282 solid;
+	border-radius: 15px;
+	background-color: #cccccc;	
+	position: relative;
+	left: 7px;
+	width: 106px;
+	height: 22px;
+	font-family: Arial;
+	font-size: 10pt;
+}
+.miniActionButtonLong .miniActionButton{
+	width: 159px;
+}
+.miniActionButton:hover{
+	border-color: #0065b1;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a7cee9), to(#6bacda));
+}
+.miniActionName{	
+	left: 5px;
+	top: 3px;
+}
+
+/*
+* Info button and menu styles
+*/
+.btnActionInfo{
+	border: 1px #63a8d5 solid;
+	border-radius: 11px;
+	background: url(../images/actionInfo.gif) 3px center no-repeat #ffffff;
+	float: left;
+	top: 50%;
+	margin-top: -5px;
+	margin-left: 5px;
+	width: 11px;
+	height: 11px;
+	visibility: hidden;
+}

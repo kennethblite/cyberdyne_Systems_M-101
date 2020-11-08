@@ -1,0 +1,22 @@
+﻿.profileLinkContainer{
+	height: 32px;
+	white-space: nowrap;
+	
+}
+.profileText{
+	color: #00579E;
+	bottom: 9px;
+	cursor: pointer;	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: -14px;
+	margin-left: 36px;	
+}
+.profileIcon{
+	cursor: pointer;
+}
+
+.RTL .profileText{
+	margin-left: 0;
+	margin-right: 36px;	
+}

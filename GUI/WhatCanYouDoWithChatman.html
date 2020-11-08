@@ -1,0 +1,292 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+    <link href="css/Infrastructure/tipTip.css" rel="stylesheet" type="text/css" />
+    <link href="css/WhatYouCanDoWithChatman.css" rel="stylesheet" type="text/css" />    
+
+    <script src="js/Resources/ChatmanGUIPagesResourcesStrings.js" type="text/javascript"></script>
+    <script src="js/Infrastructure/jquery.tipTip.js" type="text/javascript"></script>
+    <script src="js/Pages/WhatYouCanDoWithChatman.js" type="text/javascript"></script>    
+</head>
+
+<body>
+    <div class="pageContainer">            
+            <div id="whatCanYouHeading" class="pageHeading"></div>
+            
+            <div id="goBackButton" class="pushButtonRed" onclick="executeCommand('','NavigateGoBack', '')">GO BACK</div>
+            
+	        <div class="pageMain">
+                <div id="headerPart">            
+                    <p class="advertisingText">
+                        Chatman is the smartest thing to ever set foot on your desk! He'll make you laugh,
+                        help you learn, and keep you from ever getting bored! He can talk, move, express
+                        emotions and even sense what you are feeling. Here are some of the great things
+                        you can do with your Chatman:
+                    </p>
+                </div>
+                
+                <ul id="mainList">
+                    <li id="askChatmanQuestion">
+                        <div class="areaHeadingText">
+                            Ask Chatman questions!
+                        </div>
+                        <div>
+                            <img class="noCursor" src="images/toolsBarQuestion.png" />
+                            <div class="sayDemoArea">
+                                <input value="Can you give me a kiss?" readonly />
+                                <div onclick="executeCommand('','NavigateTextBoxAndPlayChitChat','')" class="pushButtonRed">SAY</div>
+                            </div>                        
+                        </div>
+                        
+                        <div class="readMoreLink" onclick="toogleOnClick('readMoreTextQuestion')">Read more</div>
+                        <div id="readMoreTextQuestion" class="advertisingText">
+                            Chatman has a big personality and can answer questions about things you want to
+                            know. Ask him anything, from "Where were you born?" to "Will it rain today?" and
+                            much more! If he doesn't know the answer, he'll help you search for it on the web
+                            or ask you to teach him.
+                        </div>
+                    </li>
+                    
+                    <li id="usePopup">
+                        <div class="areaHeadingText">
+                            Use the pop-up questions at the bottom of the chat box</div>
+                        <div><img class="noCursor" src="images/WhatCanYouDo/pop up q.jpg" /></div>
+                        
+                        <div class="readMoreLink" onclick="toogleOnClick('readMoreTextPopup')">Read more</div>
+                        <div id="readMoreTextPopup" class="advertisingText">
+                            If you're not sure what to ask Chatman, use the "pop up" questions to get started.
+                            You can find lots of great ideas and awesome questions that your Chatman knows the
+                            answer to. Try it!
+                        </div>
+                    </li>
+                    
+                    <li id="useMessanger">
+                        <div class="areaHeadingText">
+                            Chatman will join your IM chat sessions with friends!</div>
+                            <div>
+                                <img onclick="executeCommand('','NavigateChatWithFriends','')" class="middleImage" src="images/ChatWithFriendsPage/MSN.png" style="-webkit-transform: rotate(-30deg);" />
+                                <img onclick="executeCommand('','NavigateChatWithFriends','')" class="middleImage" src="images/ChatWithFriendsPage/AIM.png" style="-webkit-transform: rotate(30deg);" />
+                                <img onclick="executeCommand('','NavigateChatWithFriends','')" class="middleImage" src="images/ChatWithFriendsPage/Skype.png" style="-webkit-transform: rotate(-10deg);" />
+                                <img onclick="executeCommand('','NavigateChatWithFriends','')" class="middleImage" src="images/ChatWithFriendsPage/Gmail.png" style="-webkit-transform: rotate(20deg);" />
+                                <img onclick="executeCommand('','NavigateChatWithFriends','')" class="middleImage" src="images/ChatWithFriendsPage/Facebook.jpg" style="-webkit-transform: rotate(-10deg)" />
+                            </div>
+                    </li>
+                    
+                <li id="canRecognize">
+                    <div class="areaHeadingText">
+                        Chatman can recognize over 15000 words, so he always has something to say!
+                    </div>
+                                    
+                    <div class="sayDemoArea">
+                        <input value="I'm eating pizza" readonly />
+                        <div onclick="executeCommand('','NavigateIAmEatingPizzaDialog','')" class="pushButtonRed">SAY</div>
+                    </div>                   
+                                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreTextRecognize')">Read more</div>
+                    <div id="readMoreTextRecognize" class="advertisingText">
+                        You can add new words that you want Chatman to recognize at any time! Teach Chatman
+                        words that relate to your favorite subjects, or teach him cool, funny or even silly
+                        words and let him know how he should feel about them.
+                    </div>
+                </li>
+                
+                <li id="recordVoice">
+                    <div class="areaHeadingText">
+                        Record your voice and make your own Chit Chats. You can share them with your friends!</div>
+                    <div>
+                        <img onclick="executeCommand('', 'NavigateChitChatInfo','')" class="withoutMargin bottomAlign" src="images/New-chit-chat-callout.png" />
+                        <img onclick="executeCommand('', 'NavigateChitChatInfo','')" class="withoutMargin bottomAlign" src="images/audioRecordButton.png" />
+                        <img onclick="executeCommand('', 'NavigateChitChatInfo','')" class="withoutMargin bottomAlign" src="images/audioPlayButton.png" />
+                        <img onclick="executeCommand('', 'NavigateChitChatInfo','')" class="withoutMargin bottomAlign" src="images/audioStopButton.png">                        
+                        <a class="tryItLink middleAlign" onclick="executeCommand('', 'NavigateChitChatInfo','')">Try it!</a>
+                    </div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreTextVoice')">Read more</div>
+                    <div id="readMoreTextVoice" class="advertisingText">
+                        You can record all kinds of funny stuff and choose the right mood for your recording.
+                        Chatman will use your new chit chats when the time is right.
+                    </div>
+                </li>
+                
+                <li id="tellAboutYourself">
+                    <div class="areaHeadingText">
+                        Tell Chatman all about yourself! Fill out all the things you like and don't like
+                        on your Profile Page.</div>
+                    <div onclick="executeCommand('','NavigateUserProfilePage','')"><img class="withoutMargin" src="images/UserProfilePage/defaultIcon.png" />
+                    <img src="images/WhatCanYouDo/profile-categories.png" /></div>
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreAbout')">Read more</div>
+                    <div id="readMoreAbout" class="advertisingText">
+                            Your User Profile is the place to tell Chatman all about yourself. You can upload
+                            a cool photo of yourself, tell Chatman your name, birthday and city, and let Chatman
+                            know your favorite things, as well as the stuff you don't like. You can tell him
+                            about your favorite sports, movies, food, hobbies, fashion, celebrities and more!
+                            Chatman will respond to the things you like and don't like anytime he sees that
+                            they are mentioned!
+                    </div>
+                </li>
+                
+                <li id="signIn">
+                    <div class="areaHeadingText">Sign in and get cool stuff!</div>
+                    <div id="myChatamanText" onclick="executeCommand('', 'NavigateChatmanWebSite', '')">MyChatman.com</div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreSignIn')">Read more</div>
+                    <div id="readMoreSignIn" class="advertisingText">
+                        <p>When Chatman jumped the virtual divide, he lost all his memory and friends. By registering your Chatman, you'll help him get all that cool stuff back. Once you register, Chatman will get his memory back and have so much more to say and do.</p>
+                        <p>Use your personal account on the <span class="linkButton" onclick="executeCommand('', 'NavigateChatmanWebSite', '')">Chatman website</span> to register your Chatman and stay connected to the Chatman community online. Chatman will be able to get all kinds of awesome updates from the Chatman community, and you'll get a whole bunch of cool stuff, funny bonus chit chats and more! You must sign in and register your Chatman, otherwise he will feel alone.</p>   
+                    </div>
+                </li>
+                
+                <li id="searchTheWeb">
+                    <div class="areaHeadingText">
+                        Search the web with Chatman! He knows all about homework, funny websites, weather
+                        reports, TV listings, sports, and more! </div>
+                    <div>
+                        <a onclick="executeCommand('','NavigateSearchCoolWebSites','')"><img class="notVeryLarge" src="images/Intro/SearchCoolWesites.png" /></a> 
+                        <a onclick="executeCommand('','NavigateHomework','')"><img class="notVeryLarge" src="images/Intro/HomeworkHelp.png" /></a> 
+                        <a onclick="executeCommand('','NavigateCinemaWeb', '')"><img class="notVeryLarge" src="images/GamesAndMorePage/Cinema.png" /></a> 
+                        <a onclick="executeCommand('','NavigateSearchImages','')"><img class="notVeryLarge" src="images/GamesAndMorePage/SearchImages.png" /></a>
+                    </div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreSearch')">Read more</div>
+                    <div id="readMoreSearch" class="advertisingText">
+                        Surfing the web with Chatman is safe and fun! If you want to find information, facts,
+                        or answers to questions, Chatman will guide you safely, and lead you to the best
+                        results possible. He can also make you laugh and show you some beautiful pics!
+                    </div>
+                </li>
+                
+                <li id="helpHome">
+                    <div class="areaHeadingText">
+                        Chatman can help you with your homework! He's an expert at all subjects: Math, Science,
+                        Language Arts, Social Studies, and more!</div>
+                    <img class=middleAlign onclick="executeCommand('','NavigateHomework','')" src="images/WhatCanYouDo/homework.png" />
+                    <a class="tryItLink" onclick="executeCommand('','NavigateHomework','')">Try it!</a>
+                </li>
+                
+                <li id="chatmanFriend">
+                    <div class="areaHeadingText">
+                        Become Chatman's best friend and score points!
+                    </div>
+                    <div>
+                        <a class="withoutMargin"><img tooltip="sickFriendState" class="withoutMargin" src="images/Personalities/9.png" /></a>
+                        <a class="withoutMargin"><img tooltip="gettingSickFriendState" class="withoutMargin" src="images/Personalities/8.png" /></a>
+                        <a class="withoutMargin"><img tooltip="neglectedFriendState" class="withoutMargin" src="images/Personalities/7.png" /></a>
+                        <a class="withoutMargin"><img tooltip="angryFriendState" class="withoutMargin" src="images/Personalities/6.png" /></a>
+                        <a class="withoutMargin"><img tooltip="insultedFriendState" class="withoutMargin" src="images/Personalities/5.png" /></a>
+                        <a class="withoutMargin"><img tooltip="sadFriendState" class="withoutMargin" src="images/Personalities/4.png" /></a>
+                        <a class="withoutMargin"><img tooltip="gettingStartedFriendState" class="withoutMargin" src="images/Personalities/3.png" /></a>
+                        <a class="withoutMargin"><img tooltip="likedFriendState" class="withoutMargin" src="images/Personalities/2.png" /></a>
+                        <a class="withoutMargin"><img tooltip="lovedFriendState" class="withoutMargin" src="images/Personalities/1.png" /></a>
+                    </div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreFriend')">Read more</div>
+                    <div id="readMoreFriend" class="advertisingText">
+                        Chatman is your friend! So be a sport - chat and interact with him, play games with him, watch videos in his cinema center, and use his applications. By doing all this, you'll make him feel happy. If you ignore him, he'll feel alone. Treat him well and be a good friend to him. Chatman can feel liked and even loved. The more you use him, talk to him, and teach him, the more loved your Chatman will feel. But if you neglect him, he'll start to feel sad and even get sick. You can use the Friendship Bar to keep track of your score and see how loved Chatman is feeling.
+                    </div>
+                </li>
+                
+                <li id="teachChatman">
+                    <div class="areaHeadingText">
+                        Teach Chatman and score points!</div>
+                    <div>
+                        <a class="withoutMargin"><img tooltip="wantToLearnTeachState" class="withoutMargin" src="images/Brainpower/0.png" /></a> 
+                        <a class="withoutMargin"><img tooltip="gettingSmarterTeachState" class="withoutMargin" src="images/Brainpower/1.png" /></a> 
+                        <a class="withoutMargin"><img tooltip="smartTeachState" class="withoutMargin" src="images/Brainpower/2.png" /></a> 
+                        <a class="withoutMargin"><img tooltip="verySmartTeachState" class="withoutMargin" src="images/Brainpower/3.png" /></a> 
+                        <a class="withoutMargin"><img tooltip="extremelySmartTeachState" class="withoutMargin" src="images/Brainpower/4.png" /></a> 
+                        <a class="withoutMargin"><img tooltip="geniusTeachState" class="withoutMargin" src="images/Brainpower/5.png" /></a>
+                    </div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreTeach')">Read more</div>
+                    <div id="readMoreTeach" class="advertisingText">
+                        The more stuff you teach Chatman, the more intelligent he becomes. Teach him new chit chats, words and questions, and watch his score rise in the Brainpower Bar. Don't stop teaching him or else his score will drop.
+                    </div>
+                </li>
+                
+                <li id="safeChatman">
+                    <div class="areaHeadingText">
+                        Chatman is safe and will protect you from dangerous content on the internet!</div>
+                    <div>
+                        <img class="middleAlign" src="images/Moods/Danger.png" />
+                        <a class="tryItLink" onclick="executeCommand('','NavigatePlayWarningChitChat','')">Try it!</a>
+                    </div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreSafe')">Read more</div>
+                    <div id="readMoreSafe" class="advertisingText">
+                        Your parents can relax knowing that your online experience with Chatman will be safe, and free of "stranger-danger".
+                    </div>
+                </li>
+                
+                <li id="chatmanAwareness">
+                    <div class="areaHeadingText">
+                        Chatman will increase your awareness and make your internet experience more free
+                        and safe. Your parents can add "Danger" words and Chatman will alert you whenever
+                        those words come up.</div>
+                    <img src="images/toolsBarParents.png" onclick="executeCommand('','NavigateParentsArea','')" />
+                </li>
+                
+                <li id="playGames">
+                    <div class="areaHeadingText">
+                        Play games with Chatman! Take advantage of your free subscription to a really
+                        cool game zone with Chatman.
+                    </div>
+                    <div onclick="executeCommand('','NavigateGamesAndMoreGames','')">
+                        <img class="bigImage" src="images/GamesAndMorePage/Games.png" />
+                        <img src="images/WhatCanYouDo/gamesWithChatman.png">
+                    </div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreGames')">Read more</div>
+                    <div id="readMoreGames" class="advertisingText">
+                        Chatman comes with an initial free subscription to an awesome game zone! You can search all of the coolest games and find exactly what you're looking for! The games are all safe and can be saved to your favorites, so you can play them anytime!
+                    </div>
+                </li>
+                
+                <li id="reminders">
+                    <div class="areaHeadingText">
+                        Set reminders for important dates and events and Chatman will alert you!
+                    </div>
+                    <div>
+                        <a class="withoutMargin" onclick="executeCommand('','NavigateReminders','')"><img class="withoutMargin" src="images/ReminderPage/100x100/7.png" /></a> 
+                        <a class="withoutMargin" onclick="executeCommand('','NavigateReminders','')"><img class="withoutMargin" src="images/ReminderPage/100x100/30.png" /></a> 
+                        <a class="withoutMargin" onclick="executeCommand('','NavigateReminders','')"><img class="withoutMargin" src="images/ReminderPage/100x100/8.png" /></a> 
+                        <a class="withoutMargin" onclick="executeCommand('','NavigateReminders','')"><img class="withoutMargin" src="images/ReminderPage/100x100/32.png" /></a> 
+                        <a class="withoutMargin" onclick="executeCommand('','NavigateReminders','')"><img class="withoutMargin" src="images/ReminderPage/100x100/19.png" /></a>
+                    </div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreReminders')">Read more</div>
+                    <div id="readMoreReminders" class="advertisingText">
+                        Chatman will remind you of birthdays, holidays, tests, and a lot more! You can choose
+                        to be reminded with a surprise chit chat, or choose your own chit chat! You can
+                        even record something special for the reminder and Chatman will play it when it's
+                        time to remind you!
+                    </div>
+                </li>
+                
+                <li id="chatmanApp">
+                    <div class="areaHeadingText">Download the coolest applications!</div>
+                    <div onclick="executeCommand('','NavigateMyApps','')"><img class="bigImage" src="images/AppsAndDownloadsPage/SearchCoolWesites.png" /></div>
+                    
+                    <div class="readMoreLink" onclick="toogleOnClick('readMoreApp')">Read more</div>                
+                    <div id="readMoreApp" class="advertisingText">
+                        Chatman has a whole bunch of awesome apps for you! Fun apps, ones that will make
+                        your life easier, and ones that will make you smarter!
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

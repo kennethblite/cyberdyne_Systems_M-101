@@ -1,0 +1,49 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/ActionSharePrice.css" rel="stylesheet" type="text/css" />
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/PopupBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/PopupBox.js" type="text/javascript"></script>
+<script src="js/Resources/Constants.js" type="text/javascript"></script>
+    
+    <script src="js/Pages/ActionSharePrice.js" type="text/javascript"></script>
+</head>
+
+<!-- Template -->
+<body>
+    <div id="popupContainer">
+      <div id="popupArea" class="area">
+        <div id="popupWrapper" class="areaWrapper">
+          <div id="popupHeading" class="areaHeading">
+              <div class="areaHeadingText">Enter chit chat price in credits</div>
+              <div id="cross"></div>
+           </div>           
+          <div id="popupContent">
+             <!-- Specific popup content: start -->
+                <div id="actionSharePriceContainer">
+		            <input id="actionSharePriceTextBox" type="text" />                  
+                    <div class="labelText">Recommended: Between 5 and 10</div>
+                    <div class="labelText">Actual price may be higher</div>
+		            <div id="shareButton" class="pushButtonBlue" onclick="executeCommand('', 'ShareClicked', Page.getUserInput())">SHARE</div>	               
+                </div>
+              <!-- Specific popup content: end -->
+            </div>	      
+	       </div>
+	      </div>
+	    </div>
+</body>
+</html>

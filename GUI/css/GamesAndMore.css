@@ -1,0 +1,58 @@
+﻿#gamesAndMoreHeading{
+	background-image: url('../images/GamesAndMorePage/HeadingText.png');
+}
+#gamesAndMoreMain{
+	background: url('../images/GamesAndMorePage/PageBackgound.png') no-repeat;
+	width: 970px;
+	height: 538px;
+	padding: 16px 2px 2px 2px;
+}
+#advertisingText{
+	list-style: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 12pt;
+	margin-top: 0px;
+}
+#bigButtonsArea{
+	margin: auto;
+	margin-top: 31px;
+	width: 962px;
+	height: 450px;
+	padding: 0px 2px 0px 2px;
+}
+.bigButton{
+	background-color: #F03228;
+	border: 3px solid #FFFFFF;
+	border-radius: 7px;
+	width: 281px;
+	height: 206px;
+	float: left;
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-top: 7px;
+	cursor: pointer;
+}
+#searchCoolWebsites{
+	background-image: url('../images/GamesAndMorePage/SearchCoolWesites.png');
+}
+#searchImages{
+	background-image: url('../images/GamesAndMorePage/SearchImages.png');
+}
+#homeworkHelp{
+	background-image: url('../images/GamesAndMorePage/HomeworkHelp.png');
+}
+#photosAndVideos{
+	background-image: url('../images/GamesAndMorePage/PhotosAndVideos.png');
+}
+#cinema{
+	background-image: url('../images/GamesAndMorePage/Cinema.png');
+}
+#games{
+	background-image: url('../images/GamesAndMorePage/Games.png');
+}
+
+/* RTL suppport */
+.RTL #bigButtonsArea .bigButton{
+	float: right;
+}

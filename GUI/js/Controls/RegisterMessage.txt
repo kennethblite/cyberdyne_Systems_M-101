@@ -1,0 +1,84 @@
+// inherite from Base Control
+extend(RegisterMessage, BaseControl);
+RegisterMessage.templateId = "#registerMessageTemplate";
+
+function RegisterMessage(container, name) {
+    RegisterMessage.superclass.constructor.apply(this, arguments);
+
+    this.textChangeInterval = null;
+    this.myChatmanLinkAnim = null;
+    this.exclImageAnim = null;
+
+    this.registerButtonClickCallback = null;
+}
+
+RegisterMessage.prototype.bindUI = function() {
+    var controlName = this.name;
+    var control = this;
+    this.control.find('.text').add(this.control.find('.registerButton')).click(function() {
+        executeCommand(controlName, 'NavigateRegistration', '');
+
+        if (control.registerButtonClickCallback) {
+            control.registerButtonClickCallback();
+        }
+    });
+}
+
+RegisterMessage.prototype.setNotNowButtonClickCallback = function(callback) {
+    var RegisterMessage = this;
+
+    this.control.find('.notNowButton').click(function(e) {
+        if (e.button == 0) {
+            callback(RegisterMessage);
+        }
+    });
+}
+
+RegisterMessage.prototype.setRegisterButtonClickCallback = function(callback) {
+    this.registerButtonClickCallback = callback;
+}
+
+RegisterMessage.prototype.show = function() {
+    this.control.show();
+
+    // Text changes every 10sec
+    var k = 0;
+    var myChatmanLinkHTML = '<img class="myChatmanImage" src="images/mychatman.png" /><br />';
+    this.control.find('.text').html(PagesResourcesStrings.registerWarnings[k++].format(myChatmanLinkHTML, '</br>'));
+
+    var $regControl = this.control;
+    this.textChangeInterval = setInterval(function() {
+        $regControl.find('.text').html(PagesResourcesStrings.registerWarnings[k].format(myChatmanLinkHTML, '</br>'));
+        k = (k + 1) % PagesResourcesStrings.registerWarnings.length;
+    }, 60000);
+
+    // myChatman.com link animation
+    this.myChatmanLinkAnim = setInterval(function() {
+        $regControl.find('.myChatmanImage').css({
+            webkitAnimation: 'buttonScaling 0.4s linear'
+        });
+
+        setTimeout(function() {
+            $regControl.find('.myChatmanImage').css({ webkitAnimation: '' });
+        }, 400);
+    }, 2500);
+
+    // myChatman.com link animation
+    /*this.exclImageAnim = setInterval(function() {
+        $regControl.find('.exclamationImage').css({
+            webkitAnimation: 'buttonScaling 0.4s linear'
+        });
+
+        setTimeout(function() {
+            $regControl.find('.exclamationImage').css({ webkitAnimation: '' });
+        }, 400);
+    }, 1500);*/
+}
+
+RegisterMessage.prototype.hide = function() {
+    this.control.hide();
+
+    clearInterval(this.textChangeInterval);
+    clearInterval(this.myChatmanLinkAnim);
+    clearInterval(this.exclImageAnim);
+}

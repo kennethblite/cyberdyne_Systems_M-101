@@ -1,0 +1,17 @@
+﻿#pageContainer{
+	width:100%;
+	height: 100%;
+}
+
+iframe{
+	display: none;		
+}
+.selectedFrame{
+	display: block;
+}
+
+#messageBoxFrame{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}

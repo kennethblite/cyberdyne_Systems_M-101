@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+.actionListContainer{
+	width: 100%;
+	height: 100%;	
+}
+.actionList{
+	position: absolute;
+	top: 20px;
+	bottom: 0px;
+	width: 100%;	
+}
+.actionListItemsContainer{
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	/*-webkit-column-width: 141px;
+	-webkit-column-gap: 0px;*/
+	padding: 0px 20px;
+}
+.actionListItemsContainer.animated{	
+}
+
+/* list items */
+.actionListItemsContainer > *{
+	margin-top: 7px;	
+}
+
+
+/* scrollers */
+.actionListLeftScroller{
+	background: url("../images/leftArrow.gif") no-repeat center;
+	left: 0px;
+}
+.actionListRightScroller{
+	background: url("../images/rightArrow.gif") no-repeat center;
+	right: 0px;
+}
+/* the same thing is in AutoScrollinglist */
+.actionListRightScroller, .actionListLeftScroller{
+	background-color: #ebebeb;
+	width: 16px;
+	height: 55px;
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	z-index: 5;
+}
+
+.searchButton{
+	position: absolute;
+	right: 4px;
+	display: none;
+	-webkit-transform: scale(1);
+	-webkit-transition: -webkit-transform 0.2s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.searchButton:hover{
+	-webkit-transform: scale(1.2);
+}
+.searchButton:active{
+	-webkit-transform: scale(1);
+}
+
+/* RTL support */
+.RTL .actionListItemsContainer{
+	left: auto;
+	right: 0px;
+}

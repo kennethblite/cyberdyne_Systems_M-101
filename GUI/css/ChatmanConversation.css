@@ -1,0 +1,172 @@
+﻿.chatmanConversationContainer{
+	width: 474px;
+	height: 414px;	
+	background-color: #1a1a1a;
+	color: #a6a6a6;
+}
+/*
+ * Callouts container and stuff
+ */
+.chatContainer{
+	height: 295px;
+	border-radius: 15px;
+	background-color: #1a1a1a;
+	padding-left: 5px;
+	padding-right: 25px;
+	overflow: hidden;
+}
+.calloutsContainer{
+	height: 295px;
+	border-radius: 15px;
+	background-color: #1a1a1a;
+	color: #1a1a1a;
+	padding-left: 12px;
+	padding-right: 9px;	
+	position: static;
+	padding-bottom: 70px;	
+	top: 0px;
+	height: 225px;
+	overflow-y: scroll;
+}
+.scrollBar{
+	width: 18px;
+	height: 100%;
+	background-color: ##0d0d0d;
+	border: 1px solid #009933;
+	border-radius: 15px;
+	position: absolute;
+	top: 0px;
+	right: 0px;	
+}
+.upArrow, .downArrow{
+	width: 13px;
+	height: 8px;
+	position: absolute;
+	left: 2px;
+}
+.upArrow{
+	background: url('../images/conversationSliderUpArrow.png') no-repeat;
+	top: 4px;
+}
+.downArrow{
+	background: url('../images/conversationSliderDownArrow.png') no-repeat;
+	bottom: 4px;
+}
+.sliderContainer{
+	left: 2px;
+	position: absolute;
+	top: 17px;
+	bottom: 17px;
+}
+.slider{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B3D1EB), to(#65A5D5)) ,url('../images/conversationSlider.png') no-repeat;
+	border-radius: 3px;
+	width: 14px;
+	height: 100%;
+	max-height: 100%;
+	min-height: 20px;
+	position: absolute;
+	top: 0px;
+}
+
+/*
+ * text, textBox textForm and containment
+ */
+.textBoxLabel{
+	height: 20px;
+	color: #009933;
+	font-size: 10pt;
+	padding-top: 5px;
+}
+.textForm{
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: #0d0d0d;
+	color: #a6a6a6;
+	height: 82px;
+	padding: 4px;
+}
+.textForm .pushButtonRed{
+	font-size: 14pt;	
+	padding: 14px 8px;
+}
+.textBox{
+	width: 396px;
+	height: 45px;
+	border: 2px solid #009933;
+	color: #1a1a1a;
+	background-color: #808080;
+	border-radius: 7px;
+	padding-top: 4px;
+	padding-left: 3px;
+}
+.chatmanConversationContainer .autoQuestions{
+	margin: 5px 0px;
+	height: 20px;
+	width: 404px;
+	display: none;
+}
+
+.leftScrollerQuestions, 
+.rightScrollerQuestions{	
+	position: absolute;
+	height: 22px;
+	width: 15px;
+	z-index: 10000;
+	margin-top: 0.9px;
+}
+.leftScrollerQuestions{
+	background: url('../images/leftMenuScrollerTriangle.png') no-repeat center #00579E;
+	left: 0px;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+.rightScrollerQuestions{
+	background: url('../images/rightMenuScrollerTriangle.png') no-repeat center #00579E;
+	right: 0px;	
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.menuContainer{
+	position:absolute;
+	left: 15px;
+	-webkit-transition: left 0.1s ease-in-out;		
+	-webkit-backface-visibility: hidden;
+}
+/* hides oevrflow of the automatic questions */
+.whiteOverlaper1{
+	background: url(../images/questionMenuHack1.png) no-repeat white;
+	background-position: 49px -5px;
+	position: absolute;
+	width: 85px;
+	height: 23px;
+	z-index: 100;
+	right: -13px;
+	bottom: 0px;	
+}
+.whiteOverlaper2{
+	background: url(../images/questionMenuHack2.png) no-repeat white;
+	background-position: 0px bottom;
+	position: absolute;
+	width: 25px;
+	height: 26px;
+	z-index: 94;
+	left: -6px;
+	bottom: 0px;	
+}
+
+/* RTL support */
+.RTL .whiteOverlaper1{
+	background: url(../images/questionMenuHack1RTL.png) no-repeat white;
+	right: auto;
+	left: -10px;
+	background-position: 0px -4px;	
+}
+.RTL .whiteOverlaper2{
+	background: url(../images/questionMenuHack2RTL.png) no-repeat white;
+	left: auto;
+	right: -6px;
+	background-position: -5px bottom;
+}

@@ -1,0 +1,58 @@
+﻿#mainBox{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FDFDFD), to(#ababab));
+	border-spacing: 3px;
+	border: 2px solid #5D5F59;
+	width: 250px;	
+	height: 150px;
+	padding: 5px;
+	font-weight: bold;
+}
+#logo{
+	width: 75px;
+}
+#myChatmanText{
+	color: #db3a3a;
+	position: absolute;
+	right: 8px;
+	top: 15px;	
+	font-size: 11pt;
+}
+#statusText{
+	margin-top: 33px;
+	text-align: center;
+	position: absolute;	
+	bottom: 63px;
+	left: 5px;
+	right: 5px;
+}
+
+#progressBar{	
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+	height: 24px;		
+	overflow: hidden;
+	position: absolute;
+	width: 94%;
+	left: 5px;
+	right: 5px;
+	bottom: 15px;	
+}
+#progress{
+	background: -webkit-gradient(linear, 0% 0%, 0% 78%, from(#CDFFCD), to(#47E759), color-stop(.7,#00D328));
+	border-radius: 7px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 0px;	
+}
+/*#closeButton{
+    right: 2px;
+    top: 2px;
+    position: absolute;
+}
+*/
+.RTL #myChatmanText{
+	left: 8px;
+	right: auto;
+}

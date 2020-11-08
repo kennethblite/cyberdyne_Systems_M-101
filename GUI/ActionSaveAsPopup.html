@@ -1,0 +1,89 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/ActionSaveAs.css" rel="stylesheet" type="text/css" />
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/PopupBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/PopupBox.js" type="text/javascript"></script>
+<script src="js/Resources/Constants.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/AutoScrollingList.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/AutoScrollingList.js" type="text/javascript"></script>
+<!--<link href="js/plugins/jquery-ui-1.8.11.custom/css/ui-lightness/jquery-ui-1.8.11.custom.css" rel="stylesheet" type="text/css" />
+<script src="js/plugins/jquery-ui-1.8.11.custom/js/jquery-ui-1.8.11.custom.min.js" type="text/javascript"></script>-->
+<!-- Template -->
+<script id="autoScrollingListTemplate" type="text/x-jquery-tmpl">
+	<div class="autoScrollingContainer">
+    <span class="leftScroller"></span>
+    <span class="rightScroller"></span>
+    
+    <div class="itemsContainer"></div>
+
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/MiniPersonalityButton.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/MiniPersonalityButton.js" type="text/javascript"></script>
+<script src="js/Controls/ImageManager.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="miniPersonalityButtonTemplate" type="text/x-jquery-tmpl">
+    <div class="miniPersonalityButton">
+      <div class="personalityName">${Name}</div>      
+      <div class="roundBackground"></div>
+      <div class="miniPersonalityIconContainer">
+        <div class="backImages"></div>
+        <img src="images/Personalities/${BaseIconID}.png" alt="" class="miniPersonalityIcon" />
+        <div class="frontImages"></div>
+      </div>      
+    </div>
+</script>
+       
+    <script src="js/Pages/ActionSaveAs.js" type="text/javascript"></script>
+    <script src="js/Data/dummyDeclaration.js" type="text/javascript"></script>
+    <!--END REMOVE-->
+</head>
+
+<!-- Template -->
+<body>
+    <div id="popupContainer">
+      <div id="popupArea" class="area">
+        <div id="popupWrapper" class="areaWrapper">
+          <div id="popupHeading" class="areaHeading">
+              <div class="areaHeadingText">Enter a new name</div>
+              <div id="cross"></div>
+           </div>
+          <div id="popupContent">
+             <!-- Specific popup content: start -->
+    
+                <div id="actionSaveAsContainer">
+                    <div id="row1">
+                        <input id="newNameTextBox" type="text" />
+                        <div>This chit chat will be saved to:</div>
+                        <div id="singlePersonalitySelector"></div>
+	                 </div>
+
+                    <div id="row2">                                    
+                        <div id="saveButton" class="pushButtonBlue" onclick="executeCommand('', 'SaveUserData', Page.getUserInputJSON());">SAVE</div>
+                    </div>
+                </div>
+            <!-- Specific popup content: end -->
+            
+            </div>	      
+	       </div>
+	      </div>
+	    </div>    
+</body>
+</html>

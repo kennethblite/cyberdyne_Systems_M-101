@@ -1,0 +1,34 @@
+﻿@CHARSET "UTF-8";
+.autoScrollingContainer{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	direction: ltr !important;
+}
+.autoScrollingContainer * {
+	direction: ltr !important;	
+}
+.itemsContainer{
+	left: 0px;
+	text-align:center;
+}
+/*
+ * Scrollers
+ */
+.leftScroller{
+	background: url("../images/leftArrow.gif") no-repeat center;
+	left: 0px;
+}
+.rightScroller{
+	background: url("../images/rightArrow.gif") no-repeat center;
+	right: 0px;
+}
+.rightScroller, .leftScroller{
+	background-color: #ebebeb;
+	width: 16px;
+	height: 55px;
+	position: absolute;
+	top: 50%;
+	margin-top: -27px;
+	z-index: 5;
+}

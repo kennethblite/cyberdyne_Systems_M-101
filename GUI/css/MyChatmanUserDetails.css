@@ -1,0 +1,50 @@
+﻿#actionSharePriceContainer{
+	width: 350px;
+	height: 218px;
+}
+#actionSharePriceContainer .labelText{
+	font-size: 9pt;
+}
+#registerTable{
+	width: 100%;
+	font-weight: bold;
+}
+#registerTable input{
+	width: 97%;
+}
+#saveButton{
+	right: 5px;	
+	bottom: 2px;
+}
+#normalText, #errorText{
+	display: none;
+}
+#buttonContainer{
+	height: 30px;
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+	width: 100%;
+}
+.waitMessageContainer{
+	position:absolute;
+}
+.mainText{
+	text-align: justify;
+	margin-bottom: 10px;
+	padding: 0px 0px 0px 3px;
+	top: -3px;	
+}
+.mainText > div{
+	margin-bottom: 4px;
+}
+.mainText .pushButtonRed{
+	position: relative;
+	margin-left: 5px;
+}
+
+/* RTL support */
+.RTL #shareButton{
+	right: auto;
+	left: 5px;
+}

@@ -1,0 +1,119 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/OptionsPopup.css" rel="stylesheet" type="text/css" />
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/PopupBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/PopupBox.js" type="text/javascript"></script>
+<script src="js/Resources/Constants.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/TimeSelector.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/TimeSelector.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="timeSelectorTemplate" type="text/x-jquery-tmpl">
+  <div class="timeSelectorContainer">
+    <canvas class="timeSelector" width="82" height="42"></canvas>
+    
+    <div class="hourChanger">
+      <div class="changerUp"></div>
+      <div class="changerDown"></div>
+    </div>
+    <div class="minutesChanger">
+      <div class="changerUp"></div>
+      <div class="changerDown"></div>
+    </div>
+    
+    <div class="formatChange">
+      <div class="formatLine" format="AM">
+        <img class="amImage" src="images/sun.png" />
+        <span>In&nbsp;the&nbsp;morning&nbsp;(AM)</span>
+      </div>
+      <div  class="formatLine" format="PM">
+        <img class="pmImage" src="images/moon.png" />
+        <span>Afternoon&nbsp;(PM)</span>
+      </div>      
+    </div>
+    
+  </div>
+</script>
+    
+    <script src="js/Pages/OptionsPopup.js" type="text/javascript"></script>
+</head>
+
+<!-- Template -->
+<body>
+    <div id="popupContainer">
+      <div id="popupArea" class="area">
+        <div id="popupWrapper" class="areaWrapper">            
+           <div id="popupHeading" class="areaHeading">
+              <div class="areaHeadingText">Options</div>
+              <div id="cross"></div>
+           </div>
+          <div id="popupContent">
+                 
+                <div id="optionsContent">
+                    <div id="text">Set options for Chatman:</div>
+                    
+                    <div class="buttonContainer">
+                        <img id="runOnCheckMark" src="images/PushButtonCheckbox.png" class="checkMark" />
+                        <div id="runOnButton" class="pushButtonRed">Run Chatman on startup</div>
+                    </div>
+                    
+                    <div class="buttonContainer">
+                        <img id="speakCheckMark" src="images/PushButtonCheckbox.png" class="checkMark" />
+                        <div id="speakButton" class="pushButtonRed">Don't speak on your own</div>
+                    </div>
+                    
+                    <div class="buttonContainer">
+                        <table id="timeSelectTable">
+                            <tr>
+                                <td>Or at least not between</td>
+                                <td><div id="timeSelectorControl1" class="timeSelectorControl"></div></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>and</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><div id="timeSelectorControl2" class="timeSelectorControl"></div></td>                                
+                            </tr>
+                        </table>                        
+                    </div>
+                    
+                    <div class="buttonContainer">
+                        <img id="resetPersonalitiesCheckMark" src="images/PushButtonCheckbox.png" class="checkMark" />
+                        <div id="resetPersonalitiesButton" class="pushButtonRed" onclick="executeCommand('', 'ResetPersonalities', '')">Reset personalities</div>
+                    </div>
+
+                    <div class="buttonContainer">
+                        <img id="resetAllDataCheckMark" src="images/PushButtonCheckbox.png" class="checkMark" />
+                        <div id="resetAllDataButton" class="pushButtonRed" onclick="executeCommand('', 'ResetAllData', '')">Reset all data</div>
+                    </div>
+                    
+                    <div id="saveButtonContainer" class="buttonContainer">
+                        <div id="saveButton" class="pushButtonBlue" onclick="executeCommand('', 'Save', Page.getUserInputJSON())">SAVE</div>
+                    </div>
+                </div>
+                
+	      </div>
+	      
+	   </div>
+	  </div>
+	</div>
+</body>
+</html>

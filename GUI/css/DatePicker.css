@@ -1,0 +1,40 @@
+﻿.datePickerContainer{
+	width: 100px;
+	height: 40px;
+	color: #61a6d7;
+	border: 1px solid #61a6d7;
+	background-color: #f0f0ea;
+}
+.line2{
+	font-weight: bold;
+	font-size: 14pt;
+	bottom: 3px;
+}
+.line1, .line2{
+	height: 50%;
+	margin-right: 20px;
+	text-align: center;	
+}
+.line1{
+	top: 3px;
+}
+.arrowColumn{
+	border-left: 1px solid #61a6d7;
+	background: url('../images/DatePickerTriangle.png') no-repeat center #e6e6e6;
+	height: 100%;
+	width: 19px;
+	margin-left: 80px;
+	margin-top: -40px;
+}
+.arrowColumn:hover{
+	background-color: #f4f7fc;
+}
+
+.dateInput{
+	position: absolute;
+	left: 0px;
+	bottom: -7px;
+	width: 10px;
+	z-index: -1;
+	visibility: hidden;
+}

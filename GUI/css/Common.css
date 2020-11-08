@@ -1,0 +1,277 @@
+*{
+	position: relative;
+	-webkit-user-select: none;		
+	-webkit-user-drag: none;
+	cursor: default;
+}
+body{
+	font-family: Arial;
+	font-size: 10pt;
+	margin: 0px;	
+	color #1a1a1a;
+}
+textarea, input, select{
+	resize: none;
+	outline: none;
+	-webkit-user-select: auto;
+	font-family: Arial;
+	font-size: 11pt;
+	padding: 2px;
+	border: 2px solid #1a1a1a;
+	border-radius: 5px;
+}
+#tiptip_holder{
+	max-width: 250px !important;
+}
+.tooltip{
+	background: #ffea9a !important;
+	border: 2px solid #ffcb04  !important;
+	border-radius: 5px  !important;		
+	padding: 2px 7px  !important;
+	font-size: 8pt !important;
+	color: #000  !important;
+	-webkit-box-shadow: 0 0 !important;
+	text-shadow: 0 0 !important;
+}
+.hiddenArrow{
+	display: none !important;
+}
+.hidden{
+	visibility: hidden;
+}
+/*
+ * heading and area style for every page
+ */
+.pageHeading{
+	background-position: 10px center;	
+	background-repeat: no-repeat;
+	height: 34px;
+	background-color: #009933;	
+}
+.pageHeaderHelp{
+	float: right;
+	width: 19px;
+	height: 100%;
+	background: url('../images/pageHeaderHelp.png') no-repeat center;
+	right: 5px;	
+}
+.pageHeading .pageHeaderHelp{
+	visibility: hidden; /* Hidden for now */
+}
+.helper{
+	width: 19px;
+	height: 19px;
+	background: url('../images/pageHeaderHelp.png') no-repeat center;
+	display: inline-block;
+}
+.areaHeading{
+	background-position: 10px center;
+	background-repeat: no-repeat;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	height: 31px;
+	background-color: #000000;	
+}
+.areaHeadingText{
+	color: #2D6AB4;
+	line-height: 33px;
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 12pt;
+}
+.area{
+	background-color: #000000;
+	border-radius: 17px;
+	padding: 4px;
+	margin-top: 4px;
+}
+.areaWrapper{
+	background-color: #009933;
+	border-radius: 15px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.normalText{
+	font-weight: normal;
+}
+/*
+ * Link button
+ */
+.linkButton{
+	color: #2d6ab4;
+	cursor: pointer;
+}
+.linkButton:hover{
+	color: #84b9df;
+}
+/*
+ * Push buttons
+ */
+.pushButtonRed, .pushButtonBlue{
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #003c6e;
+	border: 1px solid #ffffff;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	height: 20px;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #ffffff;
+	padding-left: 5px;
+	padding-right: 5px;
+	position: absolute;
+	text-align: center;
+}
+.pushButtonRed{
+	background-color: #f04623;
+}
+.pushButtonBlue{
+	background-color: #61a6d7;
+}
+.pushButtonRed:hover{
+	background-color: #c82908;
+}
+.pushButtonBlue:hover{
+	background-color: #3d90ca;
+}
+.pushButtonRed:active{
+	background-color: #6e0000;
+	box-shadow: 0px 0px;
+	border: 1px solid transparent;
+}
+.pushButtonBlue:active{
+	background-color: #063982;
+	box-shadow: 0px 0px;
+	border: 1px solid transparent;
+}
+.bigButton{
+	height: 30px;
+	line-height: 30px;
+	font-size: 14pt;
+}
+/*
+ * Common text styles	
+ */
+.labelText{
+	color: #2d6ab4;
+	font-weight: bold;
+	margin-top: 7px;
+	margin-bottom: 3px;
+}
+.advertisingText{
+	font-size: 12pt;
+}
+/* shared across pades and controls */
+.contentTop{
+	font-size: 9pt;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+}
+.watermarked{
+	color: #cccccc;
+}
+
+/*
+ * Scroll bar
+ */
+
+/* Turn on a 14x14 scrollbar */
+::-webkit-scrollbar {
+    width: 18px;
+    height: 0px;    
+}
+
+/* For both up and down button */ 
+::-webkit-scrollbar-button:vertical {   
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 14px;
+}
+
+/* Turn on single button up on top, and down on bottom */
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+/* Turn off the down area up on top, and up area on bottom */
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+/* Place The scroll down button at the bottom */
+::-webkit-scrollbar-button:vertical:increment {
+    background: url('../images/scrollbarButtonVerticalIncrement.png') no-repeat;    
+}
+
+/* Place The scroll up button at the up */
+::-webkit-scrollbar-button:vertical:decrement {
+    background: url('../images/scrollbarButtonVerticalDecrement.png') no-repeat;        
+    width: 18px;
+}
+
+/*::-webkit-scrollbar-track:vertical {
+    background-color: red;    
+}*/
+
+/* Top area above thumb and below up button */
+::-webkit-scrollbar-track-piece:vertical:start {
+   /* border: 1px solid #000;*/
+}
+
+/* Bottom area below thumb and down button */
+::-webkit-scrollbar-track-piece:vertical:end {
+   /* border: 1px dashed pink;*/
+}
+
+/* Track below and above */
+::-webkit-scrollbar-track-piece {
+    background-color: #F2F2F2;
+    border-left: 1px solid #CCCCCC;
+}
+
+/* The thumb itself */
+::-webkit-scrollbar-thumb:vertical {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B3D1EB), to(#65A5D5))/* ,url('../images/conversationSlider.png') no-repeat*/;
+	border-radius: 3px;	
+}
+
+/* Corner */
+::-webkit-scrollbar-corner:vertical {
+    /*background-color: black;*/
+}
+
+/* Resizer */
+::-webkit-scrollbar-resizer:vertical {
+}
+
+
+/* RTL support */
+.RTL, .RTL *{
+	direction: rtl;	
+}
+.RTL .pageHeaderHelp{
+	float: left;
+	left: 5px;
+	right: auto;
+}
+.RTL #privateCheckBox{
+	left: 50px;
+	right: auto;
+}
+.RTL .areaHeadingText{
+	left: 0px;
+	right: 10px;	
+}
+.RTL .pageHeading{
+	background-position: 98% center;
+}
+.RTL .areaHeading{
+	background-position: 96% center;
+}

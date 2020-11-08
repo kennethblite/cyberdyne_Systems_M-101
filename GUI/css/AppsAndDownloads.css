@@ -1,0 +1,45 @@
+﻿#appsAndDownloadsHeading{
+	background-image: url('../images/AppsAndDownloadsPage/HeadingText.png');
+}
+#appsAndDownloadsMain{
+	background: url('../images/AppsAndDownloadsPage/PageBackground.png') no-repeat;
+	width: 970px;
+	height: 538px;
+	padding: 16px 2px 2px 2px;
+}
+#advertisingText{
+	list-style: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 12pt;
+	margin-top: 0px;
+}
+#bigButtonsArea{
+	margin-top: 35px;
+	height: 445px;
+	padding-left: 148px;
+	padding-right: 148px;
+}
+.bigButton{
+	background-color: #F03228;
+	border: 3px solid #FFFFFF;
+	border-radius: 7px;
+	width: 281px;
+	height: 206px;
+	float: left;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 115px;
+	cursor: pointer;
+}
+#myApps{
+	background-image: url('../images/AppsAndDownloadsPage/SearchCoolWesites.png');
+}
+#downloadChitChats{
+	background-image: url('../images/AppsAndDownloadsPage/DownloadChitChats.png');
+}
+
+/* RTL suppport */
+.RTL #bigButtonsArea .bigButton{
+	float: right;
+}

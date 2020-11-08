@@ -1,0 +1,131 @@
+﻿.chatmanFigureContainer{
+	width: 157px;
+	height: 183px;
+	padding-top: 15px;
+	padding-left: 25px;	
+	padding-right: 25px;	
+}
+.chatmanFigureContainer > *{
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.leftEyeBack{
+	position: absolute;
+	top: 47px;
+	left: 43px;
+}
+.rightEyeBack{
+	position: absolute;
+	top: 47px;
+	right: 43px;	
+}
+.leftEye{
+	position: absolute;
+	top: 62px;
+	left: 50px;
+}
+.rightEye{
+	position: absolute;
+	top: 62px;
+	right: 49px;
+}
+
+.leftHand{
+	position: absolute;
+	top: 72px;
+	left: 2px;
+	-webkit-transform-origin: right top;
+}
+.rightHand{
+	position: absolute;
+	top: 72px;
+	right: 0px;
+	-webkit-transform-origin: left top;
+}
+.leftEar{
+	position: absolute;
+	top: 0px;
+	left: 32px;
+	background: url('images/Image82.png') no-repeat;
+	width: 36px;
+	height: 35px;
+	-webkit-transform-origin: center bottom;
+}
+.rightEar{
+	position: absolute;
+	right: 32px;
+	top: 0px;
+	background: url('images/Image81.png') no-repeat;
+	width: 36px;
+	height: 35px;
+	-webkit-transform-origin: center bottom;
+}
+.leftEyelid{
+	position: absolute;
+	left: -15px;
+	bottom: 0px;
+}
+.rightEyelid{
+	position: absolute;
+	right: -15px;
+	bottom: 0px;
+}
+.eyelidsContainer{
+	position: absolute;
+	width: 127px;
+	top: 48px;
+	left: 40px;
+	overflow: hidden;
+	height: 15px;	
+}
+.mouth{
+	position: absolute;
+	width: 113px;
+	height: 41px;
+	top: 106px;
+	left: 47px;		
+}
+.chatmanLed{
+	width: 7px;
+	height: 7px;
+	border-radius: 7px;
+	background-color: #F22020;
+	float: left;
+	margin: 3px 3px 0px;
+	visibility: hidden;
+}
+.eyeClicker{
+	position: absolute;
+	right: 45px;
+	height: 50px;
+	top: 48px;
+	left: 45px;
+}
+.leftHandClicker{
+	position: absolute;
+	top: 57px;
+	left: -17px;
+	width: 52px;
+	height: 85px;	
+}
+.rightHandClicker{
+	position: absolute;
+	top: 57px;
+	right: -17px;
+	width: 52px;
+	height: 85px;	
+}
+.leftEarClicker{
+	position: absolute;
+	top: -16px;
+	left: 24px;
+	width: 57px;
+	height: 51px;	
+}
+.rightEarClicker{
+	position: absolute;
+	top: -16px;
+	right: 24px;
+	width: 57px;
+	height: 51px;	
+}

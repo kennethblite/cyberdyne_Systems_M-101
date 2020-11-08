@@ -1,0 +1,95 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>	
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/ReminderControl.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ReminderControl.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="reminderControlTemplate" type="text/x-jquery-tmpl">
+  <div class="reminderControlContainer">
+	  <div class="remindControlImage" style="background-image: url('images/ReminderPage/25x25/${ImageId}.png');" rect></div>
+	  <div class="remindDescription" rect="">${Description}</div>
+    <div class="reminderCloud">
+      <span class="remindEdit">Edit</span>
+      <span class="remindDelete">Delete</span>
+    </div>
+	  <div class="remindDate" rect>${Date}</div>
+	  <div class="remindTime" rect>${Time}<img src="images/{{if IsDay}}sun{{else}}moon{{/if}}.png" class="remindersTimeOfDayImage" /></div>
+	  <div class="remindRecurrence" rect>${RecurranceType}</div>
+  </div>  
+</script>
+    <link href="css/Reminders.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="js/Resources/ChatmanGUIControlsResourceStrings.js"></script>  
+    <script type="text/javascript" src="js/Pages/Reminders.js"></script>    
+    <!--END REMOVE-->
+</head>
+<body>
+	<div id="remindersContainer">	
+	    <div id="remindersHeading" class="pageHeading">
+	        <div class="pageHeaderHelp"></div>
+	    </div>
+	    
+	    <div id="remindersMain">
+	        <div id="topPartWrap">
+	                <div id="todayArea" class="area">
+	                    <div id="todayAreaWrapper" class="areaWrapper">
+                            <div id="todayHeading" class="areaHeading">
+                                <span class="areaHeadingText">Today</span>
+                            </div>
+                            <div id="todayRemindersContainer" class="remindersContainer">
+                            </div>	                    
+                        </div>     
+	                </div>
+        	         
+	                <div id="tomorowArea" class="area">
+	                     <div id="tomorrowAreaWrapper" class="areaWrapper">
+                            <div id="tomorowHeading" class="areaHeading">
+                                <span class="areaHeadingText">Tomorrow</span>
+                            </div>
+                            <div id="tomorowRemindersContainer" class="remindersContainer"></div>	                    
+                        </div>  
+	                </div> 
+	        </div>
+	        
+	        <div id="laterArea" class="area">	            
+	           <div id="grayOverlap" class="areaHeading">
+	           </div>
+	           <div id="thisWeekHeading" class="areaHeading">
+                    <span class="areaHeadingText">This Week</span>
+               </div>
+	           <div id="laterHeadingAbsPos">
+	                <span class="areaHeadingText">Later</span>
+	           </div>	           
+	           <div id="laterAreaWrapper" class="areaWrapper">                   
+                    <div id="bigRemindersContainer" class="remindersContainer">                        
+                        <div id="thisWeekRemindersContainer"></div>
+                        <div id="laterHeading">
+                             <span class="areaHeadingText">Later</span>
+                        </div>                        
+                        <div id="laterRemindersContainer"></div>
+                    </div>  
+                </div>   
+	        </div>
+	        
+	        <div id="buttonContainer">
+	            <div id="addReminderButton" class="pushButtonRed" onclick="executeCommand('', 'AddNewReminderClicked', '')">ADD NEW REMINDER</div>
+	        </div>
+	    </div>    
+	</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+.personalityButtonContainer{	
+	width: 85px;
+	height: 85px;
+	display: inline-block;
+	overflow: visible;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+/*
+ * personality button styles
+ */
+.personalityButton{
+	border: 1px solid #7db4de;
+	border-radius: 5px;
+	background-color: #a4c7e3;
+	position: relative;
+	margin: auto;
+	width: 75px;
+	height: 75px;
+	z-index: 3;
+	-webkit-transition: height 0.5s ease-in-out, width 0.5s ease-in-out, border-color 1s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.personalityName{
+	position: absolute;
+	width: 100%;
+	top: -20px;
+	text-align: center;
+	line-height: 12pt;
+	font-size: 10pt;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-transition: font-size 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.iconContainer{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align:center;
+}
+.personalityIcon{
+	width: 100%;
+	height: 100%;
+}
+.roundBackground{
+	border-radius: 5px;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;	
+	background: -webkit-gradient(radial, 50% 71, 50, 50% 71, 51, from(#8cbae0), to(#a4c7e3));
+}
+.backImages, .frontImages{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+.backImages > *, .frontImages > *{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+/*
+ * InfoMenu and InfoButton styles
+ */
+.personalityInfoButton{
+	border: 1px #63a8d5 solid;
+	border-radius: 11px;
+	background: url(../images/actionInfo.gif) 3px center no-repeat #ffffff;
+	width: 11px;
+	height: 11px;
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.personalityButton .btnActionInfoMenu{
+	border-radius: 10px;
+	background-color: #ffe4b4;
+	border: 1px #f88d7b solid;
+	width: 90px;
+	height: 120px;
+	display: none;
+	opacity: 0;
+	padding: 4px 0px 6px 9px;
+	bottom: 145px;
+	left: -20px;
+	list-style: none;
+	font-size: 8pt;
+	-webkit-transform: rotate(-22deg);
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.personalityButton .btnActionInfo:hover .btnActionInfoMenu{
+	display: block;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.personalityButton .btnActionInfoMenu li{	
+	width: 81px;
+}
+.personalityButton .btnActionInfoMenu li:last-child{
+	text-align: right;
+	font-size: 10pt;
+}
+.line{
+	border:0px none;
+	background-color: #fbb48f;
+	width: 100%;
+	height: 1px;
+	margin-bottom: 0px;
+}
+
+/*
+ * Cloud styles
+*/
+.cloud{
+	background-image: url("../images/cloud.gif");
+	width: 251px;
+	height: 87px;
+	top: -20px;
+	left: -82px;
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;
+	opacity: 0;
+}
+.cloud > span{
+	position: absolute;
+	display: none;
+}
+/*
+ * Animation keyframes and classes used to animate
+ */
+.personalityButtonGrow{
+	-webkit-transition: height 0.5s ease-in-out, width 0.5s ease-in-out, border-color 1s ease-in-out;
+	-webkit-backface-visibility: hidden;
+    height: 83px;
+    width: 83px;
+    border-color: #dc5153;
+}
+.personalityInfoButtonShow{    
+    opacity: 1;
+    visibility: visible;
+}
+.personalityNameGrow{
+	-webkit-transition: font-size 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
+    font-size: 12pt;
+}
+@-webkit-keyframes cloudOpening{
+	0% {
+		opacity: 0;
+	}
+	37.5%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-webkit-keyframes cloudClosing{
+	0% {
+		opacity: 1;
+	}
+	37.5%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+/*  RTL SUPPORT */
+.RTL .personalityName{
+	direction: rtl !important;
+}

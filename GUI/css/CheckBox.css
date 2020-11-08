@@ -1,0 +1,29 @@
+﻿.checkBoxContainer{
+	position: relative;
+}
+.checkBoxContainer > *{
+	position: relative;
+}
+.checkBox{
+	border: 1px solid #7a7d80;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+}
+.checkMark{
+	background: url('../images/CheckboxCheckMark.png') no-repeat;
+	position:absolute;
+	width: 14px;
+	height: 14px;
+	left: 0px;
+	top: -2px;
+}
+.checkBoxText{
+	display:inline-block;
+	top: -1px;
+}
+
+/* RTL support */
+.RTL .checkMark{
+	right: -3px;
+}

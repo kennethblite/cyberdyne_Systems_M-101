@@ -1,0 +1,48 @@
+﻿#aboutMain{
+	list-style: none;
+	margin: 3px 1px;
+	padding: 0;
+	width: 335px;
+}
+#aboutMain > li{
+	margin-bottom: 8px;
+}
+#logo{
+	position: absolute;
+	width: 150px;
+	top: -6px;
+	right: 0px;
+}
+.horizontalSeparator{
+	border: 0px;
+	width: 100%;
+	height: 1px;
+	background-color: #A1C3E4;
+	color: #A1C3E4;
+	margin: 0px;
+}
+.boldText{
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+#updatesLi{
+	text-align: center;
+	height: 23px;
+	line-height: 23px;
+}
+#ticketLi2{
+	display: none;
+	text-align: center;
+}
+#checkUpdateButton{
+	position: relative;
+}
+#updateStatusText{
+	display: none;
+}
+
+/* RTL support */
+.RTL #logo{
+	left: 0px;
+	right: auto;
+}

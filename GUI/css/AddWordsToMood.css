@@ -1,0 +1,43 @@
+﻿#addWordsToMoodContainer{
+	width: 400px;
+	height: 220px;
+}
+#row2{
+	top: 10px
+}
+
+
+/*
+ * Mood area
+ */
+ 
+#newWordTextBox{
+	width: 90%;
+}
+
+#moodListControl{
+	border: 1px solid #abadb3;
+	background-color: #ffffff;
+	padding-top: 10px;
+	width: 100%;
+	height: 140px;
+	overflow: hidden;
+}
+
+
+/*
+ * Bottom buttons
+ */
+#goBackButton{
+	left: 10px;
+}
+#saveButton{
+	right: 10px;
+	width: 40px;
+}
+
+/* RTL support */
+.RTL #saveButton{
+	right: auto;
+	left: 10px;
+}

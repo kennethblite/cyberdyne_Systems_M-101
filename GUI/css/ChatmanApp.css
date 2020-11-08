@@ -1,0 +1,57 @@
+﻿.chatmanAppContainer{
+	background-color: #F2F2F2;
+	border: 2px solid #0070B2;
+	border-radius: 5px;
+	display: inline-block;
+	width: 260px;
+	height: 100px;
+	padding: 4px;
+	vertical-align: top;
+}
+.chatmanAppImage{
+	background-color: #CCCCCC;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 130px;
+	height: 100px;
+}
+.chatmanAppText{
+	height: 100px;
+	width: 125px;
+	margin-left: 134px;
+	margin-top: -100px;
+}
+.chatmanAppDescription{
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.chatmanAppName{
+	color: #0070B2;
+	font-weight: bold;
+	width: 125px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.closeButton{
+	left: -4px;
+	top: -4px;
+	display: none;
+}
+
+.chatmanAppContainer.disabled .chatmanAppName{
+	color: #7fa0ba;
+}
+.chatmanAppContainer.disabled .chatmanAppDescription{
+	color: #abaaaa;
+}
+.chatmanAppContainer.disabled .chatmanAppImage{
+	opacity: 0.5;
+}
+
+/* RTL support */
+.RTL .chatmanAppText{
+	left: -136px;
+}
+.RTL .closeButton{
+	left: 0px;
+}

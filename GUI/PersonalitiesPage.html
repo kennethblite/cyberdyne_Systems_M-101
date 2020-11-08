@@ -1,0 +1,297 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link href="css/Personalities.css" rel="stylesheet" type="text/css" />
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+
+<!-- Requirements  -->
+<link href="css/AutoScrollingList.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/AutoScrollingList.js" type="text/javascript"></script>
+<!--<link href="js/plugins/jquery-ui-1.8.11.custom/css/ui-lightness/jquery-ui-1.8.11.custom.css" rel="stylesheet" type="text/css" />
+<script src="js/plugins/jquery-ui-1.8.11.custom/js/jquery-ui-1.8.11.custom.min.js" type="text/javascript"></script>-->
+<!-- Template -->
+<script id="autoScrollingListTemplate" type="text/x-jquery-tmpl">
+	<div class="autoScrollingContainer">
+    <span class="leftScroller"></span>
+    <span class="rightScroller"></span>
+    
+    <div class="itemsContainer"></div>
+
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/PersonalityButton.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/PersonalityButton.js" type="text/javascript"></script>
+<script src="js/Infrastructure/seqFade.js" type="text/javascript"></script>
+<script src="js/Controls/ImageManager.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/InfoMenu.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/InfoMenu.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="infoMenuTemplate" type="text/x-jquery-tmpl">
+  
+  <div class="infoMenuContainer">
+    <ul class="infoMenu">
+      <li class="infoTitle">
+        <div id="TextBlock_1">Description</div>
+      </li>
+      <li id="descriptionInfo"></li>
+      <li>
+        <hr class="line" />
+      </li>
+      <li class="infoTitle">
+        <div id="TextBlock_3">Designer</div>
+      </li>
+      <li id="designerInfo"></li>
+      <li>
+        <hr class="line" />
+      </li>
+      <li id="scope"></li>
+    </ul>  
+  </div>  
+  
+</script>
+
+<!-- Template -->
+<script id="personalityButtonTemplate" type="text/x-jquery-tmpl">
+  
+  <div class="personalityButtonContainer">
+    <div class="personalityButton">
+      <div class="personalityName">${Name}</div>
+      <div class="roundBackground"></div>
+      <div class="iconContainer">
+        <div class="backImages"></div>
+        <img src="images/Personalities/${BaseIconID}.png" class="personalityIcon" />
+        <div class="frontImages"></div>
+      </div>
+      
+      <!-- infoMenu like in ActionButton -->
+      <div class="personalityInfoButton">
+        <ul class="btnActionInfoMenu">
+          <li><div id="TextBlock_1">Description</div></li>
+          <li>${Description}</li>
+          <li><hr class="line" /></li>
+          <li><div id="TextBlock_3">Designer</div></li>
+          <li>${Designer}</li>
+          <li><hr class="line" /></li>
+          <li><span class="linkButton">More info</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Cloud -->
+    <div class="cloud">
+      <span command="ChatClicked" style="top: 27px; left: 15px;">Chat</span>
+      <span command="PersonalityEditClicked" style="bottom: 20px; left: 77px; color: #0065b1;">Edit</span>
+      <span command="PersonalityDeleteClicked" style="bottom: 20px; right: 70px;">Delete</span>
+      <span command="PersonalityCloneClicked"style="top: 27px; right: 15px; color: #dedede;">Clone</span>
+    </div>
+  </div>
+  
+</script>
+<!-- Requirements  -->
+<link href="css/ChatmanBrainpower.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ChatmanBrainpower.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/ChatmanBrainpowerImage.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ChatmanBrainpowerImage.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="chatmanBrainpowerImageTemplate" type="text/x-jquery-tmpl">
+  <div class="brainpowerImageContainer">
+    <div class="roundBackground"></div>
+    <div class="brainpowerIconContainer">
+      <img src="${ImagePath}" alt="" class="brainpowerViewIcon" />
+    </div>
+    <div class="smartImageQuestion"></div>
+    <div class="brainpowerViewName">{{if Name}}${Name}{{/if}}</div>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/HorizontalBar.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/LevelColor.js" type="text/javascript"></script>
+<script src="js/Controls/HorizontalBar.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="horizontalBarTemplate" type="text/x-jquery-tmpl">
+  <div class="horizontalBar">
+    <div class="barLevel"></div>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/SimpleText.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/SimpleText.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="simpleTextTemplate" type="text/x-jquery-tmpl">
+  <span class="simpleTextContainer"></span>
+</script>
+
+<!-- Template -->
+<script id="chatmanBrainpowerTemplate" type="text/x-jquery-tmpl">
+  <div class="chatmanBrainpowerContainer">
+    <div class="chatmanBrainpowerTop">
+      <div class="chatmanBrainpowerImageControl"></div>
+      <div class="scoreControl">
+        <div class="levelText">
+          <b>LEVEL: </b><span class="levelStatus"> {{if OldLevel}} ${OldLevel} {{else}} ${Level} {{/if}}</span>
+        </div>
+        <div class="scoreText">
+          <b>SCORE:</b>
+          <div class="scoreTextControl"></div>          
+        </div>
+        <div class="scoreTextInstructions">Teach me new chitchats or words and questions to make me smarter!</div>
+      </div>
+    </div>
+
+
+    <ul class="chatmanBrainpowerBottom">
+      <li>
+        <div class="newChitChatsHorizontalBarControl"></div>
+        <img class="newChitChatImage" src="images/New-chit-chat-callout.png" />
+        <div class="newChitChatButton pushButtonBlue">NEW CHITCHAT</div>
+        <div class="shareButton pushButtonBlue">SHARE</div>
+      </li>
+      <li class="newChitChatsText"></li>
+      <li>
+        <div class="newWordsHorizontalBarControl"></div>
+        <img class="newQuestionImage" src="images/New-question-callout.png" />
+        <div class="newWordButton pushButtonBlue">NEW WORDS</div>
+        <img class="newWordsImage" src="images/New-word-callout.png" />
+        <div class="newQuestionsButton pushButtonBlue">NEW QUESTION</div>
+      </li>
+      <li class="newWordsText"></li>
+    </ul>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/ActionList.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ActionList.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/ActionButton.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ActionButton.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/ActionCloud.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/ActionCloud.js" type="text/javascript"></script>
+<script src="js/Infrastructure/seqFade.js" type="text/javascript"></script>
+<!-- Template -->
+<script id="actionCloud" type="text/x-jquery-tmpl">
+  <div id="cloud">
+    <span id="editLink" command="EditActionClicked" style="top: 27px; left: 110px;">Edit</span>
+    <span id="shareLink" command="ShareActionClicked" style="top: 27px; left: 20px;">Share</span>
+    <span command="PlayActionClicked" style="top: 27px; right: 20px;">Play</span>
+    <span command="CloneActionClicked" style="bottom: 15px; left: 80px;">Clone </span>
+    <span command="DeleteActionClicked" style="bottom: 15px; right: 75px;">Delete</span>    
+  </div>
+  
+  <div id="moodImage">    
+    <div class="moodName">
+      <div class="moodNameText">
+        <span id="moodText" class="nameWrapper"></span>
+      </div>
+    </div>
+  </div>   
+</script>
+
+<!-- Template -->
+<script id="actionButtonTemplate" type="text/x-jquery-tmpl">
+	<div class="actionButtonContainer  {{if IsLong}}actionButtonLong{{/if}} ">
+		<div class="actionButton">
+  		<div class="btnActionInfo"></div>
+			<span class="actionName" title="${Description}">${Name}</span>      
+		</div>
+    <div class="moodIconContainer" style="background: url('images/Moods/Small/${MoodName}.png') no-repeat;">
+     
+    </div>
+	</div>
+</script>
+
+<!-- Template -->
+<script id="actionListTemplate" type="text/x-jquery-tmpl">
+  <div class="actionListContainer">
+    
+    <div class="contentTop">
+      <span class="chitChatCountText"></span>
+      <img class="searchButton" src="images/ChatWithChatmanPage/searchButton.png" role="search" />
+      <img class="searchButton" src="images/ChatWithChatmanPage/searchCancelButton.png" role="cancelSearch" />
+    </div>
+       
+    <div class="actionList">      
+      <div class="actionListItemsContainer"></div>
+    </div>
+
+    <span class="actionListLeftScroller"></span>
+    <span class="actionListRightScroller"></span>
+    
+  </div>
+</script>
+    
+    <script src="js/Infrastructure/jquery.tipTip.js" type="text/javascript"></script>
+    <link href="css/Infrastructure/tipTip.css" rel="stylesheet" type="text/css" />
+      
+    <script src="js/Resources/ChatmanGUIControlsResourceStrings.js" type="text/javascript"></script>
+    <script src="js/Resources/Constants.js" type="text/javascript"></script>
+    <script src="js/Pages/Personalities.js" type="text/javascript"></script>
+    <!--END REMOVE-->
+</head>
+<body>
+	<div id="chatWithChatmanContainer" class="pageContainer">	
+	    <div id="chatWithChatmanHeading" class="pageHeading">
+	        <div class="pageHeaderHelp"></div>
+	    </div>
+	    
+	    <div id="chatWithChatmanMain">
+	    
+	        <div id="row1">            
+	            <div id="personalityArea" class="area">
+	                <div id="personalityAreaWrapper" class="areaContentWrapper">
+	                    <div id="personalityAreaHeading" class="areaHeading"></div>
+	                    <div class="contentTop">
+	                        <span id="personalityCountText"></span>
+	                    </div>
+	                    <div id="personalityListControl"></div>
+	                    <div id="personalityStuffButtons">
+	                        <div id="downloadButton" class="pushButtonBlue" onclick="executeCommand('', 'NavigateDownloadPersonalitiesWeb', '')">DOWNLOAD</div>
+	                        <div id="newPersonalityButton" class="pushButtonBlue" onclick="executeCommand('', 'ShowNewPersonalityPopup', '')">NEW&nbsp;PERSONALITY</div>
+	                    </div>
+	                </div>	                
+	            </div>
+
+	            <div id="freeSpace"></div>
+
+	            <div id="chatmanBrainpowerArea" class="area">
+	                <div id="chatmanBrainpowerWrapper" class="areaContentWrapper">
+	                    <div id="chatmanBrainpowerHeading" class="areaHeading"></div>
+	                    <div id="chatmanBrainpowerControl"></div>	                    
+	                </div>     
+	            </div>
+	        </div>
+	        
+	        <div id="row2">
+	            <div id="actionBrowserArea" class="area">
+	                <div id="actionBrowserWrapper">
+	                    <div id="actionBrowserHeading" class="areaHeading">
+	                        <span id="actionBrowserHeadingText" class="areaHeadingText"></span>
+	                    </div>	                    
+	                    <div id="actionBrowserContent">	                        
+	                        <div id="actionListControl"></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>	    
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿#popupContainer{
+	position: absolute;
+	z-index: 100001;
+	margin: auto;
+}
+#popupContent{
+	padding: 5px 10px;
+}
+#popupArea{
+	border: 3px solid #FFFFFF;
+	box-shadow: 5px 5px 5px #0062a6;
+	padding: 2px;
+	background-color: #A1C3E4;
+	margin-top: 0px;
+}
+#cross{
+	background: url('../images/popupClose.png');
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: 7px;
+	top: 10px;
+}
+#popupFrame{
+	width: 100px;
+	height: 100px;
+}
+
+/* RTL support */
+.RTL #cross{
+	left: 7px;
+	right: auto;
+}
+
+/* Page mode support */
+.PageMode #popupArea{
+	box-shadow: 0 0;
+	border: 0;
+	border-radius: 0px;
+}
+.PageMode .areaWrapper, .PageMode .areaHeading{
+	border-radius: 0px;
+}

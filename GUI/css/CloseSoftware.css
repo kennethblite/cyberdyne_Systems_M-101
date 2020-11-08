@@ -1,0 +1,27 @@
+﻿#closeSoftwareContainer{
+	width: 310px;
+	height: 90px;
+}
+#closeButton, #shutDownButton{
+	width: 95px;	
+	height: 42px;
+	top: 20px;
+	font-size: 11pt;
+	padding-top: 3px;
+}
+#closeButton{
+	left: 10px;
+}
+#shutDownButton{
+	right: 10px;
+}
+
+/* RTL support */
+.RTL #closeButton{
+	left: auto;
+	right: 10px;
+}
+.RTL #shutDownButton{
+	left: 10px;
+	right: auto;
+}

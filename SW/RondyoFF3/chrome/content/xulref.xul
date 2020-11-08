@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://rondyoff3/skin/style.css"
+                 type="text/css"?>
+
+<overlay id="Rondyo-Overlay" 
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript"
+        src="chrome://rondyoff3/content/facebook.js" />
+	<script type="application/x-javascript"
+        src="chrome://rondyoff3/content/googletalk.js" />
+	<script type="application/x-javascript"
+        src="chrome://rondyoff3/content/jscode.js" />
+		
+<!--		
+	<statusbar id="status-bar">
+    <statusbarpanel id="status-bar-sample-1" label="Hello World" tooltiptext="Sample status bar">
+      <hbox
+        height="200"
+        width="800">
+        <textbox id="debug-str"
+                 multiline="true"
+                 width="800"/>
+		<button label="clear"
+				onclick="document.getElementById('debug-str').value = '';"/>
+      </hbox>
+    </statusbarpanel>
+  </statusbar>
+-->
+  
+</overlay>

@@ -1,0 +1,52 @@
+﻿#myChatmanAppsHeading{
+	background-image: url('../images/MyChatmanApps/HeadingText.png');
+}
+#myChatmanAppsMain{
+	background-color: #D9E5EC;
+	width: 970px;
+	height: 568px;
+	padding: 0px 2px 2px 2px;
+}
+
+#appsListContainer{
+	margin-left: -10px;
+	margin-top: -5px;
+	width: 981px;
+	height: 403px;
+	overflow-y: scroll;
+}
+.chatmanAppContainer{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#bigButtonsArea{
+	background-image: url('../images/MyChatmanApps/bottom.png');
+	width: 971px;
+	height: 148px;
+	position: absolute;
+	bottom: 0px;	
+	text-align: center;
+}
+.bigButton{
+	background-color: #F03228;
+	border: 3px solid #FFFFFF;
+	border-radius: 7px;
+	width: 194px;
+	height: 94px;
+	display: inline-block;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 20px;
+}
+.bigButton, .bigButton img{
+	cursor: pointer;
+}
+/* RTL support */
+.RTL .chatmanAppContainer{	
+	margin-left: auto;
+	margin-right: 13px;
+}
+.RTL .contentTop{
+	padding-right: 36px;
+}

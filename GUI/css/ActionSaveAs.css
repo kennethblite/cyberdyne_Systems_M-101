@@ -1,0 +1,42 @@
+﻿#actionSaveAsContainer{
+	width: 400px;
+	height: 210px;
+}
+#row2{
+	top: 10px
+}
+
+
+/*
+ * Mood area
+ */
+ 
+#newNameTextBox{
+	width: 50%;
+}
+
+#singlePersonalitySelector{
+	border: 1px solid #abadb3;
+	background-color: #ffffff;
+	padding-top: 10px;
+	width: 100%;
+	height: 120px;
+	overflow: hidden;
+}
+
+/*
+ * Bottom buttons
+ */
+#goBackButton{
+	left: 10px;
+}
+#saveButton{
+	right: 10px;
+	width: 40px;
+}
+
+/* RTL support */
+.RTL #saveButton{
+	left: 10px;
+	right: auto;
+}

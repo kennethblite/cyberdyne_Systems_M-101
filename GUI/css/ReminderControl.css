@@ -1,0 +1,92 @@
+﻿.reminderControlContainer{
+	height: 22px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.reminderControlContainer > [rect]{
+	float: left;
+	margin-left: 4px;
+	background-color: #E6E6E6;
+	border: 2px solid #A1C3E4;
+	border-radius: 5px;
+	height: 23px;
+	line-height: 23px;
+	padding: 2px 5px;
+	color: #6CA4D6;
+	font-size: 11pt;
+	font-weight: bold;
+}
+.reminderControlContainer > .remindControlImage{
+	width: 26px;
+	height: 26px;
+	padding: 0px;
+	overflow: hidden;
+}
+.remindDescription{
+	width: 205px;
+	z-index: 5;
+}
+.remindTime{
+	width: 63px;	
+}
+.remindersTimeOfDayImage{
+	position: absolute;
+	right: 8px;
+	top: 4px;
+}
+.remindRecurrence{
+	width: 115px;
+	text-align: center;
+	font-size: 9pt !important;
+}
+.remindDate{
+	width: 225px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.reminderCloud{
+	background: url('../images/ReminderCloud.png') no-repeat;
+	width: 121px;
+	height: 55px;
+	position: absolute;
+	top: -6px;
+	left: 210px;
+	color: #6CA4D6;
+	z-index: 4;
+	visibility: hidden;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	opacity: 0;
+}
+.reminderCloudShow{
+	visibility:visible;
+	opacity: 1;
+}
+.remindEdit{
+	top: 13px; 
+	left: 68px;
+}
+.remindDelete{
+	top: 27px; 
+	left: 68px; 
+	position: absolute;
+}
+
+/* RTL support */
+.RTL .reminderControlContainer > [rect]{
+	float: right;
+	margin-right: 4px;
+	margin-left: 0px;
+}
+.RTL .remindersTimeOfDayImage{
+	left: 8px;
+	right: auto;
+}
+.RTL .reminderCloud{
+	right: 199px;
+	left: auto;
+}
+.RTL .remindEdit,.RTL .remindDelete{	
+	right: 68px;
+	left: auto;
+}

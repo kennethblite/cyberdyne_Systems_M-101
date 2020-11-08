@@ -1,0 +1,41 @@
+﻿#pushButtonContent{	
+	padding: 7px 2px;
+	width: 300px;
+}
+
+#text{
+	font-weight: bold;
+}
+.buttonContainer{
+	margin-top: 17px;
+}
+#muteButton, #surpriseButton{
+	font-size: 16pt;
+	font-weight: bold;
+	position: relative;
+	padding: 7px 13px;
+}
+#saveButton{
+	right: 2px;
+	bottom: 0px;
+}
+#saveButtonContainer{
+	height: 80px;
+}
+.checkMark{
+	visibility: hidden;
+	top: 7px;
+	left: -3px;
+}
+.checked{
+	visibility: visible;
+}
+
+/* RTL support */
+.RTL #saveButton{
+	right: auto;
+	left: 2px;
+}
+.RTL .checkMark{
+	left: 3px;
+}

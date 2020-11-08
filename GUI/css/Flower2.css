@@ -1,0 +1,27 @@
+﻿.flower2Container{
+	width: 29px;
+	height: 128px;
+	text-align: center;	
+	direction: ltr !important;
+}
+.flower2Container *{
+	direction: ltr !important;
+}
+.flower2Body{
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+.flower2Base{
+	left: 14px;
+	top: 23px;
+}
+
+@-webkit-keyframes flower2spin{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);		
+	}
+}

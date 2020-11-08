@@ -1,0 +1,141 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/ParentsArea.css" rel="stylesheet" type="text/css" />
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/PopupBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/PopupBox.js" type="text/javascript"></script>
+<script src="js/Resources/Constants.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/CheckBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/CheckBox.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="checkBoxTemplate" type="text/x-jquery-tmpl">
+  <div class="checkBoxContainer">
+    <div class="checkBox"></div>
+    <div class="checkMark"></div>
+    <span class="checkBoxText"></span>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/WaitOverlap.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/WaitOverlap.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="waitOverlapTemplate" type="text/x-jquery-tmpl">
+  <div class="waitOverlapContainer">
+    <div class="backgroundOverlap"></div>
+    <div class="waitMessageContainer">
+      <div class="waitText">Please wait...</div>
+      <div class="waitImageContainer"><img src="images/loading_bar.gif" /></div>
+    </div>    
+  </div>
+</script>
+    <script src="js/Resources/ChatmanGUIControlsResourceStrings.js" type="text/javascript"></script>
+    
+    <script src="js/Pages/ParentsArea.js" type="text/javascript"></script>
+    <!--END REMOVE-->
+</head>
+
+<!-- Template -->
+<body>
+    <div id="popupContainer">
+      <div id="popupArea" class="area">
+        <div id="popupWrapper" class="areaWrapper">
+          <div id="popupHeading" class="areaHeading">
+              <div class="areaHeadingText">Parents Area</div>
+              <div id="cross"></div>
+           </div>           
+          <div id="popupContent">
+             <!-- Specific popup content: start -->
+                <div id="parentsAreaContainer">
+                    <div class="headline">Information</div>
+                    <div class="linkButton" onclick="executeCommand('', 'MoreInformationClicked', '')">Click here for more information about Chatman</div>
+                    <hr class="horizontalSeparator" />
+                    
+                    <!-- SCREEN 1 -->
+                    <div id="screen1" class="screen acviteScreen">
+                        <div class="headline">Protected area</div>
+                        <div class="explainText" notSettedPassword >You must set a password to enter the protected area</div>
+                        
+                        <div id="enterAreaButton" class="pushButtonBlue">ENTER PROTECTED AREA</div>
+                        <div id="setPasswordButton" class="pushButtonRed" notSettedPassword >SET PASSWORD</div>                        
+
+                        <table id="passwordTable1">                                
+                            <tr><td>Enter password:</td><td><input class="passwordTextBox" type="password" tabindex="0" /></td><td></td></tr>
+                            <tr><td>Enter again:</td><td><input class="passwordTextBox" type="password"  tabindex="1" /></td><td><div id="setButton" class="pushButtonBlue">SET</div></td></tr>
+                        </table>
+                        
+                        <table id="passwordTable2">                                                            
+                            <tr><td>Enter password:</td><td><input class="passwordTextBox" type="password"  tabindex="2" /></td><td><div id="goButton" class="pushButtonBlue">Go</div></td></tr>                            
+                        </table>
+                        
+                        <div id="clickHere2" class="linkButton"  onclick="executeCommand('', 'ForgotPasswordClicked', '')">Click here if you've forgotten your password</div>
+                    </div>
+                    
+                    <!-- SCREEN 2 -->
+                    <div id="screen2" class="screen">
+                        <div class="headline"><span>Protected area</span><div id="changePassWordButton" class="pushButtonRed">CHANGE PASSWORD</div></div>
+                        
+                        <div id="screen2Content"> 
+                            <p class="subHeadline">Dangerous content options</p>
+                            <p class="explainText">Chatman tries to alert kids when bad language is used. You may add additional words on which Chatman will alert.</p>
+                            <div id="addWordsButton" class="pushButtonBlue" >ADD WORDS</div>                       
+                            <p class="subHeadline"><span>New content creation &amp; web interaction</span><span id="moreButton" class="labelText">More</span></p>
+                            <!-- Content shown after pressing "More" -->
+                            <div id="moreContent" class="explainText hidden">
+                                <div><div class="checkBoxControl"></div></div>
+                                <div><div class="checkBoxControl"></div></div>
+                                <div><div class="checkBoxControl"></div></div>
+                                <div><div class="checkBoxControl"></div></div>
+                            </div>
+                        </div>
+                        
+                        <table id="changePasswordTable">                                
+                            <tr><td>Enter password:</td><td><input id="screen2Password" class="passwordTextBox" type="password"  tabindex="3" /></td><td></td></tr>
+                            <tr><td>Enter again:</td><td><input id="screen2PasswordAgain" type="password"  tabindex="4" /></td><td><div id="setButton2" class="pushButtonBlue">SET</div></td></tr>
+                        </table>
+                    </div>	
+                    
+                    <!-- SCREEN 3 -->
+                    <div id="screen3" class="screen">
+                        <div class="headline">Edit Dangerous Words</div>               
+                        <p class="explainText">Chatman has a long list of words and expressions that trigger its alerts to kids. These are not listed here for obvious reasons.</p>
+                        <p class="subHeadline">You may add any new words or expressions:</p>                        
+                        
+                        <div class="labelText">
+                            <span id="newWordsText">New words:</span>
+                            <span id="commaSeparatedText">Comma separated</span>
+                            <input id="addWordTextBox" type="text" maxlength="100"  tabindex="5" />
+                            <div id="addButton" class="pushButtonBlue">Add</div>
+                        </div>
+                        <div class="line">
+                            <textarea id="dangerousWordsTextBox"  tabindex="6"></textarea>
+                        </div>
+                    </div>
+                   
+                   <!-- Login Content -->
+                   <div id="exitAreaButton" class="pushButtonRed" loggedIn>EXIT PROTECTED AREA</div>
+                   <div id="saveButton1" class="pushButtonBlue" loggedIn onclick="executeCommand('' ,'Save', Page.getUserInputJSON())">SAVE</div>
+                    
+              <!-- Specific popup content: end -->
+            </div>	      
+	       </div>
+	      </div>
+	    </div>
+</body>
+</html>

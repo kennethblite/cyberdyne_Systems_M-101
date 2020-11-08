@@ -1,0 +1,66 @@
+﻿#moodsHeading{
+	background-image: url('../images/MoodsPage/HeadingText.png');
+}
+#moodsMain{
+	width: 970px;
+	height: 549px;
+	padding: 0px 2px 2px 2px;
+}
+#moodArea{
+	margin-left: 10px;
+	margin-right: 10px;
+	top: 10px;
+	height: 475px;
+}
+#moodSelectorsContainer{
+	padding: 15px;
+	margin: auto;
+	top: 15px;
+	width: 904px;
+}
+#moodSelectorsContainer > div{
+	margin-top: -5px;
+}
+#moodSelectorsContainer > div:nth-child(odd){
+	margin-left: 43px;
+}
+.moodSelectorControl{
+	width: 98px;
+	height: 98px;
+	display: inline-block;
+	margin-left: 5px;
+}
+#buttons{
+	position: absolute;
+	bottom: 23px;
+	height: 20px;
+	width: 100%;
+}
+#forgetMoodButton{
+	left: 10px;
+}
+#goBackButton{
+	right: 70px;
+}
+#okButton{
+	right: 13px;
+	width: 30px;
+}
+
+/* RTL support */
+.RTL #moodSelectorsContainer > div:nth-child(odd){
+	margin-right: 43px;
+	margin-left: 0;
+}
+.RTL #okButton{
+	right: auto;
+	left: 13px;
+}
+.RTL #goBackButton{
+	right: auto;
+	left: 70px;
+}
+.RTL #forgetMoodButton{
+	right: 10px;
+	left: auto;
+}

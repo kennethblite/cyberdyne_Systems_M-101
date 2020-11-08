@@ -1,0 +1,103 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/About.css" rel="stylesheet" type="text/css" />
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/PopupBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/PopupBox.js" type="text/javascript"></script>
+<script src="js/Resources/Constants.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/CheckBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/CheckBox.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="checkBoxTemplate" type="text/x-jquery-tmpl">
+  <div class="checkBoxContainer">
+    <div class="checkBox"></div>
+    <div class="checkMark"></div>
+    <span class="checkBoxText"></span>
+  </div>
+</script>
+<!-- Requirements  -->
+<link href="css/SimpleText.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/SimpleText.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="simpleTextTemplate" type="text/x-jquery-tmpl">
+  <span class="simpleTextContainer"></span>
+</script>
+
+    <script src="js/Resources/ChatmanGUIPagesResourcesStrings.js" type="text/javascript"></script>       
+    <script src="js/Pages/About.js" type="text/javascript"></script>
+    <script src="js/Data/dummyDeclaration.js" type="text/javascript"></script>
+    <!--END REMOVE-->
+</head>
+
+<!-- Template -->
+<body>
+    <div id="popupContainer">
+      <div id="popupArea" class="area">
+        <div id="popupWrapper" class="areaWrapper">
+          <div id="popupHeading" class="areaHeading">
+              <div class="areaHeadingText">About Chatman</div>
+              <div id="cross"></div>
+           </div>           
+          <div id="popupContent">
+             <!-- Specific popup content: start -->
+             
+               <ul id="aboutMain">
+                <li>
+                    <div class="boldText"><span>Version: </span><span id="versionText" class="labelText"></span></div>
+                    <div class="boldText"><span>Date: </span><span id="buildDateText" class="labelText"></span></div>
+                    <img id="logo" src="images/AboutPopup/rondyo logo small.png"> 
+                </li>                    
+                <li><hr class="horizontalSeparator" /></li>
+                <li>All Rights Reserved (c)  U.S patent D596224, additional patents pending.</li>
+                <li>All trademarks and registered trademarks are the property of their respective owners.</li>
+                <li><hr class="horizontalSeparator" /></li>
+                <li>
+                    <div class="boldText">Software updates</div>
+                    <div>Click to check for Chatman software updates now</div>
+                </li>
+                <li id="updatesLi">
+                    <div id="checkUpdateButton" class="pushButtonRed" onclick="executeCommand('', 'CheckForUpdatesClicked', '');">CHECK FOR UPDATES</div>
+                    <div id="updateStatusText" class="labelText"></div>
+                </li>
+                <li><hr class="horizontalSeparator" /></li>
+                <li>
+                    <div class="boldText">Report problems</div>
+                    <div>If instructed by a Chatman support agent, please enter your support ticket number and click the Submit button</div>
+                </li>                
+                <li id="ticketLi1">
+                    <span class="boldText">Ticket number: </span><input id="ticketNumberText" type="text" />
+                    <div id="submitButton" class="pushButtonRed" onclick="executeCommand('', 'TickedSendClicked', Page.getUserInputJSON());">SUBMIT</div>
+                </li>
+                <li id="ticketLi2">
+                    <span id="reportStatusText" class="labelText"></span>
+                </li>   
+                <li id="saveToDeskotopLi">
+                    <div id="saveToDesktopCheckBoxControl"></div>
+                </li>
+               </ul>
+               
+                
+            <!-- Specific popup content: end -->            
+            </div>	      
+	       </div>
+	      </div>
+	    </div>    
+</body>
+</html>

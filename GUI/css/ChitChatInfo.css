@@ -1,0 +1,177 @@
+﻿#chitChatInfoHeading{
+	background-image: url('../images/ChitChatInfoPage/HeadingText.png');
+}
+#miniActionButton{
+	left: 180px;
+	top: 4px;
+	display: none;
+}
+.headingNumber{
+	top:3px;
+	left: 6px;
+}
+
+/*
+ * Main Structure
+ */
+#chitChatInfoMain{
+	/*width: 886px;*/
+	height: 550px;
+	padding: 0px 2px 2px 2px;
+}
+#column1{
+	width: 50%;
+	float: left;
+}
+#column2{
+	width: 481px;
+	float: left;
+	padding-left: 3px;
+}
+#row1{
+	clear: both;
+	top: 3px;
+	margin-bottom: 3px;
+}
+#row2{
+	width: 100%;
+	height: 32px;
+	top: 3px;
+}
+input, textarea{
+	margin: 0px;
+}
+
+/*
+ * Name area
+ */
+#nameAndMoodArea{
+	/*width: 432px;*/
+	height: 162px;
+}
+#nameAndMoodContent{
+	padding: 3px 10px 15px;
+}
+#nameTextBox{
+	width: 270px;
+}
+#privateCheckBox{
+	position: absolute;
+	top: 3px;
+	right: 50px;
+}
+label[for="privateCheckBox"]{
+	color: #848585;
+}
+#descriptionTextBox{
+	width: 27em;
+	height: 4ex;
+}
+
+/*
+ * Mood area
+ */
+#moodArea {
+	/*width: 432px;*/
+	height: 236px;
+}
+#moodContent{
+	padding: 5px 13px 15px 10px;
+}
+.moodNameText{
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000000;
+}
+#moodListControl{
+	border: 1px solid #abadb3;
+	margin-top: 10px;
+	padding-top: 10px;
+	width: 100%;
+	height: 140px;
+	overflow: hidden;
+}
+/*
+ * Chatman Audio Area
+ */
+#audioArea{	
+	/*width: 430px;*/
+	height: 162px;
+}
+#audioHeading{
+	background-image: url('../images/');
+}
+#audioControl{
+	padding: 3px 10px;
+	height: 125px;
+}
+#playChitChatButton{
+	right: 10px;
+	bottom: 14px;
+	width: 100px;
+}
+
+/*
+ * Buzz words area
+ */
+#buzzWordsArea{
+	/*width: 430px;*/
+	height: 236px;
+}
+#buzzWordsContent{
+	padding: 5px 10px 15px;
+}
+#buzzWordsTextBox{
+	width: 447px;
+	height: 10em;
+	margin-top: 7px;
+}
+/*
+ * Play Words Area
+ */
+#playWordsArea{
+	height:65px;
+	padding: 10px 10px;
+}
+#playWordsContainer{
+	margin-top: 4px;
+}
+
+/*
+ * Bottom buttons
+ */
+#goBackButton{
+	left: 10px;
+}
+#saveButton{
+	right: 12px;
+}
+#saveAsButton{
+	right: 65px;
+	visibility: hidden;
+}
+
+/* RTL support */
+.RTL .areaHeadingText{
+	left: 0;
+	right: 10px;
+}
+.RTL .headingNumber{
+	right: 7px;
+	left: 0;
+}
+.RTL #playChitChatButton{
+	left: 10px;
+	right: auto;
+}
+.RTL #column1, .RTL #column2{
+	float: right;
+}
+.RTL #saveButton{
+	right: auto;
+	left: 12px;
+}
+.RTL #goBackButton{
+	left: auto;
+	right: 10px;
+}

@@ -1,0 +1,217 @@
+﻿/* Table and column styles */
+#mainGrid{
+	background-color: #0d0d0d;
+	border-spacing: 3px;
+	border: 2px solid #5D5F59;
+	width: 974px;
+	height: 720px;
+	padding: 5px;
+}
+#mainGrid  td{
+	padding: 0px;
+}
+#column1{
+	width: 89px;
+}
+#column2{
+	width: 14px;
+}
+#column4{
+	width: 248px;
+}
+
+/*
+ * Contols Container styles 
+ */
+#volumeControl{
+	border: 1px solid #999999;
+	background-color: #CBDEF0;
+	padding: 0px 2px;
+	top: -1px;
+	width: 83px;
+    cursor: pointer;
+}
+#chatmanStateControl{
+	position: absolute;
+	top: 75px;
+	left: 15px;
+	width: 11px;
+	height: 11px;
+	z-index: 3;
+}
+#activePersonalityViewControl{
+	width: 77px;
+	height: 77px;
+	position: absolute;
+	top: 13px;
+	left: 13px;
+}
+#column3InnerContainer{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a1a1a), to(#333333));
+	border: 1px solid #33cc33;
+	border-radius: 7px;
+	height: 125px;
+}
+#mainPanelButtonsControl{
+	top: 5px;
+	left: 5px;
+	width: 292px;
+	height: 112px;
+}
+#statusAndToolsContainer{	
+	/*height: 112px;*/
+	position: absolute;
+	left: 310px;
+	top: 8px;
+	bottom:5px;
+}
+#toolsBarControl{
+	position: absolute;
+	bottom: 0px;
+}
+#profileLinkControl{
+	left: 7px;
+	cursor: pointer;
+}
+#profileLinkControl.profileControlMini{
+	width: 142px;	
+}
+#browserButtonsContainer{	
+	width: 100px;
+	position: absolute;
+	right: 1px;
+	top: 99px;
+	text-align: center;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;	
+	background-color: #3289BF;
+	display: none;
+}
+#browserButtonsContainer > img{
+	margin: 8px 1px 3px;
+	cursor: pointer;
+}
+#browserLine{
+	position: absolute;
+	background-color: #3289BF;
+	border: 0;
+	height: 3px;
+	width: 992px;
+	margin: 0px;
+	right: 0px;
+	top: 136px;
+	display: none;
+	z-index: 1000;
+}
+#chatmanLogo{
+	background-image: url('../images/ChatmanLogo.png');
+	width: 171px;
+	height: 89px;
+	cursor: pointer;
+}
+
+/*
+ * Pages containers styles
+ */
+#pagePlaceholder{
+	background-color: #000000;	
+	border-radius: 7px;
+	border: 1px solid #F2F2F2;
+	width: 974px;
+	height: 590px;
+	margin: auto;
+}
+iframe{
+	display: none;
+	border-radius: 7px;
+}
+.selectedFrame{
+	display: block;
+}
+
+#popupFrame, #messageBoxFrame{
+	position: absolute;
+	top: 0px;
+	top: -139px;
+	padding-top: 139px;
+}
+
+/*
+ * Main page elements
+ */
+#minimizeButton{
+	background: url('../images/ChatmanMainGreenMinus.png') no-repeat center center;
+	background-size: 14px 5px;	
+	width: 18px;
+	height: 15px;
+	position: absolute;
+	top: 4px;
+	right: 22px;
+	-webkit-transform: scale(1);
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+#closeButton{
+	background-image: url('../images/ChatmanMainRedCross.png');
+	background-size: 13px 13px;	
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	-webkit-transform: scale(1);
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+#minimizeButton:hover, #closeButton:hover{
+	-webkit-transform: scale(1.3);
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+#connectChatmanMessageBackground{
+	background-color: #afd2ea;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	display: none;
+	opacity: 0.65;
+}
+
+/* RTL fixes	*/
+.RTL #mainPanelButtonsControl{
+	left: 12px;
+}
+.RTL #statusAndToolsContainer{
+	left: auto;
+	right: 310px;
+}
+.RTL #toolsBarControl{
+	left: 0px;
+}
+.RTL #profileLinkControl {
+	left: auto;
+	right: 7px;
+}
+.RTL #minimizeButton{
+	left: 22px;
+	right: auto;
+}
+.RTL #closeButton{
+	left: 5px;
+	right: auto;
+}
+.RTL #activePersonalityViewControl{
+	right: 13px;
+	left: auto;
+}
+.RTL #chatmanStateControl{
+	left: auto;
+	right: 15px;
+}
+.RTL #browserButtonsContainer{
+	left: 10px;
+	right: auto;
+}

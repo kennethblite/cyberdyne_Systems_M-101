@@ -1,0 +1,111 @@
+﻿.chatmanBrainpowerContainer{
+	background: url('../images/brainPowerBackground.png') no-repeat;
+}
+/* top part */
+.chatmanBrainpowerTop{
+	top: 7px;
+}
+.chatmanBrainpowerImageControl{
+	width: 107px;
+	height: 107px;
+	-webkit-transition: opacity 0.7s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.scoreControl{
+	position: absolute;
+	top: 5px;
+	left: 120px;
+	font-size: 10pt;
+	color: #009933;
+}
+.scoreTextControl{
+	display: inline-block;
+	font-weight: bold;
+	color: #009933;
+}
+.levelStatus{
+	font-weight: bold;
+	color: #009933;
+}
+.scoreTextInstructions{
+    margin-right: 5px;
+}
+.levelText{
+	padding-left: 2px;
+}
+.scoreText{
+	margin-top: 15px;
+}
+.scoreText > *{
+	line-height: 19px;
+	vertical-align: middle;
+}
+/* bottom part */
+.chatmanBrainpowerBottom{
+	list-style-type: none;
+	padding: 8px;
+	margin-top: 23px;
+}
+.chatmanBrainpowerBottom .pushButtonBlue{
+	top: 0px;
+	right: 155px;
+	width: 88px;	
+}
+.chatmanBrainpowerBottom .shareButton, .chatmanBrainpowerBottom .newQuestionsButton{
+	right: 3px;
+}
+.newChitChatsText, .newWordsText{
+	top: 0px;
+	padding-left: 4px;
+	margin-bottom: 5px;
+	font-size: 8pt;
+	color: #009933;
+}
+.hidden{
+	visibility: hidden;
+}
+.scoreStyle2{
+	color: DarkGreen;
+	font-size: 12pt;
+}
+.newChitChatImage{
+	position: absolute; 
+	left: 166px;
+	top: -10px;
+}
+.newQuestionImage{
+	position: absolute;
+	right: 105px;
+	top: -5px;
+}
+.newWordsImage{
+	position: absolute;
+	left: 159px;
+	top: -5px;
+}
+
+
+/* RTL support */
+.RTL .newChitChatButton{
+	right: auto;
+	left: 120px;
+}
+.RTL .shareButton,.RTL .newQuestionsButton{
+	right: auto;
+	left: 3px;
+}
+.RTL .newWordButton{
+	right: auto;
+	left: 120px;
+}
+.RTL .scoreControl{
+	left: auto;
+	right: 120px;
+}
+.RTL .newChitChatsText, .RTL .newWordsText{
+	padding-right: 4px;
+}
+.RTL .scoreTextInstructions{
+	margin-right: auto;
+	margin-left: 5px;
+}

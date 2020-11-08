@@ -1,0 +1,111 @@
+﻿#remindersHeading{
+	background-image: url('../images/RemindersPage/HeadingText.png');
+}
+#remindersMain{
+	width: 970px;
+	height: 550px;
+	padding: 0px 2px 2px 2px;
+	background: url('../images/RemindersPage/background.png') no-repeat bottom right;
+}
+.areaWrapper{
+	
+}
+#todayArea{
+	width: 475px;	
+}
+
+#tomorowArea{	
+	width: 475px;	
+	top: 0px;
+	right: 0px;
+	margin: 0px;
+	position: absolute;
+}
+.remindersContainer > *{
+	margin-top: 1px;
+}
+
+/* LATER AREA */
+#laterArea{
+	width: 742px;
+	height: 362px;
+}
+#laterAreaWrapper{
+	overflow-y: scroll;
+}
+#thisWeekRemindersContainer, #laterRemindersContainer{
+	padding-bottom: 7px;
+}
+#thisWeekHeading{
+	border-top-right-radius: 0px;
+}
+#laterHeading{
+	height: 31px;
+	background-color: #A1C3E4;	
+	z-index: 10;
+}
+#grayOverlap{
+	background-color: #CCC;
+	position: absolute;
+	width: 50%;
+	border-radius: 5px;
+	z-index: 2;
+	left: 3px;
+}
+#laterHeadingAbsPos{
+	height: 31px;
+	background-color: #A1C3E4;
+	border-top-left-radius: 15px;
+	position: absolute;
+	display: none;
+	top: 4px;
+	left: 4px;
+	z-index: 7;
+	width: 724px;
+}
+#thisWeekHeading{
+	position: absolute;
+	width: 724px;
+	z-index: 6;
+}
+#bigRemindersContainer{
+	margin-top: 31px;
+}
+#buttonContainer{
+	position: absolute;
+	right: 0px;
+	width: 218px;
+	bottom: 10px;
+	height: 20px;
+	text-align: center;
+}
+#addReminderButton{
+	position: relative;
+}
+
+/* Place The scroll up button at the up */
+::-webkit-scrollbar-button:vertical:decrement {
+    background: url('../images/scrollbarButtonVerticalDecrement.png') no-repeat #A1C3E4;
+    border-top-right-radius: 10px;    
+}
+/* Place The scroll down button at the bottom */
+/*::-webkit-scrollbar-button:vertical:increment {
+    background: url('../images/scrollbarButtonVerticalIncrement.png') no-repeat #A1C3E4;
+    border-bottom-right-radius: 10px;    
+}*/
+
+/* RTL support */
+.RTL #remindersMain{
+	background: url('../images/RemindersPage/background.png') no-repeat bottom left;
+}
+.RTL #tomorowArea{
+	right: auto;
+	left: 0px;
+}
+.RTL #buttonContainer{
+	left: 0px;
+	right: auto;
+}
+.RTL #thisWeekHeading{
+	right: 22px;
+}

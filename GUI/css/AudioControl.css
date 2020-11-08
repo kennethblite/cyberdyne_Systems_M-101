@@ -1,0 +1,101 @@
+﻿.audioContainer{
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.audioContainer > li{
+	margin-top: 7px;
+}
+.timerText1{
+	font-weight: bold;
+	color: #848585;
+	font-size: 10pt;
+	display: inline-block;
+}
+.recorderVolumeControl{
+	position: absolute !important;
+	right: 0px;
+	top: 0px;
+}
+.audioContainer .playerContainer {
+	height: 20px;
+	margin-top: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.audioButton{
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: 5px;
+	-webkit-transform: scale(1);
+	-webkit-transition: -webkit-transform ease-in-out 0.4s;
+	-webkit-backface-visibility: hidden;
+}
+.audioButton:hover{
+	-webkit-transform: scale(1.2);
+	-webkit-transition: -webkit-transform ease-in-out 0.2s;
+	-webkit-backface-visibility: hidden;
+}
+.audioButtondisabled.audioButton:hover{
+	-webkit-transform: scale(1);
+}
+.playButton{
+	background: url('../images/audioPlayButton.png') no-repeat;
+}
+.stopButton{
+	background: url('../images/audioStopButton.png') no-repeat;
+}
+.recordButton{
+	background: url('../images/audioRecordButton.png') no-repeat;
+}
+.audioTimeline{	
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+	height: 3px;	
+	top: 17px;
+	right: 7px;
+	left: 85px;
+	position: absolute !important;
+	overflow: hidden;
+}
+.timeProgress{
+	background-color: #ff0000;
+	position: absolute !important;
+	top: 0px;
+	left: 0px;
+	height: 3px;
+}
+
+.importButton{
+	top: 4px;	
+	overflow: hidden;
+}
+.fileDialog{
+	opacity: 0;
+	position: absolute;
+	width: 53px;
+	left: 0px;
+}
+/* Sound status text */
+.soundStatusText{
+	left: 104px;
+	top: 8px;	
+	font-weight: bold;
+}
+.redText{
+	color: #dc3838;
+}
+.blueText{
+	color: green;
+}
+
+/* RTL support */
+.RTL .recorderVolumeControl{
+	left: 0px;
+	right: auto;
+}

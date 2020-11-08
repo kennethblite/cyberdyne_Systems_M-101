@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+<link href="css/Common.css" rel="stylesheet" type="text/css" />
+<script src="js/Infrastructure/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="js/Infrastructure/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/PageServices.js" type="text/javascript"></script>
+<script src="js/Infrastructure/Utils.js" type="text/javascript"></script>
+<script src="js/Pages/PersonalitiesData.js" type="text/javascript"></script>
+<!--END REMOVE-->
+
+<script src="js/Infrastructure/BaseControl.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePage.js" type="text/javascript"></script>
+<script src="js/Infrastructure/BasePopup.js" type="text/javascript"></script>
+<script src="js/Pages/Common.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/PopupBox.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/PopupBox.js" type="text/javascript"></script>
+<script src="js/Resources/Constants.js" type="text/javascript"></script>
+<!-- Requirements  -->
+<link href="css/WaitOverlap.css" rel="stylesheet" type="text/css" />
+<script src="js/Controls/WaitOverlap.js" type="text/javascript"></script>
+
+<!-- Template -->
+<script id="waitOverlapTemplate" type="text/x-jquery-tmpl">
+  <div class="waitOverlapContainer">
+    <div class="backgroundOverlap"></div>
+    <div class="waitMessageContainer">
+      <div class="waitText">Please wait...</div>
+      <div class="waitImageContainer"><img src="images/loading_bar.gif" /></div>
+    </div>    
+  </div>
+</script>
+    
+    <link href="css/MyChatmanUserDetails.css" rel="stylesheet" type="text/css" />    
+    <script src="js/Pages/MyChatmanUserDetails.js" type="text/javascript"></script>
+</head>
+
+<!-- Template -->
+<body>
+    <div id="popupContainer">
+      <div id="popupArea" class="area">
+        <div id="popupWrapper" class="areaWrapper">
+          <div id="popupHeading" class="areaHeading">
+              <div class="areaHeadingText">WWW.MYCHATMAN.COM account details</div>
+              <div id="cross"></div>
+           </div>           
+          <div id="popupContent">
+             <!-- Specific popup content: start -->
+                <div id="actionSharePriceContainer">
+                    <div id="normalText" class="labelText mainText">
+                        <div>Login to your MyChatman account below:</div>
+                        <div><span>No account?</span> <div class="pushButtonRed" onclick="executeCommand('', 'LinkClicked', '')">REGISTER</div></div>
+                    </div>
+                    <div id="errorText" class="labelText mainText">
+                        <div>Ooops. It seems the details you entered are wrong.</div> 
+                        <div>Please enter the details of your MyChatman account below:</div>
+                        <div><span>No account?</span><div class="pushButtonRed" onclick="executeCommand('', 'LinkClicked', '')">REGISTER</div></div>
+                    </div>
+
+                    <table id="registerTable">
+                        <tr><td>User name:</td><td><input id="userNameTextBox" type="text"  tabindex="0" maxlength="100" /></td></tr>
+                        <tr><td>Password:</td><td><input id="passwordTextBox" type="password"  tabindex="1" maxlength="50" /></td></tr>
+                        <tr><td>Chatman number:</td><td><input id="chatmanNumberText" type="text"  tabindex="2" maxlength="20" /></td></tr>
+                        <tr><td></td><td class="labelText">Scratch label below foot</td></tr>                        
+                    </table>                                       
+		            <div id="buttonContainer">
+		                <div id="saveButton" class="pushButtonBlue" onclick="executeCommand('', 'Save', Page.getUserInputJSON())">SAVE</div>	
+		            </div>
+                </div>
+              <!-- Specific popup content: end -->
+            </div>	      
+	       </div>
+	      </div>
+	    </div>
+</body>
+</html>

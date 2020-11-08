@@ -1,0 +1,124 @@
+.actionButtonContainer{
+	width: 124px;
+	height: 29px;
+	display: inline-block;
+	z-index: 2;
+	direction: ltr !important;
+	position: absolute;
+}
+.actionButtonContainer > *{
+	direction: ltr !important;
+}
+.actionButtonContainer:hover, 
+.actionButtonContainerHover /*this class is added to capture button like on hover */{
+ 	z-index: 4;
+ }
+
+/* modifier class: all nested elements will have modification, when this class is added to div.actionButtonContainer */
+.actionButtonLong{
+	width: 248px;
+}
+ 
+/*
+ * Button styles
+ */
+.actionButton{
+	border: 2px #828282 solid;
+	border-radius: 15px;
+	background-color: #cccccc;	
+	position: relative;
+	left: 7px;
+	width: 106px;
+	height: 22px;
+	font-family: Arial;
+	font-size: 10pt;
+	-webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, left 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+.actionButtonLong .actionButton{
+	width: 232px;
+}
+
+/* hover/select styles */
+.actionButton:hover, 
+.actionButtonContainerHover .actionButton {
+	border-color: #0065b1;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a7cee9), to(#6bacda));
+	width: 120px;
+	height: 25px;
+	left: 0px;
+	-webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, left 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+
+.actionButtonLong .actionButton:hover,
+.actionButtonLong.actionButtonContainerHover .actionButton {
+	width: 240px;
+}
+
+.actionName{	
+	left: 20px;
+	right: 5px;
+	top: 50%;
+	margin-top: -6pt;
+	position: absolute;
+	white-space: nowrap;
+	overflow: hidden;	
+	text-overflow: ellipsis;
+}
+.ellipsis{
+	position: absolute;
+	top: 3px;
+	right: 7px;
+}
+/*
+ * Info button and menu styles
+ */
+.btnActionInfo{
+	border: 1px #63a8d5 solid;
+	border-radius: 11px;
+	background: url(../images/actionInfo.gif) 3px center no-repeat #ffffff;
+	top: 50%;
+	margin-top: -6px;
+	margin-left: 5px;
+	width: 11px;
+	height: 11px;
+	visibility: hidden;
+	position: absolute;
+}
+.actionButton:hover .btnActionInfo, 
+.actionButtonContainerHover .btnActionInfo{
+	visibility: visible;
+}
+
+/*
+ * Mood styles
+ */
+.moodIconContainer{
+	background-size: 35px 35px;
+	position: absolute;
+	display: none;
+	width: 35px;
+	height: 35px;
+	bottom: 0px;
+	right: -11px;
+	-webkit-transform: rotate(10deg) scale(1);
+	-webkit-transition: all 0.3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	text-align: center;
+}
+
+/* RTL support */
+.RTL .actionName{
+	left: 5px;
+	right: 22px;
+}
+.RTL .btnActionInfo{
+	right: 4px;
+	left: auto;
+}
+.RTL .moodIconContainer{
+	right: auto;
+	left: -11px;
+	-webkit-transform: rotate(-10deg) scale(1);
+}

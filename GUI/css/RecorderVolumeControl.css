@@ -1,0 +1,39 @@
+﻿#recorderVolumeControl{
+	border-radius: 15px;
+	border: 1px solid #939393;
+	background-color: #c6c6c6;
+	padding: 3px 5px;
+	width: 68px;
+	height: 17px;
+}
+#scaleContainer{
+	background-color: #f9f9f9;
+	overflow: hidden;
+	display: inline-block;
+	height: 17px;
+	width: 39px;
+}
+#scaleGrid {
+	background: url('../images/scaleGrid2.gif') no-repeat -3px;
+	height: 100%;
+	width: 100%;
+}
+#onColor{
+	background-color: #5e9cca;
+	position: absolute;
+	top: 0px;
+	left: -39px;
+	width: 42px;
+	height: 17px;
+}
+.disablingArea{
+	background-color: #afd2ea;
+	border-radius: 15px;
+	opacity: 0.65;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
