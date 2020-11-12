@@ -1,0 +1,169 @@
+Notes.txt
+Nov 10th, 2020
+It appears there are a few pieces of string obfuscation in the binary, 
+They mostly use a the following encryption scheme.
+get the last 8 bytes of the sha1 hash of the public key that signed the application. 
+so it looks like they are doing some sort of creation thing here. 
+The found public keys were all in the xml of the process. 
+
+http://web.mit.edu/kolya/.f/root/net.mit.edu/athena.mit.edu/software/mono_v4.9/arch/amd64_linux26/mono/docs/sources/mono-api-embedding.html
+
+Mono Runtime Configuration
+Certain features of the Mono runtime, like DLL mapping, are available through a configuration file that is loaded at runtime. The default Mono implementation loads the configuration file from $sysconfig/mono/config (typically this is /etc/mono/config).
+
+See the mono-config(5) man page for more details on what goes in this file.
+
+The following APIs expose this functionality:
+
+mono_config_cleanup
+mono_config_is_server_mode
+mono_config_parse
+mono_config_parse_memory
+mono_config_set_server_mode
+mono_config_string_for_assembly_file
+mono_get_config_dir
+mono_get_machine_config
+mono_register_machine_config
+mono_set_config_dir
+
+
+
+Public Key Token Remapping Configuration#
+The remapping configuration is kept in the machine.configfile. This file is usually located in [prefix]/etc/mono.
+
+The configuration is kept under the configuration/strongNames/pubTokenMappingsection. Each entry is named mapand has two attributes.
+
+Token: the public key token of the assembly; and
+PublicKey: the public key that will be used to verify the assembly strongname signature.
+For example the entry for the ECMA key would look like this:
+
+<map Token="b77a5c561934e089" PublicKey="002400000480000000..." />
+b03f5f7f11d50a3a
+31bf3856ad364e35
+Those are the options. 
+
+November 11th, 2020
+I should work at doing some of these. 
+
+the actual onclick path for a button gets an id from the icon and passes it to executeCommand()
+under Chatman/GUI/js/Infrastructure/PageServices.js
+this executeable executeControlCommand, which looks to go into binary land
+into Controller.dlls
+
+I found the creation of the ChatmanController Class, its inside the ChatmanInjectedBundle.dll. 
+The class is made through the call JSCreateClass in 
+sub_1001BCB0
+
+This follows up a bit into the chain, eventually landing as a vftable class. 
+I found something that bridges the gap. It looks like it has a executeControlCommand Constructor. 
+Execute_Command_Func (0x1001B880) they parse the strings, make it a WKBundlePostMessage, 
+
+
+WKBundlePostMessage  I probably have to look at that where it lines up, i.e who is the consumer of this? 
+I took an example 
+    WKRetainPtr<WKStringRef> repaintRectsKey = adoptWK(WKStringCreateWithUTF8CString("RepaintRects"));
+    WKDictionarySetItem(doneMessageBody.get(), repaintRectsKey.get(), m_repaintRects.get());
+
+    WKRetainPtr<WKStringRef> audioResultKey = adoptWK(WKStringCreateWithUTF8CString("AudioResult"));
+    WKDictionarySetItem(doneMessageBody.get(), audioResultKey.get(), m_audioResult.get());
+
+    WKBundlePostMessage(m_bundle, doneMessageName.get(), doneMessageBody.get());
+
+https://cpp.hotexamples.com/examples/-/-/WKBundlePostMessage/cpp-wkbundlepostmessage-function-examples.html
+So look for that string im guessing? In this case AudioResult, or in my case executeControlCommand and execCommand
+
+kensalt@kensalt-MS-7977:~/practice/discord/terminator/Chatman$ grep -rn "execCommand"
+Binary file WebKitBridgeControl.dll matches
+Binary file WebKit.dll matches
+Binary file ChatmanInjectedBundle.dll matches
+kensalt@kensalt-MS-7977:~/practice/discord/terminator/Chatman$ grep -rn "executeControlCommand"
+Binary file WebKitBridgeControl.dll matches
+Binary file Rondyo.Chatman.GUI.Infrastructure.dll matches
+GUI/js/Infrastructure/CommunicationApi.js:23:       window.top.ChatmanController.executeControlCommand('GlobalCommand', 'SubmitChatmanEvent', s.replace('[SCE]::["', '["'));
+GUI/js/Infrastructure/CommunicationApi.js:31:       window.top.ChatmanController.executeControlCommand('GlobalCommand', 'CheckSearchString', s.replace('[CSS]::', ''));
+GUI/js/Infrastructure/PageServices.js:8:    window.top.ChatmanController.executeControlCommand(Page.name + suffix, command, '' + parametrs);    
+GUI/js/Apps/ApplicationBase.js:31:        window.top.ChatmanController.executeControlCommand(Page.appId, commandName, params);       
+Binary file Rondyo.Chatman.GUI.Infrastructure.i64 matches
+Notes.txt:50:this executeable executeControlCommand, which looks to go into binary land
+Notes.txt:58:I found something that bridges 
+
+This is pretty interesting, there is some actual stuff here. I do want to look at the WebkitBridgeControl.dll first. 
+Ahah! It is the consumer of the worker. 
+sub_100018D0 is where it does all the comparions. 
+
+What does this mean? There may still be some cool debugging features that were left in here. 
+It has the packager, although im sure the actual consumer is in Gui.Infrastructure. 
+
+I have to use wrestool. 
+wrestool
+No strings there, but i found the actual function ehre, it appears to take the command, add to a bunch of stuff, then run executeJavascript on it. 
+0x5A4780DB is the input (for example).
+0x5A4780E2 is the actual piece. I wonder if I should look at the actual output? 
+The thing is, im fairly certain i could Do some sort of lookup, but i am genuinely curious how the string array is.
+We are looking for likely javascript pieces here. 
+Its interesting, since both PageControllerBase and ControllerBase both have a ExecuteControlCommand function, they are set by 
+SetExecuteControlCommandDelegate
+
+5A4780E2
+0x5A4780E2
+Both use the same initial hash. 
+
+We will just have to consider it a possibilty here. 
+I do want to run through a quick sample here. 
+In ExecuteControlCommand
+1514635483 5A4780DB 0x39 57 - single char
+1514635482 5A4780DA 0x38 56 - Nothing
+1514635480 5A4780D8 0x3a 58 - \u0cbc
+
+turning them into hex: ^^ done
+
+Xoring them. 
+the public key token should be this.
+14 E2 8F AF 5C 29 36 D8
+
+It might depend on whether the signatures will continue to match after we change the binary. worth a shot though. 
+
+There might be some difference to the final value, but I think its still a uint16.
+0c 05 0d 09 
+So we are looking at a utf16 XOR, does that even work?
+
+	static Ⴅ()
+	{
+		byte[] publicKeyToken;
+		int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+		char[] array = new char[num];
+		for (int i = 0; i < num; i++)
+		{
+			int num2 = i;
+			int num3 = publicKeyToken[i] & 0xFF;
+			array[num2] = (char)(num3 ^ (num3 << 4));
+		}
+		Ⴅ.Ⴍ = (string[])(object)array;
+		Ⴍ = new string[68];
+	}
+
+What does that mean? It means we are still doing utf16, but, the first entry is always c, 5, d, 9
+so compare that with the public key.
+09 and 05 are two off  each other. 
+
+d x 9 x 5 x 5 x 9 x 5 x c 
+That doesn't work, or at least line up with any of the public keys. unless its the leftover? 
+
+
+the actual xor token is this. from the public key token. 
+
+
+
+.assembly extern Rondyo.Chatman.Interfaces
+{
+  .publickeytoken = (
+   C5 CB D5 9D 58 54 9E 5D)
+  .ver 1:1:0:0
+}
+
+C5 CB D5 9D 58 54 9E 5D
+
+November 12th, 2020
+I managed to actually get things done. Although im not entirely sure if it works here. 
+I will need to test things.
+I am looking at the decryption steps here. 
