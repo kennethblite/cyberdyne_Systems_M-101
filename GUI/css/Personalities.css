@@ -18,7 +18,7 @@
 	height: 50%;
 }
 .area{
-	background-color: #CCCCCC;
+	background-color: #0d0d0d;
 	border-radius: 17px;
 	float: left;
 	padding: 4px;
@@ -63,6 +63,9 @@
 	width: 120px;
 }
 #newPersonalityButton{
+	background-color: #0d0d0d;
+	border-color: #0d0d0d;
+	font-color: #bfbfbf;
 	right: 10px;
 }
 #downloadButton{

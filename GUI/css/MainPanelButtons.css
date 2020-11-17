@@ -7,7 +7,7 @@
 .mainPanelButton{
 	border: 3px solid #5FA6D7;	
 	border-radius: 10px;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF5BB), to(#ffd513));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#00384d), to(#00131a));
 	display: inline-block;
 	margin: 0px;
 	/*width: 89px;
@@ -21,7 +21,7 @@
 	top: -6px;
 }
 .mainPanelButton:hover{
-	background:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFD408), to(#fff5ba));	
+	background:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5a0c03), to(#190c03));	
 	width: 116px;
 	height: 65px;
 	/*top: -8px;
@@ -30,7 +30,7 @@
 	-webkit-transform: scale(1);
 }
 .mainPanelButtonPressed{
-	background:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFD408), to(#fff5ba));	
+	background:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5a0c03), to(#190c03));	
 	width: 116px;
 	height: 65px;
 	z-index: 9;
