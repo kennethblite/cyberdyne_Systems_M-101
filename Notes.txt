@@ -167,3 +167,38 @@ November 12th, 2020
 I managed to actually get things done. Although im not entirely sure if it works here. 
 I will need to test things.
 I am looking at the decryption steps here. 
+
+November 13th, 2020
+I completed the testing of the actual javascript, .
+Looks like all those execute javascript parts all circle back to:
+// Rondyo.Chatman.GUI.Infrastructure.WebKit.WebKitWindowBridge
+using System.Runtime.InteropServices;
+
+[DllImport("WebKitBridgeControl.dll", CharSet = CharSet.Unicode, EntryPoint = "executeJavaScript")]
+private static extern void ႰႰ(int Ⴍ, string Ⴓ);
+BACK TO WEBKIT
+or at least the bridge Control. 
+
+this essentially just calls back up to 
+WKPageRunJavaScriptInMainFrame
+So I should be able to hook that and see what happens? Although I do think it kinda goes in circles now. but whatever. Seems fine. 
+
+    executeCommand: function(commandName, params){
+        window.top.ChatmanController.executeControlCommand(Page.appId, commandName, params);
+    },
+
+
+November 17th, 2020
+Notes regarding the chatman architecture, wider net. 
+I noted the OggEnc file here, I wonder what the actual usage was. 
+OggEnc turns wav files into the ogg format. 
+
+November 18th 2020
+Looking at chatman, i Do want to have a peak 
+GUI/ChatWithFriendsPage.html:98:                    <span id="anotherProgramText" class="labelText" onclick="executeCommand('', 'NavigateMyChatmanWeb', '')">If you chat using another program, click here</span>
+This has something to do with doing another thing, i should track down that specific string. 
+The big issue is going to be the fact that i need 
+
+
+I noticed that the main Chatman programs defence is pretty good, I wonder why they spent so much time trying to obfuscate it? 
+The SearchEngine dll is weird, Its clearly based off a code piece. I wonder if I can get an ast out of the whole thing? 

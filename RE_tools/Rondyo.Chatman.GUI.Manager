@@ -1,0 +1,1113 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.GUI.Manager.dll
+// Rondyo.Chatman.GUI.Manager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: AnyCPU (64-bit preferred)
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.GUI.Controllers.Intro;
+using Rondyo.Chatman.GUI.Controllers.Navigation;
+using Rondyo.Chatman.GUI.Controllers.Pages;
+using Rondyo.Chatman.GUI.Infrastructure;
+using Rondyo.Chatman.GUI.Manager.Properties;
+using Rondyo.Chatman.GUI.Tray;
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using ႥႠႨ;
+using ႥႥႤ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႣ;
+using ႥႥႨႭ;
+using ႥႥႨႳ;
+using ႥႥႨႼ;
+using ႥႥႳႰ;
+using ႭႨႰ;
+using ႭႭႰ;
+using ႰႷႭ;
+using ႳႳ;
+using ႷႭႠ;
+using ႷႭႣ;
+using ႷႭႥ;
+using ႷႭႨ;
+
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyDescription("")]
+[assembly: ComVisible(false)]
+[assembly: Guid("b9aaa9ae-2816-4d37-9ed3-df9db4ea2a50")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyVersion("1.0.0.0")]
+namespace Rondyo.Chatman.GUI.Manager
+{
+	public class GuiManager : IDisposable, ႷႭႣ.Ⴗ
+	{
+		private sealed class <>c__DisplayClass3
+		{
+			public ႷႭႥ.Ⴀ mainWindowParams;
+
+			public GuiManager <>4__this;
+
+			public void <RunMainWindow>b__2()
+			{
+				<>4__this.ႨႷႨ();
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679747));
+				<>4__this.Ⴃ = <>4__this.ႨႣႣ<ChatmanMainPageController>(mainWindowParams);
+				<>4__this.Ⴃ.CreateAndInitialize(mainWindowParams);
+				<>4__this.Ⴃ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679746)));
+				<>4__this.ႨႣႭ(Ⴀ: true);
+			}
+		}
+
+		private sealed class <>c__DisplayClass8
+		{
+			public GuiManager <>4__this;
+
+			public bool useBigProactiveWindowSize;
+
+			public void <ShowProactiveWindow>b__6()
+			{
+				ႷႭႥ.Ⴀ ⴀ = ႥႠႨ.Ⴅ.ႨႤႤ(useBigProactiveWindowSize);
+				<>4__this.Ⴓ = <>4__this.ႨႣႣ<ProactivePageController>(ⴀ);
+				<>4__this.Ⴓ.OnClosed += delegate
+				{
+					<>4__this.Ⴓ = null;
+				};
+				<>4__this.Ⴓ.CreateAndInitialize(ⴀ);
+				<>4__this.Ⴓ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679745)));
+			}
+
+			private void <ShowProactiveWindow>b__7(object P_0, EventArgs P_1)
+			{
+				<>4__this.Ⴓ = null;
+			}
+		}
+
+		private ႷႭႨ.Ⴈ Ⴃ;
+
+		private static readonly ႥႥႤ.Ⴀ Ⴃ;
+
+		private IWebKitWindowController Ⴓ;
+
+		private IWebKitWindowController Ⴃ;
+
+		private IWebKitWindowController Ⴗ;
+
+		private IWebKitWindowController Ⴄ;
+
+		private IWebKitWindowController Ⴅ;
+
+		private bool Ⴐ;
+
+		private readonly object Ⴐ;
+
+		private TrayGUIManager Ⴍ;
+
+		private bool Ⴈ;
+
+		public unsafe ႷႭႨ.Ⴈ CurrentMode
+		{
+			get
+			{
+				return *(ႷႭႨ.Ⴈ*)(&this.Ⴃ);
+			}
+			private set
+			{
+				*(ႷႭႨ.Ⴈ*)(&this.Ⴃ) = value;
+				ႥႥႨ.Ⴗ.ႳႥ(ႰႷႭ.Ⴍ.ႭႠႠ(137679771), value);
+			}
+		}
+
+		public unsafe GuiManager()
+		{
+			*(bool*)(&this.Ⴐ) = true;
+			Ⴐ = new object();
+			base..ctor();
+			CurrentMode = ႷႭႨ.Ⴈ.Ⴐ;
+			ႨႷႳ();
+		}
+
+		static GuiManager()
+		{
+			GuiManager.Ⴃ = (IWebKitWindowController)ႥႥႤ.Ⴀ.ႳႠ(ႨႷႰ, 100000.0);
+		}
+
+		private static void ႨႷႰ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0029, IL_005d
+			bool flag = !ႥႥႳႰ.Ⴃ.Ⴗ;
+			do
+			{
+				if (flag)
+				{
+					ႥႥႨႼ.Ⴅ.ႳႷ(ႥႥႨႼ.Ⴅ.Ⴐ, ႰႷႭ.Ⴍ.ႭႠႠ(137679770));
+					if (414 <= 414 - 279)
+					{
+						break;
+					}
+					return;
+				}
+			}
+			while (false);
+			ႥႥႨႭ.Ⴗ.ႳႷ(Resources.ChatmanCantStartGui, Resources.WindowsCaption);
+			ႥႥႨႣ.Ⴀ.ႨႳႥ();
+		}
+
+		public void ReportGuiFullyInitialized()
+		{
+			((ႥႥႤ.Ⴀ)GuiManager.Ⴃ).ႳႣႳ();
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679769));
+		}
+
+		public void Show()
+		{
+			//Discarded unreachable code: IL_0002, IL_0026
+			while (Ⴃ != null)
+			{
+				if (317 > 317 - 248)
+				{
+					Ⴃ.WebKit.ShowWindow(100);
+					if (816 > 816 - 743)
+					{
+						break;
+					}
+				}
+			}
+		}
+
+		public void Minimize()
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((Ⴃ == null) ? 1 : 2);
+					break;
+				case 2:
+					Ⴃ.WebKit.Minimize();
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		public void Hide()
+		{
+			//Discarded unreachable code: IL_0002, IL_0027, IL_0031, IL_004d, IL_006f
+			if (Ⴃ != null)
+			{
+				if (CurrentMode == ႷႭႨ.Ⴈ.Ⴈ)
+				{
+					if (540 >= 540 - 432)
+					{
+						Minimize();
+					}
+					return;
+				}
+				Ⴃ.WebKit.HideWindow();
+			}
+			else if (58 >= 58 - 15)
+			{
+				return;
+			}
+			if (738 > 738 - 671)
+			{
+			}
+		}
+
+		public unsafe void RunIntroWindow()
+		{
+			//Discarded unreachable code: IL_0005, IL_0009, IL_0046, IL_006b, IL_0072, IL_008e, IL_00db, IL_0101
+			while (true)
+			{
+				ႥႥႨ.Ⴗ.ႳႥ(ႰႷႭ.Ⴍ.ႭႠႠ(137679768), CurrentMode);
+				if (CurrentMode != ႷႭႨ.Ⴈ.Ⴈ)
+				{
+					break;
+				}
+				if (527 > 527 - 253)
+				{
+					return;
+				}
+			}
+			*(bool*)(&this.Ⴐ) = true;
+			ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴀ.ႨႤႥ(ႷႭႠ.Ⴗ.ႨႰ);
+			((ႥႥႤ.Ⴀ)GuiManager.Ⴃ).ႳႣႣ();
+			while (true)
+			{
+				ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+				{
+					ႨႷႨ();
+					CurrentMode = ႷႭႨ.Ⴈ.Ⴈ;
+					ႨႣႭ(Ⴀ: false);
+					Ⴃ = ႨႣႣ<ChatmanIntroPageController>(ႥႠႨ.Ⴅ.ႰႼ());
+					Ⴃ.OnClosed += delegate
+					{
+						*(bool*)(&this.Ⴐ) = false;
+					};
+					Ⴃ.CreateAndInitialize(ႥႠႨ.Ⴅ.ႰႼ());
+					Ⴃ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679754)));
+					ႥႥႨႣ.Ⴀ.Ⴐ = ႥႥႨႣ.Ⴐ.Ⴄ;
+				});
+				while (true)
+				{
+					if (*(bool*)(&this.Ⴐ))
+					{
+						if (!ႥႥႨႣ.Ⴀ.Ⴈ.WaitOne(75))
+						{
+							continue;
+						}
+						if (548 <= 548 - 145)
+						{
+							return;
+						}
+					}
+					else if (664 <= 664 - 567)
+					{
+						break;
+					}
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679775));
+					if ((18 + 18 * 18) % 2 == 0)
+					{
+						return;
+					}
+				}
+			}
+		}
+
+		private IWebKitWindowController ႨႣႠ(IWebKitWindowController Ⴅ)
+		{
+			try
+			{
+				Ⴅ?.Close();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+			return null;
+		}
+
+		private void ႨႷႨ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679774));
+			Ⴃ = ႨႣႠ(Ⴃ);
+			Ⴄ = ႨႣႠ(Ⴄ);
+			Ⴗ = ႨႣႠ(Ⴗ);
+			Ⴓ = ႨႣႠ(Ⴓ);
+			Ⴅ = ႨႣႠ(Ⴅ);
+			CurrentMode = ႷႭႨ.Ⴈ.Ⴐ;
+		}
+
+		public void RunMainWindow(bool runHidden)
+		{
+			int num = 3;
+			<>c__DisplayClass3 CS$<>8__locals0 = default(<>c__DisplayClass3);
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					CS$<>8__locals0 = new <>c__DisplayClass3();
+					CS$<>8__locals0.<>4__this = this;
+					ႥႥႨ.Ⴗ.ႳႥ(ႰႷႭ.Ⴍ.ႭႠႠ(137679773), CurrentMode);
+					num = ((CurrentMode == ႷႭႨ.Ⴈ.Ⴓ) ? 2 : 0);
+					break;
+				case 2:
+					num = 1;
+					break;
+				case 0:
+					ႳႳ.Ⴈ.Ⴐ.ႣႳ();
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679772));
+					((ႥႥႤ.Ⴀ)GuiManager.Ⴃ).ႳႣႣ();
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679763));
+					CS$<>8__locals0.mainWindowParams = ႥႠႨ.Ⴅ.ႨႤႠ(runHidden);
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679762));
+					ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+					{
+						CS$<>8__locals0.<>4__this.ႨႷႨ();
+						ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679747));
+						CS$<>8__locals0.<>4__this.Ⴃ = CS$<>8__locals0.<>4__this.ႨႣႣ<ChatmanMainPageController>(CS$<>8__locals0.mainWindowParams);
+						CS$<>8__locals0.<>4__this.Ⴃ.CreateAndInitialize(CS$<>8__locals0.mainWindowParams);
+						CS$<>8__locals0.<>4__this.Ⴃ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679746)));
+						CS$<>8__locals0.<>4__this.ႨႣႭ(Ⴀ: true);
+					});
+					CurrentMode = ႷႭႨ.Ⴈ.Ⴓ;
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		public void ShowMessageBoxInMainWindow(string message, ႷႭႨ.Ⴗ messageBoxType)
+		{
+			//Discarded unreachable code: IL_0002, IL_001a, IL_005f
+			ႥႥႨ.Ⴗ.ႳႥ(ႰႷႭ.Ⴍ.ႭႠႠ(137679761), CurrentMode);
+			bool flag = CurrentMode == ႷႭႨ.Ⴈ.Ⴓ;
+			while (flag)
+			{
+				ChatmanMainPageController.ShowChatmanMessageBox(message, messageBoxType);
+				if (false)
+				{
+					continue;
+				}
+				return;
+			}
+			if ((500 + 500 * 500) % 2 == 0)
+			{
+			}
+		}
+
+		public void RunWebTransferWindow()
+		{
+			//Discarded unreachable code: IL_0005, IL_0022, IL_003f, IL_0059, IL_0061, IL_0065, IL_006a, IL_007a, IL_007e, IL_00c1, IL_00f0
+			ႥႥႨ.Ⴗ.ႳႥ(ႰႷႭ.Ⴍ.ႭႠႠ(137679760), CurrentMode);
+			int num;
+			if (CurrentMode != ႷႭႨ.Ⴈ.Ⴓ)
+			{
+				num = 0;
+				goto IL_006c;
+			}
+			if (744 > 744 - 626)
+			{
+				if (Ⴗ != null)
+				{
+					if (599 > 599 - 502)
+					{
+					}
+					goto IL_000b;
+				}
+				goto IL_005e;
+			}
+			goto IL_00c3;
+			IL_006c:
+			if (num == 0)
+			{
+				if (25 >= 25 - 17)
+				{
+					return;
+				}
+				goto IL_000b;
+			}
+			goto IL_00c3;
+			IL_000b:
+			if (Ⴗ.WebKit == null)
+			{
+				goto IL_005e;
+			}
+			if (51 <= 51 - 40)
+			{
+			}
+			num = ((Ⴗ.WebKit.CurrentWebKitState == WebKitState.Shuttedown) ? 1 : 0);
+			goto IL_006c;
+			IL_00c3:
+			ChatmanMainPageController.SetIntroButtonEnabled(isEnabled: false);
+			ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+			{
+				Ⴗ = ႨႣႣ<WebTransferController>(ႥႠႨ.Ⴅ.ႨႥႥ());
+				Ⴗ.OnClosed += ႳႠ;
+				Ⴗ.CreateAndInitialize(ႥႠႨ.Ⴅ.ႨႥႥ());
+				Ⴗ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679753)));
+			});
+			if (985 >= 985 - 749)
+			{
+				return;
+			}
+			goto IL_005e;
+			IL_005e:
+			num = 1;
+			goto IL_006c;
+		}
+
+		private void ႳႠ(object Ⴐ, EventArgs Ⴗ)
+		{
+			this.Ⴗ = null;
+			ChatmanMainPageController.SetIntroButtonEnabled(isEnabled: true);
+		}
+
+		public void ShowProactiveWindow(string text, int specialActionCode, bool useBigProactiveWindowSize)
+		{
+			//Discarded unreachable code: IL_0005, IL_0037, IL_003e, IL_006f, IL_0074, IL_008c, IL_0093, IL_00f4, IL_0120
+			<>c__DisplayClass8 CS$<>8__locals0 = new <>c__DisplayClass8();
+			CS$<>8__locals0.useBigProactiveWindowSize = useBigProactiveWindowSize;
+			CS$<>8__locals0.<>4__this = this;
+			ႥႥႨ.Ⴗ.ႳႥ(ႰႷႭ.Ⴍ.ႭႠႠ(137679767), CurrentMode);
+			bool flag = CurrentMode == ႷႭႨ.Ⴈ.Ⴓ;
+			while (!flag)
+			{
+				if (405 > 405 - 290)
+				{
+					return;
+				}
+			}
+			ProactivePageController.ProactiveText = text;
+			while (true)
+			{
+				ProactivePageController.UseBigProactiveWindowSize = CS$<>8__locals0.useBigProactiveWindowSize;
+				while (true)
+				{
+					ProactivePageController.SpecialActionCode = specialActionCode;
+					int num;
+					if (Ⴓ != null)
+					{
+						if (134 <= 134 - 20)
+						{
+							break;
+						}
+						if (Ⴓ.WebKit != null)
+						{
+							if (773 < 773 - 123)
+							{
+								return;
+							}
+							num = ((Ⴓ.WebKit.CurrentWebKitState == WebKitState.Shuttedown) ? 1 : 0);
+							goto IL_0076;
+						}
+					}
+					goto IL_0071;
+					IL_0071:
+					num = 1;
+					goto IL_0076;
+					IL_0076:
+					if (num == 0)
+					{
+						if ((766 + 766 * 766) % 2 == 0)
+						{
+							return;
+						}
+						continue;
+					}
+					ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+					{
+						ႷႭႥ.Ⴀ ⴀ = ႥႠႨ.Ⴅ.ႨႤႤ(CS$<>8__locals0.useBigProactiveWindowSize);
+						CS$<>8__locals0.<>4__this.Ⴓ = CS$<>8__locals0.<>4__this.ႨႣႣ<ProactivePageController>(ⴀ);
+						CS$<>8__locals0.<>4__this.Ⴓ.OnClosed += delegate
+						{
+							CS$<>8__locals0.<>4__this.Ⴓ = null;
+						};
+						CS$<>8__locals0.<>4__this.Ⴓ.CreateAndInitialize(ⴀ);
+						CS$<>8__locals0.<>4__this.Ⴓ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679745)));
+					});
+					if (588 > 588 - 167)
+					{
+						return;
+					}
+					goto IL_0071;
+				}
+			}
+		}
+
+		public void RunReminderGuiWindow()
+		{
+			//Discarded unreachable code: IL_0005, IL_0042, IL_005c, IL_0061, IL_0065, IL_006a, IL_0083, IL_0087, IL_00ca, IL_00f2
+			while (true)
+			{
+				ႥႥႨ.Ⴗ.ႳႥ(ႰႷႭ.Ⴍ.ႭႠႠ(137679766), CurrentMode);
+				if (CurrentMode == ႷႭႨ.Ⴈ.Ⴓ)
+				{
+					if (246 < 246 - 130)
+					{
+						break;
+					}
+					if (Ⴄ != null)
+					{
+						if (238 > 238 - 160)
+						{
+							if (Ⴄ.WebKit == null)
+							{
+								goto IL_005e;
+							}
+							if (false)
+							{
+								continue;
+							}
+						}
+						goto IL_0047;
+					}
+					goto IL_005e;
+				}
+				goto IL_0067;
+				IL_0047:
+				int num = (Ⴄ.WebKit.CurrentWebKitState == WebKitState.Shuttedown) ? 1 : 0;
+				goto IL_006f;
+				IL_005e:
+				num = 1;
+				goto IL_006f;
+				IL_0067:
+				num = 0;
+				goto IL_006f;
+				IL_006f:
+				if (num == 0)
+				{
+					if (885 > 885 - 202)
+					{
+						break;
+					}
+					goto IL_0067;
+				}
+				ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+				{
+					Ⴄ = ႨႣႣ<ReminderPopupPageController>(ႥႠႨ.Ⴅ.ႨႥႨ());
+					Ⴄ.OnClosed += delegate
+					{
+						Ⴄ = null;
+					};
+					Ⴄ.CreateAndInitialize(ႥႠႨ.Ⴅ.ႨႥႨ());
+					Ⴄ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679752)));
+				});
+				if ((750 + 750 * 750) % 2 == 0)
+				{
+					break;
+				}
+				goto IL_0047;
+			}
+		}
+
+		public void RunUserDetailsGuiWindow()
+		{
+			//Discarded unreachable code: IL_0005, IL_0028, IL_0042, IL_005f, IL_0063, IL_0068, IL_007e, IL_0082, IL_00ec
+			while (true)
+			{
+				ႥႥႨ.Ⴗ.ႳႥ(ႰႷႭ.Ⴍ.ႭႠႠ(137679765), CurrentMode);
+				int num;
+				if (CurrentMode != ႷႭႨ.Ⴈ.Ⴓ)
+				{
+					num = 0;
+					goto IL_006a;
+				}
+				if (411 > 411 - 257)
+				{
+					goto IL_002a;
+				}
+				goto IL_0047;
+				IL_0047:
+				num = ((Ⴅ.WebKit.CurrentWebKitState == WebKitState.Shuttedown) ? 1 : 0);
+				goto IL_006a;
+				IL_002a:
+				if (Ⴅ != null)
+				{
+					if (782 >= 782 - 379 && Ⴅ.WebKit != null)
+					{
+						if (391 <= 391 - 329)
+						{
+							continue;
+						}
+						goto IL_0047;
+					}
+				}
+				num = 1;
+				goto IL_006a;
+				IL_006a:
+				if (num == 0)
+				{
+					break;
+				}
+				ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+				{
+					Ⴅ = ႨႣႣ<ChatmanPopupMain>(ႥႠႨ.Ⴅ.ႨႥႠ());
+					Ⴅ.OnClosed += delegate
+					{
+						Ⴅ = null;
+					};
+					Ⴅ.CreateAndInitialize(ႥႠႨ.Ⴅ.ႨႥႠ());
+					Ⴅ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679759)));
+				});
+				if (135 > 135 - 29)
+				{
+					return;
+				}
+				goto IL_002a;
+			}
+			if (240 < 240 - 220)
+			{
+			}
+		}
+
+		private IWebKitWindowController ႨႣႣ<Ⴐ>(ႷႭႥ.Ⴀ Ⴐ) where Ⴐ : class, IPageController, new()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႷႭ.Ⴍ.ႭႠႠ(137679764));
+			IWebKitWindowController webKitWindowController = null;
+			return new WebKitWindowController<Ⴐ>();
+		}
+
+		public void Pause()
+		{
+			ႳႳ.Ⴈ.Ⴐ.ႣႷ();
+		}
+
+		public void Resume()
+		{
+			ႳႳ.Ⴈ.Ⴐ.ႣႳ();
+		}
+
+		public void Close()
+		{
+			lock (Ⴐ)
+			{
+				if (CurrentMode == ႷႭႨ.Ⴈ.Ⴅ || CurrentMode == ႷႭႨ.Ⴈ.Ⴗ)
+				{
+					return;
+				}
+				CurrentMode = ႷႭႨ.Ⴈ.Ⴗ;
+			}
+			ႨႷႨ();
+			CurrentMode = ႷႭႨ.Ⴈ.Ⴅ;
+		}
+
+		public void ShowWebTransferProgress(long currentProgress, long maxProgress)
+		{
+			WebTransferController.ShowWebTransferProgress(currentProgress, maxProgress);
+		}
+
+		public void ShowWebTransferMessage(string message, ႷႭႣ.Ⴍ messageType, int hideWindowTimeoutMs)
+		{
+			WebTransferController.ShowWebTransferMessage(message, messageType, hideWindowTimeoutMs);
+		}
+
+		public void ShowSimpleMessage(string message)
+		{
+			ႥႥႨႭ.Ⴗ.ႳႷ(message, Resources.WindowsCaption);
+		}
+
+		public void ShowMyChatmanAccount(EventHandler credentialsSavedDelegate)
+		{
+			NavigationService.ShowPopupMyChatmanUserDetails(credentialsSavedDelegate, showInSeparateWindow: true);
+		}
+
+		private void ႨႣႭ(bool Ⴀ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001f, IL_002e, IL_0047
+			do
+			{
+				bool flag = !Ⴀ;
+				while (flag)
+				{
+					Ⴍ.HideTrayIcon();
+					if (668 >= 668 - 507)
+					{
+						return;
+					}
+				}
+			}
+			while (false);
+			Ⴍ.ShowTrayIcon();
+		}
+
+		private void ႨႷႳ()
+		{
+			lock (Ⴐ)
+			{
+				if (Ⴍ == null)
+				{
+					Ⴍ = new TrayGUIManager();
+					Ⴍ.HideTrayIcon();
+				}
+			}
+		}
+
+		public void Dispose()
+		{
+			Dispose(disposing: true);
+		}
+
+		protected void Dispose(bool disposing)
+		{
+			int num = 4;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num = (Ⴈ ? 5 : 2);
+					break;
+				case 2:
+					num = ((!disposing) ? 1 : 0);
+					break;
+				case 0:
+					num = ((CurrentMode == ႷႭႨ.Ⴈ.Ⴅ) ? 3 : 8);
+					break;
+				case 8:
+					num2 = ((CurrentMode == ႷႭႨ.Ⴈ.Ⴗ) ? 1 : 0);
+					goto IL_0068;
+				case 3:
+					num2 = 1;
+					goto IL_0068;
+				case 6:
+					Close();
+					num = 7;
+					break;
+				case 7:
+					Ⴍ = ႥႥႨႠ.Ⴈ.ႳႷ(Ⴍ, ႰႷႭ.Ⴍ.ႭႠႠ(137679755));
+					num = 1;
+					break;
+				case 1:
+					num = 5;
+					break;
+				case 5:
+					{
+						Ⴈ = true;
+						return;
+					}
+					IL_0068:
+					num = ((num2 != 0) ? 7 : 6);
+					break;
+				}
+			}
+		}
+
+		private unsafe void <RunIntroWindow>b__0()
+		{
+			ႨႷႨ();
+			CurrentMode = ႷႭႨ.Ⴈ.Ⴈ;
+			ႨႣႭ(Ⴀ: false);
+			Ⴃ = ႨႣႣ<ChatmanIntroPageController>(ႥႠႨ.Ⴅ.ႰႼ());
+			Ⴃ.OnClosed += delegate
+			{
+				*(bool*)(&this.Ⴐ) = false;
+			};
+			Ⴃ.CreateAndInitialize(ႥႠႨ.Ⴅ.ႰႼ());
+			Ⴃ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679754)));
+			ႥႥႨႣ.Ⴀ.Ⴐ = ႥႥႨႣ.Ⴐ.Ⴄ;
+		}
+
+		private unsafe void <RunIntroWindow>b__1(object P_0, EventArgs P_1)
+		{
+			*(bool*)(&this.Ⴐ) = false;
+		}
+
+		private void <RunWebTransferWindow>b__5()
+		{
+			Ⴗ = ႨႣႣ<WebTransferController>(ႥႠႨ.Ⴅ.ႨႥႥ());
+			Ⴗ.OnClosed += ႳႠ;
+			Ⴗ.CreateAndInitialize(ႥႠႨ.Ⴅ.ႨႥႥ());
+			Ⴗ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679753)));
+		}
+
+		private void <RunReminderGuiWindow>b__a()
+		{
+			Ⴄ = ႨႣႣ<ReminderPopupPageController>(ႥႠႨ.Ⴅ.ႨႥႨ());
+			Ⴄ.OnClosed += delegate
+			{
+				Ⴄ = null;
+			};
+			Ⴄ.CreateAndInitialize(ႥႠႨ.Ⴅ.ႨႥႨ());
+			Ⴄ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679752)));
+		}
+
+		private void <RunReminderGuiWindow>b__b(object P_0, EventArgs P_1)
+		{
+			Ⴄ = null;
+		}
+
+		private void <RunUserDetailsGuiWindow>b__c()
+		{
+			Ⴅ = ႨႣႣ<ChatmanPopupMain>(ႥႠႨ.Ⴅ.ႨႥႠ());
+			Ⴅ.OnClosed += delegate
+			{
+				Ⴅ = null;
+			};
+			Ⴅ.CreateAndInitialize(ႥႠႨ.Ⴅ.ႨႥႠ());
+			Ⴅ.WebKit.NavigateTo(ႥႥႨႳ.Ⴃ.ႨႠႰ(ႰႷႭ.Ⴍ.ႭႠႠ(137679759)));
+		}
+
+		private void <RunUserDetailsGuiWindow>b__d(object P_0, EventArgs P_1)
+		{
+			Ⴅ = null;
+		}
+	}
+}
+namespace Rondyo.Chatman.GUI.Manager.Properties
+{
+	[DebuggerNonUserCode]
+	[CompilerGenerated]
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
+	public class Resources
+	{
+		private static ResourceManager Ⴃ;
+
+		private static CultureInfo Ⴈ;
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		public static ResourceManager ResourceManager
+		{
+			get
+			{
+				int num = 0;
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = (object.ReferenceEquals(Ⴃ, null) ? 1 : 2);
+						break;
+					case 1:
+					{
+						ResourceManager resourceManager = Ⴃ = new ResourceManager("Rondyo.Chatman.GUI.Manager.Properties.Resources", typeof(Resources).Assembly);
+						num = 2;
+						break;
+					}
+					case 2:
+						return Ⴃ;
+					}
+				}
+			}
+		}
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		public static CultureInfo Culture
+		{
+			get
+			{
+				return Ⴈ;
+			}
+			set
+			{
+				Ⴈ = value;
+			}
+		}
+
+		public static string ChatmanCantStartGui => ResourceManager.GetString(ႰႷႭ.Ⴍ.ႭႠႠ(137679758), Ⴈ);
+
+		public static string WindowsCaption => ResourceManager.GetString(ႰႷႭ.Ⴍ.ႭႠႠ(137679757), Ⴈ);
+
+		public static string WindowsCaptionBrowser => ResourceManager.GetString(ႰႷႭ.Ⴍ.ႭႠႠ(137679756), Ⴈ);
+
+		internal Resources()
+		{
+		}
+	}
+}
+namespace ႥႠႨ
+{
+	internal static class Ⴅ
+	{
+		public unsafe static ႷႭႥ.Ⴀ ႨႤႠ(bool Ⴃ)
+		{
+			ႷႭႥ.Ⴀ result = default(ႷႭႥ.Ⴀ);
+			result.Ⴐ = true;
+			*(string*)(&result.Ⴐ) = Resources.WindowsCaption;
+			result.Ⴓ = false;
+			result.Ⴈ = Ⴃ;
+			result.Ⴄ = ႷႭႨ.Ⴍ.Ⴈ;
+			*(Size*)(&result.Ⴐ) = *(Size*)(&ႭႭႰ.Ⴓ.Ⴐ);
+			return result;
+		}
+
+		public unsafe static ႷႭႥ.Ⴀ ႰႼ()
+		{
+			ႷႭႥ.Ⴀ result = default(ႷႭႥ.Ⴀ);
+			result.Ⴐ = true;
+			*(string*)(&result.Ⴐ) = Resources.WindowsCaption;
+			result.Ⴓ = false;
+			result.Ⴄ = ႷႭႨ.Ⴍ.Ⴈ;
+			*(Size*)(&result.Ⴐ) = new Size(352, 486);
+			return result;
+		}
+
+		public unsafe static ႷႭႥ.Ⴀ ႨႥႥ()
+		{
+			ႷႭႥ.Ⴀ result = default(ႷႭႥ.Ⴀ);
+			result.Ⴐ = false;
+			*(string*)(&result.Ⴐ) = Resources.WindowsCaption;
+			result.Ⴓ = true;
+			result.Ⴄ = ႷႭႨ.Ⴍ.Ⴅ;
+			*(Size*)(&result.Ⴐ) = new Size(264, 164);
+			return result;
+		}
+
+		public unsafe static ႷႭႥ.Ⴀ ႨႥႨ()
+		{
+			ႷႭႥ.Ⴀ result = default(ႷႭႥ.Ⴀ);
+			result.Ⴐ = false;
+			*(string*)(&result.Ⴐ) = Resources.WindowsCaption;
+			result.Ⴓ = true;
+			result.Ⴄ = ႷႭႨ.Ⴍ.Ⴈ;
+			*(Size*)(&result.Ⴐ) = new Size(362, 337);
+			return result;
+		}
+
+		public unsafe static ႷႭႥ.Ⴀ ႨႥႠ()
+		{
+			ႷႭႥ.Ⴀ result = default(ႷႭႥ.Ⴀ);
+			result.Ⴐ = false;
+			*(string*)(&result.Ⴐ) = Resources.WindowsCaption;
+			result.Ⴓ = true;
+			result.Ⴄ = ႷႭႨ.Ⴍ.Ⴈ;
+			*(Size*)(&result.Ⴐ) = new Size(374, 270);
+			return result;
+		}
+
+		public unsafe static ႷႭႥ.Ⴀ ႨႤႤ(bool Ⴃ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0039, IL_0049, IL_0059
+			ႷႭႥ.Ⴀ result = default(ႷႭႥ.Ⴀ);
+			result.Ⴐ = false;
+			*(string*)(&result.Ⴐ) = Resources.WindowsCaption;
+			result.Ⴓ = true;
+			result.Ⴄ = ႷႭႨ.Ⴍ.Ⴅ;
+			*(Size*)(&result.Ⴐ) = (Ⴃ ? new Size(284, 72) : new Size(230, 51));
+			return result;
+		}
+	}
+}
+namespace ႰႷႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string ႭႠႠ(int Ⴀ)
+		{
+			int num = Ⴀ ^ 0x834D39B;
+			string result;
+			if ((result = m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "ऊ\u05adսळ\u05ec\u0cfbచ\u0de2न\u05aaՇऊ\u05ecೡఞඥ\u093e\u05bdՠऊרೱ\u0c5b\u0df1ढעԴअ\u05bd೨";
+				break;
+			case 1:
+				obj = "සढ\u05aaշछן\u0cf0ఈ\u0df1ब\u05aaՠ";
+				break;
+			case 2:
+				obj = "\u0c3c\u0df0त\u05f8ղऋס\u0cf9\u0c02ඥत\u05b6սऊפ\u0cf4గ෬न\u05bcԺ";
+				break;
+			case 3:
+				obj = "೧ఎ෫ण\u05b1պङ\u05ad\u0cfcక\u0df1\u093f\u05b7Ԯफ़\u05eeೠఉ\u0de0ण\u05acԴओעೱఞඥ७\u05b1էफ़\u05ceೠఉ\u0df7न\u05b6ՠळעೱఞමशרթ";
+				break;
+			case 4:
+				obj = "\u05c4\u0cfbఏ\u0df7ढעԴऋף\u0cf7గ෪म\u05b3սऐתವఏ෭\u093f\u05bdյच\u05ad\u0cf4క\u0de1७\u05bdլग\u05f9";
+				break;
+			case 5:
+				obj = "झס\u0cfaఈ෬ण\u05bfԴटס\u0cf9\u0c5b෦स\u05aaզछףೡగ\u0dfc७\u05b7դछףವజ\u0df0त\u05f8շऑףೡఉ෪ड\u05b4ձऌ\u05fe\u0cbb\u0c55ණ";
+				break;
+			case 6:
+				obj = "զऋף\u0cfbఒ෫प\u05f8չटפ\u0cfb\u0c5b\u0df2त\u05b6հऑ\u05faಯ\u0c5b෦स\u05aaձऐ\u05f9ವఖ෪ऩ\u05bdԴफ़פ೦\u0c5bෆस\u05aaզछףೡశ෪ऩ\u05bdԩअ\u05bd೨";
+				break;
+			case 7:
+				obj = "\u058bՠट\u05ffೡఒ෫प\u05f8\u0557ख\u05ecೡఖ\u0de4ण\u05f8Փफ\u05c4ವఌ\u0de4ह\u05bbռफ़ש\u0cfaజඥह\u05b1չछ\u05ff\u0cbb\u0c55ණ";
+				break;
+			case 8:
+				obj = "ऊ\u05bdՠऊפ\u0cfbజඥठ\u05b9սऐ\u05ad\u0ce2ఒ෫ऩ\u05b7գफ़\u05fd\u0cf4ఉ\u0de4ठ\u05bdՠछ\u05ff೦\u0c55ණ\u0963";
+				break;
+			case 9:
+				obj = "\u0dccण\u05aeջकפ\u0cfbజඥ\u0900\u05b9սऐ\u05ad\u0ce2ఒ෫ऩ\u05b7գफ़\u05ee೧ఞ\u0de4ह\u05b1ջऐ\u05a3\u0cbb\u0c55";
+				break;
+			case 10:
+				obj = "ఉ\u0df0ण\u05b6սऐתವఖ\u0de0\u093e\u05abյङר\u0cf7ఔ\u0dfdॷ\u05f8շऋ\u05ff\u0cf0క\u0df1७\u05b5ջचרವ\u0c5b෬\u093e\u05f8\u0557ऋ\u05ff೧ఞ෫ह\u0595ջचרನ\u0c00ඵर";
+				break;
+			case 11:
+				obj = "೧ఎ෫ण\u05b1պङ\u05ad\u0ce2ఞ෧७\u05acզटף೦ఝ\u0de0\u093fעԴझ\u05f8೧ఞ෫ह\u05f8չऑש\u0cf0\u0c5bඥत\u05abԴऽ\u05f8೧ఉ\u0de0ण\u05ac\u0559ऑש\u0cf0\u0c46\u0dfeॽ\u05a5";
+				break;
+			case 12:
+				obj = "\u05ffೠక෫त\u05b6ճफ़\u05fd೧ఔ\u0de4म\u05acսईרಯ\u0c5b෦स\u05aaձऐ\u05f9ವఖ෪ऩ\u05bdԴफ़פ೦\u0c5bෆस\u05aaզछףೡశ෪ऩ\u05bdԩअ\u05bd೨";
+				break;
+			case 13:
+				obj = "ऌ\u05f8\u0cfbక෬ण\u05bfԴऌר\u0cf8ఒ෫ऩ\u05bdզफ़\u05fa\u0cfcక\u0de1ढ\u05afԮफ़\u05eeೠఉ\u0de0ण\u05acԴओעೱఞඥ७\u05b1էफ़\u05ceೠఉ\u0df7न\u05b6ՠळעೱఞමशרթ";
+				break;
+			case 14:
+				obj = "զऋף\u0cfbఒ෫प\u05f8աऍר೧\u0c5b\u0de1न\u05acյगס\u0cf0ఈ\u0dbf७\u05bbաऌר\u0cfbఏඥठ\u05b7հछ\u05adವఒ\u0df6७\u059bաऌ\u05ff\u0cf0క\u0df1\u0900\u05b7հछ\u05b0೮\u0c4b\u0df8";
+				break;
+			case 15:
+				obj = "\u059bզछ\u05ecೡఞ\u0dd2न\u05ba՟ग\u05f9\u0cc2ఒ෫ऩ\u05b7գफ़פ೦\u0c5b෦ब\u05b4ոछש\u0cbb";
+				break;
+			case 16:
+				obj = "ह\u05aaյइ\u05ad\u0cd2మ\u0dcc७\u0595յऐ\u05ecೲఞ\u0df7";
+				break;
+			case 17:
+				obj = "ෆथ\u05b9ՠओ\u05ec\u0cfbల෫ह\u05aaջ";
+				break;
+			case 18:
+				obj = "బ\u0de0य\u058cզटף೦ఝ\u0de0\u093fֈյङר";
+				break;
+			case 19:
+				obj = "\u0cc7ఞ෨त\u05b6հछ\u05ff\u0cc5ఔ\u0df5स\u05a8";
+				break;
+			case 20:
+				obj = "\u05ce\u0cfdచ\u0df1ठ\u05b9պमע\u0ce5ఎ\u0df5\u0900\u05b9սऐ";
+				break;
+			case 21:
+				obj = "ऽץ\u0cf4ఏ෨ब\u05b6\u0557टףೡన\u0df1ब\u05aaՠह\u05f8\u0cfc";
+				break;
+			case 22:
+				obj = "Ճगףೱఔ\u0df2\u093e\u059bյऎ\u05f9\u0cfcఔ෫";
+				break;
+			case 23:
+				obj = "֏սऐש\u0cfaఌ\u0df6ऎ\u05b9դऊפ\u0cfaక\u0dc7\u093f\u05b7գऍר೧";
+				break;
+			case 24:
+				obj = "ऎ\u05aaձटפ\u0cfbజඥठ\u05b9սऐ\u05ad\u0ce2ఞ෧आ\u05b1ՠफ़\u05fa\u0cfcక\u0de1ढ\u05afԴझע\u0cfbఏ\u0df7ढ\u05b4ոछ\u05ff\u0cbb\u0c55ණ";
+				break;
+			case 25:
+				obj = "ෆथ\u05b9ՠओ\u05ec\u0cfbశ\u0de4त\u05b6";
+				break;
+			case 26:
+				obj = "ఫ\u0df7ढ\u05b9շऊפ\u0ce3ఞ\u0dd5ब\u05bfձ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႰႷႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴀ) % num2]);
+			}
+			result = new string(array);
+			m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႰႷႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[27];
+		}
+	}
+}

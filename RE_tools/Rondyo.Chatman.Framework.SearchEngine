@@ -1,0 +1,1599 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Framework.SearchEngine.dll
+// Rondyo.Chatman.Framework.SearchEngine, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Guid("07910df6-74a4-4243-b762-bc65c00f8b9f")]
+[assembly: ComVisible(false)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace ႥႭႰ
+{
+	public interface Ⴃ<Ⴗ>
+	{
+		Ⴗ Ⴀ
+		{
+			get;
+		}
+
+		bool ႭႰႨ();
+	}
+	public sealed class Ⴅ<Ⴃ> : Ⴓ<Ⴃ>, Ⴐ<Ⴃ> where Ⴃ : IComparable<Ⴃ>
+	{
+		public struct ႨႣ : Ⴃ<Ⴃ>
+		{
+			private ႨႥ Ⴈ;
+
+			private Ⴃ Ⴅ;
+
+			public Ⴃ Ⴀ => Ⴅ;
+
+			internal ႨႣ(ႨႥ Ⴓ)
+			{
+				//Discarded unreachable code: IL_0002, IL_002f, IL_0051, IL_006c, IL_007e
+				while (Ⴓ != null)
+				{
+					if (576 <= 576 - 62)
+					{
+						break;
+					}
+					do
+					{
+						if (Ⴓ.Ⴍ == null)
+						{
+							if (793 < 793 - 469)
+							{
+								break;
+							}
+							if (786 >= 786 - 761)
+							{
+								goto end_IL_0018;
+							}
+						}
+						Ⴓ = Ⴓ.Ⴍ;
+					}
+					while ((247 + 247 * 247) % 2 == 0);
+					continue;
+					end_IL_0018:
+					break;
+				}
+				Ⴈ = Ⴓ;
+				Ⴅ = default(Ⴃ);
+			}
+
+			public unsafe bool ႭႰႨ()
+			{
+				int num = 13;
+				bool result = default(bool);
+				while (true)
+				{
+					int num2;
+					switch (num)
+					{
+					default:
+						num = ((Ⴈ != null) ? 3 : 5);
+						break;
+					case 5:
+						result = false;
+						num = 7;
+						break;
+					case 3:
+						Ⴅ = *(Ⴃ*)(&Ⴈ.Ⴗ);
+						num = ((Ⴈ.Ⴀ == null) ? 1 : 10);
+						break;
+					case 1:
+						num = 8;
+						break;
+					case 9:
+						Ⴈ = Ⴈ.Ⴗ;
+						num = 8;
+						break;
+					case 8:
+						num = ((Ⴈ.Ⴗ == null) ? 14 : 11);
+						break;
+					case 11:
+						num2 = ((Ⴈ == Ⴈ.Ⴗ.Ⴀ) ? 1 : 0);
+						goto IL_00e6;
+					case 14:
+						num2 = 0;
+						goto IL_00e6;
+					case 2:
+						Ⴈ = Ⴈ.Ⴗ;
+						num = 12;
+						break;
+					case 10:
+						Ⴈ = Ⴈ.Ⴀ;
+						num = 0;
+						break;
+					case 6:
+						Ⴈ = Ⴈ.Ⴍ;
+						num = 0;
+						break;
+					case 0:
+						num = ((Ⴈ.Ⴍ != null) ? 6 : 4);
+						break;
+					case 4:
+						num = 12;
+						break;
+					case 12:
+						result = true;
+						num = 7;
+						break;
+					case 7:
+						{
+							return result;
+						}
+						IL_00e6:
+						num = ((num2 != 0) ? 9 : 2);
+						break;
+					}
+				}
+			}
+		}
+
+		internal sealed class ႨႥ
+		{
+			public Ⴃ Ⴗ;
+
+			public ႨႥ Ⴗ;
+
+			public ႨႥ Ⴍ;
+
+			public ႨႥ Ⴀ;
+
+			public sbyte Ⴅ;
+
+			public unsafe ႨႥ(Ⴃ Ⴓ)
+			{
+				*(Ⴃ*)(&this.Ⴗ) = Ⴓ;
+			}
+
+			public unsafe ႨႥ(Ⴃ Ⴓ, ႨႥ Ⴅ)
+			{
+				*(Ⴃ*)(&this.Ⴗ) = Ⴓ;
+				Ⴗ = Ⴅ;
+			}
+		}
+
+		private ႨႥ m_Ⴀ;
+
+		private int Ⴗ;
+
+		public int Ⴀ => Ⴗ;
+
+		public Ⴅ()
+		{
+			Ⴀ = null;
+			Ⴗ = 0;
+		}
+
+		public Ⴅ(Ⴃ[] Ⴍ)
+			: this()
+		{
+			//Discarded unreachable code: IL_0002, IL_0010, IL_002c, IL_004f
+			while (true)
+			{
+				int num = 0;
+				do
+				{
+					if (num >= Ⴍ.Length)
+					{
+						if (828 < 828 - 550)
+						{
+						}
+						return;
+					}
+					Ⴃ ⴍ = Ⴍ[num];
+					ႭႰႭ(ⴍ);
+					num++;
+				}
+				while (191 >= 191 - 122);
+			}
+		}
+
+		public unsafe bool ႭႰႭ(Ⴃ Ⴍ)
+		{
+			int num = 22;
+			ႨႥ ⴈႥ = default(ႨႥ);
+			int num3 = default(int);
+			bool result = default(bool);
+			ႨႥ ⴈႥ2 = default(ႨႥ);
+			ႨႥ ⴈႥ3 = default(ႨႥ);
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num = ((Ⴍ != null) ? 43 : 51);
+					break;
+				case 51:
+					throw new ArgumentNullException();
+				case 43:
+					num = ((Ⴀ != null) ? 26 : 50);
+					break;
+				case 50:
+					Ⴀ = new ႨႥ(Ⴍ);
+					num = 42;
+					break;
+				case 26:
+					ⴈႥ = Ⴀ;
+					num = 17;
+					break;
+				case 55:
+					num3 = Ⴍ.CompareTo(*(Ⴃ*)(&ⴈႥ.Ⴗ));
+					num = ((num3 >= 0) ? 63 : 71);
+					break;
+				case 71:
+					num = ((ⴈႥ.Ⴍ == null) ? 40 : 45);
+					break;
+				case 45:
+					ⴈႥ = ⴈႥ.Ⴍ;
+					num = 0;
+					break;
+				case 40:
+					ⴈႥ.Ⴍ = new ႨႥ(Ⴍ, ⴈႥ);
+					ⴈႥ.Ⴅ--;
+					num = 60;
+					break;
+				case 0:
+					num = 56;
+					break;
+				case 63:
+					num = ((num3 <= 0) ? 37 : 62);
+					break;
+				case 62:
+					num = ((ⴈႥ.Ⴀ == null) ? 14 : 7);
+					break;
+				case 7:
+					ⴈႥ = ⴈႥ.Ⴀ;
+					num = 28;
+					break;
+				case 14:
+					ⴈႥ.Ⴀ = new ႨႥ(Ⴍ, ⴈႥ);
+					ⴈႥ.Ⴅ++;
+					num = 60;
+					break;
+				case 28:
+					num = 56;
+					break;
+				case 37:
+					result = false;
+					num = 61;
+					break;
+				case 56:
+					num = 17;
+					break;
+				case 17:
+				{
+					bool flag = true;
+					num = 55;
+					break;
+				}
+				case 60:
+					num = 33;
+					break;
+				case 77:
+					num = ((ⴈႥ.Ⴗ.Ⴍ != ⴈႥ) ? 68 : 12);
+					break;
+				case 12:
+					ⴈႥ.Ⴗ.Ⴅ--;
+					num = 48;
+					break;
+				case 68:
+					ⴈႥ.Ⴗ.Ⴅ++;
+					num = 48;
+					break;
+				case 48:
+					ⴈႥ = ⴈႥ.Ⴗ;
+					num = ((ⴈႥ.Ⴅ != -2) ? 84 : 83);
+					break;
+				case 83:
+					ⴈႥ2 = ⴈႥ.Ⴍ;
+					num = ((ⴈႥ2.Ⴅ != -1) ? 19 : 15);
+					break;
+				case 15:
+					ⴈႥ2.Ⴗ = ⴈႥ.Ⴗ;
+					num = ((ⴈႥ.Ⴗ != null) ? 8 : 34);
+					break;
+				case 34:
+					Ⴀ = ⴈႥ2;
+					num = 2;
+					break;
+				case 8:
+					num = ((ⴈႥ.Ⴗ.Ⴍ != ⴈႥ) ? 75 : 27);
+					break;
+				case 27:
+					ⴈႥ.Ⴗ.Ⴍ = ⴈႥ2;
+					num = 79;
+					break;
+				case 75:
+					ⴈႥ.Ⴗ.Ⴀ = ⴈႥ2;
+					num = 79;
+					break;
+				case 79:
+					num = 2;
+					break;
+				case 2:
+					ⴈႥ.Ⴍ = ⴈႥ2.Ⴀ;
+					num = ((ⴈႥ.Ⴍ == null) ? 70 : 53);
+					break;
+				case 53:
+					ⴈႥ.Ⴍ.Ⴗ = ⴈႥ;
+					num = 70;
+					break;
+				case 70:
+					ⴈႥ2.Ⴀ = ⴈႥ;
+					ⴈႥ.Ⴗ = ⴈႥ2;
+					ⴈႥ2.Ⴅ = 0;
+					ⴈႥ.Ⴅ = 0;
+					num = 38;
+					break;
+				case 19:
+					ⴈႥ3 = ⴈႥ2.Ⴀ;
+					ⴈႥ3.Ⴗ = ⴈႥ.Ⴗ;
+					num = ((ⴈႥ.Ⴗ != null) ? 25 : 41);
+					break;
+				case 41:
+					Ⴀ = ⴈႥ3;
+					num = 78;
+					break;
+				case 25:
+					num = ((ⴈႥ.Ⴗ.Ⴍ != ⴈႥ) ? 3 : 73);
+					break;
+				case 73:
+					ⴈႥ.Ⴗ.Ⴍ = ⴈႥ3;
+					num = 20;
+					break;
+				case 3:
+					ⴈႥ.Ⴗ.Ⴀ = ⴈႥ3;
+					num = 20;
+					break;
+				case 20:
+					num = 78;
+					break;
+				case 78:
+					ⴈႥ2.Ⴀ = ⴈႥ3.Ⴍ;
+					num = ((ⴈႥ2.Ⴀ == null) ? 59 : 44);
+					break;
+				case 44:
+					ⴈႥ2.Ⴀ.Ⴗ = ⴈႥ2;
+					num = 59;
+					break;
+				case 59:
+					ⴈႥ.Ⴍ = ⴈႥ3.Ⴀ;
+					num = ((ⴈႥ.Ⴍ == null) ? 31 : 58);
+					break;
+				case 58:
+					ⴈႥ.Ⴍ.Ⴗ = ⴈႥ;
+					num = 31;
+					break;
+				case 31:
+					ⴈႥ3.Ⴍ = ⴈႥ2;
+					ⴈႥ3.Ⴀ = ⴈႥ;
+					ⴈႥ2.Ⴗ = ⴈႥ3;
+					ⴈႥ.Ⴗ = ⴈႥ3;
+					num = ((ⴈႥ3.Ⴅ != -1) ? 66 : 74);
+					break;
+				case 74:
+					ⴈႥ2.Ⴅ = 0;
+					ⴈႥ.Ⴅ = 1;
+					num = 24;
+					break;
+				case 66:
+					num = ((ⴈႥ3.Ⴅ != 0) ? 39 : 64);
+					break;
+				case 64:
+					ⴈႥ2.Ⴅ = 0;
+					ⴈႥ.Ⴅ = 0;
+					num = 24;
+					break;
+				case 39:
+					ⴈႥ2.Ⴅ = -1;
+					ⴈႥ.Ⴅ = 0;
+					num = 24;
+					break;
+				case 24:
+					ⴈႥ3.Ⴅ = 0;
+					num = 38;
+					break;
+				case 38:
+					num = 6;
+					break;
+				case 84:
+					num = ((ⴈႥ.Ⴅ != 2) ? 16 : 21);
+					break;
+				case 21:
+					ⴈႥ2 = ⴈႥ.Ⴀ;
+					num = ((ⴈႥ2.Ⴅ != 1) ? 80 : 9);
+					break;
+				case 9:
+					ⴈႥ2.Ⴗ = ⴈႥ.Ⴗ;
+					num = ((ⴈႥ.Ⴗ != null) ? 4 : 23);
+					break;
+				case 23:
+					Ⴀ = ⴈႥ2;
+					num = 47;
+					break;
+				case 4:
+					num = ((ⴈႥ.Ⴗ.Ⴍ != ⴈႥ) ? 69 : 49);
+					break;
+				case 49:
+					ⴈႥ.Ⴗ.Ⴍ = ⴈႥ2;
+					num = 72;
+					break;
+				case 69:
+					ⴈႥ.Ⴗ.Ⴀ = ⴈႥ2;
+					num = 72;
+					break;
+				case 72:
+					num = 47;
+					break;
+				case 47:
+					ⴈႥ.Ⴀ = ⴈႥ2.Ⴍ;
+					num = ((ⴈႥ.Ⴀ == null) ? 32 : 54);
+					break;
+				case 54:
+					ⴈႥ.Ⴀ.Ⴗ = ⴈႥ;
+					num = 32;
+					break;
+				case 32:
+					ⴈႥ2.Ⴍ = ⴈႥ;
+					ⴈႥ.Ⴗ = ⴈႥ2;
+					ⴈႥ2.Ⴅ = 0;
+					ⴈႥ.Ⴅ = 0;
+					num = 81;
+					break;
+				case 80:
+					ⴈႥ3 = ⴈႥ2.Ⴍ;
+					ⴈႥ3.Ⴗ = ⴈႥ.Ⴗ;
+					num = ((ⴈႥ.Ⴗ != null) ? 76 : 65);
+					break;
+				case 65:
+					Ⴀ = ⴈႥ3;
+					num = 36;
+					break;
+				case 76:
+					num = ((ⴈႥ.Ⴗ.Ⴍ != ⴈႥ) ? 10 : 46);
+					break;
+				case 46:
+					ⴈႥ.Ⴗ.Ⴍ = ⴈႥ3;
+					num = 13;
+					break;
+				case 10:
+					ⴈႥ.Ⴗ.Ⴀ = ⴈႥ3;
+					num = 13;
+					break;
+				case 13:
+					num = 36;
+					break;
+				case 36:
+					ⴈႥ2.Ⴍ = ⴈႥ3.Ⴀ;
+					num = ((ⴈႥ2.Ⴍ == null) ? 11 : 35);
+					break;
+				case 35:
+					ⴈႥ2.Ⴍ.Ⴗ = ⴈႥ2;
+					num = 11;
+					break;
+				case 11:
+					ⴈႥ.Ⴀ = ⴈႥ3.Ⴍ;
+					num = ((ⴈႥ.Ⴀ != null) ? 1 : 57);
+					break;
+				case 1:
+					ⴈႥ.Ⴀ.Ⴗ = ⴈႥ;
+					num = 57;
+					break;
+				case 57:
+					ⴈႥ3.Ⴀ = ⴈႥ2;
+					ⴈႥ3.Ⴍ = ⴈႥ;
+					ⴈႥ2.Ⴗ = ⴈႥ3;
+					ⴈႥ.Ⴗ = ⴈႥ3;
+					num = ((ⴈႥ3.Ⴅ != 1) ? 18 : 30);
+					break;
+				case 30:
+					ⴈႥ2.Ⴅ = 0;
+					ⴈႥ.Ⴅ = -1;
+					num = 5;
+					break;
+				case 18:
+					num = ((ⴈႥ3.Ⴅ != 0) ? 52 : 29);
+					break;
+				case 29:
+					ⴈႥ2.Ⴅ = 0;
+					ⴈႥ.Ⴅ = 0;
+					num = 5;
+					break;
+				case 52:
+					ⴈႥ2.Ⴅ = 1;
+					ⴈႥ.Ⴅ = 0;
+					num = 5;
+					break;
+				case 5:
+					ⴈႥ3.Ⴅ = 0;
+					num = 81;
+					break;
+				case 81:
+					num = 6;
+					break;
+				case 16:
+					num = 33;
+					break;
+				case 33:
+					num = ((ⴈႥ.Ⴅ == 0) ? 67 : 82);
+					break;
+				case 82:
+					num2 = ((ⴈႥ.Ⴗ != null) ? 1 : 0);
+					goto IL_097c;
+				case 67:
+					num2 = 0;
+					goto IL_097c;
+				case 6:
+					num = 42;
+					break;
+				case 42:
+					Ⴗ++;
+					result = true;
+					num = 61;
+					break;
+				case 61:
+					{
+						return result;
+					}
+					IL_097c:
+					num = ((num2 != 0) ? 77 : 6);
+					break;
+				}
+			}
+		}
+
+		public void ႭႰႭ()
+		{
+			Ⴀ = null;
+			Ⴗ = 0;
+		}
+
+		public unsafe bool ႭႰႰ(Ⴃ Ⴍ)
+		{
+			int num = 2;
+			ႨႥ ⴈႥ = default(ႨႥ);
+			int num2 = default(int);
+			bool result = default(bool);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((Ⴍ != null) ? 10 : 3);
+					break;
+				case 3:
+					throw new ArgumentNullException();
+				case 10:
+					ⴈႥ = Ⴀ;
+					num = 0;
+					break;
+				case 11:
+					num2 = Ⴍ.CompareTo(*(Ⴃ*)(&ⴈႥ.Ⴗ));
+					num = ((num2 >= 0) ? 4 : 6);
+					break;
+				case 6:
+					ⴈႥ = ⴈႥ.Ⴍ;
+					num = 5;
+					break;
+				case 4:
+					num = ((num2 <= 0) ? 7 : 9);
+					break;
+				case 9:
+					ⴈႥ = ⴈႥ.Ⴀ;
+					num = 5;
+					break;
+				case 7:
+					result = true;
+					num = 8;
+					break;
+				case 5:
+					num = 0;
+					break;
+				case 0:
+					num = ((ⴈႥ == null) ? 1 : 11);
+					break;
+				case 1:
+					result = false;
+					num = 8;
+					break;
+				case 8:
+					return result;
+				}
+			}
+		}
+
+		public unsafe Ⴃ ႨႷႷ(Ⴃ Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0024, IL_0035, IL_004c, IL_0071, IL_009c, IL_00a7, IL_00b2, IL_00d4, IL_00e4, IL_0106
+			if (Ⴍ == null)
+			{
+				if (863 >= 863 - 157)
+				{
+					throw new ArgumentNullException();
+				}
+				goto IL_002c;
+			}
+			ႨႥ ⴈႥ = Ⴀ;
+			goto IL_00e6;
+			IL_00d6:
+			Ⴃ result = default(Ⴃ);
+			return result;
+			IL_002c:
+			ⴈႥ = ⴈႥ.Ⴀ;
+			goto IL_0037;
+			IL_00d8:
+			ⴈႥ = ⴈႥ.Ⴍ;
+			goto IL_0037;
+			IL_00e6:
+			if (ⴈႥ == null)
+			{
+				if (false)
+				{
+					goto IL_00d8;
+				}
+				result = default(Ⴃ);
+				if ((833 + 833 * 833) % 2 == 0)
+				{
+					goto IL_00d6;
+				}
+			}
+			int num = Ⴍ.CompareTo(*(Ⴃ*)(&ⴈႥ.Ⴗ));
+			if (num < 0)
+			{
+				if (63 < 63 - 52)
+				{
+					goto IL_002c;
+				}
+				goto IL_00d8;
+			}
+			if (num <= 0)
+			{
+				result = *(Ⴃ*)(&ⴈႥ.Ⴗ);
+			}
+			else if ((592 + 592 * 592) % 2 == 0)
+			{
+				goto IL_002c;
+			}
+			goto IL_00d6;
+			IL_0037:
+			if ((138 + 138 * 138) % 2 == 0)
+			{
+			}
+			goto IL_00e6;
+		}
+
+		public unsafe void ႭႰ(Ⴃ[] Ⴍ, int Ⴄ)
+		{
+			int num = 18;
+			ႨႥ ⴈႥ = default(ႨႥ);
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((Ⴍ != null) ? 20 : 19);
+					break;
+				case 19:
+					throw new ArgumentNullException();
+				case 20:
+					num = ((Ⴄ < 0) ? 13 : 14);
+					break;
+				case 14:
+					num2 = ((Ⴄ < Ⴍ.Length) ? 1 : 0);
+					goto IL_00b3;
+				case 13:
+					num2 = 0;
+					goto IL_00b3;
+				case 27:
+					throw new ArgumentOutOfRangeException();
+				case 9:
+					num = ((Ⴍ.Length - Ⴄ >= Ⴗ) ? 26 : 6);
+					break;
+				case 6:
+					throw new ArgumentException();
+				case 26:
+					num = ((Ⴀ == null) ? 1 : 12);
+					break;
+				case 12:
+					ⴈႥ = Ⴀ;
+					num = 24;
+					break;
+				case 21:
+					ⴈႥ = ⴈႥ.Ⴍ;
+					num = 24;
+					break;
+				case 24:
+					num = ((ⴈႥ.Ⴍ != null) ? 21 : 17);
+					break;
+				case 17:
+					num = 15;
+					break;
+				case 25:
+					Ⴍ[Ⴄ] = *(Ⴃ*)(&ⴈႥ.Ⴗ);
+					num = ((ⴈႥ.Ⴀ != null) ? 8 : 22);
+					break;
+				case 22:
+					num = 23;
+					break;
+				case 3:
+					num = ((ⴈႥ.Ⴗ != null) ? 10 : 7);
+					break;
+				case 7:
+					num = 1;
+					break;
+				case 10:
+					num = ((ⴈႥ == ⴈႥ.Ⴗ.Ⴀ) ? 11 : 2);
+					break;
+				case 2:
+					num = 28;
+					break;
+				case 11:
+					ⴈႥ = ⴈႥ.Ⴗ;
+					num = 23;
+					break;
+				case 23:
+				{
+					bool flag = true;
+					num = 3;
+					break;
+				}
+				case 28:
+					ⴈႥ = ⴈႥ.Ⴗ;
+					num = 16;
+					break;
+				case 8:
+					ⴈႥ = ⴈႥ.Ⴀ;
+					num = 4;
+					break;
+				case 0:
+					ⴈႥ = ⴈႥ.Ⴍ;
+					num = 4;
+					break;
+				case 4:
+					num = ((ⴈႥ.Ⴍ == null) ? 5 : 0);
+					break;
+				case 5:
+					num = 16;
+					break;
+				case 16:
+					Ⴄ++;
+					num = 15;
+					break;
+				case 15:
+					{
+						bool flag = true;
+						num = 25;
+						break;
+					}
+					IL_00b3:
+					num = ((num2 != 0) ? 9 : 27);
+					break;
+				}
+			}
+		}
+
+		public ႨႣ ႨႨႼ()
+		{
+			return new ႨႣ(Ⴀ);
+		}
+
+		public unsafe bool ႭႰႨ(Ⴃ Ⴀ)
+		{
+			//Discarded unreachable code: IL_0005, IL_002f, IL_006e, IL_00b7, IL_00df, IL_0100, IL_011c, IL_0126, IL_0158, IL_018d, IL_0197, IL_01ae, IL_01ea, IL_0203, IL_0214, IL_0248, IL_0274, IL_0285, IL_02b1, IL_02e9, IL_02fe, IL_030f, IL_034e, IL_0364, IL_0399, IL_03bf, IL_03f8, IL_043e, IL_0454, IL_046d, IL_04a3, IL_04b7, IL_04e7, IL_050d, IL_0543, IL_055b, IL_0585, IL_05a0, IL_05cd, IL_05e2, IL_0609, IL_0622, IL_063d, IL_0647, IL_0669, IL_0694, IL_06a6, IL_06c1, IL_06fd, IL_0711, IL_0720, IL_073b, IL_0756, IL_0780, IL_07ae, IL_07d6, IL_07ff, IL_0827, IL_0849, IL_0872, IL_08c2, IL_08dc, IL_08fa, IL_0929, IL_0952, IL_0992, IL_09ab, IL_09d3, IL_0a04, IL_0a35, IL_0a69, IL_0acf, IL_0ae5, IL_0afb, IL_0b1e, IL_0b41, IL_0b4f, IL_0b6e, IL_0b9b, IL_0bd4, IL_0c26, IL_0c5f, IL_0c78, IL_0cb2, IL_0cd4, IL_0d01, IL_0d2e, IL_0d4f, IL_0d59, IL_0d85, IL_0d96, IL_0dd2, IL_0dea, IL_0df4, IL_0e2b, IL_0e51, IL_0e68, IL_0e94, IL_0eb8, IL_0ef6, IL_0f2a, IL_0f44, IL_0f84, IL_0fbd, IL_0ff4, IL_1005, IL_101e, IL_1053, IL_1091, IL_109b, IL_10ac, IL_10c7, IL_10ee
+			while (Ⴀ == null)
+			{
+				if ((463 + 463 * 463) % 2 == 0)
+				{
+					throw new ArgumentNullException();
+				}
+			}
+			ႨႥ ⴈႥ2 = default(ႨႥ);
+			ႨႥ ⴈႥ3 = default(ႨႥ);
+			ႨႥ ⴈႥ4 = default(ႨႥ);
+			ႨႥ ⴍ = default(ႨႥ);
+			while (true)
+			{
+				ႨႥ ⴈႥ = this.Ⴀ;
+				while (true)
+				{
+					if (ⴈႥ == null)
+					{
+						if (false)
+						{
+							goto IL_0279;
+						}
+						goto IL_08e1;
+					}
+					int num = Ⴀ.CompareTo(*(Ⴃ*)(&ⴈႥ.Ⴗ));
+					bool flag;
+					if (num >= 0)
+					{
+						if (num > 0)
+						{
+							if (451 > 451 - 145)
+							{
+								goto IL_0208;
+							}
+							goto IL_039e;
+						}
+						flag = (ⴈႥ.Ⴀ != null);
+						goto IL_0ce7;
+					}
+					if (103 < 103 - 85)
+					{
+						goto IL_0314;
+					}
+					ⴈႥ = ⴈႥ.Ⴍ;
+					goto IL_0548;
+					IL_0957:
+					ⴈႥ2.Ⴀ = ⴈႥ3;
+					ⴈႥ3.Ⴗ = ⴈႥ2;
+					flag = (ⴈႥ2.Ⴅ != 0);
+					goto IL_0976;
+					IL_0b54:
+					this.Ⴀ = ⴈႥ2;
+					if (false)
+					{
+						goto IL_019c;
+					}
+					goto IL_0fc2;
+					IL_0b7b:
+					ⴈႥ3.Ⴅ = 0;
+					ⴈႥ3 = ⴈႥ2;
+					goto IL_0b85;
+					IL_02cf:
+					if (!flag)
+					{
+						if (292 < 292 - 48)
+						{
+							goto IL_084e;
+						}
+						ⴈႥ3.Ⴗ.Ⴍ = ⴈႥ2;
+					}
+					else
+					{
+						ⴈႥ3.Ⴗ.Ⴀ = ⴈႥ2;
+						if (633 < 633 - 392)
+						{
+							goto IL_0279;
+						}
+					}
+					goto IL_0df9;
+					IL_04a5:
+					ⴈႥ3.Ⴗ.Ⴍ = ⴈႥ4;
+					goto IL_06ab;
+					IL_000a:
+					flag = (ⴈႥ.Ⴍ == null);
+					if (!flag)
+					{
+						if (228 < 228 - 184)
+						{
+							goto IL_0105;
+						}
+						ⴈႥ.Ⴍ.Ⴗ = ⴈႥ.Ⴀ;
+						ⴈႥ.Ⴀ.Ⴍ = ⴈႥ.Ⴍ;
+						if (false)
+						{
+							goto IL_0d3f;
+						}
+					}
+					ⴈႥ.Ⴀ.Ⴅ = ⴈႥ.Ⴅ;
+					ⴈႥ.Ⴀ.Ⴗ = ⴈႥ.Ⴗ;
+					if (ⴈႥ.Ⴗ == null)
+					{
+						if (88 >= 88 - 64)
+						{
+							this.Ⴀ = ⴈႥ.Ⴀ;
+							goto IL_0d8a;
+						}
+						goto IL_0df9;
+					}
+					flag = (ⴈႥ != ⴈႥ.Ⴗ.Ⴍ);
+					if (flag)
+					{
+						goto IL_00bc;
+					}
+					if (328 < 328 - 201)
+					{
+						goto IL_08c7;
+					}
+					ⴈႥ.Ⴗ.Ⴍ = ⴈႥ.Ⴀ;
+					goto IL_0dd7;
+					IL_00bc:
+					do
+					{
+						ⴈႥ.Ⴗ.Ⴀ = ⴈႥ.Ⴀ;
+					}
+					while (false);
+					goto IL_0dd7;
+					IL_0ce7:
+					if (!flag)
+					{
+						if (524 < 524 - 191)
+						{
+							goto IL_012b;
+						}
+						if (ⴈႥ.Ⴍ == null)
+						{
+							goto IL_05a5;
+						}
+						if ((554 + 554 * 554) % 2 == 0)
+						{
+							goto IL_07db;
+						}
+						goto IL_0cc8;
+					}
+					goto IL_0efb;
+					IL_0b85:
+					if (596 <= 596 - 457)
+					{
+						break;
+					}
+					goto IL_0627;
+					IL_058a:
+					Ⴗ--;
+					bool result = true;
+					goto IL_0366;
+					IL_0d8a:
+					ⴈႥ3 = ⴈႥ.Ⴀ;
+					goto IL_0314;
+					IL_0efb:
+					flag = (ⴈႥ.Ⴀ.Ⴍ != null);
+					if (flag)
+					{
+						ⴍ = ⴈႥ.Ⴀ.Ⴍ;
+						goto IL_08ff;
+					}
+					if ((449 + 449 * 449) % 2 == 0)
+					{
+						goto IL_000a;
+					}
+					goto IL_0a4d;
+					IL_039e:
+					ⴈႥ2.Ⴀ.Ⴗ = ⴈႥ2;
+					goto IL_03ac;
+					IL_03ac:
+					if (384 <= 384 - 118)
+					{
+						goto IL_058a;
+					}
+					goto IL_0c7d;
+					IL_08ff:
+					if (ⴍ.Ⴍ != null)
+					{
+						goto IL_0105;
+					}
+					if ((598 + 598 * 598) % 2 == 0)
+					{
+						if (ⴈႥ.Ⴍ != null)
+						{
+							if (false)
+							{
+								goto IL_058a;
+							}
+							ⴈႥ.Ⴍ.Ⴗ = ⴍ;
+							ⴍ.Ⴍ = ⴈႥ.Ⴍ;
+							goto IL_0d1e;
+						}
+						goto IL_1058;
+					}
+					goto IL_0740;
+					IL_08c7:
+					if (false)
+					{
+						goto IL_04ec;
+					}
+					goto IL_0ebd;
+					IL_019c:
+					ⴈႥ3.Ⴗ.Ⴍ = ⴈႥ4;
+					goto IL_10b1;
+					IL_05d2:
+					ⴈႥ4.Ⴅ = 0;
+					ⴈႥ3 = ⴈႥ4;
+					goto IL_0740;
+					IL_0976:
+					if (!flag)
+					{
+						if ((896 + 896 * 896) % 2 == 0)
+						{
+							ⴈႥ2.Ⴅ = 1;
+							ⴈႥ3.Ⴅ = -1;
+							goto IL_058a;
+						}
+						goto IL_03fd;
+					}
+					ⴈႥ2.Ⴅ = 0;
+					goto IL_0b7b;
+					IL_0105:
+					ⴍ = ⴍ.Ⴍ;
+					if (96 > 96 - 46)
+					{
+						goto IL_08ff;
+					}
+					goto IL_0c2b;
+					IL_0c2b:
+					ⴈႥ2.Ⴗ = ⴈႥ3.Ⴗ;
+					if (ⴈႥ3.Ⴗ == null)
+					{
+						this.Ⴀ = ⴈႥ2;
+						if (false)
+						{
+							goto IL_03cc;
+						}
+						goto IL_0df9;
+					}
+					if ((708 + 708 * 708) % 2 == 0)
+					{
+						flag = (ⴈႥ3.Ⴗ.Ⴍ != ⴈႥ3);
+						goto IL_02cf;
+					}
+					goto IL_08e1;
+					IL_03cc:
+					flag = (ⴈႥ2.Ⴅ != -1);
+					if (flag)
+					{
+						goto IL_0c2b;
+					}
+					if (314 >= 314 - 309)
+					{
+						goto IL_0034;
+					}
+					goto IL_0dd7;
+					IL_08e1:
+					result = false;
+					if (916 > 916 - 519)
+					{
+						goto IL_0366;
+					}
+					goto IL_0df9;
+					IL_0406:
+					ⴈႥ4.Ⴗ = ⴈႥ3.Ⴗ;
+					goto IL_0413;
+					IL_03fd:
+					ⴈႥ4 = ⴈႥ2.Ⴀ;
+					goto IL_0406;
+					IL_0df9:
+					ⴈႥ3.Ⴀ = ⴈႥ2.Ⴍ;
+					if (ⴈႥ3.Ⴀ != null)
+					{
+						if (674 <= 674 - 114)
+						{
+							goto IL_08ff;
+						}
+						ⴈႥ3.Ⴀ.Ⴗ = ⴈႥ3;
+						if (false)
+						{
+							goto IL_000a;
+						}
+					}
+					ⴈႥ2.Ⴍ = ⴈႥ3;
+					ⴈႥ3.Ⴗ = ⴈႥ2;
+					flag = (ⴈႥ2.Ⴅ != 0);
+					if (flag)
+					{
+						goto IL_028a;
+					}
+					if ((340 + 340 * 340) % 2 == 0)
+					{
+						ⴈႥ2.Ⴅ = -1;
+						ⴈႥ3.Ⴅ = 1;
+						goto IL_058a;
+					}
+					goto IL_1074;
+					IL_10b1:
+					if (175 <= 175 - 135)
+					{
+						goto IL_0208;
+					}
+					goto IL_06c6;
+					IL_0219:
+					if (ⴈႥ3.Ⴗ.Ⴍ == ⴈႥ3)
+					{
+						if ((495 + 495 * 495) % 2 == 0)
+						{
+							goto IL_04a5;
+						}
+						goto IL_082c;
+					}
+					goto IL_09b0;
+					IL_0413:
+					if (ⴈႥ3.Ⴗ != null)
+					{
+						goto IL_0219;
+					}
+					if (910 > 910 - 195)
+					{
+						goto IL_0699;
+					}
+					goto IL_0957;
+					IL_0208:
+					ⴈႥ = ⴈႥ.Ⴀ;
+					goto IL_0548;
+					IL_09b0:
+					ⴈႥ3.Ⴗ.Ⴀ = ⴈႥ4;
+					if (1016 < 1016 - 674)
+					{
+						goto IL_0219;
+					}
+					goto IL_06ab;
+					IL_028a:
+					ⴈႥ2.Ⴅ = 0;
+					ⴈႥ3.Ⴅ = 0;
+					ⴈႥ3 = ⴈႥ2;
+					if (false)
+					{
+						goto IL_058a;
+					}
+					goto IL_0740;
+					IL_0740:
+					if (638 <= 638 - 156)
+					{
+						goto IL_0fc2;
+					}
+					goto IL_0758;
+					IL_0758:
+					if (ⴈႥ3.Ⴗ == null)
+					{
+						goto IL_058a;
+					}
+					if (186 < 186 - 135)
+					{
+						goto IL_0627;
+					}
+					goto IL_0a3a;
+					IL_06ab:
+					if (993 > 993 - 358)
+					{
+						goto IL_01b3;
+					}
+					goto IL_05a5;
+					IL_0627:
+					if (731 <= 731 - 362)
+					{
+						goto IL_0034;
+					}
+					goto IL_0758;
+					IL_0034:
+					ⴈႥ4 = ⴈႥ2.Ⴍ;
+					ⴈႥ4.Ⴗ = ⴈႥ3.Ⴗ;
+					if (ⴈႥ3.Ⴗ == null)
+					{
+						if (91 >= 91 - 2)
+						{
+							goto IL_0716;
+						}
+						goto IL_0df9;
+					}
+					if (ⴈႥ3.Ⴗ.Ⴍ != ⴈႥ3)
+					{
+						ⴈႥ3.Ⴗ.Ⴀ = ⴈႥ4;
+						if (38 < 38 - 5)
+						{
+							goto IL_0699;
+						}
+						goto IL_10b1;
+					}
+					if (180 >= 180 - 130)
+					{
+						goto IL_019c;
+					}
+					goto IL_09b0;
+					IL_05a5:
+					if (ⴈႥ.Ⴗ != null)
+					{
+						goto IL_012b;
+					}
+					if (541 > 541 - 424)
+					{
+						this.Ⴀ = ⴈႥ.Ⴍ;
+						goto IL_058a;
+					}
+					goto IL_0fc2;
+					IL_0548:
+					if (835 > 835 - 768)
+					{
+						continue;
+					}
+					goto IL_01b3;
+					IL_0fc2:
+					ⴈႥ3.Ⴍ = ⴈႥ2.Ⴀ;
+					if (ⴈႥ3.Ⴍ == null)
+					{
+						goto IL_0957;
+					}
+					if (216 > 216 - 89)
+					{
+						goto IL_04ec;
+					}
+					goto IL_0a3a;
+					IL_012b:
+					if (ⴈႥ == ⴈႥ.Ⴗ.Ⴍ)
+					{
+						if (230 >= 230 - 173)
+						{
+							goto IL_082c;
+						}
+						goto IL_10b1;
+					}
+					ⴈႥ.Ⴗ.Ⴀ = ⴈႥ.Ⴍ;
+					goto IL_0cc8;
+					IL_0699:
+					this.Ⴀ = ⴈႥ4;
+					goto IL_01b3;
+					IL_01b3:
+					ⴈႥ2.Ⴀ = ⴈႥ4.Ⴍ;
+					if (ⴈႥ2.Ⴀ == null)
+					{
+						goto IL_0c7d;
+					}
+					if (344 >= 344 - 236)
+					{
+						goto IL_039e;
+					}
+					goto IL_0fc2;
+					IL_04ec:
+					ⴈႥ3.Ⴍ.Ⴗ = ⴈႥ3;
+					if (false)
+					{
+						goto IL_01b3;
+					}
+					goto IL_0957;
+					IL_0c7d:
+					ⴈႥ3.Ⴍ = ⴈႥ4.Ⴀ;
+					if (ⴈႥ3.Ⴍ != null)
+					{
+						if (344 < 344 - 230)
+						{
+							break;
+						}
+						ⴈႥ3.Ⴍ.Ⴗ = ⴈႥ3;
+						if (411 < 411 - 279)
+						{
+							goto IL_0b85;
+						}
+					}
+					goto IL_0bd9;
+					IL_082c:
+					ⴈႥ.Ⴗ.Ⴍ = ⴈႥ.Ⴍ;
+					ⴈႥ3 = ⴈႥ.Ⴗ;
+					goto IL_0ebd;
+					IL_0a3a:
+					flag = (ⴈႥ3 != ⴈႥ3.Ⴗ.Ⴍ);
+					goto IL_0a4d;
+					IL_0bd9:
+					ⴈႥ4.Ⴍ = ⴈႥ2;
+					ⴈႥ4.Ⴀ = ⴈႥ3;
+					ⴈႥ2.Ⴗ = ⴈႥ4;
+					ⴈႥ3.Ⴗ = ⴈႥ4;
+					if (ⴈႥ4.Ⴅ != -1)
+					{
+						goto IL_04bc;
+					}
+					if ((665 + 665 * 665) % 2 == 0)
+					{
+						ⴈႥ2.Ⴅ = 0;
+						ⴈႥ3.Ⴅ = 1;
+						goto IL_02ee;
+					}
+					goto IL_07db;
+					IL_0cc8:
+					ⴈႥ3 = ⴈႥ.Ⴗ;
+					goto IL_0314;
+					IL_07db:
+					ⴈႥ.Ⴍ.Ⴗ = ⴈႥ.Ⴗ;
+					if (220 < 220 - 109)
+					{
+						goto IL_03ac;
+					}
+					goto IL_05a5;
+					IL_0314:
+					ⴈႥ3.Ⴅ--;
+					if (ⴈႥ3.Ⴅ == -1)
+					{
+						if (948 < 948 - 244)
+						{
+							goto IL_000a;
+						}
+						goto IL_058a;
+					}
+					if (ⴈႥ3.Ⴅ != -2)
+					{
+						goto IL_0758;
+					}
+					if (624 > 624 - 479)
+					{
+						ⴈႥ2 = ⴈႥ3.Ⴍ;
+						if (ⴈႥ2.Ⴅ == 1)
+						{
+							if (349 > 349 - 60)
+							{
+								goto IL_03fd;
+							}
+							goto IL_0716;
+						}
+						ⴈႥ2.Ⴗ = ⴈႥ3.Ⴗ;
+						if (ⴈႥ3.Ⴗ == null)
+						{
+							goto IL_0b54;
+						}
+						if ((991 + 991 * 991) % 2 == 0)
+						{
+							flag = (ⴈႥ3.Ⴗ.Ⴍ != ⴈႥ3);
+							if (!flag)
+							{
+								if (612 <= 612 - 514)
+								{
+									goto IL_00bc;
+								}
+								ⴈႥ3.Ⴗ.Ⴍ = ⴈႥ2;
+							}
+							else
+							{
+								ⴈႥ3.Ⴗ.Ⴀ = ⴈႥ2;
+								if (717 < 717 - 365)
+								{
+									goto IL_0efb;
+								}
+							}
+							goto IL_0fc2;
+						}
+						goto IL_0406;
+					}
+					goto IL_04bc;
+					IL_04bc:
+					flag = (ⴈႥ4.Ⴅ != 0);
+					goto IL_04cb;
+					IL_04cb:
+					if (!flag)
+					{
+						if (false)
+						{
+							goto IL_0716;
+						}
+						ⴈႥ2.Ⴅ = 0;
+						ⴈႥ3.Ⴅ = 0;
+					}
+					else
+					{
+						ⴈႥ2.Ⴅ = -1;
+						ⴈႥ3.Ⴅ = 0;
+						if (false)
+						{
+							goto IL_0ce7;
+						}
+					}
+					goto IL_02ee;
+					IL_0a4d:
+					if (!flag)
+					{
+						if ((137 + 137 * 137) % 2 == 0)
+						{
+							goto IL_0279;
+						}
+						goto IL_04a5;
+					}
+					ⴈႥ3 = ⴈႥ3.Ⴗ;
+					goto IL_0314;
+					IL_0716:
+					this.Ⴀ = ⴈႥ4;
+					goto IL_06c6;
+					IL_06c6:
+					ⴈႥ2.Ⴍ = ⴈႥ4.Ⴀ;
+					if (ⴈႥ2.Ⴍ == null)
+					{
+						goto IL_0472;
+					}
+					if (220 > 220 - 151)
+					{
+						goto IL_084e;
+					}
+					goto IL_0bd9;
+					IL_02ee:
+					ⴈႥ4.Ⴅ = 0;
+					ⴈႥ3 = ⴈႥ4;
+					goto IL_0627;
+					IL_0472:
+					ⴈႥ3.Ⴀ = ⴈႥ4.Ⴍ;
+					flag = (ⴈႥ3.Ⴀ == null);
+					if (!flag)
+					{
+						if (618 >= 618 - 4)
+						{
+							ⴈႥ3.Ⴀ.Ⴗ = ⴈႥ3;
+							goto IL_0d3f;
+						}
+					}
+					goto IL_0877;
+					IL_0d3f:
+					if (91 <= 91 - 20)
+					{
+						goto IL_04cb;
+					}
+					goto IL_0877;
+					IL_0dd7:
+					if (919 <= 919 - 291)
+					{
+						goto IL_02cf;
+					}
+					goto IL_0d8a;
+					IL_0877:
+					ⴈႥ4.Ⴀ = ⴈႥ2;
+					ⴈႥ4.Ⴍ = ⴈႥ3;
+					ⴈႥ2.Ⴗ = ⴈႥ4;
+					ⴈႥ3.Ⴗ = ⴈႥ4;
+					if (ⴈႥ4.Ⴅ == 1)
+					{
+						if (385 < 385 - 74)
+						{
+							goto IL_0d1e;
+						}
+						ⴈႥ2.Ⴅ = 0;
+						ⴈႥ3.Ⴅ = -1;
+					}
+					else
+					{
+						flag = (ⴈႥ4.Ⴅ != 0);
+						if (!flag)
+						{
+							if (964 <= 964 - 570)
+							{
+								goto IL_039e;
+							}
+							ⴈႥ2.Ⴅ = 0;
+							ⴈႥ3.Ⴅ = 0;
+						}
+						else
+						{
+							ⴈႥ2.Ⴅ = 1;
+							ⴈႥ3.Ⴅ = 0;
+							if (390 < 390 - 162)
+							{
+								goto IL_0976;
+							}
+						}
+					}
+					goto IL_05d2;
+					IL_0366:
+					return result;
+					IL_084e:
+					ⴈႥ2.Ⴍ.Ⴗ = ⴈႥ2;
+					if (350 > 350 - 173)
+					{
+						goto IL_0472;
+					}
+					goto IL_0df9;
+					IL_0d1e:
+					if (69 >= 69 - 21)
+					{
+						goto IL_1058;
+					}
+					goto IL_0758;
+					IL_1058:
+					ⴍ.Ⴗ.Ⴍ = ⴍ.Ⴀ;
+					flag = (ⴍ.Ⴀ == null);
+					goto IL_1074;
+					IL_1074:
+					if (!flag)
+					{
+						if (951 < 951 - 730)
+						{
+							goto IL_0413;
+						}
+						ⴍ.Ⴀ.Ⴗ = ⴍ.Ⴗ;
+						if (59 < 59 - 24)
+						{
+							goto IL_05d2;
+						}
+					}
+					ⴈႥ.Ⴀ.Ⴗ = ⴍ;
+					ⴍ.Ⴀ = ⴈႥ.Ⴀ;
+					ⴈႥ3 = ⴍ.Ⴗ;
+					ⴍ.Ⴅ = ⴈႥ.Ⴅ;
+					ⴍ.Ⴗ = ⴈႥ.Ⴗ;
+					if (ⴈႥ.Ⴗ != null)
+					{
+						if (ⴈႥ == ⴈႥ.Ⴗ.Ⴍ)
+						{
+							if (false)
+							{
+								goto IL_0b7b;
+							}
+							ⴈႥ.Ⴗ.Ⴍ = ⴍ;
+						}
+						else
+						{
+							ⴈႥ.Ⴗ.Ⴀ = ⴍ;
+							if (929 <= 929 - 471)
+							{
+								goto IL_028a;
+							}
+						}
+						if (false)
+						{
+							goto IL_058a;
+						}
+					}
+					else
+					{
+						if (false)
+						{
+							goto IL_0699;
+						}
+						this.Ⴀ = ⴍ;
+					}
+					goto IL_08c7;
+					IL_0279:
+					ⴈႥ3 = ⴈႥ3.Ⴗ;
+					goto IL_0ebd;
+					IL_0ebd:
+					ⴈႥ3.Ⴅ++;
+					if (ⴈႥ3.Ⴅ == 1)
+					{
+						if ((161 + 161 * 161) % 2 == 0)
+						{
+							goto IL_058a;
+						}
+						goto IL_04a5;
+					}
+					if (ⴈႥ3.Ⴅ == 2)
+					{
+						if (58 > 58 - 8)
+						{
+							ⴈႥ2 = ⴈႥ3.Ⴀ;
+							goto IL_03cc;
+						}
+						goto IL_0b54;
+					}
+					goto IL_0758;
+				}
+			}
+		}
+	}
+	public interface Ⴐ<Ⴍ>
+	{
+		int Ⴀ
+		{
+			get;
+		}
+
+		bool ႭႰႰ(Ⴍ Ⴍ);
+
+		void ႭႰ(Ⴍ[] Ⴀ, int Ⴍ);
+	}
+	public interface Ⴓ<Ⴄ> : Ⴐ<Ⴄ>
+	{
+		bool ႭႰႭ(Ⴄ Ⴍ);
+
+		bool ႭႰႨ(Ⴄ Ⴍ);
+
+		void ႭႰႭ();
+	}
+}
