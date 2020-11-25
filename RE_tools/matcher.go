@@ -13,14 +13,11 @@ func main(){
 		fmt.Println(err)
 		return
 	}
-	//fmt.Println(string(data))
 	obf_cur_map := make(map[string]string)
 	obf_first_func := "ႰႤႷ.Ⴍ.ႥႳႳ("
 	obf_second_func := "ႰႭႭ.Ⴅ.ႤႥႥ("
 	obf_cur_pre := obf_first_func
 	entries := strings.Split(string(data), "\n")
-	//fmt.Println(entries)
-	//fmt.Println(len(entries))
 	for _, v := range entries {
 		if strings.Contains(v, ":"){
 			e := strings.Split(v, ": ")
@@ -32,7 +29,6 @@ func main(){
 			obf_cur_pre = obf_second_func
 		}
 	}
-	//fmt.Println(obf_cur_map)
 	ch, err := ioutil.ReadFile("Rondyo.Chatman.GUI.Infrastructure.cs")
 	if err != nil{
 		fmt.Println(err)
