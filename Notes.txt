@@ -202,3 +202,36 @@ The big issue is going to be the fact that i need
 
 I noticed that the main Chatman programs defence is pretty good, I wonder why they spent so much time trying to obfuscate it? 
 The SearchEngine dll is weird, Its clearly based off a code piece. I wonder if I can get an ast out of the whole thing? 
+I wonder if I can lift that into C and make it compile from more aspects. 
+Thinking of using ILASM to turn the bytecode into actual code. 
+
+November 20th, 2020
+Working with getting things up in order. 
+I have a bit of a struggle with the switch cases. I could in theory do them by hand, however. 
+It seems like something i should be able to do with program analysis. 
+Or at least tracewise? 
+
+Its a prefix code. 
+
+ce87061989a972ae061fe27ef04a478d8e390d300514baf90e5d8fb8c0425f2c
+ce87061989a972ae061fe27ef04a478d8e390d300514baf90e5d8fb8c0425f2c
+ce87061989a972ae061fe27ef04a478d8e390d300514baf90e5d8fb8c0425f2c
+
+2f02efef-d782-4a4d-862c-0a80e141c35e
+
+Im trying to sink my teeth into this scope analyser. 
+I guess if there is a few with no parent scope that makes sense, and is likely what we are looking for? 
+
+November 25th, 2020
+I found that the old tool didn't do enough of what I was looking for, and couldn't decompile all the pieces that I actually needed in order to properly reverse engineer all the components.
+I downloaded the most recent version, this time just with the console piece. 
+That didn't help any on decoding the behavioral engine, it also breaks any work I was doing on other things ("mostly the obj =") for the associated switches. 
+
+I did find this. "pmhlohmfkbpaonjdjddlcjhkbllkdfge", and also the string "The password did not match.""
+
+Now we just need to figure out exactly when that is called, and we should be able to work back to maybe how the encrypted communication is between the device. After that we have pwn'd it to the upteenth degree. 
+
+yosilevy@gmail.com I found this gmail account, it looks like it belongs to a prominent Israel Musician, probably did the actual emails of the thing. 
+I should try to contact him there. 
+
+Managed to decompile all the dll functions that can be decompiled, at least in the main dll. 

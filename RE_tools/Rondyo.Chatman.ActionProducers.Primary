@@ -1,0 +1,92 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.ActionProducers.Primary.dll
+// Rondyo.Chatman.ActionProducers.Primary, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Data;
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using ႨႠႰ;
+using ႷႭႣ;
+using ႷႭႼ;
+
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Guid("50242e8f-4bbd-41ab-ba12-439614078bfa")]
+[assembly: ComVisible(false)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace ႥႰ
+{
+	public class Ⴐ : ႨႠႰ.Ⴈ
+	{
+		private new static readonly Random m_Ⴀ = new Random();
+
+		private new int m_Ⴀ = 15;
+
+		public override bool Ⴀ(Personality Ⴍ, string Ⴓ, Ⴃ Ⴈ, ႷႭႼ.Ⴈ Ⴃ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001a, IL_002f, IL_0036, IL_0044, IL_004b, IL_006b, IL_0070, IL_0087
+			int num;
+			if (!Ⴃ.Ⴐ)
+			{
+				if (91 >= 91 - 10)
+				{
+					num = ((!Ⴃ.Ⴈ) ? 1 : 0);
+					goto IL_0072;
+				}
+			}
+			num = 0;
+			goto IL_0072;
+			IL_0072:
+			bool flag = (byte)num != 0;
+			bool result;
+			while (true)
+			{
+				if (flag)
+				{
+					flag = !Ⴈ.Ⴗ;
+					while (true)
+					{
+						if (flag)
+						{
+							result = false;
+							if (952 < 952 - 901)
+							{
+							}
+							break;
+						}
+						if ((907 + 907 * 907) % 2 == 0)
+						{
+							result = false;
+							break;
+						}
+					}
+					break;
+				}
+				if ((753 + 753 * 753) % 2 == 0)
+				{
+					result = false;
+					break;
+				}
+			}
+			return result;
+		}
+	}
+}

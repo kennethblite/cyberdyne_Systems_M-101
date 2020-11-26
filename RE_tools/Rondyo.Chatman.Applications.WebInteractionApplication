@@ -1,0 +1,1574 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Applications.WebInteractionApplication.dll
+// Rondyo.Chatman.Applications.WebInteractionApplication, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: AnyCPU (64-bit preferred)
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Applications.Context;
+using Rondyo.Chatman.Data;
+using Rondyo.Chatman.Framework.URLConfiguration;
+using Rondyo.Chatman.GUI.Infrastructure;
+using Rondyo.Chatman.Interfaces.Public;
+using Rondyo.Chatman.Server.DAL;
+using Rondyo.Chatman.WebChannel;
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
+using ႣႨ;
+using ႣႰ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႣ;
+using ႥႥႨႤ;
+using ႥႥႨႥ;
+using ႥႥႨႨ;
+using ႥႥႳႰ;
+using ႭႥ;
+using ႭႨႰ;
+using ႷႭ;
+using ႷႭႠ;
+using ႷႭႣ;
+using ႷႭႤ;
+using ႷႭႥ;
+using ႷႭႨ;
+using ႷႭႭ;
+using ႷႭႳ;
+using ႷႭႷ;
+
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: Guid("15563dce-1f37-4fb8-aa76-5e6b18a6b0b9")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: ComVisible(false)]
+[assembly: CompilationRelaxations(8)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Rondyo.Chatman.Applications.WebInteractionApplication
+{
+	internal sealed class ProgressStream : Stream
+	{
+		internal class Ⴃ : EventArgs
+		{
+			public long Ⴓ;
+
+			public long Ⴃ;
+
+			public Ⴃ(long Ⴅ, long Ⴃ)
+			{
+				Ⴓ = Ⴅ;
+				this.Ⴃ = Ⴃ;
+			}
+		}
+
+		private readonly Stream m_Ⴃ;
+
+		private readonly long Ⴓ;
+
+		private EventHandler<Ⴃ> Ⴓ;
+
+		private long m_Ⴃ;
+
+		public override bool get_CanRead()
+		{
+			return true;
+		}
+
+		public override bool get_CanSeek()
+		{
+			return false;
+		}
+
+		public override bool get_CanWrite()
+		{
+			return false;
+		}
+
+		public override void Flush()
+		{
+		}
+
+		public override long get_Length()
+		{
+			throw new Exception(ႷႭ.Ⴍ.Ⴓ(1402238804));
+		}
+
+		public override long get_Position()
+		{
+			return this.m_Ⴃ;
+		}
+
+		public override void set_Position(long Ⴃ)
+		{
+			throw new Exception(ႷႭ.Ⴍ.Ⴓ(1402238804));
+		}
+
+		public unsafe override int Read(byte[] Ⴃ, int Ⴀ, int Ⴄ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0032, IL_006e
+			while (true)
+			{
+				int num = this.m_Ⴃ.Read(Ⴃ, Ⴀ, Ⴄ);
+				this.m_Ⴃ += num;
+				bool flag = Ⴓ == null;
+				while (true)
+				{
+					if (!flag)
+					{
+						if (false)
+						{
+							continue;
+						}
+						Ⴓ(this, new Ⴃ(this.m_Ⴃ, *(long*)(&this.Ⴓ)));
+						if (212 <= 212 - 23)
+						{
+							break;
+						}
+					}
+					return num;
+				}
+			}
+		}
+
+		public override long Seek(long Ⴃ, SeekOrigin Ⴀ)
+		{
+			throw new Exception(ႷႭ.Ⴍ.Ⴓ(1402238804));
+		}
+
+		public override void SetLength(long Ⴃ)
+		{
+			throw new Exception(ႷႭ.Ⴍ.Ⴓ(1402238804));
+		}
+
+		public override void Write(byte[] Ⴃ, int Ⴀ, int Ⴄ)
+		{
+			throw new Exception(ႷႭ.Ⴍ.Ⴓ(1402238804));
+		}
+	}
+}
+namespace ႣႨ
+{
+	internal sealed class Ⴅ
+	{
+		internal static void ႥႳ(RemoteItemCollection Ⴍ, MemoryStream Ⴓ)
+		{
+			int num = 1;
+			MemoryStream ⴓ = default(MemoryStream);
+			MemoryStream[] array = default(MemoryStream[]);
+			ChatmanAction ⴍ = default(ChatmanAction);
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					ⴓ = array[1];
+					num = 0;
+					continue;
+				case 0:
+				{
+					ႷႭႳ.Ⴈ ⴈ = ႣႰ.Ⴅ.ႰႣ().Ⴈ as ႷႭႳ.Ⴈ;
+					ⴈ.Ⴀ(ⴍ, ⴓ, Ⴈ: true);
+					return;
+				}
+				}
+				array = ႥႥႨႨ.Ⴅ.ႤႠႥ(Ⴓ);
+				PersonalityDataFile personalityDataFile = new PersonalityDataFile();
+				personalityDataFile.ႣႷ(array[0], ႣႰ.Ⴅ.ႰႣ().Ⴈ.Ⴈ.Ⴐ.PersistentCredentials);
+				PersonalityData data = personalityDataFile.Data;
+				ⴍ = data.Actions[data.Actions.Count - 1];
+				ⴓ = null;
+				num = ((Enumerable.Count(array) > 1) ? 2 : 0);
+			}
+		}
+
+		internal static bool Ⴃ(RemoteItemCollection Ⴍ, string Ⴓ, string Ⴈ)
+		{
+			bool flag3;
+			bool flag2;
+			bool flag;
+			bool flag4 = flag3 = (flag2 = (flag = false));
+			try
+			{
+				using (FileStream ⴍ2 = new FileStream(Ⴓ, FileMode.Open, FileAccess.Read))
+				{
+					ႷႭႥ.Ⴗ ⴗ = ႣႰ.Ⴅ.ႰႣ().Ⴈ;
+					ႷႭႤ.Ⴀ ⴀ = ⴗ.Ⴓ;
+					ChitChatItem[] chitChats = Ⴍ.ChitChats;
+					foreach (ChitChatItem chitChatItem in chitChats)
+					{
+						try
+						{
+							Personality personality = null;
+							try
+							{
+								if (chitChatItem.TargetPersonalityID != string.Empty)
+								{
+									Guid ⴍ = new Guid(chitChatItem.TargetPersonalityID);
+									personality = ⴀ.Ⴈ.ႰႠ(ⴍ);
+								}
+							}
+							catch
+							{
+							}
+							if (personality == null)
+							{
+								personality = ⴀ.Ⴓ;
+							}
+							if (personality.ႨႠႭ(Ⴈ.ToLower()))
+							{
+								return false;
+							}
+							int num = (int)chitChatItem.DataFileSize;
+							using (MemoryStream memoryStream = new MemoryStream(num))
+							{
+								ႥႥႨႤ.Ⴜ.Ⴗ(ⴍ2, memoryStream, num);
+								memoryStream.Seek(0L, SeekOrigin.Begin);
+								if (personality != null)
+								{
+									ⴀ.ႨႳ(memoryStream, personality);
+									flag4 = true;
+								}
+							}
+						}
+						catch
+						{
+							flag2 = true;
+						}
+					}
+					ႷႭႨ.Ⴜ applicationManager = ChatmanApplicationContext.Current.ApplicationManager;
+					ႷႭႣ.Ⴓ ⴓ = applicationManager as ႷႭႣ.Ⴓ;
+					ApplicationItem[] applications = Ⴍ.Applications;
+					foreach (ApplicationItem applicationItem in applications)
+					{
+						int num = (int)applicationItem.DataFileSize;
+						using (MemoryStream memoryStream = new MemoryStream(num))
+						{
+							ႥႥႨႤ.Ⴜ.Ⴗ(ⴍ2, memoryStream, num);
+							memoryStream.Seek(0L, SeekOrigin.Begin);
+							try
+							{
+								if (ⴓ != null)
+								{
+									ⴓ.Ⴅ(applicationItem.ID, applicationItem.Name, memoryStream);
+									flag3 = true;
+								}
+							}
+							catch (Exception ⴓ2)
+							{
+								ႥႥႨ.Ⴗ.ႳႤ(ႷႭ.Ⴍ.Ⴓ(1402238843), ⴓ2);
+								flag = true;
+							}
+						}
+					}
+				}
+			}
+			finally
+			{
+				if (flag4)
+				{
+					ႣႰ.Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႨႤႥ(ႷႭႠ.Ⴗ.ႤႣ);
+				}
+				if (flag2)
+				{
+					ႣႰ.Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႥႥ(ႷႭႠ.Ⴗ.ႤႷ, ႷႭ.Ⴍ.Ⴓ(1402238801));
+				}
+				if (flag3)
+				{
+					ႣႰ.Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႨႤႥ(ႷႭႠ.Ⴗ.ႥႠ);
+				}
+				if (flag)
+				{
+					ႣႰ.Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႨႤႥ(ႷႭႠ.Ⴗ.ႥႭ);
+				}
+				try
+				{
+					File.Delete(Ⴓ);
+				}
+				catch
+				{
+				}
+			}
+			return true;
+		}
+	}
+	internal sealed class Ⴐ : ႣႰ.Ⴈ
+	{
+		private new readonly ႷႭႭ.Ⴜ Ⴀ;
+
+		private AuthenticatedRequest Ⴗ;
+
+		internal Ⴐ(string Ⴀ, string Ⴍ, string Ⴄ, ႷႭႭ.Ⴜ Ⴓ)
+			: base(null)
+		{
+			this.Ⴀ = Ⴓ;
+			Ⴗ = new AuthenticatedRequest
+			{
+				Credentials = Ⴍ,
+				UserName = Ⴀ,
+				Sn = Ⴄ
+			};
+		}
+
+		private string ႣႷ()
+		{
+			return UrlConfigurationContainer.Ⴀ.ႨႷႠ(ႷႭ.Ⴍ.Ⴓ(1402238803)) + ႷႭ.Ⴍ.Ⴓ(1402238802);
+		}
+
+		internal override ႣႰ.Ⴜ ႣႳ()
+		{
+			ႣႰ.Ⴜ ⴜ = ႣႰ.Ⴜ.Ⴄ;
+			int result = 0;
+			try
+			{
+				ChatmanWebRequest chatmanWebRequest = new ChatmanWebRequest(ႣႷ());
+				chatmanWebRequest.SendRequest(Ⴗ);
+				string s = chatmanWebRequest.ReadObjectFromResponse<string>();
+				if (!int.TryParse(s, out result))
+				{
+					result = -1;
+				}
+				ⴜ = ႣႰ.Ⴜ.Ⴀ;
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႷႭ.Ⴍ.Ⴓ(1402238797), ⴓ);
+				result = -1;
+				ⴜ = ႨႳႰ(ႣႰ.Ⴜ.Ⴄ);
+			}
+			if (Ⴀ != null)
+			{
+				Ⴀ(result);
+			}
+			return ⴜ;
+		}
+	}
+	internal sealed class Ⴓ : ႣႰ.Ⴈ
+	{
+		internal Ⴓ(ႷႭႷ.Ⴄ Ⴀ)
+			: base(Ⴀ)
+		{
+		}
+
+		private string ႣႷ()
+		{
+			return UrlConfigurationContainer.Ⴀ.ႨႷႠ(ႷႭ.Ⴍ.Ⴓ(1402238803)) + ႷႭ.Ⴍ.Ⴓ(1402238845);
+		}
+
+		internal override ႣႰ.Ⴜ ႣႳ()
+		{
+			Chatman chatman = ႣႰ.Ⴅ.ႰႣ().Ⴈ.Ⴈ.Ⴐ;
+			try
+			{
+				int genderId = (chatman.UserGender != Gender.Female) ? 1 : 2;
+				FileStream fileStream = null;
+				string path = ႥႥႨႠ.ႣႳ.ႨႷႤ(chatman.ProfileImage);
+				if (File.Exists(path))
+				{
+					fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
+				}
+				UserWebProfile userWebProfile = new UserWebProfile();
+				userWebProfile.City = chatman.UserCity;
+				userWebProfile.Country = chatman.UserCountry;
+				userWebProfile.GenderId = genderId;
+				UserWebProfile userWebProfile2 = userWebProfile;
+				ChatmanWebRequest chatmanWebRequest = new ChatmanWebRequest(ႣႷ());
+				chatmanWebRequest.SendRequest(ႨႳႥ(Ⴓ: false), userWebProfile2, fileStream);
+				string s = chatmanWebRequest.ReadObjectFromResponse<string>();
+				int result = 0;
+				if (!int.TryParse(s, out result))
+				{
+					result = -1;
+				}
+				string text = chatmanWebRequest.ReadObjectFromResponse<string>();
+				if (string.IsNullOrEmpty(text))
+				{
+					chatman.SubscriptionLevel = result;
+				}
+				else
+				{
+					ႥႥႨ.Ⴗ.ႳႭ(ႷႭ.Ⴍ.Ⴓ(1402238844), text);
+				}
+				return ႨႳႰ(ႣႰ.Ⴜ.Ⴀ);
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႷႭ.Ⴍ.Ⴓ(1402238809), ⴓ);
+				return ႨႳႰ(ႣႰ.Ⴜ.Ⴄ);
+			}
+			finally
+			{
+				ChatmanWebRequest chatmanWebRequest = null;
+			}
+		}
+	}
+	public class Ⴗ : BaseChatmanApplication, IChatmanApplication, IChatmanBackgroundApplication
+	{
+		private ႷႭႳ.Ⴃ Ⴈ = null;
+
+		private ႣႰ.Ⴈ Ⴅ = null;
+
+		public override void Initialize()
+		{
+			base.Initialize();
+			ႣႰ.Ⴅ.ႰႣ(base.Context as ႷႭႤ.Ⴈ);
+			Ⴈ = ႣႰ.Ⴅ.ႰႣ().Ⴈ.Ⴅ;
+			Ⴈ.Ⴈ += ႳႨ;
+			Ⴈ.Ⴐ += ႳႰ;
+			Ⴈ.Ⴓ += Ⴃ;
+			Ⴈ.Ⴗ += ႣႥ;
+			Ⴈ.Ⴅ += ႨႳႨ;
+			Ⴈ.Ⴀ += ႨႳႰ;
+			Ⴈ.Ⴃ += Ⴃ;
+			ႣႰ.Ⴄ.ႣႥ();
+		}
+
+		public override void Terminate()
+		{
+			Ⴈ.Ⴈ -= ႳႨ;
+			Ⴈ.Ⴐ -= ႳႰ;
+			Ⴈ.Ⴓ -= Ⴃ;
+			Ⴈ.Ⴗ -= ႣႥ;
+			Ⴈ.Ⴅ -= ႨႳႨ;
+			Ⴈ.Ⴀ -= ႨႳႰ;
+			Ⴈ.Ⴃ -= Ⴃ;
+			ႣႰ.Ⴄ.ႣႠ();
+		}
+
+		public void Pause()
+		{
+		}
+
+		public void Resume()
+		{
+		}
+
+		private void ႳႰ(int Ⴀ, ႷႭႷ.Ⴄ Ⴍ)
+		{
+			ႨႳႳ(new ႣႰ.Ⴀ(Ⴀ, Ⴍ));
+		}
+
+		private void ႳႨ(int Ⴀ, ႷႭႷ.Ⴄ Ⴍ)
+		{
+			ႨႳႳ(new ႣႰ.Ⴗ(Ⴀ, Ⴍ));
+		}
+
+		private void Ⴃ(string Ⴀ, int Ⴍ, string Ⴄ, Guid Ⴓ, string Ⴗ, MemoryStream Ⴃ, ႷႭႷ.Ⴄ Ⴐ)
+		{
+			ႨႳႳ(new ႣႰ.Ⴍ(Ⴀ, Ⴍ, Ⴄ, Ⴓ, Ⴗ, Ⴃ, Ⴐ));
+		}
+
+		private void ႨႳႰ(ႷႭႷ.Ⴄ Ⴀ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0020, IL_0043
+			bool flag = !ႣႷ().Ⴐ;
+			while (!flag)
+			{
+				if (false)
+				{
+				}
+				ႨႳႳ(new Ⴓ(Ⴀ));
+				if ((444 + 444 * 444) % 2 == 0)
+				{
+					break;
+				}
+			}
+		}
+
+		private void ႨႳႨ(ႷႭႷ.Ⴄ Ⴗ)
+		{
+			ႨႳႳ(new ႣႰ.Ⴃ(Ⴗ));
+		}
+
+		private void Ⴃ(string Ⴓ, string Ⴅ, string Ⴀ, ႷႭႭ.Ⴜ Ⴐ)
+		{
+			ႣႰ.Ⴄ.ႣႷ().ႨႳႰ(new Ⴐ(Ⴓ, Ⴅ, Ⴀ, Ⴐ));
+		}
+
+		private Chatman ႣႷ()
+		{
+			return ႣႰ.Ⴅ.ႰႣ().Ⴈ.Ⴈ.Ⴐ;
+		}
+
+		private void ႨႳႳ(ႣႰ.Ⴈ Ⴍ)
+		{
+			int num = 7;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((!ႣႷ().Ⴐ) ? 1 : 6);
+					break;
+				case 6:
+					num = ((ႣႷ().LastWebConnectionResult != WebConnectionResult.AccessDenied) ? 3 : 5);
+					break;
+				case 5:
+					num2 = ((!(ႣႰ.Ⴄ.ႣႷ().ႣႼ() > ႣႷ().Ⴐ)) ? 1 : 0);
+					goto IL_0074;
+				case 3:
+					num2 = 1;
+					goto IL_0074;
+				case 1:
+					num2 = 0;
+					goto IL_0074;
+				case 2:
+					ႨႳႷ(Ⴍ);
+					num = 0;
+					break;
+				case 4:
+					{
+						ႣႰ.Ⴄ.ႣႷ().ႨႳႰ(Ⴍ);
+						num = 0;
+						break;
+					}
+					IL_0074:
+					num = ((num2 != 0) ? 4 : 2);
+					break;
+				}
+			}
+		}
+
+		private void ႨႳႷ(ႣႰ.Ⴈ Ⴍ)
+		{
+			Ⴅ = Ⴍ;
+			ႭႨႰ.Ⴐ.Ⴐ.Ⴍ.ShowMyChatmanAccount(ႳႳ);
+		}
+
+		private void ႳႳ(object Ⴍ, EventArgs Ⴓ)
+		{
+			Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+			ႣႰ.Ⴄ.ႣႷ().ႨႳႰ(Ⴅ);
+		}
+
+		public void ႣႥ()
+		{
+			ႭႨႰ.Ⴐ.Ⴐ.Ⴍ.ShowMyChatmanAccount(null);
+		}
+	}
+}
+namespace ႣႰ
+{
+	internal sealed class Ⴀ : Ⴓ
+	{
+		internal Ⴀ(int Ⴃ, ႷႭႷ.Ⴄ Ⴀ)
+			: base(Ⴃ, Ⴀ)
+		{
+		}
+
+		internal override Ⴜ ႣႳ()
+		{
+			Ⴜ result = Ⴜ.Ⴄ;
+			ႷႭႣ.Ⴗ ⴗ = ႭႨႰ.Ⴐ.Ⴐ.Ⴍ;
+			if (ႥႥႳႰ.Ⴍ.ႨႥ)
+			{
+				result = ႨႳႰ(Ⴜ.Ⴄ);
+				ⴗ.ShowMessageBoxInMainWindow(ႭႥ.Ⴅ.ႷႭ(), ႷႭႨ.Ⴗ.Ⴍ);
+				return result;
+			}
+			ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႨႳ(), ႷႭႣ.Ⴍ.Ⴄ, -1);
+			try
+			{
+				base.Ⴓ(out string Ⴓ, out string Ⴅ, out string _);
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႷႭ.Ⴍ.Ⴓ(1402238808));
+				PreviewRequest previewRequest = new PreviewRequest();
+				previewRequest.UserName = Ⴓ;
+				previewRequest.Credentials = Ⴅ;
+				previewRequest.TransactionID = ႣႷ().ToString();
+				ChatmanWebRequest chatmanWebRequest = Ⴐ.ႳႨ(previewRequest, ႣႳ);
+				RemoteItemCollection remoteItemCollection = null;
+				try
+				{
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႷႭ.Ⴍ.Ⴓ(1402238807));
+					remoteItemCollection = chatmanWebRequest.ReadObjectFromResponse<RemoteItemCollection>();
+					MemoryStream memoryStream = null;
+					try
+					{
+						if (remoteItemCollection.Result == RequestResult.OK)
+						{
+							ႥႥႨ.Ⴗ.ႨႷႤ(ႷႭ.Ⴍ.Ⴓ(1402238806));
+							memoryStream = chatmanWebRequest.ReadObjectFromResponse<MemoryStream>();
+							memoryStream.Seek(0L, SeekOrigin.Begin);
+						}
+						switch (remoteItemCollection.Result)
+						{
+						case RequestResult.OK:
+							ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႨႷ(), ႷႭႣ.Ⴍ.Ⴄ, 2000);
+							ႣႨ.Ⴅ.ႥႳ(remoteItemCollection, memoryStream);
+							result = ႨႳႰ(Ⴜ.Ⴀ);
+							break;
+						case RequestResult.Failed:
+							result = ႨႳႰ(Ⴜ.Ⴄ);
+							ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႷႤ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+							break;
+						case RequestResult.AccessDenied:
+							result = ႨႳႰ(Ⴜ.Ⴐ);
+							ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႷႼ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+							break;
+						}
+					}
+					finally
+					{
+						if (memoryStream != null)
+						{
+							memoryStream.Close();
+							memoryStream.Dispose();
+							memoryStream = null;
+						}
+					}
+				}
+				finally
+				{
+					chatmanWebRequest.OnDownloadProgressChanged -= ႣႳ;
+					chatmanWebRequest = null;
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႷႭ.Ⴍ.Ⴓ(1402238805), ⴓ);
+				ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႷႤ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+				result = ႨႳႰ(Ⴜ.Ⴄ);
+			}
+			return result;
+		}
+
+		private void ႣႳ(long Ⴃ, long Ⴀ)
+		{
+			ႷႭႣ.Ⴗ ⴗ = ႭႨႰ.Ⴐ.Ⴐ.Ⴍ;
+			ⴗ.ShowWebTransferProgress(Ⴃ, Ⴀ);
+		}
+	}
+	internal sealed class Ⴃ : Ⴈ
+	{
+		internal Ⴃ(ႷႭႷ.Ⴄ Ⴐ)
+			: base(Ⴐ)
+		{
+		}
+
+		private string ႣႷ()
+		{
+			return UrlConfigurationContainer.Ⴀ.ႨႷႠ(ႷႭ.Ⴍ.Ⴓ(1402238803)) + ႷႭ.Ⴍ.Ⴓ(1402238802);
+		}
+
+		internal override Ⴜ ႣႳ()
+		{
+			Ⴜ ⴜ = Ⴜ.Ⴄ;
+			string[] promotionalText = null;
+			int result = 0;
+			try
+			{
+				ChatmanWebRequest chatmanWebRequest = new ChatmanWebRequest(ႣႷ());
+				chatmanWebRequest.SendRequest(ႨႳႥ(Ⴓ: false));
+				string s = chatmanWebRequest.ReadObjectFromResponse<string>();
+				promotionalText = chatmanWebRequest.ReadObjectFromResponse<string[]>();
+				if (!int.TryParse(s, out result))
+				{
+					result = -1;
+				}
+				ⴜ = ႨႳႰ(Ⴜ.Ⴀ);
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႷႭ.Ⴍ.Ⴓ(1402238809), ⴓ);
+				result = -1;
+				ⴜ = ႨႳႰ(Ⴜ.Ⴄ);
+			}
+			Chatman chatman = Ⴅ.ႰႣ().Ⴈ.Ⴈ.Ⴐ;
+			chatman.SubscriptionLevel = result;
+			chatman.PromotionalText = promotionalText;
+			return ⴜ;
+		}
+	}
+	internal sealed class Ⴄ : IDisposable
+	{
+		private static Ⴄ Ⴀ;
+
+		private Queue<Ⴈ> Ⴀ;
+
+		private AutoResetEvent Ⴀ;
+
+		private ႥႥႨႥ.Ⴓ Ⴀ;
+
+		private Ⴜ Ⴀ;
+
+		private DateTime Ⴀ;
+
+		private bool Ⴀ;
+
+		public unsafe Ⴄ()
+		{
+			*(Queue<Ⴈ>*)(&this.Ⴀ) = new Queue<Ⴈ>();
+			*(AutoResetEvent*)(&this.Ⴀ) = new AutoResetEvent(initialState: false);
+			*(DateTime*)(&this.Ⴀ) = DateTime.MinValue;
+			base..ctor();
+		}
+
+		internal unsafe static Ⴄ ႣႷ()
+		{
+			return *(Ⴄ*)(&Ⴄ.Ⴀ);
+		}
+
+		internal unsafe static void ႣႥ()
+		{
+			*(Ⴄ*)(&Ⴄ.Ⴀ) = new Ⴄ();
+		}
+
+		internal unsafe static void ႣႠ()
+		{
+			((Ⴄ*)(&Ⴄ.Ⴀ))->Dispose();
+			*(@null*)(&Ⴄ.Ⴀ) = null;
+		}
+
+		internal unsafe void ႨႳႰ(Ⴈ Ⴀ)
+		{
+			Monitor.Enter(*(Queue<Ⴈ>*)(&this.Ⴀ));
+			try
+			{
+				((Queue<Ⴈ>*)(&this.Ⴀ))->Enqueue(Ⴀ);
+			}
+			finally
+			{
+				Monitor.Exit(*(Queue<Ⴈ>*)(&this.Ⴀ));
+			}
+			ႣႣ();
+			((AutoResetEvent*)(&this.Ⴀ))->Set();
+		}
+
+		private unsafe void ႣႣ()
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					return;
+				default:
+					num = ((*(ႥႥႨႥ.Ⴓ*)(&this.Ⴀ) == null) ? 1 : 2);
+					break;
+				case 1:
+					*(ႥႥႨႥ.Ⴓ*)(&this.Ⴀ) = ႥႥႨႥ.Ⴓ.Ⴗ(ႣႤ, Ⴓ: true, ApartmentState.STA);
+					num = 2;
+					break;
+				}
+			}
+		}
+
+		private unsafe void ႣႭ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0027, IL_0046
+			if (*(ႥႥႨႥ.Ⴓ*)(&this.Ⴀ) == null)
+			{
+				return;
+			}
+			if (464 >= 464 - 167)
+			{
+				((ႥႥႨႥ.Ⴓ*)(&this.Ⴀ))->ႨႳႭ();
+				goto IL_0010;
+			}
+			goto IL_0017;
+			IL_0017:
+			if (239 > 239 - 209)
+			{
+				return;
+			}
+			goto IL_0010;
+			IL_0010:
+			*(@null*)(&this.Ⴀ) = null;
+			goto IL_0017;
+		}
+
+		private unsafe void ႣႤ()
+		{
+			while (!ႥႥႨႣ.Ⴀ.Ⴐ)
+			{
+				Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+				((AutoResetEvent*)(&this.Ⴀ))->WaitOne();
+				try
+				{
+					List<Ⴈ> list;
+					lock (*(Queue<Ⴈ>*)(&this.Ⴀ))
+					{
+						try
+						{
+							list = (*(Queue<Ⴈ>*)(&this.Ⴀ)).ToList();
+							((Queue<Ⴈ>*)(&this.Ⴀ))->Clear();
+						}
+						catch
+						{
+							list = null;
+						}
+					}
+					if (list != null)
+					{
+						foreach (Ⴈ item in list)
+						{
+							*(DateTime*)(&this.Ⴀ) = DateTime.Now;
+							item.ႨႳႨ(ႨႳႨ);
+							try
+							{
+								*(Ⴜ*)(&this.Ⴀ) = item.ႣႳ();
+							}
+							finally
+							{
+							}
+							item.ႨႳႳ(ႨႳႨ);
+							item.ႨႳႷ(*(Ⴜ*)(&this.Ⴀ) == Ⴜ.Ⴀ);
+						}
+					}
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(ႷႭ.Ⴍ.Ⴓ(1402238799), ⴓ);
+				}
+			}
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႷႭ.Ⴍ.Ⴓ(1402238798));
+		}
+
+		internal unsafe DateTime ႣႼ()
+		{
+			return *(DateTime*)(&this.Ⴀ);
+		}
+
+		private unsafe void ႨႳႨ(Ⴜ Ⴀ)
+		{
+			*(Ⴜ*)(&this.Ⴀ) = Ⴀ;
+		}
+
+		public void Dispose()
+		{
+			ႨႳႳ(Ⴀ: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected unsafe void ႨႳႳ(bool Ⴀ)
+		{
+			int num = 4;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (this.Ⴀ ? 3 : 2);
+					break;
+				case 2:
+					num = ((!Ⴀ) ? 1 : 0);
+					break;
+				case 0:
+					ႣႭ();
+					((AutoResetEvent*)(&this.Ⴀ))->Close();
+					num = 1;
+					break;
+				case 1:
+					num = 3;
+					break;
+				case 3:
+					this.Ⴀ = true;
+					return;
+				}
+			}
+		}
+	}
+	internal sealed class Ⴅ
+	{
+		private static ႷႭႤ.Ⴈ Ⴃ;
+
+		public static ႷႭႤ.Ⴈ ႰႣ()
+		{
+			return Ⴃ;
+		}
+
+		public static void ႰႣ(ႷႭႤ.Ⴈ Ⴃ)
+		{
+			Ⴅ.Ⴃ = Ⴃ;
+		}
+	}
+	internal abstract class Ⴈ
+	{
+		public delegate void Ⴀ(Ⴜ Ⴃ);
+
+		private Ⴜ Ⴐ;
+
+		private Ⴀ Ⴐ;
+
+		private readonly ႷႭႷ.Ⴄ Ⴐ;
+
+		internal Ⴈ(ႷႭႷ.Ⴄ Ⴓ)
+		{
+			Ⴐ = Ⴓ;
+		}
+
+		protected unsafe Ⴜ ႨႳႰ(Ⴜ Ⴓ)
+		{
+			int num = 7;
+			WebConnectionResult lastWebConnectionResult = default(WebConnectionResult);
+			while (true)
+			{
+				switch (num)
+				{
+				case 5:
+					num = 3;
+					continue;
+				case 2:
+					num = 3;
+					continue;
+				case 1:
+					lastWebConnectionResult = WebConnectionResult.Failed;
+					num = 3;
+					continue;
+				case 6:
+					lastWebConnectionResult = WebConnectionResult.AccessDenied;
+					num = 3;
+					continue;
+				case 3:
+					ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴈ.Ⴐ.LastWebConnectionResult = lastWebConnectionResult;
+					num = ((this.Ⴐ == null) ? 4 : 0);
+					continue;
+				case 0:
+					this.Ⴐ(Ⴓ);
+					num = 4;
+					continue;
+				case 4:
+					return Ⴓ;
+				}
+				*(Ⴜ*)(&this.Ⴐ) = Ⴓ;
+				lastWebConnectionResult = WebConnectionResult.Connected;
+				int num2;
+				switch (Ⴓ)
+				{
+				default:
+					num2 = 5;
+					break;
+				case Ⴜ.Ⴀ:
+					num2 = 2;
+					break;
+				case Ⴜ.Ⴄ:
+					num2 = 1;
+					break;
+				case Ⴜ.Ⴐ:
+					num2 = 6;
+					break;
+				case Ⴜ.Ⴓ:
+					num2 = 1;
+					break;
+				}
+				num = num2;
+			}
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public void ႨႳႨ(Ⴀ Ⴓ)
+		{
+			this.Ⴐ = (ႷႭႷ.Ⴄ)(object)(Ⴀ)Delegate.Combine(this.Ⴐ, Ⴓ);
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public void ႨႳႳ(Ⴀ Ⴓ)
+		{
+			this.Ⴐ = (ႷႭႷ.Ⴄ)(object)(Ⴀ)Delegate.Remove(this.Ⴐ, Ⴓ);
+		}
+
+		public void ႨႳႷ(bool Ⴓ)
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((Ⴐ == null) ? 1 : 0);
+					break;
+				case 0:
+					Ⴐ(Ⴓ);
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		protected void Ⴓ(out string Ⴓ, out string Ⴅ, out string Ⴐ)
+		{
+			Chatman chatman = Ⴅ.ႰႣ().Ⴈ.Ⴈ.Ⴐ;
+			Ⴓ = chatman.WebUserName;
+			Ⴅ = chatman.Credentials;
+			Ⴐ = chatman.ProductNumber;
+		}
+
+		protected AuthenticatedRequest ႨႳႥ(bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0023, IL_0071
+			while (true)
+			{
+				Chatman chatman = Ⴅ.ႰႣ().Ⴈ.Ⴈ.Ⴐ;
+				AuthenticatedRequest authenticatedRequest = new AuthenticatedRequest();
+				authenticatedRequest.Credentials = chatman.PassHash;
+				authenticatedRequest.UserName = chatman.WebUserName;
+				AuthenticatedRequest authenticatedRequest2 = authenticatedRequest;
+				if (Ⴓ)
+				{
+					if (642 <= 642 - 47)
+					{
+						continue;
+					}
+					authenticatedRequest2.Sn = chatman.ProductNumber;
+					if (false)
+					{
+						break;
+					}
+				}
+				return authenticatedRequest2;
+			}
+			AuthenticatedRequest result = default(AuthenticatedRequest);
+			return result;
+		}
+
+		internal abstract Ⴜ ႣႳ();
+	}
+	internal sealed class Ⴍ : Ⴈ
+	{
+		private new string Ⴓ;
+
+		private int Ⴐ;
+
+		private string Ⴃ;
+
+		private Guid Ⴐ;
+
+		private string Ⴗ;
+
+		private MemoryStream Ⴐ;
+
+		internal unsafe Ⴍ(string Ⴐ, int Ⴗ, string Ⴓ, Guid Ⴍ, string Ⴄ, MemoryStream Ⴈ, ႷႭႷ.Ⴄ Ⴅ)
+			: base(Ⴅ)
+		{
+			this.Ⴓ = Ⴐ;
+			*(int*)(&this.Ⴐ) = Ⴗ;
+			Ⴃ = Ⴓ;
+			*(Guid*)(&this.Ⴐ) = Ⴍ;
+			this.Ⴗ = Ⴄ;
+			this.Ⴐ = Ⴈ;
+		}
+
+		internal unsafe override Ⴜ ႣႳ()
+		{
+			Ⴜ result = Ⴜ.Ⴄ;
+			ႷႭႣ.Ⴗ ⴗ = ႭႨႰ.Ⴐ.Ⴐ.Ⴍ;
+			ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႨႠ(), ႷႭႣ.Ⴍ.Ⴄ, -1);
+			try
+			{
+				Ⴓ(out string userName, out string Ⴅ, out string _);
+				UploadRequest uploadRequest = new UploadRequest();
+				uploadRequest.UserName = userName;
+				uploadRequest.Credentials = Ⴅ;
+				UploadRequest ⴓ = uploadRequest;
+				ChitChatItem chitChatItem = new ChitChatItem();
+				chitChatItem.Name = Ⴓ;
+				chitChatItem.Price = *(int*)(&this.Ⴐ);
+				chitChatItem.Buzzwords = Ⴃ;
+				chitChatItem.IsChatmate = false;
+				chitChatItem.MoodID = *(Guid*)(&this.Ⴐ);
+				chitChatItem.TargetPersonalityID = Ⴗ;
+				UploadResult uploadResult = null;
+				using (Ⴐ)
+				{
+					ChatmanWebRequest chatmanWebRequest = ႣႰ.Ⴐ.Ⴓ(ⴓ, chitChatItem, Ⴐ, ႳႰ);
+					RemoteItemCollection remoteItemCollection = null;
+					uploadResult = chatmanWebRequest.ReadObjectFromResponse<UploadResult>();
+				}
+				switch (uploadResult.Result)
+				{
+				case RequestResult.OK:
+					result = ႨႳႰ(Ⴜ.Ⴀ);
+					ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႨႰ(), ႷႭႣ.Ⴍ.Ⴄ, 2000);
+					SpecialActions.Self.Personality_Action_Web_Action_OK.TrySubmit();
+					Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႨႤႥ(ႷႭႠ.Ⴗ.ႷႰ);
+					break;
+				case RequestResult.Failed:
+					result = ႨႳႰ(Ⴜ.Ⴄ);
+					ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႨႨ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+					Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႥႥ(ႷႭႠ.Ⴗ.ႷႼ, ႷႭ.Ⴍ.Ⴓ(1402238801));
+					break;
+				case RequestResult.AccessDenied:
+					result = ႨႳႰ(Ⴜ.Ⴐ);
+					ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႨႣ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+					Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႥႥ(ႷႭႠ.Ⴗ.ႷႼ, ႷႭ.Ⴍ.Ⴓ(1402238811));
+					break;
+				case RequestResult.InvalidPrice:
+					result = ႨႳႰ(Ⴜ.Ⴓ);
+					ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႨႥ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+					Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႥႥ(ႷႭႠ.Ⴗ.ႷႼ, ႷႭ.Ⴍ.Ⴓ(1402238810));
+					break;
+				}
+			}
+			catch (Exception ex)
+			{
+				ႥႥႨ.Ⴗ.ႳႭ(ႷႭ.Ⴍ.Ⴓ(1402238800), ex);
+				result = ႨႳႰ(Ⴜ.Ⴄ);
+				ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႨႨ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+			}
+			return result;
+		}
+
+		private void ႳႰ(long Ⴐ, long Ⴓ)
+		{
+			ႷႭႣ.Ⴗ ⴗ = ႭႨႰ.Ⴐ.Ⴐ.Ⴍ;
+			ⴗ.ShowWebTransferProgress(Ⴐ, Ⴓ);
+		}
+	}
+	internal sealed class Ⴐ
+	{
+		internal static ChatmanWebRequest ႳႰ(DownloadRequest Ⴀ, ႥႥႨႣ.Ⴃ Ⴃ)
+		{
+			ChatmanWebRequest chatmanWebRequest = new ChatmanWebRequest(UrlConfigurationContainer.Ⴀ.ႨႷႠ(ႷႭ.Ⴍ.Ⴓ(1402238815)) + ႷႭ.Ⴍ.Ⴓ(1402238814));
+			chatmanWebRequest.OnDownloadProgressChanged += Ⴃ;
+			chatmanWebRequest.SendRequest(Ⴀ);
+			return chatmanWebRequest;
+		}
+
+		internal static ChatmanWebRequest Ⴓ(UploadRequest Ⴓ, ChitChatItem Ⴅ, Stream Ⴐ, ႥႥႨႣ.Ⴃ Ⴈ)
+		{
+			ChatmanWebRequest chatmanWebRequest = new ChatmanWebRequest(UrlConfigurationContainer.Ⴀ.ႨႷႠ(ႷႭ.Ⴍ.Ⴓ(1402238815)) + ႷႭ.Ⴍ.Ⴓ(1402238813));
+			chatmanWebRequest.OnUploadProgressChanged += Ⴈ;
+			chatmanWebRequest.SendRequest(Ⴓ, Ⴅ, Ⴐ);
+			return chatmanWebRequest;
+		}
+
+		internal static ChatmanWebRequest ႳႨ(PreviewRequest Ⴓ, ႥႥႨႣ.Ⴃ Ⴅ)
+		{
+			ChatmanWebRequest chatmanWebRequest = new ChatmanWebRequest(UrlConfigurationContainer.Ⴀ.ႨႷႠ(ႷႭ.Ⴍ.Ⴓ(1402238815)) + ႷႭ.Ⴍ.Ⴓ(1402238812));
+			chatmanWebRequest.OnDownloadProgressChanged += Ⴅ;
+			chatmanWebRequest.SendRequest(Ⴓ);
+			return chatmanWebRequest;
+		}
+	}
+	internal class Ⴓ : Ⴈ
+	{
+		private int Ⴐ;
+
+		internal Ⴓ(int Ⴃ, ႷႭႷ.Ⴄ Ⴀ)
+			: base(Ⴀ)
+		{
+			Ⴐ = Ⴃ;
+		}
+
+		public int ႣႷ()
+		{
+			return Ⴐ;
+		}
+
+		internal override Ⴜ ႣႳ()
+		{
+			return Ⴜ.Ⴀ;
+		}
+	}
+	internal sealed class Ⴗ : Ⴓ
+	{
+		internal Ⴗ(int Ⴃ, ႷႭႷ.Ⴄ Ⴀ)
+			: base(Ⴃ, Ⴀ)
+		{
+		}
+
+		internal override Ⴜ ႣႳ()
+		{
+			Ⴜ result = Ⴜ.Ⴄ;
+			ႷႭႣ.Ⴗ ⴗ = ႭႨႰ.Ⴐ.Ⴐ.Ⴍ;
+			if (ႥႥႳႰ.Ⴍ.ႨႳ)
+			{
+				ⴗ.ShowMessageBoxInMainWindow(ႭႥ.Ⴅ.ႷႭ(), ႷႭႨ.Ⴗ.Ⴍ);
+				return ႨႳႰ(Ⴜ.Ⴄ);
+			}
+			ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႷႠ(), ႷႭႣ.Ⴍ.Ⴄ, -1);
+			try
+			{
+				base.Ⴓ(out string Ⴓ, out string Ⴅ, out string Ⴐ);
+				DownloadRequest downloadRequest = new DownloadRequest();
+				downloadRequest.UserName = Ⴓ;
+				downloadRequest.Credentials = Ⴅ;
+				downloadRequest.TransactionID = ႣႷ().ToString();
+				ChatmanWebRequest chatmanWebRequest = Ⴐ.ႳႰ(downloadRequest, ႳႰ);
+				RemoteItemCollection remoteItemCollection = null;
+				string text = string.Empty;
+				try
+				{
+					remoteItemCollection = chatmanWebRequest.ReadObjectFromResponse<RemoteItemCollection>();
+					if (remoteItemCollection.Result == RequestResult.OK)
+					{
+						text = Path.GetTempFileName();
+						using (FileStream fileStream = new FileStream(text, FileMode.OpenOrCreate, FileAccess.Write))
+						{
+							MemoryStream memoryStream = chatmanWebRequest.ReadObjectFromResponse<MemoryStream>();
+							memoryStream.Seek(0L, SeekOrigin.Begin);
+							fileStream.Write(memoryStream.GetBuffer(), 0, (int)memoryStream.Length);
+						}
+					}
+				}
+				finally
+				{
+					chatmanWebRequest.OnDownloadProgressChanged -= ႳႰ;
+					chatmanWebRequest = null;
+				}
+				switch (remoteItemCollection.Result)
+				{
+				case RequestResult.OK:
+					ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႷႰ(), ႷႭႣ.Ⴍ.Ⴄ, 2000);
+					if (!ႣႨ.Ⴅ.Ⴃ(remoteItemCollection, text, Ⴐ))
+					{
+						result = ႨႳႰ(Ⴜ.Ⴄ);
+						ⴗ.ShowSimpleMessage(ႭႥ.Ⴅ.ႷႨ());
+					}
+					else
+					{
+						result = ႨႳႰ(Ⴜ.Ⴀ);
+						SpecialActions.Self.Personality_Action_Web_Action_OK.TrySubmit();
+					}
+					break;
+				case RequestResult.Failed:
+					result = ႨႳႰ(Ⴜ.Ⴄ);
+					ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႷႥ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+					Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႥႥ(ႷႭႠ.Ⴗ.ႤႷ, ႷႭ.Ⴍ.Ⴓ(1402238811));
+					break;
+				case RequestResult.AccessDenied:
+					result = ႨႳႰ(Ⴜ.Ⴐ);
+					ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႷႣ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+					Ⴅ.ႰႣ().Ⴈ.Ⴀ.ႥႥ(ႷႭႠ.Ⴗ.ႤႷ, ႷႭ.Ⴍ.Ⴓ(1402238810));
+					break;
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႷႭ.Ⴍ.Ⴓ(1402238809), ⴓ);
+				result = ႨႳႰ(Ⴜ.Ⴄ);
+				ⴗ.ShowWebTransferMessage(ႭႥ.Ⴅ.ႷႥ(), ႷႭႣ.Ⴍ.Ⴀ, 4000);
+			}
+			return result;
+		}
+
+		private void ႳႰ(long Ⴃ, long Ⴀ)
+		{
+			ႷႭႣ.Ⴗ ⴗ = ႭႨႰ.Ⴐ.Ⴐ.Ⴍ;
+			ⴗ.ShowWebTransferProgress(Ⴃ, Ⴀ);
+		}
+	}
+	internal enum Ⴜ
+	{
+		Ⴀ,
+		Ⴄ,
+		Ⴐ,
+		Ⴓ
+	}
+}
+namespace ႭႥ
+{
+	[CompilerGenerated]
+	[DebuggerNonUserCode]
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
+	internal sealed class Ⴅ
+	{
+		private static ResourceManager m_Ⴅ;
+
+		private static CultureInfo m_Ⴅ;
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static ResourceManager Ⴃ
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_003b, IL_0058
+				if (object.ReferenceEquals(ႭႥ.Ⴅ.m_Ⴅ, null))
+				{
+					if (23 <= 23 - 3)
+					{
+					}
+					ResourceManager resourceManager = (ResourceManager)(object)(ႭႥ.Ⴅ.m_Ⴅ = (CultureInfo)(object)new ResourceManager("ႭႥ.Ⴅ", typeof(Ⴅ).Assembly));
+					ResourceManager result = default(ResourceManager);
+					if (false)
+					{
+						return result;
+					}
+				}
+				return (ResourceManager)(object)ႭႥ.Ⴅ.m_Ⴅ;
+			}
+		}
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static CultureInfo Ⴈ
+		{
+			get
+			{
+				return m_Ⴅ;
+			}
+			set
+			{
+				m_Ⴅ = value;
+			}
+		}
+
+		internal Ⴅ()
+		{
+		}
+
+		internal static string ႷႨ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238796), m_Ⴅ);
+		}
+
+		internal static string ႷႥ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238795), m_Ⴅ);
+		}
+
+		internal static string ႷႣ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238794), m_Ⴅ);
+		}
+
+		internal static string ႷႠ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238793), m_Ⴅ);
+		}
+
+		internal static string ႷႰ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238792), m_Ⴅ);
+		}
+
+		internal static string ႷႭ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238791), m_Ⴅ);
+		}
+
+		internal static string ႷႤ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238790), m_Ⴅ);
+		}
+
+		internal static string ႷႼ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238789), m_Ⴅ);
+		}
+
+		internal static string ႨႳ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238788), m_Ⴅ);
+		}
+
+		internal static string ႨႷ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238787), m_Ⴅ);
+		}
+
+		internal static string ႨႨ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238786), m_Ⴅ);
+		}
+
+		internal static string ႨႥ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238785), m_Ⴅ);
+		}
+
+		internal static string ႨႣ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238784), m_Ⴅ);
+		}
+
+		internal static string ႨႠ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238847), m_Ⴅ);
+		}
+
+		internal static string ႨႰ()
+		{
+			return Ⴃ.GetString(global::ႷႭ.Ⴍ.Ⴓ(1402238846), m_Ⴅ);
+		}
+	}
+}
+namespace ႷႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string Ⴓ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x5394775F;
+			string result;
+			if ((result = ႷႭ.Ⴍ.m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "\u05ce\u0cd8స෪ण\u05b6ձझ\u05f9\u0cfaఉ";
+				break;
+			case 1:
+				obj = "\u093aע\u0ce2క෩ढ\u05b9հॐ\u05ec೦ఋ\u0dfd";
+				break;
+			case 2:
+				obj = "Ձऎס\u0cfaచ\u0de1\u0963\u05b9էऎ\u05f5";
+				break;
+			case 3:
+				obj = "ֈզछ\u05fb\u0cfcఞ\u0df2\u0963\u05b9էऎ\u05f5";
+				break;
+			case 4:
+				obj = "ॿ";
+				break;
+			case 5:
+				obj = "බ";
+				break;
+			case 6:
+				obj = "\u0c3e\u0df7\u093f\u05b7զफ़שೠఉ෬ण\u05bfԴचע\u0ce2క෩ढ\u05b9հ";
+				break;
+			case 7:
+				obj = "\u0cd6చ෩ड\u05b1պङ\u05ad\u0ce5ఉ\u0de0\u093b\u05b1ձउ";
+				break;
+			case 8:
+				obj = "ן\u0cf0చ\u0de1त\u05b6ճफ़\u05ff\u0cf0ఖ෪ह\u05bdԴग\u05f9\u0cf0ఖඥम\u05b7ոऒר\u0cf6ఏ෬ढ\u05b6";
+				break;
+			case 9:
+				obj = "बר\u0cf4ట෬ण\u05bfԴओר\u0cf8ఔ\u0df7ऴ\u05f8էऊ\u05ff\u0cf0చ෨";
+				break;
+			case 10:
+				obj = "Ցऌ\u05ff\u0cfaఉඥऩ\u05adզगףೲ\u0c5b\u0df5\u093f\u05bdբगר\u0ce2";
+				break;
+			case 11:
+				obj = "";
+				break;
+			case 12:
+				obj = "ऌ\u05adՠखע೧ఒ\u0dffन\u059aյऍר";
+				break;
+			case 13:
+				obj = "ෂन\u05acՁऍר೧\u0c3f\u0de4ह\u05b9Ժट\u05fe\u0ce5\u0c03";
+				break;
+			case 14:
+				obj = "\u0c4a";
+				break;
+			case 15:
+				obj = "\u0cd0ఉ\u0df7ढ\u05aaԴच\u05f8೧ఒ෫प\u05f8աऎס\u0cfaచ\u0de1";
+				break;
+			case 16:
+				obj = "\u05c8೧ఉ෪\u093f\u05f8սऐ\u05ad\u0ce2ఞ෧७\u05acզटף೦ఝ\u0de0\u093f\u05f8չटף\u0cf4జ\u0de0\u093f\u05f8ՠख\u05ff\u0cf0చ\u0de1";
+				break;
+			case 17:
+				obj = "प\u05ff\u0cf4క\u0df6फ\u05bdզळ\u05ec\u0cfbచ\u0de2न\u05aaՀख\u05ff\u0cf0చ\u0de1झ\u05aaջझ\u05adೡఓ\u0df7न\u05b9հफ़ר೭ఒ\u0df1त\u05b6ճॐ\u05a3\u0cbb";
+				break;
+			case 18:
+				obj = "Ցऌ\u05ff\u0cfaఉඥऩ\u05adզगףೲ\u0c5b\u0de1ढ\u05afպऒע\u0cf4టණ";
+				break;
+			case 19:
+				obj = "\u059bյऐ\u05f9\u0cdcఖ\u0df5ढ\u05aaՠऱ\u05f9\u0cfdఞ\u0df7ञ\u05bdզग\u05ec\u0cf9ఽ෪स\u05b6հ";
+				break;
+			case 20:
+				obj = "उ\u05b7գऐס\u0cfaచ\u0de1ऋ\u05b9սऒרೱ";
+				break;
+			case 21:
+				obj = "ශढ\u05afպऒע\u0cf4టසब\u05b1ոछש\u0cc3ఞ\u0df7त־խफ\u05fe\u0cf0ఉ";
+				break;
+			case 22:
+				obj = "\u0c3f෪\u093a\u05b6ոऑ\u05ecೱఒ෫प\u0595ձऍ\u05fe\u0cf4జ\u0de0";
+				break;
+			case 23:
+				obj = "\u0cd1ఔ\u0df2ण\u05b4ջटש\u0cc6ఎ෦म\u05bdէऍ\u05ebೠగ";
+				break;
+			case 24:
+				obj = "\u05cb\u0cf0చ\u0df1स\u05aaձ\u093cס\u0cfaఘ෮न\u05bcՖइם\u0cf4ఉ\u0de0ण\u05acէ";
+				break;
+			case 25:
+				obj = "म\u05ff\u0cf0\u0c0d෬न\u05afՒटפ\u0cf9ఞ\u0de1";
+				break;
+			case 26:
+				obj = "Մऌר\u0ce3ఒ\u0de0\u093a\u059eյगס\u0cf0ట\u0dd3न\u05aaսघ״\u0cc0ఈ\u0de0\u093f";
+				break;
+			case 27:
+				obj = "ֈզछ\u05fb\u0cfcఞ\u0df2त\u05b6ճळר೦ఈ\u0de4प\u05bd";
+				break;
+			case 28:
+				obj = "झ\u05aaձईפ\u0cf0ఌ\u0dd6स\u05bbշछ\u05fe೦ఝ\u0df0ड";
+				break;
+			case 29:
+				obj = "\u0dd0ऽ\u05b4ջटש\u0cd3చ෬ड\u05bdհ";
+				break;
+			case 30:
+				obj = "మ\u0df5ड\u05b7յच\u05cb\u0cf4ఒ෩न\u05bc՝ऐ\u05fb\u0cf4గ෬ऩֈզग\u05ee\u0cf0";
+				break;
+			case 31:
+				obj = "\u0cc0ఋ෩ढ\u05b9հस\u05ec\u0cfcగ\u0de0ऩ֎ձऌפ\u0cf3\u0c02\u0dd0\u093e\u05bdզ";
+				break;
+			case 32:
+				obj = "ט\u0ce5గ෪ब\u05bcսऐת\u0cd8ఞ\u0df6\u093e\u05b9ճछ";
+				break;
+			case 33:
+				obj = "फ\u05fd\u0cf9ఔ\u0de4ऩ\u058bաझ\u05ee\u0cf0ఈ\u0df6फ\u05adո";
+				break;
+			case 34:
+				obj = "Շछ\u05f9\u0cc0ఈ\u0de0\u093fֈզऑ\u05eb\u0cfcగ\u0de0उ\u05b9ՠट\u05a3\u0cf4ఈ\u0df5व";
+				break;
+			case 35:
+				obj = "\u059dզऌע೧\u0c5b෪ण\u05f8աऎש\u0cf4ఏ෬ण\u05bfԴऎ\u05ff\u0cfaఝ෬ड\u05bdԴऑףವఈ\u0de0\u093f\u05aeձऌ\u05b7ವ\u0c00ඵर";
+				break;
+			case 36:
+				obj = "ऋ\u05b9սऒרೱ\u0c5b\u0df1ढ\u05f8սऐ\u05feೡచ෩ड\u05f8յऎ\u05fd\u0cf9ఒ෦ब\u05acսऑף";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႷႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			ႷႭ.Ⴍ.m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႷႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[37];
+		}
+	}
+}

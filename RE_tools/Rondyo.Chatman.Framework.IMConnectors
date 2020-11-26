@@ -1,0 +1,719 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Framework.IMConnectors.dll
+// Rondyo.Chatman.Framework.IMConnectors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Microsoft.Win32;
+using Rondyo.Chatman.Data;
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
+using ႠႼႭ;
+using ႥႥႨႳ;
+using ႨႼႨ;
+using ႭႷႰ;
+using ႷႭႥ;
+using ႷႭႨ;
+using ႷႭႰ;
+
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Guid("2d8cb204-90e5-4604-b84b-4eda526faed9")]
+[assembly: ComVisible(false)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace ႠႼႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string ႳႭႭ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x1A7D9A5D;
+			string result;
+			if ((result = ႠႼႭ.Ⴍ.m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "ղट\u05ee\u0cf0ఙ෪ढ\u05b3";
+				break;
+			case 1:
+				obj = "\u059eյझר\u0cf7ఔ෪द";
+				break;
+			case 2:
+				obj = "ת\u0cf8చ෬ड";
+				break;
+			case 3:
+				obj = "हנ\u0cf4ఒ෩";
+				break;
+			case 4:
+				obj = "\u0c02\u0de4थ\u05b7ջ";
+				break;
+			case 5:
+				obj = "೬ఖ\u0df6प\u05aaՈऍץ\u0cf0గ෩ऑ\u05b7դछף\u0cc9ఘ෪ठ\u05b5յऐש";
+				break;
+			case 6:
+				obj = "\u093f\u05b7պच״\u0cfa\u0c02\u0de4थ\u05b7ջॐש\u0cf9గ";
+				break;
+			case 7:
+				obj = "\u0df7ढ\u05b6հइע೬చ෭ढ\u05b7ոऑ\u05ecೱఞ\u0df7\u0963\u05bcոऒ";
+				break;
+			case 8:
+				obj = "չऍף";
+				break;
+			case 9:
+				obj = "\u0595Շर׀\u0cf0ఈ\u0df6न\u05b6ճछ\u05ff\u0cbbశ\u0de0\u093e\u05abձऐת\u0cf0ఉහऽ\u05a8Ոऽ\u05c1\u0cc6లශ";
+				break;
+			case 10:
+				obj = "\u05ce\u0cd9న\u0dccउք";
+				break;
+			case 11:
+				obj = "ढ\u05c1\u0cfaఘ\u0de4ड\u058bձऌ\u05fb\u0cf0ఉබॿ";
+				break;
+			case 12:
+				obj = "ఉ෪ण\u05bcխऑנ೦కණऩ\u05b4ո";
+				break;
+			case 13:
+				obj = "೧ఔ෫ऩ\u05a1ջओ\u05fe\u0cfbగ෪ब\u05bcձऌ\u05a3ೱగ෩";
+				break;
+			case 14:
+				obj = "\u093e\u05b3խऎר";
+				break;
+			case 15:
+				obj = "\u0df6द\u05a1դछב೦ఓ\u0de0ड\u05b4Ոऑ\u05fd\u0cf0క\u0dd9म\u05b7չओ\u05ec\u0cfbట";
+				break;
+			case 16:
+				obj = "\u0557ख\u05ecೡఖ\u0de4ण\u058bտइ\u05fd\u0cf0ష෪ब\u05bcձऌ";
+				break;
+			case 17:
+				obj = "\u05aaջऐש೬ఔ\u0df6द\u05a1դछס\u0cfcఈ\u0df1न\u05b6ձऌ\u05a3ೱగ෩";
+				break;
+			case 18:
+				obj = "\u05ec\u0cfcఖ";
+				break;
+			case 19:
+				obj = "टפ\u0cf8ధ\u0df6थ\u05bdոऒב\u0cfaఋ\u0de0णքշऑנ\u0cf8చ෫ऩ";
+				break;
+			case 20:
+				obj = "ఉ෪ण\u05bcխऑ\u05ec\u0cfcఖ\u0db2ऽ\u05b4աङפ\u0cfb\u0c55\u0de1ड\u05b4";
+				break;
+			case 21:
+				obj = "೧ఔ෫ऩ\u05a1ջटפ\u0cf8గ෪ब\u05bcձऌ\u05a3ೱగ෩";
+				break;
+			case 22:
+				obj = "\u093f\u05b7պच״\u0cfaచ෬ठ\u05a8ոऋת\u0cfcకණऩ\u05b4ո";
+				break;
+			case 23:
+				obj = "෬म\u05a9";
+				break;
+			case 24:
+				obj = "սझ\u05fc\u0cc9ఈ෭न\u05b4ոढע\u0ce5ఞ෫ऑ\u05bbջओנ\u0cf4క\u0de1";
+				break;
+			case 25:
+				obj = "\u05aaջऐש೬ఔ෬म\u05a9Ժचס\u0cf9";
+				break;
+			case 26:
+				obj = "\u05ff\u0cfaక\u0de1ऴ\u05b7սझ\u05fc\u0cf9ఔ\u0de4ऩ\u05bdզॐש\u0cf9గ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႠႼႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			ႠႼႭ.Ⴍ.m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႠႼႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[27];
+		}
+	}
+}
+namespace ႨႼႨ
+{
+	public enum Ⴐ
+	{
+		Ⴀ,
+		Ⴄ,
+		Ⴐ,
+		Ⴓ,
+		Ⴅ,
+		Ⴍ
+	}
+}
+namespace ႨႼႰ
+{
+	public class Ⴀ : IDisposable, ႷႭႥ.Ⴐ
+	{
+		public event ႷႭႰ.Ⴗ Ⴐ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴓ = (ႷႭႰ.Ⴗ)Delegate.Combine(this.Ⴓ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴓ = (ႷႭႰ.Ⴗ)Delegate.Remove(this.Ⴓ, value);
+			}
+		}
+
+		public event ႷႭႰ.Ⴄ Ⴈ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ႷႭႰ.Ⴗ)(object)(ႷႭႰ.Ⴄ)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ႷႭႰ.Ⴗ)(object)(ႷႭႰ.Ⴄ)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event ႷႭႰ.Ⴄ Ⴓ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴈ = (ႷႭႰ.Ⴄ)Delegate.Combine(this.Ⴈ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴈ = (ႷႭႰ.Ⴄ)Delegate.Remove(this.Ⴈ, value);
+			}
+		}
+
+		public ႭႷႰ.Ⴈ Ⴓ(ႭႷႰ.Ⴐ Ⴍ, Personality Ⴓ, ႷႭႨ.Ⴓ Ⴈ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0006, IL_0010, IL_0041, IL_005c, IL_0066, IL_007d
+			switch (Ⴍ.Ⴗ)
+			{
+			case 32:
+				Ⴍ.Ⴃ = ႨႼႨ.Ⴐ.Ⴅ;
+				break;
+			default:
+				if ((862 + 862 * 862) % 2 == 0)
+				{
+				}
+				break;
+			case 31:
+				Ⴍ.Ⴃ = ႨႼႨ.Ⴐ.Ⴄ;
+				break;
+			case 30:
+				Ⴍ.Ⴃ = ႨႼႨ.Ⴐ.Ⴐ;
+				break;
+			case 33:
+				Ⴍ.Ⴃ = ႨႼႨ.Ⴐ.Ⴍ;
+				if ((935 + 935 * 935) % 2 == 0)
+				{
+				}
+				break;
+			}
+			ႭႷႰ.Ⴈ ⴈ = new ႭႷႰ.Ⴈ();
+			ⴈ.Ⴐ = ႭႷႰ.Ⴓ.Ⴈ;
+			return ⴈ;
+		}
+
+		public void ႨႨႷ()
+		{
+		}
+
+		public void Dispose()
+		{
+		}
+	}
+	public class Ⴃ : Ⴈ
+	{
+		public override string Ⴀ => ႠႼႭ.Ⴍ.ႳႭႭ(444439125);
+
+		public override bool Ⴄ
+		{
+			get
+			{
+				RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439124), writable: false);
+				try
+				{
+					return registryKey != null;
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+		}
+
+		protected override string ႨႷႳ(out string Ⴍ)
+		{
+			RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439124), writable: false);
+			string result = string.Empty;
+			Ⴍ = string.Empty;
+			if (registryKey != null)
+			{
+				string str = (string)registryKey.GetValue(string.Empty);
+				registryKey.Close();
+				registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439127) + str + ႠႼႭ.Ⴍ.ႳႭႭ(444439126));
+				try
+				{
+					result = (string)registryKey.GetValue(string.Empty);
+				}
+				finally
+				{
+					registryKey.Close();
+				}
+			}
+			return result;
+		}
+
+		public override string[] ႨႨႤ()
+		{
+			return new string[2]
+			{
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439121),
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439120)
+			};
+		}
+	}
+	public class Ⴄ : Ⴈ
+	{
+		public override string Ⴀ => ႠႼႭ.Ⴍ.ႳႭႭ(444439119);
+
+		public override bool Ⴄ
+		{
+			get
+			{
+				RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439118), writable: false);
+				try
+				{
+					return registryKey != null;
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+		}
+
+		protected override string ႨႷႳ(out string Ⴍ)
+		{
+			string result = string.Empty;
+			RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439118), writable: false);
+			Ⴍ = string.Empty;
+			if (registryKey != null)
+			{
+				try
+				{
+					string text = (string)registryKey.GetValue(string.Empty);
+					int num = text.IndexOf('"', 1);
+					result = text.Substring(1, num - 1);
+					Ⴍ = text.Substring(num + 2);
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+			return result;
+		}
+
+		public override string[] ႨႨႤ()
+		{
+			return new string[3]
+			{
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439113),
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439112),
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439115)
+			};
+		}
+	}
+	public class Ⴅ : Ⴈ
+	{
+		public override string Ⴀ => ႠႼႭ.Ⴍ.ႳႭႭ(444439129);
+
+		public override bool Ⴄ
+		{
+			get
+			{
+				RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439128), writable: false);
+				try
+				{
+					return registryKey != null;
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+		}
+
+		protected override string ႨႷႳ(out string Ⴍ)
+		{
+			RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439128), writable: false);
+			string result = string.Empty;
+			Ⴍ = string.Empty;
+			if (registryKey != null)
+			{
+				try
+				{
+					string text = (string)registryKey.GetValue(string.Empty);
+					int num = text.IndexOf('"', 1);
+					result = text.Substring(1, num - 1);
+					Ⴍ = text.Substring(num + 2);
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+			return result;
+		}
+
+		public override string[] ႨႨႤ()
+		{
+			return new string[2]
+			{
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439131),
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439130)
+			};
+		}
+	}
+	public abstract class Ⴈ : Ⴐ
+	{
+		public abstract bool Ⴄ
+		{
+			get;
+		}
+
+		public abstract string Ⴀ
+		{
+			get;
+		}
+
+		public virtual void ႨႨႠ()
+		{
+			string Ⴍ;
+			string fileName = ႨႷႳ(out Ⴍ);
+			ProcessStartInfo processStartInfo = new ProcessStartInfo();
+			processStartInfo.Arguments = Ⴍ;
+			processStartInfo.FileName = fileName;
+			Process.Start(processStartInfo);
+		}
+
+		public virtual bool ႨႨႣ()
+		{
+			string Ⴍ;
+			string path = ႨႷႳ(out Ⴍ);
+			bool result = false;
+			Process[] processesByName = Process.GetProcessesByName(Path.GetFileNameWithoutExtension(path));
+			foreach (Process process in processesByName)
+			{
+				try
+				{
+					result = true;
+					process.Kill();
+					while (Process.GetProcessesByName(Path.GetFileNameWithoutExtension(path)).Length > 0)
+					{
+						Thread.Sleep(100);
+					}
+				}
+				catch
+				{
+				}
+			}
+			return result;
+		}
+
+		public abstract string[] ႨႨႤ();
+
+		protected virtual string ႨႷႳ(out string Ⴍ)
+		{
+			Ⴍ = string.Empty;
+			return string.Empty;
+		}
+	}
+	public class Ⴍ : Ⴈ
+	{
+		private static ႨႼႨ.Ⴐ Ⴐ;
+
+		private static EventHandler Ⴐ;
+
+		public override string Ⴀ => ႠႼႭ.Ⴍ.ႳႭႭ(444439123);
+
+		public override bool Ⴄ
+		{
+			get
+			{
+				RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439122), writable: false);
+				try
+				{
+					return registryKey != null;
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+		}
+
+		public unsafe static ႨႼႨ.Ⴐ Ⴃ
+		{
+			get
+			{
+				return *(ႨႼႨ.Ⴐ*)(&Ⴍ.Ⴐ);
+			}
+			set
+			{
+				int num = 0;
+				while (true)
+				{
+					switch (num)
+					{
+					case 2:
+						return;
+					default:
+						*(ႨႼႨ.Ⴐ*)(&Ⴍ.Ⴐ) = value;
+						num = ((Ⴐ != null) ? 1 : 2);
+						break;
+					case 1:
+						Ⴐ(null, new EventArgs());
+						num = 2;
+						break;
+					}
+				}
+			}
+		}
+
+		public static event EventHandler Ⴅ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				Ⴐ = (EventHandler)Delegate.Combine(Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				Ⴐ = (EventHandler)Delegate.Remove(Ⴐ, value);
+			}
+		}
+
+		public override bool ႨႨႣ()
+		{
+			string Ⴍ;
+			string path = ႨႷႳ(out Ⴍ);
+			bool result = false;
+			Process[] processesByName = Process.GetProcessesByName(Path.GetFileNameWithoutExtension(path));
+			foreach (Process process in processesByName)
+			{
+				try
+				{
+					result = true;
+					process.Kill();
+					while (Process.GetProcessesByName(Path.GetFileNameWithoutExtension(path)).Length > 0)
+					{
+						Thread.Sleep(100);
+					}
+				}
+				catch
+				{
+				}
+			}
+			processesByName = Process.GetProcessesByName(ႠႼႭ.Ⴍ.ႳႭႭ(444439117));
+			foreach (Process process in processesByName)
+			{
+				try
+				{
+					process.Kill();
+					while (Process.GetProcessesByName(ႠႼႭ.Ⴍ.ႳႭႭ(444439117)).Length > 0)
+					{
+						Thread.Sleep(100);
+					}
+				}
+				catch
+				{
+				}
+			}
+			return result;
+		}
+
+		protected override string ႨႷႳ(out string Ⴍ)
+		{
+			RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439122), writable: false);
+			string result = string.Empty;
+			Ⴍ = string.Empty;
+			if (registryKey != null)
+			{
+				try
+				{
+					string text = (string)registryKey.GetValue(string.Empty);
+					int num = text.IndexOf('"', 1);
+					result = text.Substring(1, num - 1);
+					Ⴍ = string.Empty;
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+			return result;
+		}
+
+		public override string[] ႨႨႤ()
+		{
+			return new string[1]
+			{
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439116)
+			};
+		}
+	}
+	public interface Ⴐ
+	{
+		string Ⴀ
+		{
+			get;
+		}
+
+		bool Ⴄ
+		{
+			get;
+		}
+
+		void ႨႨႠ();
+
+		bool ႨႨႣ();
+
+		string[] ႨႨႤ();
+	}
+	public class Ⴓ : Ⴈ
+	{
+		public override string Ⴀ => ႠႼႭ.Ⴍ.ႳႭႭ(444439133);
+
+		public override bool Ⴄ => true;
+
+		public override void ႨႨႠ()
+		{
+			ႥႥႨႳ.Ⴃ.ႨႷႭ(ႠႼႭ.Ⴍ.ႳႭႭ(444439132));
+		}
+
+		public override string[] ႨႨႤ()
+		{
+			return new string[0];
+		}
+	}
+	public class Ⴗ : Ⴈ
+	{
+		public override string Ⴀ => ႠႼႭ.Ⴍ.ႳႭႭ(444439135);
+
+		public override bool Ⴄ => true;
+
+		public override void ႨႨႠ()
+		{
+			ႥႥႨႳ.Ⴃ.ႨႷႭ(ႠႼႭ.Ⴍ.ႳႭႭ(444439134));
+		}
+
+		public override string[] ႨႨႤ()
+		{
+			return new string[0];
+		}
+	}
+	public class Ⴜ : Ⴈ
+	{
+		public override string Ⴀ => ႠႼႭ.Ⴍ.ႳႭႭ(444439114);
+
+		public override bool Ⴄ
+		{
+			get
+			{
+				RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439109), writable: false);
+				try
+				{
+					return registryKey != null;
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+		}
+
+		protected override string ႨႷႳ(out string Ⴍ)
+		{
+			RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(ႠႼႭ.Ⴍ.ႳႭႭ(444439109), writable: false);
+			string result = string.Empty;
+			Ⴍ = string.Empty;
+			if (registryKey != null)
+			{
+				try
+				{
+					string text = (string)registryKey.GetValue(string.Empty);
+					int num = text.IndexOf('"', 1);
+					result = text.Substring(1, num - 1);
+					Ⴍ = text.Substring(num + 2);
+				}
+				finally
+				{
+					registryKey?.Close();
+				}
+			}
+			return result;
+		}
+
+		public override string[] ႨႨႤ()
+		{
+			return new string[2]
+			{
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439108),
+				ႠႼႭ.Ⴍ.ႳႭႭ(444439111)
+			};
+		}
+	}
+}

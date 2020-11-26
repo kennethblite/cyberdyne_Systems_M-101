@@ -1,0 +1,1400 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Interfaces.dll
+// Rondyo.Chatman.Interfaces, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Data;
+using Rondyo.Chatman.Interfaces;
+using Rondyo.Chatman.Interfaces.Public;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+using System.Xml.Serialization;
+using ႣႠႠ;
+using ႭႥႨ;
+using ႭႥႰ;
+using ႭႳႭ;
+using ႭႷႰ;
+using ႷႭႠ;
+using ႷႭႣ;
+using ႷႭႤ;
+using ႷႭႥ;
+using ႷႭႨ;
+using ႷႭႭ;
+using ႷႭႰ;
+using ႷႭႳ;
+using ႷႭႷ;
+using ႷႭႼ;
+
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: Guid("c966ce08-b51b-4808-963d-0ed53eb14679")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: ComVisible(false)]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyTrademark("")]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Rondyo.Chatman.Interfaces
+{
+	public enum DefaultOutputDevice
+	{
+		Chatman,
+		PC
+	}
+}
+namespace ႣႠႠ
+{
+	internal sealed class Ⴅ
+	{
+		private static readonly char[] Ⴈ;
+
+		private static readonly string[] Ⴈ;
+
+		internal static string ႥႳႳ(int Ⴀ)
+		{
+			int num = Ⴀ ^ 0x834D39B;
+			string result;
+			if ((result = Ⴈ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "ॶ\u05f8Ճछׯೞఒ\u0df1ञ\u05b1ծछ\u05b7ವళ\u0de0त\u05bfռऊ\u05b0";
+				break;
+			case 1:
+				obj = "\u0dbe७\u058cջऎ׀\u0cfaఈ\u0df1ॷ\u05f8";
+				break;
+			case 2:
+				obj = "\u0c40ඥच\u05bdնवפೡఫ෪\u093e\u05b1ՠगע\u0cfb\u0c41ඥ";
+				break;
+			case 3:
+				obj = "ವ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴈ = (char[])(object)Ⴅ.Ⴈ;
+			int num2 = ⴈ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴈ[(num3 + Ⴀ) % num2]);
+			}
+			result = new string(array);
+			Ⴈ[num] = result;
+			return result;
+		}
+
+		static Ⴅ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴅ.Ⴈ = (string[])(object)array;
+			Ⴈ = new string[4];
+		}
+	}
+}
+namespace ႭႳႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string ႥႳႳ(int Ⴀ)
+		{
+			int num = Ⴀ ^ 0x834D39B;
+			string result;
+			if ((result = m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "ॶ\u05f8Շखע\u0ce2ల෫ङ\u05b9էकׯ\u0cf4ఉ\u0dbf७";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႭႳႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴀ) % num2]);
+			}
+			result = new string(array);
+			m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႭႳႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[1];
+		}
+	}
+	internal sealed class Ⴓ
+	{
+		private static readonly char[] Ⴍ;
+
+		private static readonly string[] Ⴍ;
+
+		internal static string ႠႣႣ(int Ⴀ)
+		{
+			int num = Ⴀ ^ 0x834D39B;
+			string result;
+			if ((result = Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "ङ\u05b1ՠऒרಯ\u0c5b";
+				break;
+			case 1:
+				obj = "ඩ७֏սच\u05f9\u0cfd\u0c46";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)Ⴓ.Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴀ) % num2]);
+			}
+			result = new string(array);
+			Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴓ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴓ.Ⴍ = (string[])(object)array;
+			Ⴍ = new string[2];
+		}
+	}
+}
+namespace ႷႭႠ
+{
+	public interface Ⴀ
+	{
+		event ႷႭႷ.Ⴍ Ⴅ;
+
+		void ႨႰ(string Ⴍ, bool Ⴓ);
+	}
+	public delegate void Ⴃ(ႷႭႤ.Ⴃ Ⴍ);
+	public enum Ⴄ
+	{
+		Ⴓ,
+		Ⴃ,
+		Ⴗ,
+		Ⴄ,
+		Ⴅ,
+		Ⴈ,
+		Ⴀ,
+		Ⴍ
+	}
+	public interface Ⴅ
+	{
+	}
+	public interface Ⴈ
+	{
+		ႷႭႳ.Ⴗ Ⴄ
+		{
+			get;
+		}
+
+		ႷႭႥ.Ⴗ Ⴃ
+		{
+			get;
+		}
+
+		ႷႭႥ.Ⴓ Ⴓ
+		{
+			get;
+		}
+
+		ႷႭႣ.Ⴗ Ⴍ
+		{
+			get;
+		}
+
+		ႷႭႨ.Ⴜ Ⴅ
+		{
+			get;
+		}
+
+		ႷႭႳ.Ⴐ Ⴗ
+		{
+			get;
+		}
+
+		event ႷႭႭ.Ⴅ Ⴈ;
+
+		event ႷႭႭ.Ⴈ Ⴓ;
+
+		void ႣႼ();
+
+		void ႼႰ();
+	}
+	public delegate void Ⴍ(Ⴗ Ⴍ, int Ⴓ);
+	public interface Ⴐ : IDisposable
+	{
+		string Ⴐ
+		{
+			get;
+		}
+
+		event Ⴍ Ⴐ;
+
+		void ႨႤႥ(Ⴗ Ⴍ);
+
+		void ႥႥ(Ⴗ Ⴍ, string Ⴓ);
+
+		void Ⴀ(Ⴗ Ⴍ, string[] Ⴓ, int Ⴈ);
+
+		string ႭႼ();
+
+		void ႣႰ();
+
+		void ႣႨ();
+	}
+	public interface Ⴓ
+	{
+		void Ⴅ(Ⴈ Ⴍ);
+
+		void Ⴈ(Ⴈ Ⴍ);
+	}
+	public enum Ⴗ
+	{
+		Ⴓ,
+		Ⴃ,
+		Ⴗ,
+		Ⴄ,
+		Ⴅ,
+		Ⴈ,
+		Ⴀ,
+		Ⴍ,
+		Ⴐ,
+		Ⴜ,
+		ႣႳ,
+		ႣႣ,
+		ႣႷ,
+		ႣႤ,
+		ႣႥ,
+		ႣႨ,
+		ႣႠ,
+		ႣႭ,
+		ႣႰ,
+		ႣႼ,
+		ႷႳ,
+		ႷႣ,
+		ႷႷ,
+		ႷႤ,
+		ႷႥ,
+		ႷႨ,
+		ႷႠ,
+		ႷႭ,
+		ႷႰ,
+		ႷႼ,
+		ႤႳ,
+		ႤႣ,
+		ႤႷ,
+		ႤႤ,
+		ႤႥ,
+		ႤႨ,
+		ႤႠ,
+		ႤႭ,
+		ႤႰ,
+		ႤႼ,
+		ႥႳ,
+		ႥႣ,
+		ႥႷ,
+		ႥႤ,
+		ႥႥ,
+		ႥႨ,
+		ႥႠ,
+		ႥႭ,
+		ႥႰ,
+		ႥႼ,
+		ႨႳ,
+		ႨႣ,
+		ႨႷ,
+		ႨႤ,
+		ႨႥ,
+		ႨႨ,
+		ႨႠ,
+		ႨႭ,
+		ႨႰ,
+		ႨႼ
+	}
+	public interface Ⴜ : IDisposable
+	{
+		int Ⴀ
+		{
+			get;
+		}
+
+		event ႷႭႰ.Ⴐ Ⴐ;
+
+		event ႷႭႰ.Ⴀ Ⴈ;
+
+		void ႰႨ(int Ⴍ);
+
+		bool Ⴀ(Personality Ⴍ, string Ⴓ, ႷႭႣ.Ⴃ Ⴈ, ႷႭႼ.Ⴈ Ⴃ);
+
+		void ႠႥ(Guid Ⴍ, int Ⴓ);
+	}
+}
+namespace ႷႭႣ
+{
+	public delegate void Ⴀ(ႷႭႼ.Ⴗ Ⴍ, int Ⴓ, ref bool Ⴈ);
+	public interface Ⴃ
+	{
+		bool Ⴈ
+		{
+			get;
+		}
+
+		DateTime Ⴓ
+		{
+			get;
+		}
+
+		bool Ⴗ
+		{
+			get;
+		}
+
+		DateTime Ⴅ
+		{
+			get;
+		}
+
+		DateTime Ⴀ
+		{
+			get;
+		}
+
+		bool ႳႷ();
+	}
+	public delegate void Ⴄ(ႷႭႼ.Ⴗ Ⴍ, int Ⴓ);
+	public delegate void Ⴅ(string Ⴍ, string Ⴓ, string Ⴈ, ႷႭႭ.Ⴜ Ⴃ);
+	public delegate void Ⴈ(bool Ⴍ, bool Ⴓ);
+	public enum Ⴍ
+	{
+		Ⴀ,
+		Ⴄ
+	}
+	public interface Ⴐ
+	{
+		event ႷႭႭ.Ⴀ Ⴐ;
+
+		event ႷႭႭ.Ⴍ Ⴈ;
+	}
+	public interface Ⴓ
+	{
+		void Ⴅ(string Ⴍ, string Ⴓ, MemoryStream Ⴈ);
+	}
+	public interface Ⴗ : IDisposable
+	{
+		ႷႭႨ.Ⴈ Ⴐ
+		{
+			get;
+		}
+
+		void ReportGuiFullyInitialized();
+
+		void Show();
+
+		void Hide();
+
+		void Minimize();
+
+		void RunIntroWindow();
+
+		void RunMainWindow(bool Ⴍ);
+
+		void RunWebTransferWindow();
+
+		void ShowMessageBoxInMainWindow(string Ⴍ, ႷႭႨ.Ⴗ Ⴓ);
+
+		void ShowProactiveWindow(string Ⴍ, int Ⴓ, bool Ⴈ);
+
+		void RunReminderGuiWindow();
+
+		void RunUserDetailsGuiWindow();
+
+		void Pause();
+
+		void Resume();
+
+		void Close();
+
+		void ShowWebTransferProgress(long Ⴍ, long Ⴓ);
+
+		void ShowWebTransferMessage(string Ⴍ, Ⴍ Ⴓ, int Ⴈ);
+
+		void ShowSimpleMessage(string Ⴍ);
+
+		void ShowMyChatmanAccount(EventHandler Ⴍ);
+	}
+	public interface Ⴜ
+	{
+		string Ⴐ
+		{
+			get;
+		}
+
+		string Ⴈ
+		{
+			get;
+		}
+	}
+}
+namespace ႷႭႤ
+{
+	public interface Ⴀ : IDisposable
+	{
+		ႭႥႰ.Ⴈ Ⴐ
+		{
+			get;
+		}
+
+		ႭႥႰ.Ⴈ Ⴈ
+		{
+			get;
+		}
+
+		Personality Ⴓ
+		{
+			get;
+		}
+
+		ႭႥႨ.Ⴀ Ⴗ
+		{
+			get;
+		}
+
+		event Ⴗ Ⴐ;
+
+		event Ⴍ Ⴈ;
+
+		event ႭႥႰ.Ⴜ Ⴓ;
+
+		event ႭႥႨ.Ⴈ Ⴗ;
+
+		event ႭႥႨ.Ⴐ Ⴅ;
+
+		event Ⴄ Ⴀ;
+
+		Personality ႨႨႠ(string Ⴓ);
+
+		Personality ႨႰႠ(string Ⴃ);
+
+		void ႨႰႳ(Personality Ⴃ);
+
+		Personality ႷႳ();
+
+		void ႨႰႷ(Personality Ⴃ);
+
+		void ႨႰႭ(Personality Ⴃ);
+
+		void ႷႠ();
+
+		Personality ႨႰႣ(Personality Ⴃ);
+
+		string ႨႨႤ(string Ⴃ);
+
+		ChatmanAction Ⴈ(string Ⴃ, Personality Ⴀ, Guid Ⴄ, bool Ⴗ);
+
+		ChatmanAction Ⴐ(string Ⴃ, Personality Ⴀ, Guid Ⴄ, bool Ⴗ, bool Ⴈ, bool Ⴐ);
+
+		void ႨႰႼ(ChatmanAction Ⴃ);
+
+		ChatmanAction ႨႳ(Stream Ⴃ, Personality Ⴀ);
+
+		MemoryStream ႨႨႰ(ChatmanAction Ⴃ);
+
+		ChatmanAction ႨႨႨ(ChatmanAction Ⴃ);
+
+		string ႨႨႥ(string Ⴃ);
+
+		void ႨႷ(Gender Ⴃ, DateTime Ⴀ);
+
+		void ႷႷ();
+	}
+	public interface Ⴃ
+	{
+		event CommandDelegate Ⴐ;
+
+		event CommandDelegate Ⴈ;
+
+		void ႳႥ(string Ⴍ, CommandDelegate Ⴓ);
+
+		void Ⴀ(string Ⴍ, params object[] Ⴓ);
+	}
+	public delegate void Ⴄ(Personality Ⴀ);
+	public interface Ⴅ
+	{
+		bool Ⴃ
+		{
+			get;
+		}
+
+		string Ⴃ
+		{
+			get;
+		}
+
+		short Ⴈ
+		{
+			get;
+			set;
+		}
+
+		bool Ⴅ
+		{
+			get;
+		}
+
+		short Ⴐ
+		{
+			get;
+			set;
+		}
+
+		event ႷႭႷ.Ⴓ Ⴐ;
+
+		event AudioActionStoppedDelegate Ⴈ;
+
+		event AudioActionStoppedDelegate Ⴓ;
+
+		event ႷႭႷ.Ⴜ Ⴗ;
+
+		event VolumeChangedDelegate Ⴅ;
+
+		event ႷႭႷ.Ⴃ Ⴀ;
+
+		event ListeningEventDelegate Ⴃ;
+
+		event ListeningEventDelegate Ⴍ;
+
+		event ListeningEventDelegate Ⴄ;
+
+		event AudioActionStoppedDelegate Ⴜ;
+
+		void Ⴐ(string Ⴍ);
+
+		void Ⴐ();
+
+		void Ⴈ();
+
+		void Ⴓ();
+
+		void Ⴗ();
+
+		void Ⴅ(string Ⴍ, string Ⴓ);
+
+		int Ⴈ(string Ⴍ);
+
+		ႷႭႳ.Ⴅ[] Ⴓ(string Ⴍ);
+
+		void ႤႥ();
+
+		void Ⴅ(string Ⴓ);
+
+		void Ⴀ(AudioEffects Ⴓ);
+
+		void Ⴃ(AudioEffects Ⴓ);
+
+		void Ⴈ(AudioEffects Ⴓ, params float[] Ⴅ);
+
+		void Ⴍ();
+
+		void ႷႥ(string Ⴓ);
+
+		void ႤႳ();
+
+		void ႤႷ();
+
+		void ႤႭ();
+
+		float[] ႤႣ();
+	}
+	public interface Ⴈ
+	{
+		ႷႭႥ.Ⴗ Ⴈ
+		{
+			get;
+		}
+
+		void Ⴅ(string Ⴓ, object Ⴅ);
+	}
+	public delegate void Ⴍ(Guid Ⴍ);
+	public interface Ⴐ : IDisposable
+	{
+		Chatman Ⴐ
+		{
+			get;
+		}
+
+		string Ⴈ
+		{
+			get;
+		}
+
+		event Ⴗ Ⴐ;
+
+		Chatman ႠႣ();
+
+		void ႠႼ();
+
+		void ႳႰ();
+
+		void ႳႨ();
+	}
+	public delegate void Ⴓ(ChatmanAction Ⴍ);
+	public delegate void Ⴗ(Guid Ⴍ);
+	public delegate void Ⴜ(ChatmanAction Ⴍ, ႷႭႨ.Ⴓ Ⴓ);
+}
+namespace ႷႭႥ
+{
+	public struct Ⴀ
+	{
+		public string Ⴐ;
+
+		public Size Ⴐ;
+
+		public bool Ⴐ;
+
+		public bool Ⴈ;
+
+		public bool Ⴓ;
+
+		public ႷႭႨ.Ⴍ Ⴄ;
+
+		public unsafe override string ToString()
+		{
+			return ႭႳႭ.Ⴓ.ႠႣႣ(137679771) + *(string*)(&this.Ⴐ) + ႣႠႠ.Ⴅ.ႥႳႳ(137679771) + ((Size*)(&this.Ⴐ))->Height + ႭႳႭ.Ⴓ.ႠႣႣ(137679770) + ((Size*)(&this.Ⴐ))->Width + ႭႳႭ.Ⴍ.ႥႳႳ(137679771) + Ⴐ + ႣႠႠ.Ⴅ.ႥႳႳ(137679770) + Ⴓ + ႣႠႠ.Ⴅ.ႥႳႳ(137679769) + Ⴄ + ႣႠႠ.Ⴅ.ႥႳႳ(137679768);
+		}
+	}
+	public interface Ⴃ
+	{
+		event CommandDelegate Ⴐ;
+
+		event CommandDelegate Ⴈ;
+
+		event ႷႭႠ.Ⴃ Ⴓ;
+
+		void ႳႷ(string Ⴍ, object[] Ⴓ);
+
+		void RegisterCommand(string Ⴍ, CommandDelegate Ⴓ);
+
+		void ႨႠႰ(IChatmanAppController Ⴍ);
+
+		string[] Ⴓ(string Ⴍ, string Ⴓ, string Ⴈ, bool Ⴃ, bool Ⴗ);
+	}
+	public interface Ⴄ : IDisposable
+	{
+		ႷႭႳ.Ⴄ Ⴅ
+		{
+			get;
+		}
+
+		ႷႭႤ.Ⴅ Ⴈ
+		{
+			get;
+		}
+
+		ႷႭႨ.Ⴐ Ⴀ
+		{
+			get;
+		}
+
+		Ⴜ Ⴄ
+		{
+			get;
+		}
+
+		ChatmanAction Ⴐ
+		{
+			get;
+		}
+
+		bool Ⴗ
+		{
+			get;
+		}
+
+		DefaultOutputDevice Ⴍ
+		{
+			get;
+			set;
+		}
+
+		event ႷႭႰ.Ⴃ Ⴐ;
+
+		event ႷႭႰ.Ⴍ Ⴈ;
+
+		event ႷႭႰ.Ⴓ Ⴓ;
+
+		event ႷႭႰ.Ⴄ Ⴗ;
+
+		event ႷႭႰ.Ⴄ Ⴅ;
+
+		event ႷႭႰ.Ⴅ Ⴀ;
+
+		event ႷႭႤ.Ⴜ Ⴃ;
+
+		event ႷႭႷ.Ⴅ Ⴍ;
+
+		void ႥႤ(ႭႷႰ.Ⴐ[] Ⴃ);
+
+		bool ႥႥ(string Ⴃ);
+
+		ႷႭႼ.Ⴗ Ⴐ(string Ⴃ, out int? Ⴀ);
+
+		ႷႭႼ.Ⴗ Ⴄ(string Ⴃ, out int? Ⴀ);
+
+		void ႨႥ();
+
+		void ႨႤ();
+
+		void ႨႠ();
+
+		void Ⴓ(ChatmanCommandCodes Ⴀ, int Ⴍ);
+	}
+	public interface Ⴅ
+	{
+	}
+	public interface Ⴈ : IDisposable
+	{
+		bool Ⴐ
+		{
+			get;
+		}
+
+		void ႰႣ(ႷႭႣ.Ⴜ Ⴓ);
+	}
+	public interface Ⴍ : IDisposable
+	{
+		bool Ⴍ(ChatmanAction Ⴍ, Personality Ⴓ);
+
+		void ႠႰ(Personality Ⴍ);
+	}
+	public interface Ⴐ : IDisposable
+	{
+		event ႷႭႰ.Ⴗ Ⴐ;
+
+		event ႷႭႰ.Ⴄ Ⴈ;
+
+		event ႷႭႰ.Ⴄ Ⴓ;
+
+		void ႨႨႷ();
+
+		ႭႷႰ.Ⴈ Ⴓ(ႭႷႰ.Ⴐ Ⴀ, Personality Ⴍ, ႷႭႨ.Ⴓ Ⴄ);
+	}
+	public interface Ⴓ : IDisposable
+	{
+		void ႨႰႤ();
+
+		void ႨႰႼ();
+
+		void ႨႨႰ();
+
+		void ႨႨႨ();
+
+		void ႳႳ(string Ⴍ, DateTime Ⴓ);
+	}
+	public interface Ⴗ : IDisposable
+	{
+		ႷႭႤ.Ⴐ Ⴈ
+		{
+			get;
+		}
+
+		ႷႭႤ.Ⴀ Ⴓ
+		{
+			get;
+		}
+
+		Ⴄ Ⴗ
+		{
+			get;
+		}
+
+		ႷႭႳ.Ⴃ Ⴅ
+		{
+			get;
+		}
+
+		ႷႭႠ.Ⴐ Ⴀ
+		{
+			get;
+		}
+
+		ႷႭႠ.Ⴀ Ⴃ
+		{
+			get;
+		}
+
+		ႷႭႼ.Ⴈ Ⴄ
+		{
+			get;
+		}
+
+		event ႷႭႰ.Ⴄ Ⴐ;
+
+		event ႷႭႰ.Ⴄ Ⴈ;
+
+		event ႷႭႰ.Ⴈ Ⴓ;
+
+		event ႷႭႰ.Ⴅ Ⴗ;
+
+		event ႷႭႤ.Ⴜ Ⴅ;
+
+		void ႠႨ(ႭႷႰ.Ⴐ[] Ⴗ);
+
+		void Ⴀ(Gender Ⴓ, DateTime Ⴅ);
+	}
+	public interface Ⴜ : IDisposable
+	{
+		event ႷႭႣ.Ⴄ Ⴐ;
+
+		bool ႤႠႥ(string Ⴍ);
+
+		ႷႭႼ.Ⴗ ႤႠ(string Ⴍ, out int? Ⴓ);
+
+		ႷႭႼ.Ⴗ ႤႤ(string Ⴍ, out int? Ⴓ);
+
+		void ႰႼ();
+
+		void ႤႠႠ();
+
+		void ႤႠႤ();
+
+		void ႤႠႰ();
+	}
+}
+namespace ႷႭႨ
+{
+	public enum Ⴀ
+	{
+		Ⴐ,
+		Ⴈ,
+		Ⴓ,
+		Ⴗ,
+		Ⴅ
+	}
+	public enum Ⴃ
+	{
+		Ⴓ = 1,
+		Ⴃ = 2,
+		Ⴗ = 3,
+		Ⴄ = 4,
+		Ⴅ = 5,
+		Ⴈ = 6,
+		Ⴀ = 7,
+		Ⴍ = 8,
+		Ⴐ = 9,
+		Ⴜ = 0x100,
+		ႣႳ = 257,
+		ႣႣ = 0x200,
+		ႣႷ = 513
+	}
+	public enum Ⴄ
+	{
+		Ⴃ,
+		Ⴓ
+	}
+	public interface Ⴅ
+	{
+		List<ToolStripItem> CreateMenuEntries();
+	}
+	public enum Ⴈ
+	{
+		Ⴐ,
+		Ⴈ,
+		Ⴓ,
+		Ⴗ,
+		Ⴅ
+	}
+	public enum Ⴍ
+	{
+		Ⴈ,
+		Ⴅ
+	}
+	public enum Ⴐ
+	{
+		Ⴃ,
+		Ⴓ,
+		Ⴍ,
+		Ⴅ
+	}
+	public interface Ⴓ
+	{
+		string Ⴅ
+		{
+			get;
+		}
+
+		int Ⴈ
+		{
+			get;
+		}
+
+		Personality Ⴀ
+		{
+			get;
+			set;
+		}
+
+		bool Ⴄ
+		{
+			get;
+			set;
+		}
+
+		int Ⴐ
+		{
+			get;
+			set;
+		}
+	}
+	public enum Ⴗ
+	{
+		Ⴃ = 1,
+		Ⴓ,
+		Ⴍ
+	}
+	public interface Ⴜ : IDisposable
+	{
+		bool Ⴐ
+		{
+			get;
+		}
+
+		event EventHandler Ⴅ;
+
+		void Ⴅ();
+
+		void Ⴈ();
+
+		void Ⴄ();
+
+		void Ⴀ();
+
+		IEnumerable<IChatmanApplication> Ⴐ();
+
+		IEnumerable<IChatmanApplicationDetails> Ⴗ();
+
+		string[] Ⴀ(bool Ⴍ);
+
+		void Ⴄ(IChatmanApplicationDetails Ⴍ);
+	}
+}
+namespace ႷႭႭ
+{
+	public delegate void Ⴀ(ႷႭႨ.Ⴃ Ⴃ);
+	public delegate void Ⴃ(ႷႭႷ.Ⴄ Ⴀ);
+	public delegate void Ⴄ(bool Ⴃ);
+	public delegate void Ⴅ();
+	public delegate void Ⴈ();
+	public delegate void Ⴍ();
+	public delegate void Ⴐ(ႷႭႳ.Ⴍ Ⴐ);
+	public delegate void Ⴓ(ႷႭႷ.Ⴄ Ⴍ);
+	public delegate void Ⴗ();
+	public delegate void Ⴜ(int Ⴍ);
+}
+namespace ႷႭႰ
+{
+	public delegate void Ⴀ(ChatmanAction Ⴍ, Personality Ⴓ);
+	public delegate void Ⴃ(ႷႭႨ.Ⴐ Ⴍ);
+	public delegate void Ⴄ(ChatmanAction Ⴍ, Personality Ⴓ, ႷႭႨ.Ⴓ Ⴈ, Dictionary<string, object> Ⴃ);
+	public delegate void Ⴅ(ChatmanAction Ⴍ, ႷႭႨ.Ⴓ Ⴓ, Dictionary<string, object> Ⴈ);
+	public delegate void Ⴈ(ႷႭႨ.Ⴓ Ⴍ, ႭႷႰ.Ⴐ Ⴓ, ႭႷႰ.Ⴈ Ⴈ);
+	public delegate void Ⴍ();
+	public delegate bool Ⴐ(ChatmanAction Ⴍ, Personality Ⴓ);
+	public delegate void Ⴓ(byte Ⴍ);
+	public delegate bool Ⴗ(ChatmanAction Ⴍ, Personality Ⴓ, ႷႭႨ.Ⴓ Ⴈ);
+	public delegate void Ⴜ(ႷႭႨ.Ⴀ Ⴍ);
+}
+namespace ႷႭႳ
+{
+	public delegate void Ⴀ();
+	public interface Ⴃ
+	{
+		event ႷႭႷ.Ⴈ Ⴐ;
+
+		event ႷႭႷ.Ⴈ Ⴈ;
+
+		event ႷႭႷ.Ⴀ Ⴓ;
+
+		event ႷႭႷ.Ⴐ Ⴗ;
+
+		event ႷႭႭ.Ⴃ Ⴅ;
+
+		event ႷႭႭ.Ⴓ Ⴀ;
+
+		event ႷႭႣ.Ⴅ Ⴃ;
+
+		void ႨႨ(int Ⴍ, ႷႭႷ.Ⴄ Ⴓ);
+
+		void ႨႥ(int Ⴍ, ႷႭႷ.Ⴄ Ⴓ);
+
+		void Ⴐ(string Ⴍ, int Ⴓ, string Ⴈ, Guid Ⴃ, string Ⴗ, MemoryStream Ⴅ, ႷႭႷ.Ⴄ Ⴐ);
+
+		void ႭႷ(ႷႭႷ.Ⴄ Ⴍ);
+
+		void Ⴐ(string Ⴍ, string Ⴓ, string Ⴈ, ႷႭႭ.Ⴜ Ⴃ);
+
+		void ႭႭ(ႷႭႷ.Ⴄ Ⴍ);
+
+		void ႨႤ(Guid Ⴍ, Guid Ⴓ);
+
+		void ႨႠ(Guid Ⴍ, int Ⴓ);
+
+		void ႳႼ();
+
+		void Ⴐ(string Ⴍ, string Ⴓ, string Ⴈ);
+	}
+	[DefaultMember("Item")]
+	public interface Ⴄ : IDisposable
+	{
+		ႷႭႨ.Ⴓ Ⴐ
+		{
+			get;
+		}
+
+		event ႭႥႰ.Ⴃ Ⴐ;
+
+		ႷႭႨ.Ⴓ Ⴐ(string Ⴍ, int Ⴄ, Personality Ⴃ, int Ⴗ, bool Ⴓ);
+
+		void ႭႤ(string Ⴍ);
+
+		void ႳႥ();
+
+		void ႭႠ(int Ⴍ);
+
+		void ႭႳ(Personality Ⴍ);
+	}
+	public class Ⴅ
+	{
+		public double Ⴀ;
+
+		public double Ⴄ;
+	}
+	public interface Ⴈ
+	{
+		ႷႭႣ.Ⴃ Ⴍ
+		{
+			get;
+		}
+
+		void ႠႳ(ChatmanAction Ⴍ);
+
+		void ႥႤ(ChatmanAction Ⴍ, bool Ⴓ);
+
+		void Ⴀ(ChatmanAction Ⴍ, MemoryStream Ⴓ, bool Ⴈ);
+
+		void Ⴀ(ChatmanAction Ⴍ, bool Ⴓ, ႷႭႨ.Ⴓ Ⴈ);
+
+		void Ⴗ(ChatmanAction Ⴍ, bool Ⴓ, ႷႭႨ.Ⴓ Ⴈ, ActionVolume Ⴃ);
+
+		void ႠႼ(ChatmanAction Ⴍ);
+
+		void ႷႥ(int Ⴍ);
+
+		void ႥႥ(int Ⴍ, ActionVolume Ⴓ);
+
+		void ႥႠ(Personality Ⴍ, int Ⴓ);
+
+		void Ⴗ(Personality Ⴍ, int Ⴓ, ႷႭႨ.Ⴓ Ⴈ);
+
+		void Ⴍ(Personality Ⴍ, int Ⴓ, ႷႭႨ.Ⴓ Ⴈ, ActionVolume Ⴃ);
+
+		void ႥႷ(Personality Ⴍ, int Ⴓ);
+
+		void ႷႷ();
+
+		void ႷႠ();
+
+		ChatmanAction Ⴀ(Personality Ⴍ, Guid Ⴓ, string Ⴈ, bool Ⴃ, int? Ⴗ);
+
+		ChatmanAction Ⴀ(Personality Ⴍ, Guid Ⴓ, string Ⴈ, int? Ⴃ, Ⴅ[] Ⴗ, out string Ⴅ);
+
+		void ႷႨ(string Ⴍ);
+
+		void ႷႨ();
+	}
+	public enum Ⴍ
+	{
+		Ⴀ,
+		Ⴄ,
+		Ⴐ,
+		Ⴓ,
+		Ⴅ,
+		Ⴍ
+	}
+	public interface Ⴐ : IDisposable
+	{
+		Ⴍ Ⴀ
+		{
+			get;
+		}
+
+		event ႷႭႭ.Ⴐ Ⴐ;
+
+		event ႷႭႷ.Ⴗ Ⴈ;
+
+		void ႰႠ();
+
+		void ႰႤ();
+
+		void ႰႰ();
+
+		void ႰႳ();
+
+		void ႰႣ();
+
+		bool Ⴓ();
+
+		void ႰႷ();
+	}
+	public interface Ⴓ : IDisposable
+	{
+		void ႠႥ();
+
+		void ႠႳ();
+
+		void ႠႤ();
+
+		void ႠႠ();
+
+		void Ⴃ(ChatmanAction Ⴍ, Personality Ⴓ);
+
+		void Ⴜ(List<ChatmanAction> Ⴍ, Personality Ⴓ);
+	}
+	public interface Ⴗ : IDisposable
+	{
+		ႷႭႣ.Ⴐ Ⴐ
+		{
+			get;
+		}
+
+		void ႤႰ(bool Ⴍ, bool Ⴓ);
+
+		void ႤႠႥ();
+
+		void ႤႠႭ();
+
+		void ႤႠႣ();
+	}
+	public interface Ⴜ : IDisposable
+	{
+		void Ⴐ(int Ⴓ);
+
+		void Ⴓ();
+
+		void Ⴃ();
+	}
+}
+namespace ႷႭႷ
+{
+	public delegate void Ⴀ(string Ⴍ, int Ⴓ, string Ⴈ, Guid Ⴃ, string Ⴗ, MemoryStream Ⴅ, Ⴄ Ⴐ);
+	public delegate void Ⴃ();
+	public delegate void Ⴄ(bool Ⴍ);
+	public delegate void Ⴅ(bool Ⴍ);
+	public delegate void Ⴈ(int Ⴍ, Ⴄ Ⴓ);
+	public delegate void Ⴍ(ႷႭႠ.Ⴄ Ⴍ);
+	public delegate void Ⴐ();
+	public delegate void Ⴓ(long Ⴓ, bool Ⴅ);
+	public delegate void Ⴗ(long Ⴍ, long Ⴄ);
+	public delegate void Ⴜ(bool Ⴃ);
+}
+namespace ႷႭႼ
+{
+	public interface Ⴀ : IDisposable
+	{
+		event ႷႭႰ.Ⴗ Ⴐ;
+
+		event ႷႭႰ.Ⴄ Ⴈ;
+
+		event ႷႭႰ.Ⴄ Ⴓ;
+
+		void ႤႼ(ႭႷႰ.Ⴐ[] Ⴃ);
+	}
+	public interface Ⴅ : IDisposable
+	{
+		event ႷႭႰ.Ⴐ Ⴐ;
+
+		event ႷႭႰ.Ⴀ Ⴈ;
+
+		void ႥႣ();
+
+		void ႥႼ();
+
+		void ႤႰ();
+
+		void ႤႨ();
+
+		void ႤႥ(Personality Ⴃ);
+
+		void Ⴗ(Guid Ⴃ, int Ⴀ);
+	}
+	public interface Ⴈ
+	{
+		bool Ⴐ
+		{
+			get;
+		}
+
+		bool Ⴈ
+		{
+			get;
+		}
+
+		DateTime Ⴓ
+		{
+			get;
+		}
+	}
+	public interface Ⴐ : IDisposable
+	{
+		int Ⴀ
+		{
+			get;
+		}
+
+		void ႰႥ(int Ⴓ);
+
+		bool Ⴓ(ChatmanAction Ⴓ, string Ⴅ, ႷႭႣ.Ⴃ Ⴐ, Ⴈ Ⴈ);
+	}
+	public interface Ⴓ : Ⴈ
+	{
+		new bool Ⴐ
+		{
+			get;
+			set;
+		}
+
+		new bool Ⴈ
+		{
+			get;
+			set;
+		}
+
+		new DateTime Ⴓ
+		{
+			get;
+			set;
+		}
+	}
+	public interface Ⴗ
+	{
+		[XmlAttribute("Name")]
+		string ScenarioName
+		{
+			get;
+			set;
+		}
+
+		[XmlAttribute("Category")]
+		string Category
+		{
+			get;
+			set;
+		}
+
+		[XmlAttribute("Priority")]
+		int Priority
+		{
+			get;
+			set;
+		}
+
+		[XmlAttribute("Group")]
+		string ScenarioGroup
+		{
+			get;
+			set;
+		}
+
+		[XmlElement("TextMessage")]
+		string TextMessage
+		{
+			get;
+			set;
+		}
+
+		[XmlElement("RequestedActivity")]
+		QnAScenarioMatchActivity? RequestedActivity
+		{
+			get;
+			set;
+		}
+	}
+}

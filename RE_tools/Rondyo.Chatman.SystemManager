@@ -1,0 +1,1390 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.SystemManager.dll
+// Rondyo.Chatman.SystemManager, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Configuration;
+using Rondyo.Chatman.Framework.Utils;
+using Rondyo.Chatman.GUI.Infrastructure;
+using Rondyo.Chatman.GUI.Manager;
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows.Forms;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+using ႣႥ;
+using ႥႥႤ;
+using ႥႥႥ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႣ;
+using ႥႥႨႥ;
+using ႥႥႨႨ;
+using ႥႥႨႭ;
+using ႥႥႨႰ;
+using ႥႥႳႰ;
+using ႥႰႰ;
+using ႭႠႭ;
+using ႭႤႰ;
+using ႭႨႰ;
+using ႰႰ;
+using ႷႭႠ;
+using ႷႭႣ;
+using ႷႭႥ;
+using ႷႭႨ;
+using ႷႭႳ;
+
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyTrademark("")]
+[assembly: ComVisible(false)]
+[assembly: Guid("6f9a7b4f-9ee7-4db8-91d2-03743fb113a0")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCopyright("© 2008 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Rondyo.Chatman.Configuration
+{
+	[Serializable]
+	[XmlType(AnonymousType = true)]
+	[GeneratedCode("xsd", "2.0.50727.1432")]
+	[DebuggerStepThrough]
+	[DesignerCategory("code")]
+	[XmlRoot(ElementName = "HostedComponents", Namespace = "", IsNullable = false)]
+	public class HostedComponents
+	{
+		private HostedComponentsHostedComponent[] itemsField;
+
+		[XmlElement("HostedComponent", Form = XmlSchemaForm.Unqualified)]
+		public HostedComponentsHostedComponent[] Items
+		{
+			get
+			{
+				return itemsField;
+			}
+			set
+			{
+				itemsField = value;
+			}
+		}
+	}
+	[Serializable]
+	[DebuggerStepThrough]
+	[DesignerCategory("code")]
+	[GeneratedCode("xsd", "2.0.50727.1432")]
+	[XmlType(AnonymousType = true)]
+	public class HostedComponentsHostedComponent
+	{
+		private string idField;
+
+		private string nameField;
+
+		private string assemblyPathField;
+
+		[XmlAttribute]
+		public string Id
+		{
+			get
+			{
+				return idField;
+			}
+			set
+			{
+				idField = value;
+			}
+		}
+
+		[XmlAttribute]
+		public string Name
+		{
+			get
+			{
+				return nameField;
+			}
+			set
+			{
+				nameField = value;
+			}
+		}
+
+		[XmlAttribute]
+		public string AssemblyPath
+		{
+			get
+			{
+				return assemblyPathField;
+			}
+			set
+			{
+				assemblyPathField = value;
+			}
+		}
+	}
+}
+namespace ႣႨႰ
+{
+	[DebuggerNonUserCode]
+	[CompilerGenerated]
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
+	internal sealed class Ⴐ
+	{
+		private static ResourceManager m_Ⴐ;
+
+		private static CultureInfo m_Ⴐ;
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static ResourceManager Ⴍ
+		{
+			get
+			{
+				int num = 2;
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = (object.ReferenceEquals(ႣႨႰ.Ⴐ.m_Ⴐ, null) ? 1 : 0);
+						break;
+					case 1:
+					{
+						ResourceManager resourceManager = (ResourceManager)(object)(ႣႨႰ.Ⴐ.m_Ⴐ = (CultureInfo)(object)new ResourceManager("ႣႨႰ.Ⴐ", typeof(Ⴐ).Assembly));
+						num = 0;
+						break;
+					}
+					case 0:
+						return (ResourceManager)(object)ႣႨႰ.Ⴐ.m_Ⴐ;
+					}
+				}
+			}
+		}
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static CultureInfo Ⴍ
+		{
+			get
+			{
+				return m_Ⴐ;
+			}
+			set
+			{
+				m_Ⴐ = value;
+			}
+		}
+
+		internal Ⴐ()
+		{
+		}
+	}
+}
+namespace ႭႠႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string ႠႣႣ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x834D39B;
+			string result;
+			if ((result = ႭႠႭ.Ⴍ.m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "ऎ\u05b9պऊמೡచ\u0df7ह";
+				break;
+			case 1:
+				obj = "\u0dccण\u05b1ՠग\u05ec\u0cf9ఒ\u0dffत\u05b6ճफ़מ೬ఈ\u0df1न\u05b5Դळ\u05ec\u0cfbచ\u0de2न\u05aaկ\u094eװಹ\u0c5b\u0dd3न\u05aaէगע\u0cfb\u0c41ඥशשթ";
+				break;
+			case 2:
+				obj = "\u0c5bතऽ\u05b9էऍפ\u0ce3ఞඥठ\u05b7հछ\u05a4";
+				break;
+			case 3:
+				obj = "\u0cc6\u0c02\u0df6ह\u05bdչफ़׀\u0cf4క\u0de4प\u05bdզफ़פ\u0cfbఒ\u0df1त\u05b9ոग\u05f7\u0cf4ఏ෬ढ\u05b6Դझע\u0cf8ఋ෩न\u05acձ";
+				break;
+			case 4:
+				obj = "\u05ce\u0cfdచ\u0df1ठ\u05b9պऽע\u0cfbఏ\u0de0व\u05acԴग\u05feವక෪ह\u05f8սऐפೡఒ\u0de4ड\u05b1ծछשವఒ෫७\u05a8յऍ\u05fe\u0cfc\u0c0d\u0de0७\u05b5ջईר\u0cb4\u0c5bෆब\u05b6ՠफ़\u05f8\u0ce5ట\u0de4ह\u05bdԴऊעವ\u0c3a෦ह\u05b1բछ׀\u0cfaట\u0de0\u0963";
+				break;
+			case 5:
+				obj = "भר೦ఈ෬ढ\u05b6Դऍ\u05fa\u0cfcఏ෦थ\u05f8հछ\u05f9\u0cf0ఘ\u0df1न\u05bcԺफ़ן\u0cf0చ\u0df6ढ\u05b6Ԯफ़\u05f6ಥఆ";
+				break;
+			case 6:
+				obj = "\u0557ख\u05ecೡఖ\u0de4णֈյऋ\u05fe\u0cfcక\u0de2";
+				break;
+			case 7:
+				obj = "\u0599ոऌר\u0cf4ట\u0dfc७\u05a8յऋ\u05fe\u0cf0టඥढ\u05aaԴऎ\u05ecೠఈ\u0de0७\u05aaաऐף\u0cfcక\u0de2७\u05f5Դङרೡఏ෬ण\u05bfԴऑ\u05f8ೡ";
+				break;
+			case 8:
+				obj = "झ\u05b9աऍפ\u0cfbజඥम\u05b0յऊנ\u0cf4కඥन\u05b6ճगף\u0cf0";
+				break;
+			case 9:
+				obj = "\u0dd5ब\u05adէछ\u05ad\u0cf6ఔ෨ऽ\u05b4ձऊר";
+				break;
+			case 10:
+				obj = "\u0c3a෩\u093f\u05bdյच״ವఉ\u0de0\u093e\u05adչछשವఔ\u0df7७\u05aaձऍ\u05f8\u0cf8ఞඥ\u093f\u05adպऐפ\u0cfbజඥॠ\u05f8ճछ\u05f9ೡఒ෫प\u05f8ջऋ\u05f9\u0cbb\u0c5bත\u093e\u05acյऊרಯ\u0c5b\u0dfeॽ\u05a5Խ";
+				break;
+			case 11:
+				obj = "\u0cd6ఓ\u0de4ह\u05b5յऐמ\u0cfdఎ\u0df1ह\u05b1պङ\u05c9\u0cfaఌ෫";
+				break;
+			case 12:
+				obj = "ן\u0cf0ఈ\u0df0ठ\u05b1պङ\u05ad\u0cf6ఓ\u0de4ह\u05b5յऐ\u05ad\u0cf0క\u0de2त\u05b6ձ";
+				break;
+			case 13:
+				obj = "बר೦ఎ෨न\u05f8շऑנ\u0ce5గ\u0de0ह\u05bd";
+				break;
+			case 14:
+				obj = "՝ऐפೡఒ\u0de4ड\u05b1ծगףೲ\u0c5b\u0de1ऴ\u05b6յओפ\u0cf6చ෩ड\u05a1Դखע೦ఏ\u0de0ऩ\u05f8շऑנ\u0ce5ఔ෫न\u05b6ՠऍ";
+				break;
+			case 15:
+				obj = "\u0591պग\u05f9\u0cfcచ෩त\u05a2սऐתವ";
+				break;
+			case 16:
+				obj = "ऎ\u05b0յऊנ\u0cf4క\u0dd7न\u05abաओרೱ";
+				break;
+			case 17:
+				obj = "ව\u093f\u05aaջऌ\u05ad\u0cfcక෬ह\u05b1յऒפ೯ఒ෫प\u05f8ռऑ\u05feೡఞ\u0de1७\u05bbջओ\u05fd\u0cfaక\u0de0ण\u05acԴअ\u05bd೨\u0c5b෬ण\u05f8Շइ\u05feೡఞ෨\u0900\u05b9պटת\u0cf0ఉණ";
+				break;
+			case 18:
+				obj = "\u0c3f\u0dfcण\u05b9չग\u05ee\u0cf4గ෩ऴ\u05f8ռऑ\u05feೡఞ\u0de1७\u05bbջओ\u05fd\u0cfaక\u0de0ण\u05acէफ़פ\u0cfbఒ\u0df1त\u05b9ոग\u05f7\u0cf0ట";
+				break;
+			case 19:
+				obj = "\u0cddఔ\u0df6ह\u05bdհऽע\u0cf8ఋ෪ण\u05bdպऊ\u05fe\u0cbbట\u0de4ह";
+				break;
+			case 20:
+				obj = "\u05cc೦ఈ\u0de0ठ\u05baոइם\u0cf4ఏ෭";
+				break;
+			case 21:
+				obj = "भ״೦ఏ\u0de0ठ\u0595յऐ\u05ecೲఞ\u0df7\u093e\u05f8Րग\u05fe\u0ce5ఔ\u0df6न\u05f8շटס\u0cf9ఞ\u0de1७\u05afսऊץವఋ\u0de4\u093f\u05b9չछ\u05f9\u0cf0ఉ\u0df6ॷ\u05f8հग\u05fe\u0ce5ఔ\u0df6त\u05b6ճ\u0943\u05f6ಥఆඩ७\u05bcսऍ\u05fd\u0cfaఈ\u0de0ऩץկ\u094fװ";
+				break;
+			case 22:
+				obj = "Շइ\u05feೡఞ෨७\u05acձऌנ\u0cfcక\u0de4ह\u05b1պङ\u05a3\u0cbb\u0c55";
+				break;
+			case 23:
+				obj = "\u059dզऌע೧\u0c5b\u0df1न\u05aaչगף\u0cf4ఏ෬ण\u05bfԴखע೦ఏ\u0de0ऩ\u05f8շऑנ\u0ce5ఔ෫न\u05b6ՠफ़\u05f6ಥఆඥत\u05b6Դभ״೦ఏ\u0de0ठ\u0595յऐ\u05ecೲఞ\u0df7\u0963";
+				break;
+			case 24:
+				obj = "ङ\u05bdզओפ\u0cfbచ\u0df1त\u05b6ճफ़ׯೠఒ෩ह\u05f5սऐ\u05ad\u0cf6ఔ෨ऽ\u05b7պछףೡఈ";
+				break;
+			case 25:
+				obj = "\u0de2ड\u05b7նटסವఘ෪ण\u05acձआ\u05f9";
+				break;
+			case 26:
+				obj = "ఉ\u0de0ठ\u05b7ՠछ\u05adೠఋ\u0de1ब\u05acձफ़ר\u0cfbజ෬ण\u05bdԴओ\u05ec\u0cfbచ\u0de2न\u05aa";
+				break;
+			case 27:
+				obj = "\u0cc6\u0c02\u0df6ह\u05bdչफ़\u05f9\u0cf0ఉ෨त\u05b6յऊרೱ";
+				break;
+			case 28:
+				obj = "מ೬ఈ\u0df1न\u05b5Դर\u05c2\u0cc1\u0c5b\u0df1न\u05aaչगף\u0cf4ఏ\u0de0ऩ";
+				break;
+			case 29:
+				obj = "ऽץ\u0cf4ఏ෨ब\u05b6Շऊ\u05ec೧ఏ\u0de0ऩ";
+				break;
+			case 30:
+				obj = "՛ऐר\u0cd8ఒ෫स\u05acձ\u093f\u05ebೡఞ\u0df7ञ\u05acյऌ\u05f9";
+				break;
+			case 31:
+				obj = "ֈզऑ\u05ec\u0cf6ఏ෬\u093b\u05bdՑऐת\u0cfcక\u0de0ऄ\u05bcոछ";
+				break;
+			case 32:
+				obj = "ऎ\u05b0յऊנ\u0cf4కවण\u05bfսऐרವఈ෭स\u05acՠगףೲ\u0c5b\u0de1ढ\u05afպॐ\u05a3\u0cbb";
+				break;
+			case 33:
+				obj = "\u0dd5\u093f\u05b7շछ\u05fe೦ఒ෫प\u05f8Գऌר೦ఞ\u0df1झ\u05bdզऍע\u0cfbచ෩त\u05acսछ\u05feಲ\u0c5b෦ढ\u05b5չटףೱ\u0c55ණ\u0963\u05f6";
+				break;
+			case 34:
+				obj = "స෭ब\u05acչटף\u0cd8చ෬ण\u05f6հट\u05f9";
+				break;
+			case 35:
+				obj = "\u0cc6ఋ\u0de0म\u05b1յऒ\u05cc\u0cf6ఏ෬ढ\u05b6էॐש\u0cf4ఏ";
+				break;
+			case 36:
+				obj = "\u05c9\u0cf4ఏ\u0de4";
+				break;
+			case 37:
+				obj = "ऱ\u05f9\u0cfdఞ\u0df7७\u05b1պऍ\u05f9\u0cf4క෦न\u05f8սऍ\u05ad೧ఎ෫ण\u05b1պङ\u05ac\u0cb4ౚ";
+				break;
+			case 38:
+				obj = "Նछנ\u0cfcక\u0de1न\u05aaէॐש\u0cf4ఏ";
+				break;
+			case 39:
+				obj = "ֈձऌ\u05fe\u0cfaక\u0de4ड\u05b1ՠगר೦";
+				break;
+			case 40:
+				obj = "घ\u05b6ռटףೱగ\u0de0ऩ\u05f8յऎ\u05fdೱఔ෨ब\u05b1պफ़ר೭ఘ\u0de0ऽ\u05acսऑף";
+				break;
+			case 41:
+				obj = "";
+				break;
+			case 42:
+				obj = "ఎ\u0df6न\u05aa";
+				break;
+			case 43:
+				obj = "\u0cc5ఞ\u0df7\u093e\u05b7պटס\u0cfcఏ෬न\u05abԴऌר೦ఞ\u0df1न\u05bcԺ";
+				break;
+			case 44:
+				obj = "ט\u0cfbఓ\u0de4ण\u05bcոछשವఏ෭\u093f\u05bdյच\u05ad\u0cf0\u0c03෦न\u05a8ՠगע\u0cfb";
+				break;
+			case 45:
+				obj = "\u093f\u05eeೡఒ෪ण\u0591չऎע೧ఏ\u0de0ऩ\u058bաझ\u05ee\u0cf0ఈ\u0df6फ\u05adոऒ״";
+				break;
+			case 46:
+				obj = "Օऌר\u0cccఔ\u0df0ञ\u05adզछ";
+				break;
+			case 47:
+				obj = "\u059bյऐ\u05f9\u0cdcఖ\u0df5ढ\u05aaՠ\u093f\u05eeೡఒ෪ण";
+				break;
+			case 48:
+				obj = "ऎ\u05b9պऊ\u05c4\u0cf8ఋ෪\u093f\u05acՄछ\u05ff೦ఔ෫ब\u05b4սऊ״";
+				break;
+			case 49:
+				obj = "ෆब\u05b6ՠभ\u05f9\u0cf4ఉ\u0df1ट\u05bdսऐ\u05feೡచ෩ड";
+				break;
+			case 50:
+				obj = "స෭ब\u05acչटף\u0cd6చ\u0df5ह\u05b1ջऐ";
+				break;
+			case 51:
+				obj = "\u0cd1ఞ෩न\u05acձ\u093f\u05fd\u0ce5ఈහ\u093f\u05bdՍऑ\u05f8\u0cc6ఎ\u0df7न";
+				break;
+			case 52:
+				obj = "\u05c9\u0cf0గ\u0de0ह\u05bdՕऎ\u05fd೦\u0c3a\u0df7नցջऋמೠఉ\u0de0ॿ";
+				break;
+			case 53:
+				obj = "\u093aפ\u0cf4గ෪प\u059bյऎ\u05f9\u0cfcఔ෫";
+				break;
+			case 54:
+				obj = "Մछ\u05ff೦ఔ෫ब\u05b4սऊ״\u0cdcఖ\u0df5ढ\u05aaՠछש\u0cc6ఎ෦म\u05bdէऍ\u05ebೠగ෩ऴ";
+				break;
+			case 55:
+				obj = "ֈոछ\u05ec೦ఞෆड\u05b7էछ\u05cc\u0cfbట\u0dd1\u093f\u05a1Օङ\u05ec\u0cfcక";
+				break;
+			case 56:
+				obj = "ट\u05bdէछ\u05f9\u0cd4గ෩उ\u05b9ՠट\u05cc೧ఞ\u0ddcढ\u05adՇऋ\u05ff\u0cf0";
+				break;
+			case 57:
+				obj = "\u0dd7न\u05abձऊם\u0cf0ఉ\u0df6ढ\u05b6յऒפೡఒ\u0de0\u093e\u0599զछה\u0cfaఎ\u0dd6स\u05aaձ";
+				break;
+			case 58:
+				obj = "\u0c29\u0de0\u093e\u05bdՠमר೧ఈ෪ण\u05b9ոग\u05f9\u0cfcఞ\u0df6ऌ\u05aaձधעೠన\u0df0\u093f\u05bdԦ";
+				break;
+			case 59:
+				obj = "\u0cc7ఞ\u0df6न\u05acՄछ\u05ff೦ఔ෫ब\u05b4սऊפ\u0cf0ఈහ\u093f\u05bdՍऑ\u05f8\u0cc6ఎ\u0df7न֍էछ\u05ff";
+				break;
+			case 60:
+				obj = "ןೠక෫त\u05b6ճ\u093c\u05ff\u0cfaఌ\u0df6न\u05aaՑआ\u05f9\u0cf0క\u0df6त\u05b7պऍ\u05c4\u0cfbఈ\u0df1ब\u05b4ոट\u05f9\u0cfcఔ෫";
+				break;
+			case 61:
+				obj = "भ\u05f9\u0cf4ఉ\u0df1त\u05b6ճफ\u05fd";
+				break;
+			case 62:
+				obj = "Ձऎש\u0cf4ఏ\u0de0ऋ\u05b9սऒרೱశ\u0de0\u093e\u05abյङר";
+				break;
+			case 63:
+				obj = "֍դच\u05ecೡఞසब\u05b1ոछש\u0cd8ఞ\u0df6\u093e\u05b9ճछט\u0cd4స";
+				break;
+			case 64:
+				obj = "घ\u05a8հट\u05f9\u0cf0ఽ\u0de4त\u05b4ձचי\u0cfcఏ෩न";
+				break;
+			case 65:
+				obj = "\u0dd0ऽ\u05bcյऊר\u0cc7ఞ෴स\u05b1զछ\u05fe\u0cd4ట෨त\u05b6";
+				break;
+			case 66:
+				obj = "మ\u0df5ऩ\u05b9ՠछן\u0cf0ఊ\u0df0त\u05aaձऍ\u05ccೱఖ෬ण\u058cսऊס\u0cf0";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႭႠႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			ႭႠႭ.Ⴍ.m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႭႠႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[67];
+		}
+	}
+}
+namespace ႷႨႰ
+{
+	[DebuggerNonUserCode]
+	[CompilerGenerated]
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
+	internal sealed class Ⴅ
+	{
+		private static ResourceManager m_Ⴅ;
+
+		private static CultureInfo m_Ⴅ;
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static ResourceManager Ⴓ
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_0034, IL_0060
+				if (object.ReferenceEquals(ႷႨႰ.Ⴅ.m_Ⴅ, null))
+				{
+					if (561 >= 561 - 231)
+					{
+					}
+					ResourceManager ⴅ = new ResourceManager("ႷႨႰ.Ⴅ", typeof(Ⴅ).Assembly);
+					do
+					{
+						ႷႨႰ.Ⴅ.m_Ⴅ = (CultureInfo)(object)ⴅ;
+					}
+					while (432 <= 432 - 202);
+				}
+				return (ResourceManager)(object)ႷႨႰ.Ⴅ.m_Ⴅ;
+			}
+		}
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static CultureInfo Ⴓ
+		{
+			get
+			{
+				return m_Ⴅ;
+			}
+			set
+			{
+				m_Ⴅ = value;
+			}
+		}
+
+		internal Ⴅ()
+		{
+		}
+
+		internal static string ႣႳႷ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679797), m_Ⴅ);
+		}
+
+		internal static string ႣႳႤ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679771), m_Ⴅ);
+		}
+
+		internal static string ႣႳႥ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679786), m_Ⴅ);
+		}
+
+		internal static string ႣႳႨ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679785), m_Ⴅ);
+		}
+
+		internal static string ႣႳႠ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679790), m_Ⴅ);
+		}
+
+		internal static string ႣႳႭ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679788), m_Ⴅ);
+		}
+
+		internal static string ႣႳႰ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679778), m_Ⴅ);
+		}
+
+		internal static string ႣႳႼ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679777), m_Ⴅ);
+		}
+
+		internal static string ႼႭ()
+		{
+			return ႷႨႰ.Ⴅ.Ⴓ.GetString(ႭႠႭ.Ⴍ.ႠႣႣ(137679776), m_Ⴅ);
+		}
+	}
+	public class Ⴈ : IDisposable, ႷႭႳ.Ⴗ
+	{
+		public delegate void ႨႰႨ(Exception Ⴍ);
+
+		private static Ⴈ Ⴗ;
+
+		public static ႷႭႣ.Ⴐ Ⴅ;
+
+		private HostedComponents Ⴅ;
+
+		private List<ႷႭႠ.Ⴓ> Ⴅ;
+
+		private ႭႨႰ.Ⴐ Ⴅ;
+
+		private ႷႭႨ.Ⴀ Ⴅ;
+
+		private ႷႭႨ.Ⴀ m_Ⴈ;
+
+		private static ႨႰႨ Ⴅ;
+
+		private ႥႰႰ.Ⴈ Ⴅ;
+
+		private bool Ⴃ = true;
+
+		private bool m_Ⴈ;
+
+		private readonly object Ⴍ = new object();
+
+		private bool m_Ⴓ;
+
+		private bool Ⴗ;
+
+		public ႷႭႣ.Ⴐ Ⴐ => (ႷႭႣ.Ⴐ)ႷႨႰ.Ⴈ.Ⴅ;
+
+		public unsafe static Ⴈ Ⴓ => (*(Ⴈ*)(&ႷႨႰ.Ⴈ.Ⴗ)) ?? (*(Ⴈ*)(&ႷႨႰ.Ⴈ.Ⴗ) = new Ⴈ());
+
+		public bool Ⴓ
+		{
+			get
+			{
+				return Ⴗ;
+			}
+			set
+			{
+				Ⴗ = value;
+			}
+		}
+
+		public static event ႨႰႨ Ⴐ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				ႷႨႰ.Ⴈ.Ⴅ = (ႥႰႰ.Ⴈ)(object)(ႨႰႨ)Delegate.Combine((Delegate)(object)ႷႨႰ.Ⴈ.Ⴅ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				ႷႨႰ.Ⴈ.Ⴅ = (ႥႰႰ.Ⴈ)(object)(ႨႰႨ)Delegate.Remove((Delegate)(object)ႷႨႰ.Ⴈ.Ⴅ, value);
+			}
+		}
+
+		public unsafe Ⴈ()
+		{
+			*(ႷႭႨ.Ⴀ*)(&this.Ⴅ) = ႷႭႨ.Ⴀ.Ⴐ;
+		}
+
+		static Ⴈ()
+		{
+			ႷႨႰ.Ⴈ.Ⴐ = (ႨႰႨ)new object();
+		}
+
+		~Ⴈ()
+		{
+			ႨႭႰ(Ⴗ: false);
+		}
+
+		public unsafe void ႤႰ(bool Ⴀ, bool Ⴍ)
+		{
+			lock (ႷႨႰ.Ⴈ.Ⴐ)
+			{
+				Ⴓ = Ⴀ;
+				ႥႥႨ.Ⴗ.ႳႭ(ႭႠႭ.Ⴍ.ႠႣႣ(137679770), Ⴓ ? ႭႠႭ.Ⴍ.ႠႣႣ(137679769) : string.Empty, ႥႥႨႰ.Ⴄ.ႨႳႠ());
+				try
+				{
+					ႨႣႤ(Ⴀ);
+				}
+				catch (Exception ex)
+				{
+					ႨႭႰ(Ⴗ: true);
+					ႥႥႨ.Ⴗ.ႨႷႼ(ex);
+					if (ႷႨႰ.Ⴈ.Ⴅ != null)
+					{
+						ႷႨႰ.Ⴈ.Ⴅ(new Exception(ႷႨႰ.Ⴅ.ႣႳႤ() + ex.Message, ex));
+						return;
+					}
+					throw new Exception(ႷႨႰ.Ⴅ.ႣႳႤ() + ex.Message, ex);
+				}
+				ႥႥႨႥ.Ⴓ.ႨႷႼ(ႨႷႷ);
+				if (ႷႨႰ.Ⴈ.Ⴅ != null)
+				{
+					((ႷႭႣ.Ⴐ)ႷႨႰ.Ⴈ.Ⴅ).Ⴐ += ႨႣႼ;
+				}
+				*(ႷႭႨ.Ⴀ*)(&this.Ⴅ) = ႷႭႨ.Ⴀ.Ⴈ;
+			}
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679768));
+		}
+
+		public void ႨႣႤ(bool Ⴀ)
+		{
+			int num = 0;
+			ႣႥ.Ⴈ ⴈ = default(ႣႥ.Ⴈ);
+			GuiManager ⴃ = default(GuiManager);
+			ႰႰ.Ⴐ ⴐ = default(ႰႰ.Ⴐ);
+			ႭႤႰ.Ⴈ ⴈ2 = default(ႭႤႰ.Ⴈ);
+			while (true)
+			{
+				switch (num)
+				{
+				case 7:
+					return;
+				default:
+					ⴈ = new ႣႥ.Ⴈ(Ⴍ: false);
+					num = ((!ⴈ.Ⴗ) ? 5 : 2);
+					break;
+				case 2:
+					Ⴀ = true;
+					num = 5;
+					break;
+				case 5:
+					ⴈ.Ⴐ(Ⴀ, Ⴀ, Ⴈ: false);
+					ⴈ.Ⴀ.ႨႤႥ(ႷႭႠ.Ⴗ.Ⴓ);
+					ⴃ = new GuiManager();
+					num = ((!Ⴀ) ? 3 : 9);
+					break;
+				case 9:
+					this.Ⴅ = (ႥႰႰ.Ⴈ)(object)new ႭႨႰ.Ⴐ(this, ⴈ, null, ⴃ, null, null);
+					Ⴓ = true;
+					num = 7;
+					break;
+				case 3:
+					ⴐ = new ႰႰ.Ⴐ(ⴈ);
+					Ⴅ = new ႥႰႰ.Ⴈ(ⴈ.Ⴀ);
+					Ⴅ.ႰႠ();
+					ⴈ2 = new ႭႤႰ.Ⴈ(ⴈ);
+					num = ((this.Ⴅ != null) ? 8 : 6);
+					break;
+				case 6:
+					this.Ⴅ = (ႥႰႰ.Ⴈ)(object)new ႭႨႰ.Ⴐ(this, ⴈ, ⴈ2, ⴃ, ⴐ, Ⴅ);
+					num = 10;
+					break;
+				case 8:
+					((ႭႨႰ.Ⴐ)(object)this.Ⴅ).Ⴗ((ႷႭႥ.Ⴗ)ⴈ, (ႷႭႥ.Ⴓ)ⴈ2, (ႷႭႨ.Ⴜ)ⴐ, (ႷႭႳ.Ⴐ)Ⴅ);
+					num = 10;
+					break;
+				case 10:
+					num = ((((ႭႨႰ.Ⴐ)(object)this.Ⴅ).Ⴃ.Ⴗ.Ⴄ == null) ? 1 : 4);
+					break;
+				case 4:
+					((ႭႨႰ.Ⴐ)(object)this.Ⴅ).Ⴃ.Ⴗ.Ⴄ.ႰႼ();
+					num = 1;
+					break;
+				case 1:
+					Ⴓ = false;
+					num = 7;
+					break;
+				}
+			}
+		}
+
+		public bool ႨႷႳ()
+		{
+			//Discarded unreachable code: IL_0005, IL_002f, IL_00a9, IL_00d7, IL_0114, IL_011a, IL_0149
+			if (this.Ⴅ != null)
+			{
+				((ႭႨႰ.Ⴐ)(object)this.Ⴅ).Ⴗ((ႷႭႥ.Ⴗ)null, (ႷႭႥ.Ⴓ)null, (ႷႭႨ.Ⴜ)null, (ႷႭႳ.Ⴐ)null);
+				goto IL_00e8;
+			}
+			if (993 >= 993 - 916)
+			{
+				throw new ApplicationException(ႭႠႭ.Ⴍ.ႠႣႣ(137679775));
+			}
+			goto IL_0031;
+			IL_00e8:
+			ႣႥ.Ⴈ ⴈ = new ႣႥ.Ⴈ(Ⴍ: false);
+			bool result = default(bool);
+			if (ⴈ.Ⴗ)
+			{
+				if (472 >= 472 - 249)
+				{
+					result = false;
+					goto IL_011f;
+				}
+			}
+			goto IL_0031;
+			IL_011f:
+			return result;
+			IL_0031:
+			ⴈ.Ⴐ(Ⴍ: false, Ⴓ: false, Ⴈ: false);
+			ႰႰ.Ⴐ ⴈ2 = new ႰႰ.Ⴐ(ⴈ);
+			ႭႤႰ.Ⴈ ⴓ = new ႭႤႰ.Ⴈ(ⴈ);
+			Ⴅ = new ႥႰႰ.Ⴈ(ⴈ.Ⴀ);
+			Ⴅ.ႰႠ();
+			((ႭႨႰ.Ⴐ)(object)this.Ⴅ).Ⴗ((ႷႭႥ.Ⴗ)ⴈ, (ႷႭႥ.Ⴓ)ⴓ, (ႷႭႨ.Ⴜ)ⴈ2, (ႷႭႳ.Ⴐ)Ⴅ);
+			Ⴓ = false;
+			if (((ႭႨႰ.Ⴐ)(object)this.Ⴅ).Ⴃ.Ⴗ.Ⴄ != null)
+			{
+				if (93 <= 93 - 2)
+				{
+					goto IL_011f;
+				}
+				ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.Ⴄ.ႰႼ();
+				if (873 < 873 - 541)
+				{
+					goto IL_00e8;
+				}
+			}
+			result = true;
+			if (832 <= 832 - 617)
+			{
+				goto IL_00e8;
+			}
+			goto IL_011f;
+		}
+
+		private unsafe void ႨႣႼ(ႷႭႨ.Ⴃ Ⴀ)
+		{
+			ႥႥႨ.Ⴗ.ႳႭ(ႭႠႭ.Ⴍ.ႠႣႣ(137679774), Ⴀ);
+			try
+			{
+				switch (Ⴀ)
+				{
+				case ႷႭႨ.Ⴃ.Ⴃ:
+					Ⴃ = false;
+					ႤႠႭ();
+					break;
+				case ႷႭႨ.Ⴃ.Ⴓ:
+					Ⴃ = true;
+					ႤႠႣ();
+					break;
+				case ႷႭႨ.Ⴃ.Ⴍ:
+					if (Ⴃ)
+					{
+						*(bool*)(&this.Ⴐ) = false;
+						ႤႠႣ();
+					}
+					break;
+				case ႷႭႨ.Ⴃ.Ⴀ:
+					*(bool*)(&this.Ⴐ) = true;
+					ႤႠႭ();
+					break;
+				case ႷႭႨ.Ⴃ.Ⴜ:
+				case ႷႭႨ.Ⴃ.ႣႣ:
+					if (!(*(bool*)(&this.Ⴐ)))
+					{
+						ႤႠႭ();
+						ႤႠႣ();
+					}
+					break;
+				case ႷႭႨ.Ⴃ.ႣႷ:
+					ႤႠႭ();
+					break;
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+		}
+
+		public unsafe void ႤႠႭ()
+		{
+			lock (ႷႨႰ.Ⴈ.Ⴐ)
+			{
+				ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.ႥႥ(ႭႠႭ.Ⴍ.ႠႣႣ(137679773));
+				Monitor.Enter(Ⴍ);
+				try
+				{
+					if (m_Ⴈ || *(ႷႭႨ.Ⴀ*)(&this.Ⴅ) == ႷႭႨ.Ⴀ.Ⴗ)
+					{
+						ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679772));
+						return;
+					}
+					m_Ⴈ = true;
+				}
+				catch
+				{
+					Monitor.Exit(Ⴍ);
+				}
+				try
+				{
+					ႭႨႰ.Ⴐ ⴐ = ႭႨႰ.Ⴐ.Ⴐ;
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679763));
+					if (!Ⴓ)
+					{
+						ⴐ.Ⴍ.Pause();
+						ⴐ.Ⴓ.ႨႨႰ();
+					}
+					ⴐ.Ⴃ.Ⴗ.ႨႥ();
+					ⴐ.Ⴅ.Ⴄ();
+					ⴐ.ႣႼ();
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679762));
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				}
+				finally
+				{
+					*(ႷႭႨ.Ⴀ*)(&this.m_Ⴈ) = *(ႷႭႨ.Ⴀ*)(&this.Ⴅ);
+					*(ႷႭႨ.Ⴀ*)(&this.Ⴅ) = ႷႭႨ.Ⴀ.Ⴗ;
+					Monitor.Enter(Ⴍ);
+					try
+					{
+						m_Ⴈ = false;
+					}
+					finally
+					{
+						Monitor.Exit(Ⴍ);
+					}
+				}
+			}
+		}
+
+		public unsafe void ႤႠႣ()
+		{
+			lock (ႷႨႰ.Ⴈ.Ⴐ)
+			{
+				lock (Ⴍ)
+				{
+					if (m_Ⴈ || *(ႷႭႨ.Ⴀ*)(&this.Ⴅ) != ႷႭႨ.Ⴀ.Ⴗ)
+					{
+						ႥႥႨ.Ⴗ.ႳႭ(ႭႠႭ.Ⴍ.ႠႣႣ(137679761), *(ႷႭႨ.Ⴀ*)(&this.Ⴅ));
+						return;
+					}
+					m_Ⴈ = true;
+				}
+				try
+				{
+					ႭႨႰ.Ⴐ ⴐ = ႭႨႰ.Ⴐ.Ⴐ;
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679767));
+					ⴐ.Ⴅ.Ⴀ();
+					ⴐ.Ⴃ.Ⴗ.ႨႤ();
+					if (!Ⴓ)
+					{
+						ⴐ.Ⴓ.ႨႨႨ();
+						ⴐ.Ⴍ.Resume();
+					}
+					ⴐ.ႼႰ();
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679766));
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				}
+				finally
+				{
+					*(ႷႭႨ.Ⴀ*)(&this.Ⴅ) = *(ႷႭႨ.Ⴀ*)(&this.m_Ⴈ);
+					lock (Ⴍ)
+					{
+						m_Ⴈ = false;
+					}
+				}
+			}
+			ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.ႥႥ(ႭႠႭ.Ⴍ.ႠႣႣ(137679755));
+		}
+
+		public void ႤႠႥ()
+		{
+			ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.ႥႥ(ႭႠႭ.Ⴍ.ႠႣႣ(137679760));
+			ႥႥႨႣ.Ⴀ.ႨႳႥ();
+		}
+
+		private void ႨႷႷ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679765));
+			ႨႷႥ();
+			foreach (ႷႭႠ.Ⴓ item in (List<ႷႭႠ.Ⴓ>)(object)this.Ⴅ)
+			{
+				try
+				{
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679764) + item.GetType().Name);
+					item.Ⴅ((ႷႭႠ.Ⴈ)this.Ⴅ);
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(string.Format(ႭႠႭ.Ⴍ.ႠႣႣ(137679754), item.GetType()), ⴓ);
+				}
+			}
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679753));
+		}
+
+		private unsafe void ႨႷႥ()
+		{
+			try
+			{
+				this.Ⴅ = (ႥႰႰ.Ⴈ)(object)Ⴈ<HostedComponents>.ႨႷႭ(ႣႳ.ႨႷႭ(ႭႠႭ.Ⴍ.ႠႣႣ(137679752)));
+				ႥႥႨႨ.Ⴈ.Ⴗ(((HostedComponents)(object)this.Ⴅ).Items, ႭႠႭ.Ⴍ.ႠႣႣ(137679759), out *(List<ႷႭႠ.Ⴓ>*)(&this.Ⴅ));
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+		}
+
+		public void Dispose()
+		{
+			ႨႭႰ(Ⴗ: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected void ႨႭႰ(bool Ⴗ)
+		{
+			ႥႥႨ.Ⴗ.ႳႥ(ႭႠႭ.Ⴍ.ႠႣႣ(137679758), Ⴗ, this.Ⴓ);
+			if (!this.Ⴓ && Ⴗ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679757));
+				try
+				{
+					if (this.Ⴅ != null)
+					{
+						IEnumerable<ႷႭႠ.Ⴓ> enumerable = ((IEnumerable<ႷႭႠ.Ⴓ>)this.Ⴅ).Reverse();
+						foreach (ႷႭႠ.Ⴓ item in enumerable)
+						{
+							try
+							{
+								item.Ⴈ((ႷႭႠ.Ⴈ)this.Ⴅ);
+							}
+							catch (Exception ⴍ)
+							{
+								ႥႥႨ.Ⴗ.ႳႭ(ႭႠႭ.Ⴍ.ႠႣႣ(137679756), item.GetType());
+								ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+							}
+						}
+					}
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679747));
+					SpecialActions.Self.Dispose();
+					if (ႷႨႰ.Ⴈ.Ⴅ != null)
+					{
+						((ႷႭႣ.Ⴐ)ႷႨႰ.Ⴈ.Ⴅ).Ⴐ -= ႨႣႼ;
+					}
+					this.Ⴅ = (ႥႰႰ.Ⴈ)(object)ႥႥႨႠ.Ⴈ.ႳႷ((ႭႨႰ.Ⴐ)(object)this.Ⴅ, ႭႠႭ.Ⴍ.ႠႣႣ(137679746));
+					Ⴅ = ႥႥႨႠ.Ⴈ.ႳႷ(Ⴅ, ႭႠႭ.Ⴍ.ႠႣႣ(137679745));
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679744));
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679751));
+				}
+			}
+			this.Ⴓ = true;
+		}
+	}
+	public static class Ⴓ
+	{
+		private static ႥႥႤ.Ⴀ Ⴅ;
+
+		private static Ⴗ Ⴅ;
+
+		public static event Ⴗ Ⴐ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				Ⴅ = (Ⴗ)Delegate.Combine(Ⴅ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				Ⴅ = (Ⴗ)Delegate.Remove(Ⴅ, value);
+			}
+		}
+
+		public static ႭႨႰ.Ⴐ ႨႷႰ()
+		{
+			ႥႥႨႣ.Ⴀ.Ⴐ = ႥႥႨႣ.Ⴐ.Ⴈ;
+			bool flag = false;
+			AppDomain.CurrentDomain.UnhandledException += ႳႠ;
+			Application.ThreadException += ႳႣ;
+			Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+			try
+			{
+				Ⴈ.Ⴓ.ႤႰ(ႥႥႳႰ.Ⴃ.Ⴐ, Ⴍ: false);
+				if (Ⴈ.Ⴓ.Ⴓ)
+				{
+					ႭႨႰ.Ⴐ.Ⴐ.Ⴍ.RunIntroWindow();
+					if (!ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴈ.Ⴐ.ႼႣ())
+					{
+						ႥႥႨႣ.Ⴀ.ႨႳႥ();
+						return null;
+					}
+					ႥႥႨႣ.Ⴀ.Ⴐ = ႥႥႨႣ.Ⴐ.Ⴈ;
+					if (!Ⴈ.Ⴓ.ႨႷႳ())
+					{
+						return null;
+					}
+					flag = true;
+				}
+				ႭႨႰ.Ⴐ.Ⴐ.Ⴍ.RunMainWindow(ႥႥႳႰ.Ⴃ.Ⴃ && !flag);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+				ႥႥႨႣ.Ⴀ.Ⴐ = ႥႥႨႣ.Ⴐ.Ⴄ;
+				ႥႥႨႭ.Ⴗ.ႳႷ(ႷႨႰ.Ⴅ.ႣႳႥ(), ႷႨႰ.Ⴅ.ႣႳႠ());
+				ႥႥႨႣ.Ⴀ.ႨႳႥ();
+				return null;
+			}
+			ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.ႥႥ(ႭႠႭ.Ⴍ.ႠႣႣ(137679750));
+			Ⴓ.Ⴅ = (Ⴗ)(object)ႥႥႤ.Ⴀ.ႳႥ(ႨႷႨ, TimeSpan.FromSeconds(30.0));
+			return ႭႨႰ.Ⴐ.Ⴐ;
+		}
+
+		private static void ႨႷႨ()
+		{
+			int num = 6;
+			ႷႭႥ.Ⴄ ⴄ = default(ႷႭႥ.Ⴄ);
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				case 5:
+					return;
+				default:
+					num = ((ႭႨႰ.Ⴐ.Ⴐ == null) ? 2 : 7);
+					break;
+				case 7:
+					num = ((ႭႨႰ.Ⴐ.Ⴐ.Ⴃ != null) ? 1 : 2);
+					break;
+				case 1:
+					num2 = ((ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ != null) ? 1 : 0);
+					goto IL_0065;
+				case 2:
+					num2 = 0;
+					goto IL_0065;
+				case 4:
+					num = 5;
+					break;
+				case 3:
+					ⴄ = ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ;
+					num = ((!ⴄ.ႥႥ(ႭႠႭ.Ⴍ.ႠႣႣ(137679749))) ? 8 : 0);
+					break;
+				case 8:
+					ⴄ.ႥႥ(ႭႠႭ.Ⴍ.ႠႣႣ(137679748));
+					num = 0;
+					break;
+				case 0:
+					{
+						((ႥႥႤ.Ⴀ)(object)Ⴓ.Ⴅ).Dispose();
+						num = 5;
+						break;
+					}
+					IL_0065:
+					num = ((num2 != 0) ? 3 : 4);
+					break;
+				}
+			}
+		}
+
+		public static void ႨႷႳ()
+		{
+			try
+			{
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679803));
+				if (ႭႨႰ.Ⴐ.Ⴐ != null && ႭႨႰ.Ⴐ.Ⴐ.Ⴃ != null && ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴀ != null)
+				{
+					ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴀ.ႨႤႥ(ႷႭႠ.Ⴗ.Ⴃ);
+				}
+				Ⴈ.Ⴓ.Dispose();
+				if (Ⴅ != null)
+				{
+					Ⴅ();
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+		}
+
+		public static void ႨႣႭ(bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_000d, IL_0023, IL_0042, IL_0051, IL_0080, IL_008f, IL_0099, IL_00b5, IL_00dd, IL_00ef, IL_00fb, IL_0100, IL_0125, IL_013a, IL_0154, IL_016f, IL_0174, IL_0194, IL_01ab, IL_01dc, IL_01e8, IL_01ed, IL_0206, IL_0232, IL_023a, IL_025f, IL_0280
+			bool flag = default(bool);
+			bool flag2 = default(bool);
+			bool flag3 = default(bool);
+			while (true)
+			{
+				int num;
+				if (!ႥႥႳႰ.Ⴃ.Ⴍ)
+				{
+					if (false)
+					{
+						goto IL_01ea;
+					}
+					num = (ႥႥႳႰ.Ⴃ.Ⴈ ? 1 : 0);
+				}
+				else
+				{
+					num = 1;
+				}
+				flag = ((byte)num != 0);
+				int num2;
+				if (ႥႥႳႰ.Ⴃ.Ⴄ)
+				{
+					num2 = 0;
+				}
+				else
+				{
+					if (false)
+					{
+						goto IL_010f;
+					}
+					num2 = ((!ႥႥႳႰ.Ⴃ.Ⴜ) ? 1 : 0);
+				}
+				flag2 = ((byte)num2 != 0);
+				goto IL_0013;
+				IL_01ea:
+				int num3 = 1;
+				goto IL_01ef;
+				IL_01ef:
+				flag2 = ((byte)num3 != 0);
+				goto IL_01f0;
+				IL_0085:
+				int ⴍ = ႥႥႳႰ.Ⴃ.Ⴈ ? 1 : 0;
+				goto IL_0105;
+				IL_00e2:
+				num3 = ((!ႥႥႳႰ.Ⴃ.Ⴜ) ? 1 : 0);
+				goto IL_01ef;
+				IL_010f:
+				if (flag2)
+				{
+					return;
+				}
+				if (695 >= 695 - 292)
+				{
+					ႼႭ();
+					if ((655 + 655 * 655) % 2 == 0)
+					{
+						return;
+					}
+					goto IL_0013;
+				}
+				goto IL_0028;
+				IL_0159:
+				if (862 > 862 - 171)
+				{
+				}
+				goto IL_009e;
+				IL_01f0:
+				if (!flag2)
+				{
+					if (248 <= 248 - 49)
+					{
+						goto IL_0028;
+					}
+					flag = (ႥႥႨႭ.Ⴗ.Ⴗ(ႷႨႰ.Ⴅ.ႼႭ(), ႷႨႰ.Ⴅ.ႣႳႷ(), ႥႥႨႭ.Ⴍ.Ⴅ) == ႥႥႨႭ.Ⴃ.Ⴃ);
+					if (612 < 612 - 138)
+					{
+						goto IL_0013;
+					}
+				}
+				if (363 <= 363 - 35)
+				{
+					goto IL_009e;
+				}
+				goto IL_0159;
+				IL_0105:
+				ႳႷႷ((byte)ⴍ != 0);
+				flag2 = !flag3;
+				goto IL_010f;
+				IL_0013:
+				if (!flag2)
+				{
+					if (98 > 98 - 16)
+					{
+						goto IL_0028;
+					}
+					goto IL_0085;
+				}
+				goto IL_009e;
+				IL_0028:
+				flag2 = Ⴍ;
+				if (!flag2)
+				{
+					if ((388 + 388 * 388) % 2 == 0)
+					{
+						break;
+					}
+					goto IL_01f0;
+				}
+				if (ႥႥႨႭ.Ⴗ.Ⴗ(ႷႨႰ.Ⴅ.ႣႳႰ(), ႷႨႰ.Ⴅ.ႣႳႷ(), ႥႥႨႭ.Ⴍ.Ⴅ) != ႥႥႨႭ.Ⴃ.Ⴃ)
+				{
+					goto IL_0159;
+				}
+				if (844 <= 844 - 506)
+				{
+					return;
+				}
+				flag = (ႥႥႨႭ.Ⴗ.Ⴗ(ႷႨႰ.Ⴅ.ႣႳႼ(), ႷႨႰ.Ⴅ.ႣႳႷ(), ႥႥႨႭ.Ⴍ.Ⴅ) == ႥႥႨႭ.Ⴃ.Ⴃ);
+				while (flag)
+				{
+					if (false)
+					{
+						continue;
+					}
+					goto IL_00e2;
+				}
+				goto IL_01ea;
+				IL_009e:
+				flag2 = flag;
+				if (!flag2)
+				{
+					if ((10 + 10 * 10) % 2 == 0)
+					{
+						return;
+					}
+					continue;
+				}
+				while (true)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႭႠႭ.Ⴍ.ႠႣႣ(137679802));
+					ႨႣႤ(Ⴍ);
+					int num4;
+					if (ႥႥႳႰ.Ⴃ.Ⴜ)
+					{
+						num4 = 1;
+					}
+					else
+					{
+						if (940 < 940 - 269)
+						{
+							goto IL_0177;
+						}
+						num4 = (ႥႥႳႰ.Ⴃ.Ⴈ ? 1 : 0);
+					}
+					flag3 = ((byte)num4 != 0);
+					goto IL_0177;
+					IL_0177:
+					if (ႥႥႳႰ.Ⴃ.Ⴜ)
+					{
+						break;
+					}
+					if (1003 < 1003 - 950)
+					{
+						continue;
+					}
+					goto IL_0085;
+				}
+				ⴍ = 1;
+				goto IL_0105;
+			}
+			ႥႥႨႭ.Ⴗ.ႳႷ(ႷႨႰ.Ⴅ.ႣႳႭ(), ႷႨႰ.Ⴅ.ႣႳႨ());
+		}
+
+		public static void ႼႭ()
+		{
+			try
+			{
+				File.Delete(ႣႳ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679801)));
+			}
+			catch
+			{
+			}
+			try
+			{
+				File.Delete(ႣႳ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679800)));
+			}
+			catch
+			{
+			}
+			try
+			{
+				File.Delete(Path.Combine(ႣႳ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679807)), ႭႠႭ.Ⴍ.ႠႣႣ(137679805)));
+			}
+			catch
+			{
+			}
+		}
+
+		public static void ႨႣႤ(bool Ⴍ)
+		{
+			if (!Ⴍ)
+			{
+				uint num = ႥႥႳႰ.Ⴅ.ႨႳႠ();
+				ႥႥႳႰ.Ⴅ.ႨႳႣ();
+				try
+				{
+					if (num != 0)
+					{
+						Process processById = Process.GetProcessById((int)num);
+						if (!processById.WaitForExit(7000))
+						{
+							ႥႥႨ.Ⴗ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679806));
+						}
+					}
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				}
+			}
+		}
+
+		public static void ႳႷႷ(bool Ⴍ)
+		{
+			string path = ႣႳ.ႨႷႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679804));
+			try
+			{
+				string[] directories = Directory.GetDirectories(path);
+				foreach (string text in directories)
+				{
+					if (Ⴍ || (!Ⴍ && (Path.GetFileName(text) ?? ႭႠႭ.Ⴍ.ႠႣႣ(137679794)).ToLower() != ႭႠႭ.Ⴍ.ႠႣႣ(137679793)))
+					{
+						FileUtils.DeleteDirectory(text);
+					}
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႭႠႭ.Ⴍ.ႠႣႣ(137679792));
+		}
+
+		private static void ႳႠ(object Ⴍ, UnhandledExceptionEventArgs Ⴓ)
+		{
+			Exception ⴓ = Ⴓ.ExceptionObject as Exception;
+			ႥႥႨ.Ⴗ.ႳႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679795), ⴓ);
+		}
+
+		private static void ႳႣ(object Ⴍ, ThreadExceptionEventArgs Ⴓ)
+		{
+			ႥႥႨ.Ⴗ.ႳႤ(ႭႠႭ.Ⴍ.ႠႣႣ(137679799), Ⴓ.Exception);
+		}
+	}
+	public delegate void Ⴗ();
+}

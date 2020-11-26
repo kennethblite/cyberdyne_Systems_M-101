@@ -1,0 +1,831 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.WebChannel.dll
+// Rondyo.Chatman.WebChannel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: AnyCPU (64-bit preferred)
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using System;
+using System.IO;
+using System.Net;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using ႥႥႨႣ;
+using ႥႥႨႷ;
+using ႭႤႭ;
+
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: Guid("4ef82d46-d65b-4b81-9ff9-c4a8f5f06a22")]
+[assembly: AssemblyTitle("Rondyo.Chatman.WebChannel")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyProduct("Rondyo.Chatman.WebChannel")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyDescription("")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyVersion("1.0.0.0")]
+namespace Rondyo.Chatman.WebChannel
+{
+	public class ChatmanWebRequest
+	{
+		private readonly HttpWebRequest Ⴐ;
+
+		private MultipartStreamContainer Ⴐ;
+
+		private MultipartStreamContainer Ⴈ;
+
+		private long Ⴐ;
+
+		private long Ⴈ;
+
+		public long DownloadProgressCurrentValue;
+
+		private Ⴃ Ⴐ;
+
+		private Ⴃ Ⴈ;
+
+		private DateTime Ⴐ = DateTime.MinValue;
+
+		private DateTime Ⴈ = DateTime.MinValue;
+
+		public unsafe long UploadProgressMaxValue
+		{
+			get
+			{
+				int num = 2;
+				long result;
+				while (true)
+				{
+					int num2;
+					switch (num)
+					{
+					default:
+						num2 = ((*(MultipartStreamContainer*)(&this.Ⴐ) != null) ? 1 : 0);
+						goto IL_001d;
+					case 1:
+						result = *(long*)(&this.Ⴐ);
+						break;
+					case 0:
+						result = 0L;
+						break;
+					}
+					break;
+					IL_001d:
+					num = num2;
+				}
+				return result;
+			}
+		}
+
+		public unsafe long DownloadProgressMaxValue
+		{
+			get
+			{
+				int num = 1;
+				long result;
+				while (true)
+				{
+					int num2;
+					switch (num)
+					{
+					default:
+						num2 = ((*(MultipartStreamContainer*)(&this.Ⴈ) == null) ? 2 : 0);
+						goto IL_001d;
+					case 0:
+						result = *(long*)(&this.Ⴈ);
+						break;
+					case 2:
+						result = 0L;
+						break;
+					}
+					break;
+					IL_001d:
+					num = num2;
+				}
+				return result;
+			}
+		}
+
+		public unsafe long UploadProgressCurrentValue
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_0015, IL_0032
+				long result;
+				while (true)
+				{
+					if (*(MultipartStreamContainer*)(&this.Ⴐ) == null)
+					{
+						result = 0L;
+						break;
+					}
+					if (740 >= 740 - 448)
+					{
+						result = ((MultipartStreamContainer*)(&this.Ⴐ))->CurrentPosition;
+						break;
+					}
+				}
+				return result;
+			}
+		}
+
+		public unsafe event Ⴃ OnUploadProgressChanged
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				*(Ⴃ*)(&this.Ⴐ) = (Ⴃ)Delegate.Combine(*(Ⴃ*)(&this.Ⴐ), value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				*(Ⴃ*)(&this.Ⴐ) = (Ⴃ)Delegate.Remove(*(Ⴃ*)(&this.Ⴐ), value);
+			}
+		}
+
+		public unsafe event Ⴃ OnDownloadProgressChanged
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				*(Ⴃ*)(&this.Ⴈ) = (Ⴃ)Delegate.Combine(*(Ⴃ*)(&this.Ⴈ), value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				*(Ⴃ*)(&this.Ⴈ) = (Ⴃ)Delegate.Remove(*(Ⴃ*)(&this.Ⴈ), value);
+			}
+		}
+
+		public unsafe ChatmanWebRequest(string targetUrl)
+		{
+			ServicePointManager.MaxServicePointIdleTime = 10000;
+			Uri requestUri = new Uri(targetUrl);
+			*(HttpWebRequest*)(&this.Ⴐ) = (HttpWebRequest)WebRequest.Create(requestUri);
+			((HttpWebRequest*)(&this.Ⴐ))->Method = ႭႤႭ.Ⴍ.ႥႳႳ(137679769);
+			((HttpWebRequest*)(&this.Ⴐ))->KeepAlive = false;
+			((HttpWebRequest*)(&this.Ⴐ))->ContentType = ႭႤႭ.Ⴍ.ႥႳႳ(137679768);
+			ႥႥႨႷ.Ⴀ.ႨႳႥ();
+		}
+
+		public unsafe long SendRequest(params object[] objectsToSend)
+		{
+			try
+			{
+				*(long*)(&this.Ⴐ) = MultipartStreamContainer.CalculateStreamSize(objectsToSend);
+				((HttpWebRequest*)(&this.Ⴐ))->ContentLength = *(long*)(&this.Ⴐ);
+				using (Stream stream = ((HttpWebRequest*)(&this.Ⴐ))->GetRequestStream())
+				{
+					*(MultipartStreamContainer*)(&this.Ⴐ) = new MultipartStreamContainer(stream, StreamContainerMode.Write);
+					((MultipartStreamContainer*)(&this.Ⴐ))->OnProgressChanged += ႨႷႰ;
+					try
+					{
+						foreach (object objectToWrite in objectsToSend)
+						{
+							((MultipartStreamContainer*)(&this.Ⴐ))->WriteObject(objectToWrite);
+						}
+					}
+					finally
+					{
+						((MultipartStreamContainer*)(&this.Ⴐ))->OnProgressChanged -= ႨႷႰ;
+					}
+				}
+			}
+			catch (Exception innerException)
+			{
+				throw new ApplicationException(ႭႤႭ.Ⴍ.ႥႳႳ(137679771), innerException);
+			}
+			try
+			{
+				WebResponse response = ((HttpWebRequest*)(&this.Ⴐ))->GetResponse();
+				*(long*)(&this.Ⴈ) = response.ContentLength;
+				Stream stream2 = (response.ContentLength <= 0) ? new MemoryStream() : new MemoryStream((int)response.ContentLength);
+				CopyStream(response.GetResponseStream(), stream2);
+				stream2.Seek(0L, SeekOrigin.Begin);
+				*(MultipartStreamContainer*)(&this.Ⴈ) = new MultipartStreamContainer(stream2, StreamContainerMode.Read);
+			}
+			catch (Exception innerException)
+			{
+				throw new ApplicationException(ႭႤႭ.Ⴍ.ႥႳႳ(137679770), innerException);
+			}
+			return *(long*)(&this.Ⴈ);
+		}
+
+		public void CopyStream(Stream input, Stream output)
+		{
+			int num = 1;
+			byte[] array = default(byte[]);
+			int count = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				case 3:
+					return;
+				default:
+					array = new byte[8192];
+					num = 0;
+					break;
+				case 2:
+					output.Write(array, 0, count);
+					DownloadProgressCurrentValue = output.Position;
+					ႨႷႨ();
+					num = 0;
+					break;
+				case 0:
+					num = (((count = input.Read(array, 0, array.Length)) > 0) ? 2 : 3);
+					break;
+				}
+			}
+		}
+
+		public unsafe T ReadObjectFromResponse<T>() where T : class
+		{
+			int num = 2;
+			T result = default(T);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((*(MultipartStreamContainer*)(&this.Ⴈ) == null) ? 3 : 0);
+					break;
+				case 3:
+					result = null;
+					num = 1;
+					break;
+				case 0:
+					result = ((MultipartStreamContainer*)(&this.Ⴈ))->ReadObject<T>();
+					num = 1;
+					break;
+				case 1:
+					return result;
+				}
+			}
+		}
+
+		public unsafe void ReadStreamFromResponse(Stream streamToSaveData)
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((*(MultipartStreamContainer*)(&this.Ⴈ) != null) ? 2 : 0);
+					break;
+				case 2:
+					((MultipartStreamContainer*)(&this.Ⴈ))->ReadStreamInto(streamToSaveData);
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		private unsafe void ႨႷႰ()
+		{
+			//Discarded unreachable code: IL_0005, IL_0036, IL_003d, IL_0067, IL_006c, IL_007c, IL_009b, IL_00c6
+			while (true)
+			{
+				if (*(Ⴃ*)(&this.Ⴐ) != null)
+				{
+					int num;
+					if (UploadProgressCurrentValue != UploadProgressMaxValue)
+					{
+						if (false)
+						{
+							continue;
+						}
+						num = ((!((DateTime.Now - Ⴐ).TotalMilliseconds > 500.0)) ? 1 : 0);
+					}
+					else
+					{
+						num = 0;
+					}
+					if (num == 0)
+					{
+						if (101 > 101 - 25)
+						{
+							break;
+						}
+					}
+				}
+				else if (false)
+				{
+					break;
+				}
+				return;
+			}
+			(*(Ⴃ*)(&this.Ⴐ))(UploadProgressCurrentValue, UploadProgressMaxValue);
+			do
+			{
+				Ⴐ = DateTime.Now;
+			}
+			while (123 < 123 - 46);
+		}
+
+		private unsafe void ႨႷႨ()
+		{
+			//Discarded unreachable code: IL_0002, IL_002a, IL_004a
+			do
+			{
+				if (*(Ⴃ*)(&this.Ⴈ) == null)
+				{
+					return;
+				}
+			}
+			while (712 < 712 - 606);
+			(*(Ⴃ*)(&this.Ⴈ))(DownloadProgressCurrentValue, *(long*)(&this.Ⴈ));
+			while (false)
+			{
+			}
+		}
+	}
+	public class MultipartStreamContainer
+	{
+		private enum ႨႰႳ : byte
+		{
+			Unknown,
+			XmlSerializedClass,
+			RawStream
+		}
+
+		private readonly StreamContainerMode Ⴐ;
+
+		private readonly Stream Ⴐ;
+
+		private long Ⴐ;
+
+		private OnProgressChangedSimpleDelegate Ⴐ;
+
+		private static readonly byte[] Ⴐ = new byte[1024];
+
+		public unsafe long CurrentPosition => *(long*)(&this.Ⴐ);
+
+		public event OnProgressChangedSimpleDelegate OnProgressChanged
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (byte[])(object)(OnProgressChangedSimpleDelegate)Delegate.Combine((Delegate)(object)this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (byte[])(object)(OnProgressChangedSimpleDelegate)Delegate.Remove((Delegate)(object)this.Ⴐ, value);
+			}
+		}
+
+		public unsafe MultipartStreamContainer(Stream stream, StreamContainerMode mode)
+		{
+			*(StreamContainerMode*)(&this.Ⴐ) = mode;
+			*(long*)(&this.Ⴐ) = 0L;
+			this.Ⴐ = (byte[])(object)stream;
+		}
+
+		public static long CalculateStreamSize(params object[] objectsToSend)
+		{
+			long num = 0L;
+			foreach (object obj in objectsToSend)
+			{
+				num += 9;
+				if (obj is Stream)
+				{
+					num += ((Stream)obj).Length;
+				}
+				else
+				{
+					using (MemoryStream memoryStream = ႣႳႣ(obj))
+					{
+						num += memoryStream.Length;
+					}
+				}
+			}
+			return num;
+		}
+
+		public void ReadStreamInto(Stream streamIntoRead)
+		{
+			ႣႳႥ(streamIntoRead);
+		}
+
+		public unsafe T ReadObject<T>() where T : class
+		{
+			int num = 2;
+			T result = default(T);
+			MemoryStream memoryStream = default(MemoryStream);
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num = ((*(StreamContainerMode*)(&this.Ⴐ) != 0) ? 1 : 10);
+					break;
+				case 1:
+					throw new ApplicationException(ႭႤႭ.Ⴍ.ႥႳႳ(137679775));
+				case 10:
+					num = ((!((Stream)(object)this.Ⴐ).CanSeek) ? 5 : 9);
+					break;
+				case 9:
+					num2 = ((((Stream)(object)this.Ⴐ).Length != 0) ? 1 : 0);
+					goto IL_0093;
+				case 5:
+					num2 = 1;
+					goto IL_0093;
+				case 8:
+					result = null;
+					num = 7;
+					break;
+				case 12:
+				{
+					int num3;
+					switch (ႣႳႷ())
+					{
+					default:
+						num3 = 4;
+						break;
+					case ႨႰႳ.XmlSerializedClass:
+						num3 = 3;
+						break;
+					case ႨႰႳ.RawStream:
+						num3 = 6;
+						break;
+					}
+					num = num3;
+					break;
+				}
+				case 4:
+					num = 11;
+					break;
+				case 3:
+					result = ႣႳႳ<T>();
+					num = 7;
+					break;
+				case 6:
+					memoryStream = new MemoryStream();
+					ႣႳႥ(memoryStream);
+					num = ((memoryStream is T) ? 13 : 0);
+					break;
+				case 13:
+					result = (memoryStream as T);
+					num = 7;
+					break;
+				case 0:
+					throw new ApplicationException(ႭႤႭ.Ⴍ.ႥႳႳ(137679774));
+				case 11:
+					throw new ArgumentOutOfRangeException(ႭႤႭ.Ⴍ.ႥႳႳ(137679773));
+				case 7:
+					{
+						return result;
+					}
+					IL_0093:
+					num = ((num2 != 0) ? 12 : 8);
+					break;
+				}
+			}
+		}
+
+		private Ⴍ ႣႳႳ<Ⴍ>() where Ⴍ : class
+		{
+			using (MemoryStream memoryStream = new MemoryStream())
+			{
+				ႣႳႥ(memoryStream);
+				memoryStream.Seek(0L, SeekOrigin.Begin);
+				using (StreamReader streamReader = new StreamReader(memoryStream))
+				{
+					string text = streamReader.ReadToEnd();
+					return string.IsNullOrEmpty(text) ? null : DeSerialize<Ⴍ>(text);
+				}
+			}
+		}
+
+		public unsafe void WriteObject(object objectToWrite)
+		{
+			//Discarded unreachable code: IL_0002, IL_0018, IL_0028, IL_0057, IL_0076
+			if (*(StreamContainerMode*)(&this.Ⴐ) == StreamContainerMode.Write)
+			{
+				if (!(objectToWrite is Stream))
+				{
+					ႣႳႳ(objectToWrite);
+					if (216 > 216 - 12)
+					{
+						return;
+					}
+				}
+				else if (183 < 183 - 11)
+				{
+					return;
+				}
+				ႣႳႷ((Stream)objectToWrite);
+				return;
+			}
+			if (false)
+			{
+			}
+			throw new ApplicationException(ႭႤႭ.Ⴍ.ႥႳႳ(137679772));
+		}
+
+		private void ႣႳႳ(object Ⴍ)
+		{
+			ႣႳႨ(ႨႰႳ.XmlSerializedClass);
+			using (MemoryStream ⴍ = ႣႳႣ(Ⴍ))
+			{
+				ႣႳႤ(ⴍ);
+			}
+		}
+
+		private static MemoryStream ႣႳႣ(object Ⴍ)
+		{
+			return new MemoryStream(Encoding.UTF8.GetBytes(Serialize(Ⴍ)));
+		}
+
+		private void ႣႳႷ(Stream Ⴍ)
+		{
+			ႣႳႨ(ႨႰႳ.RawStream);
+			ႣႳႤ(Ⴍ);
+		}
+
+		private unsafe void ႣႳႤ(Stream Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0048, IL_004c, IL_0068, IL_0088, IL_00b7
+			int num = default(int);
+			do
+			{
+				ႣႳႠ(Ⴍ.Length);
+				bool flag = !Ⴍ.CanSeek;
+				while (true)
+				{
+					if (!flag)
+					{
+						if (298 < 298 - 221)
+						{
+							goto IL_0031;
+						}
+						Ⴍ.Seek(0L, SeekOrigin.Begin);
+						if (633 <= 633 - 525)
+						{
+							continue;
+						}
+					}
+					goto IL_006a;
+					IL_000a:
+					num = MultipartStreamContainer.Ⴍ(Ⴍ, (Stream)(object)this.Ⴐ, 1024);
+					ႣႳႣ();
+					*(long*)(&this.Ⴐ) += num;
+					goto IL_0031;
+					IL_0031:
+					if (num > 0)
+					{
+						goto IL_000a;
+					}
+					if (false)
+					{
+						goto IL_006a;
+					}
+					return;
+					IL_006a:
+					if (Ⴍ.Length == 0)
+					{
+						break;
+					}
+					goto IL_000a;
+				}
+			}
+			while (280 <= 280 - 116);
+		}
+
+		private unsafe void ႣႳႥ(Stream Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0051, IL_0055, IL_007b
+			long num = ႣႳႤ();
+			int num2 = default(int);
+			while (true)
+			{
+				if (num != 0)
+				{
+					goto IL_0004;
+				}
+				if (469 > 469 - 264)
+				{
+					break;
+				}
+				goto IL_003a;
+				IL_003a:
+				if (num2 <= 0)
+				{
+					if (false)
+					{
+						continue;
+					}
+					break;
+				}
+				goto IL_0004;
+				IL_0004:
+				int ⴈ = (int)Math.Min(1024L, num);
+				num2 = MultipartStreamContainer.Ⴍ((Stream)(object)this.Ⴐ, Ⴍ, ⴈ);
+				num -= num2;
+				*(long*)(&this.Ⴐ) += num2;
+				ႣႳႣ();
+				goto IL_003a;
+			}
+		}
+
+		private void ႣႳႣ()
+		{
+			//Discarded unreachable code: IL_0002, IL_001e, IL_003b
+			while (true)
+			{
+				bool flag = this.Ⴐ == null;
+				while (true)
+				{
+					if (flag)
+					{
+						return;
+					}
+					if (254 > 254 - 65)
+					{
+						this.Ⴐ();
+						if (false)
+						{
+							continue;
+						}
+						return;
+					}
+					break;
+				}
+			}
+		}
+
+		private static int Ⴍ(Stream Ⴍ, Stream Ⴓ, int Ⴈ)
+		{
+			int num = 1;
+			int num2 = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num2 = Ⴍ.Read(Ⴐ, 0, Ⴈ);
+					num = ((num2 > 0) ? 2 : 0);
+					break;
+				case 2:
+					Ⴓ.Write(Ⴐ, 0, num2);
+					num = 0;
+					break;
+				case 0:
+					Ⴓ.Flush();
+					return num2;
+				}
+			}
+		}
+
+		private unsafe void ႣႳႨ(ႨႰႳ Ⴍ)
+		{
+			((Stream)(object)this.Ⴐ).WriteByte((byte)Ⴍ);
+			(*(long*)(&this.Ⴐ))++;
+		}
+
+		private unsafe ႨႰႳ ႣႳႷ()
+		{
+			(*(long*)(&this.Ⴐ))++;
+			return (ႨႰႳ)((Stream)(object)this.Ⴐ).ReadByte();
+		}
+
+		private unsafe void ႣႳႠ(long Ⴍ)
+		{
+			byte[] bytes = BitConverter.GetBytes(Ⴍ);
+			((Stream)(object)this.Ⴐ).Write(bytes, 0, bytes.Length);
+			*(long*)(&this.Ⴐ) += bytes.Length;
+		}
+
+		private unsafe long ႣႳႤ()
+		{
+			long value = 0L;
+			byte[] bytes = BitConverter.GetBytes(value);
+			((Stream)(object)this.Ⴐ).Read(bytes, 0, bytes.Length);
+			value = BitConverter.ToInt64(bytes, 0);
+			*(long*)(&this.Ⴐ) += bytes.Length;
+			return value;
+		}
+
+		public static string Serialize<T>(T objectToSerialize)
+		{
+			if (object.Equals(objectToSerialize, null))
+			{
+				return string.Empty;
+			}
+			using (MemoryStream memoryStream = new MemoryStream())
+			{
+				DataContractJsonSerializer dataContractJsonSerializer = new DataContractJsonSerializer(objectToSerialize.GetType());
+				dataContractJsonSerializer.WriteObject(memoryStream, objectToSerialize);
+				return Encoding.UTF8.GetString(memoryStream.ToArray());
+			}
+		}
+
+		public static T DeSerialize<T>(string serializedObject)
+		{
+			using (MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(serializedObject)))
+			{
+				DataContractJsonSerializer dataContractJsonSerializer = new DataContractJsonSerializer(typeof(T));
+				return (T)dataContractJsonSerializer.ReadObject(stream);
+			}
+		}
+	}
+	public delegate void OnProgressChangedSimpleDelegate();
+	public enum StreamContainerMode
+	{
+		Read,
+		Write
+	}
+}
+namespace ႭႤႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] Ⴅ;
+
+		private static readonly string[] Ⴅ;
+
+		internal static string ႥႳႳ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x834D39B;
+			string result;
+			if ((result = Ⴅ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "उ\u05b9ՠट\u05adೠఋ෩ढ\u05b9հफ़\u05eb\u0cf4ఒ෩न\u05bcԺ";
+				break;
+			case 1:
+				obj = "ශब\u05acյफ़ש\u0cfaఌ෫ड\u05b7յच\u05ad\u0cf3చ෬ड\u05bdհॐ";
+				break;
+			case 2:
+				obj = "ఫ\u0dcaञ\u058c";
+				break;
+			case 3:
+				obj = "\u0cf4ఋ\u0df5ड\u05b1շट\u05f9\u0cfcఔ෫\u0962\u05a0Թउ\u05fa\u0ce2\u0c56\u0de3ढ\u05aaչ\u0953\u05f8೧గ\u0de0ण\u05bbջचרೱ";
+				break;
+			case 4:
+				obj = "׀ೠగ\u0df1त\u05a8յऌ\u05f9\u0cc6ఏ\u0df7न\u05b9չऽע\u0cfbఏ\u0de4त\u05b6ձऌ\u05ad\u0cfcఈඥण\u05b7ՠफ़פ\u0cfb\u0c5b\u0df7न\u05b9հफ़נ\u0cfaట\u0de0६";
+				break;
+			case 5:
+				obj = "भ\u05f9೧ఞ\u0de4ठ\u05f8ՠइ\u05fd\u0cf0\u0c5b\u0de0व\u05a8ձझ\u05f9\u0cf0టඤ";
+				break;
+			case 6:
+				obj = "շऑףೡఞ෫ह\u058cխऎר";
+				break;
+			case 7:
+				obj = "\u0595աऒ\u05f9\u0cfcఋ\u0de4\u093f\u05acՇऊ\u05ff\u0cf0చ෨ऎ\u05b7պऊ\u05ec\u0cfcక\u0de0\u093f\u05f8սऍ\u05ad\u0cfbఔ\u0df1७\u05b1պफ़\u05fa೧ఒ\u0df1न\u05f8չऑש\u0cf0ౚ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴅ = (char[])(object)Ⴍ.Ⴅ;
+			int num2 = ⴅ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴅ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			Ⴅ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴍ.Ⴅ = (string[])(object)array;
+			Ⴅ = new string[8];
+		}
+	}
+}

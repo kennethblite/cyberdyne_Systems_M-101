@@ -1,0 +1,16 @@
+{
+	"name": "__MSG_manifestName__",
+	"version": "2.2.0",
+	"description": "__MSG_manifestDescription__",
+	"default_locale": "en",
+	"plugins": [
+		{ "path": "nprondyo.dll", "public" : true }
+	],
+	"content_scripts": [
+		{
+			"matches": [ "http://*/*", "https://*/*" ],
+			"js": [ "js/facebook.js", "js/googletalk.js", "js/wrapper.js" ],
+			"run_at": "document_start"
+		}
+	]
+}

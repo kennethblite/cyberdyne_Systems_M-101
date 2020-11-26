@@ -1,0 +1,1757 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Applications.RemindMeApplication.dll
+// Rondyo.Chatman.Applications.RemindMeApplication, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Microsoft.Win32;
+using Rondyo.Chatman.Applications.Context;
+using Rondyo.Chatman.Applications.RemindMeApplication.Configuration;
+using Rondyo.Chatman.Data;
+using Rondyo.Chatman.Framework;
+using Rondyo.Chatman.Interfaces.Public;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading;
+using System.Xml.Serialization;
+using ႥႥႥ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႣ;
+using ႥႥႨႥ;
+using ႭႥႰ;
+using ႭႨႰ;
+using ႭႰ;
+using ႳႠ;
+using ႷႭႤ;
+using ႷႭႳ;
+
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyTrademark("")]
+[assembly: ComVisible(false)]
+[assembly: Guid("70e5c4d1-ebbe-4654-b8ad-e606f6c3cf0d")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyVersion("1.1.0.0")]
+internal sealed class <>f__AnonymousType0<<reminder>j__TPar, <nextDate>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <reminder>j__TPar <reminder>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <nextDate>j__TPar <nextDate>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType0(<reminder>j__TPar reminder, <nextDate>j__TPar nextDate)
+	{
+		<reminder>i__Field = reminder;
+		<nextDate>i__Field = nextDate;
+	}
+
+	public <reminder>j__TPar get_reminder()
+	{
+		return <reminder>i__Field;
+	}
+
+	public <nextDate>j__TPar get_nextDate()
+	{
+		return <nextDate>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႳႠ.Ⴀ.Ⴓ(983082812));
+		stringBuilder.Append(<reminder>i__Field);
+		stringBuilder.Append(ႳႠ.Ⴀ.Ⴓ(983082813));
+		stringBuilder.Append(<nextDate>i__Field);
+		stringBuilder.Append(ႳႠ.Ⴀ.Ⴓ(983082802));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		//Discarded unreachable code: IL_0002, IL_001e, IL_0038, IL_003d, IL_006a
+		int result;
+		while (true)
+		{
+			<>f__AnonymousType0<<reminder>j__TPar, <nextDate>j__TPar> <>f__AnonymousType = value as <>f__AnonymousType0<<reminder>j__TPar, <nextDate>j__TPar>;
+			if (<>f__AnonymousType != null)
+			{
+				if (298 > 298 - 244)
+				{
+					if (!EqualityComparer<<reminder>j__TPar>.Default.Equals(<reminder>i__Field, <>f__AnonymousType.<reminder>i__Field))
+					{
+						goto IL_003a;
+					}
+					if (858 < 858 - 366)
+					{
+						continue;
+					}
+				}
+				result = (EqualityComparer<<nextDate>j__TPar>.Default.Equals(<nextDate>i__Field, <>f__AnonymousType.<nextDate>i__Field) ? 1 : 0);
+				break;
+			}
+			goto IL_003a;
+			IL_003a:
+			result = 0;
+			break;
+		}
+		return (byte)result != 0;
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = -910595256;
+		num = -1521134295 * num + EqualityComparer<<reminder>j__TPar>.Default.GetHashCode(<reminder>i__Field);
+		return -1521134295 * num + EqualityComparer<<nextDate>j__TPar>.Default.GetHashCode(<nextDate>i__Field);
+	}
+}
+namespace Rondyo.Chatman.Applications.RemindMeApplication.Configuration
+{
+	[Serializable]
+	public class Reminder : INotifyPropertyChanged
+	{
+		private const double ThreeDaysHours = 72.0;
+
+		private const double TwoWeeksHours = 336.0;
+
+		private Guid id;
+
+		private string description;
+
+		private DateTime reminderDateTime = DateTime.MinValue;
+
+		private RemindMethod reminderMethod;
+
+		private ReminderRecurranceType recurranceType;
+
+		private int recurranceParameter;
+
+		[NonSerialized]
+		private DateTime nextOccuranceDate = DateTime.MinValue;
+
+		[NonSerialized]
+		private DateTime accordingToScheduleOccuranceDate = DateTime.MinValue;
+
+		private Guid moodID;
+
+		private MoodLevel moodLevel;
+
+		private Guid specificPersonalityID;
+
+		private int imageId;
+
+		private Guid specificActionID;
+
+		[NonSerialized]
+		private PropertyChangedEventHandler propertyChanged;
+
+		private TimeSpan snoozeInterval = new TimeSpan(0, 0, 5, 0);
+
+		[XmlAttribute]
+		public Guid Id
+		{
+			get
+			{
+				return id;
+			}
+			set
+			{
+				id = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082754));
+			}
+		}
+
+		[XmlAttribute]
+		public string Description
+		{
+			get
+			{
+				return description;
+			}
+			set
+			{
+				description = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082755));
+			}
+		}
+
+		[XmlAttribute]
+		public DateTime ReminderDateTime
+		{
+			get
+			{
+				return reminderDateTime;
+			}
+			set
+			{
+				reminderDateTime = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082752));
+				ႨႥ();
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082753));
+			}
+		}
+
+		[XmlAttribute]
+		public RemindMethod ReminderMethod
+		{
+			get
+			{
+				return reminderMethod;
+			}
+			set
+			{
+				reminderMethod = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082758));
+			}
+		}
+
+		[XmlAttribute]
+		public ReminderRecurranceType RecurranceType
+		{
+			get
+			{
+				return recurranceType;
+			}
+			set
+			{
+				recurranceType = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082759));
+				ႨႥ();
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082753));
+			}
+		}
+
+		[XmlAttribute]
+		public int RecurranceParameter
+		{
+			get
+			{
+				return recurranceParameter;
+			}
+			set
+			{
+				recurranceParameter = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082756));
+				ႨႥ();
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082753));
+			}
+		}
+
+		[XmlIgnore]
+		public DateTime NextOccuranceDate
+		{
+			get
+			{
+				int num = 1;
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = ((!(nextOccuranceDate == DateTime.MinValue)) ? 2 : 0);
+						break;
+					case 0:
+						ႨႥ();
+						num = 2;
+						break;
+					case 2:
+						return nextOccuranceDate;
+					}
+				}
+			}
+		}
+
+		[XmlIgnore]
+		public DateTime AccordingToScheduleOccuranceDate => accordingToScheduleOccuranceDate;
+
+		[XmlIgnore]
+		public bool StillInEffect => ႨႠ();
+
+		[XmlAttribute]
+		public Guid MoodID
+		{
+			get
+			{
+				return moodID;
+			}
+			set
+			{
+				moodID = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082811));
+			}
+		}
+
+		[XmlAttribute]
+		public MoodLevel MoodLevel
+		{
+			get
+			{
+				return moodLevel;
+			}
+			set
+			{
+				moodLevel = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082808));
+			}
+		}
+
+		[XmlAttribute]
+		public Guid SpecificPersonalityID
+		{
+			get
+			{
+				return specificPersonalityID;
+			}
+			set
+			{
+				specificPersonalityID = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082809));
+			}
+		}
+
+		[XmlAttribute]
+		public int ImageId
+		{
+			get
+			{
+				return imageId;
+			}
+			set
+			{
+				imageId = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082814));
+			}
+		}
+
+		[XmlAttribute]
+		public Guid SpecificActionID
+		{
+			get
+			{
+				return specificActionID;
+			}
+			set
+			{
+				specificActionID = value;
+				Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082815));
+			}
+		}
+
+		public event PropertyChangedEventHandler Ⴈ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				propertyChanged = (PropertyChangedEventHandler)Delegate.Combine(propertyChanged, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				propertyChanged = (PropertyChangedEventHandler)Delegate.Remove(propertyChanged, value);
+			}
+		}
+
+		public static Reminder ႨႷ()
+		{
+			Reminder reminder = new Reminder();
+			reminder.Id = Guid.NewGuid();
+			reminder.ReminderDateTime = DateTime.Now.AddMinutes(5.0);
+			reminder.RecurranceParameter = 1;
+			reminder.ReminderMethod = RemindMethod.SurpriseMe;
+			return reminder;
+		}
+
+		private void ႨႥ()
+		{
+			try
+			{
+				if (!(reminderDateTime == DateTime.MinValue))
+				{
+					DateTime now = DateTime.Now;
+					switch (recurranceType)
+					{
+					case ReminderRecurranceType.OneTimeOnly:
+						nextOccuranceDate = reminderDateTime;
+						accordingToScheduleOccuranceDate = nextOccuranceDate;
+						break;
+					case ReminderRecurranceType.Days:
+						if (reminderDateTime > now)
+						{
+							nextOccuranceDate = reminderDateTime;
+							accordingToScheduleOccuranceDate = nextOccuranceDate;
+						}
+						else if (recurranceParameter != 0)
+						{
+							int num = (int)Math.Ceiling((decimal)(now.AddDays(1.0) - reminderDateTime).Days / (decimal)recurranceParameter) * recurranceParameter;
+							nextOccuranceDate = reminderDateTime.AddDays(num);
+							accordingToScheduleOccuranceDate = nextOccuranceDate;
+						}
+						break;
+					case ReminderRecurranceType.Weeks:
+						if (reminderDateTime > now)
+						{
+							nextOccuranceDate = reminderDateTime;
+							accordingToScheduleOccuranceDate = nextOccuranceDate;
+						}
+						else if (recurranceParameter != 0)
+						{
+							int num = (int)Math.Ceiling((decimal)(now.AddDays(7.0) - reminderDateTime).Days / (decimal)(recurranceParameter * 7)) * (recurranceParameter * 7);
+							nextOccuranceDate = reminderDateTime.AddDays(num);
+							accordingToScheduleOccuranceDate = nextOccuranceDate;
+						}
+						break;
+					case ReminderRecurranceType.Months:
+						if (reminderDateTime > now)
+						{
+							nextOccuranceDate = reminderDateTime;
+							accordingToScheduleOccuranceDate = nextOccuranceDate;
+						}
+						else if (recurranceParameter != 0)
+						{
+							ႭႰ.Ⴐ ⴐ = new ႭႰ.Ⴐ(now.AddMonths(1), reminderDateTime);
+							int months = (int)Math.Ceiling((decimal)ⴐ.ႣႳ() / (decimal)recurranceParameter) * recurranceParameter;
+							nextOccuranceDate = reminderDateTime.AddMonths(months);
+							accordingToScheduleOccuranceDate = nextOccuranceDate;
+						}
+						break;
+					case ReminderRecurranceType.Years:
+						if (reminderDateTime > now)
+						{
+							nextOccuranceDate = reminderDateTime;
+							accordingToScheduleOccuranceDate = nextOccuranceDate;
+						}
+						else if (recurranceParameter != 0)
+						{
+							ႭႰ.Ⴐ ⴐ = new ႭႰ.Ⴐ(now.AddYears(1), reminderDateTime);
+							int value = (int)Math.Ceiling((decimal)ⴐ.Ⴜ() / (decimal)recurranceParameter) * recurranceParameter;
+							nextOccuranceDate = reminderDateTime.AddYears(value);
+							accordingToScheduleOccuranceDate = nextOccuranceDate;
+						}
+						break;
+					}
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082757), ⴓ);
+			}
+		}
+
+		private bool ႨႠ()
+		{
+			try
+			{
+				double totalHours = (DateTime.Now - NextOccuranceDate).TotalHours;
+				double num = 0.0;
+				switch (recurranceType)
+				{
+				case ReminderRecurranceType.OneTimeOnly:
+				case ReminderRecurranceType.Days:
+					num = 4.0;
+					break;
+				case ReminderRecurranceType.Weeks:
+				case ReminderRecurranceType.Months:
+					num = 72.0;
+					break;
+				case ReminderRecurranceType.Years:
+					num = 336.0;
+					break;
+				}
+				return totalHours < num;
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႠ(ႳႠ.Ⴀ.Ⴓ(983082810), ⴓ);
+				return false;
+			}
+		}
+
+		public void ႨႣ()
+		{
+			ႨႥ();
+			Ⴓ(ႳႠ.Ⴀ.Ⴓ(983082753));
+		}
+
+		private void Ⴓ(string Ⴍ)
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((propertyChanged == null) ? 1 : 0);
+					break;
+				case 0:
+					propertyChanged(this, new PropertyChangedEventArgs(Ⴍ));
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		public void ႨႭ()
+		{
+			nextOccuranceDate = DateTime.Now + snoozeInterval;
+		}
+	}
+	[Serializable]
+	[XmlRoot("ReminderConfiguration")]
+	public class ReminderConfiguration
+	{
+		[NonSerialized]
+		private ObservableCollection<Reminder> reminders = new ObservableCollection<Reminder>();
+
+		[XmlArray("Reminders")]
+		[XmlArrayItem("Reminder", typeof(Reminder))]
+		public ObservableCollection<Reminder> Reminders
+		{
+			get
+			{
+				return reminders;
+			}
+			set
+			{
+				reminders = value;
+			}
+		}
+
+		public ReminderConfiguration()
+		{
+			reminders = new ObservableCollection<Reminder>();
+		}
+	}
+	[Serializable]
+	public enum ReminderRecurranceType
+	{
+		OneTimeOnly,
+		Days,
+		Weeks,
+		Months,
+		Years
+	}
+	[Serializable]
+	public enum RemindMethod
+	{
+		ReadOutDescription = 8,
+		SurpriseMe = 0,
+		SurpriseMeWithMood = 1,
+		SpecificAction = 9,
+		RecordMyOwn = 3
+	}
+}
+namespace ႭႰ
+{
+	public class Ⴅ : BaseChatmanApplication, IChatmanApplication, IChatmanBackgroundApplication
+	{
+		private ႥႥႨႥ.Ⴓ m_Ⴐ;
+
+		public override void Initialize()
+		{
+			base.Initialize();
+			Ⴈ.Ⴍ(base.Context as ႷႭႤ.Ⴈ);
+			try
+			{
+				Ⴗ.ႨႷ();
+				SystemEvents.TimeChanged += Ⴐ;
+				ႨႷ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082762), ⴓ);
+			}
+		}
+
+		public override void Terminate()
+		{
+			try
+			{
+				SystemEvents.TimeChanged -= Ⴐ;
+				ႨႥ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082763), ⴓ);
+			}
+		}
+
+		private void ႨႷ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0029, IL_004b
+			while (this.m_Ⴐ == null)
+			{
+				if (584 >= 584 - 173)
+				{
+				}
+				ႥႥႨႥ.Ⴓ.Ⴗ(ႨႠ, Ⴓ: true, ApartmentState.STA);
+				if (308 >= 308 - 133)
+				{
+					break;
+				}
+			}
+		}
+
+		private void ႨႥ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0027, IL_0046
+			if (this.m_Ⴐ != null)
+			{
+				if (408 > 408 - 278)
+				{
+					this.m_Ⴐ.ႨႳႭ();
+				}
+				do
+				{
+					this.m_Ⴐ = null;
+				}
+				while (456 < 456 - 282);
+			}
+		}
+
+		private void ႨႠ()
+		{
+			Ⴓ.ႨႨ();
+			ႥႥႨႣ.Ⴀ.Ⴈ.WaitOne(5000);
+			while (!ႥႥႨႣ.Ⴀ.Ⴐ)
+			{
+				try
+				{
+					ႨႣ();
+					if (Ⴗ.Ⴐ.Count > 0)
+					{
+						ႭႨႰ.Ⴐ.Ⴐ.Ⴍ.RunReminderGuiWindow();
+					}
+				}
+				catch (ThreadAbortException)
+				{
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082760), ⴓ);
+				}
+				if (!ႥႥႨႣ.Ⴀ.Ⴈ.WaitOne(60000))
+				{
+				}
+			}
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႳႠ.Ⴀ.Ⴓ(983082761));
+		}
+
+		private void ႨႣ()
+		{
+			bool flag = false;
+			DateTime now = DateTime.Now;
+			List<Reminder> list;
+			lock (Ⴗ.Ⴐ)
+			{
+				list = new List<Reminder>(Ⴗ.Ⴐ);
+			}
+			ႥႥႨ.Ⴗ.ႳႥ(ႳႠ.Ⴀ.Ⴓ(983082766), list.Count);
+			foreach (Reminder item in list)
+			{
+				ႥႥႨ.Ⴗ.ႳႥ(ႳႠ.Ⴀ.Ⴓ(983082767), item.Id, item.Description, item.StillInEffect, item.NextOccuranceDate);
+				if (!(item.NextOccuranceDate > now))
+				{
+					if (item.StillInEffect)
+					{
+						flag |= Ⴗ.Ⴜ(item.Id);
+					}
+					else
+					{
+						Ⴗ.Ⴍ(item.Id);
+					}
+				}
+			}
+			if (flag)
+			{
+				Ⴗ.ႨႰ();
+			}
+		}
+
+		public void Pause()
+		{
+			try
+			{
+				ႨႥ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082764), ⴓ);
+			}
+		}
+
+		public void Resume()
+		{
+			try
+			{
+				ႨႷ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082765), ⴓ);
+			}
+		}
+
+		private void Ⴐ(object Ⴍ, EventArgs Ⴓ)
+		{
+			Monitor.Enter(Ⴗ.Ⴐ);
+			try
+			{
+				Ⴗ.ႨႠ();
+			}
+			finally
+			{
+				Monitor.Exit(Ⴗ.Ⴐ);
+			}
+		}
+	}
+	internal sealed class Ⴈ
+	{
+		private static ႷႭႤ.Ⴈ Ⴐ;
+
+		public static ႷႭႤ.Ⴈ Ⴜ()
+		{
+			return Ⴐ;
+		}
+
+		public static void Ⴍ(ႷႭႤ.Ⴈ Ⴍ)
+		{
+			Ⴐ = Ⴍ;
+		}
+	}
+	internal sealed class Ⴐ
+	{
+		private int[] m_Ⴐ;
+
+		private DateTime m_Ⴐ;
+
+		private DateTime Ⴈ;
+
+		private int m_Ⴐ;
+
+		private int Ⴈ;
+
+		private int Ⴓ;
+
+		public unsafe Ⴐ(DateTime Ⴍ, DateTime Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0037, IL_0065, IL_008b, IL_00b8, IL_00fc, IL_012d, IL_0162, IL_0185, IL_018f, IL_01b9, IL_01ce, IL_01eb, IL_0223, IL_024e, IL_02a4
+			*(int[]*)(&this.m_Ⴐ) = new int[12]
+			{
+				31,
+				-1,
+				31,
+				30,
+				31,
+				30,
+				31,
+				31,
+				30,
+				31,
+				30,
+				31
+			};
+			int num = default(int);
+			while (true)
+			{
+				base..ctor();
+				bool flag = !(Ⴍ > Ⴓ);
+				if (flag)
+				{
+					*(DateTime*)(&this.m_Ⴐ) = Ⴍ;
+					goto IL_0071;
+				}
+				if (453 <= 453 - 13)
+				{
+					goto IL_016f;
+				}
+				*(DateTime*)(&this.m_Ⴐ) = Ⴓ;
+				goto IL_01c2;
+				IL_008d:
+				if (154 <= 154 - 88)
+				{
+					return;
+				}
+				goto IL_009d;
+				IL_01f0:
+				this.Ⴓ = ((DateTime*)(&this.Ⴈ))->Day - ((DateTime*)(&this.m_Ⴐ))->Day;
+				if (655 >= 655 - 253)
+				{
+					goto IL_0007;
+				}
+				goto IL_0078;
+				IL_0101:
+				if (DateTime.IsLeapYear(((DateTime*)(&this.m_Ⴐ))->Year))
+				{
+					if ((764 + 764 * 764) % 2 == 0)
+					{
+						goto IL_0187;
+					}
+					goto IL_01c2;
+				}
+				num = 28;
+				if ((319 + 319 * 319) % 2 == 0)
+				{
+					goto IL_008d;
+				}
+				goto IL_0167;
+				IL_0071:
+				*(DateTime*)(&this.Ⴈ) = Ⴓ;
+				goto IL_0078;
+				IL_0078:
+				if (173 <= 173 - 53)
+				{
+					break;
+				}
+				goto IL_0132;
+				IL_0132:
+				num = 0;
+				if (((DateTime*)(&this.m_Ⴐ))->Day > ((DateTime*)(&this.Ⴈ))->Day)
+				{
+					if (false)
+					{
+						continue;
+					}
+					num = (*(int[]*)(&this.m_Ⴐ))[((DateTime*)(&this.m_Ⴐ))->Month - 1];
+					if (885 < 885 - 566)
+					{
+						goto IL_01f0;
+					}
+				}
+				goto IL_0167;
+				IL_01c2:
+				*(DateTime*)(&this.Ⴈ) = Ⴍ;
+				goto IL_0132;
+				IL_0187:
+				num = 29;
+				goto IL_008d;
+				IL_0167:
+				flag = (num != -1);
+				goto IL_016f;
+				IL_016f:
+				if (flag)
+				{
+					goto IL_009d;
+				}
+				if (517 >= 517 - 12)
+				{
+					goto IL_0101;
+				}
+				goto IL_0187;
+				IL_0007:
+				if (((DateTime*)(&this.m_Ⴐ))->Month + num > ((DateTime*)(&this.Ⴈ))->Month)
+				{
+					if (531 >= 531 - 5)
+					{
+						Ⴈ = ((DateTime*)(&this.Ⴈ))->Month + 12 - (((DateTime*)(&this.m_Ⴐ))->Month + num);
+						num = 1;
+						break;
+					}
+					goto IL_0078;
+				}
+				Ⴈ = ((DateTime*)(&this.Ⴈ))->Month - (((DateTime*)(&this.m_Ⴐ))->Month + num);
+				num = 0;
+				if (189 > 189 - 71)
+				{
+					break;
+				}
+				goto IL_0071;
+				IL_009d:
+				if (num != 0)
+				{
+					if (360 <= 360 - 103)
+					{
+						goto IL_0101;
+					}
+					this.Ⴓ = ((DateTime*)(&this.Ⴈ))->Day + num - ((DateTime*)(&this.m_Ⴐ))->Day;
+					num = 1;
+					goto IL_0007;
+				}
+				goto IL_01f0;
+			}
+			m_Ⴐ = ((DateTime*)(&this.Ⴈ))->Year - (((DateTime*)(&this.m_Ⴐ))->Year + num);
+		}
+
+		public override string ToString()
+		{
+			return m_Ⴐ + ႳႠ.Ⴀ.Ⴓ(983082778) + Ⴈ + ႳႠ.Ⴀ.Ⴓ(983082779) + Ⴓ + ႳႠ.Ⴀ.Ⴓ(983082776);
+		}
+
+		public int Ⴜ()
+		{
+			return m_Ⴐ;
+		}
+
+		public int ႣႳ()
+		{
+			return Ⴈ;
+		}
+	}
+	internal sealed class Ⴓ
+	{
+		private sealed class <>c__DisplayClass3
+		{
+			public MoodLevel moodLevel;
+
+			public bool <PerformSurpriseMeActionByMood>b__0(ChatmanAction action)
+			{
+				return action.Intensity <= MoodCounter.ႰႥ(moodLevel);
+			}
+		}
+
+		private static ႷႭႳ.Ⴈ m_Ⴐ;
+
+		private static Func<ChatmanAction, ChatmanAction> Ⴈ;
+
+		private static ႷႭႤ.Ⴀ Ⴜ()
+		{
+			return ႭႰ.Ⴈ.Ⴜ().Ⴈ.Ⴓ;
+		}
+
+		internal static Personality Ⴍ(Guid Ⴍ)
+		{
+			int num = 4;
+			Personality personality = default(Personality);
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					personality = Ⴜ().Ⴈ.ႰႠ(Ⴍ);
+					num = ((personality != null) ? 3 : 0);
+					break;
+				case 0:
+					num2 = ((!Ⴜ().Ⴓ.ID.Equals(Ⴍ)) ? 1 : 0);
+					goto IL_0058;
+				case 3:
+					num2 = 1;
+					goto IL_0058;
+				case 1:
+					personality = Ⴜ().Ⴓ;
+					num = 2;
+					break;
+				case 2:
+					{
+						return personality;
+					}
+					IL_0058:
+					num = ((num2 == 0) ? 1 : 2);
+					break;
+				}
+			}
+		}
+
+		private static ႭႥႰ.Ⴈ ႨႥ()
+		{
+			return Ⴜ().Ⴐ;
+		}
+
+		internal static void ႨႨ()
+		{
+			try
+			{
+				ႭႰ.Ⴓ.m_Ⴐ = (ႷႭႳ.Ⴈ)ႭႰ.Ⴈ.Ⴜ().Ⴈ;
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+		}
+
+		internal static ChatmanAction Ⴃ(Reminder Ⴍ)
+		{
+			return Ⴐ(Ⴍ, Ⴓ: false);
+		}
+
+		internal static ChatmanAction Ⴐ(Reminder Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001c, IL_0038, IL_005f, IL_0079, IL_008f, IL_00bc, IL_00c3, IL_00dc, IL_00fd, IL_0127, IL_0159, IL_016f, IL_0179, IL_0192
+			ChatmanAction result = default(ChatmanAction);
+			while (true)
+			{
+				if (Ⴓ)
+				{
+					goto IL_0129;
+				}
+				if (541 >= 541 - 42)
+				{
+					if (ႭႰ.Ⴓ.m_Ⴐ != null)
+					{
+						if (718 <= 718 - 628)
+						{
+							goto IL_004a;
+						}
+						ActionVolume ⴓ = ActionVolume.Higher;
+						do
+						{
+							if (ႭႰ.Ⴓ.m_Ⴐ.Ⴍ.ႳႷ())
+							{
+								if (406 >= 406 - 60)
+								{
+									ⴓ = ActionVolume.Lower;
+									if (528 <= 528 - 338)
+									{
+										break;
+									}
+								}
+							}
+							ႭႰ.Ⴓ.m_Ⴐ.ႥႥ(60, ⴓ);
+						}
+						while (false);
+					}
+					ႥႥႨႣ.Ⴀ.Ⴈ.WaitOne(1500);
+					goto IL_004a;
+				}
+				goto IL_017d;
+				IL_004a:
+				if (false)
+				{
+					break;
+				}
+				goto IL_0129;
+				IL_0129:
+				RemindMethod reminderMethod = Ⴍ.ReminderMethod;
+				switch (reminderMethod)
+				{
+				case RemindMethod.RecordMyOwn:
+					break;
+				default:
+					goto IL_0146;
+				case RemindMethod.SurpriseMeWithMood:
+					goto IL_015b;
+				case RemindMethod.SurpriseMe:
+					goto IL_0171;
+				case (RemindMethod)2:
+					goto IL_017d;
+				}
+				result = Ⴗ(Ⴍ.SpecificPersonalityID, Ⴍ.SpecificActionID);
+				break;
+				IL_015b:
+				result = ႭႰ.Ⴓ.Ⴓ(Ⴍ.MoodID, Ⴍ.MoodLevel);
+				break;
+				IL_0146:
+				if (409 > 409 - 73)
+				{
+					if (reminderMethod != RemindMethod.SpecificAction)
+					{
+						if (false)
+						{
+							break;
+						}
+						goto IL_017d;
+					}
+					result = Ⴗ(Ⴍ.SpecificPersonalityID, Ⴍ.SpecificActionID);
+					break;
+				}
+				continue;
+				IL_017d:
+				do
+				{
+					result = null;
+				}
+				while (823 < 823 - 229);
+				break;
+				IL_0171:
+				result = ႨႠ();
+				break;
+			}
+			return result;
+		}
+
+		private static ChatmanAction ႨႠ()
+		{
+			Random random = new Random(Environment.TickCount);
+			int ⴍ = random.Next(0, ႨႥ().Count());
+			Personality personality = ႨႥ().ႰႷ(ⴍ);
+			ChatmanAction chatmanAction = null;
+			while (!ႥႥႨႣ.Ⴀ.Ⴐ)
+			{
+				int num = random.Next(0, personality.ActionsByID.Ⴅ.Count);
+				try
+				{
+					chatmanAction = personality.ActionsByID.Ⴐ.Skip(num - 1).First();
+				}
+				catch (Exception ⴍ2)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ2);
+				}
+				Mood mood = personality.MoodList.ႨႷႰ(chatmanAction.MoodID);
+				if (!mood.NotSelectable && !(mood.ID == new Guid(ႳႠ.Ⴀ.Ⴓ(983082777))))
+				{
+					break;
+				}
+			}
+			if (chatmanAction != null)
+			{
+				return Ⴓ(chatmanAction);
+			}
+			return null;
+		}
+
+		private static ChatmanAction Ⴓ(Guid Ⴍ, MoodLevel Ⴓ)
+		{
+			<>c__DisplayClass3 CS$<>8__locals0 = new <>c__DisplayClass3();
+			CS$<>8__locals0.moodLevel = Ⴓ;
+			Random random = new Random(Environment.TickCount);
+			int ⴍ = random.Next(0, ႨႥ().Count());
+			Personality personality = ႨႥ().ႰႷ(ⴍ);
+			IEnumerable<ChatmanAction> source;
+			if (CS$<>8__locals0.moodLevel != 0)
+			{
+				source = personality.ActionsByMood[Ⴍ].Where((ChatmanAction action) => action.Intensity <= MoodCounter.ႰႥ(CS$<>8__locals0.moodLevel));
+			}
+			else
+			{
+				IEnumerable<ChatmanAction> source2 = personality.ActionsByMood[Ⴍ];
+				if (Ⴈ == null)
+				{
+					Ⴈ = ((ChatmanAction action) => action);
+				}
+				source = source2.Select(Ⴈ);
+			}
+			int num = random.Next(0, source.Count());
+			ChatmanAction chatmanAction = null;
+			try
+			{
+				chatmanAction = source.Skip(num - 1).First();
+			}
+			catch (Exception ⴍ2)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ2);
+			}
+			if (chatmanAction != null)
+			{
+				return ႭႰ.Ⴓ.Ⴓ(chatmanAction);
+			}
+			return null;
+		}
+
+		private static ChatmanAction Ⴗ(Guid Ⴍ, Guid Ⴓ)
+		{
+			//Discarded unreachable code: IL_0002, IL_003a, IL_005c, IL_0068, IL_0073, IL_008d
+			while (true)
+			{
+				Personality personality = ႭႰ.Ⴓ.Ⴍ(Ⴍ);
+				ChatmanAction chatmanAction = null;
+				while (true)
+				{
+					if (personality == null)
+					{
+						ႥႥႨ.Ⴗ.ႳႥ(ႳႠ.Ⴀ.Ⴓ(983082782), Ⴍ);
+						if (923 > 923 - 177)
+						{
+						}
+					}
+					else if ((351 + 351 * 351) % 2 == 0)
+					{
+						chatmanAction = personality.ႨႭႷ(Ⴓ);
+					}
+					ChatmanAction result;
+					if (chatmanAction != null)
+					{
+						if (815 <= 815 - 322)
+						{
+							continue;
+						}
+						result = ႭႰ.Ⴓ.Ⴓ(chatmanAction);
+					}
+					else
+					{
+						result = null;
+						if (437 < 437 - 429)
+						{
+							break;
+						}
+					}
+					return result;
+				}
+			}
+		}
+
+		private static ChatmanAction Ⴓ(ChatmanAction Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_002c, IL_003d
+			ActionVolume ⴃ;
+			while (true)
+			{
+				ⴃ = ActionVolume.Normal;
+				if (!ႭႰ.Ⴓ.m_Ⴐ.Ⴍ.ႳႷ())
+				{
+					break;
+				}
+				if (315 >= 315 - 248)
+				{
+					do
+					{
+						ⴃ = ActionVolume.Lower;
+					}
+					while (374 <= 374 - 20);
+					break;
+				}
+			}
+			ႭႰ.Ⴓ.m_Ⴐ.Ⴗ(Ⴍ, Ⴓ: true, null, ⴃ);
+			return Ⴍ;
+		}
+
+		private static ChatmanAction <PerformSurpriseMeActionByMood>b__1(ChatmanAction action)
+		{
+			return action;
+		}
+	}
+	public class Ⴗ
+	{
+		private static ReminderConfiguration m_Ⴐ;
+
+		private static EventHandler m_Ⴐ;
+
+		public static readonly object Ⴐ = new object();
+
+		private static List<Reminder> m_Ⴐ = new List<Reminder>();
+
+		private static readonly List<Guid> m_Ⴐ = new List<Guid>();
+
+		private static Func<Reminder, <>f__AnonymousType0<Reminder, DateTime>> Ⴈ;
+
+		private static Func<<>f__AnonymousType0<Reminder, DateTime>, bool> Ⴈ;
+
+		private static Func<<>f__AnonymousType0<Reminder, DateTime>, DateTime> Ⴈ;
+
+		private static Func<<>f__AnonymousType0<Reminder, DateTime>, Reminder> Ⴈ;
+
+		public static ReminderConfiguration Ⴐ => Ⴗ.m_Ⴐ;
+
+		public static List<Reminder> Ⴐ => Ⴗ.m_Ⴐ;
+
+		public static List<Guid> Ⴐ => Ⴗ.m_Ⴐ;
+
+		public static event EventHandler Ⴀ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				Ⴗ.m_Ⴐ = (EventHandler)Delegate.Combine(Ⴗ.m_Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				Ⴗ.m_Ⴐ = (EventHandler)Delegate.Remove(Ⴗ.m_Ⴐ, value);
+			}
+		}
+
+		public static void ႨႰ()
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((Ⴗ.m_Ⴐ != null) ? 1 : 0);
+					break;
+				case 1:
+					Ⴗ.m_Ⴐ(null, new EventArgs());
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		public static void Ⴍ(Guid Ⴍ)
+		{
+			int num = 1;
+			Reminder reminder = default(Reminder);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					reminder = ႨႳ(Ⴍ);
+					num = ((reminder == null) ? 2 : 3);
+					break;
+				case 3:
+					reminder.ႨႣ();
+					ႨႰ(Ⴍ);
+					num = ((reminder.RecurranceType != 0) ? 4 : 0);
+					break;
+				case 0:
+					ႨႠ(reminder);
+					num = 4;
+					break;
+				case 4:
+					num = 2;
+					break;
+				case 2:
+					ႨႥ();
+					return;
+				}
+			}
+		}
+
+		public static void Ⴐ()
+		{
+			Guid[] array;
+			lock (Ⴗ.Ⴐ)
+			{
+				array = Ⴗ.Ⴐ.ToArray();
+				Ⴗ.Ⴐ.Clear();
+			}
+			Guid[] array2 = array;
+			foreach (Guid ⴍ in array2)
+			{
+				Reminder reminder = ႨႳ(ⴍ);
+				if (reminder != null)
+				{
+					reminder.ႨႣ();
+					if (reminder.RecurranceType == ReminderRecurranceType.OneTimeOnly)
+					{
+						Ⴐ(reminder);
+					}
+				}
+			}
+			ႨႥ();
+		}
+
+		public static bool Ⴜ(Guid Ⴍ)
+		{
+			lock (Ⴗ.m_Ⴐ)
+			{
+				if (!Ⴗ.m_Ⴐ.Contains(Ⴍ))
+				{
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႳႠ.Ⴀ.Ⴓ(983082783));
+					Ⴗ.m_Ⴐ.Add(Ⴍ);
+					return true;
+				}
+				return false;
+			}
+		}
+
+		public static bool ႨႰ(Guid Ⴍ)
+		{
+			lock (Ⴗ.m_Ⴐ)
+			{
+				return Ⴗ.m_Ⴐ.Remove(Ⴍ);
+			}
+		}
+
+		internal static void ႨႷ()
+		{
+			try
+			{
+				string text = ႣႳ.ႨႷႤ(Path.Combine(ႳႠ.Ⴀ.Ⴓ(983082780), ႳႠ.Ⴀ.Ⴓ(983082781)));
+				Ⴗ.m_Ⴐ = (File.Exists(text) ? Ⴈ<ReminderConfiguration>.ႨႷႭ(text) : new ReminderConfiguration());
+				ႨႠ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082770), ⴓ);
+			}
+		}
+
+		internal static void ႨႥ()
+		{
+			try
+			{
+				string ⴍ = ႣႳ.ႨႷႤ(Path.Combine(ႳႠ.Ⴀ.Ⴓ(983082780), ႳႠ.Ⴀ.Ⴓ(983082781)));
+				Ⴈ<ReminderConfiguration>.ႳႠ(ⴍ, Ⴗ.m_Ⴐ);
+				ႨႠ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082771), ⴓ);
+			}
+		}
+
+		public static void ႨႨ(Reminder Ⴍ)
+		{
+			try
+			{
+				lock (Ⴗ.Ⴐ.Reminders)
+				{
+					Ⴗ.Ⴐ.Reminders.Add(Ⴍ);
+				}
+				ႨႥ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082768), ⴓ);
+			}
+		}
+
+		public static Reminder ႨႳ(Guid Ⴍ)
+		{
+			foreach (Reminder reminder in Ⴗ.Ⴐ.Reminders)
+			{
+				if (Ⴍ.Equals(reminder.Id))
+				{
+					return reminder;
+				}
+			}
+			return null;
+		}
+
+		public static void ႨႷ(Reminder Ⴍ)
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((Ⴓ.Ⴃ(Ⴍ) == null) ? 2 : 0);
+					break;
+				case 2:
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႳႠ.Ⴀ.Ⴓ(983082769));
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		public static void ႨႥ(Guid Ⴍ)
+		{
+			ႨႠ(ႨႳ(Ⴍ));
+		}
+
+		public static void ႨႠ(Reminder Ⴍ)
+		{
+			try
+			{
+				if (Ⴍ != null)
+				{
+					ႨႰ(Ⴍ.Id);
+				}
+				Ⴐ(Ⴍ);
+				ႨႥ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082774), ⴓ);
+			}
+		}
+
+		private static void Ⴐ(Reminder Ⴍ)
+		{
+			try
+			{
+				lock (Ⴗ.Ⴐ.Reminders)
+				{
+					Ⴗ.Ⴐ.Reminders.Remove(Ⴍ);
+					if (Ⴍ.ReminderMethod == RemindMethod.RecordMyOwn)
+					{
+						Personality personality = Ⴓ.Ⴍ(Ⴍ.SpecificPersonalityID);
+						if (personality != null)
+						{
+							ChatmanAction chatmanAction = personality.ႨႭႷ(Ⴍ.SpecificActionID);
+							if (chatmanAction != null)
+							{
+								personality.ႨႣႰ(chatmanAction);
+							}
+						}
+					}
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082775), ⴓ);
+			}
+		}
+
+		public static void ႨႣ(Reminder Ⴍ)
+		{
+			try
+			{
+				ႨႥ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082772), ⴓ);
+			}
+		}
+
+		internal static void ႨႠ()
+		{
+			Monitor.Enter(Ⴗ.Ⴐ);
+			try
+			{
+				ObservableCollection<Reminder> reminders = Ⴗ.m_Ⴐ.Reminders;
+				if (Ⴗ.Ⴈ == null)
+				{
+					Ⴗ.Ⴈ = (Func<<>f__AnonymousType0<Reminder, DateTime>, Reminder>)(object)(Func<Reminder, <>f__AnonymousType0<Reminder, DateTime>>)((Reminder reminder) => new <>f__AnonymousType0<Reminder, DateTime>(reminder, reminder.NextOccuranceDate));
+				}
+				IEnumerable<<>f__AnonymousType0<Reminder, DateTime>> source = reminders.Select((Func<Reminder, <>f__AnonymousType0<Reminder, DateTime>>)(object)Ⴗ.Ⴈ);
+				if (Ⴗ.Ⴈ == null)
+				{
+					Ⴗ.Ⴈ = (Func<<>f__AnonymousType0<Reminder, DateTime>, Reminder>)(object)(Func<<>f__AnonymousType0<Reminder, DateTime>, bool>)((<>f__AnonymousType0<Reminder, DateTime> <>h__TransparentIdentifier0) => <>h__TransparentIdentifier0.get_nextDate() != DateTime.MinValue);
+				}
+				IEnumerable<<>f__AnonymousType0<Reminder, DateTime>> source2 = source.Where((Func<<>f__AnonymousType0<Reminder, DateTime>, bool>)(object)Ⴗ.Ⴈ);
+				if (Ⴗ.Ⴈ == null)
+				{
+					Ⴗ.Ⴈ = (Func<<>f__AnonymousType0<Reminder, DateTime>, Reminder>)(object)(Func<<>f__AnonymousType0<Reminder, DateTime>, DateTime>)((<>f__AnonymousType0<Reminder, DateTime> <>h__TransparentIdentifier0) => <>h__TransparentIdentifier0.get_nextDate());
+				}
+				IOrderedEnumerable<<>f__AnonymousType0<Reminder, DateTime>> source3 = source2.OrderBy((Func<<>f__AnonymousType0<Reminder, DateTime>, DateTime>)(object)Ⴗ.Ⴈ);
+				if (Ⴈ == null)
+				{
+					Ⴈ = ((<>f__AnonymousType0<Reminder, DateTime> <>h__TransparentIdentifier0) => <>h__TransparentIdentifier0.get_reminder());
+				}
+				Ⴗ.m_Ⴐ = source3.Select(Ⴈ).ToList();
+				ႨႰ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႳႠ.Ⴀ.Ⴓ(983082773), ⴓ);
+			}
+			finally
+			{
+				Monitor.Exit(Ⴗ.Ⴐ);
+			}
+		}
+
+		public static void ႨႭ(Reminder Ⴍ)
+		{
+			Ⴍ.ႨႭ();
+			ႨႰ(Ⴍ.Id);
+			ႨႠ();
+		}
+
+		public static void ႨႣ()
+		{
+			lock (Ⴗ.Ⴐ)
+			{
+				while (Ⴗ.m_Ⴐ.Count > 0)
+				{
+					ႨႳ(Ⴗ.m_Ⴐ[0])?.ႨႭ();
+					Ⴗ.m_Ⴐ.RemoveAt(0);
+				}
+			}
+			ႨႠ();
+		}
+
+		private static <>f__AnonymousType0<Reminder, DateTime> <RefreshOrderedReminders>b__1(Reminder reminder)
+		{
+			return new <>f__AnonymousType0<Reminder, DateTime>(reminder, reminder.NextOccuranceDate);
+		}
+
+		private static bool <RefreshOrderedReminders>b__2(<>f__AnonymousType0<Reminder, DateTime> <>h__TransparentIdentifier0)
+		{
+			return <>h__TransparentIdentifier0.get_nextDate() != DateTime.MinValue;
+		}
+
+		private static DateTime <RefreshOrderedReminders>b__3(<>f__AnonymousType0<Reminder, DateTime> <>h__TransparentIdentifier0)
+		{
+			return <>h__TransparentIdentifier0.get_nextDate();
+		}
+
+		private static Reminder <RefreshOrderedReminders>b__4(<>f__AnonymousType0<Reminder, DateTime> <>h__TransparentIdentifier0)
+		{
+			return <>h__TransparentIdentifier0.get_reminder();
+		}
+	}
+}
+namespace ႳႠ
+{
+	internal sealed class Ⴀ
+	{
+		private static readonly char[] Ⴍ;
+
+		private static readonly string[] Ⴍ;
+
+		internal static string Ⴓ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x3A98A71A;
+			string result;
+			if ((result = Ⴀ.Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "ඥऔ\u05bdյऌ\u05a5೦\u0c52ඩ७";
+				break;
+			case 1:
+				obj = "७\u05b5ջऐ\u05f9\u0cfd\u0c53\u0df6।״Դ";
+				break;
+			case 2:
+				obj = "ವట\u0de4ऴװէ\u0957";
+				break;
+			case 3:
+				obj = "\u0c4eභन\u05baշघ\u05b5\u0cf0\u0c56\u0de4ॻ\u05eeղ\u0953\u05b9ಭ\u0c4c෦ॠ\u05baԤ\u094c\u05bcಸ\u0c4d\u0db2ॼרղट\u05b9\u0cf0\u0c43\u0dbcॵר";
+				break;
+			case 4:
+				obj = "ऽ\u05ec\u0cfb\u0c5c\u0df1७־սऐשವఋ\u0de0\u093f\u05abջऐ\u05ec\u0cf9ఒ\u0df1ऴ\u05f8գग\u05f9\u0cfd\u0c5b\u0dccउץկ\u094eװ";
+				break;
+			case 5:
+				obj = "\u05ccೱట෬ण\u05bfԴऌר\u0cf8ఒ෫न\u05aaԴऊעವఈ෭ढ\u05afԴए\u05f8\u0cf0ఎ\u0de0";
+				break;
+			case 6:
+				obj = "\u059cյऊ\u05ec";
+				break;
+			case 7:
+				obj = "Նछנ\u0cfcక\u0de1न\u05aaէॐש\u0cf4ఏ";
+				break;
+			case 8:
+				obj = "ව\u093f\u05aaջऌ\u05ad\u0cf9ఔ\u0de4ऩ\u05b1պङ\u05ad೧ఞ෨त\u05b6հछ\u05ffವఘ෪ण־սङ\u05f8೧చ\u0df1त\u05b7պ";
+				break;
+			case 9:
+				obj = "ई\u05aaզऑ\u05ffವఈ\u0de4\u093b\u05b1պङ\u05ad೧ఞ෨त\u05b6հछ\u05ffವఘ෪ण־սङ\u05f8೧చ\u0df1त\u05b7պ";
+				break;
+			case 10:
+				obj = "\u0cd0ఉ\u0df7ढ\u05aaԴटשೱఒ෫प\u05f8զछנ\u0cfcక\u0de1न\u05aa";
+				break;
+			case 11:
+				obj = "\u0c29\u0de0ठ\u05b1պचר೧\u0c5b෫ढ\u05acԴऎר೧ఝ෪\u093f\u05b5ձच\u05a3";
+				break;
+			case 12:
+				obj = "\u093b\u05ff೧ఔ\u0df7७\u05bcձऒרೡఒ෫प\u05f8զछנ\u0cfcక\u0de1न\u05aa";
+				break;
+			case 13:
+				obj = "\u05c8೧ఉ෪\u093f\u05f8հछס\u0cf0ఏ෬ण\u05bfԴऌר\u0cf8ఒ෫ऩ\u05bdզफ़\u05a5\u0cfcక\u0df1न\u05aaպटס\u0cbc";
+				break;
+			case 14:
+				obj = "\u059dզऌע೧\u0c5b\u0df0ऽ\u05bcյऊפ\u0cfbజඥ\u093f\u05bdչगףೱఞ\u0df7";
+				break;
+			case 15:
+				obj = "Ցऌ\u05ff\u0cfaఉඥ\u093f\u05bdղऌר೦ఓ෬ण\u05bfԴऌר\u0cf8ఒ෫ऩ\u05bdզफ़ס\u0cfcఈ\u0df1";
+				break;
+			case 16:
+				obj = "ව\u093f\u05aaջऌ\u05ad೧ఎ෫ण\u05b1պङ\u05ad೧ఞ෨त\u05b6հफ़נ\u0cf0\u0c5b\u0de4ऽ\u05a8ոग\u05ee\u0cf4ఏ෬ढ\u05b6";
+				break;
+			case 17:
+				obj = "ई\u05aaզऑ\u05ffವఏ\u0de0\u093f\u05b5սऐ\u05ecೡఒ෫प\u05f8զछנ\u0cfcక\u0de1न\u05aaԴट\u05fd\u0ce5గ෬म\u05b9ՠगע\u0cfb";
+				break;
+			case 18:
+				obj = "\u0cd0ఉ\u0df7ढ\u05aaԴऎ\u05ff\u0cfaఘ\u0de0\u093e\u05abսऐתವఉ\u0de0ठ\u05b1պचר೧";
+				break;
+			case 19:
+				obj = "\u0c29\u0de0ठ\u05b1պचר೧య෭\u093f\u05bdյचם೧ఔ෦७\u05acռऌר\u0cf4టඥन\u05a0սऊפ\u0cfbజණ\u0963\u05f6";
+				break;
+			case 20:
+				obj = "ऌר\u0cf8ఒ෫ऩ\u05bdզलפ೦ఏඥड\u05bdպङ\u05f9\u0cfd\u0c5b෬\u093e\u05f8կ\u094eװ";
+				break;
+			case 21:
+				obj = "\u05ee\u0cfdఞ෦द\u05b1պङ\u05ad೧ఞ෨त\u05b6հछ\u05ffಯ\u0c5bඥत\u05bcԩअ\u05bd೨\u0c57ඥऩ\u05bdէझ\u05ff\u0cfcఋ\u0df1त\u05b7պ\u0943\u05f6ತఆඩ७\u058bՠगס\u0cf9ల෫ई־ղछ\u05eeೡ\u0c46\u0dfeॿ\u05a5Ըफ़׃\u0cf0\u0c03\u0df1\u0902\u05bbշऋ\u05ff\u0cf4క෦न\u059cյऊרನ\u0c00බर";
+				break;
+			case 22:
+				obj = "\u059dզऌע೧\u0c5b\u0df5ब\u05adէगףೲ\u0c5b\u0df7न\u05b5սऐש\u0cf0ఉඥह\u05b0զछ\u05ecೱ";
+				break;
+			case 23:
+				obj = "Ցऌ\u05ff\u0cfaఉඥ\u093f\u05bdէऋנ\u0cfcక\u0de2७\u05aaձओפ\u0cfbట\u0de0\u093f\u05f8ՠख\u05ff\u0cf0చ\u0de1";
+				break;
+			case 24:
+				obj = "\u0dccऩ";
+				break;
+			case 25:
+				obj = "उ\u05bdէझ\u05ff\u0cfcఋ\u0df1त\u05b7պ";
+				break;
+			case 26:
+				obj = "\u0cc7ఞ෨त\u05b6հछ\u05ff\u0cd1చ\u0df1न\u058cսओר";
+				break;
+			case 27:
+				obj = "వ\u0de0व\u05ac՛झ\u05eeೠఉ\u0de4ण\u05bbձ\u093a\u05ecೡఞ";
+				break;
+			case 28:
+				obj = "बר\u0cf8ఒ෫ऩ\u05bdզळרೡఓ෪ऩ";
+				break;
+			case 29:
+				obj = "ן\u0cf0ఘ\u0df0\u093f\u05aaյऐ\u05ee\u0cf0య\u0dfcऽ\u05bd";
+				break;
+			case 30:
+				obj = "֊ձझ\u05f8೧ఉ\u0de4ण\u05bbձम\u05ec೧చ෨न\u05acձऌ";
+				break;
+			case 31:
+				obj = "Ցऌ\u05ff\u0cfaఉඥम\u05b9ոझ\u05f8\u0cf9చ\u0df1त\u05b6ճफ़ף\u0cf0\u0c03\u0df1७\u05b7շझ\u05ff\u0cf4క෦न\u05f8հट\u05f9\u0cf0";
+				break;
+			case 32:
+				obj = "ෆथ\u05bdշक\u05c4\u0cf3\u0c29\u0de0ठ\u05b1պचר೧న\u0df1त\u05b4ոषף\u0cd0ఝ\u0de3न\u05bbՠफ़\u05ff\u0cf0ఏ\u0df0\u093f\u05b6սऐתವఝ\u0de4ड\u05abձफ़שೠఞ\u0dbf";
+				break;
+			case 33:
+				obj = "\u0900\u05b7ջच\u05c4\u0cd1";
+				break;
+			case 34:
+				obj = "\u0cd8ఔ෪ऩ\u0594ձईר\u0cf9";
+				break;
+			case 35:
+				obj = "న\u0df5न\u05bbսघפ\u0cf6ఫ\u0de0\u093f\u05abջऐ\u05ec\u0cf9ఒ\u0df1ऴ\u0591Ր";
+				break;
+			case 36:
+				obj = "षנ\u0cf4జ\u0de0ऄ\u05bc";
+				break;
+			case 37:
+				obj = "מ\u0ce5ఞ෦त־սझ\u05cc\u0cf6ఏ෬ढ\u05b6՝\u093a";
+				break;
+			case 38:
+				obj = "\u05a3Դऌר\u0cf8ఒ෫ऩ\u05bdզफ़\u05b0ವ";
+				break;
+			case 39:
+				obj = "Ըफ़ף\u0cf0\u0c03\u0df1उ\u05b9ՠछ\u05adನ\u0c5b";
+				break;
+			case 40:
+				obj = "ඥर";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)Ⴀ.Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			Ⴀ.Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴀ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴀ.Ⴍ = (string[])(object)array;
+			Ⴍ = new string[41];
+		}
+	}
+}

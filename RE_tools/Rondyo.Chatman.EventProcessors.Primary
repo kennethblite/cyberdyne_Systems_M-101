@@ -1,0 +1,3027 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.EventProcessors.Primary.dll
+// Rondyo.Chatman.EventProcessors.Primary, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Data;
+using Rondyo.Chatman.Data.Events;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Text.RegularExpressions;
+using ႠႤႭ;
+using ႥႥႨ;
+using ႥႭႰ;
+using ႨႠႰ;
+using ႭႥႨ;
+using ႭႨႰ;
+using ႭႭႰ;
+using ႭႷႰ;
+using ႷႭႨ;
+using ႷႭႭ;
+using ႷႭႳ;
+
+[assembly: Guid("91a264c5-2115-402f-95a1-cd94b1783ab5")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyTrademark("")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyDescription("")]
+[assembly: ComVisible(false)]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyVersion("1.1.0.0")]
+internal sealed class <>f__AnonymousType0<<action>j__TPar, <theAction>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <action>j__TPar <action>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <theAction>j__TPar <theAction>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType0(<action>j__TPar action, <theAction>j__TPar theAction)
+	{
+		<action>i__Field = action;
+		<theAction>i__Field = theAction;
+	}
+
+	public <action>j__TPar get_action()
+	{
+		return <action>i__Field;
+	}
+
+	public <theAction>j__TPar get_theAction()
+	{
+		return <theAction>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439146));
+		stringBuilder.Append(<action>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439141));
+		stringBuilder.Append(<theAction>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439140));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		//Discarded unreachable code: IL_0002, IL_0007, IL_0026, IL_0050, IL_006a
+		<>f__AnonymousType0<<action>j__TPar, <theAction>j__TPar> <>f__AnonymousType = value as <>f__AnonymousType0<<action>j__TPar, <theAction>j__TPar>;
+		int result;
+		if (<>f__AnonymousType != null)
+		{
+			if (1009 <= 1009 - 965)
+			{
+			}
+			if (EqualityComparer<<action>j__TPar>.Default.Equals(<action>i__Field, <>f__AnonymousType.<action>i__Field))
+			{
+				if (728 >= 728 - 682)
+				{
+					result = (EqualityComparer<<theAction>j__TPar>.Default.Equals(<theAction>i__Field, <>f__AnonymousType.<theAction>i__Field) ? 1 : 0);
+					goto IL_0009;
+				}
+			}
+		}
+		result = 0;
+		goto IL_0009;
+		IL_0009:
+		return (byte)result != 0;
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = 2133125766;
+		num = -1521134295 * num + EqualityComparer<<action>j__TPar>.Default.GetHashCode(<action>i__Field);
+		return -1521134295 * num + EqualityComparer<<theAction>j__TPar>.Default.GetHashCode(<theAction>i__Field);
+	}
+}
+internal sealed class <>f__AnonymousType1<<scenario>j__TPar, <scenarioMood>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <scenario>j__TPar <scenario>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <scenarioMood>j__TPar <scenarioMood>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType1(<scenario>j__TPar scenario, <scenarioMood>j__TPar scenarioMood)
+	{
+		<scenario>i__Field = scenario;
+		<scenarioMood>i__Field = scenarioMood;
+	}
+
+	public <scenarioMood>j__TPar get_scenarioMood()
+	{
+		return <scenarioMood>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439143));
+		stringBuilder.Append(<scenario>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439142));
+		stringBuilder.Append(<scenarioMood>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439140));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		int num = 2;
+		<>f__AnonymousType1<<scenario>j__TPar, <scenarioMood>j__TPar> <>f__AnonymousType = default(<>f__AnonymousType1<<scenario>j__TPar, <scenarioMood>j__TPar>);
+		int result;
+		while (true)
+		{
+			switch (num)
+			{
+			default:
+				<>f__AnonymousType = (value as <>f__AnonymousType1<<scenario>j__TPar, <scenarioMood>j__TPar>);
+				num = ((<>f__AnonymousType == null) ? 3 : 0);
+				continue;
+			case 0:
+				num = (EqualityComparer<<scenario>j__TPar>.Default.Equals(<scenario>i__Field, <>f__AnonymousType.<scenario>i__Field) ? 1 : 3);
+				continue;
+			case 1:
+				result = (EqualityComparer<<scenarioMood>j__TPar>.Default.Equals(<scenarioMood>i__Field, <>f__AnonymousType.<scenarioMood>i__Field) ? 1 : 0);
+				break;
+			case 3:
+				result = 0;
+				break;
+			}
+			break;
+		}
+		return (byte)result != 0;
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = 1229749018;
+		num = -1521134295 * num + EqualityComparer<<scenario>j__TPar>.Default.GetHashCode(<scenario>i__Field);
+		return -1521134295 * num + EqualityComparer<<scenarioMood>j__TPar>.Default.GetHashCode(<scenarioMood>i__Field);
+	}
+}
+internal sealed class <>f__AnonymousType2<<theScenarioMatchData>j__TPar, <theScenario>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <theScenarioMatchData>j__TPar <theScenarioMatchData>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <theScenario>j__TPar <theScenario>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType2(<theScenarioMatchData>j__TPar theScenarioMatchData, <theScenario>j__TPar theScenario)
+	{
+		<theScenarioMatchData>i__Field = theScenarioMatchData;
+		<theScenario>i__Field = theScenario;
+	}
+
+	public <theScenario>j__TPar get_theScenario()
+	{
+		return <theScenario>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439137));
+		stringBuilder.Append(<theScenarioMatchData>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439136));
+		stringBuilder.Append(<theScenario>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439140));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		//Discarded unreachable code: IL_0002, IL_0007, IL_0023, IL_004d, IL_0067
+		<>f__AnonymousType2<<theScenarioMatchData>j__TPar, <theScenario>j__TPar> <>f__AnonymousType = value as <>f__AnonymousType2<<theScenarioMatchData>j__TPar, <theScenario>j__TPar>;
+		if (<>f__AnonymousType != null)
+		{
+			bool result = default(bool);
+			if (482 <= 482 - 105)
+			{
+				return result;
+			}
+			while (EqualityComparer<<theScenarioMatchData>j__TPar>.Default.Equals(<theScenarioMatchData>i__Field, <>f__AnonymousType.<theScenarioMatchData>i__Field))
+			{
+				if (511 < 511 - 378)
+				{
+					continue;
+				}
+				goto IL_004f;
+			}
+		}
+		int result2 = 0;
+		goto IL_0009;
+		IL_004f:
+		result2 = (EqualityComparer<<theScenario>j__TPar>.Default.Equals(<theScenario>i__Field, <>f__AnonymousType.<theScenario>i__Field) ? 1 : 0);
+		goto IL_0009;
+		IL_0009:
+		return (byte)result2 != 0;
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = 727321915;
+		num = -1521134295 * num + EqualityComparer<<theScenarioMatchData>j__TPar>.Default.GetHashCode(<theScenarioMatchData>i__Field);
+		return -1521134295 * num + EqualityComparer<<theScenario>j__TPar>.Default.GetHashCode(<theScenario>i__Field);
+	}
+}
+internal sealed class <>f__AnonymousType3<<scenario>j__TPar, <category>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <scenario>j__TPar <scenario>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <category>j__TPar <category>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType3(<scenario>j__TPar scenario, <category>j__TPar category)
+	{
+		<scenario>i__Field = scenario;
+		<category>i__Field = category;
+	}
+
+	public <category>j__TPar get_category()
+	{
+		return <category>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439143));
+		stringBuilder.Append(<scenario>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439139));
+		stringBuilder.Append(<category>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439140));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		int num = 3;
+		<>f__AnonymousType3<<scenario>j__TPar, <category>j__TPar> <>f__AnonymousType = default(<>f__AnonymousType3<<scenario>j__TPar, <category>j__TPar>);
+		int result;
+		while (true)
+		{
+			switch (num)
+			{
+			default:
+				<>f__AnonymousType = (value as <>f__AnonymousType3<<scenario>j__TPar, <category>j__TPar>);
+				num = ((<>f__AnonymousType != null) ? 2 : 0);
+				continue;
+			case 2:
+				num = (EqualityComparer<<scenario>j__TPar>.Default.Equals(<scenario>i__Field, <>f__AnonymousType.<scenario>i__Field) ? 1 : 0);
+				continue;
+			case 1:
+				result = (EqualityComparer<<category>j__TPar>.Default.Equals(<category>i__Field, <>f__AnonymousType.<category>i__Field) ? 1 : 0);
+				break;
+			case 0:
+				result = 0;
+				break;
+			}
+			break;
+		}
+		return (byte)result != 0;
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = -303891404;
+		num = -1521134295 * num + EqualityComparer<<scenario>j__TPar>.Default.GetHashCode(<scenario>i__Field);
+		return -1521134295 * num + EqualityComparer<<category>j__TPar>.Default.GetHashCode(<category>i__Field);
+	}
+}
+internal sealed class <>f__AnonymousType4<<scenarioMatchData>j__TPar, <matchedPhrase>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <scenarioMatchData>j__TPar <scenarioMatchData>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <matchedPhrase>j__TPar <matchedPhrase>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType4(<scenarioMatchData>j__TPar scenarioMatchData, <matchedPhrase>j__TPar matchedPhrase)
+	{
+		<scenarioMatchData>i__Field = scenarioMatchData;
+		<matchedPhrase>i__Field = matchedPhrase;
+	}
+
+	public <scenarioMatchData>j__TPar get_scenarioMatchData()
+	{
+		return <scenarioMatchData>i__Field;
+	}
+
+	public <matchedPhrase>j__TPar get_matchedPhrase()
+	{
+		return <matchedPhrase>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439138));
+		stringBuilder.Append(<scenarioMatchData>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439069));
+		stringBuilder.Append(<matchedPhrase>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439140));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		int num = 1;
+		<>f__AnonymousType4<<scenarioMatchData>j__TPar, <matchedPhrase>j__TPar> <>f__AnonymousType = default(<>f__AnonymousType4<<scenarioMatchData>j__TPar, <matchedPhrase>j__TPar>);
+		int result;
+		while (true)
+		{
+			switch (num)
+			{
+			default:
+				<>f__AnonymousType = (value as <>f__AnonymousType4<<scenarioMatchData>j__TPar, <matchedPhrase>j__TPar>);
+				num = ((<>f__AnonymousType == null) ? 2 : 3);
+				continue;
+			case 3:
+				num = ((!EqualityComparer<<scenarioMatchData>j__TPar>.Default.Equals(<scenarioMatchData>i__Field, <>f__AnonymousType.<scenarioMatchData>i__Field)) ? 2 : 0);
+				continue;
+			case 0:
+				result = (EqualityComparer<<matchedPhrase>j__TPar>.Default.Equals(<matchedPhrase>i__Field, <>f__AnonymousType.<matchedPhrase>i__Field) ? 1 : 0);
+				break;
+			case 2:
+				result = 0;
+				break;
+			}
+			break;
+		}
+		return (byte)result != 0;
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = -1709088563;
+		num = -1521134295 * num + EqualityComparer<<scenarioMatchData>j__TPar>.Default.GetHashCode(<scenarioMatchData>i__Field);
+		return -1521134295 * num + EqualityComparer<<matchedPhrase>j__TPar>.Default.GetHashCode(<matchedPhrase>i__Field);
+	}
+}
+internal sealed class <>f__AnonymousType5<<<>h__TransparentIdentifier3c>j__TPar, <matchedMultiPhrase>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <<>h__TransparentIdentifier3c>j__TPar <<>h__TransparentIdentifier3c>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <matchedMultiPhrase>j__TPar <matchedMultiPhrase>i__Field;
+
+	public <<>h__TransparentIdentifier3c>j__TPar <>h__TransparentIdentifier3c => <<>h__TransparentIdentifier3c>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType5(<<>h__TransparentIdentifier3c>j__TPar <>h__TransparentIdentifier3c, <matchedMultiPhrase>j__TPar matchedMultiPhrase)
+	{
+		<<>h__TransparentIdentifier3c>i__Field = <>h__TransparentIdentifier3c;
+		<matchedMultiPhrase>i__Field = matchedMultiPhrase;
+	}
+
+	public <matchedMultiPhrase>j__TPar get_matchedMultiPhrase()
+	{
+		return <matchedMultiPhrase>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439068));
+		stringBuilder.Append(<<>h__TransparentIdentifier3c>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439071));
+		stringBuilder.Append(<matchedMultiPhrase>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439140));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		int num = 2;
+		<>f__AnonymousType5<<<>h__TransparentIdentifier3c>j__TPar, <matchedMultiPhrase>j__TPar> <>f__AnonymousType = default(<>f__AnonymousType5<<<>h__TransparentIdentifier3c>j__TPar, <matchedMultiPhrase>j__TPar>);
+		int result;
+		while (true)
+		{
+			switch (num)
+			{
+			default:
+				<>f__AnonymousType = (value as <>f__AnonymousType5<<<>h__TransparentIdentifier3c>j__TPar, <matchedMultiPhrase>j__TPar>);
+				num = ((<>f__AnonymousType != null) ? 1 : 3);
+				continue;
+			case 1:
+				num = ((!EqualityComparer<<<>h__TransparentIdentifier3c>j__TPar>.Default.Equals(<<>h__TransparentIdentifier3c>i__Field, <>f__AnonymousType.<<>h__TransparentIdentifier3c>i__Field)) ? 3 : 0);
+				continue;
+			case 0:
+				result = (EqualityComparer<<matchedMultiPhrase>j__TPar>.Default.Equals(<matchedMultiPhrase>i__Field, <>f__AnonymousType.<matchedMultiPhrase>i__Field) ? 1 : 0);
+				break;
+			case 3:
+				result = 0;
+				break;
+			}
+			break;
+		}
+		return (byte)result != 0;
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = -752254168;
+		num = -1521134295 * num + EqualityComparer<<<>h__TransparentIdentifier3c>j__TPar>.Default.GetHashCode(<<>h__TransparentIdentifier3c>i__Field);
+		return -1521134295 * num + EqualityComparer<<matchedMultiPhrase>j__TPar>.Default.GetHashCode(<matchedMultiPhrase>i__Field);
+	}
+}
+internal sealed class <>f__AnonymousType6<<<>h__TransparentIdentifier3d>j__TPar, <phraseLength>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <<>h__TransparentIdentifier3d>j__TPar <<>h__TransparentIdentifier3d>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <phraseLength>j__TPar <phraseLength>i__Field;
+
+	public <<>h__TransparentIdentifier3d>j__TPar <>h__TransparentIdentifier3d => <<>h__TransparentIdentifier3d>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType6(<<>h__TransparentIdentifier3d>j__TPar <>h__TransparentIdentifier3d, <phraseLength>j__TPar phraseLength)
+	{
+		<<>h__TransparentIdentifier3d>i__Field = <>h__TransparentIdentifier3d;
+		<phraseLength>i__Field = phraseLength;
+	}
+
+	public <phraseLength>j__TPar get_phraseLength()
+	{
+		return <phraseLength>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439070));
+		stringBuilder.Append(<<>h__TransparentIdentifier3d>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439065));
+		stringBuilder.Append(<phraseLength>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439140));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		int num = 3;
+		<>f__AnonymousType6<<<>h__TransparentIdentifier3d>j__TPar, <phraseLength>j__TPar> <>f__AnonymousType = default(<>f__AnonymousType6<<<>h__TransparentIdentifier3d>j__TPar, <phraseLength>j__TPar>);
+		int result;
+		while (true)
+		{
+			switch (num)
+			{
+			default:
+				<>f__AnonymousType = (value as <>f__AnonymousType6<<<>h__TransparentIdentifier3d>j__TPar, <phraseLength>j__TPar>);
+				num = ((<>f__AnonymousType != null) ? 2 : 0);
+				continue;
+			case 2:
+				num = (EqualityComparer<<<>h__TransparentIdentifier3d>j__TPar>.Default.Equals(<<>h__TransparentIdentifier3d>i__Field, <>f__AnonymousType.<<>h__TransparentIdentifier3d>i__Field) ? 1 : 0);
+				continue;
+			case 1:
+				result = (EqualityComparer<<phraseLength>j__TPar>.Default.Equals(<phraseLength>i__Field, <>f__AnonymousType.<phraseLength>i__Field) ? 1 : 0);
+				break;
+			case 0:
+				result = 0;
+				break;
+			}
+			break;
+		}
+		return (byte)result != 0;
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = -44860117;
+		num = -1521134295 * num + EqualityComparer<<<>h__TransparentIdentifier3d>j__TPar>.Default.GetHashCode(<<>h__TransparentIdentifier3d>i__Field);
+		return -1521134295 * num + EqualityComparer<<phraseLength>j__TPar>.Default.GetHashCode(<phraseLength>i__Field);
+	}
+}
+internal sealed class <>f__AnonymousType7<<scenario>j__TPar, <text>j__TPar>
+{
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <scenario>j__TPar <scenario>i__Field;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	private readonly <text>j__TPar <text>i__Field;
+
+	[DebuggerHidden]
+	public <>f__AnonymousType7(<scenario>j__TPar scenario, <text>j__TPar text)
+	{
+		<scenario>i__Field = scenario;
+		<text>i__Field = text;
+	}
+
+	public <scenario>j__TPar get_scenario()
+	{
+		return <scenario>i__Field;
+	}
+
+	public <text>j__TPar get_text()
+	{
+		return <text>i__Field;
+	}
+
+	[DebuggerHidden]
+	public override string ToString()
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439143));
+		stringBuilder.Append(<scenario>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439064));
+		stringBuilder.Append(<text>i__Field);
+		stringBuilder.Append(ႠႤႭ.Ⴍ.ႰႷ(444439140));
+		return stringBuilder.ToString();
+	}
+
+	[DebuggerHidden]
+	public override bool Equals(object value)
+	{
+		//Discarded unreachable code: IL_0002, IL_0007, IL_0025, IL_004c, IL_0066
+		while (true)
+		{
+			<>f__AnonymousType7<<scenario>j__TPar, <text>j__TPar> <>f__AnonymousType = value as <>f__AnonymousType7<<scenario>j__TPar, <text>j__TPar>;
+			while (true)
+			{
+				int result;
+				if (<>f__AnonymousType != null)
+				{
+					if (false)
+					{
+						continue;
+					}
+					if (EqualityComparer<<scenario>j__TPar>.Default.Equals(<scenario>i__Field, <>f__AnonymousType.<scenario>i__Field))
+					{
+						if (803 <= 803 - 98)
+						{
+							break;
+						}
+						result = (EqualityComparer<<text>j__TPar>.Default.Equals(<text>i__Field, <>f__AnonymousType.<text>i__Field) ? 1 : 0);
+						goto IL_0009;
+					}
+				}
+				result = 0;
+				goto IL_0009;
+				IL_0009:
+				return (byte)result != 0;
+			}
+		}
+	}
+
+	[DebuggerHidden]
+	public override int GetHashCode()
+	{
+		int num = -1145503400;
+		num = -1521134295 * num + EqualityComparer<<scenario>j__TPar>.Default.GetHashCode(<scenario>i__Field);
+		return -1521134295 * num + EqualityComparer<<text>j__TPar>.Default.GetHashCode(<text>i__Field);
+	}
+}
+namespace ႠႤႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] Ⴃ;
+
+		private static readonly string[] Ⴃ;
+
+		internal static string ႰႷ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x1A7D9A5D;
+			string result;
+			if ((result = Ⴃ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "Շछ\u05fe೦ఒ෪ण\u059dբछףೡఫ\u0df7ढ\u05bbձऍ\u05fe\u0cfaఉඥॠ\u05f8Ցईר\u0cfbఏඥशרթफ़\u05ff\u0cf0ఘ\u0de0त\u05aeձच\u05a3ವ\u0c3f\u0de4ह\u05b9ԥ\u0944\u05ad೮\u0c4a\u0df8७\u059cյऊ\u05ecಧ\u0c41ඥशתթ";
+				break;
+			case 1:
+				obj = "\u058bձऒר\u0cf6ఏ\u0de0ऩ\u05f8յझ\u05f9\u0cfcఔ෫७\u05a3Ԥ\u0903\u05ad\u0cdc\u0c3f\u0dbf७\u05a3ԥ\u0903";
+				break;
+			case 2:
+				obj = "ט೦ఞ\u0df7ऌ\u05b6էउר೧";
+				break;
+			case 3:
+				obj = "भ\u05ee\u0cf0క\u0de4\u093f\u05b1ջष\u05c9";
+				break;
+			case 4:
+				obj = "\u0c29\u0de0\u093c\u05adձऍ\u05f9\u0cf0టහम\u05acսईפೡ\u0c02";
+				break;
+			case 5:
+				obj = "\u0cdbఔඥ\u093e\u05bbձऐ\u05ec೧ఒ෪\u093e\u05f8չट\u05f9\u0cf6ఓඥन\u05aeձऐ\u05f9ವఏ\u0dfcऽ\u05bdԴअ\u05bd೨";
+				break;
+			case 6:
+				obj = "७";
+				break;
+			case 7:
+				obj = "\u0dc8ब\u05acշखפ\u0cfbజඥन\u05a0շछ\u05fdೡఒ෪ण";
+				break;
+			case 8:
+				obj = "\u0530\u094f";
+				break;
+			case 9:
+				obj = "װԺ\u0957בತ\u0c50";
+				break;
+			case 10:
+				obj = "\u05ee\u0cf4క෫ढ\u05ac";
+				break;
+			case 11:
+				obj = "झ\u05ec\u0cfbⱢ\u0df1";
+				break;
+			case 12:
+				obj = "ఘ\u0de4ण\u05ac";
+				break;
+			case 13:
+				obj = "\u0ce2ఞ\u0df7न\u05b6┍ऊ";
+				break;
+			case 14:
+				obj = "\u093a\u05bdզछףೡ";
+				break;
+			case 15:
+				obj = "෦ढ\u05adոचףⲌఏ";
+				break;
+			case 16:
+				obj = "շऑ\u05f8\u0cf9ట෫ह";
+				break;
+			case 17:
+				obj = "\u05abռऑ\u05f8\u0cf9ట෫⥔\u05ac";
+				break;
+			case 18:
+				obj = "\u05fe\u0cfdఔ\u0df0ड\u05bcպऊ";
+				break;
+			case 19:
+				obj = "चע\u0cfbⱢ\u0df1";
+				break;
+			case 20:
+				obj = "ట෪ण\u05ac";
+				break;
+			case 21:
+				obj = "ೱఒ\u0de1ण◁ՠ";
+				break;
+			case 22:
+				obj = "ऩ\u05b1հऐ\u05f9";
+				break;
+			case 23:
+				obj = "෫ढ\u05ac";
+				break;
+			case 24:
+				obj = "պऑ";
+				break;
+			case 25:
+				obj = "\u05b1էऐ▔ೡ";
+				break;
+			case 26:
+				obj = "פ೦క\u0df1";
+				break;
+			case 27:
+				obj = "उע\u0cfbⱢ\u0df1";
+				break;
+			case 28:
+				obj = "ఌ෪ण\u05ac";
+				break;
+			case 29:
+				obj = "\u0cfdచ\u0df3न\u05b6┍ऊ";
+				break;
+			case 30:
+				obj = "थ\u05b9բछףೡ";
+				break;
+			case 31:
+				obj = "෭ब\u05abպ⥧\u05f9";
+				break;
+			case 32:
+				obj = "ռट\u05fe\u0cfbఏ";
+				break;
+			case 33:
+				obj = "\u05bcջछ\u05fe\u0cfbⱢ\u0df1";
+				break;
+			case 34:
+				obj = "ש\u0cfaఞ\u0df6ण\u05ac";
+				break;
+			case 35:
+				obj = "उעೠగ\u0de1ण\u05ffՠ";
+				break;
+			case 36:
+				obj = "ఌ෪स\u05b4հऐ\u05f9";
+				break;
+			case 37:
+				obj = "\u0cfdచ\u0df1न";
+				break;
+			case 38:
+				obj = "म\u05b9պख़\u05f9ವఈ\u0df1ब\u05b6հ";
+				break;
+			case 39:
+				obj = "෦ब\u05b6Գऊ\u05ad\u0cfdచ෫ऩ\u05b4ձ";
+				break;
+			case 40:
+				obj = "շटףಲఏඥह\u05b9տछ";
+				break;
+			case 41:
+				obj = "\u05edԦछׯ\u0cf6ఝලन\u05f5յ\u0948\u05bb\u0cf3\u0c56නॵׯշ\u0953ׯಥ\u0c49පॠ\u05eeԣ\u094f\u05bd\u0cf3చනनנԭ\u0946\u05bd";
+				break;
+			case 42:
+				obj = "רೱ\u0c4b\u0de3ॿרԢज\u05a0\u0cf4\u0c4dධॺ\u05f5Ԡ\u094b\u05bcಬ\u0c56ලॽ\u05b9Ԭ\u0953\u05bfದఘභय\u05ecԠछש\u0cf0\u0c4f\u0de4";
+				break;
+			case 43:
+				obj = "च\u05baಢ\u0c4cනॻ\u05bdն\u0953\u05bd\u0cf6ఘ\u0dbcॠ\u05ecԭच\u05b8ಸ\u0c42භॵ\u05eeԹघ\u05b9ಢ\u0c4b\u0de0ॿנԥ\u094cשಢ\u0c4b";
+				break;
+			case 44:
+				obj = "మ\u0dd7\u0901\u059dբछףೡఫ\u0df7ढ\u05bbձऍ\u05fe\u0cfaఉඥॠ\u05f8Ցईר\u0cfbఏඥशרթफ़\u05ff\u0cf0ఘ\u0de0त\u05aeձच\u05a3ವ\u0c3f\u0de4ह\u05b9ԥ\u0944\u05ad೮\u0c4a\u0df8७\u059cյऊ\u05ecಧ\u0c41ඥशתթ";
+				break;
+			case 45:
+				obj = "\u0cdbఔඥ\u093e\u05bbձऐ\u05ec೧ఒ෪\u093e\u05f8չट\u05f9\u0cf6ఓ\u0de0ऩ\u05f6";
+				break;
+			case 46:
+				obj = "ऱ";
+				break;
+			case 47:
+				obj = "ත";
+				break;
+			case 48:
+				obj = "Խ";
+				break;
+			case 49:
+				obj = "ք";
+				break;
+			case 50:
+				obj = "ב\u0cc9";
+				break;
+			case 51:
+				obj = "ढױ";
+				break;
+			case 52:
+				obj = "ఙපम־շ\u094e\u05eeಢ\u0c56බय\u05ecԦ\u0953\u05b9\u0cf4ఘ\u0db2ॠסԣ\u094d\u05b5ಸచභॺסԢच־ಠ\u0c43\u0de3ॺ\u05bc";
+				break;
+			case 53:
+				obj = "ಽధඪऱքԺ\u0902ב\u0cbfఇ\u0dd9०\u05a4Ո\u0941ױ\u0cc9\u0c53\u0df9ऑױըढז೩ధ\u0dd8ऱքկ\u0902ב೨\u0c52";
+				break;
+			case 54:
+				obj = "ऑ\u05fcԥ";
+				break;
+			case 55:
+				obj = "\u0dfe७\u05b9շऊפ\u0cfaకඥ॰\u05f8";
+				break;
+			case 56:
+				obj = "Ըफ़\u05f9\u0cfdఞහम\u05acսऑףವ\u0c46ඥ";
+				break;
+			case 57:
+				obj = "\u05f8թ";
+				break;
+			case 58:
+				obj = "\u05f6ವఈ෦न\u05b6յऌפ\u0cfa\u0c5bම७";
+				break;
+			case 59:
+				obj = "\u0952\u05ad೦ఘ\u0de0ण\u05b9զगע\u0cd8ఔ෪ऩ\u05f8ԩफ़";
+				break;
+			case 60:
+				obj = "\u0c00ඥह\u05b0ձभ\u05ee\u0cf0క\u0de4\u093f\u05b1ջळ\u05ecೡఘ෭उ\u05b9ՠट\u05adನ\u0c5b";
+				break;
+			case 61:
+				obj = "ಹ\u0c5b\u0df1थ\u05bdՇझר\u0cfbచ\u0df7त\u05b7Դ\u0943\u05ad";
+				break;
+			case 62:
+				obj = "ॡ\u05f8շट\u05f9\u0cf0జ෪\u093f\u05a1Դ\u0943\u05ad";
+				break;
+			case 63:
+				obj = "\u0dfe७\u05abշछף\u0cf4ఉ෬ढ\u0595յऊ\u05ee\u0cfd\u0c3f\u0de4ह\u05b9Դ\u0943\u05ad";
+				break;
+			case 64:
+				obj = "Ըफ़נ\u0cf4ఏ෦थ\u05bdհमץ೧చ\u0df6न\u05f8ԩफ़";
+				break;
+			case 65:
+				obj = "\u05a3Դ\u0942\u05b3\u0cfdత\u0ddaङ\u05aaյऐ\u05fe\u0ce5చ\u0df7न\u05b6ՠषש\u0cf0క\u0df1त־սछ\u05ffದఘඥ॰\u05f8";
+				break;
+			case 66:
+				obj = "\u05a1ವఖ\u0de4ह\u05bbռछש\u0cd8ఎ෩ह\u05b1Մख\u05ff\u0cf4ఈ\u0de0७ץԴ";
+				break;
+			case 67:
+				obj = "अ\u05ad\u0ca9\u0c45෭ऒևՀऌ\u05ec\u0cfbఈ\u0df5ब\u05aaձऐ\u05f9\u0cdcట\u0de0ण\u05acսघפ\u0cf0ఉබऩ\u05f8ԩफ़";
+				break;
+			case 68:
+				obj = "\u0c57ඥऽ\u05b0զट\u05fe\u0cf0ష\u0de0ण\u05bfՠख\u05adನ\u0c5b";
+				break;
+			case 69:
+				obj = "ಹ\u0c5b\u0df1न\u05a0ՠफ़\u05b0ವ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴃ = (char[])(object)Ⴍ.Ⴃ;
+			int num2 = ⴃ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴃ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			Ⴃ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴍ.Ⴃ = (string[])(object)array;
+			Ⴃ = new string[70];
+		}
+	}
+}
+namespace ႨႣႰ
+{
+	internal class Ⴀ
+	{
+		private ScenarioRelationPair Ⴐ;
+
+		private int Ⴐ;
+
+		private int Ⴈ;
+
+		internal unsafe Ⴀ(ScenarioRelationPair Ⴍ, int Ⴓ, int Ⴈ)
+		{
+			*(ScenarioRelationPair*)(&this.Ⴐ) = Ⴍ;
+			Ⴐ = Ⴓ;
+			this.Ⴈ = Ⴈ;
+		}
+
+		internal unsafe ScenarioRelationPair ႰႣ()
+		{
+			return *(ScenarioRelationPair*)(&this.Ⴐ);
+		}
+
+		internal int ႰႳ()
+		{
+			return Ⴐ;
+		}
+
+		internal int ႰႭ()
+		{
+			return Ⴈ;
+		}
+
+		internal void ႰႣ(int Ⴍ)
+		{
+			Ⴈ = Ⴍ;
+		}
+	}
+	internal sealed class Ⴃ : Ⴀ
+	{
+		internal Ⴃ(ScenarioRelationPair Ⴍ, int Ⴓ, int Ⴈ)
+			: base(Ⴍ, Ⴓ, Ⴈ)
+		{
+		}
+	}
+	internal sealed class Ⴄ : IComparable<Ⴄ>
+	{
+		internal string Ⴐ;
+
+		private static CompareInfo Ⴐ = CultureInfo.InvariantCulture.CompareInfo;
+
+		internal Ⴄ(string Ⴍ)
+		{
+			this.Ⴐ = (CompareInfo)(object)Ⴍ;
+		}
+
+		public int CompareTo(Ⴄ Ⴍ)
+		{
+			return string.Compare((string)(object)this.Ⴐ, (string)(object)Ⴍ.Ⴐ, CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace | CompareOptions.IgnoreSymbols);
+		}
+	}
+	public class Ⴅ
+	{
+		private Scenario Ⴐ;
+
+		internal bool Ⴐ;
+
+		internal bool Ⴈ;
+
+		internal int Ⴐ;
+
+		internal bool Ⴓ;
+
+		internal bool Ⴗ;
+
+		internal Dictionary<string, Ⴀ> Ⴐ;
+
+		internal Ⴀ Ⴐ;
+
+		internal bool Ⴅ;
+
+		internal Dictionary<string, Ⴃ> Ⴐ;
+
+		internal List<Ⴃ> Ⴐ;
+
+		internal Ⴍ Ⴐ = (Ⴍ)(object)new List<Ⴃ>();
+
+		internal Ⴅ(Scenario Ⴍ)
+		{
+			this.Ⴐ = (Ⴍ)(object)Ⴍ;
+		}
+
+		internal Ⴅ(ScenarioRelationPair Ⴍ)
+		{
+			this.Ⴐ = (Ⴍ)(object)Ⴍ.Ⴐ;
+		}
+
+		internal Scenario ႨႨႥ()
+		{
+			return (Scenario)(object)this.Ⴐ;
+		}
+	}
+	internal sealed class Ⴈ
+	{
+		private static Func<MoodCounter, MoodCounter> Ⴈ;
+
+		private static Func<MoodCounter, int> Ⴈ;
+
+		internal static int Ⴗ(Guid Ⴀ, Dictionary<Guid, MoodCounter> Ⴍ, Dictionary<Guid, MoodCorrelationPair> Ⴄ)
+		{
+			//Discarded unreachable code: IL_0002, IL_002f, IL_0044, IL_0059, IL_006e, IL_00a6, IL_00d6
+			int result = default(int);
+			do
+			{
+				double num = 0.0;
+				int totalCounter = Ⴍ[Ⴀ].TotalCounter;
+				Dictionary<Guid, MoodCounter>.ValueCollection values = Ⴍ.Values;
+				if (ႨႣႰ.Ⴈ.Ⴈ == null)
+				{
+					ႨႣႰ.Ⴈ.Ⴈ = (Func<MoodCounter, int>)(object)(Func<MoodCounter, MoodCounter>)((MoodCounter moodCounter) => moodCounter);
+				}
+				IEnumerable<MoodCounter> source = values.Select((Func<MoodCounter, MoodCounter>)(object)ႨႣႰ.Ⴈ.Ⴈ);
+				if (Ⴈ == null)
+				{
+					Ⴈ = ((MoodCounter item) => item.TotalCounter);
+				}
+				num = source.Sum(Ⴈ);
+				if (num == 0.0)
+				{
+					if (999 > 999 - 510)
+					{
+						result = 1;
+					}
+					break;
+				}
+				result = Math.Max(Convert.ToInt32((double)totalCounter / num * 10.0), 1);
+			}
+			while (282 <= 282 - 17);
+			return result;
+		}
+
+		private static MoodCounter <CalculateMaximumIntensity>b__0(MoodCounter moodCounter)
+		{
+			return moodCounter;
+		}
+
+		private static int <CalculateMaximumIntensity>b__1(MoodCounter item)
+		{
+			return item.TotalCounter;
+		}
+	}
+	internal sealed class Ⴍ
+	{
+		private ScenarioRelationPair Ⴐ;
+
+		private int Ⴐ;
+
+		private int Ⴈ;
+
+		private int Ⴓ;
+
+		private int Ⴗ;
+
+		internal unsafe Ⴍ(ScenarioRelationPair Ⴍ, int Ⴓ, int Ⴈ, int Ⴃ, int Ⴗ)
+		{
+			*(ScenarioRelationPair*)(&this.Ⴐ) = Ⴍ;
+			Ⴐ = Ⴓ;
+			this.Ⴈ = Ⴈ;
+			this.Ⴓ = Ⴃ;
+			this.Ⴗ = Ⴗ;
+		}
+
+		internal unsafe ScenarioRelationPair ႰႳ()
+		{
+			return *(ScenarioRelationPair*)(&this.Ⴐ);
+		}
+
+		internal int ႰႣ()
+		{
+			return Ⴐ;
+		}
+
+		internal int ႰႷ()
+		{
+			return Ⴈ;
+		}
+
+		internal int ႰႤ()
+		{
+			return Ⴓ;
+		}
+
+		internal int ႰႥ()
+		{
+			return Ⴗ;
+		}
+	}
+	public class Ⴐ : ႨႠႰ.Ⴗ
+	{
+		private new ႭႨႰ.Ⴐ Ⴐ;
+
+		private new ႷႭႳ.Ⴄ Ⴐ;
+
+		public override void ႨႨႷ()
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				case 3:
+					return;
+				default:
+					base.ႨႨႷ();
+					this.Ⴐ = (ႷႭႳ.Ⴄ)ႭႨႰ.Ⴐ.Ⴐ;
+					num = ((this.Ⴐ == null) ? 2 : 0);
+					break;
+				case 0:
+					num2 = ((((ႭႨႰ.Ⴐ)this.Ⴐ).Ⴃ != null) ? 1 : 0);
+					goto IL_0054;
+				case 2:
+					num2 = 0;
+					goto IL_0054;
+				case 5:
+					ႭႨႰ.Ⴐ.Ⴀ += ႨႷႳ;
+					num = 3;
+					break;
+				case 4:
+					{
+						Ⴐ = ((ႭႨႰ.Ⴐ)this.Ⴐ).Ⴃ.Ⴗ.Ⴅ;
+						num = 3;
+						break;
+					}
+					IL_0054:
+					num = ((num2 != 0) ? 4 : 5);
+					break;
+				}
+			}
+		}
+
+		private void ႨႷႳ(ႭႨႰ.Ⴐ Ⴀ)
+		{
+			ႭႨႰ.Ⴐ.Ⴀ -= ႨႷႳ;
+			this.Ⴐ = (ႷႭႳ.Ⴄ)Ⴀ;
+			Ⴐ = Ⴀ.Ⴃ.Ⴗ.Ⴅ;
+		}
+
+		public override ႭႷႰ.Ⴈ Ⴓ(ႭႷႰ.Ⴐ Ⴀ, Personality Ⴍ, ႷႭႨ.Ⴓ Ⴄ)
+		{
+			int num = 10;
+			EventType type = default(EventType);
+			ႭႷႰ.Ⴈ result = default(ႭႷႰ.Ⴈ);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					ႥႥႨ.Ⴗ.ႳႥ(ႠႤႭ.Ⴍ.ႰႷ(444439133), Ⴀ.Ⴗ.ToString(), Ⴀ.Ⴄ, Ⴀ.Ⴅ);
+					type = (EventType)Ⴀ.Ⴗ;
+					num = ((type == EventType.IMAppShutdown) ? 11 : 3);
+					break;
+				case 3:
+				{
+					int num3;
+					switch (type)
+					{
+					default:
+						num3 = 5;
+						break;
+					case EventType.IMSessionStarted:
+						num3 = 1;
+						break;
+					case EventType.IMSessionEnded:
+						num3 = 8;
+						break;
+					}
+					num = num3;
+					break;
+				}
+				case 5:
+				{
+					int num2;
+					switch (type)
+					{
+					default:
+						num2 = 12;
+						break;
+					case EventType.IMSessionWindowEndMove:
+						num2 = 9;
+						break;
+					case EventType.IMUrlReceived:
+						num2 = 6;
+						break;
+					case EventType.IMUrlSent:
+						num2 = 6;
+						break;
+					case EventType.IMSessionWindowActivate:
+						num2 = 9;
+						break;
+					case EventType.IMSessionWindowDeactivate:
+						num2 = 9;
+						break;
+					}
+					num = num2;
+					break;
+				}
+				case 12:
+					num = 6;
+					break;
+				case 1:
+					num = ((!string.IsNullOrEmpty(Ⴀ.Ⴓ)) ? 4 : 7);
+					break;
+				case 7:
+				{
+					ႭႷႰ.Ⴈ ⴈ6 = new ႭႷႰ.Ⴈ();
+					ⴈ6.Ⴐ = ႭႷႰ.Ⴓ.Ⴗ;
+					result = ⴈ6;
+					num = 0;
+					break;
+				}
+				case 4:
+				{
+					ႷႭႨ.Ⴓ ⴓ = Ⴐ.ႭႰ(Ⴀ.Ⴓ);
+					num = ((ⴓ != null) ? 2 : 13);
+					break;
+				}
+				case 13:
+					Ⴐ.Ⴐ(Ⴀ.Ⴓ, Ⴀ.Ⴃ, ((ႭႨႰ.Ⴐ)this.Ⴐ).Ⴃ.Ⴓ.ႷႳ(), Convert.ToInt32(Ⴀ.Ⴈ), Ⴓ: false);
+					num = 2;
+					break;
+				case 2:
+				{
+					ႭႷႰ.Ⴈ ⴈ5 = new ႭႷႰ.Ⴈ();
+					ⴈ5.Ⴐ = ႭႷႰ.Ⴓ.Ⴈ;
+					result = ⴈ5;
+					num = 0;
+					break;
+				}
+				case 8:
+				{
+					Ⴐ.ႭႤ(Ⴀ.Ⴓ);
+					ႭႷႰ.Ⴈ ⴈ4 = new ႭႷႰ.Ⴈ();
+					ⴈ4.Ⴐ = ႭႷႰ.Ⴓ.Ⴈ;
+					result = ⴈ4;
+					num = 0;
+					break;
+				}
+				case 9:
+				{
+					ႭႷႰ.Ⴈ ⴈ3 = new ႭႷႰ.Ⴈ();
+					ⴈ3.Ⴐ = ႭႷႰ.Ⴓ.Ⴈ;
+					result = ⴈ3;
+					num = 0;
+					break;
+				}
+				case 11:
+				{
+					Ⴐ.ႭႠ(Ⴀ.Ⴃ);
+					ႭႷႰ.Ⴈ ⴈ2 = new ႭႷႰ.Ⴈ();
+					ⴈ2.Ⴐ = ႭႷႰ.Ⴓ.Ⴈ;
+					result = ⴈ2;
+					num = 0;
+					break;
+				}
+				case 6:
+				{
+					ႭႷႰ.Ⴈ ⴈ = new ႭႷႰ.Ⴈ();
+					ⴈ.Ⴐ = ႭႷႰ.Ⴓ.Ⴐ;
+					result = ⴈ;
+					num = 0;
+					break;
+				}
+				case 0:
+					return result;
+				}
+			}
+		}
+	}
+	public class Ⴓ : ႨႠႰ.Ⴗ
+	{
+		private sealed class <>c__DisplayClass1a
+		{
+			public int selectedIntensity;
+
+			public bool <ProcessMatchedScenarios>b__f(ChatmanAction theAction)
+			{
+				return theAction.Intensity <= selectedIntensity;
+			}
+		}
+
+		private sealed class <>c__DisplayClass36
+		{
+			public ႭႥႨ.Ⴀ moodList;
+
+			public int <RunMoodPrioritySelectionAlgorithm>b__28(<>f__AnonymousType1<Ⴅ, ScenarioMood> <>h__TransparentIdentifier25)
+			{
+				return moodList.ႨႷႰ(<>h__TransparentIdentifier25.get_scenarioMood().ID).Priority;
+			}
+		}
+
+		private sealed class <>c__DisplayClass38
+		{
+			public <>c__DisplayClass36 CS$<>8__locals37;
+
+			public Guid selectedMoodNonFinal;
+
+			public bool <RunMoodPrioritySelectionAlgorithm>b__2d(ScenarioMood moodConsidered)
+			{
+				return moodConsidered.ID == selectedMoodNonFinal;
+			}
+		}
+
+		private new static Random Ⴐ = new Random();
+
+		private static Func<Scenario, Ⴅ> Ⴍ;
+
+		private static Func<Ⴅ, IEnumerable<ScenarioAction>> Ⴍ;
+
+		private static Func<Ⴅ, ScenarioAction, ScenarioAction> Ⴍ;
+
+		private new static Func<ScenarioAction, ScenarioAction> m_Ⴓ;
+
+		private new static Func<ScenarioAction, <>f__AnonymousType0<ScenarioAction, ChatmanAction>> m_Ⴓ;
+
+		private new static Func<<>f__AnonymousType0<ScenarioAction, ChatmanAction>, bool> m_Ⴓ;
+
+		private new static Func<<>f__AnonymousType0<ScenarioAction, ChatmanAction>, int> Ⴃ;
+
+		private static Func<<>f__AnonymousType0<ScenarioAction, ChatmanAction>, ScenarioAction> Ⴀ;
+
+		private static Func<ChatmanAction, bool> Ⴀ;
+
+		private static Func<ChatmanAction, int> Ⴀ;
+
+		private static Func<Ⴅ, IEnumerable<ScenarioMood>> Ⴀ;
+
+		private static Func<Ⴅ, ScenarioMood, Guid> Ⴀ;
+
+		private static Func<MoodCounter, Guid> Ⴀ;
+
+		private static Func<KeyValuePair<Guid, MoodCounter>, int> Ⴀ;
+
+		private static Func<Ⴅ, IEnumerable<ScenarioMood>> Ⴄ;
+
+		private static Func<Ⴅ, ScenarioMood, <>f__AnonymousType1<Ⴅ, ScenarioMood>> Ⴍ;
+
+		private new static Func<<>f__AnonymousType1<Ⴅ, ScenarioMood>, ScenarioMood> m_Ⴗ;
+
+		private static Func<ScenarioMood, Guid> Ⴅ;
+
+		private static Func<MoodCounter, Guid> Ⴄ;
+
+		private static Func<KeyValuePair<Guid, MoodCounter>, int> Ⴄ;
+
+		private new static Func<ScenarioMood, Guid> m_Ⴓ;
+
+		public override ႭႷႰ.Ⴈ Ⴓ(ႭႷႰ.Ⴐ Ⴀ, Personality Ⴍ, ႷႭႨ.Ⴓ Ⴄ)
+		{
+			int num = 3;
+			ႭႷႰ.Ⴈ result = default(ႭႷႰ.Ⴈ);
+			IEnumerable<Ⴅ> enumerable = default(IEnumerable<Ⴅ>);
+			Guid empty = default(Guid);
+			ChatmanAction ⴓ = default(ChatmanAction);
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+				{
+					ႭႷႰ.Ⴈ ⴈ = new ႭႷႰ.Ⴈ();
+					ⴈ.Ⴐ = (ႭႷႰ.Ⴓ.Ⴅ | ႭႷႰ.Ⴓ.Ⴃ);
+					result = ⴈ;
+					num = 0;
+					continue;
+				}
+				case 2:
+				{
+					Dictionary<string, object> dictionary = new Dictionary<string, object>();
+					Ⴓ(enumerable, Ⴍ, ref empty, ref ⴓ, dictionary);
+					Ⴈ(dictionary, new string[0], Ⴀ.Ⴐ, string.Empty, string.Empty, string.Empty, Ⴐ: false);
+					result = base.Ⴓ(empty, ⴓ, Ⴍ, Ⴄ, dictionary);
+					num = 0;
+					continue;
+				}
+				case 0:
+					return result;
+				}
+				empty = Guid.Empty;
+				ⴓ = null;
+				IEnumerable<Scenario> source = Ⴍ.ScenariosByEventType[Ⴀ.Ⴗ];
+				if (ႨႣႰ.Ⴓ.Ⴍ == null)
+				{
+					ႨႣႰ.Ⴓ.Ⴍ = (Func<Ⴅ, ScenarioMood, <>f__AnonymousType1<Ⴅ, ScenarioMood>>)(object)(Func<Scenario, Ⴅ>)((Scenario scenario) => new Ⴅ(scenario));
+				}
+				enumerable = source.Select((Func<Scenario, Ⴅ>)(object)ႨႣႰ.Ⴓ.Ⴍ);
+				num = ((enumerable.Count() == 0) ? 1 : 2);
+			}
+		}
+
+		protected new unsafe bool Ⴓ(IEnumerable<Ⴅ> Ⴀ, Personality Ⴍ, ref Guid Ⴄ, ref ChatmanAction Ⴓ, Dictionary<string, object> Ⴗ)
+		{
+			<>c__DisplayClass1a CS$<>8__locals0 = new <>c__DisplayClass1a();
+			CS$<>8__locals0.selectedIntensity = 10;
+			ScenarioAction scenarioAction2 = null;
+			Ⴅ ⴅ = Ⴀ.First();
+			IEnumerable<ScenarioAction> enumerable;
+			ChatmanAction value;
+			if (!ⴅ.ႨႨႥ().IsQnA)
+			{
+				if (ႨႣႰ.Ⴓ.Ⴍ == null)
+				{
+					ႨႣႰ.Ⴓ.Ⴍ = (Func<Ⴅ, ScenarioMood, <>f__AnonymousType1<Ⴅ, ScenarioMood>>)(object)(Func<Ⴅ, IEnumerable<ScenarioAction>>)((Ⴅ scenario) => scenario.ႨႨႥ().Actions);
+				}
+				Func<Ⴅ, ScenarioMood, <>f__AnonymousType1<Ⴅ, ScenarioMood>> ⴍ = ႨႣႰ.Ⴓ.Ⴍ;
+				if (ႨႣႰ.Ⴓ.Ⴍ == null)
+				{
+					ႨႣႰ.Ⴓ.Ⴍ = (Func<Ⴅ, ScenarioMood, <>f__AnonymousType1<Ⴅ, ScenarioMood>>)(object)(Func<Ⴅ, ScenarioAction, ScenarioAction>)((Ⴅ scenario, ScenarioAction scenarioAction) => scenarioAction);
+				}
+				enumerable = Ⴀ.SelectMany((Func<Ⴅ, IEnumerable<ScenarioAction>>)(object)ⴍ, (Func<Ⴅ, ScenarioAction, ScenarioAction>)(object)ႨႣႰ.Ⴓ.Ⴍ);
+				IEnumerator<ScenarioAction> enumerator = enumerable.GetEnumerator();
+				while (enumerator.MoveNext())
+				{
+					ScenarioAction current = enumerator.Current;
+					if (current.ID != Guid.Empty)
+					{
+						current.Action = Ⴍ.ActionsByID.ႨႷႣ(current.ID);
+					}
+					else if (current.SpecialCode != 0)
+					{
+						Ⴍ.SpecialActionsByCode.TryGetValue(current.SpecialCode, out value);
+						current.Action = value;
+					}
+				}
+			}
+			else
+			{
+				if (*(int*)(&ⴅ.Ⴐ) > 0)
+				{
+					Ⴓ = null;
+					Ⴄ = Guid.Empty;
+					return false;
+				}
+				if (ⴅ.Ⴗ)
+				{
+					ScenarioRelationPair scenarioRelationPair = (ⴅ.Ⴐ != null) ? ((Ⴀ)(object)ⴅ.Ⴐ).ႰႣ() : ⴅ.Ⴐ.ႰႳ();
+					List<ScenarioAction> actions = scenarioRelationPair.Ⴐ.Actions;
+					if (ႨႣႰ.Ⴓ.m_Ⴓ == null)
+					{
+						ႨႣႰ.Ⴓ.m_Ⴓ = ((ScenarioAction scenarioAction) => scenarioAction);
+					}
+					enumerable = actions.Select(ႨႣႰ.Ⴓ.m_Ⴓ);
+				}
+				else
+				{
+					enumerable = ⴅ.ႨႨႥ().Actions[0].Actions;
+				}
+				IEnumerator<ScenarioAction> enumerator = enumerable.GetEnumerator();
+				while (enumerator.MoveNext())
+				{
+					int specialCode = enumerator.Current.SpecialCode;
+					if (specialCode != 0)
+					{
+						Ⴍ.SpecialActionsByCode.TryGetValue(specialCode, out value);
+						enumerator.Current.Action = value;
+					}
+				}
+			}
+			if (enumerable.Count() > 0)
+			{
+				IEnumerable<ScenarioAction> source = enumerable;
+				if (ႨႣႰ.Ⴓ.m_Ⴓ == null)
+				{
+					ႨႣႰ.Ⴓ.m_Ⴓ = ((ScenarioAction action) => new <>f__AnonymousType0<ScenarioAction, ChatmanAction>(action, action.Action));
+				}
+				IEnumerable<<>f__AnonymousType0<ScenarioAction, ChatmanAction>> source2 = source.Select(ႨႣႰ.Ⴓ.m_Ⴓ);
+				if (ႨႣႰ.Ⴓ.m_Ⴓ == null)
+				{
+					ႨႣႰ.Ⴓ.m_Ⴓ = delegate(<>f__AnonymousType0<ScenarioAction, ChatmanAction> <>h__TransparentIdentifier4)
+					{
+						int num = 0;
+						int result;
+						while (true)
+						{
+							int num2;
+							switch (num)
+							{
+							default:
+								num2 = ((<>h__TransparentIdentifier4.get_theAction() == null) ? 1 : 2);
+								goto IL_001d;
+							case 2:
+								result = ((!<>h__TransparentIdentifier4.get_theAction().IsExcluded) ? 1 : 0);
+								break;
+							case 1:
+								result = 0;
+								break;
+							}
+							break;
+							IL_001d:
+							num = num2;
+						}
+						return (byte)result != 0;
+					};
+				}
+				IEnumerable<<>f__AnonymousType0<ScenarioAction, ChatmanAction>> source3 = source2.Where(ႨႣႰ.Ⴓ.m_Ⴓ);
+				if (Ⴃ == null)
+				{
+					Ⴃ = ((<>f__AnonymousType0<ScenarioAction, ChatmanAction> <>h__TransparentIdentifier4) => <>h__TransparentIdentifier4.get_theAction().TotalCounter);
+				}
+				IOrderedEnumerable<<>f__AnonymousType0<ScenarioAction, ChatmanAction>> source4 = source3.OrderBy(Ⴃ);
+				if (ႨႣႰ.Ⴓ.Ⴀ == null)
+				{
+					ႨႣႰ.Ⴓ.Ⴀ = (Func<KeyValuePair<Guid, MoodCounter>, int>)(object)(Func<<>f__AnonymousType0<ScenarioAction, ChatmanAction>, ScenarioAction>)((<>f__AnonymousType0<ScenarioAction, ChatmanAction> <>h__TransparentIdentifier4) => <>h__TransparentIdentifier4.get_action());
+				}
+				scenarioAction2 = source4.Select((Func<<>f__AnonymousType0<ScenarioAction, ChatmanAction>, ScenarioAction>)(object)ႨႣႰ.Ⴓ.Ⴀ).FirstOrDefault();
+				if (scenarioAction2 != null)
+				{
+					Ⴓ = scenarioAction2.Action;
+					Ⴍ.ႨႨႰ();
+					ႥႥႨ.Ⴗ.ႳႥ(ႠႤႭ.Ⴍ.ႰႷ(444439132), Ⴓ.Description, Ⴓ.ID);
+				}
+				else if (ⴅ.ႨႨႥ().IsUserQnA)
+				{
+					scenarioAction2 = enumerable.First();
+					Ⴓ = new ChatmanAction
+					{
+						IsMy = true
+					};
+					Ⴗ.Add(ႠႤႭ.Ⴍ.ႰႷ(444439135), (scenarioAction2 as ScenarioUserAction).AnswerText);
+				}
+				Ⴗ.Add(ႠႤႭ.Ⴍ.ႰႷ(444439134), ⴅ.ႨႨႥ().ID.ToString());
+				Ⴗ.Add(ႠႤႭ.Ⴍ.ႰႷ(444439129), scenarioAction2.RequestedActivity);
+			}
+			else
+			{
+				this.Ⴗ(Ⴀ, Ⴍ, out List<Guid> list, out Ⴄ, out Dictionary<Guid, MoodCounter> ⴍ2);
+				CS$<>8__locals0.selectedIntensity = ႨႣႰ.Ⴈ.Ⴗ(Ⴄ, ⴍ2, Ⴍ.MoodToMoodCorrelations[Ⴄ]);
+				while (true)
+				{
+					try
+					{
+						IEnumerable<ChatmanAction> source5 = Ⴍ.ActionsByMood[Ⴄ];
+						if (ႨႣႰ.Ⴓ.Ⴀ == null)
+						{
+							ႨႣႰ.Ⴓ.Ⴀ = (Func<KeyValuePair<Guid, MoodCounter>, int>)(object)(Func<ChatmanAction, bool>)((ChatmanAction theAction) => !theAction.IsExcluded);
+						}
+						IEnumerable<ChatmanAction> source6 = source5.Where((Func<ChatmanAction, bool>)(object)ႨႣႰ.Ⴓ.Ⴀ);
+						if (ႨႣႰ.Ⴓ.Ⴀ == null)
+						{
+							ႨႣႰ.Ⴓ.Ⴀ = (Func<KeyValuePair<Guid, MoodCounter>, int>)(object)(Func<ChatmanAction, int>)((ChatmanAction theAction) => theAction.TotalCounter);
+						}
+						Ⴓ = (from theAction in source6.OrderBy((Func<ChatmanAction, int>)(object)ႨႣႰ.Ⴓ.Ⴀ)
+							where theAction.Intensity <= CS$<>8__locals0.selectedIntensity
+							select theAction).First();
+					}
+					catch
+					{
+						Ⴓ = null;
+					}
+					if (Ⴓ != null || list.Count <= 0)
+					{
+						break;
+					}
+					Ⴄ = list[0];
+					list.RemoveAt(0);
+				}
+			}
+			return true;
+		}
+
+		private void Ⴗ(IEnumerable<Ⴅ> Ⴀ, Personality Ⴍ, out List<Guid> Ⴄ, out Guid Ⴓ, out Dictionary<Guid, MoodCounter> Ⴗ)
+		{
+			<>c__DisplayClass36 CS$<>8__locals1 = new <>c__DisplayClass36();
+			CS$<>8__locals1.moodList = Ⴍ.MoodList;
+			if (ႨႣႰ.Ⴓ.Ⴄ == null)
+			{
+				ႨႣႰ.Ⴓ.Ⴄ = (Func<KeyValuePair<Guid, MoodCounter>, int>)(object)(Func<Ⴅ, IEnumerable<ScenarioMood>>)((Ⴅ scenario) => scenario.ႨႨႥ().Moods);
+			}
+			Func<KeyValuePair<Guid, MoodCounter>, int> ⴄ = ႨႣႰ.Ⴓ.Ⴄ;
+			if (ႨႣႰ.Ⴓ.Ⴍ == null)
+			{
+				ႨႣႰ.Ⴓ.Ⴍ = ((Ⴅ scenario, ScenarioMood scenarioMood) => new <>f__AnonymousType1<Ⴅ, ScenarioMood>(scenario, scenarioMood));
+			}
+			IOrderedEnumerable<<>f__AnonymousType1<Ⴅ, ScenarioMood>> source = from <>h__TransparentIdentifier25 in Ⴀ.SelectMany((Func<Ⴅ, IEnumerable<ScenarioMood>>)(object)ⴄ, ႨႣႰ.Ⴓ.Ⴍ)
+				orderby CS$<>8__locals1.moodList.ႨႷႰ(<>h__TransparentIdentifier25.get_scenarioMood().ID).Priority descending
+				select <>h__TransparentIdentifier25;
+			if (ႨႣႰ.Ⴓ.m_Ⴗ == null)
+			{
+				ႨႣႰ.Ⴓ.m_Ⴗ = ((<>f__AnonymousType1<Ⴅ, ScenarioMood> <>h__TransparentIdentifier25) => <>h__TransparentIdentifier25.get_scenarioMood());
+			}
+			List<ScenarioMood> list = source.Select(ႨႣႰ.Ⴓ.m_Ⴗ).Distinct().ToList();
+			if (Ⴅ == null)
+			{
+				Ⴅ = delegate(ScenarioMood mood)
+				{
+					//Discarded unreachable code: IL_0002, IL_000c, IL_0033, IL_0042
+					Guid result2;
+					if (!(mood.ActionMoodID == string.Empty))
+					{
+						if (638 >= 638 - 297)
+						{
+							result2 = new Guid(mood.ActionMoodID);
+							goto IL_000e;
+						}
+					}
+					result2 = mood.ID;
+					goto IL_000e;
+					IL_000e:
+					return result2;
+				};
+			}
+			Ⴄ = list.Select(Ⴅ).ToList();
+			if (list.Count > 1)
+			{
+				int priority = CS$<>8__locals1.moodList.ႨႷႰ(list[0].ID).Priority;
+				for (int i = 1; i < list.Count; i++)
+				{
+					if (CS$<>8__locals1.moodList.ႨႷႰ(list[i].ID).Priority != priority)
+					{
+						list.RemoveRange(i, list.Count - i);
+						break;
+					}
+				}
+			}
+			Ⴗ = null;
+			Ⴓ = Guid.Empty;
+			if (list.Count() == 0)
+			{
+				return;
+			}
+			List<MoodCounter> source2 = Ⴍ.ႨႨႨ();
+			if (ႨႣႰ.Ⴓ.Ⴄ == null)
+			{
+				ႨႣႰ.Ⴓ.Ⴄ = (Func<KeyValuePair<Guid, MoodCounter>, int>)(object)(Func<MoodCounter, Guid>)((MoodCounter item) => item.ID);
+			}
+			Ⴗ = source2.ToDictionary((Func<MoodCounter, Guid>)(object)ႨႣႰ.Ⴓ.Ⴄ);
+			if (list.Count() > 1)
+			{
+				<>c__DisplayClass38 CS$<>8__locals0 = new <>c__DisplayClass38();
+				CS$<>8__locals0.CS$<>8__locals37 = CS$<>8__locals1;
+				if (Ⴍ.LastActionMoodID != Guid.Empty)
+				{
+					Dictionary<Guid, MoodCounter> source3 = Ⴗ;
+					if (ႨႣႰ.Ⴓ.Ⴄ == null)
+					{
+						ႨႣႰ.Ⴓ.Ⴄ = ((KeyValuePair<Guid, MoodCounter> stateCounter) => stateCounter.Value.TotalCounter);
+					}
+					int num = source3.Select(ႨႣႰ.Ⴓ.Ⴄ).Sum();
+					Ⴗ[Ⴍ.LastActionMoodID].TotalCounter += 4;
+				}
+				double[] array = new double[list.Count()];
+				double num2 = double.MinValue;
+				List<Guid> list2 = new List<Guid>();
+				foreach (ScenarioMood item in list)
+				{
+					Guid iD = item.ID;
+					try
+					{
+						double num3 = Math.Pow(Ⴗ[iD].TotalCounter, 2.0);
+						Dictionary<Guid, MoodCorrelationPair> dictionary = Ⴍ.MoodToMoodCorrelations[iD];
+						IEnumerator<KeyValuePair<Guid, MoodCorrelationPair>> enumerator2 = dictionary.GetEnumerator();
+						while (enumerator2.MoveNext())
+						{
+							KeyValuePair<Guid, MoodCorrelationPair> current2 = enumerator2.Current;
+							num3 += current2.Value.Correlation * (double)Ⴗ[current2.Key].TotalCounter;
+						}
+						if (num3 == num2)
+						{
+							num2 = num3;
+							list2.Add(iD);
+						}
+						else if (num3 > num2)
+						{
+							num2 = num3;
+							list2.Clear();
+							list2.Add(iD);
+						}
+					}
+					catch
+					{
+					}
+				}
+				CS$<>8__locals0.selectedMoodNonFinal = list2.ElementAt(Ⴐ.Next(list2.Count));
+				IEnumerable<ScenarioMood> source4 = list.Where((ScenarioMood moodConsidered) => moodConsidered.ID == CS$<>8__locals0.selectedMoodNonFinal);
+				if (ႨႣႰ.Ⴓ.m_Ⴓ == null)
+				{
+					ႨႣႰ.Ⴓ.m_Ⴓ = delegate(ScenarioMood moodConsidered)
+					{
+						int num4 = 0;
+						Guid result;
+						while (true)
+						{
+							int num5;
+							switch (num4)
+							{
+							default:
+								num5 = ((!(moodConsidered.ActionMoodID == string.Empty)) ? 1 : 2);
+								goto IL_0027;
+							case 1:
+								result = new Guid(moodConsidered.ActionMoodID);
+								break;
+							case 2:
+								result = moodConsidered.ID;
+								break;
+							}
+							break;
+							IL_0027:
+							num4 = num5;
+						}
+						return result;
+					};
+				}
+				Ⴓ = source4.Select(ႨႣႰ.Ⴓ.m_Ⴓ).First();
+			}
+			else
+			{
+				ScenarioMood scenarioMood2 = list.First();
+				Ⴓ = ((scenarioMood2.ActionMoodID == string.Empty) ? scenarioMood2.ID : new Guid(scenarioMood2.ActionMoodID));
+			}
+		}
+
+		private static Ⴅ <ProcessEvent>b__1(Scenario scenario)
+		{
+			return new Ⴅ(scenario);
+		}
+
+		private static IEnumerable<ScenarioAction> <ProcessMatchedScenarios>b__6(Ⴅ scenario)
+		{
+			return scenario.ႨႨႥ().Actions;
+		}
+
+		private static ScenarioAction <ProcessMatchedScenarios>b__7(Ⴅ scenario, ScenarioAction scenarioAction)
+		{
+			return scenarioAction;
+		}
+
+		private static ScenarioAction <ProcessMatchedScenarios>b__8(ScenarioAction scenarioAction)
+		{
+			return scenarioAction;
+		}
+
+		private static <>f__AnonymousType0<ScenarioAction, ChatmanAction> <ProcessMatchedScenarios>b__9(ScenarioAction action)
+		{
+			return new <>f__AnonymousType0<ScenarioAction, ChatmanAction>(action, action.Action);
+		}
+
+		private static bool <ProcessMatchedScenarios>b__a(<>f__AnonymousType0<ScenarioAction, ChatmanAction> <>h__TransparentIdentifier4)
+		{
+			int num = 0;
+			int result;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num2 = ((<>h__TransparentIdentifier4.get_theAction() == null) ? 1 : 2);
+					goto IL_001d;
+				case 2:
+					result = ((!<>h__TransparentIdentifier4.get_theAction().IsExcluded) ? 1 : 0);
+					break;
+				case 1:
+					result = 0;
+					break;
+				}
+				break;
+				IL_001d:
+				num = num2;
+			}
+			return (byte)result != 0;
+		}
+
+		private static int <ProcessMatchedScenarios>b__b(<>f__AnonymousType0<ScenarioAction, ChatmanAction> <>h__TransparentIdentifier4)
+		{
+			return <>h__TransparentIdentifier4.get_theAction().TotalCounter;
+		}
+
+		private static ScenarioAction <ProcessMatchedScenarios>b__c(<>f__AnonymousType0<ScenarioAction, ChatmanAction> <>h__TransparentIdentifier4)
+		{
+			return <>h__TransparentIdentifier4.get_action();
+		}
+
+		private static bool <ProcessMatchedScenarios>b__d(ChatmanAction theAction)
+		{
+			return !theAction.IsExcluded;
+		}
+
+		private static int <ProcessMatchedScenarios>b__e(ChatmanAction theAction)
+		{
+			return theAction.TotalCounter;
+		}
+
+		private static IEnumerable<ScenarioMood> <RunWeightedMoodSelectionAlgorithm>b__1d(Ⴅ scenario)
+		{
+			return scenario.ႨႨႥ().Moods;
+		}
+
+		private static Guid <RunWeightedMoodSelectionAlgorithm>b__1e(Ⴅ scenario, ScenarioMood scenarioMood)
+		{
+			return scenarioMood.ID;
+		}
+
+		private static Guid <RunWeightedMoodSelectionAlgorithm>b__1f(MoodCounter item)
+		{
+			return item.ID;
+		}
+
+		private static int <RunWeightedMoodSelectionAlgorithm>b__20(KeyValuePair<Guid, MoodCounter> stateCounter)
+		{
+			return stateCounter.Value.TotalCounter;
+		}
+
+		private static IEnumerable<ScenarioMood> <RunMoodPrioritySelectionAlgorithm>b__26(Ⴅ scenario)
+		{
+			return scenario.ႨႨႥ().Moods;
+		}
+
+		private static <>f__AnonymousType1<Ⴅ, ScenarioMood> <RunMoodPrioritySelectionAlgorithm>b__27(Ⴅ scenario, ScenarioMood scenarioMood)
+		{
+			return new <>f__AnonymousType1<Ⴅ, ScenarioMood>(scenario, scenarioMood);
+		}
+
+		private static ScenarioMood <RunMoodPrioritySelectionAlgorithm>b__29(<>f__AnonymousType1<Ⴅ, ScenarioMood> <>h__TransparentIdentifier25)
+		{
+			return <>h__TransparentIdentifier25.get_scenarioMood();
+		}
+
+		private static Guid <RunMoodPrioritySelectionAlgorithm>b__2a(ScenarioMood mood)
+		{
+			//Discarded unreachable code: IL_0002, IL_000c, IL_0033, IL_0042
+			Guid result;
+			if (!(mood.ActionMoodID == string.Empty))
+			{
+				if (638 >= 638 - 297)
+				{
+					result = new Guid(mood.ActionMoodID);
+					goto IL_000e;
+				}
+			}
+			result = mood.ID;
+			goto IL_000e;
+			IL_000e:
+			return result;
+		}
+
+		private static Guid <RunMoodPrioritySelectionAlgorithm>b__2b(MoodCounter item)
+		{
+			return item.ID;
+		}
+
+		private static int <RunMoodPrioritySelectionAlgorithm>b__2c(KeyValuePair<Guid, MoodCounter> stateCounter)
+		{
+			return stateCounter.Value.TotalCounter;
+		}
+
+		private static Guid <RunMoodPrioritySelectionAlgorithm>b__2e(ScenarioMood moodConsidered)
+		{
+			int num = 0;
+			Guid result;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num2 = ((!(moodConsidered.ActionMoodID == string.Empty)) ? 1 : 2);
+					goto IL_0027;
+				case 1:
+					result = new Guid(moodConsidered.ActionMoodID);
+					break;
+				case 2:
+					result = moodConsidered.ID;
+					break;
+				}
+				break;
+				IL_0027:
+				num = num2;
+			}
+			return result;
+		}
+	}
+	public class Ⴗ : Ⴓ
+	{
+		private sealed class <>c__DisplayClass6c
+		{
+			public Personality personality;
+
+			public <>f__AnonymousType3<Ⴅ, int> <ProcessEvent>b__4f(Ⴅ scenario)
+			{
+				return new <>f__AnonymousType3<Ⴅ, int>(scenario, personality.MoodList.ႨႷႰ(scenario.ႨႨႥ().Moods[0].ID).Group);
+			}
+		}
+
+		private sealed class <>c__DisplayClass6e
+		{
+			public <>c__DisplayClass6c CS$<>8__locals6d;
+
+			public EventType theEventType;
+
+			public bool <ProcessEvent>b__46(ScenarioRelationPair scenarioRelation)
+			{
+				return scenarioRelation.Ⴐ.EventType == theEventType;
+			}
+		}
+
+		private sealed class <>c__DisplayClass71
+		{
+			public <>c__DisplayClass6e CS$<>8__locals6f;
+
+			public <>c__DisplayClass6c CS$<>8__locals6d;
+
+			public ScenarioRelationPair scenarioRelation;
+
+			public bool <ProcessEvent>b__47(Ⴃ i)
+			{
+				return i.ႰႣ().Ⴐ == scenarioRelation.Ⴐ;
+			}
+		}
+
+		private new static char[] Ⴐ;
+
+		private new static Ⴄ[] Ⴐ;
+
+		private new static Ⴄ[] Ⴈ;
+
+		private new static Ⴅ<Ⴄ> Ⴐ;
+
+		private new static Ⴅ<Ⴄ> Ⴈ;
+
+		private new Regex Ⴐ;
+
+		private new static ScenarioMood Ⴐ = new ScenarioMood
+		{
+			ID = new Guid(ႠႤႭ.Ⴍ.ႰႷ(444439156))
+		};
+
+		private new static ScenarioMood Ⴈ = new ScenarioMood
+		{
+			ID = new Guid(ႠႤႭ.Ⴍ.ႰႷ(444439159))
+		};
+
+		private new static ScenarioMood m_Ⴓ = new ScenarioMood
+		{
+			ID = new Guid(ႠႤႭ.Ⴍ.ႰႷ(444439158))
+		};
+
+		private static Func<Ⴅ, <>f__AnonymousType2<Ⴅ, Scenario>> Ⴀ;
+
+		private new static Func<<>f__AnonymousType2<Ⴅ, Scenario>, bool> Ⴃ;
+
+		private static Func<<>f__AnonymousType2<Ⴅ, Scenario>, Scenario> Ⴀ;
+
+		private static Func<Ⴅ, bool> Ⴀ;
+
+		private static Func<Ⴅ, bool> Ⴄ;
+
+		private new static Func<Ⴅ, bool> Ⴃ;
+
+		private static Func<Ⴅ, bool> Ⴍ;
+
+		private static Func<<>f__AnonymousType3<Ⴅ, int>, bool> Ⴀ;
+
+		private static Func<<>f__AnonymousType3<Ⴅ, int>, int> Ⴀ;
+
+		private new static Func<Ⴅ, bool> Ⴗ;
+
+		private static Func<Ⴅ, bool> Ⴅ;
+
+		private static Func<Ⴅ, <>f__AnonymousType4<Ⴅ, Ⴀ>> Ⴀ;
+
+		private static Func<<>f__AnonymousType4<Ⴅ, Ⴀ>, <>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>> Ⴍ;
+
+		private static Func<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, <>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>> Ⴅ;
+
+		private static Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, bool> Ⴅ;
+
+		private static Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, int> Ⴅ;
+
+		private static Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, Ⴅ> Ⴍ;
+
+		public unsafe override ႭႷႰ.Ⴈ Ⴓ(ႭႷႰ.Ⴐ Ⴗ, Personality Ⴓ, ႷႭႨ.Ⴓ Ⴍ)
+		{
+			<>c__DisplayClass6c CS$<>8__locals2 = new <>c__DisplayClass6c();
+			CS$<>8__locals2.personality = Ⴓ;
+			Guid empty = Guid.Empty;
+			ChatmanAction ⴓ = null;
+			string ⴃ = string.Empty;
+			string ⴗ = string.Empty;
+			string empty2 = string.Empty;
+			bool flag = (Ⴗ.Ⴐ & ႭႷႰ.Ⴅ.Ⴓ) == ႭႷႰ.Ⴅ.Ⴓ;
+			bool flag2 = (Ⴗ.Ⴐ & ႭႷႰ.Ⴅ.Ⴗ) == ႭႷႰ.Ⴅ.Ⴗ;
+			try
+			{
+				string[] array = Ⴗ.Ⴄ.ToLower().Split((char[])(object)ႨႣႰ.Ⴗ.Ⴐ, StringSplitOptions.RemoveEmptyEntries);
+				Dictionary<Scenario, Ⴅ> dictionary = new Dictionary<Scenario, Ⴅ>();
+				int num = 0;
+				int num2 = array.Length;
+				Ⴅ<WordScenarios> wordList = CS$<>8__locals2.personality.WordList;
+				Ⴅ<WordScenarios> ⴅ = (CS$<>8__locals2.personality.MasterPersonality == null) ? null : CS$<>8__locals2.personality.MasterPersonality.WordList;
+				Ⴅ<WordScenarios> ⴅ2 = (CS$<>8__locals2.personality.UserDataPersonality == null) ? null : CS$<>8__locals2.personality.UserDataPersonality.WordList;
+				for (num = 0; num < num2; num++)
+				{
+					<>c__DisplayClass6e CS$<>8__locals1 = new <>c__DisplayClass6e();
+					CS$<>8__locals1.CS$<>8__locals6d = CS$<>8__locals2;
+					List<ScenarioRelationPair> list = new List<ScenarioRelationPair>();
+					IEnumerable<ScenarioRelationPair> enumerable = null;
+					WordScenarios wordScenarios = null;
+					WordScenarios wordScenarios2 = null;
+					WordScenarios wordScenarios3 = null;
+					WordScenarios wordScenarios4 = null;
+					bool flag3 = false;
+					bool flag4 = false;
+					List<string> list2 = new List<string>();
+					string text = array[num];
+					int num3 = 0;
+					WordScenarios ⴍ = new WordScenarios(text, null, Ⴈ: false);
+					wordScenarios = wordList.ႨႷႷ(ⴍ);
+					if (wordScenarios != null)
+					{
+						list.AddRange(wordScenarios.Ⴐ);
+						num3++;
+					}
+					if (ⴅ != null)
+					{
+						WordScenarios wordScenarios5 = ⴅ.ႨႷႷ(ⴍ);
+						if (wordScenarios5 != null)
+						{
+							list.AddRange(wordScenarios5.Ⴐ);
+							num3++;
+						}
+					}
+					if (ⴅ2 != null)
+					{
+						WordScenarios wordScenarios5 = ⴅ2.ႨႷႷ(ⴍ);
+						if (wordScenarios5 != null)
+						{
+							list.AddRange(wordScenarios5.Ⴐ);
+							num3++;
+						}
+					}
+					string text2 = ႨႷႳ(text);
+					if (text.Length != text2.Length)
+					{
+						flag3 = true;
+						ⴍ = new WordScenarios(text2, null, Ⴈ: false);
+						wordScenarios2 = wordList.ႨႷႷ(ⴍ);
+						if (wordScenarios2 != null)
+						{
+							list.AddRange(wordScenarios2.Ⴐ);
+							num3++;
+						}
+						if (ⴅ != null)
+						{
+							WordScenarios wordScenarios5 = ⴅ.ႨႷႷ(ⴍ);
+							if (wordScenarios5 != null)
+							{
+								list.AddRange(wordScenarios5.Ⴐ);
+								num3++;
+							}
+						}
+						if (ⴅ2 != null)
+						{
+							WordScenarios wordScenarios5 = ⴅ2.ႨႷႷ(ⴍ);
+							if (wordScenarios5 != null)
+							{
+								list.AddRange(wordScenarios5.Ⴐ);
+								num3++;
+							}
+						}
+					}
+					ⴍ = new WordScenarios(text, null, Ⴈ: true);
+					if (ⴍ.Ⴐ.Length != text.Length)
+					{
+						flag4 = true;
+						wordScenarios3 = wordList.ႨႷႷ(ⴍ);
+						if (wordScenarios3 != null)
+						{
+							list.AddRange(wordScenarios3.Ⴐ);
+							num3++;
+						}
+						if (ⴅ != null)
+						{
+							WordScenarios wordScenarios5 = ⴅ.ႨႷႷ(ⴍ);
+							if (wordScenarios5 != null)
+							{
+								list.AddRange(wordScenarios5.Ⴐ);
+								num3++;
+							}
+						}
+						if (ⴅ2 != null)
+						{
+							WordScenarios wordScenarios5 = ⴅ2.ႨႷႷ(ⴍ);
+							if (wordScenarios5 != null)
+							{
+								list.AddRange(wordScenarios5.Ⴐ);
+								num3++;
+							}
+						}
+					}
+					if (flag4 && flag3)
+					{
+						ⴍ = new WordScenarios(text2, null, Ⴈ: true);
+						wordScenarios4 = wordList.ႨႷႷ(ⴍ);
+						if (wordScenarios4 != null)
+						{
+							list.AddRange(wordScenarios4.Ⴐ);
+							num3++;
+						}
+						if (ⴅ != null)
+						{
+							WordScenarios wordScenarios5 = ⴅ.ႨႷႷ(ⴍ);
+							if (wordScenarios5 != null)
+							{
+								list.AddRange(wordScenarios5.Ⴐ);
+								num3++;
+							}
+						}
+						if (ⴅ2 != null)
+						{
+							WordScenarios wordScenarios5 = ⴅ2.ႨႷႷ(ⴍ);
+							if (wordScenarios5 != null)
+							{
+								list.AddRange(wordScenarios5.Ⴐ);
+								num3++;
+							}
+						}
+					}
+					enumerable = ((num3 <= 1) ? list : list.Distinct());
+					CS$<>8__locals1.theEventType = (EventType)Ⴗ.Ⴗ;
+					ScenarioRelationPair[] array2 = enumerable.Where((ScenarioRelationPair scenarioRelation) => scenarioRelation.Ⴐ.EventType == CS$<>8__locals1.theEventType).ToArray();
+					int num4 = 0;
+					int num5 = Enumerable.Count(array2);
+					for (num4 = 0; num4 < num5; num4++)
+					{
+						<>c__DisplayClass71 CS$<>8__locals0 = new <>c__DisplayClass71();
+						CS$<>8__locals0.CS$<>8__locals6f = CS$<>8__locals1;
+						CS$<>8__locals0.CS$<>8__locals6d = CS$<>8__locals2;
+						CS$<>8__locals0.scenarioRelation = array2[num4];
+						Ⴅ ⴅ3;
+						if (dictionary.ContainsKey(CS$<>8__locals0.scenarioRelation.Ⴐ))
+						{
+							ⴅ3 = dictionary[CS$<>8__locals0.scenarioRelation.Ⴐ];
+						}
+						else
+						{
+							ⴅ3 = new Ⴅ(CS$<>8__locals0.scenarioRelation);
+							dictionary.Add(ⴅ3.ႨႨႥ(), ⴅ3);
+						}
+						bool flag5 = CS$<>8__locals0.scenarioRelation.Ⴐ.RequireAdditionalPhrase;
+						if (CS$<>8__locals0.scenarioRelation.Ⴓ == 0 && !CS$<>8__locals0.scenarioRelation.Ⴐ.HasStar)
+						{
+							if (!CS$<>8__locals0.scenarioRelation.Ⴐ.RequireAdditionalPhrase)
+							{
+								ⴅ3.Ⴓ = true;
+								if (CS$<>8__locals0.scenarioRelation.Ⴐ.Relation == ScenarioTextRelation.Include)
+								{
+									*(bool*)(&ⴅ3.Ⴐ) = true;
+								}
+								else
+								{
+									ⴅ3.Ⴈ = true;
+									ⴅ3.Ⴗ = false;
+								}
+								*(int*)(&ⴅ3.Ⴐ) = num;
+								continue;
+							}
+							flag5 = true;
+						}
+						int num6 = CS$<>8__locals0.scenarioRelation.Ⴈ;
+						if (!flag5)
+						{
+							Dictionary<string, Ⴀ> ⴐ = (Dictionary<string, Ⴀ>)(object)ⴅ3.Ⴐ;
+							bool flag6 = false;
+							Ⴀ value = null;
+							if (num6 == 0)
+							{
+								if (!ⴐ.ContainsKey(CS$<>8__locals0.scenarioRelation.Ⴐ))
+								{
+									value = new Ⴀ(CS$<>8__locals0.scenarioRelation, num, num);
+									ⴐ.Add(CS$<>8__locals0.scenarioRelation.Ⴐ, value);
+									list2.Add(CS$<>8__locals0.scenarioRelation.Ⴐ);
+									flag6 = true;
+								}
+							}
+							else if (ⴐ.TryGetValue(CS$<>8__locals0.scenarioRelation.Ⴐ, out value))
+							{
+								if (value.ႰႭ() - value.ႰႳ() < CS$<>8__locals0.scenarioRelation.Ⴈ - 1 || num - value.ႰႳ() != num6)
+								{
+									int j = num4 + 1;
+									bool flag7 = false;
+									for (; j < num5; j++)
+									{
+										if (array2[j].Ⴐ == CS$<>8__locals0.scenarioRelation.Ⴐ)
+										{
+											flag7 = true;
+											break;
+										}
+									}
+									if (flag7 || list2.Contains(CS$<>8__locals0.scenarioRelation.Ⴐ))
+									{
+										continue;
+									}
+									ⴐ.Remove(CS$<>8__locals0.scenarioRelation.Ⴐ);
+								}
+								else
+								{
+									list2.Add(CS$<>8__locals0.scenarioRelation.Ⴐ);
+									Ⴀ ⴀ = value;
+									ⴀ.ႰႣ(ⴀ.ႰႭ() + 1);
+									flag6 = true;
+								}
+							}
+							if (flag6 && num6 == CS$<>8__locals0.scenarioRelation.Ⴓ)
+							{
+								bool flag8 = CS$<>8__locals0.scenarioRelation.Ⴐ.Relation == ScenarioTextRelation.Exclude;
+								bool ⴅ4 = ⴅ3.Ⴅ;
+								if (!ⴅ4 || (ⴅ4 && flag8))
+								{
+									if (flag8)
+									{
+										ⴅ3.Ⴅ = true;
+									}
+									Ⴀ ⴐ2 = (Ⴀ)(object)ⴅ3.Ⴐ;
+									if (ⴐ2 == null || flag8 || ⴐ2.ႰႣ().Ⴓ < CS$<>8__locals0.scenarioRelation.Ⴓ)
+									{
+										ⴅ3.Ⴓ = true;
+										ⴅ3.Ⴗ = true;
+										ⴅ3.Ⴐ = (Ⴍ)(object)value;
+										*(int*)(&ⴅ3.Ⴐ) = value.ႰႳ();
+									}
+								}
+								ⴐ.Remove(CS$<>8__locals0.scenarioRelation.Ⴐ);
+							}
+						}
+						else
+						{
+							Dictionary<string, Ⴃ> ⴐ3 = (Dictionary<string, Ⴃ>)(object)ⴅ3.Ⴐ;
+							bool flag6 = false;
+							Ⴃ value2 = null;
+							if (num6 == 0)
+							{
+								if (!ⴐ3.ContainsKey(CS$<>8__locals0.scenarioRelation.Ⴐ))
+								{
+									value2 = new Ⴃ(CS$<>8__locals0.scenarioRelation, num, num);
+									ⴐ3.Add(CS$<>8__locals0.scenarioRelation.Ⴐ, value2);
+									list2.Add(CS$<>8__locals0.scenarioRelation.Ⴐ);
+									flag6 = true;
+								}
+							}
+							else if (ⴐ3.TryGetValue(CS$<>8__locals0.scenarioRelation.Ⴐ, out value2))
+							{
+								if (value2.ႰႭ() - value2.ႰႳ() < CS$<>8__locals0.scenarioRelation.Ⴈ - 1 || num - value2.ႰႳ() < num6)
+								{
+									if (list2.Contains(CS$<>8__locals0.scenarioRelation.Ⴐ))
+									{
+										continue;
+									}
+									ⴐ3.Remove(CS$<>8__locals0.scenarioRelation.Ⴐ);
+								}
+								else
+								{
+									list2.Add(CS$<>8__locals0.scenarioRelation.Ⴐ);
+									Ⴃ ⴃ2 = value2;
+									ⴃ2.ႰႣ(ⴃ2.ႰႭ() + 1);
+									flag6 = true;
+								}
+							}
+							if (flag6 && num6 == CS$<>8__locals0.scenarioRelation.Ⴓ)
+							{
+								Ⴃ ⴃ3 = ((IEnumerable<Ⴃ>)(object)ⴅ3.Ⴐ).Where((Ⴃ i) => i.ႰႣ().Ⴐ == CS$<>8__locals0.scenarioRelation.Ⴐ).DefaultIfEmpty().First();
+								if (ⴃ3 == null)
+								{
+									((List<Ⴃ>)(object)ⴅ3.Ⴐ).Add(value2);
+									ⴐ3.Remove(CS$<>8__locals0.scenarioRelation.Ⴐ);
+								}
+								else
+								{
+									ⴅ3.Ⴓ = true;
+									ⴅ3.Ⴗ = true;
+									((List<Ⴃ>)(object)ⴅ3.Ⴐ).Remove(ⴃ3);
+									Ⴍ ⴍ2 = (value2.ႰႳ() >= ⴃ3.ႰႳ()) ? new Ⴍ(value2.ႰႣ(), ⴃ3.ႰႳ(), value2.ႰႭ(), ⴃ3.ႰႭ() + 1, value2.ႰႳ() - 1) : new Ⴍ(value2.ႰႣ(), value2.ႰႳ(), ⴃ3.ႰႭ(), value2.ႰႭ() + 1, ⴃ3.ႰႳ() - 1);
+									*(int*)(&ⴅ3.Ⴐ) = ⴍ2.ႰႣ();
+									ⴅ3.Ⴐ = ⴍ2;
+								}
+							}
+						}
+					}
+				}
+				int num7 = -1;
+				List<Ⴅ>[] array3 = new List<Ⴅ>[4]
+				{
+					new List<Ⴅ>(),
+					new List<Ⴅ>(),
+					new List<Ⴅ>(),
+					new List<Ⴅ>()
+				};
+				List<Ⴅ> list3 = new List<Ⴅ>();
+				Ⴅ ⴅ5 = null;
+				int num8 = 0;
+				foreach (Ⴅ value3 in dictionary.Values)
+				{
+					if (value3.Ⴓ)
+					{
+						bool ⴗ2 = value3.Ⴗ;
+						int num9 = -1;
+						if ((flag2 || (!value3.ႨႨႥ().IsQnA && !value3.ႨႨႥ().IsUserQnA)) && (*(int*)(&value3.Ⴐ) <= 0 || !value3.ႨႨႥ().IsQnA))
+						{
+							if (ⴗ2)
+							{
+								if (*(int*)(&value3.Ⴐ) > 0 && ႳႷ(array, *(int*)(&value3.Ⴐ)))
+								{
+									if (!value3.Ⴅ)
+									{
+										continue;
+									}
+									num9 = 3;
+									num8 = ((value3.Ⴐ != null) ? (((Ⴀ)(object)value3.Ⴐ).ႰႭ() - ((Ⴀ)(object)value3.Ⴐ).ႰႳ()) : (value3.Ⴐ.ႰႷ() - value3.Ⴐ.ႰႣ()));
+								}
+								else
+								{
+									if (value3.Ⴅ)
+									{
+										continue;
+									}
+									int num10 = (value3.Ⴐ != null) ? (((Ⴀ)(object)value3.Ⴐ).ႰႭ() - ((Ⴀ)(object)value3.Ⴐ).ႰႳ()) : (value3.Ⴐ.ႰႷ() - value3.Ⴐ.ႰႣ());
+									if (num10 >= num8)
+									{
+										num9 = 2;
+										num8 = num10;
+									}
+									if (value3.ႨႨႥ().Moods.Contains(Ⴐ) || value3.ႨႨႥ().Moods.Contains(Ⴈ) || (flag && value3.ႨႨႥ().Moods.Contains(ႨႣႰ.Ⴗ.m_Ⴓ)))
+									{
+										ⴅ5 = value3;
+									}
+								}
+							}
+							else if (*(int*)(&value3.Ⴐ) > 0 && ႳႷ(array, *(int*)(&value3.Ⴐ)))
+							{
+								if (!value3.Ⴈ)
+								{
+									continue;
+								}
+								num9 = 1;
+							}
+							else
+							{
+								if (value3.Ⴈ)
+								{
+									continue;
+								}
+								num9 = 0;
+								if (value3.ႨႨႥ().Moods.Contains(Ⴐ) || value3.ႨႨႥ().Moods.Contains(Ⴈ) || (flag && value3.ႨႨႥ().Moods.Contains(ႨႣႰ.Ⴗ.m_Ⴓ)))
+								{
+									ⴅ5 = value3;
+								}
+							}
+							if (num9 != -1)
+							{
+								if (num7 < num9)
+								{
+									num7 = num9;
+								}
+								array3[num9].Add(value3);
+								Scenario scenario2 = value3.ႨႨႥ();
+								if (scenario2.HighPriority && !scenario2.IsQnA)
+								{
+									list3.Add(value3);
+								}
+							}
+						}
+					}
+				}
+				if (num7 == -1)
+				{
+					if (flag && Ⴗ.Ⴍ != null)
+					{
+						ႷႭႭ.Ⴄ ⴄ = (ႷႭႭ.Ⴄ)Ⴗ.Ⴍ;
+						ⴄ(Ⴃ: false);
+					}
+					ႭႷႰ.Ⴈ ⴈ = new ႭႷႰ.Ⴈ();
+					ⴈ.Ⴐ = (ႭႷႰ.Ⴓ.Ⴅ | ႭႷႰ.Ⴓ.Ⴃ);
+					return ⴈ;
+				}
+				bool flag9 = false;
+				int num11;
+				if (ⴅ5 != null)
+				{
+					List<Ⴅ> source = array3[num7];
+					if (ႨႣႰ.Ⴗ.Ⴀ == null)
+					{
+						ႨႣႰ.Ⴗ.Ⴀ = (Func<Ⴅ, <>f__AnonymousType4<Ⴅ, Ⴀ>>)(object)(Func<Ⴅ, <>f__AnonymousType2<Ⴅ, Scenario>>)((Ⴅ theScenarioMatchData) => new <>f__AnonymousType2<Ⴅ, Scenario>(theScenarioMatchData, theScenarioMatchData.ႨႨႥ()));
+					}
+					IEnumerable<<>f__AnonymousType2<Ⴅ, Scenario>> source2 = source.Select((Func<Ⴅ, <>f__AnonymousType2<Ⴅ, Scenario>>)(object)ႨႣႰ.Ⴗ.Ⴀ);
+					if (ႨႣႰ.Ⴗ.Ⴃ == null)
+					{
+						ႨႣႰ.Ⴗ.Ⴃ = (Func<Ⴅ, bool>)(Func<<>f__AnonymousType2<Ⴅ, Scenario>, bool>)delegate(<>f__AnonymousType2<Ⴅ, Scenario> <>h__TransparentIdentifier3a)
+						{
+							//Discarded unreachable code: IL_0005, IL_0026, IL_0042, IL_0054
+							int result2;
+							while (true)
+							{
+								if (<>h__TransparentIdentifier3a.get_theScenario().HighPriority)
+								{
+									if (false)
+									{
+										continue;
+									}
+									if (!<>h__TransparentIdentifier3a.get_theScenario().IsQnA)
+									{
+										if (656 >= 656 - 90)
+										{
+										}
+										result2 = ((!<>h__TransparentIdentifier3a.get_theScenario().DontOverrideDanger) ? 1 : 0);
+										break;
+									}
+								}
+								result2 = 0;
+								break;
+							}
+							return (byte)result2 != 0;
+						};
+					}
+					IEnumerable<<>f__AnonymousType2<Ⴅ, Scenario>> source3 = source2.Where((Func<<>f__AnonymousType2<Ⴅ, Scenario>, bool>)ႨႣႰ.Ⴗ.Ⴃ);
+					if (ႨႣႰ.Ⴗ.Ⴀ == null)
+					{
+						ႨႣႰ.Ⴗ.Ⴀ = (Func<Ⴅ, <>f__AnonymousType4<Ⴅ, Ⴀ>>)(object)(Func<<>f__AnonymousType2<Ⴅ, Scenario>, Scenario>)((<>f__AnonymousType2<Ⴅ, Scenario> <>h__TransparentIdentifier3a) => <>h__TransparentIdentifier3a.get_theScenario());
+					}
+					num11 = ((source3.Select((Func<<>f__AnonymousType2<Ⴅ, Scenario>, Scenario>)(object)ႨႣႰ.Ⴗ.Ⴀ).Count() != 0 && !flag) ? 1 : 0);
+				}
+				else
+				{
+					num11 = 1;
+				}
+				IEnumerable<Ⴅ> enumerable2;
+				if (num11 == 0)
+				{
+					if (!ⴅ5.ႨႨႥ().Moods.Contains(ႨႣႰ.Ⴗ.m_Ⴓ))
+					{
+						enumerable2 = new Ⴅ[1]
+						{
+							ⴅ5
+						};
+					}
+					else
+					{
+						Ⴅ ⴅ6 = new Ⴅ(CS$<>8__locals2.personality.MasterPersonality.ScenariosByMood[Ⴐ.ID].FirstOrDefault());
+						ⴅ6.Ⴓ = true;
+						enumerable2 = new Ⴅ[1]
+						{
+							ⴅ6
+						};
+					}
+					flag9 = true;
+					if (flag && Ⴗ.Ⴍ != null)
+					{
+						ႷႭႭ.Ⴄ ⴄ = (ႷႭႭ.Ⴄ)Ⴗ.Ⴍ;
+						ⴄ(Ⴃ: true);
+					}
+				}
+				else
+				{
+					if (flag)
+					{
+						if (Ⴗ.Ⴍ != null)
+						{
+							ႷႭႭ.Ⴄ ⴄ = (ႷႭႭ.Ⴄ)Ⴗ.Ⴍ;
+							ⴄ(Ⴃ: false);
+						}
+						ႭႷႰ.Ⴈ ⴈ2 = new ႭႷႰ.Ⴈ();
+						ⴈ2.Ⴐ = (ႭႷႰ.Ⴓ.Ⴅ | ႭႷႰ.Ⴓ.Ⴃ);
+						return ⴈ2;
+					}
+					enumerable2 = array3[num7];
+				}
+				if (enumerable2.Count() == 0)
+				{
+					if (list3.Count() <= 0)
+					{
+						ႥႥႨ.Ⴗ.ႳႥ(ႠႤႭ.Ⴍ.ႰႷ(444439128), Ⴗ.Ⴗ.ToString());
+						ႭႷႰ.Ⴈ ⴈ3 = new ႭႷႰ.Ⴈ();
+						ⴈ3.Ⴐ = (ႭႷႰ.Ⴓ.Ⴅ | ႭႷႰ.Ⴓ.Ⴃ);
+						return ⴈ3;
+					}
+					enumerable2 = list3;
+				}
+				IEnumerable<Ⴅ> enumerable3;
+				if (!flag9)
+				{
+					enumerable3 = enumerable2.Union(list3);
+				}
+				else
+				{
+					IEnumerable<Ⴅ> first = enumerable2;
+					if (ႨႣႰ.Ⴗ.Ⴀ == null)
+					{
+						ႨႣႰ.Ⴗ.Ⴀ = (Func<Ⴅ, <>f__AnonymousType4<Ⴅ, Ⴀ>>)(object)(Func<Ⴅ, bool>)((Ⴅ match) => !match.ႨႨႥ().DontOverrideDanger);
+					}
+					enumerable3 = first.Union(list3.Where((Func<Ⴅ, bool>)(object)ႨႣႰ.Ⴗ.Ⴀ));
+				}
+				IEnumerable<Ⴅ> source4 = enumerable3;
+				if (Ⴄ == null)
+				{
+					Ⴄ = delegate(Ⴅ scenarioMatchData)
+					{
+						//Discarded unreachable code: IL_0005, IL_000d, IL_002d, IL_004c, IL_0059
+						int result;
+						while (true)
+						{
+							if (!scenarioMatchData.ႨႨႥ().HighPriority)
+							{
+								result = 0;
+								break;
+							}
+							if (false)
+							{
+							}
+							if (!scenarioMatchData.ႨႨႥ().IsQnA)
+							{
+								result = 1;
+								break;
+							}
+							if (856 >= 856 - 495)
+							{
+								result = ((*(int*)(&scenarioMatchData.Ⴐ) == 0) ? 1 : 0);
+								break;
+							}
+						}
+						return (byte)result != 0;
+					};
+				}
+				IEnumerable<Ⴅ> source5 = source4.Where(Ⴄ);
+				if (Ⴃ == null)
+				{
+					Ⴃ = ((Ⴅ scenarioMatchData) => scenarioMatchData.ႨႨႥ().IsQnA);
+				}
+				IEnumerable<Ⴅ> enumerable4 = source5.OrderBy(Ⴃ);
+				bool flag10 = false;
+				bool flag11 = false;
+				if (enumerable4.Count() == 0)
+				{
+					IEnumerable<Ⴅ> source6 = enumerable3;
+					if (ႨႣႰ.Ⴗ.Ⴍ == null)
+					{
+						ႨႣႰ.Ⴗ.Ⴍ = (Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, Ⴅ>)(object)(Func<Ⴅ, bool>)((Ⴅ theScenario) => theScenario.ႨႨႥ().Moods.Count() != 0);
+					}
+					IEnumerable<<>f__AnonymousType3<Ⴅ, int>> source7 = from scenario in source6.Where((Func<Ⴅ, bool>)(object)ႨႣႰ.Ⴗ.Ⴍ)
+						select new <>f__AnonymousType3<Ⴅ, int>(scenario, CS$<>8__locals2.personality.MoodList.ႨႷႰ(scenario.ႨႨႥ().Moods[0].ID).Group);
+					if (ႨႣႰ.Ⴗ.Ⴀ == null)
+					{
+						ႨႣႰ.Ⴗ.Ⴀ = (Func<Ⴅ, <>f__AnonymousType4<Ⴅ, Ⴀ>>)(object)(Func<<>f__AnonymousType3<Ⴅ, int>, bool>)((<>f__AnonymousType3<Ⴅ, int> <>h__TransparentIdentifier3b) => <>h__TransparentIdentifier3b.get_category() != 0);
+					}
+					IEnumerable<<>f__AnonymousType3<Ⴅ, int>> source8 = source7.Where((Func<<>f__AnonymousType3<Ⴅ, int>, bool>)(object)ႨႣႰ.Ⴗ.Ⴀ);
+					if (ႨႣႰ.Ⴗ.Ⴀ == null)
+					{
+						ႨႣႰ.Ⴗ.Ⴀ = (Func<Ⴅ, <>f__AnonymousType4<Ⴅ, Ⴀ>>)(object)(Func<<>f__AnonymousType3<Ⴅ, int>, int>)((<>f__AnonymousType3<Ⴅ, int> <>h__TransparentIdentifier3b) => <>h__TransparentIdentifier3b.get_category());
+					}
+					IEnumerable<int> source9 = source8.Select((Func<<>f__AnonymousType3<Ⴅ, int>, int>)(object)ႨႣႰ.Ⴗ.Ⴀ);
+					if (source9.Count() > 1 && source9.Min() != source9.Max())
+					{
+						ႭႷႰ.Ⴈ ⴈ4 = new ႭႷႰ.Ⴈ();
+						ⴈ4.Ⴐ = (ႭႷႰ.Ⴓ.Ⴅ | ႭႷႰ.Ⴓ.Ⴍ);
+						return ⴈ4;
+					}
+					enumerable4 = enumerable2;
+				}
+				else
+				{
+					Ⴅ ⴅ7 = enumerable4.First();
+					if (!ⴅ7.ႨႨႥ().IsQnA)
+					{
+						IEnumerable<Ⴅ> source10 = enumerable4;
+						if (ႨႣႰ.Ⴗ.Ⴗ == null)
+						{
+							ႨႣႰ.Ⴗ.Ⴗ = ((Ⴅ scenarioMatchData) => !scenarioMatchData.ႨႨႥ().IsQnA);
+						}
+						IEnumerable<Ⴅ> source11 = source10.Where(ႨႣႰ.Ⴗ.Ⴗ);
+						if (ႨႣႰ.Ⴗ.Ⴅ == null)
+						{
+							ႨႣႰ.Ⴗ.Ⴅ = (Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, int>)(object)(Func<Ⴅ, bool>)((Ⴅ scenarioMatchData) => scenarioMatchData.ႨႨႥ().IsUserQnA);
+						}
+						enumerable4 = source11.OrderByDescending((Func<Ⴅ, bool>)(object)ႨႣႰ.Ⴗ.Ⴅ);
+						ⴅ7 = enumerable4.First();
+						flag11 = ⴅ7.ႨႨႥ().IsUserQnA;
+					}
+					else
+					{
+						IEnumerable<Ⴅ> source12 = enumerable4;
+						if (Ⴀ == null)
+						{
+							Ⴀ = ((Ⴅ scenarioMatchData) => new <>f__AnonymousType4<Ⴅ, Ⴀ>(scenarioMatchData, (Ⴀ)(object)scenarioMatchData.Ⴐ));
+						}
+						IEnumerable<<>f__AnonymousType4<Ⴅ, Ⴀ>> source13 = source12.Select(Ⴀ);
+						if (ႨႣႰ.Ⴗ.Ⴍ == null)
+						{
+							ႨႣႰ.Ⴗ.Ⴍ = (Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, Ⴅ>)(object)(Func<<>f__AnonymousType4<Ⴅ, Ⴀ>, <>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>>)((<>f__AnonymousType4<Ⴅ, Ⴀ> <>h__TransparentIdentifier3c) => new <>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>(<>h__TransparentIdentifier3c, (Ⴀ)(object)<>h__TransparentIdentifier3c.get_scenarioMatchData().Ⴐ));
+						}
+						IEnumerable<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>> source14 = source13.Select((Func<<>f__AnonymousType4<Ⴅ, Ⴀ>, <>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>>)(object)ႨႣႰ.Ⴗ.Ⴍ);
+						if (ႨႣႰ.Ⴗ.Ⴅ == null)
+						{
+							ႨႣႰ.Ⴗ.Ⴅ = (Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, int>)(object)(Func<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, <>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>>)((<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ> <>h__TransparentIdentifier3d) => new <>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>(<>h__TransparentIdentifier3d, Math.Max((<>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_matchedPhrase() != null) ? (<>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_matchedPhrase().ႰႭ() - <>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_matchedPhrase().ႰႳ()) : 0, (<>h__TransparentIdentifier3d.get_matchedMultiPhrase() != null) ? (<>h__TransparentIdentifier3d.get_matchedMultiPhrase().ႰႭ() - <>h__TransparentIdentifier3d.get_matchedMultiPhrase().ႰႳ()) : 0)));
+						}
+						IEnumerable<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>> source15 = source14.Select((Func<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, <>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>>)(object)ႨႣႰ.Ⴗ.Ⴅ);
+						if (ႨႣႰ.Ⴗ.Ⴅ == null)
+						{
+							ႨႣႰ.Ⴗ.Ⴅ = (Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, int>)(object)(Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, bool>)((<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int> <>h__TransparentIdentifier3e) => <>h__TransparentIdentifier3e.<>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_scenarioMatchData().ႨႨႥ().IsQnA);
+						}
+						IEnumerable<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>> source16 = source15.Where((Func<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>, bool>)(object)ႨႣႰ.Ⴗ.Ⴅ);
+						if (Ⴅ == null)
+						{
+							Ⴅ = ((<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int> <>h__TransparentIdentifier3e) => <>h__TransparentIdentifier3e.get_phraseLength());
+						}
+						IOrderedEnumerable<<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>> source17 = source16.OrderByDescending(Ⴅ);
+						if (ႨႣႰ.Ⴗ.Ⴍ == null)
+						{
+							ႨႣႰ.Ⴗ.Ⴍ = ((<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int> <>h__TransparentIdentifier3e) => <>h__TransparentIdentifier3e.<>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_scenarioMatchData());
+						}
+						IEnumerable<Ⴅ> enumerable5 = source17.Select(ႨႣႰ.Ⴗ.Ⴍ);
+						if (enumerable5.Count() == 0)
+						{
+							ႭႷႰ.Ⴈ ⴈ5 = new ႭႷႰ.Ⴈ();
+							ⴈ5.Ⴐ = (ႭႷႰ.Ⴓ.Ⴅ | ႭႷႰ.Ⴓ.Ⴃ);
+							return ⴈ5;
+						}
+						flag10 = true;
+						enumerable4 = enumerable5;
+						ⴅ7 = enumerable5.First();
+						int num12 = 0;
+						int num13 = 0;
+						int num14 = 0;
+						Ⴍ ⴐ4 = ⴅ7.Ⴐ;
+						Ⴀ ⴐ2 = (Ⴀ)(object)ⴅ7.Ⴐ;
+						if (ⴐ2 != null)
+						{
+							num12 = ⴐ2.ႰႭ() + 1;
+							num13 = ⴐ2.ႰႳ();
+							num14 = array.Length;
+						}
+						if (ⴐ4 != null && ⴐ4.ႰႥ() + 1 > ⴐ4.ႰႤ())
+						{
+							num12 = ⴐ4.ႰႤ();
+							num13 = ⴐ2.ႰႳ();
+							num14 = ⴐ4.ႰႥ() + 1;
+						}
+						if (array.Length > num12 && num14 >= num12)
+						{
+							try
+							{
+								if (num14 > 0)
+								{
+									array[num14 - 1] = new WordScenarios(array[num14 - 1], null, Ⴈ: true).Ⴐ;
+								}
+							}
+							catch
+							{
+							}
+							ⴃ = string.Join(ႠႤႭ.Ⴍ.ႰႷ(444439131), array, num12, num14 - num12);
+							ⴗ = string.Join(ႠႤႭ.Ⴍ.ႰႷ(444439131), array, num13, num14 - num13);
+						}
+						else
+						{
+							ⴃ = array[array.Length - 1];
+						}
+					}
+				}
+				Dictionary<string, object> dictionary2 = new Dictionary<string, object>();
+				if (!base.Ⴓ(enumerable4, CS$<>8__locals2.personality, ref empty, ref ⴓ, dictionary2))
+				{
+					ႭႷႰ.Ⴈ ⴈ6 = new ႭႷႰ.Ⴈ();
+					ⴈ6.Ⴐ = (ႭႷႰ.Ⴓ.Ⴅ | ႭႷႰ.Ⴓ.Ⴃ);
+					return ⴈ6;
+				}
+				Ⴈ(dictionary2, array, Ⴗ.Ⴐ, ⴃ, ⴗ, empty2, flag10 || flag11);
+				return base.Ⴓ(empty, ⴓ, CS$<>8__locals2.personality, Ⴍ, dictionary2);
+			}
+			catch (Exception ⴓ2)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႠႤႭ.Ⴍ.ႰႷ(444439130), ⴓ2);
+				ႭႷႰ.Ⴈ ⴈ7 = new ႭႷႰ.Ⴈ();
+				ⴈ7.Ⴐ = (ႭႷႰ.Ⴓ.Ⴅ | ႭႷႰ.Ⴓ.Ⴃ);
+				return ⴈ7;
+			}
+		}
+
+		private string ႨႷႳ(string Ⴓ)
+		{
+			return ((Regex)(object)this.Ⴐ).Replace(Ⴓ, ႠႤႭ.Ⴍ.ႰႷ(444439125));
+		}
+
+		private bool ႳႷ(string[] Ⴍ, int Ⴓ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0039, IL_0056, IL_0067, IL_006d, IL_00a3
+			bool result;
+			while (true)
+			{
+				if (((Ⴅ<Ⴄ>)(object)ႨႣႰ.Ⴗ.Ⴐ).ႨႷႷ(new Ⴄ(Ⴍ[Ⴓ - 1])) != null)
+				{
+					if (548 >= 548 - 192)
+					{
+						result = true;
+						break;
+					}
+					continue;
+				}
+				if (Ⴓ > 1)
+				{
+					if (852 >= 852 - 466)
+					{
+						result = (((Ⴅ<Ⴄ>)(object)ႨႣႰ.Ⴗ.Ⴈ).ႨႷႷ(new Ⴄ(Ⴍ[Ⴓ - 2] + ႠႤႭ.Ⴍ.ႰႷ(444439131) + Ⴍ[Ⴓ - 1])) != null);
+						break;
+					}
+					continue;
+				}
+				result = false;
+				if (290 < 290 - 82)
+				{
+				}
+				break;
+			}
+			return result;
+		}
+
+		private static <>f__AnonymousType2<Ⴅ, Scenario> <ProcessEvent>b__48(Ⴅ theScenarioMatchData)
+		{
+			return new <>f__AnonymousType2<Ⴅ, Scenario>(theScenarioMatchData, theScenarioMatchData.ႨႨႥ());
+		}
+
+		private static bool <ProcessEvent>b__49(<>f__AnonymousType2<Ⴅ, Scenario> <>h__TransparentIdentifier3a)
+		{
+			//Discarded unreachable code: IL_0005, IL_0026, IL_0042, IL_0054
+			int result;
+			while (true)
+			{
+				if (<>h__TransparentIdentifier3a.get_theScenario().HighPriority)
+				{
+					if (false)
+					{
+						continue;
+					}
+					if (!<>h__TransparentIdentifier3a.get_theScenario().IsQnA)
+					{
+						if (656 >= 656 - 90)
+						{
+						}
+						result = ((!<>h__TransparentIdentifier3a.get_theScenario().DontOverrideDanger) ? 1 : 0);
+						break;
+					}
+				}
+				result = 0;
+				break;
+			}
+			return (byte)result != 0;
+		}
+
+		private static Scenario <ProcessEvent>b__4a(<>f__AnonymousType2<Ⴅ, Scenario> <>h__TransparentIdentifier3a)
+		{
+			return <>h__TransparentIdentifier3a.get_theScenario();
+		}
+
+		private static bool <ProcessEvent>b__4b(Ⴅ match)
+		{
+			return !match.ႨႨႥ().DontOverrideDanger;
+		}
+
+		private unsafe static bool <ProcessEvent>b__4c(Ⴅ scenarioMatchData)
+		{
+			//Discarded unreachable code: IL_0005, IL_000d, IL_002d, IL_004c, IL_0059
+			int result;
+			while (true)
+			{
+				if (!scenarioMatchData.ႨႨႥ().HighPriority)
+				{
+					result = 0;
+					break;
+				}
+				if (false)
+				{
+				}
+				if (!scenarioMatchData.ႨႨႥ().IsQnA)
+				{
+					result = 1;
+					break;
+				}
+				if (856 >= 856 - 495)
+				{
+					result = ((*(int*)(&scenarioMatchData.Ⴐ) == 0) ? 1 : 0);
+					break;
+				}
+			}
+			return (byte)result != 0;
+		}
+
+		private static bool <ProcessEvent>b__4d(Ⴅ scenarioMatchData)
+		{
+			return scenarioMatchData.ႨႨႥ().IsQnA;
+		}
+
+		private static bool <ProcessEvent>b__4e(Ⴅ theScenario)
+		{
+			return theScenario.ႨႨႥ().Moods.Count() != 0;
+		}
+
+		private static bool <ProcessEvent>b__50(<>f__AnonymousType3<Ⴅ, int> <>h__TransparentIdentifier3b)
+		{
+			return <>h__TransparentIdentifier3b.get_category() != 0;
+		}
+
+		private static int <ProcessEvent>b__51(<>f__AnonymousType3<Ⴅ, int> <>h__TransparentIdentifier3b)
+		{
+			return <>h__TransparentIdentifier3b.get_category();
+		}
+
+		private static bool <ProcessEvent>b__52(Ⴅ scenarioMatchData)
+		{
+			return !scenarioMatchData.ႨႨႥ().IsQnA;
+		}
+
+		private static bool <ProcessEvent>b__53(Ⴅ scenarioMatchData)
+		{
+			return scenarioMatchData.ႨႨႥ().IsUserQnA;
+		}
+
+		private static <>f__AnonymousType4<Ⴅ, Ⴀ> <ProcessEvent>b__54(Ⴅ scenarioMatchData)
+		{
+			return new <>f__AnonymousType4<Ⴅ, Ⴀ>(scenarioMatchData, (Ⴀ)(object)scenarioMatchData.Ⴐ);
+		}
+
+		private static <>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ> <ProcessEvent>b__55(<>f__AnonymousType4<Ⴅ, Ⴀ> <>h__TransparentIdentifier3c)
+		{
+			return new <>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>(<>h__TransparentIdentifier3c, (Ⴀ)(object)<>h__TransparentIdentifier3c.get_scenarioMatchData().Ⴐ);
+		}
+
+		private static <>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int> <ProcessEvent>b__56(<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ> <>h__TransparentIdentifier3d)
+		{
+			//Discarded unreachable code: IL_0002, IL_0017, IL_001c, IL_0041, IL_004d, IL_0052, IL_006d
+			return new <>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int>(<>h__TransparentIdentifier3d, Math.Max((<>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_matchedPhrase() != null) ? (<>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_matchedPhrase().ႰႭ() - <>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_matchedPhrase().ႰႳ()) : 0, (<>h__TransparentIdentifier3d.get_matchedMultiPhrase() != null) ? (<>h__TransparentIdentifier3d.get_matchedMultiPhrase().ႰႭ() - <>h__TransparentIdentifier3d.get_matchedMultiPhrase().ႰႳ()) : 0));
+		}
+
+		private static bool <ProcessEvent>b__57(<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int> <>h__TransparentIdentifier3e)
+		{
+			return <>h__TransparentIdentifier3e.<>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_scenarioMatchData().ႨႨႥ().IsQnA;
+		}
+
+		private static int <ProcessEvent>b__58(<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int> <>h__TransparentIdentifier3e)
+		{
+			return <>h__TransparentIdentifier3e.get_phraseLength();
+		}
+
+		private static Ⴅ <ProcessEvent>b__59(<>f__AnonymousType6<<>f__AnonymousType5<<>f__AnonymousType4<Ⴅ, Ⴀ>, Ⴀ>, int> <>h__TransparentIdentifier3e)
+		{
+			return <>h__TransparentIdentifier3e.<>h__TransparentIdentifier3d.<>h__TransparentIdentifier3c.get_scenarioMatchData();
+		}
+	}
+	public class Ⴜ : Ⴓ
+	{
+		private sealed class <>c__DisplayClass7
+		{
+			public bool found;
+
+			public string <ProcessEvent>b__1(Match m)
+			{
+				found = true;
+				return m.Value;
+			}
+		}
+
+		private new static readonly ScenarioMood Ⴐ;
+
+		private new static readonly Guid Ⴐ;
+
+		private new static readonly Dictionary<Personality, KeyValuePair<DateTime, Regex>> Ⴐ;
+
+		private new static readonly Regex Ⴐ;
+
+		private new static string Ⴐ = (string)(object)new ScenarioMood
+		{
+			ID = new Guid(ႠႤႭ.Ⴍ.ႰႷ(444439145))
+		};
+
+		private new static Func<ChatmanAction, bool> Ⴈ;
+
+		private new static Func<ChatmanAction, int> Ⴈ;
+
+		private new static Func<Scenario, IEnumerable<ScenarioTextBase>> Ⴈ;
+
+		private new static Func<Scenario, ScenarioTextBase, <>f__AnonymousType7<Scenario, ScenarioTextBase>> Ⴈ;
+
+		private new static Func<<>f__AnonymousType7<Scenario, ScenarioTextBase>, bool> Ⴈ;
+
+		private new static Func<<>f__AnonymousType7<Scenario, ScenarioTextBase>, string[]> Ⴈ;
+
+		private new static Func<string[], IEnumerable<string>> Ⴈ;
+
+		unsafe static Ⴜ()
+		{
+			*(Guid*)(&Ⴜ.Ⴐ) = new Guid(ႠႤႭ.Ⴍ.ႰႷ(444439156));
+			Ⴜ.Ⴐ = (string)(object)new Dictionary<Personality, KeyValuePair<DateTime, Regex>>();
+			Ⴜ.Ⴐ = (string)(object)new Regex(ႠႤႭ.Ⴍ.ႰႷ(444439144), RegexOptions.Compiled);
+			Ⴐ = ႠႤႭ.Ⴍ.ႰႷ(444439147);
+		}
+
+		public unsafe override ႭႷႰ.Ⴈ Ⴓ(ႭႷႰ.Ⴐ Ⴍ, Personality Ⴓ, ႷႭႨ.Ⴓ Ⴈ)
+		{
+			<>c__DisplayClass7 CS$<>8__locals0 = new <>c__DisplayClass7();
+			ႥႥႨ.Ⴗ.ႳႥ(ႠႤႭ.Ⴍ.ႰႷ(444439153), Ⴍ.Ⴗ.ToString(), Ⴍ.Ⴄ, Ⴍ.Ⴅ);
+			Guid empty = Guid.Empty;
+			ChatmanAction chatmanAction = null;
+			Regex regex = null;
+			bool flag = false;
+			if (((Dictionary<Personality, KeyValuePair<DateTime, Regex>>)(object)Ⴜ.Ⴐ).ContainsKey(Ⴓ))
+			{
+				KeyValuePair<DateTime, Regex> keyValuePair = ((Dictionary<Personality, KeyValuePair<DateTime, Regex>>)(object)Ⴜ.Ⴐ)[Ⴓ];
+				if (keyValuePair.Key == Ⴓ.UpdateDate)
+				{
+					regex = keyValuePair.Value;
+				}
+				else
+				{
+					((Dictionary<Personality, KeyValuePair<DateTime, Regex>>)(object)Ⴜ.Ⴐ).Remove(Ⴓ);
+					flag = true;
+				}
+			}
+			else
+			{
+				flag = true;
+			}
+			if (flag)
+			{
+				Regex regex2 = ႰႠ(Ⴓ);
+				((Dictionary<Personality, KeyValuePair<DateTime, Regex>>)(object)Ⴜ.Ⴐ).Add(Ⴓ, new KeyValuePair<DateTime, Regex>(Ⴓ.UpdateDate, regex2));
+				regex = regex2;
+			}
+			CS$<>8__locals0.found = false;
+			if (regex != null)
+			{
+				regex.Replace(Ⴍ.Ⴄ, delegate(Match m)
+				{
+					CS$<>8__locals0.found = true;
+					return m.Value;
+				});
+				if (CS$<>8__locals0.found)
+				{
+					if (Ⴍ.Ⴍ != null)
+					{
+						ႷႭႭ.Ⴄ ⴄ = (ႷႭႭ.Ⴄ)Ⴍ.Ⴍ;
+						try
+						{
+							ⴄ(Ⴃ: true);
+						}
+						catch (Exception ⴍ)
+						{
+							ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+						}
+					}
+					empty = *(Guid*)(&Ⴜ.Ⴐ);
+					IEnumerable<ChatmanAction> source = Ⴓ.ActionsByMood[empty];
+					if (Ⴜ.Ⴈ == null)
+					{
+						Ⴜ.Ⴈ = (Func<string[], IEnumerable<string>>)(object)(Func<ChatmanAction, bool>)((ChatmanAction theAction) => !theAction.IsExcluded);
+					}
+					IEnumerable<ChatmanAction> source2 = source.Where((Func<ChatmanAction, bool>)(object)Ⴜ.Ⴈ);
+					if (Ⴜ.Ⴈ == null)
+					{
+						Ⴜ.Ⴈ = (Func<string[], IEnumerable<string>>)(object)(Func<ChatmanAction, int>)((ChatmanAction theAction) => theAction.TotalCounter);
+					}
+					chatmanAction = source2.OrderBy((Func<ChatmanAction, int>)(object)Ⴜ.Ⴈ).First();
+					return base.Ⴓ(empty, chatmanAction, Ⴓ, Ⴈ, null);
+				}
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႠႤႭ.Ⴍ.ႰႷ(444439152));
+			}
+			ႭႷႰ.Ⴈ ⴈ = new ႭႷႰ.Ⴈ();
+			ⴈ.Ⴐ = ႭႷႰ.Ⴓ.Ⴐ;
+			return ⴈ;
+		}
+
+		private Regex ႰႠ(Personality Ⴍ)
+		{
+			//Discarded unreachable code: IL_0016, IL_002b, IL_003b, IL_0053, IL_006b, IL_0080, IL_0098, IL_00b0, IL_00c8, IL_00dd
+			List<Scenario> scenarios = Ⴍ.MasterPersonality.Scenarios;
+			if (Ⴜ.Ⴈ == null)
+			{
+				Ⴜ.Ⴈ = (Func<string[], IEnumerable<string>>)(Func<Scenario, IEnumerable<ScenarioTextBase>>)((Scenario scenario) => scenario.Texts);
+			}
+			Func<string[], IEnumerable<string>> ⴈ = Ⴜ.Ⴈ;
+			if (Ⴜ.Ⴈ == null)
+			{
+				Ⴜ.Ⴈ = (Func<string[], IEnumerable<string>>)(object)(Func<Scenario, ScenarioTextBase, <>f__AnonymousType7<Scenario, ScenarioTextBase>>)((Scenario scenario, ScenarioTextBase text) => new <>f__AnonymousType7<Scenario, ScenarioTextBase>(scenario, text));
+			}
+			IEnumerable<<>f__AnonymousType7<Scenario, ScenarioTextBase>> source = scenarios.SelectMany((Func<Scenario, IEnumerable<ScenarioTextBase>>)ⴈ, (Func<Scenario, ScenarioTextBase, <>f__AnonymousType7<Scenario, ScenarioTextBase>>)(object)Ⴜ.Ⴈ);
+			if (Ⴜ.Ⴈ == null)
+			{
+				Ⴜ.Ⴈ = (Func<string[], IEnumerable<string>>)(object)(Func<<>f__AnonymousType7<Scenario, ScenarioTextBase>, bool>)((<>f__AnonymousType7<Scenario, ScenarioTextBase> <>h__TransparentIdentifier9) => <>h__TransparentIdentifier9.get_scenario().Moods.Contains((ScenarioMood)(object)Ⴜ.Ⴐ));
+			}
+			IEnumerable<<>f__AnonymousType7<Scenario, ScenarioTextBase>> source2 = source.Where((Func<<>f__AnonymousType7<Scenario, ScenarioTextBase>, bool>)(object)Ⴜ.Ⴈ);
+			if (Ⴜ.Ⴈ == null)
+			{
+				Ⴜ.Ⴈ = (Func<string[], IEnumerable<string>>)(Func<<>f__AnonymousType7<Scenario, ScenarioTextBase>, string[]>)((<>f__AnonymousType7<Scenario, ScenarioTextBase> <>h__TransparentIdentifier9) => <>h__TransparentIdentifier9.get_text().Data.Replace(ႠႤႭ.Ⴍ.ႰႷ(444439148), ႠႤႭ.Ⴍ.ႰႷ(444439151)).Replace(ႠႤႭ.Ⴍ.ႰႷ(444439155), ႠႤႭ.Ⴍ.ႰႷ(444439150)).Split((char[])(object)ႭႭႰ.Ⴓ.Ⴐ, StringSplitOptions.RemoveEmptyEntries));
+			}
+			IEnumerable<string[]> source3 = source2.Select((Func<<>f__AnonymousType7<Scenario, ScenarioTextBase>, string[]>)Ⴜ.Ⴈ);
+			if (Ⴈ == null)
+			{
+				Ⴈ = ((string[] i) => i);
+			}
+			string[] source4 = source3.SelectMany(Ⴈ).Distinct().ToArray();
+			string input = string.Join(ႠႤႭ.Ⴍ.ႰႷ(444439155), Enumerable.ToArray(source4));
+			return new Regex(ႠႤႭ.Ⴍ.ႰႷ(444439154) + ((Regex)(object)Ⴜ.Ⴐ).Replace(input, Ⴐ) + ႠႤႭ.Ⴍ.ႰႷ(444439149), RegexOptions.IgnoreCase | RegexOptions.Compiled);
+		}
+
+		private static bool <ProcessEvent>b__2(ChatmanAction theAction)
+		{
+			return !theAction.IsExcluded;
+		}
+
+		private static int <ProcessEvent>b__3(ChatmanAction theAction)
+		{
+			return theAction.TotalCounter;
+		}
+
+		private static IEnumerable<ScenarioTextBase> <ConstructRegExFromURLsWords>b__a(Scenario scenario)
+		{
+			return scenario.Texts;
+		}
+
+		private static <>f__AnonymousType7<Scenario, ScenarioTextBase> <ConstructRegExFromURLsWords>b__b(Scenario scenario, ScenarioTextBase text)
+		{
+			return new <>f__AnonymousType7<Scenario, ScenarioTextBase>(scenario, text);
+		}
+
+		private static bool <ConstructRegExFromURLsWords>b__c(<>f__AnonymousType7<Scenario, ScenarioTextBase> <>h__TransparentIdentifier9)
+		{
+			return <>h__TransparentIdentifier9.get_scenario().Moods.Contains((ScenarioMood)(object)Ⴜ.Ⴐ);
+		}
+
+		private static string[] <ConstructRegExFromURLsWords>b__d(<>f__AnonymousType7<Scenario, ScenarioTextBase> <>h__TransparentIdentifier9)
+		{
+			return <>h__TransparentIdentifier9.get_text().Data.Replace(ႠႤႭ.Ⴍ.ႰႷ(444439148), ႠႤႭ.Ⴍ.ႰႷ(444439151)).Replace(ႠႤႭ.Ⴍ.ႰႷ(444439155), ႠႤႭ.Ⴍ.ႰႷ(444439150)).Split((char[])(object)ႭႭႰ.Ⴓ.Ⴐ, StringSplitOptions.RemoveEmptyEntries);
+		}
+
+		private static IEnumerable<string> <ConstructRegExFromURLsWords>b__e(string[] i)
+		{
+			return i;
+		}
+	}
+}

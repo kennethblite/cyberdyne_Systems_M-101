@@ -1,0 +1,588 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Interfaces.Public.dll
+// Rondyo.Chatman.Interfaces.Public, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
+
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: Guid("12353538-97f9-436b-bc90-75197a5212da")]
+[assembly: AssemblyVersion("1.0.0.0")]
+namespace Rondyo.Chatman.Interfaces.Public
+{
+	public enum ActionVolume
+	{
+		Normal,
+		Lower,
+		Higher
+	}
+	public enum ApplicationLoadStates
+	{
+		None,
+		Loaded,
+		LoadFailed,
+		InitializationFailed,
+		UnsupportedChatmanVersion,
+		UnsupportedOsVersion,
+		Uninstalled
+	}
+	public delegate void AudioActionStoppedDelegate();
+	public enum AudioEffects
+	{
+		Pitch = -1,
+		Echo = 65537,
+		RepeatedEcho = 65546,
+		Chorus = 65549,
+		Distortion = 65552,
+		Reverb = 65541,
+		Flanger = 65538
+	}
+	public enum ChatmanCommandCodes
+	{
+		EyesClosed = 1,
+		EyesOpenOneThird,
+		EyesOpenTwoThirds,
+		EyesOpen,
+		HandsDown,
+		HandsUpOneThird,
+		HandsUpTwoThirds,
+		HandsUp,
+		AntennasIn,
+		AntennasCenter,
+		AntennasOut,
+		LegsMoving,
+		LegsStopped,
+		LEDSFrame
+	}
+	public class ChatmanHardwareAction
+	{
+		private int Ⴐ;
+
+		private int Ⴈ;
+
+		private int Ⴓ;
+
+		public int Start
+		{
+			get
+			{
+				return Ⴐ;
+			}
+			set
+			{
+				Ⴐ = value;
+			}
+		}
+
+		public int Code
+		{
+			get
+			{
+				return Ⴈ;
+			}
+			set
+			{
+				Ⴈ = value;
+			}
+		}
+
+		public int Parameter
+		{
+			get
+			{
+				return Ⴓ;
+			}
+			set
+			{
+				Ⴓ = value;
+			}
+		}
+	}
+	public delegate void CommandDelegate(string argument);
+	public static class EnumerationExtensions
+	{
+		public static bool Has<T>(this Enum type, T value)
+		{
+			try
+			{
+				return ((int)(object)type & (int)(object)value) == (int)(object)value;
+			}
+			catch
+			{
+				return false;
+			}
+		}
+	}
+	[DataContract]
+	public enum GuiMessageBoxButtons
+	{
+		[EnumMember]
+		Ok = 1,
+		[EnumMember]
+		OkCancel,
+		[EnumMember]
+		YesNo,
+		[EnumMember]
+		YesNoCancel
+	}
+	public enum GuiMessageBoxResult
+	{
+		MessageBoxClosed,
+		OkButtonClicked,
+		CancelButtonClicked,
+		YesButtonClicked,
+		NoButtonClicked
+	}
+	[DataContract]
+	public enum GuiMessageBoxType
+	{
+		[EnumMember]
+		Info = 1,
+		[EnumMember]
+		Warning,
+		[EnumMember]
+		Error
+	}
+	public interface IChatmanAction
+	{
+		Guid ID
+		{
+			get;
+		}
+
+		int SpecialActionCode
+		{
+			get;
+		}
+
+		IChatmanPersonality ParentPersonality
+		{
+			get;
+		}
+
+		string Name
+		{
+			get;
+		}
+
+		string Description
+		{
+			get;
+		}
+
+		string Author
+		{
+			get;
+		}
+
+		Guid MoodID
+		{
+			get;
+		}
+
+		DateTime CreationDate
+		{
+			get;
+		}
+
+		bool IsPrivate
+		{
+			get;
+		}
+
+		string Location
+		{
+			get;
+		}
+
+		ChatmanHardwareAction[] GetLedActions();
+
+		ChatmanHardwareAction[] GetAllActions();
+	}
+	public interface IChatmanAction2
+	{
+		string Location
+		{
+			get;
+			set;
+		}
+
+		void AddSoundFile(string fileName);
+
+		void ClearActions();
+
+		void AddCodeAction(int code, int time);
+
+		void AddLEDAction(int value, int time);
+	}
+	public interface IChatmanAppController
+	{
+		string Id
+		{
+			get;
+			set;
+		}
+
+		void GuiInitialize();
+
+		void GuiDeInitialize();
+
+		void RegisterCommandHandler(string commandName, CommandDelegate handler);
+
+		void ExecuteControlCommand(string command, params object[] parameterObjects);
+
+		void AddChildController(IChatmanAppController controller);
+	}
+	public interface IChatmanApplication
+	{
+		IChatmanApplicationDetails Details
+		{
+			get;
+		}
+
+		void Initialize();
+
+		void Terminate();
+	}
+	public interface IChatmanApplicationContext
+	{
+		IChatmanApplicationServices Services
+		{
+			get;
+		}
+	}
+	public interface IChatmanApplicationDetails
+	{
+		Guid ID
+		{
+			get;
+			set;
+		}
+
+		string Name
+		{
+			get;
+			set;
+		}
+
+		string Description
+		{
+			get;
+			set;
+		}
+
+		string AssemblyPath
+		{
+			get;
+			set;
+		}
+
+		bool IsBackground
+		{
+			get;
+			set;
+		}
+
+		bool IsInternal
+		{
+			get;
+			set;
+		}
+
+		bool ShowInternal
+		{
+			get;
+			set;
+		}
+
+		ApplicationLoadStates ApplicationLoadState
+		{
+			get;
+			set;
+		}
+	}
+	public interface IChatmanApplicationLogger
+	{
+		void WriteException(string message, Exception ex);
+
+		void WriteException(Exception ex);
+
+		void WriteLine(string format, params object[] parameters);
+
+		void WriteLine(string message);
+	}
+	public interface IChatmanApplicationServices
+	{
+		string ChatmanName
+		{
+			get;
+			set;
+		}
+
+		short Volume
+		{
+			get;
+			set;
+		}
+
+		event VolumeChangedDelegate VolumeChanged;
+
+		event AudioActionStoppedDelegate AudioPlaybackStopped;
+
+		event ListeningEventDelegate HearingStopped;
+
+		event ListeningEventDelegate HearingStarted;
+
+		event ListeningEventDelegate ListeningStarted;
+
+		event AudioActionStoppedDelegate DirectPlaybackStopped;
+
+		IEnumerable<IChatmanMood> GetMoods();
+
+		IChatmanMood GetMood(Guid id);
+
+		IChatmanPersonality LoadPersonality(string location);
+
+		IChatmanApplicationLogger GetLogger(IChatmanApplicationDetails logOwner);
+
+		IChatmanPersonality GetActivePersonality();
+
+		IEnumerable<IChatmanPersonality> GetAllPersonalities();
+
+		IChatmanSession CreateSession(IChatmanPersonality personality);
+
+		void SubmitText(string text);
+
+		void SubmitText(string text, IChatmanSession session);
+
+		void SubmitAction(IChatmanAction action);
+
+		void SubmitAction(IChatmanAction action, bool stopPreviousAction);
+
+		void SubmitAction(IChatmanAction action, MemoryStream audioFileStream, bool stopPreviousAction);
+
+		void SubmitAction(IChatmanAction action, bool stopPreviousAction, IChatmanSession session);
+
+		void SubmitAction(IChatmanAction action, bool stopPreviousAction, IChatmanSession session, ActionVolume volume);
+
+		void StopAction(IChatmanAction action);
+
+		void SubmitDefaultSpecialAction(int specialActionCode);
+
+		void SubmitDefaultSpecialAction(int specialActionCode, ActionVolume volume);
+
+		void SubmitSpecialAction(IChatmanPersonality personality, int specialActionCode);
+
+		void SubmitSpecialAction(IChatmanPersonality personality, int specialActionCode, IChatmanSession session);
+
+		void SubmitSpecialAction(IChatmanPersonality personality, int specialActionCode, IChatmanSession session, ActionVolume volume);
+
+		void StopSpecialAction(IChatmanPersonality personality, int specialActionCode);
+
+		void StopAllActions();
+
+		IChatmanAction GenerateAction(IChatmanPersonality personality, string actionName, Guid moodID, string audioFileName, out string details);
+
+		void PlaySoundOnPC(string fileName);
+
+		void StopPlayingSoundsOnPC();
+
+		void PlaySoundOnChatman(string fileName);
+
+		void PauseSoundOnChatman();
+
+		void StopSoundOnChatman();
+
+		void StartListening(string fileName);
+
+		void AddListenEffect(AudioEffects effect);
+
+		void RemoveListenEffect(AudioEffects effect);
+
+		void SetListeningEffect(AudioEffects effect, params float[] effectParams);
+
+		void StopListening();
+
+		void StartDirectPlayback(string fileName);
+
+		void StopDirectPlayback();
+
+		void PauseDirectPlayback();
+
+		void ResumeDirectPlayback();
+
+		float[] GetDirectPlaybackData();
+
+		void MoveChatman(ChatmanCommandCodes command);
+
+		void ShowLedFrame(int param);
+
+		void SaveChitChat(IChatmanAction action, string name);
+
+		void ShareChitChat(IChatmanAction action);
+
+		void SaveObject<TypeToSerialize>(string fileName, TypeToSerialize theObject);
+
+		TypeToSerialize LoadObject<TypeToSerialize>(string fileName, bool failOnError);
+
+		void ShowMessageBox(string textMessage, GuiMessageBoxType guiMessageBoxType);
+
+		void ShowMessageBox(string caption, string textMessage, GuiMessageBoxButtons guiMessageBoxButtons, MessageBoxCloseHandler buttonClickHandler);
+
+		void ShowMessageBox(string caption, string textMessage, GuiMessageBoxButtons guiMessageBoxButtons, MessageBoxCloseHandler buttonClickHandler, object buttonClickHandlerParameter);
+	}
+	public interface IChatmanBackgroundApplication : IChatmanApplication
+	{
+		void Pause();
+
+		void Resume();
+	}
+	public interface IChatmanGuiApplication : IChatmanApplication
+	{
+		void GuiInitialize();
+
+		void GuiDeInitialize();
+
+		void RegisterCommandHandler(string commandName, CommandDelegate handler);
+
+		void ExecuteApplicationControlCommand(string command, params object[] parameterObjects);
+
+		string[] ShowOpenFileDialog(string dialogTitle, string filter, string initialDir, bool checkFileExists, bool isMultiSelect);
+	}
+	public interface IChatmanMood
+	{
+		Guid ID
+		{
+			get;
+		}
+
+		string Name
+		{
+			get;
+		}
+
+		string Description
+		{
+			get;
+		}
+
+		int WebID
+		{
+			get;
+		}
+
+		int Ordinal
+		{
+			get;
+		}
+
+		int Priority
+		{
+			get;
+		}
+
+		bool IsVisible
+		{
+			get;
+		}
+
+		bool NoIntensity
+		{
+			get;
+		}
+
+		bool NotSelectable
+		{
+			get;
+		}
+
+		bool IsReadOnly
+		{
+			get;
+		}
+	}
+	public interface IChatmanPersonality
+	{
+		string FileName
+		{
+			get;
+		}
+
+		Guid ID
+		{
+			get;
+		}
+
+		string Name
+		{
+			get;
+		}
+
+		string Description
+		{
+			get;
+		}
+
+		string Author
+		{
+			get;
+		}
+
+		DateTime CreationDate
+		{
+			get;
+		}
+
+		bool IsActive
+		{
+			get;
+		}
+
+		IChatmanAction GetAction(Guid id);
+
+		IChatmanAction GetSpecialAction(int code);
+	}
+	public interface IChatmanPersonality2
+	{
+		IEnumerable<IChatmanAction> GetAllActions();
+
+		IEnumerable<IChatmanAction> GetAllSpecialActions();
+
+		IEnumerable<IChatmanAction> GetActionsByMood(Guid moodID);
+	}
+	public interface IChatmanSession
+	{
+		string SessionID
+		{
+			get;
+		}
+	}
+	public delegate void ListeningEventDelegate();
+	public delegate void MessageBoxCloseHandler(GuiMessageBoxResult guiMessageBoxResult, object data);
+	public delegate void VolumeChangedDelegate(int newVolume);
+}

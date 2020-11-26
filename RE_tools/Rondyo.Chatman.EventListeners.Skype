@@ -1,0 +1,225 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.EventListeners.Skype.dll
+// Rondyo.Chatman.EventListeners.Skype, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
+using ႠႠႭ;
+using ႥႥႣ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႥ;
+using ႨႼႨ;
+using ႨႼႰ;
+using ႷႭႣ;
+using ႷႭႥ;
+using ႷႭႨ;
+
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Guid("bc1fc7fc-0523-4956-b017-dbcd6b3d383b")]
+[assembly: ComVisible(false)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace ႠႠႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string ႰႷ(int Ⴃ)
+		{
+			int num = Ⴃ ^ 0x1A7D9A5D;
+			string result;
+			if ((result = m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "Շऩב\u0cc7ఔ෫ऩ\u05a1ջभצ೬ఋ\u0de0\u0901\u05b1էऊר\u0cfbఞ\u0df7\u0963\u05bcոऒ";
+				break;
+			case 1:
+				obj = "\u058bՠट\u05ffೡ\u0c29෪ण\u05bcխऑ\u05b9\u0cc6ఐ\u0dfcऽ\u05bd";
+				break;
+			case 2:
+				obj = "\u05c8೧ఉ෪\u093f\u05f8էऊ\u05ec೧ఏ෬ण\u05bfԴबע\u0cfbట\u0dfcढ\u058bտइ\u05fd\u0cf0స෪ण\u05b6ձझ\u05f9\u0cfcఔ෫";
+				break;
+			case 3:
+				obj = "भ\u05f9\u0cfaఋ\u0dd7ढ\u05b6հइעಡన෮ऴ\u05a8ձ";
+				break;
+			case 4:
+				obj = "\u0c3e\u0df7\u093f\u05b7զफ़\u05feೡఔ\u0df5ऽ\u05b1պङ\u05ad೦ఐ\u0dfcऽ\u05bd\u0558ग\u05feೡఞ෫न\u05aa";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႠႠႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴃ) % num2]);
+			}
+			result = new string(array);
+			m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႠႠႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[5];
+		}
+	}
+}
+namespace ႨႥႰ
+{
+	public class Ⴐ : IDisposable, ႷႭႥ.Ⴈ
+	{
+		private ႷႭႨ.Ⴀ m_Ⴐ;
+
+		private bool m_Ⴐ;
+
+		public bool Ⴐ => false;
+
+		public static bool Ⴄ => ႨႼႰ.Ⴍ.Ⴃ == ႨႼႨ.Ⴐ.Ⴍ;
+
+		public static bool Ⴅ => ႨႼႰ.Ⴍ.Ⴃ == ႨႼႨ.Ⴐ.Ⴄ;
+
+		public unsafe Ⴐ()
+		{
+			*(ႷႭႨ.Ⴀ*)(&this.Ⴐ) = ႷႭႨ.Ⴀ.Ⴐ;
+			this.Ⴐ = false;
+			base..ctor();
+		}
+
+		~Ⴐ()
+		{
+			ႨႷႳ(Ⴃ: false);
+		}
+
+		public unsafe void ႰႣ(ႷႭႣ.Ⴜ Ⴃ)
+		{
+			//Discarded unreachable code: IL_0024, IL_0051
+			while (*(ႷႭႨ.Ⴀ*)(&this.Ⴐ) != ႷႭႨ.Ⴀ.Ⴈ)
+			{
+				ႥႥႨႥ.Ⴓ.Ⴗ(ႨႨႷ, Ⴓ: true, ApartmentState.STA);
+				*(ႷႭႨ.Ⴀ*)(&this.Ⴐ) = ႷႭႨ.Ⴀ.Ⴈ;
+				if (732 > 732 - 581)
+				{
+					return;
+				}
+			}
+			if ((894 + 894 * 894) % 2 == 0)
+			{
+			}
+		}
+
+		private void ႨႨႷ()
+		{
+			try
+			{
+				ႥႥႣ.Ⴗ.ႳႥ(ႣႳ.ႨႠႰ(ႠႠႭ.Ⴍ.ႰႷ(444439133)), ႠႠႭ.Ⴍ.ႰႷ(444439132));
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႠႠႭ.Ⴍ.ႰႷ(444439135), ⴓ);
+			}
+		}
+
+		public unsafe void ႨႨႣ()
+		{
+			if (*(ႷႭႨ.Ⴀ*)(&this.Ⴐ) != ႷႭႨ.Ⴀ.Ⴓ)
+			{
+				try
+				{
+					ႥႥႣ.Ⴗ.ႳႥ(ႣႳ.ႨႠႰ(ႠႠႭ.Ⴍ.ႰႷ(444439133)), ႠႠႭ.Ⴍ.ႰႷ(444439134));
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(ႠႠႭ.Ⴍ.ႰႷ(444439129), ⴓ);
+				}
+				*(ႷႭႨ.Ⴀ*)(&this.Ⴐ) = ႷႭႨ.Ⴀ.Ⴓ;
+			}
+		}
+
+		public void Dispose()
+		{
+			ႨႷႳ(Ⴃ: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected void ႨႷႳ(bool Ⴃ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001c, IL_0037, IL_0065
+			if (!this.Ⴐ)
+			{
+				if ((203 + 203 * 203) % 2 == 0)
+				{
+					if (!Ⴃ)
+					{
+						goto IL_000c;
+					}
+					if ((437 + 437 * 437) % 2 == 0)
+					{
+					}
+					goto IL_0050;
+				}
+			}
+			goto IL_0004;
+			IL_0056:
+			if ((769 + 769 * 769) % 2 == 0)
+			{
+				goto IL_000c;
+			}
+			goto IL_0050;
+			IL_0050:
+			ႨႨႣ();
+			goto IL_0056;
+			IL_0004:
+			this.Ⴐ = true;
+			return;
+			IL_000c:
+			if (337 > 337 - 204)
+			{
+				goto IL_0004;
+			}
+			goto IL_0056;
+		}
+	}
+}

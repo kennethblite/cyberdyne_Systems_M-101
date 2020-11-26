@@ -1,0 +1,1533 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Applications.XmlSerializers.dll
+// Rondyo.Chatman.Applications.XmlSerializers, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Applications;
+using Rondyo.Chatman.Applications.Configuration;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security;
+using System.Xml;
+using System.Xml.Serialization;
+using ႤႭ;
+
+[assembly: CompilationRelaxations(8)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AllowPartiallyTrustedCallers]
+[assembly: XmlSerializerVersion(Version = "2.0.0.0", ParentAssemblyId = "bec7c418-e784-4b7d-a570-a278c99178f2,")]
+[assembly: SecurityTransparent]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Microsoft.Xml.Serialization.GeneratedAssembly
+{
+	public sealed class ApplicationListSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴓ(1402238813), Ⴍ.Ⴓ(1402238814));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write6_ApplicationList(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read6_ApplicationList();
+		}
+	}
+	public sealed class ChatmanApplicationDetailsSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴓ(1402238812), Ⴍ.Ⴓ(1402238814));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write7_ChatmanApplicationDetails(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read7_ChatmanApplicationDetails();
+		}
+	}
+	public sealed class ChatmanApplicationServicesSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴓ(1402238815), Ⴍ.Ⴓ(1402238814));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write5_ChatmanApplicationServices(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read5_ChatmanApplicationServices();
+		}
+	}
+	public class XmlSerializationReader1 : XmlSerializationReader
+	{
+		private string Ⴍ;
+
+		private string m_Ⴓ;
+
+		private string Ⴈ;
+
+		private string Ⴃ;
+
+		private string Ⴗ;
+
+		private string Ⴅ;
+
+		private string Ⴐ;
+
+		private string m_Ⴀ;
+
+		private string m_Ⴄ;
+
+		private string Ⴜ;
+
+		private string ႳႭ;
+
+		private string ႳႳ;
+
+		private string ႳႨ;
+
+		private string ႳႣ;
+
+		private string ႳႷ;
+
+		private string ႳႥ;
+
+		public object Read5_ChatmanApplicationServices()
+		{
+			int num = 6;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType == XmlNodeType.Element) ? 1 : 4);
+					continue;
+				case 1:
+					num = (((object)base.Reader.LocalName == Ⴍ) ? 2 : 0);
+					continue;
+				case 2:
+					num = (((object)base.Reader.NamespaceURI == this.m_Ⴄ) ? 5 : 0);
+					continue;
+				case 5:
+					result = Ⴓ(Ⴍ: true, Ⴄ: true);
+					num = 3;
+					continue;
+				case 0:
+					throw CreateUnknownNodeException();
+				case 4:
+					UnknownNode(null, ႤႭ.Ⴍ.Ⴓ(1402238799));
+					break;
+				case 3:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read6_ApplicationList()
+		{
+			int num = 2;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 5 : 3);
+					continue;
+				case 3:
+					num = (((object)base.Reader.LocalName == ႳႳ) ? 1 : 4);
+					continue;
+				case 1:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 4 : 6);
+					continue;
+				case 6:
+					result = Ⴄ(Ⴍ: true, Ⴄ: true);
+					num = 0;
+					continue;
+				case 4:
+					throw CreateUnknownNodeException();
+				case 5:
+					UnknownNode(null, ႤႭ.Ⴍ.Ⴓ(1402238798));
+					break;
+				case 0:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read7_ChatmanApplicationDetails()
+		{
+			//Discarded unreachable code: IL_0002, IL_0027, IL_0054, IL_0078, IL_008e, IL_00b6
+			object result = null;
+			while (true)
+			{
+				base.Reader.MoveToContent();
+				if (base.Reader.NodeType != XmlNodeType.Element)
+				{
+					goto IL_0007;
+				}
+				if ((807 + 807 * 807) % 2 == 0)
+				{
+					if ((object)base.Reader.LocalName != ႳႨ)
+					{
+						break;
+					}
+					if (544 < 544 - 335)
+					{
+						continue;
+					}
+					if ((object)base.Reader.NamespaceURI != this.m_Ⴄ)
+					{
+						break;
+					}
+					if (false)
+					{
+						goto IL_0007;
+					}
+				}
+				result = Ⴀ(Ⴍ: true, Ⴄ: true);
+				goto IL_007a;
+				IL_0007:
+				UnknownNode(null, ႤႭ.Ⴍ.Ⴓ(1402238797));
+				if ((84 + 84 * 84) % 2 == 0)
+				{
+				}
+				goto IL_007a;
+				IL_007a:
+				return result;
+			}
+			throw CreateUnknownNodeException();
+		}
+
+		private ChatmanApplicationDetails Ⴀ(bool Ⴍ, bool Ⴄ)
+		{
+			int num = 2;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			ChatmanApplicationDetails chatmanApplicationDetails = default(ChatmanApplicationDetails);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴄ ? 13 : 44);
+					break;
+				case 44:
+					obj = null;
+					goto IL_0107;
+				case 13:
+					obj = GetXsiType();
+					goto IL_0107;
+				case 23:
+					flag = ReadNull();
+					num = 8;
+					break;
+				case 8:
+					num = ((!Ⴄ) ? 46 : 3);
+					break;
+				case 3:
+					num = ((xmlQualifiedName == null) ? 46 : 7);
+					break;
+				case 7:
+					num = (((object)xmlQualifiedName.Name != ႳႨ) ? 6 : 54);
+					break;
+				case 54:
+					num = (((object)xmlQualifiedName.Namespace == this.m_Ⴄ) ? 46 : 6);
+					break;
+				case 6:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 46:
+					num = ((!flag) ? 41 : 9);
+					break;
+				case 9:
+					return null;
+				case 41:
+					chatmanApplicationDetails = new ChatmanApplicationDetails();
+					array = new bool[8];
+					num = 40;
+					break;
+				case 14:
+					num = (array[0] ? 15 : 26);
+					break;
+				case 26:
+					num = (((object)base.Reader.LocalName != Ⴈ) ? 15 : 36);
+					break;
+				case 36:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 15 : 25);
+					break;
+				case 25:
+					chatmanApplicationDetails.ID = XmlConvert.ToGuid(base.Reader.Value);
+					array[0] = true;
+					num = 40;
+					break;
+				case 15:
+					num = (array[1] ? 39 : 49);
+					break;
+				case 49:
+					num = (((object)base.Reader.LocalName != this.m_Ⴓ) ? 39 : 22);
+					break;
+				case 22:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 39 : 16);
+					break;
+				case 16:
+					chatmanApplicationDetails.Name = base.Reader.Value;
+					array[1] = true;
+					num = 40;
+					break;
+				case 39:
+					num = (array[2] ? 56 : 30);
+					break;
+				case 30:
+					num = (((object)base.Reader.LocalName != ႳႭ) ? 56 : 42);
+					break;
+				case 42:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 56 : 37);
+					break;
+				case 37:
+					chatmanApplicationDetails.Description = base.Reader.Value;
+					array[2] = true;
+					num = 40;
+					break;
+				case 56:
+					num = (array[3] ? 51 : 38);
+					break;
+				case 38:
+					num = (((object)base.Reader.LocalName != this.m_Ⴀ) ? 51 : 20);
+					break;
+				case 20:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 51 : 32);
+					break;
+				case 32:
+					chatmanApplicationDetails.AssemblyPath = base.Reader.Value;
+					array[3] = true;
+					num = 40;
+					break;
+				case 51:
+					num = (array[4] ? 18 : 27);
+					break;
+				case 27:
+					num = (((object)base.Reader.LocalName != Ⴃ) ? 18 : 5);
+					break;
+				case 5:
+					num = (((object)base.Reader.NamespaceURI == this.m_Ⴄ) ? 1 : 18);
+					break;
+				case 1:
+					chatmanApplicationDetails.ObligatoryChatmanVersion = base.Reader.Value;
+					array[4] = true;
+					num = 40;
+					break;
+				case 18:
+					num = ((!array[5]) ? 47 : 0);
+					break;
+				case 47:
+					num = (((object)base.Reader.LocalName == ႳႣ) ? 55 : 0);
+					break;
+				case 55:
+					num = (((object)base.Reader.NamespaceURI == this.m_Ⴄ) ? 53 : 0);
+					break;
+				case 53:
+					chatmanApplicationDetails.IsBackground = XmlConvert.ToBoolean(base.Reader.Value);
+					array[5] = true;
+					num = 40;
+					break;
+				case 0:
+					num = (array[6] ? 50 : 33);
+					break;
+				case 33:
+					num = (((object)base.Reader.LocalName != Ⴜ) ? 50 : 11);
+					break;
+				case 11:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 50 : 17);
+					break;
+				case 17:
+					chatmanApplicationDetails.IsInternal = XmlConvert.ToBoolean(base.Reader.Value);
+					array[6] = true;
+					num = 40;
+					break;
+				case 50:
+					num = (array[7] ? 19 : 45);
+					break;
+				case 45:
+					num = (((object)base.Reader.LocalName != ႳႷ) ? 19 : 35);
+					break;
+				case 35:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 19 : 21);
+					break;
+				case 21:
+					chatmanApplicationDetails.ShowInternal = XmlConvert.ToBoolean(base.Reader.Value);
+					array[7] = true;
+					num = 40;
+					break;
+				case 19:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 40 : 29);
+					break;
+				case 29:
+					UnknownNode(chatmanApplicationDetails, ႤႭ.Ⴍ.Ⴓ(1402238796));
+					goto case 40;
+				case 40:
+					num = (base.Reader.MoveToNextAttribute() ? 14 : 12);
+					break;
+				case 12:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 28 : 52);
+					break;
+				case 52:
+					base.Reader.Skip();
+					return chatmanApplicationDetails;
+				case 28:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 43;
+					break;
+				case 24:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 48 : 31);
+					break;
+				case 31:
+					UnknownNode(chatmanApplicationDetails, ႤႭ.Ⴍ.Ⴓ(1402238814));
+					num = 34;
+					break;
+				case 48:
+					UnknownNode(chatmanApplicationDetails, ႤႭ.Ⴍ.Ⴓ(1402238814));
+					goto case 34;
+				case 34:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 43;
+				case 43:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 4 : 10);
+					break;
+				case 10:
+					num = ((base.Reader.NodeType != 0) ? 24 : 4);
+					break;
+				case 4:
+					{
+						ReadEndElement();
+						return chatmanApplicationDetails;
+					}
+					IL_0107:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴍ) ? 8 : 23);
+					break;
+				}
+			}
+		}
+
+		private ApplicationList Ⴄ(bool Ⴍ, bool Ⴄ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0021, IL_0049, IL_0075, IL_00a2, IL_00b2, IL_00d0, IL_00f5, IL_011d, IL_0146, IL_0161, IL_018d, IL_019a, IL_01b8, IL_01da, IL_0203, IL_0231, IL_025a, IL_02a1, IL_02ac, IL_02be, IL_02d9, IL_02f2, IL_031c, IL_034c, IL_037d, IL_03a4, IL_03cf, IL_03fb, IL_0426, IL_0457, IL_048a, IL_04b0, IL_04dd, IL_04f2, IL_0503, IL_0522, IL_0550, IL_0573, IL_0595, IL_05c1, IL_05e4, IL_0615, IL_063a
+			if (!Ⴄ)
+			{
+				if (353 >= 353 - 71)
+				{
+					goto IL_02a6;
+				}
+				goto IL_0578;
+			}
+			object obj = GetXsiType();
+			goto IL_019f;
+			IL_04b5:
+			if ((object)base.Reader.LocalName == Ⴅ)
+			{
+				if (false)
+				{
+					goto IL_0236;
+				}
+				goto IL_0351;
+			}
+			goto IL_05ce;
+			IL_02ae:
+			base.Reader.Skip();
+			goto IL_03d6;
+			IL_019f:
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = false;
+			goto IL_01a2;
+			IL_01a2:
+			if (!Ⴍ)
+			{
+				goto IL_02c3;
+			}
+			if (888 < 888 - 68)
+			{
+				goto IL_0166;
+			}
+			goto IL_0578;
+			IL_0351:
+			if ((object)base.Reader.NamespaceURI != this.m_Ⴄ)
+			{
+				goto IL_05ce;
+			}
+			ApplicationList applicationList = default(ApplicationList);
+			if (480 > 480 - 272)
+			{
+				if (!ReadNull())
+				{
+					if (false)
+					{
+						goto IL_02a6;
+					}
+					if (applicationList.Applications == null)
+					{
+						if (false)
+						{
+							goto IL_0382;
+						}
+						applicationList.Applications = new List<ChatmanApplicationDetails>();
+						if (550 < 550 - 50)
+						{
+							goto IL_04b5;
+						}
+					}
+					goto IL_0321;
+				}
+				goto IL_042b;
+			}
+			goto IL_05e9;
+			IL_02c3:
+			if (!Ⴄ)
+			{
+				goto IL_0285;
+			}
+			if (562 < 562 - 132)
+			{
+				goto IL_02f7;
+			}
+			goto IL_0469;
+			IL_00a7:
+			ReadEndElement();
+			goto IL_042b;
+			IL_0285:
+			if (!flag)
+			{
+				goto IL_0166;
+			}
+			if (523 <= 523 - 207)
+			{
+				goto IL_04b5;
+			}
+			return null;
+			IL_042b:
+			base.Reader.MoveToContent();
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			CheckReaderCount(ref whileIterations, ref readerCount);
+			if (429 > 429 - 375)
+			{
+				goto IL_007a;
+			}
+			goto IL_02f7;
+			IL_007a:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (346 <= 346 - 243)
+				{
+					goto IL_0276;
+				}
+				goto IL_02f7;
+			}
+			goto IL_05c6;
+			IL_0166:
+			applicationList = new ApplicationList();
+			if (applicationList.Applications == null)
+			{
+				if (985 < 985 - 617)
+				{
+					goto IL_0578;
+				}
+				applicationList.Applications = new List<ChatmanApplicationDetails>();
+				if (false)
+				{
+					goto IL_02ae;
+				}
+			}
+			goto IL_04f7;
+			IL_02a6:
+			obj = null;
+			goto IL_019f;
+			IL_02f7:
+			if (base.Reader.NodeType != 0)
+			{
+				if (base.Reader.NodeType != XmlNodeType.Element)
+				{
+					goto IL_0236;
+				}
+				if (false)
+				{
+					goto IL_01a2;
+				}
+				goto IL_04b5;
+			}
+			if (false)
+			{
+				goto IL_0211;
+			}
+			goto IL_05c6;
+			IL_0578:
+			flag = ReadNull();
+			if (398 >= 398 - 382)
+			{
+				goto IL_02c3;
+			}
+			goto IL_0382;
+			IL_04f7:
+			_ = applicationList.Applications;
+			while (base.Reader.MoveToNextAttribute())
+			{
+				if (IsXmlnsAttribute(base.Reader.Name))
+				{
+					continue;
+				}
+				if (200 > 200 - 74)
+				{
+					UnknownNode(applicationList);
+					if (378 > 378 - 92)
+					{
+						continue;
+					}
+					goto IL_0321;
+				}
+				goto IL_042b;
+			}
+			if (209 >= 209 - 70)
+			{
+				base.Reader.MoveToElement();
+				goto IL_0211;
+			}
+			goto IL_007a;
+			IL_05e9:
+			if ((object)base.Reader.LocalName != ႳႥ)
+			{
+				goto IL_014b;
+			}
+			if (237 < 237 - 235)
+			{
+				goto IL_042b;
+			}
+			goto IL_0527;
+			IL_0211:
+			if (base.Reader.IsEmptyElement)
+			{
+				if (803 > 803 - 557)
+				{
+					base.Reader.Skip();
+					return applicationList;
+				}
+			}
+			else
+			{
+				base.Reader.ReadStartElement();
+			}
+			goto IL_026a;
+			IL_014b:
+			UnknownNode(null, ႤႭ.Ⴍ.Ⴓ(1402238795));
+			goto IL_03d6;
+			IL_05c6:
+			ReadEndElement();
+			return applicationList;
+			IL_0236:
+			do
+			{
+				UnknownNode(applicationList, ႤႭ.Ⴍ.Ⴓ(1402238793));
+			}
+			while (993 < 993 - 804);
+			goto IL_042b;
+			IL_05ce:
+			UnknownNode(applicationList, ႤႭ.Ⴍ.Ⴓ(1402238793));
+			goto IL_042b;
+			IL_0321:
+			List<ChatmanApplicationDetails> applications = applicationList.Applications;
+			int whileIterations2 = default(int);
+			int readerCount2 = default(int);
+			if (!base.Reader.IsEmptyElement)
+			{
+				base.Reader.ReadStartElement();
+				base.Reader.MoveToContent();
+				whileIterations2 = 0;
+				readerCount2 = base.ReaderCount;
+				goto IL_0382;
+			}
+			if (926 >= 926 - 37)
+			{
+				base.Reader.Skip();
+				goto IL_042b;
+			}
+			goto IL_05e9;
+			IL_03d6:
+			base.Reader.MoveToContent();
+			CheckReaderCount(ref whileIterations2, ref readerCount2);
+			if ((517 + 517 * 517) % 2 == 0)
+			{
+				goto IL_0382;
+			}
+			goto IL_0469;
+			IL_026a:
+			base.Reader.MoveToContent();
+			goto IL_0276;
+			IL_0497:
+			if (applications != null)
+			{
+				applications.Add(Ⴀ(Ⴍ: true, Ⴄ: true));
+				goto IL_03d6;
+			}
+			if ((237 + 237 * 237) % 2 == 0)
+			{
+				goto IL_02ae;
+			}
+			goto IL_0527;
+			IL_0382:
+			if (base.Reader.NodeType == XmlNodeType.EndElement)
+			{
+				goto IL_00a7;
+			}
+			if (200 <= 200 - 10)
+			{
+				goto IL_0497;
+			}
+			if (base.Reader.NodeType != 0)
+			{
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if (662 <= 662 - 317)
+					{
+						goto IL_026a;
+					}
+					goto IL_05e9;
+				}
+				UnknownNode(null, ႤႭ.Ⴍ.Ⴓ(1402238795));
+				if (635 >= 635 - 573)
+				{
+					goto IL_03d6;
+				}
+			}
+			else if (886 >= 886 - 615)
+			{
+				goto IL_00a7;
+			}
+			goto IL_007a;
+			IL_0276:
+			whileIterations = 0;
+			readerCount = base.ReaderCount;
+			goto IL_007a;
+			IL_0469:
+			if (xmlQualifiedName == null)
+			{
+				goto IL_0285;
+			}
+			if ((605 + 605 * 605) % 2 == 0)
+			{
+				if ((object)xmlQualifiedName.Name == ႳႳ)
+				{
+					if (false)
+					{
+						goto IL_02c3;
+					}
+					if ((object)xmlQualifiedName.Namespace == this.m_Ⴄ)
+					{
+						goto IL_0285;
+					}
+					if (141 <= 141 - 89)
+					{
+						goto IL_0351;
+					}
+				}
+				throw CreateUnknownTypeException(xmlQualifiedName);
+			}
+			goto IL_0382;
+			IL_0527:
+			if ((object)base.Reader.NamespaceURI != this.m_Ⴄ)
+			{
+				goto IL_014b;
+			}
+			if (753 > 753 - 566)
+			{
+				goto IL_0497;
+			}
+			goto IL_04f7;
+		}
+
+		private ChatmanApplicationServices Ⴓ(bool Ⴍ, bool Ⴄ)
+		{
+			int num = 8;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			ChatmanApplicationServices chatmanApplicationServices = default(ChatmanApplicationServices);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴄ ? 13 : 20);
+					break;
+				case 20:
+					obj = null;
+					goto IL_00a7;
+				case 13:
+					obj = GetXsiType();
+					goto IL_00a7;
+				case 17:
+					flag = ReadNull();
+					num = 31;
+					break;
+				case 31:
+					num = ((!Ⴄ) ? 15 : 11);
+					break;
+				case 11:
+					num = ((xmlQualifiedName == null) ? 15 : 7);
+					break;
+				case 7:
+					num = (((object)xmlQualifiedName.Name != this.Ⴍ) ? 28 : 32);
+					break;
+				case 32:
+					num = (((object)xmlQualifiedName.Namespace == this.m_Ⴄ) ? 15 : 28);
+					break;
+				case 28:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 15:
+					num = ((!flag) ? 9 : 6);
+					break;
+				case 6:
+					return null;
+				case 9:
+					chatmanApplicationServices = new ChatmanApplicationServices();
+					array = new bool[2];
+					num = 1;
+					break;
+				case 12:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 1 : 25);
+					break;
+				case 25:
+					UnknownNode(chatmanApplicationServices);
+					goto case 1;
+				case 1:
+					num = (base.Reader.MoveToNextAttribute() ? 12 : 0);
+					break;
+				case 0:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 3 : 2);
+					break;
+				case 2:
+					base.Reader.Skip();
+					return chatmanApplicationServices;
+				case 3:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 4;
+					break;
+				case 26:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 22 : 27);
+					break;
+				case 27:
+					num = (array[0] ? 14 : 23);
+					break;
+				case 23:
+					num = (((object)base.Reader.LocalName != Ⴐ) ? 14 : 21);
+					break;
+				case 21:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 14 : 10);
+					break;
+				case 10:
+					chatmanApplicationServices.ChatmanName = base.Reader.ReadElementString();
+					array[0] = true;
+					num = 18;
+					break;
+				case 14:
+					num = (array[1] ? 5 : 16);
+					break;
+				case 16:
+					num = (((object)base.Reader.LocalName != Ⴗ) ? 5 : 19);
+					break;
+				case 19:
+					num = (((object)base.Reader.NamespaceURI != this.m_Ⴄ) ? 5 : 29);
+					break;
+				case 29:
+					chatmanApplicationServices.Volume = XmlConvert.ToInt16(base.Reader.ReadElementString());
+					array[1] = true;
+					num = 18;
+					break;
+				case 5:
+					UnknownNode(chatmanApplicationServices, ႤႭ.Ⴍ.Ⴓ(1402238794));
+					num = 18;
+					break;
+				case 22:
+					UnknownNode(chatmanApplicationServices, ႤႭ.Ⴍ.Ⴓ(1402238794));
+					goto case 18;
+				case 18:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 4;
+				case 4:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 24 : 30);
+					break;
+				case 30:
+					num = ((base.Reader.NodeType != 0) ? 26 : 24);
+					break;
+				case 24:
+					{
+						ReadEndElement();
+						return chatmanApplicationServices;
+					}
+					IL_00a7:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴍ) ? 31 : 17);
+					break;
+				}
+			}
+		}
+
+		protected override void InitCallbacks()
+		{
+		}
+
+		protected override void InitIDs()
+		{
+			Ⴍ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238815));
+			this.m_Ⴓ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238810));
+			Ⴈ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238811));
+			Ⴃ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238807));
+			Ⴗ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238800));
+			Ⴅ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238803));
+			Ⴐ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238801));
+			this.m_Ⴀ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238808));
+			this.m_Ⴄ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238814));
+			Ⴜ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238805));
+			ႳႭ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238809));
+			ႳႳ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238813));
+			ႳႨ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238812));
+			ႳႣ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238806));
+			ႳႷ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238804));
+			ႳႥ = base.Reader.NameTable.Add(ႤႭ.Ⴍ.Ⴓ(1402238802));
+		}
+	}
+	public class XmlSerializationWriter1 : XmlSerializationWriter
+	{
+		public void Write5_ChatmanApplicationServices(object o)
+		{
+			int num = 0;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 1 : 2);
+					break;
+				case 1:
+					WriteNullTagLiteral(Ⴍ.Ⴓ(1402238815), Ⴍ.Ⴓ(1402238814));
+					return;
+				case 2:
+					TopLevelElement();
+					Ⴀ(Ⴍ.Ⴓ(1402238815), Ⴍ.Ⴓ(1402238814), (ChatmanApplicationServices)o, Ⴗ: true, Ⴓ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write6_ApplicationList(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 2 : 0);
+					break;
+				case 0:
+					WriteNullTagLiteral(Ⴍ.Ⴓ(1402238813), Ⴍ.Ⴓ(1402238814));
+					return;
+				case 2:
+					TopLevelElement();
+					Ⴓ(Ⴍ.Ⴓ(1402238813), Ⴍ.Ⴓ(1402238814), (ApplicationList)o, Ⴗ: true, Ⴓ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write7_ChatmanApplicationDetails(object o)
+		{
+			int num = 2;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 1 : 0);
+					break;
+				case 0:
+					WriteNullTagLiteral(Ⴍ.Ⴓ(1402238812), Ⴍ.Ⴓ(1402238814));
+					return;
+				case 1:
+					TopLevelElement();
+					Ⴐ(Ⴍ.Ⴓ(1402238812), Ⴍ.Ⴓ(1402238814), (ChatmanApplicationDetails)o, Ⴗ: true, Ⴓ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		private void Ⴐ(string Ⴍ, string Ⴄ, ChatmanApplicationDetails Ⴃ, bool Ⴗ, bool Ⴓ)
+		{
+			int num = 9;
+			while (true)
+			{
+				switch (num)
+				{
+				case 5:
+					return;
+				default:
+					num = ((Ⴃ != null) ? 1 : 3);
+					continue;
+				case 3:
+					num = ((!Ⴗ) ? 5 : 2);
+					continue;
+				case 2:
+					WriteNullTagLiteral(Ⴍ, Ⴄ);
+					return;
+				case 1:
+					num = (Ⴓ ? 6 : 4);
+					continue;
+				case 4:
+				{
+					Type type = Ⴃ.GetType();
+					num = (((object)type == typeof(ChatmanApplicationDetails)) ? 6 : 7);
+					continue;
+				}
+				case 7:
+					throw CreateUnknownTypeException(Ⴃ);
+				case 6:
+					WriteStartElement(Ⴍ, Ⴄ, Ⴃ, writePrefixed: false, null);
+					num = ((!Ⴓ) ? 8 : 0);
+					continue;
+				case 0:
+					WriteXsiType(Ⴍ.Ⴓ(1402238812), Ⴍ.Ⴓ(1402238814));
+					break;
+				case 8:
+					break;
+				}
+				break;
+			}
+			WriteAttribute(Ⴍ.Ⴓ(1402238811), Ⴍ.Ⴓ(1402238814), XmlConvert.ToString(Ⴃ.ID));
+			WriteAttribute(Ⴍ.Ⴓ(1402238810), Ⴍ.Ⴓ(1402238814), Ⴃ.Name);
+			WriteAttribute(Ⴍ.Ⴓ(1402238809), Ⴍ.Ⴓ(1402238814), Ⴃ.Description);
+			WriteAttribute(Ⴍ.Ⴓ(1402238808), Ⴍ.Ⴓ(1402238814), Ⴃ.AssemblyPath);
+			WriteAttribute(Ⴍ.Ⴓ(1402238807), Ⴍ.Ⴓ(1402238814), Ⴃ.ObligatoryChatmanVersion);
+			WriteAttribute(Ⴍ.Ⴓ(1402238806), Ⴍ.Ⴓ(1402238814), XmlConvert.ToString(Ⴃ.IsBackground));
+			WriteAttribute(Ⴍ.Ⴓ(1402238805), Ⴍ.Ⴓ(1402238814), XmlConvert.ToString(Ⴃ.IsInternal));
+			WriteAttribute(Ⴍ.Ⴓ(1402238804), Ⴍ.Ⴓ(1402238814), XmlConvert.ToString(Ⴃ.ShowInternal));
+			WriteEndElement(Ⴃ);
+		}
+
+		private void Ⴓ(string Ⴍ, string Ⴄ, ApplicationList Ⴃ, bool Ⴗ, bool Ⴓ)
+		{
+			int num = 3;
+			List<ChatmanApplicationDetails> applications = default(List<ChatmanApplicationDetails>);
+			int num2 = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				case 13:
+					return;
+				default:
+					num = ((Ⴃ != null) ? 9 : 6);
+					continue;
+				case 6:
+					num = ((!Ⴗ) ? 13 : 5);
+					continue;
+				case 5:
+					WriteNullTagLiteral(Ⴍ, Ⴄ);
+					return;
+				case 9:
+					num = (Ⴓ ? 12 : 8);
+					continue;
+				case 8:
+				{
+					Type type = Ⴃ.GetType();
+					num = (((object)type == typeof(ApplicationList)) ? 12 : 4);
+					continue;
+				}
+				case 4:
+					throw CreateUnknownTypeException(Ⴃ);
+				case 12:
+					WriteStartElement(Ⴍ, Ⴄ, Ⴃ, writePrefixed: false, null);
+					num = (Ⴓ ? 1 : 2);
+					continue;
+				case 1:
+					WriteXsiType(Ⴍ.Ⴓ(1402238813), Ⴍ.Ⴓ(1402238814));
+					goto case 2;
+				case 2:
+					applications = Ⴃ.Applications;
+					num = ((applications == null) ? 7 : 11);
+					continue;
+				case 11:
+					WriteStartElement(Ⴍ.Ⴓ(1402238803), Ⴍ.Ⴓ(1402238814), null, writePrefixed: false);
+					num2 = 0;
+					num = 14;
+					continue;
+				case 0:
+					Ⴐ(Ⴍ.Ⴓ(1402238802), Ⴍ.Ⴓ(1402238814), applications[num2], Ⴗ: true, Ⴓ: false);
+					num2++;
+					num = 14;
+					continue;
+				case 14:
+					num = ((num2 >= ((ICollection)applications).Count) ? 10 : 0);
+					continue;
+				case 10:
+					WriteEndElement();
+					break;
+				case 7:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴃ);
+		}
+
+		private void Ⴀ(string Ⴍ, string Ⴄ, ChatmanApplicationServices Ⴃ, bool Ⴗ, bool Ⴓ)
+		{
+			int num = 7;
+			while (true)
+			{
+				switch (num)
+				{
+				case 6:
+					return;
+				default:
+					num = ((Ⴃ != null) ? 1 : 2);
+					continue;
+				case 2:
+					num = ((!Ⴗ) ? 6 : 8);
+					continue;
+				case 8:
+					WriteNullTagLiteral(Ⴍ, Ⴄ);
+					return;
+				case 1:
+					num = (Ⴓ ? 9 : 0);
+					continue;
+				case 0:
+				{
+					Type type = Ⴃ.GetType();
+					num = (((object)type == typeof(ChatmanApplicationServices)) ? 9 : 3);
+					continue;
+				}
+				case 3:
+					throw CreateUnknownTypeException(Ⴃ);
+				case 9:
+					WriteStartElement(Ⴍ, Ⴄ, Ⴃ, writePrefixed: false, null);
+					num = ((!Ⴓ) ? 4 : 5);
+					continue;
+				case 5:
+					WriteXsiType(Ⴍ.Ⴓ(1402238815), Ⴍ.Ⴓ(1402238814));
+					break;
+				case 4:
+					break;
+				}
+				break;
+			}
+			WriteElementString(Ⴍ.Ⴓ(1402238801), Ⴍ.Ⴓ(1402238814), Ⴃ.ChatmanName);
+			WriteElementStringRaw(Ⴍ.Ⴓ(1402238800), Ⴍ.Ⴓ(1402238814), XmlConvert.ToString(Ⴃ.Volume));
+			WriteEndElement(Ⴃ);
+		}
+
+		protected override void InitCallbacks()
+		{
+		}
+	}
+	public abstract class XmlSerializer1 : XmlSerializer
+	{
+		protected override XmlSerializationReader CreateReader()
+		{
+			return new XmlSerializationReader1();
+		}
+
+		protected override XmlSerializationWriter CreateWriter()
+		{
+			return new XmlSerializationWriter1();
+		}
+	}
+	public class XmlSerializerContract : XmlSerializerImplementation
+	{
+		private Hashtable Ⴍ;
+
+		private Hashtable Ⴓ;
+
+		private Hashtable Ⴈ;
+
+		public override XmlSerializationReader Reader => new XmlSerializationReader1();
+
+		public override XmlSerializationWriter Writer => new XmlSerializationWriter1();
+
+		public override Hashtable ReadMethods
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_0016, IL_002f, IL_00a7
+				if (Ⴍ == null)
+				{
+					if (103 >= 103 - 100)
+					{
+					}
+					Hashtable hashtable = new Hashtable();
+					do
+					{
+						hashtable[ႤႭ.Ⴍ.Ⴓ(1402238792)] = ႤႭ.Ⴍ.Ⴓ(1402238787);
+						while (true)
+						{
+							hashtable[ႤႭ.Ⴍ.Ⴓ(1402238790)] = ႤႭ.Ⴍ.Ⴓ(1402238785);
+							hashtable[ႤႭ.Ⴍ.Ⴓ(1402238788)] = ႤႭ.Ⴍ.Ⴓ(1402238784);
+							if (Ⴍ != null)
+							{
+								break;
+							}
+							if (666 <= 666 - 659)
+							{
+								continue;
+							}
+							goto IL_0018;
+						}
+						break;
+						IL_0018:
+						Ⴍ = hashtable;
+					}
+					while (309 < 309 - 243);
+				}
+				return Ⴍ;
+			}
+		}
+
+		public override Hashtable WriteMethods
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_001b, IL_002d, IL_00a5
+				Hashtable hashtable = default(Hashtable);
+				while (Ⴓ == null)
+				{
+					if (false)
+					{
+						goto IL_001d;
+					}
+					hashtable = new Hashtable();
+					hashtable[ႤႭ.Ⴍ.Ⴓ(1402238792)] = ႤႭ.Ⴍ.Ⴓ(1402238791);
+					hashtable[ႤႭ.Ⴍ.Ⴓ(1402238790)] = ႤႭ.Ⴍ.Ⴓ(1402238789);
+					while (true)
+					{
+						hashtable[ႤႭ.Ⴍ.Ⴓ(1402238788)] = ႤႭ.Ⴍ.Ⴓ(1402238786);
+						if (Ⴓ != null)
+						{
+							break;
+						}
+						if (666 < 666 - 504)
+						{
+							continue;
+						}
+						goto IL_001d;
+					}
+					break;
+					IL_001d:
+					Ⴓ = hashtable;
+					if (62 >= 62 - 4)
+					{
+						break;
+					}
+				}
+				return Ⴓ;
+			}
+		}
+
+		public override Hashtable TypedSerializers
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_001b, IL_0033, IL_0093
+				while (Ⴈ == null)
+				{
+					if (false)
+					{
+						continue;
+					}
+					Hashtable hashtable = new Hashtable();
+					while (true)
+					{
+						hashtable.Add(ႤႭ.Ⴍ.Ⴓ(1402238792), new ChatmanApplicationServicesSerializer());
+						hashtable.Add(ႤႭ.Ⴍ.Ⴓ(1402238790), new ApplicationListSerializer());
+						hashtable.Add(ႤႭ.Ⴍ.Ⴓ(1402238788), new ChatmanApplicationDetailsSerializer());
+						if (Ⴈ != null)
+						{
+							break;
+						}
+						if (13 <= 13 - 10)
+						{
+							continue;
+						}
+						goto IL_001d;
+					}
+					break;
+					IL_001d:
+					Ⴈ = hashtable;
+					if ((343 + 343 * 343) % 2 == 0)
+					{
+						break;
+					}
+				}
+				return Ⴈ;
+			}
+		}
+
+		public override bool CanSerialize(Type type)
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (((object)type != typeof(ChatmanApplicationServices)) ? 2 : 5);
+					break;
+				case 5:
+					return true;
+				case 2:
+					num = (((object)type != typeof(ApplicationList)) ? 6 : 4);
+					break;
+				case 4:
+					return true;
+				case 6:
+					num = (((object)type == typeof(ChatmanApplicationDetails)) ? 3 : 0);
+					break;
+				case 3:
+					return true;
+				case 0:
+					return false;
+				}
+			}
+		}
+
+		public override XmlSerializer GetSerializer(Type type)
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (((object)type != typeof(ChatmanApplicationServices)) ? 6 : 0);
+					break;
+				case 0:
+					return new ChatmanApplicationServicesSerializer();
+				case 6:
+					num = (((object)type != typeof(ApplicationList)) ? 2 : 4);
+					break;
+				case 4:
+					return new ApplicationListSerializer();
+				case 2:
+					num = (((object)type != typeof(ChatmanApplicationDetails)) ? 5 : 3);
+					break;
+				case 3:
+					return new ChatmanApplicationDetailsSerializer();
+				case 5:
+					return null;
+				}
+			}
+		}
+	}
+}
+namespace ႤႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string Ⴓ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x5394775F;
+			string result;
+			if ((result = ႤႭ.Ⴍ.m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "\u05ce\u0cfdచ\u0df1ठ\u05b9պ\u093f\u05fd\u0ce5గ෬म\u05b9ՠगע\u0cfbన\u0de0\u093f\u05aeսझר೦";
+				break;
+			case 1:
+				obj = "";
+				break;
+			case 2:
+				obj = "Օऎ\u05fd\u0cf9ఒ෦ब\u05acսऑף\u0cd9ఒ\u0df6ह";
+				break;
+			case 3:
+				obj = "\u059bռट\u05f9\u0cf8చ෫ऌ\u05a8դऒפ\u0cf6చ\u0df1त\u05b7պ\u093aרೡచ෬ड\u05ab";
+				break;
+			case 4:
+				obj = "ऄ\u059c";
+				break;
+			case 5:
+				obj = "\u0dcbब\u05b5ձ";
+				break;
+			case 6:
+				obj = "\u0c3f\u0de0\u093e\u05bbզग\u05fdೡఒ෪ण";
+				break;
+			case 7:
+				obj = "\u0cd4ఈ\u0df6न\u05b5նऒ״\u0cc5చ\u0df1थ";
+				break;
+			case 8:
+				obj = "\u05c2\u0cf7గ෬प\u05b9ՠऑ\u05ff೬స෭ब\u05acչटף\u0cc3ఞ\u0df7\u093e\u05b1ջऐ";
+				break;
+			case 9:
+				obj = "ष\u05fe\u0cd7చ෦द\u05bfզऑ\u05f8\u0cfbట";
+				break;
+			case 10:
+				obj = "՝ऍ\u05c4\u0cfbఏ\u0de0\u093f\u05b6յऒ";
+				break;
+			case 11:
+				obj = "\u058bռऑ\u05fa\u0cdcక\u0df1न\u05aaպटס";
+				break;
+			case 12:
+				obj = "ऌ\u05a8դऒפ\u0cf6చ\u0df1त\u05b7պऍ";
+				break;
+			case 13:
+				obj = "හऽ\u05a8ոग\u05ee\u0cf4ఏ෬ढ\u05b6";
+				break;
+			case 14:
+				obj = "స෭ब\u05acչटף\u0cdbచ෨न";
+				break;
+			case 15:
+				obj = "\u0cc3ఔ෩स\u05b5ձ";
+				break;
+			case 16:
+				obj = "\u05b7\u0cd6ఓ\u0de4ह\u05b5յऐ\u05cc\u0ce5ఋ෩त\u05bbյऊפ\u0cfaక\u0dd6न\u05aaբग\u05ee\u0cf0ఈ";
+				break;
+			case 17:
+				obj = "\u0944\u05cc\u0ce5ఋ෩त\u05bbյऊפ\u0cfaక\u0dc9त\u05abՠ";
+				break;
+			case 18:
+				obj = "Ԯऽץ\u0cf4ఏ෨ब\u05b6Օऎ\u05fd\u0cf9ఒ෦ब\u05acսऑף\u0cd1ఞ\u0df1ब\u05b1ոऍ";
+				break;
+			case 19:
+				obj = "ע՝\u093a\u05a1ವ\u0c41\u0dcbब\u05b5ձ\u0952\u05adಯ\u0c3f\u0de0\u093e\u05bbզग\u05fdೡఒ෪ण״Դ\u0944\u05cc೦ఈ\u0de0ठ\u05baոइם\u0cf4ఏ෭ॡ\u05f8Ԯऱׯ\u0cf9ఒ\u0de2ब\u05acջऌ״\u0cd6ఓ\u0de4ह\u05b5յऐכ\u0cf0ఉ\u0df6त\u05b7պ\u0952\u05adಯల\u0df6ए\u05b9շकת೧ఔ\u0df0ण\u05bcԸफ़\u05b7\u0cdcఈ\u0dccण\u05acձऌף\u0cf4గඩ७עՇखע\u0ce2ల෫ह\u05bdզऐ\u05ec\u0cf9";
+				break;
+			case 20:
+				obj = "ॷ\u0599դऎס\u0cfcఘ\u0de4ह\u05b1ջऐ";
+				break;
+			case 21:
+				obj = "\u0dbfऎ\u05b0յऊנ\u0cf4క\u0dcbब\u05b5ձ\u0952\u05adಯభ෪ड\u05adչछ";
+				break;
+			case 22:
+				obj = "\u0c41හऽ\u05a8ոग\u05ee\u0cf4ఏ෬ढ\u05b6է";
+				break;
+			case 23:
+				obj = "\u0cc7ఔ෫ऩ\u05a1ջॐ\u05ce\u0cfdచ\u0df1ठ\u05b9պॐ\u05cc\u0ce5ఋ෩त\u05bbյऊפ\u0cfaక\u0df6\u0963\u059bռट\u05f9\u0cf8చ෫ऌ\u05a8դऒפ\u0cf6చ\u0df1त\u05b7պभר೧\u0c0d෬म\u05bdէ\u0944\u05b7";
+				break;
+			case 24:
+				obj = "ך೧ఒ\u0df1न\u05edՋऽץ\u0cf4ఏ෨ब\u05b6Օऎ\u05fd\u0cf9ఒ෦ब\u05acսऑף\u0cc6ఞ\u0df7\u093b\u05b1շछ\u05fe";
+				break;
+			case 25:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Օऎ\u05fd\u0cf9ఒ෦ब\u05acսऑף೦\u0c55ෆढ\u05b6ղगתೠఉ\u0de4ह\u05b1ջऐ\u05a3\u0cd4ఋ\u0df5ड\u05b1շट\u05f9\u0cfcఔ෫\u0901\u05b1էऊ\u05b7ಯ\u0c3a\u0df5ऽ\u05b4սझ\u05ecೡఒ෪ण\u0594սऍ\u05f9ಯయ\u0df7स\u05bdԮ";
+				break;
+			case 26:
+				obj = "Ճऌפೡఞඳऒ\u0599դऎס\u0cfcఘ\u0de4ह\u05b1ջऐ\u05c1\u0cfcఈ\u0df1";
+				break;
+			case 27:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණऌ\u05a8դऒפ\u0cf6చ\u0df1त\u05b7պऍ\u05a3\u0cd6ఔ෫फ\u05b1ճऋ\u05ff\u0cf4ఏ෬ढ\u05b6Ժऽץ\u0cf4ఏ෨ब\u05b6Օऎ\u05fd\u0cf9ఒ෦ब\u05acսऑף\u0cd1ఞ\u0df1ब\u05b1ոऍ\u05b7ಯ";
+				break;
+			case 28:
+				obj = "ट\u05bdյच\u05b8\u0ccaస෭ब\u05acչटף\u0cd4ఋ\u0df5ड\u05b1շट\u05f9\u0cfcఔ෫ञ\u05bdզईפ\u0cf6ఞ\u0df6";
+				break;
+			case 29:
+				obj = "\u0dd2\u093f\u05b1ՠछ\u05ba\u0ccaస෭ब\u05acչटף\u0cd4ఋ\u0df5ड\u05b1շट\u05f9\u0cfcఔ෫उ\u05bdՠटפ\u0cf9ఈ";
+				break;
+			case 30:
+				obj = "\u0c29\u0de0ब\u05bcԢड\u05cc\u0ce5ఋ෩त\u05bbյऊפ\u0cfaక\u0dc9त\u05abՠ";
+				break;
+			case 31:
+				obj = "\u0cc7ఞ\u0de4ऩׯՋऽץ\u0cf4ఏ෨ब\u05b6Օऎ\u05fd\u0cf9ఒ෦ब\u05acսऑף\u0cd1ఞ\u0df1ब\u05b1ոऍ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႤႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			ႤႭ.Ⴍ.m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႤႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[32];
+		}
+	}
+}

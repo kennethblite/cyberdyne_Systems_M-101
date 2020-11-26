@@ -1,0 +1,1075 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.GUI.DataTransferObjects.dll
+// Rondyo.Chatman.GUI.DataTransferObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: AnyCPU (64-bit preferred)
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Data;
+using Rondyo.Chatman.Interfaces.Public;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
+using ႰႭႰ;
+using ႷႭႥ;
+
+[assembly: Guid("6fe86c1a-b91c-47dc-bbde-1dfade79dcb2")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: ComVisible(false)]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyVersion("1.0.0.0")]
+namespace Rondyo.Chatman.GUI.DataTransferObjects
+{
+	[DataContract]
+	public class ActionCalloutData : ChatmanCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123100);
+
+		[DataMember]
+		public ChitChatData ActionButton;
+	}
+	[DataContract]
+	public class ActionListData : Ⴅ
+	{
+		[DataMember]
+		public TextData ChitChatCountText;
+
+		[DataMember]
+		public ChitChatData[] ListElements;
+	}
+	[DataContract]
+	public class ActivePerosnalityData : Ⴅ
+	{
+		[DataMember]
+		public string ImagePath;
+	}
+	[DataContract]
+	public class AddChitChatCalloutData : ChatmanCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123091);
+
+		[DataMember]
+		public string MoodId;
+	}
+	[DataContract]
+	public class AddQuestionPopupData : Ⴅ
+	{
+		[DataMember]
+		public string QuestionText;
+
+		[DataMember]
+		public string AnswerText;
+
+		[DataMember]
+		public int Mode;
+	}
+	[DataContract]
+	public class AddWordCalloutData : ChatmanCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123099);
+
+		[DataMember]
+		public string UserText;
+	}
+	[DataContract]
+	public class AddWordToMoodPopupData : Ⴅ
+	{
+		[DataMember]
+		public string Word;
+	}
+	[DataContract]
+	public class AnsweredQuestionCalloutData : ChatmanCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123096);
+
+		[DataMember]
+		public string Answer;
+
+		[DataMember]
+		public string ScenarioId;
+	}
+	[DataContract]
+	public class AudioControllerDTO : Ⴅ
+	{
+		[DataMember]
+		public int MaxRecordTime;
+	}
+	[DataContract]
+	public class BarData : Ⴅ
+	{
+		[DataMember]
+		public int Level;
+
+		[DataMember]
+		public int LevelCount;
+
+		[DataMember(IsRequired = false)]
+		public string TooltipText;
+
+		[DataMember]
+		public int LevelChangeDirection;
+	}
+	[DataContract]
+	public class BaseTeachCalloutData : ChatmanCalloutData
+	{
+		[DataMember]
+		public string Question;
+
+		[DataMember]
+		public string ScenarioId;
+
+		[DataMember]
+		public string Expression;
+	}
+	[DataContract]
+	public class ChatmanAppData : Ⴅ
+	{
+		[DataMember]
+		public string AppName;
+
+		[DataMember]
+		public string AppDescription;
+
+		[DataMember]
+		public string ImagePath;
+
+		[DataMember]
+		public string Id;
+
+		[DataMember(IsRequired = false)]
+		public bool AppIsLoaded;
+	}
+	[DataContract]
+	public class ChatmanBrainpowerData : Ⴅ
+	{
+		[DataMember]
+		public TextData ScoreText;
+
+		[DataMember]
+		public TextData OldScore;
+
+		[DataMember]
+		public TextData ChitChatText;
+
+		[DataMember]
+		public TextData NewWordsText;
+
+		[DataMember]
+		public BarData NewChitChatsBar;
+
+		[DataMember]
+		public BarData NewWordsBar;
+
+		[DataMember]
+		public ImageWithName ChatmanBrainpowerView;
+
+		[DataMember]
+		public string Level;
+
+		[DataMember]
+		public string OldLevel;
+	}
+	[DataContract]
+	public class ChatmanCalloutData : Ⴅ
+	{
+	}
+	[DataContract]
+	public class ChatmanConversation : Ⴅ
+	{
+		private string <Menu>k__BackingField;
+
+		[DataMember]
+		public string Menu
+		{
+			get
+			{
+				return <Menu>k__BackingField;
+			}
+			set
+			{
+				<Menu>k__BackingField = value;
+			}
+		}
+	}
+	[DataContract]
+	public class ChatmanNameData : Ⴅ
+	{
+		[DataMember]
+		public string Name;
+	}
+	[DataContract]
+	public class ChatWithFriendsDTO : Ⴅ
+	{
+		[DataMember]
+		public InstantMessagerDTO[] IMs;
+
+		[DataMember]
+		public bool SpecificBrowserInstallation;
+	}
+	[DataContract]
+	public class ChitChatData : Ⴅ
+	{
+		[DataMember]
+		public string Id;
+
+		[DataMember]
+		public string Name;
+
+		[DataMember]
+		public string Description;
+
+		[DataMember]
+		public string MoodIcon;
+
+		[DataMember]
+		public string MoodName;
+	}
+	[DataContract]
+	public class ChitChatDataEx : Ⴅ
+	{
+		[DataMember]
+		public string Name;
+
+		[DataMember]
+		public string Description;
+
+		[DataMember]
+		public string BuzzWords;
+
+		[DataMember(IsRequired = false)]
+		public bool IsNewChitChat;
+
+		[DataMember]
+		public bool IsPrivate;
+	}
+	[DataContract]
+	public class ChitChatsListData : Ⴅ
+	{
+		[DataMember]
+		public TextData ChitChatCountText;
+
+		[DataMember]
+		public ChitChatData[] ListElements;
+	}
+	[DataContract]
+	public class CinemaAndGamesCalloutData : ProactiveCalloutData
+	{
+		public CinemaAndGamesCalloutData()
+			: base(ႰႭႰ.Ⴀ.ႳႭႨ(1634123089))
+		{
+		}
+	}
+	[DataContract]
+	public class ComboboxData : Ⴅ
+	{
+		[DataMember]
+		public ComboboxItem[] Items;
+	}
+	[DataContract]
+	public class ComboboxItem : Ⴅ
+	{
+		[DataMember]
+		public string Value;
+	}
+	[DataContract]
+	public class DatePicker : Ⴅ
+	{
+		[DataMember]
+		public string Date;
+	}
+	[DataContract]
+	public class DownloadChitChatCalloutData : ProactiveCalloutData
+	{
+		public DownloadChitChatCalloutData()
+			: base(ႰႭႰ.Ⴀ.ႳႭႨ(1634123092))
+		{
+		}
+	}
+	[DataContract]
+	public class Element : Ⴅ
+	{
+		[DataMember]
+		public string Name;
+
+		[DataMember]
+		public string ImagePath;
+	}
+	[DataContract]
+	public class GoCalloutData : ChatmanCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123090);
+
+		[DataMember]
+		public string GoText;
+
+		[DataMember]
+		public string Data;
+
+		[DataMember]
+		public string Data1;
+
+		[DataMember]
+		public string Activity;
+
+		[DataMember]
+		public string ButtonText;
+	}
+	[DataContract]
+	public class GoToHomeworkCalloutData : ProactiveCalloutData
+	{
+		public GoToHomeworkCalloutData()
+			: base(ႰႭႰ.Ⴀ.ႳႭႨ(1634123083))
+		{
+		}
+	}
+	[DataContract]
+	public class HomeworkOrGamesOrCinemaCalloutData : ProactiveCalloutData
+	{
+		public HomeworkOrGamesOrCinemaCalloutData()
+			: base(ႰႭႰ.Ⴀ.ႳႭႨ(1634123082))
+		{
+		}
+	}
+	[DataContract]
+	public class ImageWithName : Ⴅ
+	{
+		[DataMember]
+		public string Name;
+
+		[DataMember]
+		public string ImagePath;
+	}
+	[DataContract]
+	public class InstantMessagerDTO : Ⴅ
+	{
+		[DataMember]
+		public bool IsInstalled;
+
+		[DataMember]
+		public string Name;
+
+		[DataMember]
+		public string Description;
+
+		[DataMember]
+		public string Id;
+
+		[DataMember]
+		public string Image;
+	}
+	[DataContract]
+	public class IntroNavigatingDTO : Ⴅ
+	{
+		[DataMember]
+		public string Direction;
+
+		[DataMember]
+		public string SceneFrom;
+	}
+	[DataContract]
+	public class LoadDataIntroDTO : Ⴅ
+	{
+		[DataMember]
+		public string UserName;
+
+		[DataMember]
+		public string ChatmanName;
+
+		[DataMember]
+		public string PersonalityID;
+
+		[DataMember]
+		public string Gender;
+
+		[DataMember]
+		public bool WasIntroPreviouslyCompleted;
+
+		[DataMember]
+		public bool RunningOnStartup;
+
+		[DataMember]
+		public bool RunOnStartup;
+	}
+	[DataContract]
+	public class MessageBoxData : Ⴅ
+	{
+		[DataMember]
+		public string Text;
+
+		[DataMember]
+		public string Caption;
+
+		[DataMember]
+		public GuiMessageBoxButtons Type;
+	}
+	[DataContract]
+	public class MessageTextData : Ⴅ
+	{
+		[DataMember]
+		public string Message;
+	}
+	[DataContract]
+	public class MoodCounterData : Ⴅ
+	{
+		[DataMember]
+		public string Id;
+
+		[DataMember(IsRequired = false)]
+		public string MoodName;
+
+		[DataMember]
+		public MoodLevel MoodState;
+	}
+	[DataContract]
+	public class MoodData : Ⴅ
+	{
+		[DataMember]
+		public string Id;
+
+		[DataMember]
+		public string MoodName;
+
+		[DataMember]
+		public string ToolTip;
+	}
+	[DataContract]
+	public class MoodListData : Ⴅ
+	{
+		[DataMember]
+		public MoodData[] ListElements;
+
+		[DataMember]
+		public readonly string ItemConstructor = ႰႭႰ.Ⴀ.ႳႭႨ(1634123098);
+
+		[DataMember]
+		public int SelectedIndex;
+
+		[DataMember]
+		public readonly bool HasSlider = true;
+	}
+	[DataContract]
+	public class MoodListPanelData : Ⴅ
+	{
+		[DataMember]
+		public MoodData[] ListElements;
+	}
+	[DataContract]
+	public class MoodsPageData : Ⴅ
+	{
+		[DataMember]
+		public MoodCounterData[] MoodList;
+	}
+	[DataContract]
+	public class MoveWindowOffsetDTO : Ⴅ
+	{
+		[DataMember]
+		public int X;
+
+		[DataMember]
+		public int Y;
+	}
+	[DataContract]
+	public class MyChatmanAppsData : Ⴅ
+	{
+		[DataMember]
+		public ChatmanAppData[] ChatmanApps;
+	}
+	[DataContract]
+	public class MyChatmanStatusData : Ⴅ
+	{
+		[DataMember]
+		public string Text;
+
+		[DataMember]
+		public bool ShowConnect;
+
+		[DataMember]
+		public bool ShowRegister;
+
+		[DataMember]
+		public bool ShowText;
+	}
+	[DataContract]
+	public class MyChatmanUserDetailsPopupDTO : Ⴅ
+	{
+		[DataMember]
+		public string UserName;
+
+		[DataMember]
+		public string Password;
+
+		[DataMember]
+		public string ChatmanNumber;
+
+		[DataMember]
+		public string Mode;
+
+		[DataMember]
+		public bool PasswordChanged;
+	}
+	[DataContract]
+	public class OnPageLoadedData : Ⴅ
+	{
+		[DataMember]
+		public string WindowName;
+
+		[DataMember]
+		public string WindowParams;
+	}
+	[DataContract]
+	public class OptionsPopupDTO : Ⴅ
+	{
+		[DataMember]
+		public bool RunChatmanOnStartUp;
+
+		[DataMember]
+		public bool DontSpeakOnYourOwn;
+
+		[DataMember]
+		public int DontProduceActionsStartHour;
+
+		[DataMember]
+		public int DontProduceActionsStartMinute;
+
+		[DataMember]
+		public int DontProduceActionsEndHour;
+
+		[DataMember]
+		public int DontProduceActionsEndMinute;
+	}
+	[DataContract]
+	public class ParentsAreaPopupDTO : Ⴅ
+	{
+		[DataMember]
+		public string DangerWords;
+
+		[DataMember]
+		public bool DontAllowCreation;
+
+		[DataMember]
+		public bool DontAllowDownload;
+
+		[DataMember]
+		public bool DontAllowSharing;
+
+		[DataMember]
+		public bool DontAllowPreview;
+
+		[DataMember(IsRequired = false)]
+		public bool PasswordSet;
+	}
+	[DataContract]
+	public class ParentsAreaPopupPasswordDTO : Ⴅ
+	{
+		[DataMember(IsRequired = false)]
+		public string Password;
+
+		[DataMember(IsRequired = false)]
+		public string Password1;
+
+		[DataMember(IsRequired = false)]
+		public string Password2;
+	}
+	[DataContract]
+	public class PersonalitiesCalloutData : ProactiveCalloutData
+	{
+		public PersonalitiesCalloutData()
+			: base(ႰႭႰ.Ⴀ.ႳႭႨ(1634123095))
+		{
+		}
+	}
+	[DataContract]
+	public class PersonalityDataObject : Ⴅ
+	{
+		[DataMember(IsRequired = false)]
+		public string Id;
+
+		[DataMember]
+		public string Name;
+
+		[DataMember]
+		public string Description;
+
+		[DataMember(IsRequired = false)]
+		public string Designer;
+
+		[DataMember(IsRequired = false)]
+		public string ImagePath;
+
+		[DataMember(IsRequired = false)]
+		public int ColorSchemeIndex;
+
+		[DataMember]
+		public bool IsPrivate;
+
+		[DataMember]
+		public int[] Images;
+
+		[DataMember]
+		public int BaseIconID;
+	}
+	[DataContract]
+	public class PersonalityListData : Ⴅ
+	{
+		[DataMember]
+		public string ItemConstructor;
+
+		[DataMember]
+		public PersonalityDataObject[] ListElements;
+
+		[DataMember]
+		public int SelectedIndex;
+	}
+	[DataContract]
+	public class PersonalitySelector : Ⴅ
+	{
+		[DataMember]
+		public Element[] ListElements;
+
+		[DataMember]
+		public string ItemConstructor;
+
+		[DataMember]
+		public int SelectedIndex;
+	}
+	[DataContract]
+	public class PlayChitChatDTO : Ⴅ
+	{
+		[DataMember]
+		public int ChitChatCode;
+
+		[DataMember]
+		public string PersonalityID;
+
+		[DataMember(IsRequired = false)]
+		public bool ProvideChitChatLength;
+
+		[DataMember]
+		public int SceneIndex;
+	}
+	[DataContract]
+	public class ProactiveCalloutData : ChatmanCalloutData
+	{
+		[DataMember]
+		public readonly string Type;
+
+		[DataMember]
+		public string Text;
+
+		internal ProactiveCalloutData(string calloutType)
+		{
+			Type = calloutType;
+		}
+	}
+	[DataContract]
+	public class ProactiveRemindersCalloutData : ProactiveCalloutData
+	{
+		public ProactiveRemindersCalloutData()
+			: base(ႰႭႰ.Ⴀ.ႳႭႨ(1634123088))
+		{
+		}
+	}
+	[DataContract]
+	public class ProfileData : Ⴅ
+	{
+		[DataMember]
+		public string Gender;
+
+		[DataMember]
+		public string UserName;
+	}
+	[DataContract]
+	public class PushButtonPopupDTO : Ⴅ
+	{
+		[DataMember]
+		public bool Mute;
+
+		[DataMember]
+		public bool SurpriseMe;
+	}
+	[DataContract]
+	public class RegistrationCalloutData : ProactiveCalloutData
+	{
+		public RegistrationCalloutData()
+			: base(ႰႭႰ.Ⴀ.ႳႭႨ(1634123094))
+		{
+		}
+	}
+	[DataContract]
+	public class ReminderData : Ⴅ
+	{
+		[DataMember]
+		public string Id;
+
+		[DataMember]
+		public string Description;
+
+		[DataMember]
+		public int ImageId;
+
+		[DataMember]
+		public long ExactDateTime;
+
+		[DataMember]
+		public int RecurranceType;
+
+		[DataMember]
+		public int RemindMethod;
+	}
+	[DataContract]
+	public class RemindersPageData : Ⴅ
+	{
+		[DataMember]
+		public ReminderData[] TodayReminders;
+
+		[DataMember]
+		public ReminderData[] TomorowReminders;
+
+		[DataMember]
+		public ReminderData[] ThisWeekReminders;
+
+		[DataMember]
+		public ReminderData[] LaterReminders;
+	}
+	[DataContract]
+	public class RemindersPopupData : Ⴅ
+	{
+		[DataMember]
+		public string Description;
+
+		[DataMember]
+		public int ImageId;
+
+		[DataMember]
+		public long ExactDateTime;
+
+		[DataMember]
+		public int NumberOfPendingReminders;
+	}
+	[DataContract]
+	public class SaveDataIntroDTO : Ⴅ
+	{
+		[DataMember]
+		public string UserName;
+
+		[DataMember]
+		public string ChatmanName;
+
+		[DataMember]
+		public bool RunningOnStartup;
+
+		[DataMember]
+		public string Gender;
+
+		[DataMember]
+		public string PersonalityID;
+	}
+	[DataContract]
+	public class SearchOrTeachCalloutData : BaseTeachCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123102);
+
+		[DataMember]
+		public string SearchPhrase;
+	}
+	[DataContract]
+	public class SendTicketDTO : Ⴅ
+	{
+		[DataMember]
+		public bool SaveToDesktop;
+
+		[DataMember]
+		public string TicketNumber;
+	}
+	[DataContract]
+	public class ShowAllTeachCalloutData : ProactiveCalloutData
+	{
+		public ShowAllTeachCalloutData()
+			: base(ႰႭႰ.Ⴀ.ႳႭႨ(1634123093))
+		{
+		}
+	}
+	[DataContract]
+	public class StateData : Ⴅ
+	{
+		[DataMember]
+		public bool IsOn;
+	}
+	[DataContract]
+	public class TeachCalloutData : BaseTeachCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123097);
+	}
+	[DataContract]
+	public class TextCalloutData : ChatmanCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123101);
+
+		[DataMember]
+		public string ChatmanText;
+
+		[DataMember(EmitDefaultValue = true, IsRequired = false)]
+		public string Color;
+	}
+	[DataContract]
+	public class TextData : Ⴅ
+	{
+		[DataMember]
+		public string Text;
+	}
+	[DataContract]
+	public class TimeData : Ⴅ
+	{
+		[DataMember]
+		public int Hour;
+
+		[DataMember]
+		public int Minute;
+	}
+	[DataContract]
+	public class UserProfileOrTeachCallout : BaseTeachCalloutData
+	{
+		[DataMember]
+		public readonly string Type = ႰႭႰ.Ⴀ.ႳႭႨ(1634123103);
+	}
+	[DataContract]
+	public class UserProfilePageData : Ⴅ
+	{
+		[DataMember]
+		public string Mode;
+
+		[DataMember]
+		public string UserName;
+
+		[DataMember]
+		public string Gender;
+
+		[DataMember]
+		public string Country;
+
+		[DataMember]
+		public string City;
+
+		[DataMember]
+		public long BirthDate;
+
+		[DataMember]
+		public string ZipCode;
+
+		[DataMember]
+		public string ProfileImage;
+
+		[DataMember]
+		public string ChatmanImage;
+
+		[DataMember]
+		public string Sports;
+
+		[DataMember]
+		public string Fashion;
+
+		[DataMember]
+		public string Music;
+
+		[DataMember]
+		public string Celebs;
+
+		[DataMember]
+		public string Food;
+
+		[DataMember]
+		public string Hobbies;
+
+		[DataMember]
+		public string ButNotSports;
+
+		[DataMember]
+		public string ButNotFashion;
+
+		[DataMember]
+		public string ButNotMusic;
+
+		[DataMember]
+		public string ButNotCelebs;
+
+		[DataMember]
+		public string ButNotFood;
+
+		[DataMember]
+		public string ButNotHobbies;
+
+		[DataMember]
+		public string Teachers;
+
+		[DataMember]
+		public string ButNotTeachers;
+
+		[DataMember]
+		public string Movies;
+
+		[DataMember]
+		public string ButNotMovies;
+
+		[DataMember]
+		public string Superheroes;
+
+		[DataMember]
+		public string Countries;
+
+		[DataMember]
+		public string Friendship;
+
+		[DataMember]
+		public string Animals;
+	}
+	[DataContract]
+	public class VolumeData : Ⴅ
+	{
+		[DataMember]
+		public double VolumeLevel;
+
+		[DataMember]
+		public bool IsIntro;
+
+		[DataMember]
+		public bool IsMuted;
+
+		[DataMember]
+		public string DefaultAudioDevice;
+	}
+	[DataContract]
+	public class WelcomeData : Ⴅ
+	{
+		[DataMember]
+		public bool IsRegistered;
+	}
+}
+namespace ႰႭႰ
+{
+	internal sealed class Ⴀ
+	{
+		private static readonly char[] m_Ⴀ;
+
+		private static readonly string[] Ⴓ;
+
+		internal static string ႳႭႨ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x6166BD5A;
+			string result;
+			if ((result = Ⴓ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "\u0dc8ढ\u05b7հष\u05f9\u0cf0ఖ";
+				break;
+			case 1:
+				obj = "ऌ\u05bcհऩע೧టෆब\u05b4ոऑ\u05f8ೡ";
+				break;
+			case 2:
+				obj = "\u0cd4క\u0df6\u093a\u05bdզछש\u0cc4ఎ\u0de0\u093e\u05acսऑף\u0cd6చ෩ड\u05b7աऊ";
+				break;
+			case 3:
+				obj = "య\u0de0ब\u05bbռऽ\u05ec\u0cf9గ෪स\u05ac";
+				break;
+			case 4:
+				obj = "भר\u0cf4ఉ෦थ\u0597զपר\u0cf4ఘ෭ऎ\u05b9ոऒעೠఏ";
+				break;
+			case 5:
+				obj = "ט೦ఞ\u0df7झ\u05aaջघפ\u0cf9ఞ\u0dca\u093f\u058cձट\u05ee\u0cfdస\u0de4ड\u05b4ջऋ\u05f9";
+				break;
+			case 6:
+				obj = "\u0599շऊפ\u0cfaకෆब\u05b4ոऑ\u05f8ೡ";
+				break;
+			case 7:
+				obj = "Հछ\u05f5ೡస\u0de4ड\u05b4ջऋ\u05f9";
+				break;
+			case 8:
+				obj = "ෂढ\u059bյऒס\u0cfaఎ\u0df1";
+				break;
+			case 9:
+				obj = "ऌ\u05bcհऽץ\u0cfcఏෆथ\u05b9ՠऽ\u05ec\u0cf9గ෪स\u05ac";
+				break;
+			case 10:
+				obj = "\u0cc5ఉ෪ब\u05bbՠग\u05fb\u0cf0\u0c29\u0de0ठ\u05b1պचר೧ఈෆब\u05b4ոऑ\u05f8ೡ";
+				break;
+			case 11:
+				obj = "స෬ण\u05bdչट\u05cc\u0cfbటෂब\u05b5ձऍ\u05ce\u0cf4గ෩ढ\u05adՠ";
+				break;
+			case 12:
+				obj = "बרೲఒ\u0df6ह\u05aaյऊפ\u0cfaకෆब\u05b4ոऑ\u05f8ೡ";
+				break;
+			case 13:
+				obj = "ם\u0cf0ఉ\u0df6ढ\u05b6յऒפೡఒ\u0de0\u093e\u059bյऒס\u0cfaఎ\u0df1";
+				break;
+			case 14:
+				obj = "\u059cջउף\u0cf9ఔ\u0de4ऩ\u059bռग\u05f9\u0cd6ఓ\u0de4ह\u059bյऒס\u0cfaఎ\u0df1";
+				break;
+			case 15:
+				obj = "Շखע\u0ce2\u0c3a෩ड\u058cձट\u05ee\u0cfdస\u0de4ड\u05b4ջऋ\u05f9";
+				break;
+			case 16:
+				obj = "\u0dcdढ\u05b5ձउע೧ఐ\u0dca\u093f\u059fյओר೦ఴ\u0df7ऎ\u05b1պछנ\u0cf4స\u0de4ड\u05b4ջऋ\u05f9";
+				break;
+			case 17:
+				obj = "ऊ\u05b7Հऑ\u05c5\u0cfaఖ\u0de0\u093a\u05b7զक\u05ce\u0cf4గ෩ढ\u05adՠ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴀ = m_Ⴀ;
+			int num2 = ⴀ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴀ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			Ⴓ[num] = result;
+			return result;
+		}
+
+		static Ⴀ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			m_Ⴀ = array;
+			Ⴓ = new string[18];
+		}
+	}
+}

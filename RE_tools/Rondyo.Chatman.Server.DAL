@@ -1,0 +1,148 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Server.DAL.dll
+// Rondyo.Chatman.Server.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: AnyCPU (64-bit preferred)
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
+
+[assembly: Guid("1705bf71-7269-46d6-b3a7-e63ab84a2a81")]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyConfiguration("")]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyCopyright("Copyright © Rondyo 2011")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTitle("Rondyo.Chatman.Server.DAL")]
+[assembly: AssemblyDescription("Chatman server DAL")]
+[assembly: AssemblyProduct("Chatman Server")]
+[assembly: AssemblyVersion("1.0.0.0")]
+namespace Rondyo.Chatman.Server.DAL
+{
+	[DataContract]
+	public class ApplicationItem : CMItem
+	{
+	}
+	[DataContract]
+	public class AuthenticatedRequest
+	{
+		[DataMember]
+		public string UserName;
+
+		[DataMember]
+		public string Credentials;
+
+		[DataMember(EmitDefaultValue = false, IsRequired = false)]
+		public string Sn;
+	}
+	[DataContract]
+	public class AuthenticationResult : GenericResult
+	{
+	}
+	[DataContract]
+	public class ChitChatItem : CMItem
+	{
+		[DataMember]
+		public string Buzzwords;
+
+		[DataMember]
+		public Guid MoodID;
+
+		[DataMember]
+		public bool IsChatmate;
+
+		[DataMember]
+		public int? NumberOfChitChats;
+
+		[DataMember]
+		public string TargetPersonalityID;
+	}
+	[DataContract]
+	public class CMItem
+	{
+		[DataMember]
+		public string ID;
+
+		[DataMember]
+		public string Name;
+
+		[DataMember]
+		public int Price;
+
+		[DataMember]
+		public long DataFileSize;
+	}
+	[DataContract]
+	public class DownloadRequest : TransactionRetrievalRequest
+	{
+	}
+	[DataContract]
+	public class GenericResult
+	{
+		[DataMember]
+		public RequestResult Result;
+	}
+	[DataContract]
+	public class PreviewRequest : TransactionRetrievalRequest
+	{
+	}
+	[DataContract]
+	public class RemoteItemCollection : AuthenticatedRequest
+	{
+		[DataMember]
+		public RequestResult Result;
+
+		[DataMember]
+		public ChitChatItem[] ChitChats;
+
+		[DataMember]
+		public ApplicationItem[] Applications;
+	}
+	public enum RequestResult
+	{
+		OK,
+		Failed,
+		AccessDenied,
+		InvalidPrice
+	}
+	[DataContract]
+	public class TransactionRetrievalRequest : AuthenticatedRequest
+	{
+		[DataMember]
+		public string TransactionID;
+	}
+	[DataContract]
+	public class UploadRequest : AuthenticatedRequest
+	{
+	}
+	[DataContract]
+	public class UploadResult : GenericResult
+	{
+		[DataMember]
+		public int ID;
+	}
+	[DataContract]
+	public class UserWebProfile
+	{
+		[DataMember]
+		public int GenderId;
+
+		[DataMember]
+		public string Country;
+
+		[DataMember]
+		public string City;
+	}
+}

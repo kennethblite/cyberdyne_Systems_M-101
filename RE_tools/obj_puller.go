@@ -5,10 +5,11 @@ import ("strconv"
 	"io/ioutil"
 	"regexp"
 	"fmt"
-	"encoding/hex")
+	"encoding/hex"
+	"os")
 
 func main(){
-	data, err := ioutil.ReadFile("Rondyo.Chatman.GUI.Manager") 
+	data, err := ioutil.ReadFile(os.Args[1]) 
 	if err != nil{
 		fmt.Println(err)
 		return 
@@ -41,7 +42,7 @@ func main(){
 	re := regexp.MustCompile(`obj = "(.*?)";`)
 	found := re.FindAllStringSubmatch(d,-1)
 	for _, v := range found{
-		fmt.Println(v[1])
+		//fmt.Println(v[1])
 		in, err := strconv.Unquote("\""+v[1]+"\"")
 		if err != nil{
 			fmt.Println(err)
@@ -59,6 +60,10 @@ func Encrypted(input []rune, key []rune){
 		if out[i]>>8 != 0{
 			i = 0
 			start++
+			if start > len(key) {
+				fmt.Println("ERROR on DECRYPT")
+				return
+			}
 			continue
 		}
 		i++

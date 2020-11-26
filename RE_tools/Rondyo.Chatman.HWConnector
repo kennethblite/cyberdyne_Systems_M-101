@@ -1,0 +1,6581 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.HWConnector.dll
+// Rondyo.Chatman.HWConnector, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Microsoft.Win32.SafeHandles;
+using Rondyo.Chatman.HWConnector;
+using Rondyo.Chatman.HWConnector.USBEngine;
+using Rondyo.Chatman.Interfaces;
+using Rondyo.Chatman.Interfaces.Public;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Security;
+using System.Security.Permissions;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
+using Un4seen.Bass;
+using Un4seen.Bass.AddOn.Enc;
+using Un4seen.Bass.AddOn.Fx;
+using ႥႥႤ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႣ;
+using ႥႥႨႥ;
+using ႥႥႳႰ;
+using ႥႼႥ;
+using ႰႷႭ;
+using ႰႼႭ;
+using ႳႨႭ;
+using ႷႭႨ;
+using ႷႭႰ;
+using ႷႭႳ;
+using ႷႭႷ;
+
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Guid("baca5c6f-2841-47d4-ad24-d62178a070c3")]
+[assembly: ComVisible(false)]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyConfiguration("")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyDescription("")]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: PermissionSet(SecurityAction.RequestMinimum, XML = "<PermissionSet class=\"System.Security.PermissionSet\"\r\nversion=\"1\">\r\n<IPermission class=\"System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\nversion=\"1\"\r\nFlags=\"SkipVerification\"/>\r\n</PermissionSet>\r\n")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[module: UnverifiableCode]
+namespace Rondyo.Chatman.HWConnector
+{
+	public class HardwareCodeData
+	{
+		protected byte header;
+
+		protected byte code;
+
+		protected byte subCode;
+
+		protected int codeLength;
+
+		protected bool hasParameter;
+
+		protected int positionInMovementCommand;
+
+		public byte Header => header;
+
+		public byte Code => code;
+
+		public byte SubCode => subCode;
+
+		public int CodeLength => codeLength;
+
+		public bool HasParameter => hasParameter;
+
+		public int PositionInMovementCommand => positionInMovementCommand;
+
+		public HardwareCodeData(byte header, byte code, byte subCode, int codeLength, bool hasParameter, int positionInMovementCommand)
+		{
+			this.header = header;
+			this.code = code;
+			this.subCode = subCode;
+			this.codeLength = codeLength;
+			this.hasParameter = hasParameter;
+			this.positionInMovementCommand = positionInMovementCommand;
+		}
+
+		public virtual byte[] ToArray(object parameter)
+		{
+			return new byte[0];
+		}
+
+		public virtual int ToArray(object parameter, byte[] targetBuffer, int position)
+		{
+			return 0;
+		}
+	}
+	public enum HardwareCommandCodes
+	{
+		EyesClosed = 1,
+		EyesOpenOneThird,
+		EyesOpenTwoThirds,
+		EyesOpen,
+		HandsDown,
+		HandsUpOneThird,
+		HandsUpTwoThirds,
+		HandsUp,
+		AntennasIn,
+		AntennasCenter,
+		AntennasOut,
+		LegsMoving,
+		LegsStopped,
+		LEDSFrame,
+		Shutdown,
+		Reset,
+		Hello,
+		ConfigureEyeMovement,
+		ConfigureHandMovement,
+		ConfigureAntennaMovement,
+		DiagnosticReset
+	}
+	public class HWConnector : IDisposable
+	{
+		private ႥႼႥ.Ⴈ Ⴅ;
+
+		private int Ⴅ;
+
+		private bool Ⴅ;
+
+		private ႥႼႥ.Ⴅ Ⴐ;
+
+		private HWConnectorWindow ႳႣ;
+
+		private IntPtr Ⴐ;
+
+		private bool Ⴈ;
+
+		private bool Ⴀ;
+
+		private object Ⴐ;
+
+		private bool Ⴄ;
+
+		private bool Ⴐ;
+
+		private bool Ⴗ;
+
+		private readonly object Ⴈ;
+
+		private bool Ⴍ;
+
+		private ႷႭႨ.Ⴐ Ⴐ;
+
+		private ႷႭႰ.Ⴍ Ⴐ;
+
+		private ႷႭႰ.Ⴃ Ⴐ;
+
+		private DataReceivedDelegate Ⴐ;
+
+		private ႷႭႰ.Ⴓ Ⴐ;
+
+		private ႷႭႷ.Ⴃ Ⴐ;
+
+		private ႥႥႤ.Ⴀ Ⴐ;
+
+		private ႥႥႤ.Ⴀ Ⴈ;
+
+		private AudioActionStoppedDelegate Ⴐ;
+
+		private AudioActionStoppedDelegate Ⴈ;
+
+		private ႷႭႷ.Ⴓ Ⴐ;
+
+		private ႷႭႷ.Ⴜ Ⴐ;
+
+		private VolumeChangedDelegate Ⴐ;
+
+		private string Ⴐ;
+
+		private short Ⴐ;
+
+		private bool Ⴃ;
+
+		private bool Ⴓ;
+
+		private ListeningEventDelegate Ⴐ;
+
+		private ListeningEventDelegate Ⴈ;
+
+		private ListeningEventDelegate Ⴓ;
+
+		private AudioActionStoppedDelegate Ⴓ;
+
+		private bool Ⴜ;
+
+		public HardwareCodeData[] ActiveCodeMap => ႥႼႥ.Ⴀ.Ⴐ;
+
+		public unsafe ႷႭႨ.Ⴐ State => *(ႷႭႨ.Ⴐ*)(&this.Ⴐ);
+
+		public DefaultOutputDevice DefaultOutputDevice
+		{
+			get
+			{
+				return ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႷႰ();
+			}
+			set
+			{
+				((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႣႠ(value);
+			}
+		}
+
+		public bool MicrophonePresent => ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႥႠ();
+
+		public string TempAudioFileName => (string)(object)this.Ⴐ;
+
+		public unsafe short Volume
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_000c, IL_001b, IL_0020, IL_0026, IL_0047, IL_006a
+				bool flag = this.Ⴐ != null;
+				short num = default(short);
+				short result;
+				do
+				{
+					if (flag)
+					{
+						num = ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႥႨ();
+					}
+					else if ((924 + 924 * 924) % 2 == 0)
+					{
+						goto IL_0022;
+					}
+					short num2;
+					if (num == 0)
+					{
+						num2 = *(short*)(&this.Ⴐ);
+					}
+					else
+					{
+						if (998 <= 998 - 416)
+						{
+							goto IL_0022;
+						}
+						num2 = num;
+					}
+					result = num2;
+					continue;
+					IL_0022:
+					result = 0;
+					break;
+				}
+				while (false);
+				return result;
+			}
+			set
+			{
+				//Discarded unreachable code: IL_0005, IL_0012, IL_0031, IL_0043, IL_004b, IL_0064, IL_006b, IL_00a9, IL_00b6, IL_00da, IL_00e2, IL_00fd, IL_0116, IL_011e, IL_0139, IL_015b, IL_0173, IL_0192, IL_01c9, IL_01d3, IL_01fa
+				bool flag;
+				if (this.Ⴐ != null)
+				{
+					int num;
+					if (value >= 0)
+					{
+						if (468 < 468 - 260)
+						{
+							goto IL_0178;
+						}
+						num = ((value <= 100) ? 1 : 0);
+					}
+					else
+					{
+						num = 0;
+					}
+					flag = ((byte)num != 0);
+					goto IL_0121;
+				}
+				if ((35 + 35 * 35) % 2 == 0)
+				{
+					return;
+				}
+				goto IL_006d;
+				IL_0178:
+				*(short*)(&this.Ⴐ) = value;
+				if (301 < 301 - 178)
+				{
+					goto IL_00ab;
+				}
+				goto IL_0197;
+				IL_0197:
+				bool ⴓ = *(bool*)(&this.Ⴓ);
+				*(bool*)(&this.Ⴓ) = (value == 0);
+				while (true)
+				{
+					int num2;
+					if (ⴓ != *(bool*)(&this.Ⴓ))
+					{
+						if ((265 + 265 * 265) % 2 == 0)
+						{
+							num2 = ((this.Ⴐ == null) ? 1 : 0);
+							goto IL_004d;
+						}
+					}
+					num2 = 1;
+					goto IL_004d;
+					IL_004d:
+					flag = ((byte)num2 != 0);
+					if (flag)
+					{
+						break;
+					}
+					if (50 <= 50 - 46)
+					{
+						continue;
+					}
+					this.Ⴐ(*(bool*)(&this.Ⴓ));
+					while (false)
+					{
+					}
+					break;
+				}
+				goto IL_00ff;
+				IL_00ab:
+				int num3 = (this.Ⴐ == null) ? 1 : 0;
+				goto IL_00e7;
+				IL_015d:
+				bool flag2 = default(bool);
+				if (!flag2)
+				{
+					goto IL_00df;
+				}
+				if (341 > 341 - 89)
+				{
+					goto IL_00ab;
+				}
+				goto IL_0121;
+				IL_00df:
+				num3 = 1;
+				goto IL_00e7;
+				IL_00e8:
+				if (flag)
+				{
+					return;
+				}
+				if ((439 + 439 * 439) % 2 == 0)
+				{
+					this.Ⴐ(value);
+					if ((950 + 950 * 950) % 2 == 0)
+					{
+						return;
+					}
+					goto IL_015d;
+				}
+				goto IL_006d;
+				IL_0121:
+				if (flag)
+				{
+					goto IL_006d;
+				}
+				if ((181 + 181 * 181) % 2 == 0)
+				{
+					return;
+				}
+				goto IL_00e8;
+				IL_00e7:
+				flag = ((byte)num3 != 0);
+				goto IL_00e8;
+				IL_006d:
+				flag2 = (((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႥႨ() != value);
+				goto IL_007f;
+				IL_007f:
+				((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႣႼ(value);
+				flag = (value == 0);
+				if (!flag)
+				{
+					if (870 <= 870 - 804)
+					{
+						goto IL_00ff;
+					}
+					goto IL_0178;
+				}
+				goto IL_0197;
+				IL_00ff:
+				if (Ⴃ)
+				{
+					goto IL_00df;
+				}
+				if (false)
+				{
+					goto IL_007f;
+				}
+				goto IL_015d;
+			}
+		}
+
+		public unsafe bool IsMute => *(bool*)(&this.Ⴓ);
+
+		public short RecorderVolume
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_0020, IL_0026, IL_0049
+				short result;
+				if (this.Ⴐ != null)
+				{
+					result = ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႥႤ();
+					if (528 > 528 - 467)
+					{
+						goto IL_0028;
+					}
+				}
+				else if ((1003 + 1003 * 1003) % 2 == 0)
+				{
+				}
+				result = 0;
+				goto IL_0028;
+				IL_0028:
+				return result;
+			}
+			set
+			{
+				//Discarded unreachable code: IL_0005, IL_002a, IL_002f, IL_0044, IL_0048, IL_005e, IL_006a, IL_0090
+				while (this.Ⴐ != null)
+				{
+					int num;
+					if (value < 0)
+					{
+						num = 0;
+					}
+					else
+					{
+						if (522 <= 522 - 413)
+						{
+							return;
+						}
+						num = ((value <= 100) ? 1 : 0);
+					}
+					if (num != 0)
+					{
+						((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႠ(value);
+						while (false)
+						{
+						}
+						return;
+					}
+					if (false)
+					{
+						continue;
+					}
+					return;
+				}
+				if (1015 > 1015 - 791)
+				{
+				}
+			}
+		}
+
+		public event ႷႭႰ.Ⴍ PushButtonPressed
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႰ.Ⴍ)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႰ.Ⴍ)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event ႷႭႰ.Ⴃ ConnectionStateChanged
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႰ.Ⴃ)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႰ.Ⴃ)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event DataReceivedDelegate DataReceived
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(DataReceivedDelegate)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(DataReceivedDelegate)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event ႷႭႰ.Ⴓ ResetFailed
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႰ.Ⴓ)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႰ.Ⴓ)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event ႷႭႷ.Ⴃ AudioDevicesChanged
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႷ.Ⴃ)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႷ.Ⴃ)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event AudioActionStoppedDelegate AudioPlaybackStopped
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(AudioActionStoppedDelegate)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(AudioActionStoppedDelegate)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event AudioActionStoppedDelegate AudioRecordingStopped
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴈ = (ListeningEventDelegate)(object)(AudioActionStoppedDelegate)Delegate.Combine(this.Ⴈ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴈ = (ListeningEventDelegate)(object)(AudioActionStoppedDelegate)Delegate.Remove(this.Ⴈ, value);
+			}
+		}
+
+		public event ႷႭႷ.Ⴓ AudioRecorderPositionChanged
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႷ.Ⴓ)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႷ.Ⴓ)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event ႷႭႷ.Ⴜ MuteChanged
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႷ.Ⴜ)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(ႷႭႷ.Ⴜ)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event VolumeChangedDelegate VolumeChanged
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(VolumeChangedDelegate)Delegate.Combine(this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)(VolumeChangedDelegate)Delegate.Remove(this.Ⴐ, value);
+			}
+		}
+
+		public event ListeningEventDelegate HearingStopped
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				Ⴐ = (ListeningEventDelegate)Delegate.Combine(Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				Ⴐ = (ListeningEventDelegate)Delegate.Remove(Ⴐ, value);
+			}
+		}
+
+		public event ListeningEventDelegate HearingStarted
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				Ⴈ = (ListeningEventDelegate)Delegate.Combine(Ⴈ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				Ⴈ = (ListeningEventDelegate)Delegate.Remove(Ⴈ, value);
+			}
+		}
+
+		public event ListeningEventDelegate ListeningStarted
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴓ = (AudioActionStoppedDelegate)(object)(ListeningEventDelegate)Delegate.Combine(this.Ⴓ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴓ = (AudioActionStoppedDelegate)(object)(ListeningEventDelegate)Delegate.Remove(this.Ⴓ, value);
+			}
+		}
+
+		public event AudioActionStoppedDelegate DirectPlaybackStopped
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				Ⴓ = (AudioActionStoppedDelegate)Delegate.Combine(Ⴓ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				Ⴓ = (AudioActionStoppedDelegate)Delegate.Remove(Ⴓ, value);
+			}
+		}
+
+		public unsafe HWConnector()
+		{
+			*(IntPtr*)(&this.Ⴐ) = IntPtr.Zero;
+			*(bool*)(&this.Ⴈ) = false;
+			this.Ⴐ = (ListeningEventDelegate)new object();
+			Ⴄ = false;
+			*(bool*)(&this.Ⴐ) = false;
+			Ⴗ = false;
+			this.Ⴈ = (ListeningEventDelegate)new object();
+			Ⴍ = false;
+			this.Ⴐ = null;
+			this.Ⴈ = null;
+			this.Ⴐ = (ListeningEventDelegate)(object)string.Empty;
+			*(bool*)(&this.Ⴓ) = false;
+			Ⴜ = false;
+			base..ctor();
+		}
+
+		~HWConnector()
+		{
+			Dispose(disposing: false);
+		}
+
+		public unsafe void Initialize(int chatmanIndex, bool soundOnly, bool dontReinitSound)
+		{
+			//Discarded unreachable code: IL_0005, IL_0027, IL_0048, IL_005d, IL_0078, IL_00b2, IL_00cc, IL_00ee
+			ႥႥႨႣ.Ⴀ.ႣႣ ⴃႣ = null;
+			while (true)
+			{
+				if (chatmanIndex == 0)
+				{
+					if (false)
+					{
+						goto IL_009d;
+					}
+					while (ⴃႣ == null)
+					{
+						if (125 > 125 - 57)
+						{
+							ⴃႣ = delegate
+							{
+								ႳႣ = new HWConnectorWindow();
+								ႳႣ.DeviceChange += ႰႨႷ;
+							};
+							if (777 > 777 - 583)
+							{
+								break;
+							}
+							continue;
+						}
+						return;
+					}
+					ႥႥႨႣ.Ⴀ.ႨႠႠ(ⴃႣ);
+					if (false)
+					{
+						goto IL_0088;
+					}
+				}
+				*(int*)(&this.Ⴅ) = chatmanIndex;
+				goto IL_0081;
+				IL_0088:
+				bool flag = soundOnly;
+				if (!flag)
+				{
+					if (473 >= 473 - 468)
+					{
+					}
+					ႨႷႥ();
+					if (900 < 900 - 707)
+					{
+						goto IL_009f;
+					}
+				}
+				goto IL_009d;
+				IL_009d:
+				flag = dontReinitSound;
+				goto IL_009f;
+				IL_009f:
+				if (flag)
+				{
+					break;
+				}
+				if (148 >= 148 - 123)
+				{
+					ႨႷႤ();
+					if (583 <= 583 - 421)
+					{
+						continue;
+					}
+					break;
+				}
+				goto IL_0081;
+				IL_0081:
+				Ⴅ = soundOnly;
+				goto IL_0088;
+			}
+		}
+
+		public void Initialize()
+		{
+			Initialize(0, soundOnly: false, dontReinitSound: false);
+		}
+
+		public void Initialize(bool soundOnly)
+		{
+			Initialize(0, soundOnly, dontReinitSound: false);
+		}
+
+		public void Initialize(int chatmanIndex)
+		{
+			Initialize(chatmanIndex, soundOnly: false, dontReinitSound: false);
+		}
+
+		private unsafe void ႨႣႠ(bool Ⴍ)
+		{
+			try
+			{
+				ႨႷႣ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+			try
+			{
+				if (ႳႣ != null)
+				{
+					ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+					{
+						ႳႣ.Close();
+					});
+					ႳႣ = null;
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+			this.Ⴐ = (ListeningEventDelegate)(object)ႥႥႨႠ.Ⴈ.ႳႷ((ႥႥႤ.Ⴀ)(object)this.Ⴐ, ႰႼႭ.Ⴍ.ႳႭႨ(137679780));
+			this.Ⴈ = (ListeningEventDelegate)(object)ႥႥႨႠ.Ⴈ.ႳႷ((ႥႥႤ.Ⴀ)(object)this.Ⴈ, ႰႼႭ.Ⴍ.ႳႭႨ(137679835));
+			if (!Ⴍ)
+			{
+				this.Ⴐ = (ListeningEventDelegate)(object)ႥႥႨႠ.Ⴈ.ႳႷ((ႥႼႥ.Ⴅ)(object)this.Ⴐ, ႰႼႭ.Ⴍ.ႳႭႨ(137679834));
+			}
+			try
+			{
+				if (*(ႥႼႥ.Ⴈ*)(&this.Ⴅ) != null)
+				{
+					if (*(ႷႭႨ.Ⴐ*)(&this.Ⴐ) == ႷႭႨ.Ⴐ.Ⴓ)
+					{
+						try
+						{
+							SendCommand(1, 16, 0);
+						}
+						catch (Exception ⴍ)
+						{
+							ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+						}
+					}
+					((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->Dispose();
+					*(@null*)(&this.Ⴅ) = null;
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+		}
+
+		private unsafe void ႰႨႷ(Message Ⴍ)
+		{
+			int num = Ⴍ.WParam.ToInt32();
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679833) + num.ToString());
+			bool flag = num == 7;
+			bool flag2 = num == 32768;
+			bool flag3 = num == 32772;
+			if (flag2 || flag3)
+			{
+				try
+				{
+					if (flag2)
+					{
+						bool ⴍ = false;
+						ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679832));
+						bool flag4 = false;
+						if (!Ⴀ && *(ႷႭႨ.Ⴐ*)(&this.Ⴐ) != ႷႭႨ.Ⴐ.Ⴓ)
+						{
+							flag4 = ((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->ႨႷႨ();
+							ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679838) + flag4.ToString());
+							ⴍ = flag4;
+						}
+						else
+						{
+							flag4 = Ⴀ;
+							ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679836));
+						}
+						ႰႨႣ(ⴍ);
+						Ⴀ = flag4;
+					}
+					else if (flag3)
+					{
+						bool ⴍ = false;
+						ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679827));
+						if (((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->ႭႳ() && ((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->ႤႠႼ(Ⴍ))
+						{
+							ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679825));
+							((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->ႨႷႥ();
+							Ⴀ = false;
+							ⴍ = true;
+						}
+						ႰႨႣ(ⴍ);
+					}
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679830), ⴓ);
+				}
+			}
+			else
+			{
+				ႭႨ();
+			}
+		}
+
+		internal unsafe void ႰႨႣ(bool Ⴍ)
+		{
+			int num = 5;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((this.Ⴐ != null) ? 3 : 0);
+					break;
+				case 0:
+					this.Ⴐ = (ListeningEventDelegate)(object)ႥႥႤ.Ⴀ.Ⴍ(ႨႷႰ, 1000.0, -1.0);
+					num = 2;
+					break;
+				case 3:
+					((ႥႥႤ.Ⴀ)(object)this.Ⴐ).ႳႭ(1000.0, -1.0);
+					num = 2;
+					break;
+				case 2:
+					num = ((!Ⴗ) ? 1 : 4);
+					break;
+				case 1:
+					Ⴗ = Ⴍ;
+					num = 4;
+					break;
+				case 4:
+					*(bool*)(&this.Ⴐ) = true;
+					return;
+				}
+			}
+		}
+
+		private unsafe void ႨႷႰ()
+		{
+			ႥႥႨ.Ⴗ.ႳႥ(ႰႼႭ.Ⴍ.ႳႭႨ(137679839), Ⴄ);
+			lock (this.Ⴐ)
+			{
+				if (Ⴄ)
+				{
+					return;
+				}
+				Ⴄ = true;
+				if (this.Ⴈ != null)
+				{
+					((ႥႥႤ.Ⴀ)(object)this.Ⴈ).ႳႣႳ();
+				}
+				*(bool*)(&this.Ⴐ) = false;
+			}
+			try
+			{
+				VerifyNotDefaultAudioDevice();
+				if (Ⴗ || ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႠႰ())
+				{
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679837) + Ⴗ.ToString() + ႰႼႭ.Ⴍ.ႳႭႨ(137679765));
+					Ⴗ = false;
+					ႥႰႼ(Ⴀ);
+				}
+				else
+				{
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679826) + Ⴗ.ToString() + ႰႼႭ.Ⴍ.ႳႭႨ(137679765));
+					Ⴗ = false;
+				}
+				if (Ⴀ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679824));
+					ႨႣႼ(ႷႭႨ.Ⴐ.Ⴓ);
+				}
+				else
+				{
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679831));
+					ႨႣႼ(ႷႭႨ.Ⴐ.Ⴍ);
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+			finally
+			{
+				lock (this.Ⴐ)
+				{
+					Ⴄ = false;
+				}
+			}
+		}
+
+		internal void ႭႨ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0031, IL_005e, IL_007e
+			bool flag = this.Ⴈ != null;
+			while (flag)
+			{
+				((ႥႥႤ.Ⴀ)(object)this.Ⴈ).ႳႭ(2000.0, -1.0);
+				if (787 >= 787 - 539)
+				{
+					return;
+				}
+			}
+			if (369 >= 369 - 36)
+			{
+				this.Ⴈ = (ListeningEventDelegate)(object)ႥႥႤ.Ⴀ.Ⴍ(ႭႰ, 2000.0, -1.0);
+			}
+		}
+
+		private unsafe void ႭႰ()
+		{
+			if (!(*(bool*)(&this.Ⴐ)) && !Ⴄ)
+			{
+				Monitor.Enter(this.Ⴈ);
+				try
+				{
+					if (Ⴍ)
+					{
+						return;
+					}
+					Ⴍ = true;
+				}
+				finally
+				{
+					Monitor.Exit(this.Ⴈ);
+				}
+				try
+				{
+					Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+					if (((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႭႳ())
+					{
+						ႥႰႼ(Ⴀ);
+					}
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				}
+				finally
+				{
+					Monitor.Enter(this.Ⴈ);
+					try
+					{
+						Ⴍ = false;
+					}
+					finally
+					{
+						Monitor.Exit(this.Ⴈ);
+					}
+				}
+			}
+		}
+
+		private bool ႥႰႼ(bool Ⴍ)
+		{
+			if (this.Ⴐ == null)
+			{
+				return true;
+			}
+			bool result = ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႥႭႥ(Ⴍ);
+			try
+			{
+				if (this.Ⴐ != null)
+				{
+					this.Ⴐ();
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+			return result;
+		}
+
+		private void ႨႣႤ(bool Ⴍ)
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((!Ⴍ) ? 3 : 2);
+					break;
+				case 2:
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679829));
+					ႨႣႼ(ႷႭႨ.Ⴐ.Ⴓ);
+					num = 0;
+					break;
+				case 3:
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679828));
+					ႨႣႼ(ႷႭႨ.Ⴐ.Ⴍ);
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		private unsafe void ႨႣႼ(ႷႭႨ.Ⴐ Ⴍ)
+		{
+			if (Ⴍ != *(ႷႭႨ.Ⴐ*)(&this.Ⴐ))
+			{
+				ႥႥႨ.Ⴗ.ႳႥ(ႰႼႭ.Ⴍ.ႳႭႨ(137679819), *(ႷႭႨ.Ⴐ*)(&this.Ⴐ), Ⴍ);
+				*(ႷႭႨ.Ⴐ*)(&this.Ⴐ) = Ⴍ;
+				try
+				{
+					if (this.Ⴐ != null)
+					{
+						this.Ⴐ(Ⴍ);
+					}
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+				}
+			}
+		}
+
+		private unsafe void ႨႷႥ()
+		{
+			*(ႥႼႥ.Ⴈ*)(&this.Ⴅ) = new ႥႼႥ.Ⴈ();
+			((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->ႤႠႥ(ႨႷႭ);
+			((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->ႤႠႭ(ႨႭႰ);
+			((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->ႤႠႣ(ႨႭႨ);
+			bool ⴍ = Ⴀ = ((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->ႤႠႨ(*(int*)(&this.Ⴅ));
+			ႨႷႠ();
+			ႨႣႤ(ⴍ);
+		}
+
+		private unsafe void ႨႷႠ()
+		{
+			try
+			{
+				if (ႳႣ != null)
+				{
+					ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+					{
+						*(IntPtr*)(&this.Ⴐ) = HIDDevice.RegisterForUsbEvents(ႳႣ.Handle, HIDDevice.HIDGuid);
+					});
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+		}
+
+		private unsafe void ႨႷႣ()
+		{
+			try
+			{
+				if (*(IntPtr*)(&this.Ⴐ) != IntPtr.Zero)
+				{
+					ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+					{
+						HIDDevice.UnregisterForUsbEvents(*(IntPtr*)(&this.Ⴐ));
+					});
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+		}
+
+		private unsafe void ႨႭႰ(byte[] Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001f, IL_003e, IL_0061
+			bool flag = *(ႷႭႨ.Ⴐ*)(&this.Ⴐ) != ႷႭႨ.Ⴐ.Ⴓ;
+			while (!flag)
+			{
+				if (333 <= 333 - 265)
+				{
+					goto IL_0004;
+				}
+				goto IL_0021;
+				IL_0004:
+				this.Ⴐ(Ⴍ);
+				if (false)
+				{
+					goto IL_0021;
+				}
+				break;
+				IL_0021:
+				flag = (this.Ⴐ == null);
+				if (!flag)
+				{
+					if (237 < 237 - 174)
+					{
+						continue;
+					}
+					goto IL_0004;
+				}
+				break;
+			}
+		}
+
+		private void ႨႷႭ()
+		{
+			//Discarded unreachable code: IL_0002, IL_001f, IL_003e
+			do
+			{
+				if (this.Ⴐ == null)
+				{
+					return;
+				}
+			}
+			while (false);
+			this.Ⴐ();
+			while (997 < 997 - 681)
+			{
+			}
+		}
+
+		private void ႨႭႨ(byte Ⴍ)
+		{
+			//Discarded unreachable code: IL_001e, IL_003d
+			while (true)
+			{
+				bool flag = this.Ⴐ == null;
+				while (true)
+				{
+					if (flag)
+					{
+						return;
+					}
+					if ((409 + 409 * 409) % 2 == 0)
+					{
+						this.Ⴐ(Ⴍ);
+						if (274 <= 274 - 248)
+						{
+							continue;
+						}
+						return;
+					}
+					break;
+				}
+			}
+		}
+
+		public bool SendCommand(int hardwareModel, int commandID, byte parameter)
+		{
+			return SendCommand(hardwareModel, commandID, new byte[1]
+			{
+				parameter
+			}, forceSend: false);
+		}
+
+		public bool SendCommand(int hardwareModel, int commandID, byte[] parameters)
+		{
+			return SendCommand(hardwareModel, commandID, parameters, forceSend: false);
+		}
+
+		public unsafe bool SendCommand(int hardwareModel, HardwareCodeData codeData, byte[] parameters, bool forceSend)
+		{
+			ႷႭႨ.Ⴐ ⴐ = *(ႷႭႨ.Ⴐ*)(&this.Ⴐ);
+			bool result = false;
+			try
+			{
+				result = ((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->Ⴗ(hardwareModel, codeData, parameters, forceSend, *(ႷႭႨ.Ⴐ*)(&this.Ⴐ), ref ⴐ);
+			}
+			finally
+			{
+				if (ⴐ != *(ႷႭႨ.Ⴐ*)(&this.Ⴐ))
+				{
+					ႨႣႼ(ⴐ);
+				}
+			}
+			return result;
+		}
+
+		public unsafe bool SendCommand(int hardwareModel, int commandID, byte[] parameters, bool forceSend)
+		{
+			ႷႭႨ.Ⴐ ⴐ = *(ႷႭႨ.Ⴐ*)(&this.Ⴐ);
+			bool result = false;
+			try
+			{
+				result = ((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->Ⴍ(hardwareModel, commandID, parameters, forceSend, *(ႷႭႨ.Ⴐ*)(&this.Ⴐ), ref ⴐ);
+			}
+			finally
+			{
+				if (ⴐ != *(ႷႭႨ.Ⴐ*)(&this.Ⴐ))
+				{
+					ႨႣႼ(ⴐ);
+				}
+			}
+			return result;
+		}
+
+		public unsafe bool SendCommands(int hardwareModel, byte[] bufferToSend, int length)
+		{
+			ႷႭႨ.Ⴐ ⴐ = *(ႷႭႨ.Ⴐ*)(&this.Ⴐ);
+			bool result = false;
+			try
+			{
+				result = ((ႥႼႥ.Ⴈ*)(&this.Ⴅ))->Ⴗ(hardwareModel, bufferToSend, length, *(ႷႭႨ.Ⴐ*)(&this.Ⴐ), ref ⴐ);
+			}
+			finally
+			{
+				if (ⴐ != *(ႷႭႨ.Ⴐ*)(&this.Ⴐ))
+				{
+					ႨႣႼ(ⴐ);
+				}
+			}
+			return result;
+		}
+
+		private unsafe void ႨႷႤ()
+		{
+			this.Ⴐ = (ListeningEventDelegate)(object)new ႥႼႥ.Ⴅ(*(int*)(&this.Ⴅ), Ⴀ);
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႣႣ((AudioActionStoppedDelegate)ႨႷႼ);
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႷ((ႷႭႷ.Ⴓ)ႳႠ);
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႳ((AudioActionStoppedDelegate)ႨႥႰ);
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႤ((ListeningEventDelegate)ႨႥႨ);
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႭ((ListeningEventDelegate)ႨႥႳ);
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႼ((ListeningEventDelegate)ႨႥႷ);
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႤႣ((AudioActionStoppedDelegate)ႨႥႥ);
+		}
+
+		public unsafe bool VerifyNotDefaultAudioDevice()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679818));
+			if (*(bool*)(&this.Ⴈ))
+			{
+				return false;
+			}
+			try
+			{
+				ႳႨႭ.Ⴐ ⴐ = new ႳႨႭ.Ⴐ();
+				*(bool*)(&this.Ⴈ) = true;
+				return ⴐ.ႰႨႨ(Ⴍ: false);
+			}
+			finally
+			{
+				*(bool*)(&this.Ⴈ) = false;
+			}
+		}
+
+		public void PlayAudio(string fileName)
+		{
+			if (ႥႥႳႰ.Ⴍ.Ⴓ || State == ႷႭႨ.Ⴐ.Ⴓ)
+			{
+				try
+				{
+					((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႣႭ(fileName);
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679817), ⴓ);
+				}
+			}
+		}
+
+		public void PlayAudio(MemoryStream audioFileStream)
+		{
+			if (ႥႥႳႰ.Ⴍ.Ⴓ || State == ႷႭႨ.Ⴐ.Ⴓ)
+			{
+				try
+				{
+					((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႣႤ(audioFileStream);
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679817), ⴓ);
+				}
+			}
+		}
+
+		public void PlaySoundOnPC(string fileName)
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႨ(fileName);
+		}
+
+		public void StopPlayingSoundsOnPC()
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႥႳ();
+		}
+
+		public void StopAudio()
+		{
+			try
+			{
+				((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႷႤ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679816), ⴓ);
+			}
+		}
+
+		public void PauseAudio()
+		{
+			try
+			{
+				((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႷႼ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679823), ⴓ);
+			}
+		}
+
+		public void ResumeAudio()
+		{
+			try
+			{
+				((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႥႰ();
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679822), ⴓ);
+			}
+		}
+
+		private void ႨႷႼ()
+		{
+			//Discarded unreachable code: IL_0002, IL_001f, IL_003e
+			if (this.Ⴐ == null)
+			{
+				return;
+			}
+			if ((415 + 415 * 415) % 2 == 0)
+			{
+				do
+				{
+					this.Ⴐ();
+				}
+				while (383 < 383 - 321);
+			}
+		}
+
+		private void ႨႥႰ()
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					return;
+				default:
+					num = ((this.Ⴈ != null) ? 1 : 2);
+					break;
+				case 1:
+					this.Ⴈ();
+					num = 2;
+					break;
+				}
+			}
+		}
+
+		public void StartRecording()
+		{
+			this.Ⴐ = (ListeningEventDelegate)(object)Path.ChangeExtension(Path.GetTempFileName(), ႰႼႭ.Ⴍ.ႳႭႨ(137679821));
+			ႥႥႨ.Ⴗ.ႳႥ(ႰႼႭ.Ⴍ.ႳႭႨ(137679820), this.Ⴐ);
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႥ((string)(object)this.Ⴐ);
+		}
+
+		private void ႳႠ(long Ⴍ, bool Ⴓ)
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((this.Ⴐ != null) ? 2 : 0);
+					break;
+				case 2:
+					this.Ⴐ(Ⴍ, Ⴓ);
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		public void StopRecording()
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႥႭ();
+		}
+
+		public void CropFileToMaxAllowedTime(string sourceFile, string destFile)
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႳႭ(sourceFile, destFile);
+		}
+
+		public unsafe void ToggleMute()
+		{
+			if (!(*(bool*)(&this.Ⴓ)))
+			{
+				short volume = Volume;
+				if (volume != 0)
+				{
+					*(short*)(&this.Ⴐ) = volume;
+				}
+				Ⴃ = true;
+				try
+				{
+					Volume = 0;
+				}
+				finally
+				{
+					Ⴃ = false;
+				}
+			}
+			else
+			{
+				Volume = (short)((*(short*)(&this.Ⴐ) == 0) ? 25 : (*(short*)(&this.Ⴐ)));
+			}
+		}
+
+		public int GetAudioFileLength(string fileName)
+		{
+			try
+			{
+				return ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႰ(fileName);
+			}
+			catch
+			{
+				return 0;
+			}
+		}
+
+		public ႷႭႳ.Ⴅ[] GetSilenceSegments(string fileName)
+		{
+			return ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႭႣ(fileName);
+		}
+
+		private void ႨႥႨ()
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((Ⴈ != null) ? 2 : 0);
+					break;
+				case 2:
+					Ⴈ();
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		private void ႨႥႳ()
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					return;
+				default:
+					num = ((Ⴐ != null) ? 1 : 2);
+					break;
+				case 1:
+					Ⴐ();
+					num = 2;
+					break;
+				}
+			}
+		}
+
+		private void ႨႥႷ()
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((this.Ⴓ == null) ? 1 : 2);
+					break;
+				case 2:
+					this.Ⴓ();
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		public void StartListening(string fileName)
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႤႠ(fileName);
+		}
+
+		public void AddListenEffect(AudioEffects effect)
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႤႳ(effect);
+		}
+
+		public void RemoveListenEffect(AudioEffects effect)
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႤႷ(effect);
+		}
+
+		public void SetListeningEffect(AudioEffects effect, params float[] effectParams)
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႳႼ(effect, effectParams);
+		}
+
+		public void StopListening()
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႠႳ();
+		}
+
+		private void ႨႥႥ()
+		{
+			//Discarded unreachable code: IL_0002, IL_001e, IL_003e
+			while (Ⴓ != null)
+			{
+				if (936 >= 936 - 655)
+				{
+					Ⴓ();
+					if ((405 + 405 * 405) % 2 == 0)
+					{
+						break;
+					}
+				}
+			}
+		}
+
+		public void StartDirectPlayback(string fileName)
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႤႭ(fileName);
+		}
+
+		public void StopDirectPlayback()
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႠႷ();
+		}
+
+		public void PauseDirectPlayback()
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႠႥ();
+		}
+
+		public void ResumeDirectPlayback()
+		{
+			((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႠႠ();
+		}
+
+		public float[] GetDirectPlaybackData()
+		{
+			return ((ႥႼႥ.Ⴅ)(object)this.Ⴐ).ႨႠႣ();
+		}
+
+		public void Pause()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679811));
+			ႨႣႠ(Ⴍ: true);
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679810));
+		}
+
+		public unsafe void Resume()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679809));
+			Initialize(*(int*)(&this.Ⴅ), Ⴅ, dontReinitSound: true);
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679810));
+		}
+
+		public void Dispose()
+		{
+			Dispose(disposing: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected void Dispose(bool disposing)
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (Ⴜ ? 3 : 4);
+					break;
+				case 4:
+					num = (disposing ? 1 : 0);
+					break;
+				case 1:
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679808));
+					ႨႣႠ(Ⴍ: false);
+					num = 0;
+					break;
+				case 0:
+					num = 3;
+					break;
+				case 3:
+					Ⴜ = true;
+					return;
+				}
+			}
+		}
+
+		private void <Initialize>b__0()
+		{
+			ႳႣ = new HWConnectorWindow();
+			ႳႣ.DeviceChange += ႰႨႷ;
+		}
+
+		private void <Uninitialize>b__2()
+		{
+			ႳႣ.Close();
+		}
+
+		private unsafe void <StartDeviceMonitoring>b__4()
+		{
+			*(IntPtr*)(&this.Ⴐ) = HIDDevice.RegisterForUsbEvents(ႳႣ.Handle, HIDDevice.HIDGuid);
+		}
+
+		private unsafe void <StopDeviceMonitoring>b__6()
+		{
+			HIDDevice.UnregisterForUsbEvents(*(IntPtr*)(&this.Ⴐ));
+		}
+	}
+	public class HWConnectorWindow : Form
+	{
+		public delegate void DeviceChangeDelegate(Message msg);
+
+		private DeviceChangeDelegate Ⴈ;
+
+		private IContainer Ⴈ = null;
+
+		public event DeviceChangeDelegate DeviceChange
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴈ = (IContainer)(object)(DeviceChangeDelegate)Delegate.Combine((Delegate)this.Ⴈ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴈ = (IContainer)(object)(DeviceChangeDelegate)Delegate.Remove((Delegate)this.Ⴈ, value);
+			}
+		}
+
+		public HWConnectorWindow()
+		{
+			ႭႨ();
+		}
+
+		protected override void WndProc(ref Message msg)
+		{
+			try
+			{
+				if (msg.Msg == 537 && this.Ⴈ != null)
+				{
+					this.Ⴈ(msg);
+				}
+				base.WndProc(ref msg);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+		}
+
+		protected override void Dispose(bool disposing)
+		{
+			int num = 6;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num = ((!disposing) ? 2 : 0);
+					break;
+				case 0:
+					num2 = ((Ⴈ == null) ? 1 : 0);
+					goto IL_003a;
+				case 2:
+					num2 = 1;
+					goto IL_003a;
+				case 5:
+					num = ((Ⴈ != null) ? 1 : 4);
+					break;
+				case 1:
+					Ⴈ.Dispose();
+					num = 4;
+					break;
+				case 4:
+					num = 3;
+					break;
+				case 3:
+					{
+						base.Dispose(disposing);
+						return;
+					}
+					IL_003a:
+					num = ((num2 != 0) ? 3 : 5);
+					break;
+				}
+			}
+		}
+
+		private void ႭႨ()
+		{
+			Ⴈ = new Container();
+			base.AutoScaleMode = AutoScaleMode.Font;
+			Text = ႰႼႭ.Ⴍ.ႳႭႨ(137679771);
+		}
+	}
+	public class ParameterizedHardwareCodeData : HardwareCodeData
+	{
+		public ParameterizedHardwareCodeData(byte header, byte code, byte subCode, int positionInMovementCommand)
+			: base(header, code, subCode, 1, hasParameter: true, positionInMovementCommand)
+		{
+		}
+
+		public override byte[] ToArray(object parameter)
+		{
+			byte[] second = parameter as byte[];
+			return Enumerable.Concat(new byte[2]
+			{
+				header,
+				code
+			}, second).ToArray();
+		}
+
+		public override int ToArray(object parameter, byte[] targetBuffer, int position)
+		{
+			targetBuffer[position] = header;
+			targetBuffer[++position] = code;
+			byte[] array = parameter as byte[];
+			array.CopyTo(targetBuffer, ++position);
+			return 2 + array.Length;
+		}
+	}
+	public class SimpleHardwareCodeData : HardwareCodeData
+	{
+		public SimpleHardwareCodeData(byte header, byte code, byte subCode, int positionInMovementCommand)
+			: base(header, code, subCode, 1, hasParameter: false, positionInMovementCommand)
+		{
+		}
+
+		public override byte[] ToArray(object parameter)
+		{
+			return new byte[2]
+			{
+				header,
+				code
+			};
+		}
+
+		public override int ToArray(object parameter, byte[] targetBuffer, int position)
+		{
+			targetBuffer[position] = header;
+			targetBuffer[++position] = code;
+			return 2;
+		}
+	}
+	public class SubCodedHardwareCodeData : HardwareCodeData
+	{
+		public SubCodedHardwareCodeData(byte header, byte code, byte subCode, int positionInMovementCommand)
+			: base(header, code, subCode, 2, hasParameter: false, positionInMovementCommand)
+		{
+		}
+
+		public override byte[] ToArray(object parameter)
+		{
+			return new byte[3]
+			{
+				header,
+				code,
+				subCode
+			};
+		}
+
+		public override int ToArray(object parameter, byte[] targetBuffer, int position)
+		{
+			//Discarded unreachable code: IL_003a, IL_0049, IL_0068
+			int result;
+			while (true)
+			{
+				if (!ႥႥႳႰ.Ⴍ.Ⴃ)
+				{
+					targetBuffer[position] = header;
+					targetBuffer[++position] = code;
+					targetBuffer[++position] = subCode;
+					result = 3;
+					if (207 >= 207 - 50)
+					{
+						break;
+					}
+				}
+				else
+				{
+					if (false)
+					{
+						continue;
+					}
+					targetBuffer[position] = subCode;
+				}
+				result = 1;
+				break;
+			}
+			return result;
+		}
+	}
+	public class ThreeByteParameterizedHardwareCodeData : HardwareCodeData
+	{
+		public ThreeByteParameterizedHardwareCodeData(byte header, byte code, byte subCode, int positionInMovementCommand)
+			: base(header, code, subCode, 1, hasParameter: true, positionInMovementCommand)
+		{
+		}
+
+		public override byte[] ToArray(object parameter)
+		{
+			int num = 3;
+			int num2 = default(int);
+			byte[] result = default(byte[]);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num2 = (int)parameter;
+					num = (ႥႥႳႰ.Ⴍ.Ⴃ ? 1 : 2);
+					break;
+				case 1:
+					result = new byte[3]
+					{
+						(byte)(num2 >> 16),
+						(byte)(num2 >> 8),
+						(byte)num2
+					};
+					num = 0;
+					break;
+				case 2:
+					result = new byte[5]
+					{
+						header,
+						code,
+						(byte)(num2 >> 16),
+						(byte)(num2 >> 8),
+						(byte)num2
+					};
+					num = 0;
+					break;
+				case 0:
+					return result;
+				}
+			}
+		}
+
+		public override int ToArray(object parameter, byte[] targetBuffer, int position)
+		{
+			int num = 2;
+			int num2 = default(int);
+			int result = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num2 = Convert.ToInt32(parameter);
+					num = (ႥႥႳႰ.Ⴍ.Ⴃ ? 1 : 0);
+					break;
+				case 1:
+					targetBuffer[position] = (byte)num2;
+					targetBuffer[++position] = (byte)(num2 >> 8);
+					targetBuffer[++position] = (byte)(num2 >> 16);
+					result = 3;
+					num = 3;
+					break;
+				case 0:
+					targetBuffer[position] = header;
+					targetBuffer[++position] = code;
+					targetBuffer[++position] = (byte)num2;
+					targetBuffer[++position] = (byte)(num2 >> 8);
+					targetBuffer[++position] = (byte)(num2 >> 16);
+					result = 5;
+					num = 3;
+					break;
+				case 3:
+					return result;
+				}
+			}
+		}
+	}
+}
+namespace Rondyo.Chatman.HWConnector.USBEngine
+{
+	public class ChatmanDevice : HIDDevice
+	{
+		private DataReceivedDelegate Ⴐ;
+
+		public event DataReceivedDelegate DataReceived
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				Ⴐ = (DataReceivedDelegate)Delegate.Combine(Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				Ⴐ = (DataReceivedDelegate)Delegate.Remove(Ⴐ, value);
+			}
+		}
+
+		public static ChatmanDevice FindChatmanAndAttach(int deviceIndex)
+		{
+			return (ChatmanDevice)HIDDevice.FindDeviceAndAttach(1241, 41040, 10274, deviceIndex, typeof(ChatmanDevice));
+		}
+
+		public override void HandleDataReceived(byte[] data)
+		{
+			//Discarded unreachable code: IL_0002, IL_001f, IL_0039
+			bool flag = Ⴐ == null;
+			while (!flag)
+			{
+				if (110 > 110 - 19)
+				{
+					Ⴐ(data);
+				}
+				if (false)
+				{
+					continue;
+				}
+				break;
+			}
+		}
+	}
+	public delegate void DataReceivedDelegate(byte[] data);
+	public abstract class HIDDevice : IHIDDevice, IDisposable
+	{
+		public const int WM_DEVICECHANGE = 537;
+
+		public const int DBT_DEVNODES_CHANGED = 7;
+
+		public const int DBT_DEVICEARRIVAL = 32768;
+
+		public const int DBT_DEVICEREMOVECOMPLETE = 32772;
+
+		public const int DBT_DEVTYP_DEVICEINTERFACE = 5;
+
+		protected const int DIGCF_PRESENT = 2;
+
+		protected const int DIGCF_DEVICEINTERFACE = 16;
+
+		protected const int DEVTYP_DEVICEINTERFACE = 5;
+
+		protected const int DEVICE_NOTIFY_WINDOW_HANDLE = 0;
+
+		protected const uint PURGE_TXABORT = 1u;
+
+		protected const uint PURGE_RXABORT = 2u;
+
+		protected const uint PURGE_TXCLEAR = 4u;
+
+		protected const uint PURGE_RXCLEAR = 8u;
+
+		protected const uint GENERIC_READ = 2147483648u;
+
+		protected const uint GENERIC_WRITE = 1073741824u;
+
+		protected const uint FILE_FLAG_OVERLAPPED = 1073741824u;
+
+		protected const uint OPEN_EXISTING = 3u;
+
+		protected const uint ERROR_IO_PENDING = 997u;
+
+		protected const uint INFINITE = uint.MaxValue;
+
+		protected const uint FILE_SHARE_READ = 1u;
+
+		protected const uint FILE_SHARE_WRITE = 2u;
+
+		private int Ⴈ;
+
+		private int Ⴐ;
+
+		private SafeFileHandle Ⴈ;
+
+		private SafeHandle Ⴈ;
+
+		private SafeHandle Ⴐ;
+
+		private bool Ⴈ = false;
+
+		private bool Ⴐ = false;
+
+		private string Ⴍ;
+
+		private bool Ⴗ;
+
+		private WinApiDeclarations.OVERLAPPED Ⴍ;
+
+		private int Ⴗ;
+
+		private byte[] Ⴍ;
+
+		public static IntPtr NullHandle = IntPtr.Zero;
+
+		protected static IntPtr InvalidHandleValue = new IntPtr(-1);
+
+		public unsafe int OutputReportLength => *(int*)(&this.Ⴐ);
+
+		public unsafe int InputReportLength => *(int*)(&this.Ⴈ);
+
+		public static Guid HIDGuid
+		{
+			get
+			{
+				WinApiDeclarations.HidD_GetHidGuid(out Guid gHid);
+				return gHid;
+			}
+		}
+
+		public unsafe HIDDevice()
+		{
+			*(bool*)(&this.Ⴗ) = false;
+			*(WinApiDeclarations.OVERLAPPED*)(&this.Ⴍ) = default(WinApiDeclarations.OVERLAPPED);
+			Ⴗ = 0;
+			Ⴍ = new byte[18];
+			base..ctor();
+		}
+
+		private unsafe short ႠႳ(string Ⴍ, bool Ⴓ)
+		{
+			try
+			{
+				WinApiDeclarations.SECURITY_ATTRIBUTES lpSecurity = default(WinApiDeclarations.SECURITY_ATTRIBUTES);
+				lpSecurity.lpSecurityDescriptor = 0;
+				lpSecurity.bInheritHandle = Convert.ToInt32(value: true);
+				lpSecurity.nLength = Marshal.SizeOf(lpSecurity);
+				*(SafeFileHandle*)(&this.Ⴈ) = WinApiDeclarations.CreateFile(Ⴍ, 0u, 3u, ref lpSecurity, 3u, 0u, IntPtr.Zero);
+				*(SafeFileHandle*)(&this.Ⴐ) = WinApiDeclarations.CreateFile(Ⴍ, 2147483648u, 3u, ref lpSecurity, 3u, 1073741824u, IntPtr.Zero);
+				*(SafeFileHandle*)(&this.Ⴈ) = WinApiDeclarations.CreateFile(Ⴍ, 1073741824u, 3u, ref lpSecurity, 3u, 0u, IntPtr.Zero);
+				ႥႥႨ.Ⴗ.ႳႭ(ႰႼႭ.Ⴍ.ႳႭႨ(137679815), ((SafeFileHandle*)(&this.Ⴈ))->DangerousGetHandle());
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679814), ⴓ);
+				throw;
+			}
+			this.Ⴍ = (byte[])(object)Ⴍ;
+			if (!((SafeFileHandle*)(&this.Ⴈ))->IsInvalid)
+			{
+				if (WinApiDeclarations.HidD_GetPreparsedData(*(SafeFileHandle*)(&this.Ⴈ), out IntPtr lpData))
+				{
+					try
+					{
+						WinApiDeclarations.HidP_GetCaps(lpData, out WinApiDeclarations.HidCaps oCaps);
+						*(int*)(&this.Ⴈ) = oCaps.InputReportByteLength;
+						*(int*)(&this.Ⴐ) = oCaps.OutputReportByteLength;
+						ႥႥႨ.Ⴗ.ႳႭ(ႰႼႭ.Ⴍ.ႳႭႨ(137679812), Ⴓ);
+						return oCaps.UsagePage;
+					}
+					catch (Exception ⴓ)
+					{
+						ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679866), ⴓ);
+						throw;
+					}
+					finally
+					{
+						WinApiDeclarations.HidD_FreePreparsedData(ref lpData);
+					}
+				}
+				throw HIDDeviceException.GenerateWithWinError(ႰႼႭ.Ⴍ.ႳႭႨ(137679865));
+			}
+			*(@null*)(&this.Ⴈ) = null;
+			*(@null*)(&this.Ⴐ) = null;
+			*(@null*)(&this.Ⴈ) = null;
+			throw HIDDeviceException.GenerateWithWinError(ႰႼႭ.Ⴍ.ႳႭႨ(137679864));
+		}
+
+		internal unsafe void ႠႠ(ref WinApiDeclarations.OVERLAPPED Ⴍ, ref int Ⴓ)
+		{
+			WinApiDeclarations.SECURITY_ATTRIBUTES SecurityAttributes = default(WinApiDeclarations.SECURITY_ATTRIBUTES);
+			try
+			{
+				SecurityAttributes.lpSecurityDescriptor = 0;
+				SecurityAttributes.bInheritHandle = Convert.ToInt32(value: true);
+				SecurityAttributes.nLength = Marshal.SizeOf(SecurityAttributes);
+				Ⴓ = WinApiDeclarations.CreateEvent(ref SecurityAttributes, Convert.ToInt32(value: false), Convert.ToInt32(value: false), ႰႼႭ.Ⴍ.ႳႭႨ(137679813));
+				Ⴍ.Offset = 0;
+				Ⴍ.OffsetHigh = 0;
+				Ⴍ.hEvent = Ⴓ;
+				*(bool*)(&this.Ⴗ) = true;
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679867), ⴓ);
+				throw;
+			}
+		}
+
+		public void StopReading()
+		{
+			Ⴈ = true;
+		}
+
+		public unsafe void DoReadAsync(ManualResetEvent abortEvent)
+		{
+			int lpNumberOfBytesRead = 0;
+			long num = 0L;
+			if (Ⴐ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679871));
+				return;
+			}
+			Ⴐ = true;
+			try
+			{
+				if (!((SafeFileHandle*)(&this.Ⴈ))->IsInvalid)
+				{
+					if (!(*(bool*)(&this.Ⴗ)))
+					{
+						ႠႠ(ref *(WinApiDeclarations.OVERLAPPED*)(&this.Ⴍ), ref Ⴗ);
+					}
+					bool flag = false;
+					byte[] array = new byte[*(int*)(&this.Ⴈ)];
+					GCHandle gCHandle = GCHandle.Alloc(array, GCHandleType.Pinned);
+					try
+					{
+						while (!ႥႥႨႣ.Ⴀ.Ⴐ)
+						{
+							if (flag)
+							{
+								gCHandle.Free();
+								array = new byte[*(int*)(&this.Ⴈ)];
+								gCHandle = GCHandle.Alloc(array, GCHandleType.Pinned);
+								flag = false;
+							}
+							ႠႠ(ref *(WinApiDeclarations.OVERLAPPED*)(&this.Ⴍ), ref Ⴗ);
+							int num2 = WinApiDeclarations.ReadFile(*(SafeHandle*)(&this.Ⴐ), gCHandle.AddrOfPinnedObject(), array.Length, ref lpNumberOfBytesRead, ref *(WinApiDeclarations.OVERLAPPED*)(&this.Ⴍ));
+							int lastWin32Error = Marshal.GetLastWin32Error();
+							if (num2 != 0)
+							{
+								flag = true;
+								HandleDataReceived(array);
+							}
+							else if (lastWin32Error == 997)
+							{
+								num = WinApiDeclarations.WaitForMultipleObjects(3u, new IntPtr[3]
+								{
+									ႥႥႨႣ.Ⴀ.Ⴈ.Handle,
+									new IntPtr(Ⴗ),
+									abortEvent.Handle
+								}, bWaitAll: false, 2147483647u);
+								if (num < 258)
+								{
+									flag = true;
+									HandleDataReceived(array);
+								}
+							}
+						}
+					}
+					finally
+					{
+						gCHandle.Free();
+					}
+				}
+			}
+			catch (ThreadAbortException)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679869));
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679868), ⴓ);
+			}
+			finally
+			{
+				Ⴐ = false;
+				Ⴈ = false;
+			}
+		}
+
+		public unsafe bool WriteData(byte[] data)
+		{
+			try
+			{
+				int lpNumberOfBytesWritten = 0;
+				WinApiDeclarations.WriteFile(*(SafeHandle*)(&this.Ⴈ), ref data[0], data.Length, ref lpNumberOfBytesWritten, 0);
+				return true;
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679870), ⴓ);
+				return false;
+			}
+		}
+
+		public abstract void HandleDataReceived(byte[] data);
+
+		protected virtual void HandleDeviceRemoved()
+		{
+		}
+
+		private static string ႠႨ(IntPtr Ⴍ, ref WinApiDeclarations.DeviceInterfaceData Ⴓ)
+		{
+			int num = 2;
+			uint nRequiredSize = default(uint);
+			WinApiDeclarations.DeviceInterfaceDetailData oDetailData = default(WinApiDeclarations.DeviceInterfaceDetailData);
+			string result = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					nRequiredSize = 0u;
+					num = ((!WinApiDeclarations.SetupDiGetDeviceInterfaceDetail(Ⴍ, ref Ⴓ, IntPtr.Zero, 0u, ref nRequiredSize, IntPtr.Zero)) ? 5 : 0);
+					break;
+				case 5:
+					oDetailData = default(WinApiDeclarations.DeviceInterfaceDetailData);
+					oDetailData.Size = 5;
+					num = (WinApiDeclarations.SetupDiGetDeviceInterfaceDetail(Ⴍ, ref Ⴓ, ref oDetailData, nRequiredSize, ref nRequiredSize, IntPtr.Zero) ? 1 : 4);
+					break;
+				case 1:
+					result = oDetailData.DevicePath;
+					num = 3;
+					break;
+				case 4:
+					num = 0;
+					break;
+				case 0:
+					result = null;
+					num = 3;
+					break;
+				case 3:
+					return result;
+				}
+			}
+		}
+
+		public unsafe void GetManufacturerAndProductInformation(out string manufacturer, out string product)
+		{
+			int num = 126;
+			byte[] array = new byte[num];
+			WinApiDeclarations.HidD_GetManufacturerString(*(SafeFileHandle*)(&this.Ⴈ), array, num);
+			manufacturer = ႰႨႷ(array);
+			WinApiDeclarations.HidD_GetProductString(*(SafeFileHandle*)(&this.Ⴈ), array, num);
+			product = ႰႨႷ(array);
+		}
+
+		private string ႰႨႷ(byte[] Ⴍ)
+		{
+			int num = 5;
+			int count = default(int);
+			int num2 = default(int);
+			while (true)
+			{
+				int num3;
+				switch (num)
+				{
+				default:
+					count = 0;
+					num2 = 0;
+					num = 6;
+					break;
+				case 4:
+					num = ((Ⴍ[num2] != 0) ? 2 : 3);
+					break;
+				case 3:
+					num3 = ((Ⴍ[num2 + 1] != 0) ? 1 : 0);
+					goto IL_004e;
+				case 2:
+					num3 = 1;
+					goto IL_004e;
+				case 7:
+					count = num2;
+					num = 1;
+					break;
+				case 0:
+					num2 += 2;
+					num = 6;
+					break;
+				case 6:
+					num = ((num2 >= Ⴍ.Length) ? 1 : 4);
+					break;
+				case 1:
+					{
+						return new UnicodeEncoding().GetString(Ⴍ, 0, count);
+					}
+					IL_004e:
+					num = ((num3 == 0) ? 7 : 0);
+					break;
+				}
+			}
+		}
+
+		internal bool ႰႨႣ(Message Ⴀ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0023, IL_003f, IL_00a7, IL_00cb, IL_0114
+			bool result = default(bool);
+			int num = default(int);
+			string text = default(string);
+			while (true)
+			{
+				WinApiDeclarations.DEV_BROADCAST_DEVICEINTERFACE_1 dEV_BROADCAST_DEVICEINTERFACE_ = new WinApiDeclarations.DEV_BROADCAST_DEVICEINTERFACE_1();
+				WinApiDeclarations.DEV_BROADCAST_HDR dEV_BROADCAST_HDR = new WinApiDeclarations.DEV_BROADCAST_HDR();
+				Marshal.PtrToStructure(Ⴀ.LParam, dEV_BROADCAST_HDR);
+				if (dEV_BROADCAST_HDR.dbch_devicetype != 5)
+				{
+					result = false;
+					if (422 >= 422 - 353)
+					{
+						break;
+					}
+					goto IL_00a9;
+				}
+				if (651 > 651 - 477)
+				{
+					num = Convert.ToInt32((dEV_BROADCAST_HDR.dbch_size - 28) / 2);
+					dEV_BROADCAST_DEVICEINTERFACE_.dbcc_name = new byte[(num + 1) * 2];
+					goto IL_0062;
+				}
+				break;
+				IL_00a9:
+				text = text.Remove(text.Length - 2);
+				if (344 >= 344 - 218)
+				{
+					goto IL_0028;
+				}
+				goto IL_0062;
+				IL_0028:
+				result = (string.Compare(text, (string)(object)this.Ⴍ, ignoreCase: true) == 0);
+				break;
+				IL_0062:
+				Marshal.PtrToStructure(Ⴀ.LParam, dEV_BROADCAST_DEVICEINTERFACE_);
+				text = Encoding.Unicode.GetString(dEV_BROADCAST_DEVICEINTERFACE_.dbcc_name, 0, num * 2);
+				if (text[text.Length - 2] != 0)
+				{
+					goto IL_0028;
+				}
+				if (14 <= 14 - 6)
+				{
+					continue;
+				}
+				goto IL_00a9;
+			}
+			return result;
+		}
+
+		public static IHIDDevice FindDeviceAndAttach(int nVid, int nPid, int nPid2, int deviceIndex, Type oType)
+		{
+			string empty = string.Empty;
+			string value = string.Format(ႰႼႭ.Ⴍ.ႳႭႨ(137679859), nVid, nPid);
+			WinApiDeclarations.HidD_GetHidGuid(out Guid gHid);
+			IntPtr intPtr = WinApiDeclarations.SetupDiGetClassDevs(ref gHid, null, IntPtr.Zero, 18u);
+			try
+			{
+				WinApiDeclarations.DeviceInterfaceData oInterfaceData = default(WinApiDeclarations.DeviceInterfaceData);
+				oInterfaceData.Size = Marshal.SizeOf(oInterfaceData);
+				for (int i = deviceIndex * 2 + 1; WinApiDeclarations.SetupDiEnumDeviceInterfaces(intPtr, 0u, ref gHid, (uint)i, ref oInterfaceData); i++)
+				{
+					string text = ႠႨ(intPtr, ref oInterfaceData);
+					if (text.IndexOf(value) >= 0)
+					{
+						HIDDevice hIDDevice = Activator.CreateInstance(oType) as HIDDevice;
+						try
+						{
+							ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679858) + text);
+							if (hIDDevice.ႠႳ(text, Ⴓ: true) == -256)
+							{
+								ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679857) + text);
+								hIDDevice.GetManufacturerAndProductInformation(out string manufacturer, out string product);
+								ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679856) + manufacturer + ႰႼႭ.Ⴍ.ႳႭႨ(137679863) + product);
+								if (manufacturer == ႰႼႭ.Ⴍ.ႳႭႨ(137679862) && product.Contains(ႰႼႭ.Ⴍ.ႳႭႨ(137679861)))
+								{
+									return hIDDevice;
+								}
+								hIDDevice.Dispose();
+								hIDDevice = null;
+							}
+						}
+						catch (Exception ⴓ)
+						{
+							ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679860), ⴓ);
+							if (hIDDevice != null)
+							{
+								hIDDevice.Dispose();
+								hIDDevice = null;
+							}
+						}
+					}
+				}
+			}
+			finally
+			{
+				WinApiDeclarations.SetupDiDestroyDeviceInfoList(intPtr);
+			}
+			return null;
+		}
+
+		public virtual InputReport CreateInputReport()
+		{
+			return null;
+		}
+
+		public void Dispose()
+		{
+			Dispose(bDisposing: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected unsafe virtual void Dispose(bool bDisposing)
+		{
+			int num = 3;
+			while (true)
+			{
+				switch (num)
+				{
+				case 12:
+					return;
+				default:
+					num = ((!bDisposing) ? 12 : 14);
+					break;
+				case 14:
+					StopReading();
+					num = ((*(SafeFileHandle*)(&this.Ⴈ) == null) ? 10 : 5);
+					break;
+				case 5:
+					num = (((SafeFileHandle*)(&this.Ⴈ))->IsInvalid ? 2 : 9);
+					break;
+				case 9:
+					((SafeFileHandle*)(&this.Ⴈ))->Close();
+					*(@null*)(&this.Ⴈ) = null;
+					num = 2;
+					break;
+				case 2:
+					num = 10;
+					break;
+				case 10:
+					num = ((*(SafeHandle*)(&this.Ⴈ) != null) ? 1 : 8);
+					break;
+				case 1:
+					num = (((SafeHandle*)(&this.Ⴈ))->IsInvalid ? 13 : 11);
+					break;
+				case 11:
+					((SafeHandle*)(&this.Ⴈ))->Close();
+					*(@null*)(&this.Ⴈ) = null;
+					num = 13;
+					break;
+				case 13:
+					num = 8;
+					break;
+				case 8:
+					num = ((*(SafeHandle*)(&this.Ⴐ) != null) ? 7 : 0);
+					break;
+				case 7:
+					num = (((SafeHandle*)(&this.Ⴐ))->IsInvalid ? 4 : 6);
+					break;
+				case 6:
+					((SafeHandle*)(&this.Ⴐ))->Close();
+					*(@null*)(&this.Ⴐ) = null;
+					num = 4;
+					break;
+				case 4:
+					num = 0;
+					break;
+				case 0:
+					num = 12;
+					break;
+				}
+			}
+		}
+
+		public static IntPtr RegisterForUsbEvents(IntPtr hWnd, Guid gClass)
+		{
+			WinApiDeclarations.DeviceBroadcastInterface deviceBroadcastInterface = new WinApiDeclarations.DeviceBroadcastInterface();
+			deviceBroadcastInterface.Size = Marshal.SizeOf(deviceBroadcastInterface);
+			deviceBroadcastInterface.ClassGuid = gClass;
+			deviceBroadcastInterface.DeviceType = 5;
+			deviceBroadcastInterface.Reserved = 0;
+			return WinApiDeclarations.RegisterDeviceNotification(hWnd, deviceBroadcastInterface, 4u);
+		}
+
+		public static bool UnregisterForUsbEvents(IntPtr hHandle)
+		{
+			return WinApiDeclarations.UnregisterDeviceNotification(hHandle);
+		}
+	}
+	public class HIDDeviceException : ApplicationException
+	{
+		public HIDDeviceException(string strMessage)
+			: base(strMessage)
+		{
+		}
+
+		public static HIDDeviceException GenerateWithWinError(string strMessage)
+		{
+			return new HIDDeviceException(string.Format(ႰႼႭ.Ⴍ.ႳႭႨ(137679845), strMessage, Marshal.GetLastWin32Error()));
+		}
+	}
+	public interface IHIDDevice
+	{
+		int OutputReportLength
+		{
+			get;
+		}
+
+		void DoReadAsync(ManualResetEvent abortEvent);
+
+		bool WriteData(byte[] data);
+
+		void HandleDataReceived(byte[] data);
+	}
+	public abstract class InputReport : Report
+	{
+		public InputReport(IHIDDevice oDev)
+			: base(oDev)
+		{
+		}
+
+		public void SetData(byte[] arrData)
+		{
+			SetBuffer(arrData);
+			ProcessData();
+		}
+
+		public abstract void ProcessData();
+	}
+	public abstract class OutputReport : Report
+	{
+		public OutputReport(IHIDDevice oDev)
+			: base(oDev)
+		{
+			SetBuffer(new byte[oDev.OutputReportLength]);
+		}
+	}
+	public abstract class Report
+	{
+		private byte[] Ⴅ;
+
+		private int Ⴅ;
+
+		public unsafe byte[] Buffer => *(byte[]*)(&this.Ⴅ);
+
+		public int BufferLength => Ⴅ;
+
+		public Report(IHIDDevice oDev)
+		{
+		}
+
+		protected unsafe void SetBuffer(byte[] arrBytes)
+		{
+			*(byte[]*)(&this.Ⴅ) = arrBytes;
+			Ⴅ = ((byte[]*)(&this.Ⴅ))->Length;
+		}
+	}
+	public class WinApiDeclarations
+	{
+		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+		public class DEV_BROADCAST_DEVICEINTERFACE_1
+		{
+			public int dbcc_size;
+
+			public int dbcc_devicetype;
+
+			public int dbcc_reserved;
+
+			[MarshalAs(UnmanagedType.ByValArray, SizeConst = 16, ArraySubType = UnmanagedType.U1)]
+			public byte[] dbcc_classguid;
+
+			[MarshalAs(UnmanagedType.ByValArray, SizeConst = 255, ArraySubType = UnmanagedType.LPWStr)]
+			public byte[] dbcc_name;
+		}
+
+		[StructLayout(LayoutKind.Sequential)]
+		public class DEV_BROADCAST_HDR
+		{
+			public int dbch_size;
+
+			public int dbch_devicetype;
+
+			public int dbch_reserved;
+		}
+
+		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode, Pack = 1)]
+		public class DeviceBroadcastInterface
+		{
+			public int Size;
+
+			public int DeviceType;
+
+			public int Reserved;
+
+			public Guid ClassGuid;
+
+			[MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
+			public string Name;
+		}
+
+		[StructLayout(LayoutKind.Sequential, Pack = 1)]
+		public struct DeviceInterfaceData
+		{
+			public int Size;
+
+			public Guid InterfaceClassGuid;
+
+			public int Flags;
+
+			public int Reserved;
+		}
+
+		[StructLayout(LayoutKind.Sequential, Pack = 1)]
+		public struct DeviceInterfaceDetailData
+		{
+			public int Size;
+
+			[MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
+			public string DevicePath;
+		}
+
+		[StructLayout(LayoutKind.Sequential, Pack = 1)]
+		public struct HidCaps
+		{
+			public short Usage;
+
+			public short UsagePage;
+
+			public short InputReportByteLength;
+
+			public short OutputReportByteLength;
+
+			public short FeatureReportByteLength;
+
+			[MarshalAs(UnmanagedType.ByValArray, SizeConst = 17)]
+			public short[] Reserved;
+
+			public short NumberLinkCollectionNodes;
+
+			public short NumberInputButtonCaps;
+
+			public short NumberInputValueCaps;
+
+			public short NumberInputDataIndices;
+
+			public short NumberOutputButtonCaps;
+
+			public short NumberOutputValueCaps;
+
+			public short NumberOutputDataIndices;
+
+			public short NumberFeatureButtonCaps;
+
+			public short NumberFeatureValueCaps;
+
+			public short NumberFeatureDataIndices;
+		}
+
+		public struct OVERLAPPED
+		{
+			public int Internal;
+
+			public int InternalHigh;
+
+			public int Offset;
+
+			public int OffsetHigh;
+
+			public int hEvent;
+		}
+
+		public struct SECURITY_ATTRIBUTES
+		{
+			public int nLength;
+
+			public int lpSecurityDescriptor;
+
+			public int bInheritHandle;
+		}
+
+		[StructLayout(LayoutKind.Sequential, Pack = 1)]
+		public struct UsbDeviceDescriptor
+		{
+			public byte bLength;
+
+			public byte bDescriptorType;
+
+			public short bcdUSB;
+
+			public byte bDeviceClass;
+
+			public byte bDeviceSubClass;
+
+			public byte bDeviceProtocol;
+
+			public byte bMaxPacketSize0;
+
+			public short idVendor;
+
+			public short idProduct;
+
+			public short bcdDevice;
+
+			public byte iManufacturer;
+
+			public byte iProduct;
+
+			public byte iSerialNumber;
+
+			public byte bNumConfigurations;
+		}
+
+		public const uint GENERIC_READ = 2147483648u;
+
+		public const uint GENERIC_WRITE = 1073741824u;
+
+		public const uint FILE_SHARE_READ = 1u;
+
+		public const uint FILE_SHARE_WRITE = 2u;
+
+		public const uint FILE_FLAG_OVERLAPPED = 1073741824u;
+
+		public const int INVALID_HANDLE_VALUE = -1;
+
+		public const short OPEN_EXISTING = 3;
+
+		public const int WAIT_TIMEOUT = 258;
+
+		public const short WAIT_OBJECT_0 = 0;
+
+		public const short ERROR_IO_PENDING = 997;
+
+		public const uint INFINITE = 2147483647u;
+
+		[DllImport("hid.dll", SetLastError = true)]
+		public static extern void HidD_GetHidGuid(out Guid gHid);
+
+		[DllImport("setupapi.dll", SetLastError = true)]
+		public static extern IntPtr SetupDiGetClassDevs(ref Guid gClass, [MarshalAs(UnmanagedType.LPStr)] string strEnumerator, IntPtr hParent, uint nFlags);
+
+		[DllImport("setupapi.dll", SetLastError = true)]
+		public static extern int SetupDiDestroyDeviceInfoList(IntPtr lpInfoSet);
+
+		[DllImport("setupapi.dll", SetLastError = true)]
+		public static extern bool SetupDiEnumDeviceInterfaces(IntPtr lpDeviceInfoSet, uint nDeviceInfoData, ref Guid gClass, uint nIndex, ref DeviceInterfaceData oInterfaceData);
+
+		[DllImport("setupapi.dll", SetLastError = true)]
+		public static extern bool SetupDiGetDeviceInterfaceDetail(IntPtr lpDeviceInfoSet, ref DeviceInterfaceData oInterfaceData, IntPtr lpDeviceInterfaceDetailData, uint nDeviceInterfaceDetailDataSize, ref uint nRequiredSize, IntPtr lpDeviceInfoData);
+
+		[DllImport("setupapi.dll", SetLastError = true)]
+		public static extern bool SetupDiGetDeviceInterfaceDetail(IntPtr lpDeviceInfoSet, ref DeviceInterfaceData oInterfaceData, ref DeviceInterfaceDetailData oDetailData, uint nDeviceInterfaceDetailDataSize, ref uint nRequiredSize, IntPtr lpDeviceInfoData);
+
+		[DllImport("user32.dll", SetLastError = true)]
+		public static extern IntPtr RegisterDeviceNotification(IntPtr hwnd, DeviceBroadcastInterface oInterface, uint nFlags);
+
+		[DllImport("user32.dll", SetLastError = true)]
+		public static extern bool UnregisterDeviceNotification(IntPtr hHandle);
+
+		[DllImport("hid.dll", SetLastError = true)]
+		public static extern bool HidD_GetPreparsedData(SafeFileHandle hFile, out IntPtr lpData);
+
+		[DllImport("hid.dll", SetLastError = true)]
+		public static extern bool HidD_FreePreparsedData(ref IntPtr pData);
+
+		[DllImport("hid.dll", SetLastError = true)]
+		public static extern int HidP_GetCaps(IntPtr lpData, out HidCaps oCaps);
+
+		[DllImport("hid.dll", SetLastError = true)]
+		public static extern bool HidD_GetProductString(SafeFileHandle hFile, byte[] buffer, int bufferLength);
+
+		[DllImport("hid.dll", SetLastError = true)]
+		public static extern bool HidD_GetManufacturerString(SafeFileHandle hFile, byte[] buffer, int bufferLength);
+
+		[DllImport("kernel32.dll", SetLastError = true)]
+		public static extern SafeFileHandle CreateFile(string strName, uint nAccess, uint nShareMode, ref SECURITY_ATTRIBUTES lpSecurity, uint nCreationFlags, uint nAttributes, IntPtr lpTemplate);
+
+		[DllImport("kernel32.dll", SetLastError = true)]
+		public static extern int CloseHandle(IntPtr hFile);
+
+		[DllImport("kernel32.dll", SetLastError = true)]
+		public static extern bool DeviceIoControl(IntPtr hDevice, uint dwIoControlCode, IntPtr lpInBuffer, uint nInBufferSize, [Out] IntPtr lpOutBuffer, uint nOutBufferSize, ref uint lpBytesReturned, IntPtr lpOverlapped);
+
+		[DllImport("kernel32.dll")]
+		public static extern int WriteFile(SafeHandle hFile, ref byte lpBuffer, int nNumberOfBytesToWrite, ref int lpNumberOfBytesWritten, int lpOverlapped);
+
+		[DllImport("kernel32.dll", SetLastError = true)]
+		public static extern int ReadFile(SafeHandle hFile, IntPtr lpBuffer, int nNumberOfBytesToRead, ref int lpNumberOfBytesRead, ref OVERLAPPED lpOverlapped);
+
+		[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+		public static extern int CreateEvent(ref SECURITY_ATTRIBUTES SecurityAttributes, int bManualReset, int bInitialState, string lpName);
+
+		[DllImport("kernel32.dll", SetLastError = true)]
+		public static extern int WaitForSingleObject(int hHandle, int dwMilliseconds);
+
+		[DllImport("kernel32.dll")]
+		public static extern uint WaitForMultipleObjects(uint nCount, IntPtr[] lpHandles, bool bWaitAll, uint dwMilliseconds);
+
+		[DllImport("kernel32.dll", SetLastError = true)]
+		public static extern int GetOverlappedResult(SafeHandle hHandle, ref OVERLAPPED lpOverlapped, out int lpNumberOfBytesRead, bool bWait);
+	}
+}
+namespace ႥႼႥ
+{
+	internal static class Ⴀ
+	{
+		internal static HardwareCodeData[] Ⴐ = new HardwareCodeData[22]
+		{
+			new SimpleHardwareCodeData(0, 0, 0, 0),
+			new SubCodedHardwareCodeData(90, 129, 1, 2),
+			new SubCodedHardwareCodeData(90, 129, 2, 2),
+			new SubCodedHardwareCodeData(90, 129, 3, 2),
+			new SubCodedHardwareCodeData(90, 129, 4, 2),
+			new SubCodedHardwareCodeData(90, 130, 1, 3),
+			new SubCodedHardwareCodeData(90, 130, 2, 3),
+			new SubCodedHardwareCodeData(90, 130, 3, 3),
+			new SubCodedHardwareCodeData(90, 130, 4, 3),
+			new SubCodedHardwareCodeData(90, 131, 1, 4),
+			new SubCodedHardwareCodeData(90, 131, 2, 4),
+			new SubCodedHardwareCodeData(90, 131, 3, 4),
+			new SubCodedHardwareCodeData(90, 132, 1, -1),
+			new SubCodedHardwareCodeData(90, 132, 2, -1),
+			new ThreeByteParameterizedHardwareCodeData(90, 133, 0, 5),
+			new SimpleHardwareCodeData(90, 145, 0, -1),
+			new SimpleHardwareCodeData(90, 144, 0, -1),
+			new ParameterizedHardwareCodeData(90, 146, 0, -1),
+			new ParameterizedHardwareCodeData(90, 147, 0, -1),
+			new ParameterizedHardwareCodeData(90, 148, 0, -1),
+			new ParameterizedHardwareCodeData(90, 149, 0, -1),
+			new SimpleHardwareCodeData(90, 150, 0, -1)
+		};
+	}
+	internal sealed class Ⴅ : IDisposable
+	{
+		private int m_Ⴅ;
+
+		private int Ⴈ;
+
+		private int Ⴀ;
+
+		private SYNCPROC m_Ⴅ;
+
+		private SYNCPROC Ⴈ;
+
+		private RECORDPROC Ⴐ;
+
+		private bool Ⴐ;
+
+		private AudioActionStoppedDelegate Ⴐ;
+
+		private bool Ⴈ;
+
+		private int Ⴄ;
+
+		private GCHandle Ⴐ;
+
+		private bool Ⴓ;
+
+		private short Ⴐ;
+
+		private int Ⴐ;
+
+		private bool m_Ⴗ;
+
+		private AudioActionStoppedDelegate Ⴈ;
+
+		private ႷႭႷ.Ⴓ Ⴐ;
+
+		private int m_Ⴗ;
+
+		private long Ⴐ;
+
+		private long Ⴈ;
+
+		private string Ⴐ;
+
+		private string Ⴈ;
+
+		private List<ႷႭႳ.Ⴅ> Ⴐ;
+
+		private ႷႭႳ.Ⴅ Ⴐ;
+
+		private ListeningEventDelegate Ⴐ;
+
+		private ListeningEventDelegate Ⴈ;
+
+		private ListeningEventDelegate Ⴓ;
+
+		private RECORDPROC Ⴈ;
+
+		private SYNCPROC Ⴀ;
+
+		private int m_Ⴍ;
+
+		private int m_Ⴃ;
+
+		private int Ⴓ;
+
+		private Dictionary<AudioEffects, int> Ⴐ;
+
+		private string Ⴓ;
+
+		private bool m_Ⴅ;
+
+		private bool Ⴀ;
+
+		private int m_Ⴜ;
+
+		private int ႨႥ;
+
+		private int m_ႨႨ;
+
+		private SYNCPROC Ⴄ;
+
+		private bool m_Ⴃ;
+
+		private AudioActionStoppedDelegate Ⴓ;
+
+		private bool m_Ⴍ;
+
+		private DefaultOutputDevice Ⴐ;
+
+		public unsafe Ⴅ(int Ⴍ, bool Ⴓ)
+		{
+			*(int*)(&this.Ⴈ) = -1;
+			*(int*)(&this.Ⴀ) = -1;
+			*(bool*)(&this.Ⴓ) = false;
+			*(short*)(&this.Ⴐ) = 25;
+			this.Ⴐ = (DefaultOutputDevice)(-1);
+			*(long*)(&this.Ⴐ) = 0L;
+			*(long*)(&this.Ⴈ) = 0L;
+			*(ႷႭႳ.Ⴅ*)(&this.Ⴐ) = new ႷႭႳ.Ⴅ();
+			this.m_Ⴍ = -1;
+			this.m_Ⴃ = -1;
+			*(int*)(&this.Ⴓ) = -1;
+			*(Dictionary<AudioEffects, int>*)(&this.Ⴐ) = new Dictionary<AudioEffects, int>();
+			this.Ⴓ = (AudioActionStoppedDelegate)(object)string.Empty;
+			m_Ⴅ = false;
+			Ⴀ = false;
+			this.m_Ⴜ = 0;
+			ႨႥ = 15;
+			this.m_ႨႨ = -1;
+			this.m_Ⴃ = false;
+			base..ctor();
+			*(int*)(&this.m_Ⴅ) = Ⴍ;
+			ႥႭႭ(Ⴓ);
+		}
+
+		public DefaultOutputDevice ႨႷႰ()
+		{
+			return Ⴐ;
+		}
+
+		public void ႨႣႠ(DefaultOutputDevice Ⴍ)
+		{
+			Ⴐ = Ⴍ;
+		}
+
+		private unsafe void ႥႭႭ(bool Ⴍ)
+		{
+			*(int*)(&this.Ⴄ) = (this.m_Ⴗ = -1);
+			*(bool*)(&this.Ⴓ) = false;
+			BassNet.Registration(ႰႼႭ.Ⴍ.ႳႭႨ(137679770), ႰႼႭ.Ⴍ.ႳႭႨ(137679769));
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679768));
+			ႥႭႠ(Ⴍ);
+			*(SYNCPROC*)(&this.m_Ⴅ) = Ⴗ;
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679775));
+			ႨႥႷ();
+			ႨႠႨ();
+			this.Ⴈ = (RECORDPROC)(object)new SYNCPROC(this.Ⴍ);
+			*(RECORDPROC*)(&this.Ⴐ) = Ⴃ;
+			*(SYNCPROC*)(&this.Ⴀ) = ႨႰ;
+			Ⴈ = Ⴜ;
+			Ⴄ = ႨႨ;
+		}
+
+		internal bool ႥႭႥ(bool Ⴍ)
+		{
+			return ႥႭႤ(Ⴍ);
+		}
+
+		public unsafe bool ႥႭႤ(bool Ⴍ)
+		{
+			*(bool*)(&this.Ⴐ) = true;
+			try
+			{
+				if (*(bool*)(&this.Ⴈ))
+				{
+					ႨႷႠ();
+				}
+				if (this.m_Ⴗ)
+				{
+					ႨႥႣ();
+				}
+				ႨႠႭ();
+				ႥႭႭ(Ⴍ);
+				return true;
+			}
+			finally
+			{
+				*(bool*)(&this.Ⴐ) = false;
+			}
+		}
+
+		private unsafe void ႥႭႠ(bool Ⴍ)
+		{
+			int num = 6;
+			int num2 = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num2 = 0;
+					num = ((!Ⴍ) ? 11 : 7);
+					break;
+				case 7:
+					num2 = 3;
+					num = 11;
+					break;
+				case 11:
+					*(int*)(&this.Ⴈ) = ႳႠ(*(int*)(&this.m_Ⴅ), out *(int*)(&this.Ⴀ));
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679774) + ((int*)(&this.Ⴈ))->ToString() + ႰႼႭ.Ⴍ.ႳႭႨ(137679773) + ((int*)(&this.Ⴀ))->ToString());
+					num = 4;
+					break;
+				case 4:
+					num = (Bass.BASS_Init(*(int*)(&this.Ⴈ), 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero) ? 5 : 8);
+					break;
+				case 8:
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679772));
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679763));
+					num = ((num2 > 0) ? 2 : 0);
+					break;
+				case 2:
+					Thread.Sleep(2000);
+					num2--;
+					num = 4;
+					break;
+				case 0:
+					num = 5;
+					break;
+				case 5:
+					num = ((*(int*)(&this.Ⴀ) == *(int*)(&this.Ⴈ)) ? 9 : 3);
+					break;
+				case 3:
+					num = (Bass.BASS_Init(*(int*)(&this.Ⴀ), 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero) ? 1 : 10);
+					break;
+				case 10:
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679762));
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679761));
+					num = 1;
+					break;
+				case 1:
+					num = 9;
+					break;
+				case 9:
+					Bass.BASS_SetConfig(BASSConfig.BASS_CONFIG_BUFFER, 2500);
+					Bass.BASS_SetConfig(BASSConfig.BASS_CONFIG_UPDATEPERIOD, 50);
+					return;
+				}
+			}
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public unsafe void ႨႣႣ(AudioActionStoppedDelegate Ⴍ)
+		{
+			*(AudioActionStoppedDelegate*)(&this.Ⴐ) = (AudioActionStoppedDelegate)Delegate.Combine(*(AudioActionStoppedDelegate*)(&this.Ⴐ), Ⴍ);
+		}
+
+		private unsafe void ႨႷႠ()
+		{
+			//Discarded unreachable code: IL_001d, IL_0043
+			while (true)
+			{
+				*(bool*)(&this.Ⴈ) = false;
+				bool flag = *(AudioActionStoppedDelegate*)(&this.Ⴐ) == null;
+				while (true)
+				{
+					if (flag)
+					{
+						return;
+					}
+					if ((216 + 216 * 216) % 2 == 0)
+					{
+						(*(AudioActionStoppedDelegate*)(&this.Ⴐ))();
+						if (809 >= 809 - 353)
+						{
+							return;
+						}
+						continue;
+					}
+					break;
+				}
+			}
+		}
+
+		private string ႨႷႣ()
+		{
+			int num = 4;
+			BASS_DEVICEINFO[] array = default(BASS_DEVICEINFO[]);
+			short num2 = default(short);
+			BASS_DEVICEINFO bASS_DEVICEINFO = default(BASS_DEVICEINFO);
+			string result = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					array = Bass.BASS_GetDeviceInfos();
+					num2 = 0;
+					num = 7;
+					break;
+				case 2:
+					bASS_DEVICEINFO = array[num2];
+					num = ((!bASS_DEVICEINFO.IsDefault) ? 6 : 0);
+					break;
+				case 0:
+					num = (string.IsNullOrEmpty(bASS_DEVICEINFO.name) ? 8 : 3);
+					break;
+				case 3:
+					result = bASS_DEVICEINFO.name;
+					num = 1;
+					break;
+				case 8:
+					result = ႰႷႭ.Ⴍ.ႥႭႭ(num2);
+					num = 1;
+					break;
+				case 6:
+					num2 = (short)(num2 + 1);
+					num = 7;
+					break;
+				case 7:
+					num = ((num2 < array.Length) ? 2 : 5);
+					break;
+				case 5:
+					result = string.Empty;
+					num = 1;
+					break;
+				case 1:
+					return result;
+				}
+			}
+		}
+
+		private unsafe int ႳႠ(int Ⴍ, out int Ⴓ)
+		{
+			int num = 14;
+			int num4 = default(int);
+			int num2 = default(int);
+			BASS_DEVICEINFO[] array = default(BASS_DEVICEINFO[]);
+			short num3 = default(short);
+			string text = default(string);
+			int result;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num4 = 0;
+					num2 = -1;
+					Ⴓ = -1;
+					array = Bass.BASS_GetDeviceInfos();
+					num3 = 0;
+					num = 1;
+					continue;
+				case 15:
+					num = ((array[num3] != null) ? 10 : 2);
+					continue;
+				case 2:
+					num = 0;
+					continue;
+				case 10:
+					num = ((!array[num3].IsDefault) ? 6 : 11);
+					continue;
+				case 11:
+					*(string*)(&this.Ⴐ) = array[num3].name;
+					Ⴓ = num3;
+					num = 6;
+					continue;
+				case 6:
+					text = array[num3].name;
+					num = ((!string.IsNullOrEmpty(text)) ? 7 : 16);
+					continue;
+				case 16:
+					text = ႰႷႭ.Ⴍ.ႥႭႭ(num3);
+					num = 7;
+					continue;
+				case 7:
+					num = ((text.ToLower().IndexOf(ႰႼႭ.Ⴍ.ႳႭႨ(137679760)) <= -1) ? 17 : 8);
+					continue;
+				case 8:
+					num = ((num4 != Ⴍ) ? 9 : 4);
+					continue;
+				case 4:
+					num2 = num3;
+					num = 12;
+					continue;
+				case 9:
+					num4++;
+					num = 12;
+					continue;
+				case 12:
+					num = 17;
+					continue;
+				case 17:
+					num = 0;
+					continue;
+				case 0:
+					num3 = (short)(num3 + 1);
+					num = 1;
+					continue;
+				case 1:
+					num = ((num3 < array.Length) ? 15 : 13);
+					continue;
+				case 13:
+					num = ((num2 == -1) ? 3 : 5);
+					continue;
+				case 5:
+					result = num2;
+					break;
+				case 3:
+					result = Ⴓ;
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		internal unsafe void ႨႣႭ(string Ⴍ)
+		{
+			int num = 3;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((!(*(bool*)(&this.Ⴐ))) ? 1 : 5);
+					break;
+				case 5:
+					num = 0;
+					break;
+				case 1:
+				{
+					int device = ႨႷႭ();
+					num = (Bass.BASS_SetDevice(device) ? 4 : 2);
+					break;
+				}
+				case 2:
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+					num = 4;
+					break;
+				case 4:
+					ႨႷႤ();
+					*(int*)(&this.Ⴄ) = Bass.BASS_StreamCreateFile(Ⴍ, 0L, 0L, BASSFlag.BASS_DEFAULT);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679766) + Ⴍ + ႰႼႭ.Ⴍ.ႳႭႨ(137679765));
+					Bass.BASS_ChannelSetAttribute(*(int*)(&this.Ⴄ), BASSAttribute.BASS_ATTRIB_VOL, (float)((double)(*(short*)(&this.Ⴐ)) / 100.0));
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679764));
+					Bass.BASS_ChannelSetSync(*(int*)(&this.Ⴄ), BASSSync.BASS_SYNC_END, 0L, *(SYNCPROC*)(&this.m_Ⴅ), IntPtr.Zero);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679755));
+					*(bool*)(&this.Ⴈ) = true;
+					Bass.BASS_ChannelPlay(*(int*)(&this.Ⴄ), restart: false);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679754));
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		private unsafe int ႨႷႭ()
+		{
+			int num = 2;
+			int result;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num2 = ((ႨႷႰ() != 0) ? 1 : 0);
+					goto IL_001d;
+				case 1:
+					result = *(int*)(&this.Ⴀ);
+					break;
+				case 0:
+					result = *(int*)(&this.Ⴈ);
+					break;
+				}
+				break;
+				IL_001d:
+				num = num2;
+			}
+			return result;
+		}
+
+		internal unsafe void ႨႣႤ(MemoryStream Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_00db, IL_00fd, IL_0104, IL_0129, IL_0146
+			while (true)
+			{
+				bool flag = !(*(bool*)(&this.Ⴐ));
+				if (flag)
+				{
+					int device = ႨႷႭ();
+					flag = Bass.BASS_SetDevice(device);
+				}
+				else if (191 >= 191 - 121)
+				{
+					break;
+				}
+				if (!flag)
+				{
+					if (false)
+					{
+						continue;
+					}
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+					if (270 < 270 - 118)
+					{
+						goto IL_009e;
+					}
+				}
+				ႨႷႤ();
+				byte[] buffer = Ⴍ.GetBuffer();
+				*(GCHandle*)(&this.Ⴐ) = GCHandle.Alloc(buffer, GCHandleType.Pinned);
+				*(bool*)(&this.Ⴓ) = true;
+				*(int*)(&this.Ⴄ) = Bass.BASS_StreamCreateFile(((GCHandle*)(&this.Ⴐ))->AddrOfPinnedObject(), 0L, buffer.Length, BASSFlag.BASS_DEFAULT);
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679753));
+				Bass.BASS_ChannelSetAttribute(*(int*)(&this.Ⴄ), BASSAttribute.BASS_ATTRIB_VOL, (float)((double)(*(short*)(&this.Ⴐ)) / 100.0));
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679752));
+				goto IL_0084;
+				IL_0084:
+				Bass.BASS_ChannelSetSync(*(int*)(&this.Ⴄ), BASSSync.BASS_SYNC_END, 0L, *(SYNCPROC*)(&this.m_Ⴅ), IntPtr.Zero);
+				goto IL_009e;
+				IL_009e:
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679759));
+				*(bool*)(&this.Ⴈ) = true;
+				Bass.BASS_ChannelPlay(*(int*)(&this.Ⴄ), restart: false);
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679758));
+				if (38 <= 38 - 3)
+				{
+					goto IL_0084;
+				}
+				break;
+			}
+		}
+
+		internal unsafe void ႨႷႤ()
+		{
+			//Discarded unreachable code: IL_0005, IL_0030, IL_0059, IL_0082, IL_009a, IL_00a4, IL_0102, IL_0123, IL_014b, IL_0170, IL_019c
+			if (!(*(bool*)(&this.Ⴐ)))
+			{
+				int device = ႨႷႭ();
+				if (!Bass.BASS_SetDevice(device))
+				{
+					if (781 > 781 - 41)
+					{
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+						goto IL_001a;
+					}
+					return;
+				}
+				goto IL_0150;
+			}
+			if (519 >= 519 - 429)
+			{
+				return;
+			}
+			goto IL_0044;
+			IL_0128:
+			bool flag = !(*(bool*)(&this.Ⴓ));
+			goto IL_0132;
+			IL_0132:
+			if (!flag)
+			{
+				if (469 >= 469 - 179)
+				{
+					((GCHandle*)(&this.Ⴐ))->Free();
+					*(bool*)(&this.Ⴓ) = false;
+					goto IL_0044;
+				}
+				goto IL_00c2;
+			}
+			return;
+			IL_00de:
+			*(int*)(&this.Ⴄ) = -1;
+			if (*(bool*)(&this.Ⴈ))
+			{
+				if (556 <= 556 - 513)
+				{
+					goto IL_00c2;
+				}
+				ႨႷႠ();
+				if (406 <= 406 - 206)
+				{
+					goto IL_001a;
+				}
+			}
+			if (314 < 314 - 253)
+			{
+				goto IL_00c2;
+			}
+			goto IL_0128;
+			IL_001a:
+			if (888 < 888 - 515)
+			{
+				goto IL_00de;
+			}
+			goto IL_0150;
+			IL_0150:
+			flag = (*(int*)(&this.Ⴄ) == -1);
+			if (flag)
+			{
+				goto IL_0128;
+			}
+			if (851 >= 851 - 408)
+			{
+				Bass.BASS_ChannelStop(*(int*)(&this.Ⴄ));
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679757));
+				goto IL_00c2;
+			}
+			goto IL_0132;
+			IL_0044:
+			if (false)
+			{
+				goto IL_0150;
+			}
+			return;
+			IL_00c2:
+			Bass.BASS_StreamFree(*(int*)(&this.Ⴄ));
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679756));
+			goto IL_00de;
+		}
+
+		private unsafe void Ⴗ(int Ⴍ, int Ⴓ, int Ⴈ, IntPtr Ⴃ)
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((!(*(bool*)(&this.Ⴈ))) ? 1 : 0);
+					break;
+				case 0:
+					ႨႷႠ();
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		internal unsafe void ႨႷႼ()
+		{
+			int num = 3;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((!(*(bool*)(&this.Ⴐ))) ? 5 : 4);
+					break;
+				case 4:
+					num = 1;
+					break;
+				case 5:
+				{
+					int device = ႨႷႭ();
+					num = (Bass.BASS_SetDevice(device) ? 7 : 6);
+					break;
+				}
+				case 6:
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+					num = 7;
+					break;
+				case 7:
+					num = ((*(int*)(&this.Ⴄ) != -1) ? 2 : 0);
+					break;
+				case 2:
+					Bass.BASS_ChannelPause(*(int*)(&this.Ⴄ));
+					num = 0;
+					break;
+				case 0:
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679747));
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		internal unsafe void ႨႥႰ()
+		{
+			//Discarded unreachable code: IL_0005, IL_000f, IL_0037, IL_0058, IL_0077, IL_0097, IL_00b8, IL_00db
+			if (!(*(bool*)(&this.Ⴐ)))
+			{
+				int device = ႨႷႭ();
+				bool flag = Bass.BASS_SetDevice(device);
+				do
+				{
+					if (!flag)
+					{
+						if (143 < 143 - 51)
+						{
+							return;
+						}
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+						while (false)
+						{
+						}
+					}
+					flag = (*(int*)(&this.Ⴄ) == -1);
+					if (flag)
+					{
+						break;
+					}
+					if (false)
+					{
+						return;
+					}
+					Bass.BASS_ChannelPlay(*(int*)(&this.Ⴄ), restart: false);
+				}
+				while (602 <= 602 - 177);
+			}
+			else if (130 >= 130 - 84)
+			{
+				return;
+			}
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679758));
+			if (249 > 249 - 199)
+			{
+			}
+		}
+
+		internal unsafe short ႨႥႨ()
+		{
+			int num = 7;
+			short result = default(short);
+			float value = default(float);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((!(*(bool*)(&this.Ⴐ))) ? 3 : 0);
+					break;
+				case 0:
+					result = 0;
+					num = 6;
+					break;
+				case 3:
+				{
+					int device = ႨႷႭ();
+					num = (Bass.BASS_SetDevice(device) ? 4 : 5);
+					break;
+				}
+				case 5:
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+					num = 4;
+					break;
+				case 4:
+					value = 0f;
+					num = ((*(int*)(&this.Ⴄ) == -1) ? 1 : 2);
+					break;
+				case 2:
+					Bass.BASS_ChannelGetAttribute(*(int*)(&this.Ⴄ), BASSAttribute.BASS_ATTRIB_VOL, ref value);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679746));
+					num = 8;
+					break;
+				case 1:
+					value = 0f;
+					num = 8;
+					break;
+				case 8:
+					result = (short)(value * 100f);
+					num = 6;
+					break;
+				case 6:
+					return result;
+				}
+			}
+		}
+
+		internal unsafe void ႨႣႼ(short Ⴍ)
+		{
+			int num = 6;
+			short num2 = default(short);
+			float value = default(float);
+			while (true)
+			{
+				switch (num)
+				{
+				case 12:
+					return;
+				default:
+					num = ((!(*(bool*)(&this.Ⴐ))) ? 9 : 5);
+					break;
+				case 5:
+					num = 12;
+					break;
+				case 9:
+					num2 = Ⴍ;
+					num = ((num2 >= 0) ? 7 : 0);
+					break;
+				case 0:
+					num2 = 0;
+					num = 1;
+					break;
+				case 7:
+					num = ((num2 <= 100) ? 1 : 8);
+					break;
+				case 8:
+					num2 = 100;
+					num = 1;
+					break;
+				case 1:
+				{
+					*(short*)(&this.Ⴐ) = num2;
+					int device = ႨႷႭ();
+					num = (Bass.BASS_SetDevice(device) ? 11 : 2);
+					break;
+				}
+				case 2:
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+					num = 11;
+					break;
+				case 11:
+					value = (float)((double)num2 / 100.0);
+					num = ((*(int*)(&this.Ⴄ) == -1) ? 3 : 4);
+					break;
+				case 4:
+					Bass.BASS_ChannelSetAttribute(*(int*)(&this.Ⴄ), BASSAttribute.BASS_ATTRIB_VOL, value);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679745));
+					num = 3;
+					break;
+				case 3:
+					num = ((this.m_ႨႨ == -1) ? 12 : 10);
+					break;
+				case 10:
+					Bass.BASS_ChannelSetAttribute(this.m_ႨႨ, BASSAttribute.BASS_ATTRIB_VOL, value);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679744));
+					num = 12;
+					break;
+				}
+			}
+		}
+
+		internal unsafe int ႨႭႰ(string Ⴍ)
+		{
+			int num = 2;
+			int result = default(int);
+			int num3 = default(int);
+			double num2 = default(double);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((*(bool*)(&this.Ⴐ)) ? 4 : 0);
+					break;
+				case 4:
+					result = 0;
+					num = 1;
+					break;
+				case 0:
+				{
+					num3 = -1;
+					num3 = Bass.BASS_StreamCreateFile(Ⴍ, 0L, 0L, BASSFlag.BASS_DEFAULT);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679751));
+					long pos = Bass.BASS_ChannelGetLength(num3, BASSMode.BASS_POS_BYTES);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679750));
+					num2 = Bass.BASS_ChannelBytes2Seconds(num3, pos) * 1000.0;
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679749));
+					num = ((num3 == -1) ? 3 : 5);
+					break;
+				}
+				case 5:
+					Bass.BASS_StreamFree(num3);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679803));
+					num = 3;
+					break;
+				case 3:
+					result = (int)num2;
+					num = 1;
+					break;
+				case 1:
+					return result;
+				}
+			}
+		}
+
+		internal unsafe void ႨႭႨ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0020, IL_007d
+			if (!Bass.BASS_SetDevice(*(int*)(&this.Ⴀ)))
+			{
+				if (905 < 905 - 82)
+				{
+					goto IL_0043;
+				}
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+				if (false)
+				{
+					goto IL_0033;
+				}
+			}
+			this.Ⴐ = (DefaultOutputDevice)Bass.BASS_StreamCreateFile(Ⴍ, 0L, 0L, BASSFlag.BASS_DEFAULT);
+			goto IL_0033;
+			IL_0033:
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679748));
+			goto IL_0043;
+			IL_0043:
+			Bass.BASS_ChannelPlay((int)this.Ⴐ, restart: false);
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679802));
+		}
+
+		internal unsafe void ႨႥႳ()
+		{
+			//Discarded unreachable code: IL_0005, IL_0029, IL_0048, IL_004c, IL_0082
+			while (true)
+			{
+				if (!(*(bool*)(&this.Ⴐ)))
+				{
+					if (this.Ⴐ == (DefaultOutputDevice)(-1))
+					{
+						goto IL_000a;
+					}
+					if ((428 + 428 * 428) % 2 == 0)
+					{
+						Bass.BASS_ChannelStop((int)this.Ⴐ);
+						goto IL_0037;
+					}
+					goto IL_003e;
+				}
+				if (120 >= 120 - 14)
+				{
+					break;
+				}
+				goto IL_001a;
+				IL_000a:
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679801));
+				goto IL_001a;
+				IL_001a:
+				if (false)
+				{
+					goto IL_0037;
+				}
+				break;
+				IL_0037:
+				this.Ⴐ = (DefaultOutputDevice)(-1);
+				goto IL_003e;
+				IL_003e:
+				if (49 < 49 - 10)
+				{
+					continue;
+				}
+				goto IL_000a;
+			}
+		}
+
+		private void ႳႣ(int Ⴍ, string Ⴓ)
+		{
+			string cmdline = ႰႼႭ.Ⴍ.ႳႭႨ(137679800) + Ⴓ + ႰႼႭ.Ⴍ.ႳႭႨ(137679807);
+			int limit = (int)Bass.BASS_ChannelSeconds2Bytes(Ⴍ, 30.0);
+			BassEnc.BASS_Encode_Start(Ⴍ, cmdline, BASSEncode.BASS_ENCODE_AUTOFREE, null, IntPtr.Zero, limit);
+		}
+
+		internal unsafe void ႳႭ(string Ⴍ, string Ⴓ)
+		{
+			int num = 6;
+			int num2 = default(int);
+			GCHandle gCHandle = default(GCHandle);
+			while (true)
+			{
+				switch (num)
+				{
+				case 8:
+					return;
+				default:
+					num = ((!(*(bool*)(&this.Ⴐ))) ? 3 : 0);
+					break;
+				case 0:
+					num = 8;
+					break;
+				case 3:
+				{
+					num2 = Bass.BASS_StreamCreateFile(Ⴍ, 0L, 0L, BASSFlag.BASS_STREAM_DECODE);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679806));
+					ႳႣ(num2, Ⴓ);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679805));
+					byte[] value = new byte[20000];
+					gCHandle = GCHandle.Alloc(value, GCHandleType.Pinned);
+					num = 4;
+					break;
+				}
+				case 5:
+				{
+					int num3 = Bass.BASS_ChannelGetData(num2, gCHandle.AddrOfPinnedObject(), 20000);
+					num = ((num3 < 0) ? 1 : 7);
+					break;
+				}
+				case 1:
+					num = 2;
+					break;
+				case 7:
+					num = 4;
+					break;
+				case 4:
+					num = ((BassEnc.BASS_Encode_IsActive(num2) != 0) ? 5 : 2);
+					break;
+				case 2:
+					gCHandle.Free();
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679804));
+					num = 8;
+					break;
+				}
+			}
+		}
+
+		private void ႨႥႷ()
+		{
+			Bass.BASS_RecordInit(-1);
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679795));
+			this.Ⴈ = (RECORDPROC)(object)ႨႥႥ();
+		}
+
+		private string ႨႥႥ()
+		{
+			//Discarded unreachable code: IL_0005, IL_0020, IL_0049, IL_005a, IL_0076, IL_0081, IL_0092
+			string result = default(string);
+			while (true)
+			{
+				BASS_DEVICEINFO[] array = Bass.BASS_RecordGetDeviceInfos();
+				BASS_DEVICEINFO[] array2 = array;
+				int num = 0;
+				while (true)
+				{
+					if (num < array2.Length)
+					{
+						BASS_DEVICEINFO bASS_DEVICEINFO = array2[num];
+						if (bASS_DEVICEINFO.IsDefault)
+						{
+							if (750 >= 750 - 663)
+							{
+							}
+							result = bASS_DEVICEINFO.name;
+						}
+						else
+						{
+							num++;
+							if (94 > 94 - 2)
+							{
+								continue;
+							}
+						}
+					}
+					else if (586 >= 586 - 18)
+					{
+						result = string.Empty;
+						if (157 < 157 - 110)
+						{
+							break;
+						}
+					}
+					return result;
+				}
+			}
+		}
+
+		internal bool ႨႥႠ()
+		{
+			return Bass.BASS_RecordGetDeviceInfos().Length > 0;
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public void ႨႭႳ(AudioActionStoppedDelegate Ⴍ)
+		{
+			this.Ⴈ = (RECORDPROC)(object)(AudioActionStoppedDelegate)Delegate.Combine(this.Ⴈ, Ⴍ);
+		}
+
+		private void ႨႥႣ()
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((this.Ⴈ == null) ? 1 : 2);
+					break;
+				case 2:
+					this.Ⴈ();
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public unsafe void ႨႭႷ(ႷႭႷ.Ⴓ Ⴍ)
+		{
+			*(ႷႭႷ.Ⴓ*)(&this.Ⴐ) = (ႷႭႷ.Ⴓ)Delegate.Combine(*(ႷႭႷ.Ⴓ*)(&this.Ⴐ), Ⴍ);
+		}
+
+		private unsafe void ႳႤ(long Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0021, IL_003b
+			if (*(ႷႭႷ.Ⴓ*)(&this.Ⴐ) != null)
+			{
+				if (69 >= 69 - 46)
+				{
+				}
+				(*(ႷႭႷ.Ⴓ*)(&this.Ⴐ))(Ⴍ, Ⴓ);
+				if (693 < 693 - 499)
+				{
+				}
+			}
+		}
+
+		internal unsafe void ႨႭႥ(string Ⴍ)
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((!(*(bool*)(&this.Ⴐ))) ? 1 : 3);
+					break;
+				case 3:
+					num = 0;
+					break;
+				case 1:
+					this.m_Ⴗ = true;
+					this.m_Ⴗ = Bass.BASS_RecordStart(44100, 1, BASSFlag.BASS_RECORD_PAUSE, *(RECORDPROC*)(&this.Ⴐ), IntPtr.Zero);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679794));
+					Bass.BASS_ChannelSetSync(this.m_Ⴗ, BASSSync.BASS_SYNC_FREE, 0L, (SYNCPROC)(object)this.Ⴈ, IntPtr.Zero);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679759));
+					ႳႣ(this.m_Ⴗ, Ⴍ);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679805));
+					*(long*)(&this.Ⴈ) = Bass.BASS_ChannelSeconds2Bytes(this.m_Ⴗ, 0.1);
+					*(long*)(&this.Ⴐ) = 0L;
+					Bass.BASS_ChannelPlay(this.m_Ⴗ, restart: false);
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		private unsafe bool Ⴃ(int Ⴍ, IntPtr Ⴓ, int Ⴈ, IntPtr Ⴃ)
+		{
+			int num = 5;
+			short* ptr = default(short*);
+			int num3 = default(int);
+			int num4 = default(int);
+			long num2 = default(long);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					ptr = (short*)(void*)Ⴓ;
+					num3 = 0;
+					num4 = 0;
+					num = 1;
+					break;
+				case 2:
+					num = ((*ptr <= num3) ? 6 : 4);
+					break;
+				case 4:
+					num3 = *ptr;
+					num = 6;
+					break;
+				case 6:
+					ptr++;
+					num4++;
+					num = 1;
+					break;
+				case 1:
+					num = ((num4 < Ⴈ / 2) ? 2 : 0);
+					break;
+				case 0:
+					num2 = Bass.BASS_ChannelGetPosition(Ⴍ, BASSMode.BASS_POS_BYTES);
+					num = ((num2 - *(long*)(&this.Ⴐ) <= *(long*)(&this.Ⴈ)) ? 7 : 3);
+					break;
+				case 3:
+					ႳႤ((int)(Bass.BASS_ChannelBytes2Seconds(Ⴍ, num2) * 1000.0), 100 * num3 / 32767 > 13);
+					*(long*)(&this.Ⴐ) = num2;
+					num = 7;
+					break;
+				case 7:
+					return true;
+				}
+			}
+		}
+
+		private void Ⴍ(int Ⴍ, int Ⴓ, int Ⴈ, IntPtr Ⴃ)
+		{
+			//Discarded unreachable code: IL_0002, IL_003f
+			bool flag = !this.m_Ⴗ;
+			do
+			{
+				if (flag)
+				{
+					return;
+				}
+			}
+			while (391 <= 391 - 267);
+			ႨႥႣ();
+			do
+			{
+				this.m_Ⴗ = false;
+			}
+			while (729 <= 729 - 590);
+		}
+
+		internal unsafe void ႨႥႭ()
+		{
+			int num = 3;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((*(bool*)(&this.Ⴐ)) ? 1 : 5);
+					break;
+				case 1:
+					num = 0;
+					break;
+				case 5:
+					num = ((this.m_Ⴗ == -1) ? 4 : 2);
+					break;
+				case 2:
+					Bass.BASS_ChannelStop(this.m_Ⴗ);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679793));
+					this.m_Ⴗ = -1;
+					num = 4;
+					break;
+				case 4:
+					this.m_Ⴗ = false;
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		internal unsafe short ႨႥႤ()
+		{
+			int num = 1;
+			short result = default(short);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((!(*(bool*)(&this.Ⴐ))) ? 3 : 2);
+					break;
+				case 2:
+					result = 0;
+					num = 0;
+					break;
+				case 3:
+				{
+					float volume = 0f;
+					Bass.BASS_RecordGetInput(0, ref volume);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679792));
+					result = (short)(volume * 100f);
+					num = 0;
+					break;
+				}
+				case 0:
+					return result;
+				}
+			}
+		}
+
+		internal unsafe void ႨႭႠ(short Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_000f, IL_004b, IL_0065, IL_007a, IL_0099, IL_00a2, IL_00c5
+			while (*(bool*)(&this.Ⴐ))
+			{
+				if (1014 >= 1014 - 265)
+				{
+					return;
+				}
+			}
+			short num = Ⴍ;
+			bool flag = num >= 0;
+			while (true)
+			{
+				if (!flag)
+				{
+					if (302 < 302 - 287)
+					{
+						continue;
+					}
+					num = 0;
+					goto IL_0014;
+				}
+				goto IL_004d;
+				IL_0056:
+				if (!flag)
+				{
+					if (179 <= 179 - 1)
+					{
+						goto IL_004d;
+					}
+					num = 100;
+					if (659 < 659 - 651)
+					{
+					}
+				}
+				goto IL_0014;
+				IL_0014:
+				Bass.BASS_RecordSetInput(0, BASSInput.BASS_INPUT_ON, (float)num / 100f);
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679799));
+				if (808 >= 808 - 673)
+				{
+					break;
+				}
+				goto IL_0056;
+				IL_004d:
+				flag = (num <= 100);
+				goto IL_0056;
+			}
+		}
+
+		internal bool ႭႳ()
+		{
+			return ႨႥႥ() != (string)(object)this.Ⴈ;
+		}
+
+		internal unsafe bool ႨႠႰ()
+		{
+			return ႨႷႣ() != *(string*)(&this.Ⴐ);
+		}
+
+		internal unsafe ႷႭႳ.Ⴅ[] ႨႭႣ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0025, IL_004e, IL_005e, IL_0065, IL_0094, IL_00a1, IL_00c9, IL_00dd, IL_00e4, IL_00f5, IL_0114, IL_0173, IL_01af, IL_01e4
+			*(List<ႷႭႳ.Ⴅ>*)(&this.Ⴐ) = new List<ႷႭႳ.Ⴅ>();
+			*(ႷႭႳ.Ⴅ*)(&this.Ⴐ) = new ႷႭႳ.Ⴅ();
+			int num = -1;
+			num = Bass.BASS_StreamCreateFile(Ⴍ, 0L, 0L, BASSFlag.BASS_STREAM_DECODE);
+			long num2 = -1L;
+			while (true)
+			{
+				IL_0099:
+				bool flag = true;
+				while (true)
+				{
+					long num3 = Bass.BASS_ChannelGetPosition(num, BASSMode.BASS_POS_BYTES);
+					int num4 = Utils.LowWord32(Bass.BASS_ChannelGetLevel(num));
+					while (true)
+					{
+						if (num2 != -1)
+						{
+							goto IL_0005;
+						}
+						if (147 > 147 - 6)
+						{
+							flag = (num4 >= 1300);
+							goto IL_0037;
+						}
+						break;
+						IL_00a6:
+						flag = (num4 != 65535);
+						while (flag)
+						{
+							if ((66 + 66 * 66) % 2 == 0)
+							{
+								goto IL_0099;
+							}
+						}
+						if (false)
+						{
+							break;
+						}
+						flag = (num == -1);
+						while (true)
+						{
+							if (!flag)
+							{
+								if (514 <= 514 - 71)
+								{
+									continue;
+								}
+								Bass.BASS_StreamFree(num);
+								if (302 < 302 - 181)
+								{
+									break;
+								}
+							}
+							return ((List<ႷႭႳ.Ⴅ>*)(&this.Ⴐ))->ToArray();
+						}
+						goto IL_0005;
+						IL_0037:
+						if (!flag)
+						{
+							if (327 < 327 - 259)
+							{
+								goto IL_000f;
+							}
+							num2 = num3;
+							if (586 < 586 - 130)
+							{
+								goto IL_0099;
+							}
+						}
+						goto IL_00a6;
+						IL_0005:
+						flag = (num4 < 1300);
+						goto IL_000f;
+						IL_000f:
+						if (!flag)
+						{
+							if (false)
+							{
+								goto IL_0037;
+							}
+							((List<ႷႭႳ.Ⴅ>*)(&this.Ⴐ))->Add(new ႷႭႳ.Ⴅ
+							{
+								Ⴀ = Bass.BASS_ChannelBytes2Seconds(num, num2) * 1000.0,
+								Ⴄ = Bass.BASS_ChannelBytes2Seconds(num, num3) * 1000.0
+							});
+							num2 = -1L;
+							if (391 < 391 - 372)
+							{
+								break;
+							}
+						}
+						if (false)
+						{
+							continue;
+						}
+						goto IL_00a6;
+					}
+				}
+			}
+		}
+
+		private void ႨႠႨ()
+		{
+			BassFx.BASS_FX_GetVersion();
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679798));
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public unsafe void ႨႭႭ(ListeningEventDelegate Ⴍ)
+		{
+			*(ListeningEventDelegate*)(&this.Ⴐ) = (ListeningEventDelegate)Delegate.Combine(*(ListeningEventDelegate*)(&this.Ⴐ), Ⴍ);
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public void ႨႭႤ(ListeningEventDelegate Ⴍ)
+		{
+			this.Ⴈ = (RECORDPROC)(object)(ListeningEventDelegate)Delegate.Combine(this.Ⴈ, Ⴍ);
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public void ႨႭႼ(ListeningEventDelegate Ⴍ)
+		{
+			this.Ⴓ = (AudioActionStoppedDelegate)(object)(ListeningEventDelegate)Delegate.Combine(this.Ⴓ, Ⴍ);
+		}
+
+		public unsafe void ႨႤႳ(AudioEffects Ⴍ)
+		{
+			int num = 2;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				case 6:
+					return;
+				default:
+					num = ((this.m_Ⴍ != -1) ? 3 : 0);
+					break;
+				case 3:
+					num = ((this.m_Ⴍ != 0) ? 4 : 0);
+					break;
+				case 4:
+					num2 = ((Ⴍ == AudioEffects.Pitch) ? 1 : 0);
+					goto IL_004e;
+				case 0:
+					num2 = 1;
+					goto IL_004e;
+				case 7:
+					num = (((Dictionary<AudioEffects, int>*)(&this.Ⴐ))->ContainsKey(Ⴍ) ? 1 : 5);
+					break;
+				case 5:
+					((Dictionary<AudioEffects, int>*)(&this.Ⴐ))->Add(Ⴍ, Bass.BASS_ChannelSetFX(this.m_Ⴍ, (BASSFXType)Ⴍ, 1));
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679797));
+					num = 1;
+					break;
+				case 1:
+					{
+						num = 6;
+						break;
+					}
+					IL_004e:
+					num = ((num2 != 0) ? 6 : 7);
+					break;
+				}
+			}
+		}
+
+		public unsafe void ႨႤႷ(AudioEffects Ⴍ)
+		{
+			int num = 3;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((this.m_Ⴍ == -1) ? 4 : 2);
+					break;
+				case 2:
+					num = ((Ⴍ != AudioEffects.Pitch) ? 1 : 4);
+					break;
+				case 1:
+					num2 = ((!((Dictionary<AudioEffects, int>*)(&this.Ⴐ))->ContainsKey(Ⴍ)) ? 1 : 0);
+					goto IL_004d;
+				case 4:
+					num2 = 1;
+					goto IL_004d;
+				case 5:
+					{
+						Bass.BASS_ChannelRemoveFX(this.m_Ⴍ, (*(Dictionary<AudioEffects, int>*)(&this.Ⴐ))[Ⴍ]);
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679796));
+						((Dictionary<AudioEffects, int>*)(&this.Ⴐ))->Remove(Ⴍ);
+						num = 0;
+						break;
+					}
+					IL_004d:
+					num = ((num2 == 0) ? 5 : 0);
+					break;
+				}
+			}
+		}
+
+		public unsafe void ႨႤႠ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0022, IL_0132
+			ႨႠႳ();
+			this.Ⴓ = (AudioActionStoppedDelegate)(object)Ⴍ;
+			*(int*)(&this.Ⴓ) = Bass.BASS_RecordStart(44100, 1, BASSFlag.BASS_RECORD_PAUSE, Ⴈ, IntPtr.Zero);
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679787));
+			Bass.BASS_ChannelSetSync(*(int*)(&this.Ⴓ), BASSSync.BASS_SYNC_FREE, 0L, *(SYNCPROC*)(&this.Ⴀ), IntPtr.Zero);
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679786));
+			this.m_Ⴍ = Bass.BASS_StreamCreate(44100, 1, BASSFlag.BASS_STREAM_DECODE, BASSStreamProc.STREAMPROC_PUSH);
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679785));
+			this.m_Ⴃ = BassFx.BASS_FX_TempoCreate(this.m_Ⴍ, BASSFlag.BASS_DEFAULT);
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679784));
+			ႳႣ(this.m_Ⴃ, Ⴍ);
+			Bass.BASS_ChannelPlay(*(int*)(&this.Ⴓ), restart: false);
+			Bass.BASS_ChannelPlay(this.m_Ⴃ, restart: false);
+			Bass.BASS_ChannelSetAttribute(this.m_Ⴃ, BASSAttribute.BASS_ATTRIB_VOL, 0f);
+			while (true)
+			{
+				bool flag = this.Ⴓ == null;
+				while (true)
+				{
+					if (flag)
+					{
+						return;
+					}
+					if (862 < 862 - 563)
+					{
+						break;
+					}
+					this.Ⴓ();
+					if (162 >= 162 - 23)
+					{
+						return;
+					}
+				}
+			}
+		}
+
+		public unsafe void ႨႠႳ()
+		{
+			int num = 8;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					((Dictionary<AudioEffects, int>*)(&this.Ⴐ))->Clear();
+					num = ((this.m_Ⴃ == -1) ? 1 : 4);
+					break;
+				case 4:
+					Bass.BASS_StreamFree(this.m_Ⴃ);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679791));
+					this.m_Ⴃ = -1;
+					num = 1;
+					break;
+				case 1:
+					num = ((*(int*)(&this.Ⴓ) == -1) ? 6 : 2);
+					break;
+				case 2:
+					num = ((!m_Ⴅ) ? 7 : 3);
+					break;
+				case 3:
+					Bass.BASS_ChannelStop(*(int*)(&this.Ⴓ));
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679790));
+					num = 7;
+					break;
+				case 7:
+					*(int*)(&this.Ⴓ) = -1;
+					num = 6;
+					break;
+				case 6:
+					num = ((this.m_Ⴍ == -1) ? 5 : 0);
+					break;
+				case 0:
+					Bass.BASS_StreamFree(this.m_Ⴍ);
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679788));
+					this.m_Ⴍ = -1;
+					num = 5;
+					break;
+				case 5:
+					Ⴀ = false;
+					this.m_Ⴜ = 0;
+					m_Ⴅ = false;
+					return;
+				}
+			}
+		}
+
+		private unsafe bool Ⴜ(int Ⴍ, IntPtr Ⴓ, int Ⴈ, IntPtr Ⴃ)
+		{
+			//Discarded unreachable code: IL_0005, IL_001d, IL_0040, IL_005e, IL_007d, IL_008e, IL_00b5, IL_00d9, IL_00f8, IL_011f, IL_013d, IL_015f, IL_018c, IL_01bf, IL_01e7, IL_0202, IL_0235, IL_0258, IL_0281, IL_0296
+			ThreadStart threadStart = null;
+			bool result = default(bool);
+			while (true)
+			{
+				IL_0286:
+				short* ptr = (short*)(void*)Ⴓ;
+				while (true)
+				{
+					int num = 0;
+					int num2 = 0;
+					while (true)
+					{
+						IL_001f:
+						bool flag = num2 < Ⴈ / 2;
+						while (true)
+						{
+							if (!flag)
+							{
+								if (false)
+								{
+									goto IL_0063;
+								}
+								bool flag2 = 100 * num / 32767 > 13;
+								flag = !flag2;
+								if (!flag)
+								{
+									if (false)
+									{
+										continue;
+									}
+									goto IL_0093;
+								}
+								if (this.m_Ⴜ < ႨႥ)
+								{
+									this.m_Ⴜ++;
+									m_Ⴅ = true;
+									if (652 >= 652 - 505)
+									{
+										goto IL_00fd;
+									}
+									goto IL_0142;
+								}
+								if ((18 + 18 * 18) % 2 == 0)
+								{
+									goto IL_01ec;
+								}
+							}
+							else
+							{
+								if (*ptr > num)
+								{
+									if (1004 <= 1004 - 992)
+									{
+										break;
+									}
+									num = *ptr;
+									if (420 < 420 - 205)
+									{
+										goto IL_004a;
+									}
+								}
+								ptr++;
+							}
+							goto IL_004a;
+							IL_0093:
+							this.m_Ⴜ = 0;
+							if (Ⴀ)
+							{
+								goto IL_0082;
+							}
+							if ((903 + 903 * 903) % 2 == 0)
+							{
+								goto IL_00ba;
+							}
+							goto IL_0127;
+							IL_0082:
+							m_Ⴅ = true;
+							goto IL_00fd;
+							IL_00fd:
+							if (Ⴀ)
+							{
+								if (258 <= 258 - 69)
+								{
+									goto IL_01fa;
+								}
+								Bass.BASS_StreamPutData(this.m_Ⴍ, Ⴓ, Ⴈ);
+								ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679789));
+								if (278 <= 278 - 9)
+								{
+									goto IL_00ba;
+								}
+							}
+							goto IL_0127;
+							IL_0142:
+							ႥႥႨႥ.Ⴓ.ႨႷႼ(threadStart);
+							if ((338 + 338 * 338) % 2 == 0)
+							{
+								goto IL_0063;
+							}
+							goto IL_01ec;
+							IL_01ec:
+							m_Ⴅ = false;
+							this.m_Ⴜ = 0;
+							goto IL_01fa;
+							IL_00ba:
+							if (this.Ⴈ == null)
+							{
+								goto IL_0063;
+							}
+							if (251 < 251 - 103)
+							{
+								goto IL_0286;
+							}
+							if (threadStart == null)
+							{
+								if (146 < 146 - 144)
+								{
+									goto IL_0124;
+								}
+								threadStart = delegate
+								{
+									this.Ⴈ();
+								};
+								if (259 <= 259 - 82)
+								{
+									goto IL_0286;
+								}
+							}
+							goto IL_0142;
+							IL_0124:
+							return result;
+							IL_0063:
+							Ⴀ = true;
+							if (443 >= 443 - 380)
+							{
+								goto IL_0082;
+							}
+							goto IL_0124;
+							IL_0127:
+							result = true;
+							if (756 <= 756 - 438)
+							{
+								goto IL_0286;
+							}
+							goto IL_0124;
+							IL_01fa:
+							result = false;
+							goto IL_0124;
+							IL_004a:
+							num2++;
+							if (703 > 703 - 700)
+							{
+								goto IL_001f;
+							}
+							goto IL_0093;
+						}
+						break;
+					}
+				}
+			}
+		}
+
+		private unsafe void ႨႰ(int Ⴍ, int Ⴓ, int Ⴈ, IntPtr Ⴃ)
+		{
+			int num = 9;
+			ThreadStart threadStart2 = default(ThreadStart);
+			ThreadStart threadStart = default(ThreadStart);
+			while (true)
+			{
+				switch (num)
+				{
+				case 5:
+					return;
+				case 0:
+					Ⴀ = false;
+					num = ((*(ListeningEventDelegate*)(&this.Ⴐ) != null) ? 1 : 7);
+					continue;
+				case 1:
+					num = ((threadStart2 != null) ? 8 : 3);
+					continue;
+				case 3:
+					threadStart2 = delegate
+					{
+						(*(ListeningEventDelegate*)(&this.Ⴐ))();
+					};
+					num = 8;
+					continue;
+				case 8:
+					ႥႥႨႥ.Ⴓ.ႨႷႼ(threadStart2);
+					num = 7;
+					continue;
+				case 7:
+					num = 5;
+					continue;
+				case 2:
+					num = ((threadStart != null) ? 6 : 4);
+					continue;
+				case 4:
+					threadStart = delegate
+					{
+						ႨႤႠ((string)(object)this.Ⴓ);
+					};
+					num = 6;
+					continue;
+				case 6:
+					ႥႥႨႥ.Ⴓ.ႨႷႼ(threadStart);
+					num = 5;
+					continue;
+				}
+				threadStart2 = null;
+				threadStart = null;
+				*(int*)(&this.Ⴓ) = -1;
+				m_Ⴅ = false;
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679779));
+				num = ((!Ⴀ) ? 2 : 0);
+			}
+		}
+
+		public unsafe void ႳႼ(AudioEffects Ⴍ, params float[] Ⴓ)
+		{
+			if (this.m_Ⴃ != -1 && this.m_Ⴍ != -1)
+			{
+				try
+				{
+					switch (Ⴍ)
+					{
+					case AudioEffects.Pitch:
+						Bass.BASS_ChannelSetAttribute(this.m_Ⴃ, BASSAttribute.BASS_ATTRIB_TEMPO_PITCH, Convert.ToSingle(Ⴓ[0]));
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679778));
+						break;
+					case AudioEffects.Echo:
+						Bass.BASS_FXSetParameters((*(Dictionary<AudioEffects, int>*)(&this.Ⴐ))[Ⴍ], new BASS_BFX_ECHO
+						{
+							fLevel = Ⴓ[0],
+							lDelay = (int)Ⴓ[1]
+						});
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679777));
+						break;
+					case AudioEffects.RepeatedEcho:
+						Bass.BASS_FXSetParameters((*(Dictionary<AudioEffects, int>*)(&this.Ⴐ))[Ⴍ], new BASS_BFX_ECHO2
+						{
+							fDryMix = Ⴓ[0],
+							fWetMix = Ⴓ[1],
+							fFeedback = Ⴓ[2],
+							fDelay = Ⴓ[3],
+							lChannel = BASSFXChan.BASS_BFX_CHANALL
+						});
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679776));
+						break;
+					case AudioEffects.Chorus:
+						Bass.BASS_FXSetParameters((*(Dictionary<AudioEffects, int>*)(&this.Ⴐ))[Ⴍ], new BASS_BFX_CHORUS
+						{
+							fDryMix = Ⴓ[0],
+							fWetMix = Ⴓ[1],
+							fFeedback = Ⴓ[2],
+							fMinSweep = Ⴓ[3],
+							fMaxSweep = Ⴓ[4],
+							fRate = Ⴓ[5],
+							lChannel = BASSFXChan.BASS_BFX_CHANALL
+						});
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679776));
+						break;
+					case AudioEffects.Distortion:
+						Bass.BASS_FXSetParameters((*(Dictionary<AudioEffects, int>*)(&this.Ⴐ))[Ⴍ], new BASS_BFX_DISTORTION
+						{
+							fDrive = Ⴓ[0],
+							fDryMix = (int)Ⴓ[1],
+							fWetMix = Ⴓ[2],
+							fFeedback = Ⴓ[3],
+							fVolume = Ⴓ[4],
+							lChannel = BASSFXChan.BASS_BFX_CHANALL
+						});
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679776));
+						break;
+					case AudioEffects.Reverb:
+						Bass.BASS_FXSetParameters((*(Dictionary<AudioEffects, int>*)(&this.Ⴐ))[Ⴍ], new BASS_BFX_REVERB
+						{
+							fLevel = Ⴓ[0],
+							lDelay = (int)Ⴓ[1]
+						});
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679776));
+						break;
+					case AudioEffects.Flanger:
+						Bass.BASS_FXSetParameters((*(Dictionary<AudioEffects, int>*)(&this.Ⴐ))[Ⴍ], new BASS_BFX_FLANGER
+						{
+							fWetDry = Ⴓ[0],
+							fSpeed = Ⴓ[1],
+							lChannel = BASSFXChan.BASS_BFX_CHANALL
+						});
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679776));
+						break;
+					}
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				}
+			}
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public void ႨႤႣ(AudioActionStoppedDelegate Ⴍ)
+		{
+			Ⴓ = (AudioActionStoppedDelegate)Delegate.Combine(Ⴓ, Ⴍ);
+		}
+
+		public unsafe void ႨႤႭ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_00bd, IL_00e1, IL_00e8, IL_0110, IL_0133
+			if (!(*(bool*)(&this.Ⴐ)))
+			{
+				int device = ႨႷႭ();
+				while (!Bass.BASS_SetDevice(device))
+				{
+					if ((201 + 201 * 201) % 2 == 0)
+					{
+						ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+						if ((427 + 427 * 427) % 2 == 0)
+						{
+							break;
+						}
+						return;
+					}
+				}
+				ႨႠႷ();
+				this.m_ႨႨ = Bass.BASS_StreamCreateFile(Ⴍ, 0L, 0L, BASSFlag.BASS_DEFAULT);
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679783));
+				Bass.BASS_ChannelSetAttribute(this.m_ႨႨ, BASSAttribute.BASS_ATTRIB_VOL, (float)((double)(*(short*)(&this.Ⴐ)) / 100.0));
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679745));
+			}
+			else if (720 > 720 - 229)
+			{
+				return;
+			}
+			Bass.BASS_ChannelSetSync(this.m_ႨႨ, BASSSync.BASS_SYNC_END, 0L, Ⴄ, IntPtr.Zero);
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679759));
+			do
+			{
+				this.m_Ⴃ = true;
+				Bass.BASS_ChannelPlay(this.m_ႨႨ, restart: false);
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679758));
+			}
+			while (false);
+		}
+
+		private void ႨႨ(int Ⴍ, int Ⴓ, int Ⴈ, IntPtr Ⴃ)
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					this.m_Ⴃ = false;
+					num = ((this.Ⴓ == null) ? 1 : 2);
+					break;
+				case 2:
+					this.Ⴓ();
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		public unsafe void ႨႠႷ()
+		{
+			//Discarded unreachable code: IL_0005, IL_002d, IL_0041, IL_004b, IL_00a9, IL_00c7, IL_00ea, IL_0105, IL_0128
+			while (true)
+			{
+				if (!(*(bool*)(&this.Ⴐ)))
+				{
+					while (true)
+					{
+						int device = ႨႷႭ();
+						if (!Bass.BASS_SetDevice(device))
+						{
+							if (false)
+							{
+								goto IL_004d;
+							}
+							ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+							if (32 < 32 - 8)
+							{
+								break;
+							}
+						}
+						do
+						{
+							if (this.m_ႨႨ == -1)
+							{
+								return;
+							}
+						}
+						while (false);
+						goto IL_004d;
+						IL_004d:
+						while (true)
+						{
+							IL_004d:
+							Bass.BASS_ChannelStop(this.m_ႨႨ);
+							ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679757));
+							Bass.BASS_StreamFree(this.m_ႨႨ);
+							ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679756));
+							this.m_ႨႨ = -1;
+							while (this.m_Ⴃ)
+							{
+								if (676 <= 676 - 513)
+								{
+									goto IL_004d;
+								}
+								Ⴓ();
+								if (602 > 602 - 477)
+								{
+									break;
+								}
+							}
+							break;
+						}
+						if (false)
+						{
+							continue;
+						}
+						return;
+					}
+				}
+				else if (608 >= 608 - 65)
+				{
+					break;
+				}
+			}
+		}
+
+		public unsafe void ႨႠႥ()
+		{
+			//Discarded unreachable code: IL_0005, IL_002d, IL_0035, IL_0056, IL_0078, IL_0085, IL_00a0, IL_00bf, IL_00c6, IL_00ee, IL_0112
+			int num;
+			if (*(bool*)(&this.Ⴐ))
+			{
+				num = 0;
+				goto IL_003a;
+			}
+			if (508 > 508 - 131)
+			{
+				goto IL_007d;
+			}
+			goto IL_00d6;
+			IL_00d6:
+			bool flag = default(bool);
+			while (true)
+			{
+				if (flag)
+				{
+					goto IL_005b;
+				}
+				if (false)
+				{
+					goto IL_0065;
+				}
+				goto IL_00a2;
+				IL_00a2:
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+				if (541 <= 541 - 68)
+				{
+					continue;
+				}
+				goto IL_005b;
+				IL_005b:
+				flag = (this.m_ႨႨ == -1);
+				goto IL_0065;
+				IL_0065:
+				if (!flag)
+				{
+					if (403 <= 403 - 197)
+					{
+						break;
+					}
+					Bass.BASS_ChannelPause(this.m_ႨႨ);
+					if (72 <= 72 - 22)
+					{
+						goto IL_00a2;
+					}
+				}
+				ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679747));
+				if (883 > 883 - 458)
+				{
+				}
+				return;
+			}
+			goto IL_007d;
+			IL_007d:
+			num = (this.m_Ⴃ ? 1 : 0);
+			goto IL_003a;
+			IL_003a:
+			flag = ((byte)num != 0);
+			if (!flag)
+			{
+				if ((747 + 747 * 747) % 2 == 0)
+				{
+					return;
+				}
+			}
+			else
+			{
+				int device = ႨႷႭ();
+				flag = Bass.BASS_SetDevice(device);
+			}
+			goto IL_00d6;
+		}
+
+		public unsafe void ႨႠႠ()
+		{
+			int num = 3;
+			while (true)
+			{
+				switch (num)
+				{
+				case 5:
+					return;
+				default:
+					num = ((!(*(bool*)(&this.Ⴐ))) ? 1 : 4);
+					break;
+				case 4:
+					num = 5;
+					break;
+				case 1:
+				{
+					int device = ႨႷႭ();
+					num = (Bass.BASS_SetDevice(device) ? 2 : 6);
+					break;
+				}
+				case 6:
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679767));
+					num = 2;
+					break;
+				case 2:
+					num = ((this.m_ႨႨ != -1) ? 7 : 0);
+					break;
+				case 7:
+					Bass.BASS_ChannelPlay(this.m_ႨႨ, restart: false);
+					num = 0;
+					break;
+				case 0:
+					ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679758));
+					num = 5;
+					break;
+				}
+			}
+		}
+
+		public float[] ႨႠႣ()
+		{
+			//Discarded unreachable code: IL_0005, IL_0046, IL_004c, IL_0056, IL_005b, IL_0070, IL_008c
+			int num;
+			while (true)
+			{
+				if (this.m_ႨႨ == -1)
+				{
+					num = 0;
+					break;
+				}
+				if ((407 + 407 * 407) % 2 == 0)
+				{
+					num = (this.m_Ⴃ ? 1 : 0);
+					break;
+				}
+			}
+			if (num != 0)
+			{
+				goto IL_0007;
+			}
+			float[] result;
+			if ((132 + 132 * 132) % 2 == 0)
+			{
+				result = null;
+				goto IL_0072;
+			}
+			goto IL_0034;
+			IL_0007:
+			float[] array = new float[1024];
+			Bass.BASS_ChannelGetData(this.m_ႨႨ, array, -2147483645);
+			ႨႤႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679804));
+			goto IL_0034;
+			IL_0072:
+			return result;
+			IL_0034:
+			result = array;
+			if (986 < 986 - 370)
+			{
+				goto IL_0007;
+			}
+			goto IL_0072;
+		}
+
+		private void ႨႤႤ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0047, IL_0064
+			BASSError bASSError = Bass.BASS_ErrorGetCode();
+			while (true)
+			{
+				bool flag = bASSError == BASSError.BASS_OK;
+				while (true)
+				{
+					if (flag)
+					{
+						return;
+					}
+					if ((44 + 44 * 44) % 2 == 0)
+					{
+						ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679782) + Ⴍ + ႰႼႭ.Ⴍ.ႳႭႨ(137679781) + Enum.GetName(typeof(BASSError), bASSError));
+						if (false)
+						{
+							continue;
+						}
+						return;
+					}
+					break;
+				}
+			}
+		}
+
+		public void Dispose()
+		{
+			ႨႤႼ(Ⴍ: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected void ႨႤႼ(bool Ⴍ)
+		{
+			int num = 3;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (this.m_Ⴍ ? 1 : 4);
+					break;
+				case 4:
+					num = (Ⴍ ? 2 : 0);
+					break;
+				case 2:
+					ႨႠႭ();
+					num = 0;
+					break;
+				case 0:
+					num = 1;
+					break;
+				case 1:
+					this.m_Ⴍ = true;
+					return;
+				}
+			}
+		}
+
+		private void ႨႠႭ()
+		{
+			//Discarded unreachable code: IL_0005, IL_0023, IL_0035, IL_0039, IL_004a, IL_005f, IL_0082
+			do
+			{
+				ႨႷႤ();
+				ႨႥႳ();
+				ႨႥႭ();
+				ႨႠႳ();
+				ႨႠႷ();
+				while (true)
+				{
+					if (!Bass.BASS_RecordFree())
+					{
+						if (80 >= 80 - 76)
+						{
+							break;
+						}
+					}
+					if (337 < 337 - 287)
+					{
+					}
+				}
+				while (Bass.BASS_Free())
+				{
+					if (false)
+					{
+						return;
+					}
+				}
+			}
+			while (988 <= 988 - 417);
+		}
+
+		private void <ListeningCallback>b__1()
+		{
+			this.Ⴈ();
+		}
+
+		private unsafe void <ListeningStopped>b__3()
+		{
+			(*(ListeningEventDelegate*)(&this.Ⴐ))();
+		}
+
+		private void <ListeningStopped>b__4()
+		{
+			ႨႤႠ((string)(object)this.Ⴓ);
+		}
+	}
+	internal sealed class Ⴈ : IDisposable
+	{
+		private ChatmanDevice Ⴐ;
+
+		private AutoResetEvent Ⴐ;
+
+		private byte[] Ⴐ;
+
+		private ႷႭႰ.Ⴍ Ⴐ;
+
+		private DataReceivedDelegate Ⴐ;
+
+		private ႷႭႰ.Ⴓ Ⴐ;
+
+		private ႥႥႨႥ.Ⴓ Ⴐ;
+
+		private ႥႥႤ.Ⴀ Ⴐ;
+
+		private bool Ⴐ;
+
+		private bool m_Ⴈ;
+
+		private byte Ⴐ;
+
+		private int Ⴐ;
+
+		private int m_Ⴈ;
+
+		private ManualResetEvent Ⴐ;
+
+		private bool Ⴓ;
+
+		private DateTime Ⴐ;
+
+		private byte[] m_Ⴈ;
+
+		private int Ⴓ;
+
+		private bool m_Ⴗ;
+
+		private byte[] Ⴓ;
+
+		private byte[] m_Ⴗ;
+
+		private byte[] Ⴅ;
+
+		private bool Ⴅ;
+
+		internal unsafe Ⴈ()
+		{
+			//Discarded unreachable code: IL_0002, IL_001e, IL_0029, IL_0105
+			*(@null*)(&this.Ⴐ) = null;
+			*(bool*)(&this.Ⴐ) = false;
+			*(bool*)(&this.m_Ⴈ) = false;
+			*(byte*)(&this.Ⴐ) = 0;
+			*(int*)(&this.Ⴐ) = 0;
+			while (true)
+			{
+				*(int*)(&this.m_Ⴈ) = 8;
+				*(ManualResetEvent*)(&this.Ⴐ) = new ManualResetEvent(initialState: false);
+				m_Ⴈ = new byte[8];
+				*(int*)(&this.Ⴓ) = 0;
+				this.m_Ⴗ = false;
+				Ⴓ = new byte[12]
+				{
+					3,
+					2,
+					5,
+					3,
+					5,
+					8,
+					3,
+					4,
+					8,
+					2,
+					6,
+					3
+				};
+				this.m_Ⴗ = new byte[12]
+				{
+					2,
+					2,
+					4,
+					1,
+					2,
+					3,
+					1,
+					2,
+					3,
+					1,
+					2,
+					1
+				};
+				*(byte[]*)(&this.Ⴅ) = new byte[7]
+				{
+					0,
+					2,
+					4,
+					4,
+					4,
+					4,
+					2
+				};
+				base..ctor();
+				if (!ႥႥႳႰ.Ⴍ.Ⴃ)
+				{
+					do
+					{
+						*(int*)(&this.m_Ⴈ) = 18;
+					}
+					while (false);
+					break;
+				}
+				if (150 > 150 - 140)
+				{
+					*(int*)(&this.m_Ⴈ) = 8;
+					break;
+				}
+			}
+			*(ႥႥႨႥ.Ⴓ*)(&this.Ⴐ) = ႥႥႨႥ.Ⴓ.ႨႷႼ(ႨႷႰ);
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		internal unsafe void ႤႠႥ(ႷႭႰ.Ⴍ Ⴍ)
+		{
+			*(ႷႭႰ.Ⴍ*)(&this.Ⴐ) = (ႷႭႰ.Ⴍ)Delegate.Combine(*(ႷႭႰ.Ⴍ*)(&this.Ⴐ), Ⴍ);
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		internal unsafe void ႤႠႭ(DataReceivedDelegate Ⴍ)
+		{
+			*(DataReceivedDelegate*)(&this.Ⴐ) = (DataReceivedDelegate)Delegate.Combine(*(DataReceivedDelegate*)(&this.Ⴐ), Ⴍ);
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		internal unsafe void ႤႠႣ(ႷႭႰ.Ⴓ Ⴍ)
+		{
+			*(ႷႭႰ.Ⴓ*)(&this.Ⴐ) = (ႷႭႰ.Ⴓ)Delegate.Combine(*(ႷႭႰ.Ⴓ*)(&this.Ⴐ), Ⴍ);
+		}
+
+		private unsafe void ႨႷႰ()
+		{
+			//Discarded unreachable code: IL_0024, IL_0038, IL_005a, IL_007d, IL_00b2
+			while (true)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679851));
+				Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+				while (true)
+				{
+					IL_0005:
+					if (ႥႥႨႣ.Ⴀ.Ⴐ)
+					{
+						if (827 < 827 - 379)
+						{
+							break;
+						}
+						ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679850));
+						return;
+					}
+					bool flag = *(ChatmanDevice*)(&this.Ⴐ) == null;
+					while (true)
+					{
+						if (!flag)
+						{
+							if (946 < 946 - 270)
+							{
+								break;
+							}
+							((ChatmanDevice*)(&this.Ⴐ))->DoReadAsync(*(ManualResetEvent*)(&this.Ⴐ));
+							if (416 < 416 - 301)
+							{
+								return;
+							}
+						}
+						if ((963 + 963 * 963) % 2 == 0)
+						{
+							goto IL_0005;
+						}
+					}
+					break;
+				}
+			}
+		}
+
+		public unsafe void ႤႠႷ(DateTime Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0013, IL_0049, IL_0062, IL_0080
+			Ⴐ = Ⴍ;
+			while (!(*(bool*)(&this.Ⴓ)))
+			{
+				if (62 > 62 - 59)
+				{
+					if (*(ႥႥႤ.Ⴀ*)(&this.Ⴐ) == null)
+					{
+						goto IL_0007;
+					}
+					if (40 <= 40 - 16)
+					{
+					}
+					((ႥႥႤ.Ⴀ*)(&this.Ⴐ))->ႳႭ(3000.0, -1.0);
+				}
+				*(bool*)(&this.Ⴓ) = true;
+				goto IL_0039;
+				IL_0007:
+				if (false)
+				{
+					goto IL_0039;
+				}
+				break;
+				IL_0039:
+				if (309 < 309 - 203)
+				{
+					continue;
+				}
+				goto IL_0007;
+			}
+		}
+
+		internal unsafe bool ႤႠႨ(int Ⴍ)
+		{
+			*(int*)(&this.Ⴐ) = Ⴍ;
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679849));
+			*(AutoResetEvent*)(&this.Ⴐ) = new AutoResetEvent(initialState: false);
+			return ႨႷႨ();
+		}
+
+		internal bool ႨႷႨ()
+		{
+			int num = 4;
+			bool flag = default(bool);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					flag = false;
+					num = ((!ႨႷႷ()) ? 6 : 0);
+					break;
+				case 0:
+					flag = ႨႷႭ();
+					num = ((!flag) ? 1 : 5);
+					break;
+				case 5:
+					num = ((!ႥႥႳႰ.Ⴍ.Ⴈ) ? 2 : 3);
+					break;
+				case 3:
+					Thread.Sleep(300);
+					Ⴃ(1, 16, null, Ⴈ: true);
+					num = 2;
+					break;
+				case 2:
+					num = 1;
+					break;
+				case 1:
+					num = 6;
+					break;
+				case 6:
+					return flag;
+				}
+			}
+		}
+
+		internal unsafe bool ႭႳ()
+		{
+			return *(ChatmanDevice*)(&this.Ⴐ) != null;
+		}
+
+		internal unsafe bool ႤႠႼ(Message Ⴍ)
+		{
+			int num = 0;
+			int result;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num2 = ((*(ChatmanDevice*)(&this.Ⴐ) == null) ? 1 : 2);
+					goto IL_001d;
+				case 2:
+					result = (((ChatmanDevice*)(&this.Ⴐ))->ႰႨႣ(Ⴍ) ? 1 : 0);
+					break;
+				case 1:
+					result = 1;
+					break;
+				}
+				break;
+				IL_001d:
+				num = num2;
+			}
+			return (byte)result != 0;
+		}
+
+		private unsafe bool ႨႷႷ()
+		{
+			try
+			{
+				*(ChatmanDevice*)(&this.Ⴐ) = ChatmanDevice.FindChatmanAndAttach(*(int*)(&this.Ⴐ));
+				if (*(ChatmanDevice*)(&this.Ⴐ) != null)
+				{
+					((ChatmanDevice*)(&this.Ⴐ))->DataReceived += ႤႤႠ;
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679848), ⴓ);
+			}
+			return *(ChatmanDevice*)(&this.Ⴐ) != null;
+		}
+
+		internal unsafe void ႨႷႥ()
+		{
+			try
+			{
+				if (*(ChatmanDevice*)(&this.Ⴐ) != null)
+				{
+					((ChatmanDevice*)(&this.Ⴐ))->Dispose();
+					*(@null*)(&this.Ⴐ) = null;
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679855), ⴓ);
+			}
+		}
+
+		private unsafe void ႤႤႠ(byte[] Ⴍ)
+		{
+			*(byte[]*)(&this.Ⴐ) = Ⴍ;
+			ႨႷႠ();
+		}
+
+		private unsafe void ႨႷႠ()
+		{
+			int num = 5;
+			byte[] array = default(byte[]);
+			bool flag = default(bool);
+			byte b = default(byte);
+			while (true)
+			{
+				int num2;
+				int num3;
+				switch (num)
+				{
+				case 14:
+					return;
+				default:
+					array = *(byte[]*)(&this.Ⴐ);
+					flag = false;
+					num = 8;
+					break;
+				case 8:
+					num = ((array[0] != 3) ? 10 : 17);
+					break;
+				case 17:
+					num2 = ((array[1] != 90) ? 1 : 0);
+					goto IL_0098;
+				case 10:
+					num2 = 1;
+					goto IL_0098;
+				case 2:
+				{
+					b = array[2];
+					int num4;
+					switch (b)
+					{
+					default:
+						num4 = 20;
+						break;
+					case 146:
+						num4 = 11;
+						break;
+					case 147:
+						num4 = 1;
+						break;
+					}
+					num = num4;
+					break;
+				}
+				case 20:
+					num = ((b == 161) ? 23 : 3);
+					break;
+				case 3:
+					num = 4;
+					break;
+				case 23:
+					num = ((*(ႷႭႰ.Ⴍ*)(&this.Ⴐ) == null) ? 9 : 6);
+					break;
+				case 6:
+					ႥႥႨႥ.Ⴓ.ႨႷႼ(ႨႷႣ);
+					num = 9;
+					break;
+				case 9:
+					num = 12;
+					break;
+				case 11:
+					num = ((array[3] != 0) ? 15 : 0);
+					break;
+				case 15:
+					num3 = ((array[4] != 0) ? 1 : 0);
+					goto IL_0146;
+				case 0:
+					num3 = 0;
+					goto IL_0146;
+				case 21:
+					ႤႤႤ(0);
+					num = 14;
+					break;
+				case 22:
+					*(bool*)(&this.m_Ⴈ) = true;
+					*(byte*)(&this.Ⴐ) = array[4];
+					num = 12;
+					break;
+				case 1:
+					num = ((*(ႷႭႰ.Ⴓ*)(&this.Ⴐ) == null) ? 7 : 13);
+					break;
+				case 13:
+					(*(ႷႭႰ.Ⴓ*)(&this.Ⴐ))(array[3]);
+					num = 7;
+					break;
+				case 7:
+					num = 12;
+					break;
+				case 4:
+					ႤႤႤ(0);
+					num = 14;
+					break;
+				case 12:
+					Array.Clear(m_Ⴈ, 0, 8);
+					*(int*)(&this.Ⴓ) = 0;
+					((AutoResetEvent*)(&this.Ⴐ))->Set();
+					num = 14;
+					break;
+				case 16:
+					num = (flag ? 19 : 18);
+					break;
+				case 18:
+					ႤႤႤ(1);
+					array = m_Ⴈ;
+					flag = true;
+					num = 8;
+					break;
+				case 19:
+					{
+						Array.Clear(m_Ⴈ, 0, 8);
+						*(int*)(&this.Ⴓ) = 0;
+						num = 14;
+						break;
+					}
+					IL_0098:
+					num = ((num2 != 0) ? 16 : 2);
+					break;
+					IL_0146:
+					num = ((num3 != 0) ? 22 : 21);
+					break;
+				}
+			}
+		}
+
+		private unsafe void ႤႤႤ(int Ⴀ)
+		{
+			int num = 4;
+			int num3 = default(int);
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num3 = Ⴀ;
+					num = 2;
+					continue;
+				case 0:
+					m_Ⴈ[*(int*)(&this.Ⴓ)] = (*(byte[]*)(&this.Ⴐ))[num3];
+					num3++;
+					(*(int*)(&this.Ⴓ))++;
+					num = 2;
+					continue;
+				case 2:
+					num = (((*(byte[]*)(&this.Ⴐ))[num3] == 0) ? 5 : 3);
+					continue;
+				case 3:
+					num = ((num3 >= 8) ? 5 : 6);
+					continue;
+				case 6:
+					num2 = ((*(int*)(&this.Ⴓ) < 8) ? 1 : 0);
+					break;
+				case 5:
+					num2 = 0;
+					break;
+				}
+				num = ((num2 == 0) ? 1 : 0);
+			}
+		}
+
+		private unsafe void ႨႷႣ()
+		{
+			if (!this.m_Ⴗ)
+			{
+				Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+				try
+				{
+					this.m_Ⴗ = true;
+					if (*(ႷႭႰ.Ⴍ*)(&this.Ⴐ) != null)
+					{
+						(*(ႷႭႰ.Ⴍ*)(&this.Ⴐ))();
+					}
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679854), ⴓ);
+				}
+				finally
+				{
+					this.m_Ⴗ = false;
+				}
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679853));
+			}
+		}
+
+		private unsafe bool ႨႷႭ()
+		{
+			//Discarded unreachable code: IL_0005, IL_002f, IL_0046, IL_0069, IL_0086, IL_00b5, IL_00c9, IL_00ef, IL_010b, IL_0119, IL_012a, IL_01cf
+			ႥႥႨ.Ⴗ.ႳႥ(ႰႼႭ.Ⴍ.ႳႭႨ(137679852), Thread.CurrentThread.ManagedThreadId);
+			Random random = new Random();
+			byte b = BitConverter.GetBytes(random.Next())[0];
+			((AutoResetEvent*)(&this.Ⴐ))->Reset();
+			*(bool*)(&this.m_Ⴈ) = false;
+			bool flag = false;
+			bool flag2 = Ⴍ(1, 17, b, Ⴈ: true);
+			bool flag3 = ((AutoResetEvent*)(&this.Ⴐ))->WaitOne(3000, exitContext: false);
+			bool flag4 = !flag3;
+			while (true)
+			{
+				if (!flag4)
+				{
+					if (659 > 659 - 96)
+					{
+						flag4 = !(*(bool*)(&this.m_Ⴈ));
+						goto IL_0053;
+					}
+					goto IL_000a;
+				}
+				goto IL_00f1;
+				IL_008b:
+				flag4 = (b + *(byte*)(&this.Ⴐ) != 255);
+				if (!flag4)
+				{
+					if (false)
+					{
+						goto IL_000a;
+					}
+					flag = true;
+					do
+					{
+						ႨႷႤ();
+					}
+					while (172 < 172 - 169);
+				}
+				if ((81 + 81 * 81) % 2 == 0)
+				{
+					goto IL_0031;
+				}
+				goto IL_0053;
+				IL_00f1:
+				ႥႥႨ.Ⴗ.ႳႭ(ႰႼႭ.Ⴍ.ႳႭႨ(137679842), flag ? ႰႼႭ.Ⴍ.ႳႭႨ(137679813) : ႰႼႭ.Ⴍ.ႳႭႨ(137679841));
+				break;
+				IL_0053:
+				if (!flag4)
+				{
+					if (false)
+					{
+						break;
+					}
+					goto IL_000a;
+				}
+				goto IL_0031;
+				IL_000a:
+				flag4 = (b + *(byte*)(&this.Ⴐ) == 255);
+				if (flag4)
+				{
+					goto IL_008b;
+				}
+				if (74 > 74 - 58)
+				{
+				}
+				goto IL_00ce;
+				IL_0031:
+				if (false)
+				{
+					goto IL_00ce;
+				}
+				goto IL_00f1;
+				IL_00ce:
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679843));
+				if (false)
+				{
+					continue;
+				}
+				goto IL_008b;
+			}
+			return flag;
+		}
+
+		private unsafe void ႨႷႤ()
+		{
+			ႭႷ(18, Ⴓ);
+			ႭႷ(19, this.m_Ⴗ);
+			ႭႷ(20, *(byte[]*)(&this.Ⴅ));
+		}
+
+		private void ႭႷ(int Ⴓ, byte[] Ⴅ)
+		{
+			int num = 9;
+			byte[] array = default(byte[]);
+			int num2 = default(int);
+			int num4 = default(int);
+			while (true)
+			{
+				int num3;
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					array = new byte[5];
+					num2 = 0;
+					num = 5;
+					break;
+				case 7:
+					array[0] = (byte)num2;
+					num4 = 1;
+					num = 1;
+					break;
+				case 2:
+					array[num4] = Ⴅ[num2];
+					num2++;
+					num4++;
+					num = 1;
+					break;
+				case 1:
+					num = ((num4 >= 5) ? 4 : 8);
+					break;
+				case 8:
+					num3 = ((num2 < Ⴅ.Length - 1) ? 1 : 0);
+					goto IL_007f;
+				case 4:
+					num3 = 0;
+					goto IL_007f;
+				case 3:
+					num = 11;
+					break;
+				case 10:
+					array[num4] = 0;
+					num4++;
+					num = 11;
+					break;
+				case 11:
+					num = ((num4 < 5) ? 10 : 6);
+					break;
+				case 6:
+					Ⴃ(1, Ⴓ, array, Ⴈ: true);
+					Thread.Sleep(10);
+					num = 5;
+					break;
+				case 5:
+					{
+						num = ((num2 < Ⴅ.Length - 1) ? 7 : 0);
+						break;
+					}
+					IL_007f:
+					num = ((num3 != 0) ? 2 : 3);
+					break;
+				}
+			}
+		}
+
+		internal unsafe bool Ⴗ(int Ⴓ, HardwareCodeData Ⴅ, byte[] Ⴐ, bool Ⴈ, ႷႭႨ.Ⴐ Ⴗ, ref ႷႭႨ.Ⴐ Ⴄ)
+		{
+			ႷႭႨ.Ⴐ ⴐ = Ⴄ;
+			try
+			{
+				if (Ⴈ || Ⴗ == ႷႭႨ.Ⴐ.Ⴓ)
+				{
+					try
+					{
+						if (*(ChatmanDevice*)(&this.Ⴐ) == null)
+						{
+							return false;
+						}
+						byte[] array = new byte[((ChatmanDevice*)(&this.Ⴐ))->OutputReportLength];
+						array[0] = 3;
+						array[1] = Ⴅ.Header;
+						array[2] = Ⴅ.Code;
+						int num = 3;
+						if (Ⴅ.CodeLength > 1)
+						{
+							array[3] = Ⴅ.SubCode;
+							num++;
+						}
+						if (Ⴅ.HasParameter)
+						{
+							int num2 = 0;
+							int num3 = Ⴐ.Length;
+							while (num2 < num3)
+							{
+								array[num] = Ⴐ[num2];
+								num2++;
+								num++;
+							}
+						}
+						ႤႠႷ(DateTime.Now);
+						*(bool*)(&this.Ⴐ) = true;
+						bool result = ((ChatmanDevice*)(&this.Ⴐ))->WriteData(array);
+						*(bool*)(&this.Ⴐ) = false;
+						return result;
+					}
+					catch (Exception ⴓ)
+					{
+						*(bool*)(&this.Ⴐ) = false;
+						ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679840), ⴓ);
+						return false;
+					}
+				}
+				return false;
+			}
+			finally
+			{
+				Ⴄ = ⴐ;
+			}
+		}
+
+		internal unsafe bool Ⴗ(int Ⴓ, byte[] Ⴅ, int Ⴐ, ႷႭႨ.Ⴐ Ⴈ, ref ႷႭႨ.Ⴐ Ⴗ)
+		{
+			ႷႭႨ.Ⴐ ⴐ = Ⴗ;
+			try
+			{
+				if (Ⴈ == ႷႭႨ.Ⴐ.Ⴓ)
+				{
+					try
+					{
+						if (*(ChatmanDevice*)(&this.Ⴐ) == null)
+						{
+							return false;
+						}
+						for (int i = Ⴐ; i < *(int*)(&this.m_Ⴈ); i++)
+						{
+							Ⴅ[i] = 0;
+						}
+						ႤႠႷ(DateTime.Now);
+						*(bool*)(&this.Ⴐ) = true;
+						bool result = ((ChatmanDevice*)(&this.Ⴐ))->WriteData(Ⴅ);
+						*(bool*)(&this.Ⴐ) = false;
+						return result;
+					}
+					catch (Exception ⴓ)
+					{
+						*(bool*)(&this.Ⴐ) = false;
+						ႥႥႨ.Ⴗ.ႳႤ(ႰႼႭ.Ⴍ.ႳႭႨ(137679847), ⴓ);
+						return false;
+					}
+				}
+				return false;
+			}
+			finally
+			{
+				Ⴗ = ⴐ;
+			}
+		}
+
+		private bool Ⴍ(int Ⴓ, int Ⴅ, byte Ⴐ, bool Ⴈ)
+		{
+			ႷႭႨ.Ⴐ Ⴄ = ႷႭႨ.Ⴐ.Ⴓ;
+			return Ⴍ(Ⴓ, Ⴅ, new byte[1]
+			{
+				Ⴐ
+			}, Ⴈ, ႷႭႨ.Ⴐ.Ⴓ, ref Ⴄ);
+		}
+
+		private bool Ⴃ(int Ⴓ, int Ⴅ, byte[] Ⴐ, bool Ⴈ)
+		{
+			ႷႭႨ.Ⴐ Ⴄ = ႷႭႨ.Ⴐ.Ⴓ;
+			return Ⴍ(Ⴓ, Ⴅ, Ⴐ, Ⴈ, ႷႭႨ.Ⴐ.Ⴓ, ref Ⴄ);
+		}
+
+		internal bool Ⴍ(int Ⴓ, int Ⴅ, byte[] Ⴐ, bool Ⴈ, ႷႭႨ.Ⴐ Ⴗ, ref ႷႭႨ.Ⴐ Ⴄ)
+		{
+			HardwareCodeData ⴅ = Ⴀ.Ⴐ[Ⴅ];
+			return this.Ⴗ(Ⴓ, ⴅ, Ⴐ, Ⴈ, Ⴗ, ref Ⴄ);
+		}
+
+		public void Dispose()
+		{
+			ႤႤႰ(Ⴓ: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected unsafe void ႤႤႰ(bool Ⴓ)
+		{
+			if (!Ⴅ && Ⴓ)
+			{
+				((ManualResetEvent*)(&this.Ⴐ))->Set();
+				try
+				{
+					ႨႷႥ();
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+				}
+				try
+				{
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႰႼႭ.Ⴍ.ႳႭႨ(137679846));
+					((ႥႥႨႥ.Ⴓ*)(&this.Ⴐ))->ႨႳႭ();
+					*(@null*)(&this.Ⴐ) = null;
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+				}
+			}
+			Ⴅ = true;
+		}
+	}
+}
+namespace ႰႷႭ
+{
+	internal sealed class Ⴍ
+	{
+		[Serializable]
+		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
+		private struct d
+		{
+			public IntPtr a;
+
+			public IntPtr b;
+
+			public BASSDeviceInfo c;
+		}
+
+		public static string ႥႭႭ(int Ⴍ)
+		{
+			d Ⴓ = default(d);
+			bool flag = ႥႭ(Ⴍ, ref Ⴓ);
+			return ႥႭႥ(Ⴓ.a);
+		}
+
+		private static string ႥႭႥ(IntPtr Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0011, IL_0034, IL_003a, IL_0054, IL_0058, IL_005f, IL_0086, IL_00b1
+			List<byte> list = default(List<byte>);
+			int num = default(int);
+			string result;
+			byte b = default(byte);
+			while (true)
+			{
+				if (!(Ⴍ == IntPtr.Zero))
+				{
+					list = new List<byte>();
+					num = 0;
+					goto IL_005a;
+				}
+				if (389 >= 389 - 334)
+				{
+					result = null;
+					break;
+				}
+				goto IL_0069;
+				IL_0061:
+				b = Marshal.ReadByte(Ⴍ, num);
+				goto IL_0069;
+				IL_0013:
+				result = Encoding.ASCII.GetString(list.ToArray());
+				if (662 >= 662 - 445)
+				{
+					break;
+				}
+				goto IL_0061;
+				IL_0069:
+				while (b == 0)
+				{
+					if (355 < 355 - 188)
+					{
+						continue;
+					}
+					goto IL_0013;
+				}
+				list.Add(b);
+				num++;
+				if (621 <= 621 - 90)
+				{
+					continue;
+				}
+				goto IL_005a;
+				IL_005a:
+				bool flag = true;
+				goto IL_0061;
+			}
+			return result;
+		}
+
+		[DllImport("bass.dll", CharSet = CharSet.Auto, EntryPoint = "BASS_GetDeviceInfo")]
+		[return: MarshalAs(UnmanagedType.Bool)]
+		private static extern bool ႥႭ([In] int Ⴍ, [In] [Out] ref d Ⴓ);
+	}
+}
+namespace ႰႼႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string ႳႭႨ(int Ⴓ)
+		{
+			int num = Ⴓ ^ 0x834D39B;
+			string result;
+			if ((result = m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "अ֏\u0557ऑף\u0cfbఞ෦ह\u05b7զऩפ\u0cfbట෪\u093a";
+				break;
+			case 1:
+				obj = "\u0dfcढ\u05abսऒר\u0ce3\u0c02ළप\u05b5յगס\u0cbbఘ෪ठ";
+				break;
+			case 2:
+				obj = "\u0c49\u0dddॾ\u05ecԦ\u094a־ಡ\u0c4aලॼ\u05edԦ\u094c\u05bfಧ";
+				break;
+			case 3:
+				obj = "\u0cdcక෬ह\u05b1յऒפ೯ఒ෫प\u05f8դऒ\u05ec೬ఞ\u0df7";
+				break;
+			case 4:
+				obj = "\u05c4\u0cfbఒ\u0df1त\u05b9ոग\u05f7\u0cfcక\u0de2७\u05aaձझע೧ట\u0de0\u093f";
+				break;
+			case 5:
+				obj = "ऽץ\u0cf4ఏ෨ब\u05b6Դट\u05f8ೱఒ෪७\u05bcձईפ\u0cf6ఞඥत\u05b6հछ\u05f5ಯ\u0c5b";
+				break;
+			case 6:
+				obj = "Դचר\u0cf3చ\u0df0ड\u05acԴगףೱఞ\u0dfd७";
+				break;
+			case 7:
+				obj = "\u059bյऐ\u05aaೡ\u0c5b෬ण\u05b1ՠग\u05ec\u0cf9ఒ\u0dffन\u05f8\u0557ख\u05ecೡఖ\u0de4ण\u05f8յऋש\u0cfcఔඥऩ\u05bdբग\u05ee\u0cf0";
+				break;
+			case 8:
+				obj = "ऄ\u05b6սऊ\u05ad\u0cd6ఓ\u0de4ह\u05b5յऐ";
+				break;
+			case 9:
+				obj = "ෆब\u05b6Գऊ\u05ad\u0cfcక෬ह\u05b1յऒפ೯ఞඥऩ\u05bdղट\u05f8\u0cf9ఏඥब\u05adհगעವట\u0de0\u093b\u05b1շछ";
+				break;
+			case 10:
+				obj = "ల෫त\u05acԴचר\u0cf3చ\u0df0ड\u05ac";
+				break;
+			case 11:
+				obj = "\u0cf6ఓ\u0de4ह\u05b5յऐ";
+				break;
+			case 12:
+				obj = "\u05cf\u0cd4న\u0dd6ऒ\u058bձऊ\u05c9\u0cf0\u0c0d෬म\u05bd";
+				break;
+			case 13:
+				obj = "\u093c\u05cc\u0cc6న\u0ddaञ\u05acզछ\u05ec\u0cf8స\u0df7न\u05b9ՠछ\u05cb\u0cfcగ\u0de0ॷ\u05f8Մऒ\u05ec೬\u0c3a\u0df0ऩ\u05b1ջ\u0956";
+				break;
+			case 14:
+				obj = "Խ";
+				break;
+			case 15:
+				obj = "\u059aՕभמ\u0ccaస෭ब\u05b6պछס\u0cc6ఞ\u0df1ऌ\u05acՠऌפ\u0cf7ఎ\u0df1नעԴमס\u0cf4\u0c02හस\u05bcսऑ";
+				break;
+			case 16:
+				obj = "ए\u0599Շभג\u0cd6ఓ\u0de4ण\u05b6ձऒמ\u0cf0ఏ\u0dd6ऴ\u05b6շ\u0944\u05ad\u0cc5గ\u0de4ऴ\u0599աचפ\u0cfa";
+				break;
+			case 17:
+				obj = "\u0dc7ऌ\u058bՇड\u05ce\u0cfdచ෫ण\u05bdոमס\u0cf4\u0c02\u0dbf७ֈոट״\u0cd4ఎ\u0de1त\u05b7";
+				break;
+			case 18:
+				obj = "హහञ\u058bՋभ\u05f9೧ఞ\u0de4ठ\u059bզछ\u05ecೡఞසत\u05b4ձ\u0944\u05ad\u0cc5గ\u0de4ऴ\u0599աचפ\u0cfa\u0c53\u0dc8न\u05b5ջऌ״\u0cc6ఏ\u0df7न\u05b9չफ़\u05ecೠట෬ढ\u059eսऒר\u0cc6ఏ\u0df7न\u05b9չ\u0957";
+				break;
+			case 19:
+				obj = "\u0cd7\u0c3a\u0dd6ञև\u0557ख\u05ec\u0cfbక\u0de0ड\u058bձऊ\u05ccೡఏ\u0df7त\u05baաऊרಯ\u0c5b\u0dd5ड\u05b9խ\u093f\u05f8ೱఒ෪॥\u0595ձओע೧\u0c02\u0dd6ह\u05aaձटנವచ\u0df0ऩ\u05b1ջसפ\u0cf9ఞ\u0dd6ह\u05aaձटנ\u0cbc";
+				break;
+			case 20:
+				obj = "\u05cf\u0cd4న\u0dd6ऒ\u059bռटף\u0cfbఞ෩ञ\u05bdՠभ״\u0cfbఘ";
+				break;
+			case 21:
+				obj = "\u093c\u05cc\u0cc6న\u0ddaऎ\u05b0յऐף\u0cf0గ\u0dd5ड\u05b9խ";
+				break;
+			case 22:
+				obj = "Ֆ\u093fמ\u0cc6తෆथ\u05b9պऐר\u0cf9న\u0df1ढ\u05a8Ԯफ़ס\u0cf4ఈ\u0df1झ\u05b4յइׯ\u0cf4ఘ෮ञ\u05acզछ\u05ec\u0cf8";
+				break;
+			case 23:
+				obj = "\u059aՕभמ\u0ccaన\u0df1\u093f\u05bdյओ\u05cb೧ఞ\u0de0ॷ\u05f8ոट\u05feೡఫ෩ब\u05a1նट\u05ee\u0cfeన\u0df1\u093f\u05bdյओ";
+				break;
+			case 24:
+				obj = "ए\u0599Շभג\u0cd6ఓ\u0de4ण\u05b6ձऒם\u0cf4ఎ\u0df6न";
+				break;
+			case 25:
+				obj = "\u0dc7ऌ\u058bՇड\u05ce\u0cfdచ෫ण\u05bdոहרೡ\u0c3a\u0df1ह\u05aaսज\u05f8ೡఞ";
+				break;
+			case 26:
+				obj = "హහञ\u058bՋऽץ\u0cf4క෫न\u05b4Շछ\u05f9\u0cd4ఏ\u0df1\u093f\u05b1նऋ\u05f9\u0cf0";
+				break;
+			case 27:
+				obj = "\u0cd7\u0c3a\u0dd6ञև\u0557ख\u05ec\u0cfbక\u0de0ड\u058bձऊ\u05ccೡఏ\u0df7त\u05baաऊרವ\u0c53\u0de1त\u05aaձझ\u05f9\u0cbc";
+				break;
+			case 28:
+				obj = "\u05cf\u0cd4న\u0dd6ऒ\u058bՠऌר\u0cf4ఖෆ\u093f\u05bdյऊר\u0cd3ఒ෩नעԴहרೡ\u0c3a\u0df0ऩ\u05b1ջसפ\u0cf9ఞ\u0dc9न\u05b6ճऊץ";
+				break;
+			case 29:
+				obj = "\u093c\u05cc\u0cc6న\u0ddaऎ\u05b0յऐף\u0cf0గෂन\u05ac\u0558छףೲఏ෭";
+				break;
+			case 30:
+				obj = "Ֆ\u093fמ\u0cc6తෆथ\u05b9պऐר\u0cf9హ\u0dfcह\u05bdէ\u094cמ\u0cf0ఘ෪ण\u05bcէ";
+				break;
+			case 31:
+				obj = "\u059aՕभמ\u0ccaన\u0df1\u093f\u05bdյओ\u05ce೧ఞ\u0de4ह\u05bdՒगס\u0cf0\u0c41ඥझ\u05b4յइמ\u0cfaఎ෫ऩ\u0597պम\u05ce";
+				break;
+			case 32:
+				obj = "ए\u0599Շभג\u0cc6ఏ\u0df7न\u05b9չस\u05ff\u0cf0ఞ\u0dbf७\u059fձऊ\u05ccೠట෬ढ\u059eսऒר\u0cd9ఞ෫प\u05acռ";
+				break;
+			case 33:
+				obj = "\u0dc7ऌ\u058bՇड\u05ce\u0cfdచ෫ण\u05bdոमס\u0cf4\u0c02\u0dbf७ֈոट״\u0cc6ఔ\u0df0ण\u05bc՛ऐם\u0cd6";
+				break;
+			case 34:
+				obj = "హහञ\u058bՋऽץ\u0cf4క෫न\u05b4Մऒ\u05ec೬\u0c41ඥञ\u05acջऎם\u0cf9చ\u0dfcत\u05b6ճभעೠక\u0de1\u093e\u0597պम\u05ce";
+				break;
+			case 35:
+				obj = "\u0cfaజ\u0de2न\u05b6շफ़\u05a0\u0cfa\u0c5bට";
+				break;
+			case 36:
+				obj = "\u05afವ\u0c56";
+				break;
+			case 37:
+				obj = "\u093c\u05cc\u0cc6న\u0ddaञ\u05acզछ\u05ec\u0cf8స\u0df7न\u05b9ՠछ\u05cb\u0cfcగ\u0de0ॷ\u05f8\u0557ऌע\u0ce5ఽ෬ड\u05bdՀऑ׀\u0cf4\u0c03හड\u05b4ջउרೱయ෬ठ\u05bd";
+				break;
+			case 38:
+				obj = "Ֆ\u093fמ\u0cc6తවण\u05bbջचר\u0ccaన\u0df1ब\u05aaՠ";
+				break;
+			case 39:
+				obj = "\u059aՕभמ\u0ccaస෭ब\u05b6պछס\u0cd2ఞ\u0df1उ\u05b9ՠट";
+				break;
+			case 40:
+				obj = "ए\u0599Շभג\u0cc7ఞ෦ढ\u05aaհषף\u0cfcఏ";
+				break;
+			case 41:
+				obj = "\u0dc7ऌ\u058bՇडן\u0cf0ఘ෪\u093f\u05bcՇऊ\u05ec೧ఏ";
+				break;
+			case 42:
+				obj = "హහञ\u058bՋऽץ\u0cf4క෫न\u05b4Շऊע\u0ce5\u0c41ඥड\u05b9էऊן\u0cf0ఘ෪\u093f\u05bcՇऊ\u05ff\u0cf0చ෨";
+				break;
+			case 43:
+				obj = "\u0cd7\u0c3a\u0dd6ञևՆछ\u05ee\u0cfaఉ\u0de1ऊ\u05bdՠषף\u0ce5ఎ\u0df1";
+				break;
+			case 44:
+				obj = "\u05cf\u0cd4న\u0dd6ऒ֊ձझע೧ట\u0dd6न\u05ac՝ऐ\u05fdೠఏ";
+				break;
+			case 45:
+				obj = "\u093c\u05cc\u0cc6న\u0ddaऋրՋहרೡభ\u0de0\u093f\u05abսऑף";
+				break;
+			case 46:
+				obj = "Ֆ\u093fמ\u0cc6తෆथ\u05b9պऐר\u0cf9న\u0de0ह\u059eՌ";
+				break;
+			case 47:
+				obj = "\u059aՕभמ\u0ccaస෭ब\u05b6պछס\u0cc7ఞ෨ढ\u05aeձसו";
+				break;
+			case 48:
+				obj = "ए\u0599Շभג\u0cc7ఞ෦ढ\u05aaհभ\u05f9\u0cf4ఉ\u0df1ॷ\u05f8Շऊ\u05ec೧ఏ\u0dc9त\u05abՠछף\u0cfcక\u0de2";
+				break;
+			case 49:
+				obj = "\u0dc7ऌ\u058bՇड\u05ce\u0cfdచ෫ण\u05bdոभרೡన\u0dfcण\u05bbԮफ़מೡచ\u0df7ह\u0594սऍ\u05f9\u0cf0క෬ण\u05bf";
+				break;
+			case 50:
+				obj = "హහञ\u058bՋभ\u05f9೧ఞ\u0de4ठ\u059bզछ\u05ecೡఞ\u0dbf७\u058bՠट\u05ffೡష෬\u093e\u05acձऐפ\u0cfbజ";
+				break;
+			case 51:
+				obj = "\u0cd7\u0c3a\u0dd6ञևՒदג\u0cc1ఞ෨ऽ\u05b7\u0557ऌר\u0cf4ఏ\u0de0ॷ\u05f8Շऊ\u05ec೧ఏ\u0dc9त\u05abՠछף\u0cfcక\u0de2";
+				break;
+			case 52:
+				obj = "\u05cf\u0cd4న\u0dd6ऒ\u058bՠऌר\u0cf4ఖස\u093f\u05bdձ\u0944\u05ad\u0cc6ఏ෪ऽ\u0594սऍ\u05f9\u0cf0క෬ण\u05bfԸफ़ס\u0cfcఈ\u0df1न\u05b6Ւदמೡఉ\u0de0ब\u05b5";
+				break;
+			case 53:
+				obj = "\u093c\u05cc\u0cc6న\u0ddaऎ\u05b0յऐף\u0cf0గ\u0dd6ह\u05b7դ\u0944\u05ad\u0cc6ఏ෪ऽ\u0594սऍ\u05f9\u0cf0క෬ण\u05bfԸफ़ס\u0cfcఈ\u0df1न\u05b6Նछ\u05ee\u0cc6ఏ\u0df7न\u05b9չ";
+				break;
+			case 54:
+				obj = "Ֆ\u093fמ\u0cc6త\u0dd6ह\u05aaձटנ\u0cc5ఎ\u0df1उ\u05b9ՠट";
+				break;
+			case 55:
+				obj = "\u059aՕभמ\u0ccaన\u0df1\u093f\u05bdյओ\u05cb೧ఞ\u0de0ॷ\u05f8Շऊע\u0ce5ష෬\u093e\u05acձऐפ\u0cfbజඩ७\u05b4սऍ\u05f9\u0cf0క\u0dd5स\u05abռभ\u05f9೧ఞ\u0de4ठ";
+				break;
+			case 56:
+				obj = "अ\u05bdյऌפ\u0cfbజ\u0dd6ह\u05b7դऎרೱ";
+				break;
+			case 57:
+				obj = "\u0dc7ऌ\u058bՇड\u05ce\u0cfdచ෫ण\u05bdոभרೡ\u0c3a\u0df1ह\u05aaսज\u05f8ೡఞ\u0dbf७\u05a8սऊ\u05ee\u0cfd";
+				break;
+			case 58:
+				obj = "హහञ\u058bՋसו\u0cc6ఞ\u0df1झ\u05b9զटנ\u0cf0ఏ\u0de0\u093f\u05abԮफ़ר\u0cf6ఓ෪";
+				break;
+			case 59:
+				obj = "\u0cd7\u0c3a\u0dd6ञևՒदמ\u0cf0ఏ\u0dd5ब\u05aaյओרೡఞ\u0df7\u093e";
+				break;
+			case 60:
+				obj = "\u05cf\u0cd4న\u0dd6ऒ\u058bՠऌר\u0cf4ఖෆ\u093f\u05bdյऊר\u0cd3ఒ෩नעԴभ\u05f9\u0cf4ఉ\u0df1उ\u05b1զछ\u05eeೡఫ෩ब\u05a1նट\u05ee\u0cfe";
+				break;
+			case 61:
+				obj = "\u093b\u05ff೧ఔ\u0df7७\u05b1պफ़\u05ecೠట෬ढ\u05f8ձऐת\u0cfcక\u0de0ॷ\u05f8";
+				break;
+			case 62:
+				obj = "Դ";
+				break;
+			case 63:
+				obj = "\u05b9աचפ\u0cfa\u0c5b\u0dc8ब\u05b6յङר೧\u0c5bශन\u05aeսझר\u0cd6ఓ\u0de4ण\u05bfձपפ\u0cf8ఞ\u0df7";
+				break;
+			case 64:
+				obj = "\u0900\u05b1շऌע\u0ce5ఓ෪ण\u05bdԴ\u093aר\u0ce3ఒ෦न\u059bռटףೲఞ\u0dd1त\u05b5ձऌ";
+				break;
+			case 65:
+				obj = "\u0de4स\u05bcսऑ\u05ad\u0cd8చ෫ब\u05bfձऌ";
+				break;
+			case 66:
+				obj = "\u0c3f\u0de0\u093b\u05b1շछ\u05ad\u0cf6ఓ\u0de4ण\u05bfձफ़\u05a0ವ";
+				break;
+			case 67:
+				obj = "\u0cd4ఉ\u0df7त\u05aeյऒ";
+				break;
+			case 68:
+				obj = "ם\u0cf0ఉ\u0de3ढ\u05aaչगףೲ\u0c5b\u0de4स\u05bcսऑ\u05ad\u0cf8చ෫ब\u05bfձऌ\u05adೱఞ\u0df3त\u05bbձफ़\u05ee\u0cfdచ෫प\u05bdԴऐעೡఒ\u0de3त\u05bbյऊפ\u0cfaకණ\u0963\u05f6Դख\u05ec\u0cfbట෩त\u05b6ճ\u093f\u05f8ೱఒ෪\u0900\u05b9պटת\u0cf0ఉශन\u05aeսझר\u0cd6ఓ\u0de4ण\u05bfձरעೡఒ\u0de3त\u05bbյऊפ\u0cfaకමशרթ";
+				break;
+			case 69:
+				obj = "\u093f\u05f9ೡచ෦थעԴ";
+				break;
+			case 70:
+				obj = "Օऋש\u0cfcఔඥऩ\u05bdբग\u05ee\u0cf0ఈඥउ\u0591Րफ़\u05ee\u0cfdచ෫प\u05bdԴ\u0956\u05eb\u0cfaఉ෦न\u05f8սऍ\u05ad";
+				break;
+			case 71:
+				obj = "\u0596ջऊ\u05ad೧ఞ\u0de4ह\u05acյझץ\u0cfcక\u0de2";
+				break;
+			case 72:
+				obj = "ट\u05bdչऑ\u05fb\u0cf4గ";
+				break;
+			case 73:
+				obj = "හस\u05bcսऑ\u05adೱఞ\u0df3त\u05bbձऍ\u05ad\u0cd1లශ७\u0596՛प\u05ad\u0cf6ఓ\u0de4ण\u05bfձफ़\u05a5\u0cf3ఔ\u0df7म\u05bdԴग\u05feವ";
+				break;
+			case 74:
+				obj = "స෭ब\u05acչटףವఉ\u0de0ठ\u05b7բछש";
+				break;
+			case 75:
+				obj = "\u0cc6ఞ\u0df1ह\u05b1պङ\u05ad೦ఏ\u0de4ह\u05bdԴऊעವఘ෪ण\u05b6ձझ\u05f9\u0cf0టඥब־ՠछ\u05ffವచ\u0df0ऩ\u05b1ջ";
+				break;
+			case 76:
+				obj = "מ\u0cf0ఏ\u0df1त\u05b6ճफ़\u05feೡచ\u0df1न\u05f8ՠऑ\u05adೱఒ\u0df6म\u05b7պऐר\u0cf6ఏ\u0de0ऩ\u05f8յघ\u05f9\u0cf0ఉඥब\u05adհगע";
+				break;
+			case 77:
+				obj = "\u093b\u05ff೧ఔ\u0df7७\u05b1պफ़ש\u0cf0\u0c0d෬म\u05bdԴझץ\u0cf4క\u0de2न\u05f8ռटףೱగ\u0de0\u093f";
+				break;
+			case 78:
+				obj = "Շछ\u05f9ೡఒ෫प\u05f8էऊ\u05ecೡఞඥह\u05b7Դझע\u0cfbక\u0de0म\u05acձच";
+				break;
+			case 79:
+				obj = "\u058bձऊ\u05f9\u0cfcక\u0de2७\u05abՠट\u05f9\u0cf0\u0c5b\u0df1ढ\u05f8՚ऱיವఘ෪ण\u05b6ձझ\u05f9\u0cf0ట";
+				break;
+			case 80:
+				obj = "ञ\u05acյऊרವస෭ब\u05b6ճछ\u05feಯ\u0c5b෪ड\u05bcԴअ\u05bd೨\u0c5b෫न\u05afԴअ\u05bc೨";
+				break;
+			case 81:
+				obj = "\u0dd3न\u05aaսघ״\u0cdbఔ\u0df1उ\u05bdղट\u05f8\u0cf9ఏහस\u05bcսऑ\u05c9\u0cf0\u0c0d෬म\u05bd";
+				break;
+			case 82:
+				obj = "ఫ෩ब\u05a1Դट\u05f8ೱఒ෪७\u05bdզऌע೧";
+				break;
+			case 83:
+				obj = "\u0cc6ఏ෪ऽ\u05f8յऋש\u0cfcఔඥन\u05aaզऑ\u05ff";
+				break;
+			case 84:
+				obj = "ם\u0cf4ఎ\u0df6न\u05f8յऋש\u0cfcఔඥन\u05aaզऑ\u05ff";
+				break;
+			case 85:
+				obj = "बר೦ఎ෨न\u05f8յऋש\u0cfcఔඥन\u05aaզऑ\u05ff";
+				break;
+			case 86:
+				obj = "Ժऑתೲ";
+				break;
+			case 87:
+				obj = "\u058bՠट\u05ffೡఒ෫प\u05f8զछ\u05ee\u0cfaఉ෬ण\u05bfԴऊעವఝ෬ड\u05bdԴख़\u05f6ಥఆජ";
+				break;
+			case 88:
+				obj = "झ\u05b9աऍפ\u0cfbజඥथ\u05af\u0557ऑף\u0cfbఞ෦ह\u05b7զ";
+				break;
+			case 89:
+				obj = "ශढ\u05b6ձ";
+				break;
+			case 90:
+				obj = "ల෫त\u05acսटס\u0cfc\u0c01෬ण\u05bfԴख\u05fa\u0cd6ఔ෫ण\u05bdշऊע೧";
+				break;
+			case 91:
+				obj = "\u0cddబෆढ\u05b6պछ\u05eeೡఔ\u0df7७\u05bcսऍ\u05fd\u0cfaఈ\u0de0७\u05aaաऐף\u0cfcక\u0de2";
+				break;
+			case 92:
+				obj = "\u05c9\u0cf0\u0c0d෬म\u05bdԴश\u05ec\u0cfbట෩न\u05f8զछ\u05ee\u0cfc\u0c0d\u0de0ऩעԴअ\u05bd೨";
+				break;
+			case 93:
+				obj = "फמ\u0cd7\u0c5bජऎ\u05aaձट\u05f9\u0cf0ఽ෬ड\u05bdԳफ़\u05cb\u0cf4ఒ෩न\u05bcԵ";
+				break;
+			case 94:
+				obj = "";
+				break;
+			case 95:
+				obj = "\u059cձईפ\u0cf6ఞඥत\u05abԴगף\u0cfcఏ෬ब\u05b4սऄרೱ\u0c5b\u0dbf७\u05a3Ԥ\u0903";
+				break;
+			case 96:
+				obj = "ई\u05aaզऑ\u05ffವఋ\u0df7न\u05a8յऌפ\u0cfbజඥफ\u05b7զफ़\u05c2\u0ce3ఞ\u0df7ड\u05b9դऎרೱ\u0c5b\u0df1\u093f\u05b9պऍ\u05eb\u0cf0ఉ\u0dbf७";
+				break;
+			case 97:
+				obj = "\u0dd0ञ\u059aԴघפ\u0cf9ఞ\u0dd6ह\u05aaձटנವఉ\u0de0ब\u05bcԴ\u0953\u05ad\u0cd3చ෬ड\u05bdհय़";
+				break;
+			case 98:
+				obj = "\u0c3c\u0de0हֈզछ\u05fd\u0cf4ఉ\u0df6न\u05bcՐट\u05f9\u0cf4\u0c5b\u0de3ब\u05b1ոछש";
+				break;
+			case 99:
+				obj = "\u0cd3చ෬ड\u05bdհफ़\u05f9\u0cfa\u0c5b෦\u093f\u05bdյऊרವట\u0de0\u093b\u05b1շछ\u05ad\u0cf3ఒ෩न";
+				break;
+			case 100:
+				obj = "\u05c4\u0cfbఏ\u0de0\u093f\u05b4յऒ\u05ad\u0cf9ఔ\u0de2त\u05bbԴछ\u05ff೧ఔ\u0df7ॷ\u05f8Րऑן\u0cf0చ\u0de1ऌ\u05abխऐ\u05eeವఈ\u0de0म\u05b7պच\u05ad\u0cf6చ෩ड\u05f6Դऱׯ\u0cffఞ෦ह\u05f8յऒ\u05ff\u0cf0చ\u0de1ऴ\u05f8զछ\u05ecೱఒ෫प\u05f8աऍׯವట\u0de4ह\u05b9";
+				break;
+			case 101:
+				obj = "\u093b\u05ff೧ఔ\u0df7७\u05afզग\u05f9\u0cfcక\u0de2७\u05acջफ़\u05ce\u0cfdచ\u0df1ठ\u05b9պ";
+				break;
+			case 102:
+				obj = "Ձभ\u05cfವళ\u0dccउ\u05f8հछ\u05fb\u0cfcఘ\u0de0७\u05aaձटש\u0cfcక\u0de2७\u05abՠऑ\u05fd\u0ce5ఞ\u0de1७\u05afսऊץವ\u0c5c\u0dd1थ\u05aaձटש\u0cd4ఙ෪\u093f\u05acՑआ\u05ee\u0cf0ఋ\u0df1त\u05b7պख़\u05a3";
+				break;
+			case 103:
+				obj = "\u059dզऌע೧\u0c5b\u0df7न\u05b9հगףೲ\u0c5b\u0dd0ञ\u059aԴश\u05c4\u0cd1\u0c5b\u0de1ब\u05acյफ़";
+				break;
+			case 104:
+				obj = "\u093b\u05b1հड\u05f6ಥ\u0c41\u0dfdॹ\u05a5Բऎפೱత\u0dfeॼעլ\u094aװ";
+				break;
+			case 105:
+				obj = "\u0dccण\u05b1ՠग\u05ec\u0cf9ఒ\u0dffत\u05b6ճफ़";
+				break;
+			case 106:
+				obj = "స෪ण\u05b6ձझ\u05f9\u0cfcక\u0de2७\u05acջफ़";
+				break;
+			case 107:
+				obj = "\u0cf8చ෫स־յझ\u05f9ೠఉ\u0de0\u093f\u05f8";
+				break;
+			case 108:
+				obj = "\u05ad\u0ce5ఉ෪ऩ\u05adշऊ\u05ad";
+				break;
+			case 109:
+				obj = "बע\u0cfbట\u0dfcढ";
+				break;
+			case 110:
+				obj = "\u0557ख\u05ecೡఖ\u0de4ण";
+				break;
+			case 111:
+				obj = "\u059dլझר\u0ce5ఏ෬ढ\u05b6Դट\u05f9ೡచ෦थ\u05b1պङ\u05adೡఔඥऩ\u05bdբग\u05ee\u0cf0";
+				break;
+			case 112:
+				obj = "स\u05abնऩע೧ఐ\u0de0\u093f\u058cռऌר\u0cf4ట\u0dd5\u093f\u05b7շफ़\u05feೡచ\u0df7ह\u05bdհ";
+				break;
+			case 113:
+				obj = "\u0df0\u093e\u05baՃऑ\u05ff\u0cfeఞ\u0df7ङ\u05b0զछ\u05ecೱఫ\u0df7ढ\u05bbԴछ\u05f5\u0cfcఏ\u0de0ऩ";
+				break;
+			case 114:
+				obj = "ళ\u0dccउ\u05f8սऐפೡ";
+				break;
+			case 115:
+				obj = "\u0cd0ఉ\u0df7ढ\u05aaԴउץ\u0cf0కඥब\u05acՠट\u05ee\u0cfdఒ෫प\u05f8ՠऑ\u05adೱఞ\u0df3त\u05bbձ";
+				break;
+			case 116:
+				obj = "\u05c8೧ఉ෪\u093f\u05f8հछ\u05f9\u0cf4ఘ෭त\u05b6ճफ़\u05eb೧ఔ෨७\u05bcձईפ\u0cf6ఞ";
+				break;
+			case 117:
+				obj = "\u093b\u05ff೧ఔ\u0df7७\u05b1պफ़\u05fdೠఈ෭७\u05baաऊ\u05f9\u0cfaకඥऽ\u05aaձऍ\u05fe\u0cf0టඥण\u05b7ՠग\u05eb\u0cfcఘ\u0de4ह\u05b1ջऐ";
+				break;
+			case 118:
+				obj = "Մऋ\u05fe\u0cfdహ\u0df0ह\u05acջऐם೧ఞ\u0df6\u093e\u05bdհरעೡఒ\u0de3त\u05bbյऊפ\u0cfaక\u0dd1थ\u05aaձटש\u0cc5ఉ෪म\u05f8ձआפೡఞ\u0de1";
+				break;
+			case 119:
+				obj = "ֈձऌ\u05eb\u0cfaఉ෨अ\u05bdոऒע\u0cc6ఞ෴स\u05bdպझרವఘ\u0de4ड\u05b4ձऌי\u0cfdఉ\u0de0ब\u05bcսच\u05ad\u0cfcఈඥशרթ";
+				break;
+			case 120:
+				obj = "ॠ\u0590՚ऱ\u05a0";
+				break;
+			case 121:
+				obj = "ශन\u05aeսझרವ\u0c00ඵर\u05aeձऌפ\u0cf3ఒ\u0de0ऩ\u05f9";
+				break;
+			case 122:
+				obj = "వ\u0dcaङ\u05f8";
+				break;
+			case 123:
+				obj = "\u0cd0ఉ\u0df7ढ\u05aaԴगףವన\u0de0ण\u05bc\u0557ऑנ\u0cf8చ෫ऩ";
+				break;
+			case 124:
+				obj = "\u05c8೧ఉ෪\u093f\u05f8սऐ\u05ad\u0cc6ఞ෫ऩ\u059bջओנ\u0cf4క\u0de1\u093e";
+				break;
+			case 125:
+				obj = "ऋ\u05fe\u0cf7బ෪\u093f\u05b3ձऌי\u0cfdఉ\u0de0ब\u05bcԴटׯ\u0cfaఉ\u0df1त\u05b6ճॐ\u05a3\u0cbb\u0c55";
+				break;
+			case 126:
+				obj = "\u0559ऍתಯ\u0c00ඵर\u05f8Ճगף\u0cd0ఉ\u0dbfशשԮद\u05b5೨";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႰႼႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴓ) % num2]);
+			}
+			result = new string(array);
+			m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႰႼႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[127];
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"manifestName": {
+		"message": "Chatman extension"
+	},
+	"manifestDescription": {
+		"message": "Allows Chatman to respond to web chat and the MyChatman web site"
+	}
+}

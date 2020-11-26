@@ -1,0 +1,7476 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.GUI.Infrastructure.XmlSerializers.dll
+// Rondyo.Chatman.GUI.Infrastructure.XmlSerializers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.GUI.Infrastructure;
+using Rondyo.Chatman.GUI.Infrastructure.Controllers;
+using Rondyo.Chatman.GUI.Infrastructure.Properties;
+using Rondyo.Chatman.GUI.Infrastructure.WebBrowser;
+using Rondyo.Chatman.GUI.Tray;
+using Rondyo.Chatman.GUI.Tray.Configuration;
+using Rondyo.Chatman.GUI.Tray.MenuItems;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security;
+using System.Xml;
+using System.Xml.Serialization;
+using ႰႨႭ;
+
+[assembly: CompilationRelaxations(8)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AllowPartiallyTrustedCallers]
+[assembly: SecurityTransparent]
+[assembly: XmlSerializerVersion(Version = "2.0.0.0", ParentAssemblyId = "1b7372d7-ae1f-4760-ab63-24925cf76931,")]
+[assembly: AssemblyVersion("1.0.0.0")]
+namespace Microsoft.Xml.Serialization.GeneratedAssembly
+{
+	public sealed class ActionLookupModeSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679775), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write22_ActionLookupMode(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read22_ActionLookupMode();
+		}
+	}
+	public sealed class BrowserCommandSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679761), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write28_BrowserCommand(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read28_BrowserCommand();
+		}
+	}
+	public sealed class ControllerBaseSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679766), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write31_ControllerBase(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read31_ControllerBase();
+		}
+	}
+	public sealed class DefaultTrayMenuItemBuilderSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679764), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write33_DefaultTrayMenuItemBuilder(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read33_DefaultTrayMenuItemBuilder();
+		}
+	}
+	public sealed class PageControllerBaseSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679755), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write34_PageControllerBase(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read34_PageControllerBase();
+		}
+	}
+	public sealed class ResourcesSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679767), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write30_Resources(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read30_Resources();
+		}
+	}
+	public sealed class SpecialActionActivationTypeSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679769), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write20_SpecialActionActivationType(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read20_SpecialActionActivationType();
+		}
+	}
+	public sealed class SpecialActionsSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679771), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write19_SA(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read19_SA();
+		}
+	}
+	public sealed class SpecialActionSubmitterSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679768), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write21_SpecialActionSubmitter(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read21_SpecialActionSubmitter();
+		}
+	}
+	public sealed class SpecialActionUtilsSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679774), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write23_SpecialActionUtils(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read23_SpecialActionUtils();
+		}
+	}
+	public sealed class TrayGUIManagerSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679760), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write29_TrayGUIManager(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read29_TrayGUIManager();
+		}
+	}
+	public sealed class TrayMenuItemSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679772), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write25_TrayMenuItem(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read25_TrayMenuItem();
+		}
+	}
+	public sealed class TrayMenuItemsListSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679773), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write24_TrayMenuItemsList(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read24_TrayMenuItemsList();
+		}
+	}
+	public sealed class TrayRefresherSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679765), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write32_TrayRefresher(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read32_TrayRefresher();
+		}
+	}
+	public sealed class WebKitOnWindowsSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679754), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write35_WebKitOnWindows(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read35_WebKitOnWindows();
+		}
+	}
+	public sealed class WebKitStateSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679762), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write27_WebKitState(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read27_WebKitState();
+		}
+	}
+	public sealed class WebKitWindowBaseSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴀ.ႳႭႨ(137679763), Ⴀ.ႳႭႨ(137679770));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write26_WebKitWindowBase(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read26_WebKitWindowBase();
+		}
+	}
+	public class XmlSerializationReader1 : XmlSerializationReader
+	{
+		private string Ⴍ;
+
+		private string Ⴓ;
+
+		private string Ⴈ;
+
+		private string Ⴃ;
+
+		private string Ⴗ;
+
+		private string Ⴅ;
+
+		private string Ⴐ;
+
+		private string Ⴀ;
+
+		private string Ⴄ;
+
+		private string Ⴜ;
+
+		private string ႳႭ;
+
+		private string ႳႳ;
+
+		private string m_ႳႨ;
+
+		private string m_ႳႣ;
+
+		private string ႳႷ;
+
+		private string ႳႥ;
+
+		private string m_ႳႰ;
+
+		private string m_ႳႠ;
+
+		private string m_ႳႤ;
+
+		private string m_ႳႼ;
+
+		private string m_ႨႭ;
+
+		private string ႨႳ;
+
+		private string ႨႨ;
+
+		private string m_ႨႣ;
+
+		private string ႨႷ;
+
+		private string ႨႥ;
+
+		private string ႨႰ;
+
+		private string ႨႠ;
+
+		private string ႨႤ;
+
+		private string m_ႨႼ;
+
+		private string m_ႣႭ;
+
+		private string m_ႣႳ;
+
+		private string m_ႣႨ;
+
+		private string m_ႣႣ;
+
+		private string ႣႷ;
+
+		private string ႣႥ;
+
+		private string ႣႰ;
+
+		private string ႣႠ;
+
+		private string ႣႤ;
+
+		private string ႣႼ;
+
+		private string ႷႭ;
+
+		private string ႷႳ;
+
+		private string ႷႨ;
+
+		private string ႷႣ;
+
+		private string ႷႷ;
+
+		private string ႷႥ;
+
+		private string ႷႰ;
+
+		private string ႷႠ;
+
+		private string ႷႤ;
+
+		private string ႷႼ;
+
+		private string ႥႭ;
+
+		private string ႥႳ;
+
+		private string ႥႨ;
+
+		private string ႥႣ;
+
+		private string ႥႷ;
+
+		private string ႥႥ;
+
+		private string ႥႰ;
+
+		private string ႥႠ;
+
+		private string ႥႤ;
+
+		private string ႥႼ;
+
+		private string ႰႭ;
+
+		private string ႰႳ;
+
+		private string ႰႨ;
+
+		private string ႰႣ;
+
+		private string ႰႷ;
+
+		private string ႰႥ;
+
+		private string ႰႰ;
+
+		private string ႰႠ;
+
+		private string ႰႤ;
+
+		private string ႰႼ;
+
+		private string ႠႭ;
+
+		private string ႠႳ;
+
+		private string ႠႨ;
+
+		private string ႠႣ;
+
+		private string ႠႷ;
+
+		private string ႠႥ;
+
+		public object Read19_SA()
+		{
+			//Discarded unreachable code: IL_0002, IL_0046, IL_0053, IL_008b, IL_00b3
+			object result = null;
+			do
+			{
+				base.Reader.MoveToContent();
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if (531 > 531 - 274)
+					{
+						while (true)
+						{
+							if ((object)base.Reader.LocalName == this.m_ႣႣ)
+							{
+								if (95 >= 95 - 57)
+								{
+								}
+								if ((object)base.Reader.NamespaceURI == Ⴃ)
+								{
+									if (429 >= 429 - 277)
+									{
+										break;
+									}
+									continue;
+								}
+							}
+							throw CreateUnknownNodeException();
+						}
+						result = ႣႣ(Ⴍ: true, Ⴓ: true);
+						break;
+					}
+				}
+				UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679777));
+			}
+			while (false);
+			return result;
+		}
+
+		public object Read20_SpecialActionActivationType()
+		{
+			//Discarded unreachable code: IL_0005, IL_002b, IL_0050, IL_006b, IL_00a2, IL_00ca
+			object result = null;
+			base.Reader.MoveToContent();
+			if (base.Reader.NodeType == XmlNodeType.Element)
+			{
+				if ((722 + 722 * 722) % 2 == 0)
+				{
+					while ((object)base.Reader.LocalName == ႨႠ)
+					{
+						if (false)
+						{
+							continue;
+						}
+						goto IL_002d;
+					}
+					goto IL_006d;
+				}
+			}
+			UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679782));
+			if ((608 + 608 * 608) % 2 == 0)
+			{
+				goto IL_0007;
+			}
+			goto IL_002d;
+			IL_002d:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (626 > 626 - 209)
+				{
+					result = ႳႭႥ(base.Reader.ReadElementString());
+				}
+				goto IL_0007;
+			}
+			goto IL_006d;
+			IL_006d:
+			throw CreateUnknownNodeException();
+			IL_0007:
+			return result;
+		}
+
+		public object Read21_SpecialActionSubmitter()
+		{
+			//Discarded unreachable code: IL_0002, IL_0029, IL_004d, IL_0090, IL_00af
+			object result = null;
+			base.Reader.MoveToContent();
+			while (true)
+			{
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if (911 > 911 - 413)
+					{
+						if ((object)base.Reader.LocalName != ႥႣ)
+						{
+							break;
+						}
+						if (910 < 910 - 361)
+						{
+							continue;
+						}
+						if ((object)base.Reader.NamespaceURI != Ⴃ)
+						{
+							break;
+						}
+						if (false)
+						{
+							continue;
+						}
+						result = ႣႨ(Ⴍ: true, Ⴓ: true);
+					}
+				}
+				else
+				{
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679835));
+					if (14 > 14 - 3)
+					{
+					}
+				}
+				return result;
+			}
+			throw CreateUnknownNodeException();
+		}
+
+		public object Read22_ActionLookupMode()
+		{
+			int num = 4;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 6 : 0);
+					continue;
+				case 0:
+					num = (((object)base.Reader.LocalName == ႣႠ) ? 1 : 2);
+					continue;
+				case 1:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 2 : 3);
+					continue;
+				case 3:
+					result = ႳႭႷ(base.Reader.ReadElementString());
+					num = 5;
+					continue;
+				case 2:
+					throw CreateUnknownNodeException();
+				case 6:
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679833));
+					break;
+				case 5:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read23_SpecialActionUtils()
+		{
+			int num = 0;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 1 : 5);
+					continue;
+				case 5:
+					num = (((object)base.Reader.LocalName != ႥႠ) ? 3 : 6);
+					continue;
+				case 6:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 3 : 4);
+					continue;
+				case 4:
+					result = ႣႳ(Ⴍ: true, Ⴓ: true);
+					num = 2;
+					continue;
+				case 3:
+					throw CreateUnknownNodeException();
+				case 1:
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679838));
+					break;
+				case 2:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read24_TrayMenuItemsList()
+		{
+			int num = 0;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType == XmlNodeType.Element) ? 1 : 5);
+					continue;
+				case 1:
+					num = (((object)base.Reader.LocalName != ႷႨ) ? 6 : 3);
+					continue;
+				case 3:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 6 : 4);
+					continue;
+				case 4:
+					result = ႣႭ(Ⴍ: true, Ⴓ: true);
+					num = 2;
+					continue;
+				case 6:
+					throw CreateUnknownNodeException();
+				case 5:
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679836));
+					break;
+				case 2:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read25_TrayMenuItem()
+		{
+			int num = 3;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 6 : 4);
+					continue;
+				case 4:
+					num = (((object)base.Reader.LocalName != ႳႥ) ? 2 : 0);
+					continue;
+				case 0:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 2 : 5);
+					continue;
+				case 5:
+					result = ႨႼ(Ⴍ: true, Ⴓ: true);
+					num = 1;
+					continue;
+				case 2:
+					throw CreateUnknownNodeException();
+				case 6:
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679826));
+					break;
+				case 1:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read26_WebKitWindowBase()
+		{
+			//Discarded unreachable code: IL_0002, IL_0026, IL_004a, IL_0057, IL_008f, IL_00b5
+			object result = null;
+			while (true)
+			{
+				base.Reader.MoveToContent();
+				while (true)
+				{
+					if (base.Reader.NodeType == XmlNodeType.Element)
+					{
+						if (139 > 139 - 104)
+						{
+							if ((object)base.Reader.LocalName == ႨႨ)
+							{
+								if (840 <= 840 - 52)
+								{
+									continue;
+								}
+								if ((object)base.Reader.NamespaceURI == Ⴃ)
+								{
+									if ((649 + 649 * 649) % 2 == 0)
+									{
+										result = ႨႣ(Ⴍ: true, Ⴓ: true);
+										goto IL_0004;
+									}
+								}
+							}
+							throw CreateUnknownNodeException();
+						}
+					}
+					else
+					{
+						UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679824));
+						if (687 < 687 - 519)
+						{
+							break;
+						}
+					}
+					goto IL_0004;
+					IL_0004:
+					return result;
+				}
+			}
+		}
+
+		public object Read27_WebKitState()
+		{
+			int num = 1;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 6 : 5);
+					continue;
+				case 5:
+					num = (((object)base.Reader.LocalName != ႣႥ) ? 3 : 4);
+					continue;
+				case 4:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 3 : 2);
+					continue;
+				case 2:
+					result = ႳႭႨ(base.Reader.ReadElementString());
+					num = 0;
+					continue;
+				case 3:
+					throw CreateUnknownNodeException();
+				case 6:
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679830));
+					break;
+				case 0:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read28_BrowserCommand()
+		{
+			//Discarded unreachable code: IL_0005, IL_002c, IL_0054, IL_006f, IL_00a7, IL_00cc
+			object result = null;
+			base.Reader.MoveToContent();
+			while (true)
+			{
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if (992 < 992 - 651 || (object)base.Reader.LocalName != ႰႠ)
+					{
+						break;
+					}
+					if (642 <= 642 - 130)
+					{
+						continue;
+					}
+					if ((object)base.Reader.NamespaceURI != Ⴃ)
+					{
+						break;
+					}
+					if (411 >= 411 - 244)
+					{
+					}
+					result = ႳႭႣ(base.Reader.ReadElementString());
+				}
+				else
+				{
+					do
+					{
+						UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679828));
+					}
+					while (false);
+				}
+				return result;
+			}
+			throw CreateUnknownNodeException();
+		}
+
+		public object Read29_TrayGUIManager()
+		{
+			//Discarded unreachable code: IL_0005, IL_002c, IL_0050, IL_005d, IL_00b0
+			while (true)
+			{
+				object result = null;
+				while (true)
+				{
+					base.Reader.MoveToContent();
+					if (base.Reader.NodeType == XmlNodeType.Element)
+					{
+						if (7 <= 7 - 1)
+						{
+							break;
+						}
+						if ((object)base.Reader.LocalName == ႰႨ)
+						{
+							if (897 <= 897 - 320)
+							{
+								goto IL_008d;
+							}
+							if ((object)base.Reader.NamespaceURI == Ⴃ)
+							{
+								if ((880 + 880 * 880) % 2 == 0)
+								{
+									result = ႨႭ(Ⴍ: true, Ⴓ: true);
+								}
+								goto IL_0007;
+							}
+						}
+						throw CreateUnknownNodeException();
+					}
+					goto IL_008d;
+					IL_0007:
+					return result;
+					IL_008d:
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679818));
+					if (false)
+					{
+						continue;
+					}
+					goto IL_0007;
+				}
+			}
+		}
+
+		public object Read30_Resources()
+		{
+			int num = 1;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 3 : 2);
+					continue;
+				case 2:
+					num = (((object)base.Reader.LocalName != ႥႷ) ? 4 : 0);
+					continue;
+				case 0:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 4 : 6);
+					continue;
+				case 6:
+					result = ႳႼ(Ⴍ: true, Ⴓ: true);
+					num = 5;
+					continue;
+				case 4:
+					throw CreateUnknownNodeException();
+				case 3:
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679817));
+					break;
+				case 5:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read31_ControllerBase()
+		{
+			//Discarded unreachable code: IL_0002, IL_0026, IL_0048, IL_0055, IL_0090, IL_00b6
+			object result = null;
+			while (true)
+			{
+				base.Reader.MoveToContent();
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if (615 >= 615 - 611)
+					{
+						if ((object)base.Reader.LocalName != this.m_ႳႣ)
+						{
+							break;
+						}
+						if (504 <= 504 - 73)
+						{
+							continue;
+						}
+						while ((object)base.Reader.NamespaceURI == Ⴃ)
+						{
+							if (955 <= 955 - 85)
+							{
+								continue;
+							}
+							goto IL_004a;
+						}
+						break;
+					}
+				}
+				else
+				{
+					do
+					{
+						UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679823));
+					}
+					while (756 <= 756 - 526);
+				}
+				goto IL_0004;
+				IL_0004:
+				return result;
+				IL_004a:
+				result = ႳႤ(Ⴍ: true, Ⴓ: true);
+				goto IL_0004;
+			}
+			throw CreateUnknownNodeException();
+		}
+
+		public object Read32_TrayRefresher()
+		{
+			int num = 6;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 1 : 3);
+					continue;
+				case 3:
+					num = (((object)base.Reader.LocalName == ႷႰ) ? 4 : 0);
+					continue;
+				case 4:
+					num = (((object)base.Reader.NamespaceURI == Ⴃ) ? 5 : 0);
+					continue;
+				case 5:
+					result = ႳႠ(Ⴍ: true, Ⴓ: true);
+					num = 2;
+					continue;
+				case 0:
+					throw CreateUnknownNodeException();
+				case 1:
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679821));
+					break;
+				case 2:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read33_DefaultTrayMenuItemBuilder()
+		{
+			//Discarded unreachable code: IL_0005, IL_002e, IL_0052, IL_005f, IL_0096, IL_00bf
+			object result = null;
+			base.Reader.MoveToContent();
+			while (true)
+			{
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if ((511 + 511 * 511) % 2 == 0)
+					{
+						if ((object)base.Reader.LocalName != ႠႥ)
+						{
+							break;
+						}
+						if ((517 + 517 * 517) % 2 == 0)
+						{
+							if ((object)base.Reader.NamespaceURI != Ⴃ)
+							{
+								break;
+							}
+							if (false)
+							{
+								break;
+							}
+						}
+						result = ႳႰ(Ⴍ: true, Ⴓ: true);
+					}
+				}
+				else
+				{
+					UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679811));
+					if (725 < 725 - 349)
+					{
+						continue;
+					}
+				}
+				return result;
+			}
+			throw CreateUnknownNodeException();
+		}
+
+		public object Read34_PageControllerBase()
+		{
+			//Discarded unreachable code: IL_0024, IL_0048, IL_0055, IL_008c, IL_00af
+			object result = null;
+			base.Reader.MoveToContent();
+			if (base.Reader.NodeType == XmlNodeType.Element)
+			{
+				if ((670 + 670 * 670) % 2 == 0)
+				{
+					goto IL_0004;
+				}
+				goto IL_0026;
+			}
+			UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679810));
+			if (998 > 998 - 106)
+			{
+			}
+			goto IL_0002;
+			IL_0057:
+			throw CreateUnknownNodeException();
+			IL_0004:
+			while ((object)base.Reader.LocalName == ႷႷ)
+			{
+				if (416 < 416 - 12)
+				{
+					continue;
+				}
+				goto IL_0026;
+			}
+			goto IL_0057;
+			IL_0002:
+			return result;
+			IL_0026:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (false)
+				{
+					goto IL_0004;
+				}
+				result = ႳႣ(Ⴍ: true, Ⴓ: true);
+				goto IL_0002;
+			}
+			goto IL_0057;
+		}
+
+		public object Read35_WebKitOnWindows()
+		{
+			//Discarded unreachable code: IL_0002, IL_0025, IL_0047, IL_0054, IL_00ad
+			while (true)
+			{
+				object result = null;
+				base.Reader.MoveToContent();
+				while (true)
+				{
+					if (base.Reader.NodeType == XmlNodeType.Element)
+					{
+						if (408 <= 408 - 10)
+						{
+							continue;
+						}
+						if ((object)base.Reader.LocalName == ႷႳ)
+						{
+							if (367 < 367 - 4)
+							{
+								break;
+							}
+							if ((object)base.Reader.NamespaceURI == Ⴃ)
+							{
+								if (129 <= 129 - 83)
+								{
+									continue;
+								}
+								result = ႳႨ(Ⴍ: true, Ⴓ: true);
+								goto IL_0004;
+							}
+						}
+					}
+					else
+					{
+						UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679808));
+						if (280 > 280 - 201)
+						{
+							goto IL_0004;
+						}
+					}
+					throw CreateUnknownNodeException();
+					IL_0004:
+					return result;
+				}
+			}
+		}
+
+		private WebKitOnWindows ႳႨ(bool Ⴍ, bool Ⴓ)
+		{
+			int num = 10;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			WebKitOnWindows webKitOnWindows = default(WebKitOnWindows);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴓ ? 3 : 0);
+					break;
+				case 0:
+					obj = null;
+					goto IL_0096;
+				case 3:
+					obj = GetXsiType();
+					goto IL_0096;
+				case 18:
+					flag = ReadNull();
+					num = 11;
+					break;
+				case 11:
+					num = ((!Ⴓ) ? 5 : 12);
+					break;
+				case 12:
+					num = ((xmlQualifiedName == null) ? 5 : 26);
+					break;
+				case 26:
+					num = (((object)xmlQualifiedName.Name != ႷႳ) ? 13 : 20);
+					break;
+				case 20:
+					num = (((object)xmlQualifiedName.Namespace == Ⴃ) ? 5 : 13);
+					break;
+				case 13:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 5:
+					num = ((!flag) ? 7 : 4);
+					break;
+				case 4:
+					return null;
+				case 7:
+					webKitOnWindows = new WebKitOnWindows();
+					array = new bool[1];
+					num = 19;
+					break;
+				case 27:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 19 : 23);
+					break;
+				case 23:
+					UnknownNode(webKitOnWindows);
+					goto case 19;
+				case 19:
+					num = (base.Reader.MoveToNextAttribute() ? 27 : 16);
+					break;
+				case 16:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 21 : 14);
+					break;
+				case 14:
+					base.Reader.Skip();
+					return webKitOnWindows;
+				case 21:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 6;
+					break;
+				case 17:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 9 : 15);
+					break;
+				case 15:
+					num = (array[0] ? 28 : 8);
+					break;
+				case 8:
+					num = (((object)base.Reader.LocalName != this.Ⴍ) ? 28 : 22);
+					break;
+				case 22:
+					num = (((object)base.Reader.NamespaceURI == Ⴃ) ? 1 : 28);
+					break;
+				case 1:
+					webKitOnWindows.CurrentWebKitState = ႳႭႨ(base.Reader.ReadElementString());
+					array[0] = true;
+					num = 2;
+					break;
+				case 28:
+					UnknownNode(webKitOnWindows, ႰႨႭ.Ⴀ.ႳႭႨ(137679814));
+					num = 2;
+					break;
+				case 9:
+					UnknownNode(webKitOnWindows, ႰႨႭ.Ⴀ.ႳႭႨ(137679814));
+					goto case 2;
+				case 2:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 6;
+				case 6:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 25 : 24);
+					break;
+				case 24:
+					num = ((base.Reader.NodeType != 0) ? 17 : 25);
+					break;
+				case 25:
+					{
+						ReadEndElement();
+						return webKitOnWindows;
+					}
+					IL_0096:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴍ) ? 11 : 18);
+					break;
+				}
+			}
+		}
+
+		private WebKitState ႳႭႨ(string Ⴍ)
+		{
+			int num = 11;
+			string key = default(string);
+			int value = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (((key = Ⴍ) != null) ? 1 : 10);
+					break;
+				case 1:
+					num = ((<PrivateImplementationDetails>{E2E10707-ED32-4F08-BE74-DBF9AEC9B10F}.$$method0x6000037-1 != null) ? 4 : 0);
+					break;
+				case 0:
+					<PrivateImplementationDetails>{E2E10707-ED32-4F08-BE74-DBF9AEC9B10F}.$$method0x6000037-1 = new Dictionary<string, int>(6)
+					{
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679752),
+							0
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679759),
+							1
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679758),
+							2
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679757),
+							3
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679756),
+							4
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679747),
+							5
+						}
+					};
+					num = 4;
+					break;
+				case 4:
+					num = ((!<PrivateImplementationDetails>{E2E10707-ED32-4F08-BE74-DBF9AEC9B10F}.$$method0x6000037-1.TryGetValue(key, out value)) ? 10 : 12);
+					break;
+				case 12:
+				{
+					int num2;
+					switch (value)
+					{
+					default:
+						num2 = 2;
+						break;
+					case 0:
+						num2 = 6;
+						break;
+					case 1:
+						num2 = 5;
+						break;
+					case 2:
+						num2 = 3;
+						break;
+					case 3:
+						num2 = 8;
+						break;
+					case 4:
+						num2 = 9;
+						break;
+					case 5:
+						num2 = 7;
+						break;
+					}
+					num = num2;
+					break;
+				}
+				case 2:
+					num = 10;
+					break;
+				case 6:
+					return WebKitState.NotStartted;
+				case 5:
+					return WebKitState.RunningAltF4Hide;
+				case 3:
+					return WebKitState.RunningAltF4Close;
+				case 8:
+					return WebKitState.PreparingToShutDown;
+				case 9:
+					return WebKitState.ShuttingDown;
+				case 7:
+					return WebKitState.Shuttedown;
+				case 10:
+					throw CreateUnknownConstantException(Ⴍ, typeof(WebKitState));
+				}
+			}
+		}
+
+		private PageControllerBase ႳႣ(bool Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0010, IL_0029, IL_004e, IL_0068, IL_0072, IL_0084, IL_009f, IL_00bf, IL_00fa, IL_0112
+			bool flag;
+			while (true)
+			{
+				if (!Ⴓ)
+				{
+					if (988 < 988 - 826)
+					{
+						continue;
+					}
+					goto IL_000a;
+				}
+				goto IL_006a;
+				IL_000a:
+				object obj = null;
+				goto IL_0074;
+				IL_006a:
+				obj = GetXsiType();
+				goto IL_0074;
+				IL_0074:
+				XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+				flag = false;
+				while (Ⴍ)
+				{
+					if (73 >= 73 - 13)
+					{
+						flag = ReadNull();
+						if (875 >= 875 - 796)
+						{
+							break;
+						}
+						continue;
+					}
+					goto IL_006a;
+				}
+				while (Ⴓ)
+				{
+					if (305 >= 305 - 230)
+					{
+						if (xmlQualifiedName == null)
+						{
+							break;
+						}
+						if (33 >= 33 - 21)
+						{
+							if ((object)xmlQualifiedName.Name == ႷႷ)
+							{
+								if (false)
+								{
+								}
+								if ((object)xmlQualifiedName.Namespace == Ⴃ)
+								{
+									break;
+								}
+								if (291 < 291 - 33)
+								{
+									continue;
+								}
+							}
+							throw CreateUnknownTypeException(xmlQualifiedName);
+						}
+						goto IL_000a;
+					}
+					goto IL_006a;
+				}
+				break;
+			}
+			if (flag)
+			{
+				if (426 > 426 - 209)
+				{
+					return null;
+				}
+			}
+			throw CreateAbstractTypeException(ႰႨႭ.Ⴀ.ႳႭႨ(137679755), ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+		}
+
+		private DefaultTrayMenuItemBuilder ႳႰ(bool Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0031, IL_004f, IL_0077, IL_00a0, IL_00c9, IL_00e7, IL_00ef, IL_00fc, IL_011a, IL_0140, IL_0161, IL_0192, IL_01af, IL_01e0, IL_01ff, IL_020c, IL_0234, IL_0262, IL_029d, IL_02c0, IL_02dd, IL_0306
+			object obj;
+			if (!Ⴓ)
+			{
+				if (false)
+				{
+					goto IL_0279;
+				}
+				obj = null;
+			}
+			else
+			{
+				obj = GetXsiType();
+			}
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = default(bool);
+			while (true)
+			{
+				flag = false;
+				if (Ⴍ)
+				{
+					if (632 < 632 - 119)
+					{
+						break;
+					}
+					flag = ReadNull();
+					if (1006 < 1006 - 189)
+					{
+						goto IL_0236;
+					}
+				}
+				if (Ⴓ)
+				{
+					if (535 <= 535 - 327)
+					{
+						continue;
+					}
+					goto IL_0145;
+				}
+				goto IL_0197;
+			}
+			goto IL_0172;
+			IL_000a:
+			return null;
+			IL_0277:
+			DefaultTrayMenuItemBuilder defaultTrayMenuItemBuilder = default(DefaultTrayMenuItemBuilder);
+			return defaultTrayMenuItemBuilder;
+			IL_026c:
+			base.Reader.Skip();
+			goto IL_0277;
+			IL_0264:
+			throw CreateUnknownTypeException(xmlQualifiedName);
+			IL_0279:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (false)
+				{
+					goto IL_011f;
+				}
+				if (base.Reader.NodeType != 0)
+				{
+					if (base.Reader.NodeType == XmlNodeType.Element)
+					{
+						if (465 < 465 - 152)
+						{
+							goto IL_026c;
+						}
+						goto IL_02aa;
+					}
+					UnknownNode(defaultTrayMenuItemBuilder, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+					if (490 > 490 - 404)
+					{
+					}
+					goto IL_0166;
+				}
+				if (728 <= 728 - 640)
+				{
+					goto IL_0277;
+				}
+			}
+			goto IL_02a2;
+			IL_0166:
+			base.Reader.MoveToContent();
+			goto IL_0172;
+			IL_011f:
+			if ((object)xmlQualifiedName.Namespace == Ⴃ)
+			{
+				goto IL_0197;
+			}
+			if (314 > 314 - 41)
+			{
+				goto IL_0264;
+			}
+			goto IL_0279;
+			IL_02aa:
+			UnknownNode(defaultTrayMenuItemBuilder, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+			goto IL_0166;
+			IL_02a2:
+			ReadEndElement();
+			return defaultTrayMenuItemBuilder;
+			IL_0145:
+			while (!(xmlQualifiedName == null))
+			{
+				if (413 < 413 - 132)
+				{
+					continue;
+				}
+				goto IL_0079;
+			}
+			goto IL_0197;
+			IL_0172:
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			CheckReaderCount(ref whileIterations, ref readerCount);
+			if (810 < 810 - 722)
+			{
+				goto IL_026c;
+			}
+			goto IL_0279;
+			IL_0079:
+			if ((object)xmlQualifiedName.Name == ႠႥ)
+			{
+				if (512 <= 512 - 476)
+				{
+					goto IL_000a;
+				}
+				goto IL_011f;
+			}
+			goto IL_0264;
+			IL_0236:
+			while (true)
+			{
+				base.Reader.MoveToElement();
+				if (!base.Reader.IsEmptyElement)
+				{
+					break;
+				}
+				if (643 < 643 - 145)
+				{
+					continue;
+				}
+				goto IL_026c;
+			}
+			base.Reader.ReadStartElement();
+			base.Reader.MoveToContent();
+			whileIterations = 0;
+			readerCount = base.ReaderCount;
+			goto IL_0279;
+			IL_0197:
+			if (!flag)
+			{
+				defaultTrayMenuItemBuilder = new DefaultTrayMenuItemBuilder();
+				while (base.Reader.MoveToNextAttribute())
+				{
+					if (IsXmlnsAttribute(base.Reader.Name))
+					{
+						continue;
+					}
+					if (915 <= 915 - 246)
+					{
+						goto IL_0279;
+					}
+					UnknownNode(defaultTrayMenuItemBuilder);
+					if ((717 + 717 * 717) % 2 == 0)
+					{
+						continue;
+					}
+					goto IL_02a2;
+				}
+				if (false)
+				{
+					goto IL_0172;
+				}
+				goto IL_0236;
+			}
+			if ((350 + 350 * 350) % 2 == 0)
+			{
+				goto IL_000a;
+			}
+			goto IL_02aa;
+		}
+
+		private TrayRefresher ႳႠ(bool Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_002c, IL_004c, IL_0077, IL_00a0, IL_00c8, IL_00e6, IL_00eb, IL_00f8, IL_0118, IL_013e, IL_0161, IL_01ab, IL_01d6, IL_01f2, IL_0202, IL_0227, IL_0257, IL_028f, IL_02b2, IL_02d0, IL_02fc
+			TrayRefresher trayRefresher = default(TrayRefresher);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			bool flag = default(bool);
+			while (true)
+			{
+				object obj;
+				if (Ⴓ)
+				{
+					obj = GetXsiType();
+					goto IL_00fa;
+				}
+				if (872 < 872 - 852)
+				{
+					goto IL_007c;
+				}
+				goto IL_00e8;
+				IL_026c:
+				return trayRefresher;
+				IL_007c:
+				if ((object)xmlQualifiedName.Name == ႷႰ)
+				{
+					if (527 <= 527 - 257)
+					{
+						goto IL_005c;
+					}
+					if ((object)xmlQualifiedName.Namespace == Ⴃ)
+					{
+						goto IL_0192;
+					}
+					if (294 <= 294 - 191)
+					{
+						break;
+					}
+				}
+				throw CreateUnknownTypeException(xmlQualifiedName);
+				IL_00fa:
+				xmlQualifiedName = (XmlQualifiedName)obj;
+				goto IL_00fb;
+				IL_00fb:
+				flag = false;
+				goto IL_00fd;
+				IL_00fd:
+				if (Ⴍ)
+				{
+					if (false)
+					{
+						goto IL_0009;
+					}
+					flag = ReadNull();
+					if (276 <= 276 - 90)
+					{
+						goto IL_005c;
+					}
+				}
+				if (Ⴓ)
+				{
+					if (false)
+					{
+						continue;
+					}
+					if (!(xmlQualifiedName == null))
+					{
+						if (false)
+						{
+							goto IL_005c;
+						}
+						goto IL_007c;
+					}
+				}
+				goto IL_0192;
+				IL_0009:
+				while (base.Reader.MoveToNextAttribute())
+				{
+					if (IsXmlnsAttribute(base.Reader.Name))
+					{
+						continue;
+					}
+					if (65 < 65 - 11)
+					{
+						goto IL_00e8;
+					}
+					UnknownNode(trayRefresher);
+					if ((297 + 297 * 297) % 2 == 0)
+					{
+						continue;
+					}
+					goto IL_00fd;
+				}
+				if (707 >= 707 - 501)
+				{
+					base.Reader.MoveToElement();
+					while (base.Reader.IsEmptyElement)
+					{
+						if (false)
+						{
+							continue;
+						}
+						goto IL_0261;
+					}
+				}
+				base.Reader.ReadStartElement();
+				goto IL_005c;
+				IL_005c:
+				while (true)
+				{
+					IL_005c:
+					base.Reader.MoveToContent();
+					int whileIterations = 0;
+					int readerCount = base.ReaderCount;
+					while (true)
+					{
+						if (base.Reader.NodeType != XmlNodeType.EndElement)
+						{
+							if (false)
+							{
+								break;
+							}
+							if (base.Reader.NodeType != 0)
+							{
+								if (base.Reader.NodeType == XmlNodeType.Element)
+								{
+									if (false)
+									{
+										goto IL_005c;
+									}
+									UnknownNode(trayRefresher, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+								}
+								else
+								{
+									UnknownNode(trayRefresher, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+									if (426 <= 426 - 220)
+									{
+										continue;
+									}
+								}
+								base.Reader.MoveToContent();
+								CheckReaderCount(ref whileIterations, ref readerCount);
+								if (306 > 306 - 220)
+								{
+									continue;
+								}
+								goto IL_026c;
+							}
+							if (334 < 334 - 182)
+							{
+								goto IL_0009;
+							}
+						}
+						ReadEndElement();
+						break;
+					}
+					break;
+				}
+				break;
+				IL_00e8:
+				obj = null;
+				goto IL_00fa;
+				IL_0261:
+				base.Reader.Skip();
+				goto IL_026c;
+				IL_0192:
+				if (flag)
+				{
+					if (759 >= 759 - 750)
+					{
+						return null;
+					}
+					goto IL_00fb;
+				}
+				trayRefresher = new TrayRefresher();
+				goto IL_0009;
+			}
+			return trayRefresher;
+		}
+
+		private ControllerBase ႳႤ(bool Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_002f, IL_0049, IL_0074, IL_009c, IL_00c7, IL_00e0, IL_00e8, IL_00f5, IL_0118, IL_013e, IL_0161, IL_018f, IL_01a9, IL_01d7, IL_01f8, IL_0208, IL_0230, IL_025e, IL_0294, IL_02b4, IL_02cf, IL_02fb
+			object obj;
+			if (!Ⴓ)
+			{
+				if (686 < 686 - 56)
+				{
+					goto IL_0034;
+				}
+				obj = null;
+			}
+			else
+			{
+				obj = GetXsiType();
+			}
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = false;
+			goto IL_00fd;
+			IL_0278:
+			ControllerBase controllerBase = default(ControllerBase);
+			while (true)
+			{
+				if (base.Reader.NodeType != XmlNodeType.EndElement)
+				{
+					if (48 <= 48 - 30)
+					{
+						break;
+					}
+					if (base.Reader.NodeType != 0)
+					{
+						if (base.Reader.NodeType == XmlNodeType.Element)
+						{
+							if ((339 + 339 * 339) % 2 == 0)
+							{
+								break;
+							}
+							continue;
+						}
+						goto IL_02d4;
+					}
+					if (831 < 831 - 139)
+					{
+						goto IL_000c;
+					}
+				}
+				ReadEndElement();
+				return controllerBase;
+			}
+			UnknownNode(controllerBase, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+			goto IL_0166;
+			IL_00cc:
+			UnknownNode(controllerBase);
+			if (90 >= 90 - 81)
+			{
+				goto IL_000c;
+			}
+			goto IL_00fd;
+			IL_0235:
+			base.Reader.MoveToElement();
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			if (!base.Reader.IsEmptyElement)
+			{
+				base.Reader.ReadStartElement();
+				base.Reader.MoveToContent();
+				whileIterations = 0;
+				readerCount = base.ReaderCount;
+				goto IL_0278;
+			}
+			if (15 <= 15 - 10)
+			{
+				goto IL_01ae;
+			}
+			goto IL_026b;
+			IL_000c:
+			if (base.Reader.MoveToNextAttribute())
+			{
+				goto IL_01ae;
+			}
+			if (850 < 850 - 163)
+			{
+				goto IL_0076;
+			}
+			goto IL_0235;
+			IL_00fd:
+			if (!Ⴍ)
+			{
+				goto IL_0034;
+			}
+			if ((891 + 891 * 891) % 2 == 0)
+			{
+				goto IL_01dc;
+			}
+			goto IL_0278;
+			IL_026b:
+			base.Reader.Skip();
+			return controllerBase;
+			IL_0034:
+			if (Ⴓ)
+			{
+				if (false)
+				{
+					goto IL_0278;
+				}
+				if (!(xmlQualifiedName == null))
+				{
+					if ((663 + 663 * 663) % 2 == 0)
+					{
+						goto IL_0076;
+					}
+					goto IL_0235;
+				}
+			}
+			goto IL_0191;
+			IL_0076:
+			if ((object)xmlQualifiedName.Name == this.m_ႳႣ)
+			{
+				if (false)
+				{
+					goto IL_0166;
+				}
+				if ((object)xmlQualifiedName.Namespace == Ⴃ)
+				{
+					goto IL_0191;
+				}
+				if (297 < 297 - 113)
+				{
+					goto IL_01dc;
+				}
+			}
+			goto IL_0263;
+			IL_02d4:
+			UnknownNode(controllerBase, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+			if (828 <= 828 - 740)
+			{
+				goto IL_00cc;
+			}
+			goto IL_0166;
+			IL_01ae:
+			if (IsXmlnsAttribute(base.Reader.Name))
+			{
+				goto IL_000c;
+			}
+			if (652 > 652 - 29)
+			{
+				goto IL_00cc;
+			}
+			goto IL_026b;
+			IL_0191:
+			if (flag)
+			{
+				if (false)
+				{
+				}
+				return null;
+			}
+			controllerBase = new ControllerBase();
+			goto IL_000c;
+			IL_0263:
+			throw CreateUnknownTypeException(xmlQualifiedName);
+			IL_0166:
+			base.Reader.MoveToContent();
+			CheckReaderCount(ref whileIterations, ref readerCount);
+			if (326 < 326 - 96)
+			{
+				goto IL_0263;
+			}
+			goto IL_0278;
+			IL_01dc:
+			flag = ReadNull();
+			if ((325 + 325 * 325) % 2 == 0)
+			{
+				goto IL_0034;
+			}
+			goto IL_0166;
+		}
+
+		private Resources ႳႼ(bool Ⴍ, bool Ⴓ)
+		{
+			XmlQualifiedName xmlQualifiedName = Ⴓ ? GetXsiType() : null;
+			bool flag = false;
+			if (Ⴍ)
+			{
+				flag = ReadNull();
+			}
+			if (Ⴓ && !(xmlQualifiedName == null) && ((object)xmlQualifiedName.Name != ႥႷ || (object)xmlQualifiedName.Namespace != Ⴃ))
+			{
+				throw CreateUnknownTypeException(xmlQualifiedName);
+			}
+			if (flag)
+			{
+				return null;
+			}
+			Resources resources;
+			try
+			{
+				resources = (Resources)Activator.CreateInstance(typeof(Resources), BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.CreateInstance, null, new object[0], null);
+			}
+			catch (MissingMethodException)
+			{
+				throw CreateInaccessibleConstructorException(ႰႨႭ.Ⴀ.ႳႭႨ(137679869));
+			}
+			catch (SecurityException)
+			{
+				throw CreateCtorHasSecurityException(ႰႨႭ.Ⴀ.ႳႭႨ(137679869));
+			}
+			while (base.Reader.MoveToNextAttribute())
+			{
+				if (!IsXmlnsAttribute(base.Reader.Name))
+				{
+					UnknownNode(resources);
+				}
+			}
+			base.Reader.MoveToElement();
+			if (base.Reader.IsEmptyElement)
+			{
+				base.Reader.Skip();
+				return resources;
+			}
+			base.Reader.ReadStartElement();
+			base.Reader.MoveToContent();
+			int whileIterations = 0;
+			int readerCount = base.ReaderCount;
+			while (base.Reader.NodeType != XmlNodeType.EndElement && base.Reader.NodeType != 0)
+			{
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					UnknownNode(resources, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+				}
+				else
+				{
+					UnknownNode(resources, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+				}
+				base.Reader.MoveToContent();
+				CheckReaderCount(ref whileIterations, ref readerCount);
+			}
+			ReadEndElement();
+			return resources;
+		}
+
+		private TrayGUIManager ႨႭ(bool Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0032, IL_0053, IL_007e, IL_00a4, IL_00c7, IL_00e8, IL_00f5, IL_0113, IL_013b, IL_015c, IL_018a, IL_01a5, IL_01d5, IL_01fc, IL_0223, IL_024e, IL_028a, IL_02aa, IL_02ca, IL_02f3
+			TrayGUIManager trayGUIManager = default(TrayGUIManager);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			bool flag = default(bool);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				if (Ⴓ)
+				{
+					goto IL_00ed;
+				}
+				object obj;
+				if ((228 + 228 * 228) % 2 == 0)
+				{
+					obj = null;
+					goto IL_00fa;
+				}
+				goto IL_006f;
+				IL_00a9:
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if (63 <= 63 - 32)
+					{
+						goto IL_0083;
+					}
+					UnknownNode(trayGUIManager, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+					goto IL_0161;
+				}
+				goto IL_02cf;
+				IL_0258:
+				base.Reader.Skip();
+				return trayGUIManager;
+				IL_00ed:
+				obj = GetXsiType();
+				goto IL_00fa;
+				IL_00fa:
+				xmlQualifiedName = (XmlQualifiedName)obj;
+				flag = false;
+				if (Ⴍ)
+				{
+					if (467 <= 467 - 70)
+					{
+						goto IL_00a9;
+					}
+					flag = ReadNull();
+					if (974 <= 974 - 761)
+					{
+						goto IL_0258;
+					}
+				}
+				if (Ⴓ)
+				{
+					if (552 < 552 - 318)
+					{
+						goto IL_0265;
+					}
+					if (!(xmlQualifiedName == null))
+					{
+						if (180 < 180 - 47)
+						{
+						}
+						goto IL_0083;
+					}
+				}
+				goto IL_018f;
+				IL_01aa:
+				if (!IsXmlnsAttribute(base.Reader.Name))
+				{
+					if (false)
+					{
+						continue;
+					}
+					UnknownNode(trayGUIManager);
+					if (false)
+					{
+						goto IL_0063;
+					}
+				}
+				goto IL_000c;
+				IL_0083:
+				if ((object)xmlQualifiedName.Name == ႰႨ)
+				{
+					if (111 <= 111 - 80 || (object)xmlQualifiedName.Namespace == Ⴃ)
+					{
+						goto IL_018f;
+					}
+					if (false)
+					{
+						goto IL_02cf;
+					}
+				}
+				throw CreateUnknownTypeException(xmlQualifiedName);
+				IL_02cf:
+				UnknownNode(trayGUIManager, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+				if (1011 < 1011 - 161)
+				{
+					break;
+				}
+				goto IL_0161;
+				IL_0161:
+				base.Reader.MoveToContent();
+				CheckReaderCount(ref whileIterations, ref readerCount);
+				if (901 < 901 - 99)
+				{
+					goto IL_00ed;
+				}
+				goto IL_0265;
+				IL_0063:
+				base.Reader.MoveToContent();
+				goto IL_006f;
+				IL_006f:
+				whileIterations = 0;
+				readerCount = base.ReaderCount;
+				goto IL_0265;
+				IL_018f:
+				if (flag)
+				{
+					if (294 >= 294 - 192)
+					{
+						goto IL_000a;
+					}
+					goto IL_01aa;
+				}
+				trayGUIManager = new TrayGUIManager();
+				goto IL_000c;
+				IL_0265:
+				if (base.Reader.NodeType != XmlNodeType.EndElement)
+				{
+					if (707 < 707 - 262)
+					{
+						goto IL_000a;
+					}
+					goto IL_0201;
+				}
+				goto IL_028c;
+				IL_000a:
+				return null;
+				IL_000c:
+				if (!base.Reader.MoveToNextAttribute())
+				{
+					if (367 >= 367 - 130)
+					{
+						base.Reader.MoveToElement();
+						if (!base.Reader.IsEmptyElement)
+						{
+							base.Reader.ReadStartElement();
+							goto IL_0063;
+						}
+						if (93 <= 93 - 56)
+						{
+							goto IL_0201;
+						}
+						goto IL_0258;
+					}
+				}
+				goto IL_01aa;
+				IL_0201:
+				if (base.Reader.NodeType != 0)
+				{
+					goto IL_00a9;
+				}
+				if (false)
+				{
+					goto IL_0083;
+				}
+				goto IL_028c;
+				IL_028c:
+				ReadEndElement();
+				break;
+			}
+			return trayGUIManager;
+		}
+
+		private BrowserCommand ႳႭႣ(string Ⴍ)
+		{
+			int num = 5;
+			string a = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (((a = Ⴍ) == null) ? 1 : 0);
+					break;
+				case 0:
+					num = ((a == ႰႨႭ.Ⴀ.ႳႭႨ(137679745)) ? 4 : 2);
+					break;
+				case 2:
+					num = ((a == ႰႨႭ.Ⴀ.ႳႭႨ(137679744)) ? 3 : 6);
+					break;
+				case 6:
+					num = 1;
+					break;
+				case 4:
+					return BrowserCommand.GoBack;
+				case 3:
+					return BrowserCommand.GoForward;
+				case 1:
+					throw CreateUnknownConstantException(Ⴍ, typeof(BrowserCommand));
+				}
+			}
+		}
+
+		private WebKitWindowBase ႨႣ(bool Ⴍ, bool Ⴓ)
+		{
+			int num = 2;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴓ ? 10 : 12);
+					break;
+				case 12:
+					obj = null;
+					goto IL_0059;
+				case 10:
+					obj = GetXsiType();
+					goto IL_0059;
+				case 8:
+					flag = ReadNull();
+					num = 9;
+					break;
+				case 9:
+					num = ((!Ⴓ) ? 4 : 0);
+					break;
+				case 0:
+					num = ((!(xmlQualifiedName == null)) ? 1 : 4);
+					break;
+				case 1:
+					num = (((object)xmlQualifiedName.Name != ႨႨ) ? 5 : 6);
+					break;
+				case 6:
+					num = (((object)xmlQualifiedName.Namespace == Ⴃ) ? 4 : 5);
+					break;
+				case 5:
+					num = (((object)xmlQualifiedName.Name != ႷႳ) ? 7 : 14);
+					break;
+				case 14:
+					num = (((object)xmlQualifiedName.Namespace != Ⴃ) ? 7 : 11);
+					break;
+				case 11:
+					return ႳႨ(Ⴍ, Ⴓ: false);
+				case 7:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 4:
+					num = ((!flag) ? 13 : 3);
+					break;
+				case 3:
+					return null;
+				case 13:
+					{
+						throw CreateAbstractTypeException(ႰႨႭ.Ⴀ.ႳႭႨ(137679763), ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+					}
+					IL_0059:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴍ) ? 9 : 8);
+					break;
+				}
+			}
+		}
+
+		private TrayMenuItem ႨႼ(bool Ⴍ, bool Ⴓ)
+		{
+			int num = 2;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			TrayMenuItem trayMenuItem = default(TrayMenuItem);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴓ ? 20 : 31);
+					break;
+				case 31:
+					obj = null;
+					goto IL_00c7;
+				case 20:
+					obj = GetXsiType();
+					goto IL_00c7;
+				case 30:
+					flag = ReadNull();
+					num = 4;
+					break;
+				case 4:
+					num = ((!Ⴓ) ? 36 : 32);
+					break;
+				case 32:
+					num = ((xmlQualifiedName == null) ? 36 : 28);
+					break;
+				case 28:
+					num = (((object)xmlQualifiedName.Name != ႳႥ) ? 14 : 39);
+					break;
+				case 39:
+					num = (((object)xmlQualifiedName.Namespace == Ⴃ) ? 36 : 14);
+					break;
+				case 14:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 36:
+					num = ((!flag) ? 8 : 15);
+					break;
+				case 15:
+					return null;
+				case 8:
+					trayMenuItem = new TrayMenuItem();
+					array = new bool[4];
+					num = 22;
+					break;
+				case 1:
+					num = ((!array[0]) ? 19 : 0);
+					break;
+				case 19:
+					num = (((object)base.Reader.LocalName == this.Ⴓ) ? 26 : 0);
+					break;
+				case 26:
+					num = (((object)base.Reader.NamespaceURI == Ⴃ) ? 27 : 0);
+					break;
+				case 27:
+					trayMenuItem.ID = XmlConvert.ToInt32(base.Reader.Value);
+					array[0] = true;
+					num = 22;
+					break;
+				case 0:
+					num = (array[1] ? 29 : 10);
+					break;
+				case 10:
+					num = (((object)base.Reader.LocalName != this.m_ႣႳ) ? 29 : 3);
+					break;
+				case 3:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 29 : 7);
+					break;
+				case 7:
+					trayMenuItem.Name = base.Reader.Value;
+					array[1] = true;
+					num = 22;
+					break;
+				case 29:
+					num = (array[2] ? 12 : 38);
+					break;
+				case 38:
+					num = (((object)base.Reader.LocalName != ႰႼ) ? 12 : 18);
+					break;
+				case 18:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 12 : 5);
+					break;
+				case 5:
+					trayMenuItem.AssemblyPath = base.Reader.Value;
+					array[2] = true;
+					num = 22;
+					break;
+				case 12:
+					num = (array[3] ? 34 : 23);
+					break;
+				case 23:
+					num = (((object)base.Reader.LocalName != ႰႣ) ? 34 : 11);
+					break;
+				case 11:
+					num = (((object)base.Reader.NamespaceURI != Ⴃ) ? 34 : 16);
+					break;
+				case 16:
+					trayMenuItem.ObjectName = base.Reader.Value;
+					array[3] = true;
+					num = 22;
+					break;
+				case 34:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 22 : 9);
+					break;
+				case 9:
+					UnknownNode(trayMenuItem, ႰႨႭ.Ⴀ.ႳႭႨ(137679856));
+					goto case 22;
+				case 22:
+					num = (base.Reader.MoveToNextAttribute() ? 1 : 13);
+					break;
+				case 13:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 25 : 40);
+					break;
+				case 40:
+					base.Reader.Skip();
+					return trayMenuItem;
+				case 25:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 21;
+					break;
+				case 6:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 17 : 35);
+					break;
+				case 35:
+					UnknownNode(trayMenuItem, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+					num = 24;
+					break;
+				case 17:
+					UnknownNode(trayMenuItem, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+					goto case 24;
+				case 24:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 21;
+				case 21:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 33 : 37);
+					break;
+				case 37:
+					num = ((base.Reader.NodeType != 0) ? 6 : 33);
+					break;
+				case 33:
+					{
+						ReadEndElement();
+						return trayMenuItem;
+					}
+					IL_00c7:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴍ) ? 4 : 30);
+					break;
+				}
+			}
+		}
+
+		private TrayMenuItemsList ႣႭ(bool Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0036, IL_0060, IL_008c, IL_00be, IL_00e9, IL_0119, IL_0144, IL_014f, IL_017f, IL_01ab, IL_01cb, IL_01e8, IL_020d, IL_0226, IL_024c, IL_0274, IL_0285, IL_0292, IL_02b0, IL_02c8, IL_02ee, IL_0303, IL_0334, IL_0341, IL_0364, IL_038d, IL_03b2, IL_03ce, IL_0404, IL_0431, IL_0459, IL_0479, IL_04a7, IL_04b9, IL_04da, IL_0505, IL_0523, IL_0540, IL_056b, IL_058e, IL_05b6, IL_05e2, IL_0603, IL_063d
+			object obj;
+			if (Ⴓ)
+			{
+				obj = GetXsiType();
+				goto IL_0346;
+			}
+			if (930 < 930 - 605)
+			{
+				goto IL_00c3;
+			}
+			goto IL_0149;
+			IL_0615:
+			while ((object)base.Reader.LocalName == ႳႥ)
+			{
+				if (false)
+				{
+					continue;
+				}
+				goto IL_047e;
+			}
+			goto IL_052a;
+			IL_0371:
+			base.Reader.MoveToContent();
+			int whileIterations = 0;
+			goto IL_0380;
+			IL_0346:
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = false;
+			if (Ⴍ)
+			{
+				if (false)
+				{
+					goto IL_0091;
+				}
+				flag = ReadNull();
+				if (false)
+				{
+					goto IL_04df;
+				}
+			}
+			goto IL_045e;
+			IL_04df:
+			TrayMenuItemsList trayMenuItemsList = default(TrayMenuItemsList);
+			if (base.Reader.NodeType == XmlNodeType.Element)
+			{
+				if (false)
+				{
+					goto IL_0149;
+				}
+				if ((object)base.Reader.LocalName == this.m_ႨႭ)
+				{
+					if (442 < 442 - 229)
+					{
+						goto IL_03df;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (511 >= 511 - 100)
+						{
+							goto IL_01b0;
+						}
+						goto IL_02f3;
+					}
+				}
+				UnknownNode(trayMenuItemsList, ႰႨႭ.Ⴀ.ႳႭႨ(137679860));
+			}
+			else
+			{
+				UnknownNode(trayMenuItemsList, ႰႨႭ.Ⴀ.ႳႭႨ(137679860));
+				if (29 <= 29 - 1)
+				{
+					goto IL_0124;
+				}
+			}
+			goto IL_0308;
+			IL_02f3:
+			base.Reader.Skip();
+			goto IL_00ee;
+			IL_045e:
+			if (Ⴓ)
+			{
+				if (false)
+				{
+					goto IL_01b0;
+				}
+				if (!(xmlQualifiedName == null))
+				{
+					if (361 > 361 - 268)
+					{
+						if ((object)xmlQualifiedName.Name != ႷႨ)
+						{
+							goto IL_0151;
+						}
+						if (false)
+						{
+							goto IL_0409;
+						}
+						goto IL_0570;
+					}
+					goto IL_0091;
+				}
+			}
+			goto IL_050a;
+			IL_0149:
+			obj = null;
+			goto IL_0346;
+			IL_0380:
+			int readerCount = base.ReaderCount;
+			goto IL_003b;
+			IL_0151:
+			throw CreateUnknownTypeException(xmlQualifiedName);
+			IL_047e:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_052a;
+			}
+			if (560 <= 560 - 21)
+			{
+				goto IL_0065;
+			}
+			List<TrayMenuItem> trayMenuItems = default(List<TrayMenuItem>);
+			if (trayMenuItems != null)
+			{
+				goto IL_0212;
+			}
+			if (175 > 175 - 103)
+			{
+				goto IL_02f3;
+			}
+			goto IL_0545;
+			IL_02cd:
+			trayMenuItemsList.TrayMenuItems = new List<TrayMenuItem>();
+			if (683 >= 683 - 317)
+			{
+				goto IL_0091;
+			}
+			goto IL_0615;
+			IL_050a:
+			if (!flag)
+			{
+				goto IL_011e;
+			}
+			if (567 <= 567 - 130)
+			{
+				goto IL_0308;
+			}
+			return null;
+			IL_03df:
+			if (!base.Reader.IsEmptyElement)
+			{
+				goto IL_00c3;
+			}
+			if (false)
+			{
+				goto IL_0212;
+			}
+			base.Reader.Skip();
+			return trayMenuItemsList;
+			IL_0091:
+			trayMenuItems = trayMenuItemsList.TrayMenuItems;
+			if (base.Reader.IsEmptyElement)
+			{
+				if (false)
+				{
+					goto IL_02cd;
+				}
+				base.Reader.Skip();
+				goto IL_0308;
+			}
+			base.Reader.ReadStartElement();
+			goto IL_0371;
+			IL_011e:
+			trayMenuItemsList = new TrayMenuItemsList();
+			goto IL_0124;
+			IL_0124:
+			if (trayMenuItemsList.TrayMenuItems == null)
+			{
+				if (false)
+				{
+					goto IL_0380;
+				}
+				trayMenuItemsList.TrayMenuItems = new List<TrayMenuItem>();
+				if (110 <= 110 - 39)
+				{
+					goto IL_0212;
+				}
+			}
+			_ = trayMenuItemsList.TrayMenuItems;
+			goto IL_0545;
+			IL_00ee:
+			base.Reader.MoveToContent();
+			CheckReaderCount(ref whileIterations, ref readerCount);
+			if ((728 + 728 * 728) % 2 == 0)
+			{
+				goto IL_003b;
+			}
+			goto IL_02cd;
+			IL_003b:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (136 <= 136 - 123)
+				{
+					goto IL_0570;
+				}
+				if (base.Reader.NodeType != 0)
+				{
+					if (base.Reader.NodeType == XmlNodeType.Element)
+					{
+						if (882 > 882 - 808)
+						{
+							goto IL_0615;
+						}
+					}
+					else
+					{
+						UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679826));
+						if (false)
+						{
+							goto IL_02cd;
+						}
+					}
+					goto IL_00ee;
+				}
+				if (149 <= 149 - 112)
+				{
+					goto IL_011e;
+				}
+			}
+			ReadEndElement();
+			goto IL_0308;
+			IL_0212:
+			trayMenuItems.Add(ႨႼ(Ⴍ: true, Ⴓ: true));
+			goto IL_00ee;
+			IL_0545:
+			if (base.Reader.MoveToNextAttribute())
+			{
+				goto IL_0409;
+			}
+			if (202 >= 202 - 151)
+			{
+				base.Reader.MoveToElement();
+				goto IL_03df;
+			}
+			goto IL_0615;
+			IL_052a:
+			UnknownNode(null, ႰႨႭ.Ⴀ.ႳႭႨ(137679826));
+			goto IL_00ee;
+			IL_0570:
+			if ((object)xmlQualifiedName.Namespace != Ⴃ)
+			{
+				if (117 >= 117 - 48)
+				{
+					goto IL_0151;
+				}
+				goto IL_01b0;
+			}
+			goto IL_050a;
+			IL_0409:
+			if (IsXmlnsAttribute(base.Reader.Name))
+			{
+				goto IL_0545;
+			}
+			if (false)
+			{
+				goto IL_0371;
+			}
+			goto IL_05e7;
+			IL_00c3:
+			base.Reader.ReadStartElement();
+			base.Reader.MoveToContent();
+			int whileIterations2 = 0;
+			int readerCount2 = base.ReaderCount;
+			goto IL_0065;
+			IL_05e7:
+			UnknownNode(trayMenuItemsList);
+			if (false)
+			{
+				goto IL_0308;
+			}
+			goto IL_0545;
+			IL_0308:
+			base.Reader.MoveToContent();
+			CheckReaderCount(ref whileIterations2, ref readerCount2);
+			if (990 > 990 - 337)
+			{
+				goto IL_0065;
+			}
+			goto IL_05e7;
+			IL_0065:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (false)
+				{
+					goto IL_050a;
+				}
+				if (base.Reader.NodeType != 0)
+				{
+					goto IL_04df;
+				}
+				if (847 <= 847 - 479)
+				{
+					goto IL_045e;
+				}
+			}
+			ReadEndElement();
+			return trayMenuItemsList;
+			IL_01b0:
+			if (ReadNull())
+			{
+				goto IL_0308;
+			}
+			if (303 < 303 - 34)
+			{
+				goto IL_011e;
+			}
+			if (trayMenuItemsList.TrayMenuItems != null)
+			{
+				goto IL_0091;
+			}
+			if (805 >= 805 - 207)
+			{
+				goto IL_02cd;
+			}
+			goto IL_0380;
+		}
+
+		private SpecialActionUtils ႣႳ(bool Ⴍ, bool Ⴓ)
+		{
+			int num = 12;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			SpecialActionUtils specialActionUtils = default(SpecialActionUtils);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴓ ? 14 : 10);
+					break;
+				case 10:
+					obj = null;
+					goto IL_0085;
+				case 14:
+					obj = GetXsiType();
+					goto IL_0085;
+				case 21:
+					flag = ReadNull();
+					num = 19;
+					break;
+				case 19:
+					num = ((!Ⴓ) ? 13 : 0);
+					break;
+				case 0:
+					num = ((xmlQualifiedName == null) ? 13 : 7);
+					break;
+				case 7:
+					num = (((object)xmlQualifiedName.Name != ႥႠ) ? 18 : 4);
+					break;
+				case 4:
+					num = (((object)xmlQualifiedName.Namespace == Ⴃ) ? 13 : 18);
+					break;
+				case 18:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 13:
+					num = ((!flag) ? 8 : 2);
+					break;
+				case 2:
+					return null;
+				case 8:
+					specialActionUtils = new SpecialActionUtils();
+					num = 11;
+					break;
+				case 6:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 11 : 20);
+					break;
+				case 20:
+					UnknownNode(specialActionUtils);
+					goto case 11;
+				case 11:
+					num = (base.Reader.MoveToNextAttribute() ? 6 : 24);
+					break;
+				case 24:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 23 : 3);
+					break;
+				case 3:
+					base.Reader.Skip();
+					return specialActionUtils;
+				case 23:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 17;
+					break;
+				case 15:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 9 : 16);
+					break;
+				case 16:
+					UnknownNode(specialActionUtils, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+					num = 1;
+					break;
+				case 9:
+					UnknownNode(specialActionUtils, ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+					goto case 1;
+				case 1:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 17;
+				case 17:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 22 : 5);
+					break;
+				case 5:
+					num = ((base.Reader.NodeType != 0) ? 15 : 22);
+					break;
+				case 22:
+					{
+						ReadEndElement();
+						return specialActionUtils;
+					}
+					IL_0085:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴍ) ? 19 : 21);
+					break;
+				}
+			}
+		}
+
+		private ActionLookupMode ႳႭႷ(string Ⴍ)
+		{
+			int num = 6;
+			string a = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (((a = Ⴍ) != null) ? 1 : 5);
+					break;
+				case 1:
+					num = ((!(a == ႰႨႭ.Ⴀ.ႳႭႨ(137679801))) ? 2 : 0);
+					break;
+				case 2:
+					num = ((a == ႰႨႭ.Ⴀ.ႳႭႨ(137679800)) ? 8 : 4);
+					break;
+				case 4:
+					num = ((a == ႰႨႭ.Ⴀ.ႳႭႨ(137679807)) ? 3 : 7);
+					break;
+				case 7:
+					num = 5;
+					break;
+				case 0:
+					return ActionLookupMode.DefaultPersonality;
+				case 8:
+					return ActionLookupMode.ActivePersonality;
+				case 3:
+					return ActionLookupMode.Both;
+				case 5:
+					throw CreateUnknownConstantException(Ⴍ, typeof(ActionLookupMode));
+				}
+			}
+		}
+
+		private SpecialActionSubmitter ႣႨ(bool Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_002c, IL_0052, IL_007d, IL_009b, IL_00c3, IL_00f0, IL_011f, IL_014d, IL_0158, IL_017c, IL_01a7, IL_01cd, IL_01f3, IL_0215, IL_022f, IL_0257, IL_027c, IL_0289, IL_02aa, IL_02ca, IL_02fb, IL_0326, IL_033e, IL_0352, IL_0386, IL_039f, IL_03cb, IL_03ef, IL_0410, IL_0436, IL_0459, IL_0485, IL_04ae, IL_04ce, IL_04fe, IL_0526, IL_0547, IL_0575
+			object obj;
+			if (!Ⴓ)
+			{
+				if (900 <= 900 - 766)
+				{
+					goto IL_0549;
+				}
+				obj = null;
+			}
+			else
+			{
+				obj = GetXsiType();
+			}
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag;
+			while (true)
+			{
+				flag = false;
+				if (!Ⴍ)
+				{
+					break;
+				}
+				if (794 <= 794 - 355)
+				{
+					continue;
+				}
+				goto IL_0388;
+			}
+			goto IL_050b;
+			IL_043b:
+			bool[] array = default(bool[]);
+			if (array[3])
+			{
+				goto IL_032b;
+			}
+			if (540 > 540 - 509)
+			{
+				goto IL_0181;
+			}
+			goto IL_0503;
+			IL_0031:
+			if ((object)xmlQualifiedName.Namespace == Ⴃ)
+			{
+				goto IL_0082;
+			}
+			if (252 <= 252 - 93)
+			{
+				goto IL_032b;
+			}
+			goto IL_045e;
+			IL_01f8:
+			if (array[1])
+			{
+				goto IL_02af;
+			}
+			if ((234 + 234 * 234) % 2 == 0)
+			{
+				goto IL_00c5;
+			}
+			goto IL_0340;
+			IL_000a:
+			if (base.Reader.NodeType == XmlNodeType.None)
+			{
+				if (false)
+				{
+					goto IL_02cf;
+				}
+				goto IL_0503;
+			}
+			if (base.Reader.NodeType != XmlNodeType.Element)
+			{
+				goto IL_03a4;
+			}
+			if (399 > 399 - 143)
+			{
+				goto IL_021a;
+			}
+			goto IL_0412;
+			IL_0412:
+			base.Reader.ReadStartElement();
+			base.Reader.MoveToContent();
+			goto IL_0429;
+			IL_032b:
+			SpecialActionSubmitter specialActionSubmitter = default(SpecialActionSubmitter);
+			UnknownNode(specialActionSubmitter, ႰႨႭ.Ⴀ.ႳႭႨ(137679849));
+			goto IL_02cf;
+			IL_0388:
+			flag = ReadNull();
+			if (810 < 810 - 36)
+			{
+				goto IL_0412;
+			}
+			goto IL_050b;
+			IL_050b:
+			if (!Ⴓ)
+			{
+				goto IL_0082;
+			}
+			if ((528 + 528 * 528) % 2 == 0)
+			{
+				if (xmlQualifiedName == null)
+				{
+					goto IL_0082;
+				}
+				if (false)
+				{
+					goto IL_0124;
+				}
+				if ((object)xmlQualifiedName.Name != ႥႣ)
+				{
+					goto IL_045e;
+				}
+				if (37 > 37 - 28)
+				{
+					goto IL_0031;
+				}
+			}
+			goto IL_03a4;
+			IL_021a:
+			while (!array[0])
+			{
+				if (171 >= 171 - 114)
+				{
+					if ((object)base.Reader.LocalName != ႰႷ)
+					{
+						break;
+					}
+					if (520 <= 520 - 85)
+					{
+						continue;
+					}
+					goto IL_0234;
+				}
+				goto IL_0466;
+			}
+			goto IL_01f8;
+			IL_0554:
+			return specialActionSubmitter;
+			IL_02cf:
+			base.Reader.MoveToContent();
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			CheckReaderCount(ref whileIterations, ref readerCount);
+			if (768 >= 768 - 689)
+			{
+				goto IL_048a;
+			}
+			goto IL_0554;
+			IL_03a4:
+			UnknownNode(specialActionSubmitter, ႰႨႭ.Ⴀ.ႳႭႨ(137679849));
+			if (1007 <= 1007 - 892)
+			{
+				goto IL_0057;
+			}
+			goto IL_02cf;
+			IL_0234:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (516 > 516 - 80)
+				{
+					specialActionSubmitter.LastReferenceDateTime = XmlSerializationReader.ToDateTime(base.Reader.ReadElementString());
+					array[0] = true;
+					goto IL_02cf;
+				}
+			}
+			goto IL_01f8;
+			IL_0082:
+			if (flag)
+			{
+				if (791 >= 791 - 648)
+				{
+					return null;
+				}
+			}
+			goto IL_0340;
+			IL_04d3:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if ((851 + 851 * 851) % 2 == 0)
+				{
+					specialActionSubmitter.LastUsedIndex = XmlConvert.ToInt32(base.Reader.ReadElementString());
+					array[3] = true;
+					goto IL_02cf;
+				}
+				goto IL_0181;
+			}
+			goto IL_032b;
+			IL_045e:
+			throw CreateUnknownTypeException(xmlQualifiedName);
+			IL_0340:
+			specialActionSubmitter = new SpecialActionSubmitter();
+			array = new bool[4];
+			goto IL_00a0;
+			IL_00a0:
+			if (base.Reader.MoveToNextAttribute())
+			{
+				goto IL_0057;
+			}
+			if (815 < 815 - 363)
+			{
+				goto IL_04d3;
+			}
+			base.Reader.MoveToElement();
+			if (!base.Reader.IsEmptyElement)
+			{
+				goto IL_0412;
+			}
+			if (174 <= 174 - 93)
+			{
+				goto IL_0234;
+			}
+			goto IL_0549;
+			IL_0124:
+			if ((object)base.Reader.LocalName == ႨႳ)
+			{
+				if (227 <= 227 - 202)
+				{
+					goto IL_021a;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (false)
+					{
+						goto IL_0031;
+					}
+					goto IL_0466;
+				}
+			}
+			goto IL_043b;
+			IL_0181:
+			if ((object)base.Reader.LocalName != ႰႤ)
+			{
+				goto IL_032b;
+			}
+			if (32 <= 32 - 24)
+			{
+				goto IL_00c5;
+			}
+			goto IL_04d3;
+			IL_00c5:
+			if ((object)base.Reader.LocalName == ႷႤ)
+			{
+				if (false)
+				{
+					goto IL_0466;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (674 <= 674 - 71)
+					{
+						goto IL_000a;
+					}
+					specialActionSubmitter.LastReferenceValue = XmlConvert.ToInt32(base.Reader.ReadElementString());
+					array[1] = true;
+					goto IL_02cf;
+				}
+			}
+			goto IL_02af;
+			IL_0549:
+			base.Reader.Skip();
+			goto IL_0554;
+			IL_0057:
+			if (!IsXmlnsAttribute(base.Reader.Name))
+			{
+				if (152 < 152 - 88)
+				{
+					goto IL_0429;
+				}
+				UnknownNode(specialActionSubmitter);
+				if (false)
+				{
+					goto IL_021a;
+				}
+			}
+			goto IL_00a0;
+			IL_02af:
+			while (!array[2])
+			{
+				if (844 < 844 - 834)
+				{
+					continue;
+				}
+				goto IL_0124;
+			}
+			goto IL_043b;
+			IL_0503:
+			ReadEndElement();
+			return specialActionSubmitter;
+			IL_0429:
+			whileIterations = 0;
+			readerCount = base.ReaderCount;
+			goto IL_048a;
+			IL_048a:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if ((718 + 718 * 718) % 2 == 0)
+				{
+					goto IL_000a;
+				}
+				goto IL_00a0;
+			}
+			goto IL_0503;
+			IL_0466:
+			specialActionSubmitter.FirstTimeDone = XmlConvert.ToBoolean(base.Reader.ReadElementString());
+			array[2] = true;
+			goto IL_02cf;
+		}
+
+		private SpecialActionActivationType ႳႭႥ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001b, IL_0046, IL_00f5, IL_0121, IL_0155
+			string key;
+			if ((key = Ⴍ) == null)
+			{
+				goto IL_004d;
+			}
+			if (868 <= 868 - 105)
+			{
+				goto IL_0020;
+			}
+			goto IL_0100;
+			IL_0020:
+			if (!<PrivateImplementationDetails>{E2E10707-ED32-4F08-BE74-DBF9AEC9B10F}.$$method0x6000045-1.TryGetValue(key, out int value))
+			{
+				goto IL_004d;
+			}
+			if (false)
+			{
+				goto IL_0100;
+			}
+			while (true)
+			{
+				switch (value)
+				{
+				case 0:
+					return SpecialActionActivationType.Everytime;
+				case 5:
+					break;
+				case 6:
+					return SpecialActionActivationType.InactivityOneTime;
+				case 4:
+					return SpecialActionActivationType.FirstTimeAndEveryFewTimes;
+				case 2:
+					return SpecialActionActivationType.Inactivity;
+				case 1:
+					return SpecialActionActivationType.EverytimeMinInterval;
+				default:
+					goto IL_0145;
+				case 3:
+					return SpecialActionActivationType.EveryFewTimes;
+				}
+				break;
+				IL_0145:
+				if (359 < 359 - 229)
+				{
+					continue;
+				}
+				goto IL_004d;
+			}
+			goto IL_004b;
+			IL_0100:
+			while (<PrivateImplementationDetails>{E2E10707-ED32-4F08-BE74-DBF9AEC9B10F}.$$method0x6000045-1 == null)
+			{
+				if ((296 + 296 * 296) % 2 == 0)
+				{
+					<PrivateImplementationDetails>{E2E10707-ED32-4F08-BE74-DBF9AEC9B10F}.$$method0x6000045-1 = new Dictionary<string, int>(7)
+					{
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679793),
+							0
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679792),
+							1
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679799),
+							2
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679798),
+							3
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679797),
+							4
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679796),
+							5
+						},
+						{
+							ႰႨႭ.Ⴀ.ႳႭႨ(137679787),
+							6
+						}
+					};
+					if (472 >= 472 - 46)
+					{
+						break;
+					}
+					continue;
+				}
+				goto IL_004b;
+			}
+			goto IL_0020;
+			IL_004d:
+			throw CreateUnknownConstantException(Ⴍ, typeof(SpecialActionActivationType));
+			IL_004b:
+			return SpecialActionActivationType.InactivityDeminishing;
+		}
+
+		private SpecialActions ႣႣ(bool Ⴍ, bool Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0028, IL_0059, IL_007d, IL_00a7, IL_00c5, IL_00e5, IL_0108, IL_0125, IL_0143, IL_0160, IL_0190, IL_01be, IL_01de, IL_01fa, IL_0228, IL_0258, IL_0283, IL_02a0, IL_02cb, IL_02f9, IL_0324, IL_0355, IL_0371, IL_03a1, IL_03d2, IL_03f5, IL_0418, IL_043b, IL_0469, IL_0496, IL_04b5, IL_04d2, IL_04ed, IL_051e, IL_054b, IL_0576, IL_059a, IL_05c8, IL_05e4, IL_0605, IL_0633, IL_0663, IL_0687, IL_06ae, IL_06dc, IL_0700, IL_072c, IL_0756, IL_0787, IL_07c4, IL_07e1, IL_0804, IL_0828, IL_0859, IL_088d, IL_08bd, IL_08f3, IL_0924, IL_0955, IL_0972, IL_09a2, IL_09c6, IL_09f4, IL_0a11, IL_0a3c, IL_0a6d, IL_0a8f, IL_0abd, IL_0ae6, IL_0b02, IL_0b1f, IL_0b50, IL_0b80, IL_0b9d, IL_0bcb, IL_0bf9, IL_0c1a, IL_0c3b, IL_0c58, IL_0c75, IL_0ca6, IL_0cd1, IL_0d01, IL_0d32, IL_0d63, IL_0d91, IL_0dbc, IL_0de0, IL_0e03, IL_0e2e, IL_0e5c, IL_0e79, IL_0e9c, IL_0eb9, IL_0ee7, IL_0f17, IL_0f39, IL_0f64, IL_0f92, IL_0fc3, IL_0ff3, IL_1010, IL_1040, IL_106b, IL_1084, IL_10b4, IL_10d1, IL_10ff, IL_1120, IL_113d, IL_1159, IL_1189, IL_11ba, IL_11d7, IL_11f4, IL_1222, IL_1252, IL_1283, IL_12a7, IL_12d2, IL_12ef, IL_130c, IL_132d, IL_1347, IL_1378, IL_139c, IL_13cc, IL_13f8, IL_141c, IL_1439, IL_1456, IL_147a, IL_14ab, IL_14ce, IL_14eb, IL_1516, IL_1533, IL_1564, IL_1581, IL_158e, IL_15af, IL_15df, IL_160b, IL_1639, IL_1669, IL_1697, IL_16c7, IL_16e4, IL_1701, IL_1725, IL_1753, IL_1774, IL_1798, IL_17bb, IL_17d8, IL_1806, IL_1829, IL_185a, IL_188a, IL_18bb, IL_18d8, IL_1908, IL_1925, IL_1942, IL_195c, IL_1978, IL_1995, IL_19c3, IL_19e7, IL_1a00, IL_1a2d, IL_1a5e, IL_1a8c, IL_1ab9, IL_1ad5, IL_1b06, IL_1b24, IL_1b54, IL_1b78, IL_1ba6, IL_1bc3, IL_1bf1, IL_1c19, IL_1c36, IL_1c53, IL_1c76, IL_1c99, IL_1cc4, IL_1cf2, IL_1d20, IL_1d40, IL_1d71, IL_1da1, IL_1dd1, IL_1df5, IL_1e25, IL_1e48, IL_1e66, IL_1e88, IL_1ea0, IL_1ebd, IL_1eda, IL_1f0a, IL_1f27, IL_1f44, IL_1f68, IL_1f8f, IL_1fb2, IL_1fe0, IL_1feb
+			if (!Ⴓ)
+			{
+				if (419 < 419 - 330)
+				{
+					goto IL_1a32;
+				}
+				goto IL_1fe5;
+			}
+			object obj = GetXsiType();
+			goto IL_1593;
+			IL_04ba:
+			SpecialActions specialActions = default(SpecialActions);
+			specialActions.Action_Delete_Done = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_04c8;
+			IL_1fb7:
+			if ((object)base.Reader.LocalName != ႳႳ)
+			{
+				goto IL_0de5;
+			}
+			bool[] array = default(bool[]);
+			if (240 > 240 - 76)
+			{
+				if ((object)base.Reader.NamespaceURI != Ⴃ)
+				{
+					goto IL_0de5;
+				}
+				if (228 < 228 - 65)
+				{
+					goto IL_0694;
+				}
+				specialActions.Talk2Me_Hello_Full = ႣႨ(Ⴍ: false, Ⴓ: true);
+				array[0] = true;
+			}
+			goto IL_1a32;
+			IL_1593:
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = false;
+			if (Ⴍ)
+			{
+				if (563 <= 563 - 69)
+				{
+					goto IL_0a16;
+				}
+				flag = ReadNull();
+				if (844 <= 844 - 471)
+				{
+					goto IL_1a32;
+				}
+			}
+			if (Ⴓ)
+			{
+				if (308 <= 308 - 77)
+				{
+					goto IL_198b;
+				}
+				if (!(xmlQualifiedName == null))
+				{
+					if (55 >= 55 - 42)
+					{
+						if ((object)xmlQualifiedName.Name == ႥႥ)
+						{
+							if (991 < 991 - 174)
+							{
+								goto IL_1a32;
+							}
+							if ((object)xmlQualifiedName.Namespace == Ⴃ)
+							{
+								goto IL_05e9;
+							}
+							if (215 < 215 - 71)
+							{
+								goto IL_022d;
+							}
+						}
+						goto IL_068c;
+					}
+					goto IL_1538;
+				}
+			}
+			goto IL_05e9;
+			IL_04c8:
+			array[11] = true;
+			goto IL_1a32;
+			IL_0bfe:
+			if (array[33])
+			{
+				goto IL_1288;
+			}
+			if (132 > 132 - 109)
+			{
+				goto IL_082d;
+			}
+			goto IL_1a32;
+			IL_022d:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_1311;
+			}
+			if (false)
+			{
+				goto IL_0c6b;
+			}
+			specialActions.Personality_Delete_Done = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[8] = true;
+			goto IL_1a32;
+			IL_11dc:
+			specialActions.IWantTo_Searching = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_11ea;
+			IL_082d:
+			if ((object)base.Reader.LocalName == ႳႷ)
+			{
+				if (747 <= 747 - 509)
+				{
+					goto IL_1a05;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (773 <= 773 - 585)
+					{
+						goto IL_0e08;
+					}
+					goto IL_12f4;
+				}
+			}
+			goto IL_1288;
+			IL_1311:
+			if (array[9])
+			{
+				goto IL_1706;
+			}
+			if (372 > 372 - 114)
+			{
+				goto IL_0376;
+			}
+			goto IL_1bf3;
+			IL_0de5:
+			if (!array[1])
+			{
+				if (669 <= 669 - 562)
+				{
+					goto IL_0376;
+				}
+				if ((object)base.Reader.LocalName == ႣႷ)
+				{
+					if (983 <= 983 - 517)
+					{
+						goto IL_04c8;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (false)
+						{
+							goto IL_0dc1;
+						}
+						specialActions.Talk2Me_NothingGoingOn = ႣႨ(Ⴍ: false, Ⴓ: true);
+						goto IL_1acc;
+					}
+				}
+			}
+			if (!array[2])
+			{
+				if (456 <= 456 - 177)
+				{
+					goto IL_0c5d;
+				}
+				if ((object)base.Reader.LocalName == this.m_ႨႣ)
+				{
+					if (799 >= 799 - 136)
+					{
+						goto IL_0fc8;
+					}
+					goto IL_1b7d;
+				}
+			}
+			goto IL_041d;
+			IL_0376:
+			if ((object)base.Reader.LocalName == Ⴄ)
+			{
+				if ((839 + 839 * 839) % 2 == 0)
+				{
+					goto IL_0e33;
+				}
+				goto IL_12f4;
+			}
+			goto IL_1706;
+			IL_1288:
+			if (!array[34])
+			{
+				if (889 < 889 - 396)
+				{
+					goto IL_16da;
+				}
+				goto IL_188f;
+			}
+			goto IL_1c7b;
+			IL_0d06:
+			if ((object)base.Reader.LocalName == ႷႣ)
+			{
+				if (492 <= 492 - 394)
+				{
+					goto IL_1c9e;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (679 < 679 - 463)
+					{
+						goto IL_0c4e;
+					}
+					specialActions.NoChitChats = ႣႨ(Ⴍ: false, Ⴓ: true);
+					array[29] = true;
+					goto IL_1a32;
+				}
+			}
+			goto IL_00ea;
+			IL_05e9:
+			if (flag)
+			{
+				if (933 >= 933 - 160)
+				{
+					goto IL_049b;
+				}
+				goto IL_1952;
+			}
+			specialActions = new SpecialActions();
+			goto IL_1e93;
+			IL_188f:
+			if ((object)base.Reader.LocalName != ႥႭ)
+			{
+				goto IL_1c7b;
+			}
+			if (868 < 868 - 151)
+			{
+				goto IL_115e;
+			}
+			goto IL_1c9e;
+			IL_12f4:
+			specialActions.Personalities = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[33] = true;
+			goto IL_1a32;
+			IL_1e93:
+			array = new bool[47];
+			goto IL_1bf3;
+			IL_1bf3:
+			if (!base.Reader.MoveToNextAttribute())
+			{
+				if (688 < 688 - 399)
+				{
+					goto IL_02d0;
+				}
+				base.Reader.MoveToElement();
+				goto IL_086a;
+			}
+			goto IL_0d37;
+			IL_16da:
+			array[18] = true;
+			goto IL_1a32;
+			IL_1c7b:
+			if (!array[35])
+			{
+				if (false)
+				{
+					goto IL_059c;
+				}
+				if ((object)base.Reader.LocalName == this.m_ႳႤ)
+				{
+					if (208 <= 208 - 172)
+					{
+						goto IL_1961;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (798 < 798 - 66)
+						{
+							goto IL_04ab;
+						}
+						goto IL_16e9;
+					}
+				}
+			}
+			if (!array[36])
+			{
+				if (35 < 35 - 31)
+				{
+					goto IL_011b;
+				}
+				if ((object)base.Reader.LocalName == Ⴐ)
+				{
+					if (763 > 763 - 319)
+					{
+						goto IL_182e;
+					}
+					goto IL_1fb7;
+				}
+			}
+			goto IL_0668;
+			IL_0d37:
+			if (!IsXmlnsAttribute(base.Reader.Name))
+			{
+				if (919 < 919 - 312)
+				{
+					goto IL_060a;
+				}
+				UnknownNode(specialActions);
+				if (311 <= 311 - 239)
+				{
+					goto IL_1133;
+				}
+			}
+			goto IL_1bf3;
+			IL_08c2:
+			ReadEndElement();
+			goto IL_08c8;
+			IL_198b:
+			array[36] = true;
+			goto IL_1a32;
+			IL_060a:
+			if ((object)base.Reader.LocalName == this.m_ႳႼ)
+			{
+				if (833 <= 833 - 19)
+				{
+					goto IL_14b0;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if ((985 + 985 * 985) % 2 == 0)
+					{
+						specialActions.Talk2Friends_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+						goto IL_0968;
+					}
+					goto IL_0e6f;
+				}
+			}
+			goto IL_180b;
+			IL_1acc:
+			array[1] = true;
+			goto IL_1a32;
+			IL_15ef:
+			base.Reader.MoveToContent();
+			int whileIterations = 0;
+			int readerCount = base.ReaderCount;
+			goto IL_1f6d;
+			IL_1c9e:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (157 <= 157 - 50)
+				{
+					goto IL_075b;
+				}
+				goto IL_0ff8;
+			}
+			goto IL_1c7b;
+			IL_0e33:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_1706;
+			}
+			if (444 <= 444 - 66)
+			{
+				goto IL_198b;
+			}
+			specialActions.Personality_Action_DesignNew = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_18ce;
+			IL_180b:
+			if (array[16])
+			{
+				goto IL_13fd;
+			}
+			if (false)
+			{
+				goto IL_1acc;
+			}
+			goto IL_1b29;
+			IL_18ce:
+			array[9] = true;
+			goto IL_1a32;
+			IL_13fd:
+			if (!array[17])
+			{
+				if (443 < 443 - 215)
+				{
+					goto IL_163e;
+				}
+				if ((object)base.Reader.LocalName == Ⴈ)
+				{
+					if (142 < 142 - 102)
+					{
+						goto IL_1ea5;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if ((854 + 854 * 854) % 2 == 0)
+						{
+							specialActions.Mood_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+							array[17] = true;
+							goto IL_1a32;
+						}
+						goto IL_086a;
+					}
+				}
+			}
+			goto IL_000a;
+			IL_1706:
+			if (!array[10])
+			{
+				if (906 <= 906 - 444)
+				{
+					goto IL_1a32;
+				}
+				if ((object)base.Reader.LocalName == ႠႣ)
+				{
+					if (891 < 891 - 617)
+					{
+						goto IL_1a91;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (false)
+						{
+							goto IL_1ec2;
+						}
+						specialActions.Action_Delete_Selected = ႣႨ(Ⴍ: false, Ⴓ: true);
+						goto IL_17ce;
+					}
+				}
+			}
+			goto IL_07e6;
+			IL_1b7d:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_04d7;
+			}
+			if (263 < 263 - 126)
+			{
+				goto IL_14e1;
+			}
+			specialActions.Options = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[46] = true;
+			goto IL_1a32;
+			IL_182e:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_0668;
+			}
+			if (526 < 526 - 198)
+			{
+				goto IL_086a;
+			}
+			goto IL_197d;
+			IL_19c8:
+			if (array[15])
+			{
+				goto IL_180b;
+			}
+			if (931 >= 931 - 328)
+			{
+				goto IL_060a;
+			}
+			goto IL_1e93;
+			IL_086a:
+			if (!base.Reader.IsEmptyElement)
+			{
+				goto IL_15e4;
+			}
+			if (257 > 257 - 10)
+			{
+				base.Reader.Skip();
+				goto IL_0797;
+			}
+			goto IL_1c3b;
+			IL_075b:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_14b0;
+			}
+			if (954 < 954 - 473)
+			{
+				goto IL_1a32;
+			}
+			specialActions.PushButton_Save = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_1577;
+			IL_000a:
+			if (!array[18])
+			{
+				if (false)
+				{
+					goto IL_1a32;
+				}
+				if ((object)base.Reader.LocalName == ႥႳ)
+				{
+					if (825 < 825 - 634)
+					{
+						goto IL_182e;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (74 <= 74 - 12)
+						{
+							goto IL_07e6;
+						}
+						specialActions.Mood_Saved = ႣႨ(Ⴍ: false, Ⴓ: true);
+						goto IL_16da;
+					}
+				}
+			}
+			if (!array[19])
+			{
+				if (465 < 465 - 12)
+				{
+					goto IL_1bb9;
+				}
+				if ((object)base.Reader.LocalName == ႠႭ)
+				{
+					if (461 <= 461 - 120)
+					{
+						goto IL_15e4;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (1007 <= 1007 - 551)
+						{
+							goto IL_0082;
+						}
+						specialActions.Apps_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+						array[19] = true;
+						goto IL_1a32;
+					}
+				}
+			}
+			if (!array[20])
+			{
+				if (491 < 491 - 425)
+				{
+					goto IL_0731;
+				}
+				if ((object)base.Reader.LocalName == this.m_ႳႰ)
+				{
+					if (693 <= 693 - 209)
+					{
+						goto IL_08c8;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (133 < 133 - 73)
+						{
+							goto IL_12ac;
+						}
+						specialActions.RemindMe_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+						array[20] = true;
+						goto IL_1a32;
+					}
+				}
+			}
+			if (!array[21])
+			{
+				if (192 < 192 - 71)
+				{
+					goto IL_1a32;
+				}
+				if ((object)base.Reader.LocalName == ႥႼ)
+				{
+					if (79 >= 79 - 29)
+					{
+						goto IL_0bd0;
+					}
+					goto IL_18ce;
+				}
+			}
+			goto IL_1779;
+			IL_15e4:
+			base.Reader.ReadStartElement();
+			goto IL_15ef;
+			IL_011b:
+			array[27] = true;
+			goto IL_1a32;
+			IL_0668:
+			if (array[37])
+			{
+				goto IL_03d7;
+			}
+			if (541 > 541 - 515)
+			{
+				goto IL_0a16;
+			}
+			goto IL_0c40;
+			IL_041d:
+			if (!array[3])
+			{
+				if (688 <= 688 - 505)
+				{
+					goto IL_1b29;
+				}
+				if ((object)base.Reader.LocalName == ႠႳ)
+				{
+					if (false)
+					{
+						goto IL_0c4e;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (485 <= 485 - 165)
+						{
+							goto IL_1952;
+						}
+						specialActions.Chatmates_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+						array[3] = true;
+						goto IL_1a32;
+					}
+				}
+			}
+			goto IL_1ea5;
+			IL_0a16:
+			if ((object)base.Reader.LocalName == ႥႤ)
+			{
+				if (33 <= 33 - 17)
+				{
+					goto IL_0c5d;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (827 >= 827 - 217)
+					{
+						specialActions.Homework = ႣႨ(Ⴍ: false, Ⴓ: true);
+						goto IL_0156;
+					}
+					goto IL_1006;
+				}
+			}
+			goto IL_03d7;
+			IL_08c8:
+			return specialActions;
+			IL_14e1:
+			array[44] = true;
+			goto IL_1a32;
+			IL_1a91:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_1332;
+			}
+			if ((120 + 120 * 120) % 2 == 0)
+			{
+				specialActions.Personality_Delete_Selected = ႣႨ(Ⴍ: false, Ⴓ: true);
+				array[7] = true;
+				goto IL_1a32;
+			}
+			goto IL_0ff8;
+			IL_068c:
+			throw CreateUnknownTypeException(xmlQualifiedName);
+			IL_03d7:
+			if (!array[38])
+			{
+				if (false)
+				{
+					goto IL_0892;
+				}
+				if ((object)base.Reader.LocalName == ႥႰ)
+				{
+					if (false)
+					{
+						goto IL_0e33;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (588 <= 588 - 61)
+						{
+							goto IL_1bab;
+						}
+						specialActions.CoolWebSiteSearch = ႣႨ(Ⴍ: false, Ⴓ: true);
+						array[38] = true;
+						goto IL_1a32;
+					}
+				}
+			}
+			goto IL_0dc1;
+			IL_16e9:
+			specialActions.Games = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_16f7;
+			IL_1577:
+			array[25] = true;
+			goto IL_1a32;
+			IL_1ec2:
+			specialActions.IWantTo_Cinema = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[40] = true;
+			goto IL_1a32;
+			IL_1b29:
+			if ((object)base.Reader.LocalName == ႨႰ)
+			{
+				if (false)
+				{
+					goto IL_068c;
+				}
+				goto IL_134c;
+			}
+			goto IL_13fd;
+			IL_17ce:
+			array[10] = true;
+			goto IL_1a32;
+			IL_1ea5:
+			if (!array[4])
+			{
+				if (119 <= 119 - 105)
+				{
+					goto IL_0ba2;
+				}
+				if ((object)base.Reader.LocalName == ႠႨ)
+				{
+					if (392 > 392 - 50)
+					{
+						goto IL_1a05;
+					}
+					goto IL_1a32;
+				}
+			}
+			goto IL_0694;
+			IL_0dc1:
+			if (!array[39])
+			{
+				if (671 <= 671 - 177)
+				{
+					goto IL_02a5;
+				}
+				goto IL_0329;
+			}
+			goto IL_137d;
+			IL_1006:
+			array[34] = true;
+			goto IL_1a32;
+			IL_137d:
+			if (!array[40])
+			{
+				if (854 <= 854 - 213)
+				{
+					goto IL_1a32;
+				}
+				if ((object)base.Reader.LocalName == this.m_ႣႭ)
+				{
+					if (69 <= 69 - 17)
+					{
+						goto IL_12f4;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (false)
+						{
+							goto IL_1cf7;
+						}
+						goto IL_1ec2;
+					}
+				}
+			}
+			if (!array[41])
+			{
+				if (583 <= 583 - 376)
+				{
+					goto IL_1a32;
+				}
+				if ((object)base.Reader.LocalName == ႳႭ)
+				{
+					if ((218 + 218 * 218) % 2 == 0)
+					{
+						goto IL_0892;
+					}
+					goto IL_197d;
+				}
+			}
+			goto IL_01c3;
+			IL_11ea:
+			array[41] = true;
+			goto IL_1a32;
+			IL_0ff8:
+			specialActions.GamesAndMore = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_1006;
+			IL_1a05:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (false)
+				{
+					goto IL_02a5;
+				}
+				goto IL_035a;
+			}
+			goto IL_0694;
+			IL_1bab:
+			specialActions.Reminder_Save = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_1bb9;
+			IL_1bb9:
+			array[23] = true;
+			goto IL_1a32;
+			IL_1779:
+			if (!array[22])
+			{
+				if (410 <= 410 - 313)
+				{
+					goto IL_08ca;
+				}
+				if ((object)base.Reader.LocalName == Ⴅ)
+				{
+					if ((868 + 868 * 868) % 2 == 0)
+					{
+						goto IL_0ba2;
+					}
+					goto IL_1c7b;
+				}
+			}
+			goto IL_1f94;
+			IL_0b85:
+			specialActions.ActionInfo_Save = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[14] = true;
+			goto IL_1a32;
+			IL_0ba2:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (374 >= 374 - 85)
+				{
+					specialActions.Reminder_Step2 = ႣႨ(Ⴍ: false, Ⴓ: true);
+					array[22] = true;
+					goto IL_1a32;
+				}
+				goto IL_1bab;
+			}
+			goto IL_1f94;
+			IL_07e6:
+			if (!array[11])
+			{
+				if (false)
+				{
+					goto IL_1a05;
+				}
+				if ((object)base.Reader.LocalName == ႣႼ)
+				{
+					if (803 < 803 - 270)
+					{
+						goto IL_1a32;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (false)
+						{
+							goto IL_000a;
+						}
+						goto IL_04ba;
+					}
+				}
+			}
+			if (!array[12])
+			{
+				if (547 <= 547 - 255)
+				{
+					goto IL_0d06;
+				}
+				goto IL_1cf7;
+			}
+			goto IL_1d25;
+			IL_1f94:
+			if (!array[23])
+			{
+				if (false)
+				{
+					goto IL_0668;
+				}
+				if ((object)base.Reader.LocalName == this.m_ႨႼ)
+				{
+					if (false)
+					{
+						goto IL_1cf7;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (96 < 96 - 94)
+						{
+							goto IL_035a;
+						}
+						goto IL_1bab;
+					}
+				}
+			}
+			if (!array[24])
+			{
+				if (false)
+				{
+					goto IL_0e7e;
+				}
+				if ((object)base.Reader.LocalName == ႰႥ)
+				{
+					if (921 < 921 - 758)
+					{
+						goto IL_1a32;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (738 > 738 - 55)
+						{
+							specialActions.PushButton_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+							goto IL_0e6f;
+						}
+						goto IL_1c58;
+					}
+				}
+			}
+			if (array[25])
+			{
+				goto IL_14b0;
+			}
+			if (852 < 852 - 115)
+			{
+				goto IL_1f6d;
+			}
+			goto IL_0731;
+			IL_02a5:
+			if ((object)base.Reader.LocalName != ႰႭ)
+			{
+				goto IL_09a7;
+			}
+			if (78 < 78 - 30)
+			{
+				goto IL_07d7;
+			}
+			goto IL_15b4;
+			IL_197d:
+			specialActions.PhotosAndVideos = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_198b;
+			IL_0892:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_01c3;
+			}
+			if ((821 + 821 * 821) % 2 == 0)
+			{
+				goto IL_11dc;
+			}
+			goto IL_1a32;
+			IL_115e:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if ((455 + 455 * 455) % 2 == 0)
+				{
+					goto IL_0b85;
+				}
+				goto IL_0bfe;
+			}
+			goto IL_19c8;
+			IL_01c3:
+			if (array[42])
+			{
+				goto IL_09a7;
+			}
+			if ((119 + 119 * 119) % 2 == 0)
+			{
+				goto IL_02a5;
+			}
+			goto IL_1a32;
+			IL_0694:
+			if (!array[5])
+			{
+				if (false)
+				{
+					goto IL_0b85;
+				}
+				if ((object)base.Reader.LocalName == Ⴗ)
+				{
+					if (false)
+					{
+						goto IL_15b4;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if ((130 + 130 * 130) % 2 == 0)
+						{
+							specialActions.Personality_Action_Share = ႣႨ(Ⴍ: false, Ⴓ: true);
+							array[5] = true;
+							goto IL_1a32;
+						}
+						goto IL_049b;
+					}
+				}
+			}
+			if (array[6])
+			{
+				goto IL_0a72;
+			}
+			if (555 <= 555 - 203)
+			{
+				goto IL_08c8;
+			}
+			goto IL_0f3e;
+			IL_09a7:
+			if (!array[43])
+			{
+				if (862 < 862 - 507)
+				{
+					goto IL_191b;
+				}
+				if ((object)base.Reader.LocalName == Ⴜ)
+				{
+					if (462 > 462 - 99)
+					{
+						goto IL_002d;
+					}
+					goto IL_04ab;
+				}
+			}
+			goto IL_1f49;
+			IL_0fc8:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_041d;
+			}
+			if (false)
+			{
+				goto IL_0694;
+			}
+			goto IL_1961;
+			IL_134c:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_13fd;
+			}
+			if (997 <= 997 - 893)
+			{
+				goto IL_0c5d;
+			}
+			specialActions.Talk2Friends_IMIconClicked = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_1952;
+			IL_049b:
+			return null;
+			IL_002d:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (334 > 334 - 219)
+				{
+					goto IL_0c40;
+				}
+				goto IL_1a32;
+			}
+			goto IL_1f49;
+			IL_0a94:
+			if ((object)base.Reader.LocalName == ႷႭ)
+			{
+				if (437 >= 437 - 16)
+				{
+					goto IL_115e;
+				}
+				goto IL_1332;
+			}
+			goto IL_19c8;
+			IL_0e6f:
+			array[24] = true;
+			goto IL_1a32;
+			IL_15b4:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_09a7;
+			}
+			if (false)
+			{
+				goto IL_134c;
+			}
+			specialActions.AppsAndDownloads = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[42] = true;
+			goto IL_1a32;
+			IL_0c40:
+			specialActions.MyApps = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_0c4e;
+			IL_0731:
+			if ((object)base.Reader.LocalName != ႰႰ)
+			{
+				goto IL_14b0;
+			}
+			if ((30 + 30 * 30) % 2 == 0)
+			{
+				goto IL_075b;
+			}
+			goto IL_1dd6;
+			IL_191b:
+			array[32] = true;
+			goto IL_1a32;
+			IL_14b0:
+			if (array[26])
+			{
+				goto IL_0809;
+			}
+			if ((595 + 595 * 595) % 2 == 0)
+			{
+				goto IL_0082;
+			}
+			goto IL_1a32;
+			IL_1f49:
+			if (!array[44])
+			{
+				if (906 >= 906 - 722)
+				{
+					goto IL_08ca;
+				}
+				goto IL_0968;
+			}
+			goto IL_1dd6;
+			IL_0082:
+			if ((object)base.Reader.LocalName == ႨႥ)
+			{
+				if (24 <= 24 - 4)
+				{
+					goto IL_082d;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (402 >= 402 - 356)
+					{
+						specialActions.MoodWords_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+						goto IL_1133;
+					}
+					goto IL_11ea;
+				}
+			}
+			goto IL_0809;
+			IL_1961:
+			specialActions.ByeBye = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[2] = true;
+			goto IL_1a32;
+			IL_08ca:
+			if ((object)base.Reader.LocalName == ႣႤ)
+			{
+				if (588 < 588 - 122)
+				{
+					goto IL_049b;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (false)
+					{
+						goto IL_04ba;
+					}
+					specialActions.DownloadChitChats = ႣႨ(Ⴍ: false, Ⴓ: true);
+					goto IL_14e1;
+				}
+			}
+			goto IL_1dd6;
+			IL_0c5d:
+			specialActions.Reminder_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+			goto IL_0c6b;
+			IL_0f3e:
+			if ((object)base.Reader.LocalName == ႠႷ)
+			{
+				if (87 < 87 - 82)
+				{
+					goto IL_0797;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (513 < 513 - 89)
+					{
+						goto IL_17ce;
+					}
+					specialActions.Personality_Action_Web_Action_OK = ႣႨ(Ⴍ: false, Ⴓ: true);
+					array[6] = true;
+					goto IL_1a32;
+				}
+			}
+			goto IL_0a72;
+			IL_1133:
+			array[26] = true;
+			goto IL_1a32;
+			IL_0809:
+			if (!array[27])
+			{
+				if (489 < 489 - 443)
+				{
+					goto IL_1577;
+				}
+				if ((object)base.Reader.LocalName == ႨႷ)
+				{
+					if (963 >= 963 - 24)
+					{
+						goto IL_02d0;
+					}
+					goto IL_0bd0;
+				}
+			}
+			goto IL_00ca;
+			IL_0c6b:
+			array[21] = true;
+			goto IL_1a32;
+			IL_1d25:
+			if (!array[13])
+			{
+				if (false)
+				{
+					goto IL_09a7;
+				}
+				if ((object)base.Reader.LocalName == ႷႠ)
+				{
+					if (812 < 812 - 700)
+					{
+						goto IL_16e9;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (333 >= 333 - 15)
+						{
+							specialActions.ActionInfo_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+							array[13] = true;
+						}
+						goto IL_1a32;
+					}
+				}
+			}
+			if (!array[14])
+			{
+				if (11 >= 11 - 6)
+				{
+					goto IL_0a94;
+				}
+				goto IL_11dc;
+			}
+			goto IL_19c8;
+			IL_0968:
+			array[15] = true;
+			goto IL_1a32;
+			IL_02d0:
+			if ((object)base.Reader.NamespaceURI != Ⴃ)
+			{
+				goto IL_00ca;
+			}
+			if (659 > 659 - 101)
+			{
+				specialActions.UserProfile_Enter = ႣႨ(Ⴍ: false, Ⴓ: true);
+				goto IL_011b;
+			}
+			goto IL_16f7;
+			IL_1dd6:
+			if (!array[45])
+			{
+				if (598 <= 598 - 429)
+				{
+					goto IL_1acc;
+				}
+				if ((object)base.Reader.LocalName == ႨႤ)
+				{
+					if (497 <= 497 - 340)
+					{
+						goto IL_1952;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if ((838 + 838 * 838) % 2 == 0)
+						{
+							specialActions.ApplicationStore = ႣႨ(Ⴍ: false, Ⴓ: true);
+							goto IL_04ab;
+						}
+						goto IL_1a32;
+					}
+				}
+			}
+			if (!array[46])
+			{
+				if (640 <= 640 - 627)
+				{
+					goto IL_00ea;
+				}
+				if ((object)base.Reader.LocalName == ႰႳ)
+				{
+					if ((276 + 276 * 276) % 2 == 0)
+					{
+						goto IL_1b7d;
+					}
+					goto IL_1fe5;
+				}
+			}
+			goto IL_04d7;
+			IL_11bf:
+			specialActions.ImageSearch = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[39] = true;
+			goto IL_1a32;
+			IL_0bd0:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (1002 > 1002 - 315)
+				{
+					goto IL_0c5d;
+				}
+				goto IL_0d37;
+			}
+			goto IL_1779;
+			IL_0797:
+			return specialActions;
+			IL_00ca:
+			if (!array[28])
+			{
+				if (false)
+				{
+					goto IL_08c8;
+				}
+				if ((object)base.Reader.LocalName == ႷႥ)
+				{
+					if (false)
+					{
+						goto IL_0a94;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if ((932 + 932 * 932) % 2 == 0)
+						{
+							specialActions.ConflictingMoods = ႣႨ(Ⴍ: false, Ⴓ: true);
+							goto IL_07d7;
+						}
+						goto IL_1f6d;
+					}
+				}
+			}
+			if (array[29])
+			{
+				goto IL_00ea;
+			}
+			if (257 > 257 - 155)
+			{
+				goto IL_0d06;
+			}
+			goto IL_1bab;
+			IL_07d7:
+			array[28] = true;
+			goto IL_1a32;
+			IL_059c:
+			if ((object)base.Reader.LocalName != ႥႨ)
+			{
+				goto IL_1332;
+			}
+			if (766 < 766 - 303)
+			{
+				goto IL_0329;
+			}
+			goto IL_1a91;
+			IL_035a:
+			specialActions.Chatmates_NothingGoingOn = ႣႨ(Ⴍ: false, Ⴓ: true);
+			array[4] = true;
+			goto IL_1a32;
+			IL_04ab:
+			array[45] = true;
+			goto IL_1a32;
+			IL_1952:
+			array[16] = true;
+			goto IL_1a32;
+			IL_0329:
+			if ((object)base.Reader.LocalName == ႷႼ)
+			{
+				if (1022 > 1022 - 946)
+				{
+					goto IL_0e08;
+				}
+				goto IL_1288;
+			}
+			goto IL_137d;
+			IL_0a72:
+			if (array[7])
+			{
+				goto IL_1332;
+			}
+			if ((785 + 785 * 785) % 2 == 0)
+			{
+				goto IL_059c;
+			}
+			goto IL_1a32;
+			IL_0c4e:
+			array[43] = true;
+			goto IL_1a32;
+			IL_00ea:
+			if (!array[30])
+			{
+				if ((716 + 716 * 716) % 2 == 0)
+				{
+					goto IL_1538;
+				}
+				goto IL_1a32;
+			}
+			goto IL_1c58;
+			IL_0e08:
+			if ((object)base.Reader.NamespaceURI == Ⴃ)
+			{
+				if (61 < 61 - 36)
+				{
+					goto IL_0156;
+				}
+				goto IL_11bf;
+			}
+			goto IL_137d;
+			IL_1538:
+			if ((object)base.Reader.LocalName == this.m_ႳႨ)
+			{
+				if (344 < 344 - 289)
+				{
+					goto IL_002d;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (309 < 309 - 17)
+					{
+						goto IL_08c2;
+					}
+					specialActions.IWantToKnow = ႣႨ(Ⴍ: false, Ⴓ: true);
+					goto IL_0a07;
+				}
+			}
+			goto IL_1c58;
+			IL_1fe5:
+			obj = null;
+			goto IL_1593;
+			IL_04d7:
+			UnknownNode(specialActions, ႰႨႭ.Ⴀ.ႳႭႨ(137679853));
+			goto IL_1a32;
+			IL_1a32:
+			do
+			{
+				base.Reader.MoveToContent();
+				CheckReaderCount(ref whileIterations, ref readerCount);
+			}
+			while (387 <= 387 - 370);
+			goto IL_1f6d;
+			IL_1f6d:
+			if (base.Reader.NodeType == XmlNodeType.EndElement)
+			{
+				goto IL_08c2;
+			}
+			if (15 >= 15 - 14)
+			{
+				goto IL_12ac;
+			}
+			goto IL_15ef;
+			IL_1c58:
+			if (!array[31])
+			{
+				if (false)
+				{
+					goto IL_0f3e;
+				}
+				if ((object)base.Reader.LocalName == ႣႰ)
+				{
+					if (977 < 977 - 249)
+					{
+						goto IL_188f;
+					}
+					if ((object)base.Reader.NamespaceURI == Ⴃ)
+					{
+						if (545 < 545 - 532)
+						{
+							goto IL_08ca;
+						}
+						specialActions.IWantToKnowSingleWord = ႣႨ(Ⴍ: false, Ⴓ: true);
+						array[31] = true;
+						goto IL_1a32;
+					}
+				}
+			}
+			goto IL_0e7e;
+			IL_1cf7:
+			if ((object)base.Reader.LocalName == this.m_ႣႨ)
+			{
+				if (869 <= 869 - 456)
+				{
+					goto IL_0fc8;
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if ((1022 + 1022 * 1022) % 2 == 0)
+					{
+						specialActions.Action_Clone = ႣႨ(Ⴍ: false, Ⴓ: true);
+						array[12] = true;
+						goto IL_1a32;
+					}
+					goto IL_11bf;
+				}
+			}
+			goto IL_1d25;
+			IL_12ac:
+			if (base.Reader.NodeType != 0)
+			{
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if (false)
+					{
+						goto IL_17ce;
+					}
+					goto IL_1c3b;
+				}
+				UnknownNode(specialActions, ႰႨႭ.Ⴀ.ႳႭႨ(137679853));
+				if (952 < 952 - 393)
+				{
+					goto IL_04d7;
+				}
+				goto IL_1a32;
+			}
+			if (904 >= 904 - 694)
+			{
+				goto IL_08c2;
+			}
+			goto IL_0a07;
+			IL_0156:
+			array[37] = true;
+			goto IL_1a32;
+			IL_0a07:
+			array[30] = true;
+			goto IL_1a32;
+			IL_1332:
+			if (!array[8])
+			{
+				if (46 <= 46 - 13)
+				{
+				}
+				if ((object)base.Reader.LocalName == Ⴀ)
+				{
+					if ((984 + 984 * 984) % 2 == 0)
+					{
+						goto IL_022d;
+					}
+					goto IL_05e9;
+				}
+			}
+			goto IL_1311;
+			IL_16f7:
+			array[35] = true;
+			goto IL_1a32;
+			IL_0e7e:
+			if (array[32])
+			{
+				goto IL_0bfe;
+			}
+			if (false)
+			{
+				goto IL_15b4;
+			}
+			goto IL_163e;
+			IL_1c3b:
+			if (array[0])
+			{
+				goto IL_0de5;
+			}
+			if (50 <= 50 - 26)
+			{
+				goto IL_0bfe;
+			}
+			goto IL_1fb7;
+			IL_163e:
+			if ((object)base.Reader.LocalName == this.m_ႳႠ)
+			{
+				if (false)
+				{
+				}
+				if ((object)base.Reader.NamespaceURI == Ⴃ)
+				{
+					if (211 < 211 - 58)
+					{
+						goto IL_049b;
+					}
+					specialActions.IKnow = ႣႨ(Ⴍ: false, Ⴓ: true);
+					goto IL_191b;
+				}
+			}
+			goto IL_0bfe;
+		}
+
+		protected override void InitCallbacks()
+		{
+		}
+
+		protected override void InitIDs()
+		{
+			Ⴍ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679753));
+			Ⴓ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679750));
+			Ⴈ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679831));
+			Ⴃ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679770));
+			Ⴗ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679779));
+			Ⴅ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679820));
+			Ⴐ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679857));
+			Ⴀ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679783));
+			Ⴄ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679781));
+			Ⴜ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679855));
+			ႳႭ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679850));
+			ႳႳ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679784));
+			this.m_ႳႨ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679864));
+			this.m_ႳႣ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679766));
+			ႳႷ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679868));
+			ႳႥ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679772));
+			this.m_ႳႰ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679816));
+			this.m_ႳႠ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679870));
+			this.m_ႳႤ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679858));
+			this.m_ႳႼ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679827));
+			this.m_ႨႭ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679802));
+			ႨႳ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679795));
+			ႨႨ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679763));
+			this.m_ႨႣ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679790));
+			ႨႷ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679867));
+			ႨႥ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679812));
+			ႨႰ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679825));
+			ႨႠ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679769));
+			ႨႤ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679852));
+			this.m_ႨႼ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679809));
+			this.m_ႣႭ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679851));
+			this.m_ႣႳ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679749));
+			this.m_ႣႨ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679832));
+			this.m_ႣႣ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679771));
+			ႣႷ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679791));
+			ႣႥ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679762));
+			ႣႰ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679871));
+			ႣႠ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679775));
+			ႣႤ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679854));
+			ႣႼ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679834));
+			ႷႭ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679837));
+			ႷႳ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679754));
+			ႷႨ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679773));
+			ႷႣ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679865));
+			ႷႷ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679755));
+			ႷႥ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679866));
+			ႷႰ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679765));
+			ႷႠ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679839));
+			ႷႤ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679804));
+			ႷႼ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679861));
+			ႥႭ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679859));
+			ႥႳ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679829));
+			ႥႨ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679776));
+			ႥႣ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679768));
+			ႥႷ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679767));
+			ႥႥ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679785));
+			ႥႰ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679862));
+			ႥႠ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679774));
+			ႥႤ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679863));
+			ႥႼ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679822));
+			ႰႭ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679848));
+			ႰႳ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679843));
+			ႰႨ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679760));
+			ႰႣ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679803));
+			ႰႷ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679805));
+			ႰႥ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679815));
+			ႰႰ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679813));
+			ႰႠ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679761));
+			ႰႤ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679794));
+			ႰႼ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679748));
+			ႠႭ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679819));
+			ႠႳ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679789));
+			ႠႨ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679788));
+			ႠႣ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679780));
+			ႠႷ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679778));
+			ႠႥ = base.Reader.NameTable.Add(ႰႨႭ.Ⴀ.ႳႭႨ(137679764));
+		}
+	}
+	public class XmlSerializationWriter1 : XmlSerializationWriter
+	{
+		public void Write19_SA(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 2 : 0);
+					break;
+				case 0:
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679771), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 2:
+					TopLevelElement();
+					ႳႥ(Ⴀ.ႳႭႨ(137679771), Ⴀ.ႳႭႨ(137679770), (SpecialActions)o, Ⴃ: true, Ⴗ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write20_SpecialActionActivationType(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_0038
+			WriteStartDocument();
+			if (o == null)
+			{
+				if (247 > 247 - 235)
+				{
+					WriteEmptyTag(Ⴀ.ႳႭႨ(137679769), Ⴀ.ႳႭႨ(137679770));
+					return;
+				}
+			}
+			WriteElementString(Ⴀ.ႳႭႨ(137679769), Ⴀ.ႳႭႨ(137679770), ႳႭႥ((SpecialActionActivationType)o));
+		}
+
+		public void Write21_SpecialActionSubmitter(object o)
+		{
+			int num = 2;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 1 : 0);
+					break;
+				case 1:
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679768), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 0:
+					TopLevelElement();
+					ႳႷ(Ⴀ.ႳႭႨ(137679768), Ⴀ.ႳႭႨ(137679770), (SpecialActionSubmitter)o, Ⴃ: true, Ⴗ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write22_ActionLookupMode(object o)
+		{
+			int num = 2;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 1 : 0);
+					break;
+				case 1:
+					WriteEmptyTag(Ⴀ.ႳႭႨ(137679775), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 0:
+					WriteElementString(Ⴀ.ႳႭႨ(137679775), Ⴀ.ႳႭႨ(137679770), ႳႭႷ((ActionLookupMode)o));
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write23_SpecialActionUtils(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 2 : 0);
+					break;
+				case 0:
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679774), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 2:
+					TopLevelElement();
+					ႳႣ(Ⴀ.ႳႭႨ(137679774), Ⴀ.ႳႭႨ(137679770), (SpecialActionUtils)o, Ⴃ: true, Ⴗ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write24_TrayMenuItemsList(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_0037
+			WriteStartDocument();
+			while (o == null)
+			{
+				if ((234 + 234 * 234) % 2 == 0)
+				{
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679773), Ⴀ.ႳႭႨ(137679770));
+					return;
+				}
+			}
+			TopLevelElement();
+			ႳႨ(Ⴀ.ႳႭႨ(137679773), Ⴀ.ႳႭႨ(137679770), (TrayMenuItemsList)o, Ⴃ: true, Ⴗ: false);
+		}
+
+		public void Write25_TrayMenuItem(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 2 : 0);
+					break;
+				case 0:
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679772), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 2:
+					TopLevelElement();
+					ႳႳ(Ⴀ.ႳႭႨ(137679772), Ⴀ.ႳႭႨ(137679770), (TrayMenuItem)o, Ⴃ: true, Ⴗ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write26_WebKitWindowBase(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 2 : 0);
+					break;
+				case 2:
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679763), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 0:
+					TopLevelElement();
+					ႳႭ(Ⴀ.ႳႭႨ(137679763), Ⴀ.ႳႭႨ(137679770), (WebKitWindowBase)o, Ⴐ: true, Ⴍ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write27_WebKitState(object o)
+		{
+			int num = 2;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 1 : 0);
+					break;
+				case 0:
+					WriteEmptyTag(Ⴀ.ႳႭႨ(137679762), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 1:
+					WriteElementString(Ⴀ.ႳႭႨ(137679762), Ⴀ.ႳႭႨ(137679770), ႳႭႨ((WebKitState)o));
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write28_BrowserCommand(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 2 : 0);
+					break;
+				case 0:
+					WriteEmptyTag(Ⴀ.ႳႭႨ(137679761), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 2:
+					WriteElementString(Ⴀ.ႳႭႨ(137679761), Ⴀ.ႳႭႨ(137679770), ႳႭႣ((BrowserCommand)o));
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write29_TrayGUIManager(object o)
+		{
+			int num = 2;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 1 : 0);
+					break;
+				case 1:
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679760), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 0:
+					TopLevelElement();
+					Ⴜ(Ⴀ.ႳႭႨ(137679760), Ⴀ.ႳႭႨ(137679770), (TrayGUIManager)o, Ⴓ: true, Ⴗ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write30_Resources(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 2 : 0);
+					break;
+				case 2:
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679767), Ⴀ.ႳႭႨ(137679770));
+					return;
+				case 0:
+					TopLevelElement();
+					Ⴄ(Ⴀ.ႳႭႨ(137679767), Ⴀ.ႳႭႨ(137679770), (Resources)o, Ⴓ: true, Ⴗ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write31_ControllerBase(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_0037
+			WriteStartDocument();
+			while (o == null)
+			{
+				if ((916 + 916 * 916) % 2 == 0)
+				{
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679766), Ⴀ.ႳႭႨ(137679770));
+					return;
+				}
+			}
+			TopLevelElement();
+			Ⴅ(Ⴀ.ႳႭႨ(137679766), Ⴀ.ႳႭႨ(137679770), (ControllerBase)o, Ⴓ: true, Ⴗ: false);
+		}
+
+		public void Write32_TrayRefresher(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_0038
+			WriteStartDocument();
+			if (o == null)
+			{
+				if (628 >= 628 - 367)
+				{
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679765), Ⴀ.ႳႭႨ(137679770));
+				}
+			}
+			else
+			{
+				TopLevelElement();
+				Ⴗ(Ⴀ.ႳႭႨ(137679765), Ⴀ.ႳႭႨ(137679770), (TrayRefresher)o, Ⴓ: true, Ⴗ: false);
+			}
+		}
+
+		public void Write33_DefaultTrayMenuItemBuilder(object o)
+		{
+			//Discarded unreachable code: IL_0002
+			WriteStartDocument();
+			if (o == null)
+			{
+				if ((915 + 915 * 915) % 2 == 0)
+				{
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679764), Ⴀ.ႳႭႨ(137679770));
+				}
+			}
+			else
+			{
+				TopLevelElement();
+				Ⴃ(Ⴀ.ႳႭႨ(137679764), Ⴀ.ႳႭႨ(137679770), (DefaultTrayMenuItemBuilder)o, Ⴓ: true, Ⴗ: false);
+			}
+		}
+
+		public void Write34_PageControllerBase(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_0038
+			WriteStartDocument();
+			if (o == null)
+			{
+				if (976 <= 976 - 645)
+				{
+				}
+				WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679755), Ⴀ.ႳႭႨ(137679770));
+			}
+			else
+			{
+				TopLevelElement();
+				Ⴈ(Ⴀ.ႳႭႨ(137679755), Ⴀ.ႳႭႨ(137679770), (PageControllerBase)o, Ⴓ: true, Ⴗ: false);
+			}
+		}
+
+		public void Write35_WebKitOnWindows(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_0038
+			WriteStartDocument();
+			if (o == null)
+			{
+				if (806 >= 806 - 674)
+				{
+					WriteNullTagLiteral(Ⴀ.ႳႭႨ(137679754), Ⴀ.ႳႭႨ(137679770));
+					return;
+				}
+			}
+			else
+			{
+				TopLevelElement();
+			}
+			Ⴍ(Ⴀ.ႳႭႨ(137679754), Ⴀ.ႳႭႨ(137679770), (WebKitOnWindows)o, Ⴓ: true, Ⴗ: false);
+		}
+
+		private void Ⴍ(string Ⴀ, string Ⴍ, WebKitOnWindows Ⴄ, bool Ⴓ, bool Ⴗ)
+		{
+			int num = 9;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((Ⴄ != null) ? 2 : 5);
+					continue;
+				case 5:
+					num = ((!Ⴓ) ? 1 : 3);
+					continue;
+				case 3:
+					WriteNullTagLiteral(Ⴀ, Ⴍ);
+					return;
+				case 2:
+					num = (Ⴗ ? 6 : 7);
+					continue;
+				case 7:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type == typeof(WebKitOnWindows)) ? 6 : 4);
+					continue;
+				}
+				case 4:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 6:
+					WriteStartElement(Ⴀ, Ⴍ, Ⴄ, writePrefixed: false, null);
+					num = (Ⴗ ? 8 : 0);
+					continue;
+				case 8:
+					WriteXsiType(Ⴀ.ႳႭႨ(137679754), Ⴀ.ႳႭႨ(137679770));
+					break;
+				case 0:
+					break;
+				}
+				break;
+			}
+			WriteElementString(Ⴀ.ႳႭႨ(137679753), Ⴀ.ႳႭႨ(137679770), ႳႭႨ(Ⴄ.CurrentWebKitState));
+			WriteEndElement(Ⴄ);
+		}
+
+		private string ႳႭႨ(WebKitState Ⴀ)
+		{
+			int num = 0;
+			string result = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					num = 7;
+					continue;
+				case 8:
+					result = Ⴀ.ႳႭႨ(137679752);
+					num = 5;
+					continue;
+				case 6:
+					result = Ⴀ.ႳႭႨ(137679759);
+					num = 5;
+					continue;
+				case 2:
+					result = Ⴀ.ႳႭႨ(137679758);
+					num = 5;
+					continue;
+				case 3:
+					result = Ⴀ.ႳႭႨ(137679757);
+					num = 5;
+					continue;
+				case 9:
+					result = Ⴀ.ႳႭႨ(137679756);
+					num = 5;
+					continue;
+				case 4:
+					result = Ⴀ.ႳႭႨ(137679747);
+					num = 5;
+					continue;
+				case 7:
+					throw CreateInvalidEnumValueException(((long)Ⴀ).ToString(CultureInfo.InvariantCulture), Ⴀ.ႳႭႨ(137679746));
+				case 5:
+					return result;
+				}
+				result = null;
+				int num2;
+				switch (Ⴀ)
+				{
+				default:
+					num2 = 1;
+					break;
+				case WebKitState.NotStartted:
+					num2 = 8;
+					break;
+				case WebKitState.RunningAltF4Hide:
+					num2 = 6;
+					break;
+				case WebKitState.RunningAltF4Close:
+					num2 = 2;
+					break;
+				case WebKitState.PreparingToShutDown:
+					num2 = 3;
+					break;
+				case WebKitState.ShuttingDown:
+					num2 = 9;
+					break;
+				case WebKitState.Shuttedown:
+					num2 = 4;
+					break;
+				}
+				num = num2;
+			}
+		}
+
+		private void Ⴈ(string Ⴀ, string Ⴍ, PageControllerBase Ⴄ, bool Ⴓ, bool Ⴗ)
+		{
+			//Discarded unreachable code: IL_001e, IL_0033, IL_0046, IL_0068, IL_007e
+			while (true)
+			{
+				if (Ⴄ == null)
+				{
+					if (762 < 762 - 309)
+					{
+						break;
+					}
+					if (!Ⴓ)
+					{
+						return;
+					}
+					if ((807 + 807 * 807) % 2 == 0)
+					{
+						WriteNullTagLiteral(Ⴀ, Ⴍ);
+						if (606 < 606 - 149)
+						{
+						}
+						return;
+					}
+				}
+				if (Ⴗ)
+				{
+					return;
+				}
+				if (false)
+				{
+					return;
+				}
+				Type type = Ⴄ.GetType();
+				if ((object)type != typeof(PageControllerBase))
+				{
+					break;
+				}
+				if (false)
+				{
+					continue;
+				}
+				return;
+			}
+			throw CreateUnknownTypeException(Ⴄ);
+		}
+
+		private void Ⴃ(string Ⴀ, string Ⴍ, DefaultTrayMenuItemBuilder Ⴄ, bool Ⴓ, bool Ⴗ)
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				case 4:
+					return;
+				default:
+					num = ((Ⴄ != null) ? 8 : 9);
+					continue;
+				case 9:
+					num = ((!Ⴓ) ? 4 : 5);
+					continue;
+				case 5:
+					WriteNullTagLiteral(Ⴀ, Ⴍ);
+					return;
+				case 8:
+					num = (Ⴗ ? 1 : 7);
+					continue;
+				case 7:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type == typeof(DefaultTrayMenuItemBuilder)) ? 1 : 0);
+					continue;
+				}
+				case 0:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 1:
+					WriteStartElement(Ⴀ, Ⴍ, Ⴄ, writePrefixed: false, null);
+					num = ((!Ⴗ) ? 6 : 3);
+					continue;
+				case 3:
+					WriteXsiType(Ⴀ.ႳႭႨ(137679764), Ⴀ.ႳႭႨ(137679770));
+					break;
+				case 6:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴄ);
+		}
+
+		private void Ⴗ(string Ⴀ, string Ⴍ, TrayRefresher Ⴄ, bool Ⴓ, bool Ⴗ)
+		{
+			//Discarded unreachable code: IL_0005, IL_002a, IL_0040, IL_0056, IL_007c, IL_009d, IL_00e6
+			if (Ⴄ == null)
+			{
+				if ((940 + 940 * 940) % 2 == 0)
+				{
+					if (!Ⴓ)
+					{
+						return;
+					}
+					if (456 > 456 - 233)
+					{
+						goto IL_0013;
+					}
+					goto IL_005f;
+				}
+			}
+			else
+			{
+				if (Ⴗ)
+				{
+					goto IL_007e;
+				}
+				if (233 < 233 - 142)
+				{
+					return;
+				}
+			}
+			goto IL_0058;
+			IL_007e:
+			while (true)
+			{
+				WriteStartElement(Ⴀ, Ⴍ, Ⴄ, writePrefixed: false, null);
+				while (true)
+				{
+					if (Ⴗ)
+					{
+						if (473 <= 473 - 60)
+						{
+							break;
+						}
+						WriteXsiType(Ⴀ.ႳႭႨ(137679765), Ⴀ.ႳႭႨ(137679770));
+						if (167 <= 167 - 10)
+						{
+							continue;
+						}
+					}
+					WriteEndElement(Ⴄ);
+					return;
+				}
+			}
+			IL_005f:
+			Type type = default(Type);
+			if ((object)type != typeof(TrayRefresher))
+			{
+				if (273 >= 273 - 130)
+				{
+					throw CreateUnknownTypeException(Ⴄ);
+				}
+				goto IL_0013;
+			}
+			goto IL_007e;
+			IL_0013:
+			WriteNullTagLiteral(Ⴀ, Ⴍ);
+			if ((781 + 781 * 781) % 2 == 0)
+			{
+				return;
+			}
+			goto IL_0058;
+			IL_0058:
+			type = Ⴄ.GetType();
+			goto IL_005f;
+		}
+
+		private void Ⴅ(string Ⴀ, string Ⴍ, ControllerBase Ⴄ, bool Ⴓ, bool Ⴗ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0025, IL_0051, IL_0076, IL_0097, IL_00b7, IL_00ec
+			do
+			{
+				IL_00a4:
+				if (Ⴄ == null)
+				{
+					if (277 > 277 - 121)
+					{
+						goto IL_002a;
+					}
+				}
+				if (!Ⴗ)
+				{
+					if (false)
+					{
+						goto IL_002a;
+					}
+					goto IL_0053;
+				}
+				goto IL_0078;
+				IL_0053:
+				while (true)
+				{
+					Type type = Ⴄ.GetType();
+					if ((object)type == typeof(ControllerBase))
+					{
+						break;
+					}
+					if (false)
+					{
+						continue;
+					}
+					throw CreateUnknownTypeException(Ⴄ);
+				}
+				goto IL_0078;
+				IL_002a:
+				if (!Ⴓ)
+				{
+					return;
+				}
+				continue;
+				IL_0078:
+				WriteStartElement(Ⴀ, Ⴍ, Ⴄ, writePrefixed: false, null);
+				if (Ⴗ)
+				{
+					if (822 < 822 - 67)
+					{
+						goto IL_00a4;
+					}
+					WriteXsiType(Ⴀ.ႳႭႨ(137679766), Ⴀ.ႳႭႨ(137679770));
+					if (748 < 748 - 243)
+					{
+						goto IL_0053;
+					}
+				}
+				WriteEndElement(Ⴄ);
+				return;
+			}
+			while (133 < 133 - 39);
+			WriteNullTagLiteral(Ⴀ, Ⴍ);
+			if (621 > 621 - 69)
+			{
+			}
+		}
+
+		private void Ⴄ(string Ⴀ, string Ⴍ, Resources Ⴄ, bool Ⴓ, bool Ⴗ)
+		{
+			int num = 5;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((Ⴄ == null) ? 1 : 2);
+					continue;
+				case 1:
+					num = (Ⴓ ? 7 : 0);
+					continue;
+				case 7:
+					WriteNullTagLiteral(Ⴀ, Ⴍ);
+					return;
+				case 2:
+					num = (Ⴗ ? 9 : 4);
+					continue;
+				case 4:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type == typeof(Resources)) ? 9 : 8);
+					continue;
+				}
+				case 8:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 9:
+					WriteStartElement(Ⴀ, Ⴍ, Ⴄ, writePrefixed: false, null);
+					num = ((!Ⴗ) ? 3 : 6);
+					continue;
+				case 6:
+					WriteXsiType(Ⴀ.ႳႭႨ(137679767), Ⴀ.ႳႭႨ(137679770));
+					break;
+				case 3:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴄ);
+		}
+
+		private void Ⴜ(string Ⴀ, string Ⴍ, TrayGUIManager Ⴄ, bool Ⴓ, bool Ⴗ)
+		{
+			//Discarded unreachable code: IL_0005, IL_002b, IL_0044, IL_005c, IL_0082, IL_00a5, IL_00c8, IL_00f6
+			while (true)
+			{
+				if (Ⴄ != null)
+				{
+					if (!Ⴗ)
+					{
+						if ((333 + 333 * 333) % 2 == 0)
+						{
+						}
+						goto IL_005e;
+					}
+					goto IL_0084;
+				}
+				if (983 < 983 - 161)
+				{
+					return;
+				}
+				goto IL_0030;
+				IL_00cd:
+				WriteXsiType(Ⴀ.ႳႭႨ(137679760), Ⴀ.ႳႭႨ(137679770));
+				if (93 >= 93 - 2)
+				{
+					goto IL_0008;
+				}
+				goto IL_005e;
+				IL_005e:
+				Type type = Ⴄ.GetType();
+				if ((object)type != typeof(TrayGUIManager))
+				{
+					if (609 >= 609 - 484)
+					{
+						break;
+					}
+					goto IL_0030;
+				}
+				goto IL_0084;
+				IL_0008:
+				WriteEndElement(Ⴄ);
+				return;
+				IL_0084:
+				WriteStartElement(Ⴀ, Ⴍ, Ⴄ, writePrefixed: false, null);
+				while (Ⴗ)
+				{
+					if (false)
+					{
+						continue;
+					}
+					goto IL_00cd;
+				}
+				goto IL_0008;
+				IL_0030:
+				if (!Ⴓ)
+				{
+					return;
+				}
+				if (787 > 787 - 346)
+				{
+					WriteNullTagLiteral(Ⴀ, Ⴍ);
+					if (590 > 590 - 167)
+					{
+						return;
+					}
+					continue;
+				}
+				goto IL_0008;
+			}
+			throw CreateUnknownTypeException(Ⴄ);
+		}
+
+		private string ႳႭႣ(BrowserCommand Ⴗ)
+		{
+			int num = 2;
+			string result = default(string);
+			BrowserCommand browserCommand = default(BrowserCommand);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					browserCommand = Ⴗ;
+					num = ((browserCommand == BrowserCommand.GoBack) ? 6 : 0);
+					break;
+				case 0:
+					num = ((browserCommand == BrowserCommand.GoForward) ? 3 : 5);
+					break;
+				case 5:
+					num = 4;
+					break;
+				case 6:
+					result = Ⴀ.ႳႭႨ(137679745);
+					num = 1;
+					break;
+				case 3:
+					result = Ⴀ.ႳႭႨ(137679744);
+					num = 1;
+					break;
+				case 4:
+					throw CreateInvalidEnumValueException(((long)Ⴗ).ToString(CultureInfo.InvariantCulture), Ⴀ.ႳႭႨ(137679751));
+				case 1:
+					return result;
+				}
+			}
+		}
+
+		private void ႳႭ(string Ⴓ, string Ⴅ, WebKitWindowBase Ⴀ, bool Ⴐ, bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_002d, IL_0046, IL_0069, IL_007f, IL_009d, IL_00b5
+			Type type = default(Type);
+			while (true)
+			{
+				if (Ⴀ != null)
+				{
+					if (Ⴍ)
+					{
+						return;
+					}
+					if (998 >= 998 - 569)
+					{
+						type = Ⴀ.GetType();
+					}
+					while ((object)type == typeof(WebKitWindowBase))
+					{
+						if (false)
+						{
+							continue;
+						}
+						return;
+					}
+					if ((object)type != typeof(WebKitOnWindows))
+					{
+						throw CreateUnknownTypeException(Ⴀ);
+					}
+					if (141 < 141 - 51)
+					{
+						return;
+					}
+					break;
+				}
+				if (403 <= 403 - 203)
+				{
+					continue;
+				}
+				if (Ⴐ)
+				{
+					if (494 < 494 - 201)
+					{
+						break;
+					}
+					WriteNullTagLiteral(Ⴓ, Ⴅ);
+					if (545 > 545 - 282)
+					{
+					}
+				}
+				return;
+			}
+			this.Ⴍ(Ⴓ, Ⴅ, (WebKitOnWindows)Ⴀ, Ⴐ, Ⴗ: true);
+		}
+
+		private void ႳႳ(string Ⴍ, string Ⴓ, TrayMenuItem Ⴈ, bool Ⴃ, bool Ⴗ)
+		{
+			int num = 6;
+			while (true)
+			{
+				switch (num)
+				{
+				case 3:
+					return;
+				default:
+					num = ((Ⴈ == null) ? 1 : 2);
+					continue;
+				case 1:
+					num = ((!Ⴃ) ? 3 : 0);
+					continue;
+				case 0:
+					WriteNullTagLiteral(Ⴍ, Ⴓ);
+					return;
+				case 2:
+					num = (Ⴗ ? 9 : 7);
+					continue;
+				case 7:
+				{
+					Type type = Ⴈ.GetType();
+					num = (((object)type == typeof(TrayMenuItem)) ? 9 : 5);
+					continue;
+				}
+				case 5:
+					throw CreateUnknownTypeException(Ⴈ);
+				case 9:
+					WriteStartElement(Ⴍ, Ⴓ, Ⴈ, writePrefixed: false, null);
+					num = ((!Ⴗ) ? 8 : 4);
+					continue;
+				case 4:
+					WriteXsiType(Ⴀ.ႳႭႨ(137679772), Ⴀ.ႳႭႨ(137679770));
+					break;
+				case 8:
+					break;
+				}
+				break;
+			}
+			WriteAttribute(Ⴀ.ႳႭႨ(137679750), Ⴀ.ႳႭႨ(137679770), XmlConvert.ToString(Ⴈ.ID));
+			WriteAttribute(Ⴀ.ႳႭႨ(137679749), Ⴀ.ႳႭႨ(137679770), Ⴈ.Name);
+			WriteAttribute(Ⴀ.ႳႭႨ(137679748), Ⴀ.ႳႭႨ(137679770), Ⴈ.AssemblyPath);
+			WriteAttribute(Ⴀ.ႳႭႨ(137679803), Ⴀ.ႳႭႨ(137679770), Ⴈ.ObjectName);
+			WriteEndElement(Ⴈ);
+		}
+
+		private void ႳႨ(string Ⴍ, string Ⴓ, TrayMenuItemsList Ⴈ, bool Ⴃ, bool Ⴗ)
+		{
+			int num = 11;
+			List<TrayMenuItem> trayMenuItems = default(List<TrayMenuItem>);
+			int num2 = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				case 12:
+					return;
+				default:
+					num = ((Ⴈ != null) ? 7 : 3);
+					continue;
+				case 3:
+					num = ((!Ⴃ) ? 12 : 5);
+					continue;
+				case 5:
+					WriteNullTagLiteral(Ⴍ, Ⴓ);
+					return;
+				case 7:
+					num = (Ⴗ ? 2 : 4);
+					continue;
+				case 4:
+				{
+					Type type = Ⴈ.GetType();
+					num = (((object)type == typeof(TrayMenuItemsList)) ? 2 : 9);
+					continue;
+				}
+				case 9:
+					throw CreateUnknownTypeException(Ⴈ);
+				case 2:
+					WriteStartElement(Ⴍ, Ⴓ, Ⴈ, writePrefixed: false, null);
+					num = ((!Ⴗ) ? 6 : 8);
+					continue;
+				case 8:
+					WriteXsiType(Ⴀ.ႳႭႨ(137679773), Ⴀ.ႳႭႨ(137679770));
+					goto case 6;
+				case 6:
+					trayMenuItems = Ⴈ.TrayMenuItems;
+					num = ((trayMenuItems != null) ? 14 : 0);
+					continue;
+				case 14:
+					WriteStartElement(Ⴀ.ႳႭႨ(137679802), Ⴀ.ႳႭႨ(137679770), null, writePrefixed: false);
+					num2 = 0;
+					num = 13;
+					continue;
+				case 1:
+					ႳႳ(Ⴀ.ႳႭႨ(137679772), Ⴀ.ႳႭႨ(137679770), trayMenuItems[num2], Ⴃ: true, Ⴗ: false);
+					num2++;
+					num = 13;
+					continue;
+				case 13:
+					num = ((num2 < ((ICollection)trayMenuItems).Count) ? 1 : 10);
+					continue;
+				case 10:
+					WriteEndElement();
+					break;
+				case 0:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴈ);
+		}
+
+		private void ႳႣ(string Ⴍ, string Ⴓ, SpecialActionUtils Ⴈ, bool Ⴃ, bool Ⴗ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0041, IL_0057, IL_007c, IL_009d, IL_00b7, IL_00e3
+			while (true)
+			{
+				if (Ⴈ != null)
+				{
+					if (!Ⴗ)
+					{
+						if (875 <= 875 - 863)
+						{
+							goto IL_0089;
+						}
+						Type type = Ⴈ.GetType();
+						if ((object)type != typeof(SpecialActionUtils))
+						{
+							if ((165 + 165 * 165) % 2 == 0)
+							{
+								break;
+							}
+							goto IL_0013;
+						}
+					}
+					goto IL_007e;
+				}
+				if (70 > 70 - 64)
+				{
+					if (!Ⴃ)
+					{
+						return;
+					}
+					if (592 >= 592 - 515)
+					{
+						goto IL_0013;
+					}
+					goto IL_00b9;
+				}
+				continue;
+				IL_00b9:
+				WriteXsiType(Ⴀ.ႳႭႨ(137679774), Ⴀ.ႳႭႨ(137679770));
+				if (659 >= 659 - 123)
+				{
+					goto IL_000b;
+				}
+				goto IL_007e;
+				IL_0013:
+				WriteNullTagLiteral(Ⴍ, Ⴓ);
+				if ((455 + 455 * 455) % 2 == 0)
+				{
+				}
+				return;
+				IL_007e:
+				WriteStartElement(Ⴍ, Ⴓ, Ⴈ, writePrefixed: false, null);
+				goto IL_0089;
+				IL_000b:
+				WriteEndElement(Ⴈ);
+				return;
+				IL_0089:
+				while (Ⴗ)
+				{
+					if (228 < 228 - 115)
+					{
+						continue;
+					}
+					goto IL_00b9;
+				}
+				goto IL_000b;
+			}
+			throw CreateUnknownTypeException(Ⴈ);
+		}
+
+		private string ႳႭႷ(ActionLookupMode Ⴍ)
+		{
+			//Discarded unreachable code: IL_0006, IL_0015, IL_0024, IL_0033, IL_0057
+			string text = null;
+			switch (Ⴍ)
+			{
+			case ActionLookupMode.DefaultPersonality:
+				return Ⴀ.ႳႭႨ(137679801);
+			case ActionLookupMode.ActivePersonality:
+				return Ⴀ.ႳႭႨ(137679800);
+			case ActionLookupMode.Both:
+				return Ⴀ.ႳႭႨ(137679807);
+			default:
+				if (false)
+				{
+					goto case ActionLookupMode.ActivePersonality;
+				}
+				throw CreateInvalidEnumValueException(((long)Ⴍ).ToString(CultureInfo.InvariantCulture), Ⴀ.ႳႭႨ(137679806));
+			}
+		}
+
+		private void ႳႷ(string Ⴍ, string Ⴓ, SpecialActionSubmitter Ⴈ, bool Ⴃ, bool Ⴗ)
+		{
+			//Discarded unreachable code: IL_0005, IL_00bf, IL_00f2, IL_0115, IL_0138, IL_015a, IL_018c
+			Type type = default(Type);
+			if (Ⴈ != null)
+			{
+				if (Ⴗ)
+				{
+					goto IL_0117;
+				}
+				if (977 > 977 - 712)
+				{
+					type = Ⴈ.GetType();
+					goto IL_00fb;
+				}
+			}
+			else if ((764 + 764 * 764) % 2 == 0)
+			{
+				if (!Ⴃ)
+				{
+					return;
+				}
+				if (253 > 253 - 187)
+				{
+					WriteNullTagLiteral(Ⴍ, Ⴓ);
+					if (353 >= 353 - 192)
+					{
+						return;
+					}
+				}
+				goto IL_00fb;
+			}
+			goto IL_015f;
+			IL_015f:
+			WriteXsiType(Ⴀ.ႳႭႨ(137679768), Ⴀ.ႳႭႨ(137679770));
+			if (787 > 787 - 585)
+			{
+				goto IL_0008;
+			}
+			goto IL_0117;
+			IL_0117:
+			WriteStartElement(Ⴍ, Ⴓ, Ⴈ, writePrefixed: false, null);
+			if (!Ⴗ)
+			{
+				goto IL_0008;
+			}
+			if ((960 + 960 * 960) % 2 == 0)
+			{
+			}
+			goto IL_015f;
+			IL_00fb:
+			if ((object)type != typeof(SpecialActionSubmitter))
+			{
+				if (366 >= 366 - 97)
+				{
+					throw CreateUnknownTypeException(Ⴈ);
+				}
+			}
+			goto IL_0117;
+			IL_0008:
+			WriteElementStringRaw(Ⴀ.ႳႭႨ(137679805), Ⴀ.ႳႭႨ(137679770), XmlSerializationWriter.FromDateTime(Ⴈ.LastReferenceDateTime));
+			WriteElementStringRaw(Ⴀ.ႳႭႨ(137679804), Ⴀ.ႳႭႨ(137679770), XmlConvert.ToString(Ⴈ.LastReferenceValue));
+			WriteElementStringRaw(Ⴀ.ႳႭႨ(137679795), Ⴀ.ႳႭႨ(137679770), XmlConvert.ToString(Ⴈ.FirstTimeDone));
+			WriteElementStringRaw(Ⴀ.ႳႭႨ(137679794), Ⴀ.ႳႭႨ(137679770), XmlConvert.ToString(Ⴈ.LastUsedIndex));
+			WriteEndElement(Ⴈ);
+		}
+
+		private string ႳႭႥ(SpecialActionActivationType Ⴍ)
+		{
+			int num = 10;
+			string result = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				case 6:
+					num = 4;
+					continue;
+				case 1:
+					result = Ⴀ.ႳႭႨ(137679793);
+					num = 5;
+					continue;
+				case 0:
+					result = Ⴀ.ႳႭႨ(137679792);
+					num = 5;
+					continue;
+				case 7:
+					result = Ⴀ.ႳႭႨ(137679799);
+					num = 5;
+					continue;
+				case 3:
+					result = Ⴀ.ႳႭႨ(137679798);
+					num = 5;
+					continue;
+				case 2:
+					result = Ⴀ.ႳႭႨ(137679797);
+					num = 5;
+					continue;
+				case 9:
+					result = Ⴀ.ႳႭႨ(137679796);
+					num = 5;
+					continue;
+				case 8:
+					result = Ⴀ.ႳႭႨ(137679787);
+					num = 5;
+					continue;
+				case 4:
+					throw CreateInvalidEnumValueException(((long)Ⴍ).ToString(CultureInfo.InvariantCulture), Ⴀ.ႳႭႨ(137679786));
+				case 5:
+					return result;
+				}
+				result = null;
+				int num2;
+				switch (Ⴍ)
+				{
+				default:
+					num2 = 6;
+					break;
+				case SpecialActionActivationType.Everytime:
+					num2 = 1;
+					break;
+				case SpecialActionActivationType.EverytimeMinInterval:
+					num2 = 0;
+					break;
+				case SpecialActionActivationType.Inactivity:
+					num2 = 7;
+					break;
+				case SpecialActionActivationType.EveryFewTimes:
+					num2 = 3;
+					break;
+				case SpecialActionActivationType.FirstTimeAndEveryFewTimes:
+					num2 = 2;
+					break;
+				case SpecialActionActivationType.InactivityDeminishing:
+					num2 = 9;
+					break;
+				case SpecialActionActivationType.InactivityOneTime:
+					num2 = 8;
+					break;
+				}
+				num = num2;
+			}
+		}
+
+		private void ႳႥ(string Ⴍ, string Ⴓ, SpecialActions Ⴈ, bool Ⴃ, bool Ⴗ)
+		{
+			int num = 7;
+			while (true)
+			{
+				switch (num)
+				{
+				case 8:
+					return;
+				default:
+					num = ((Ⴈ == null) ? 1 : 3);
+					continue;
+				case 1:
+					num = ((!Ⴃ) ? 8 : 2);
+					continue;
+				case 2:
+					WriteNullTagLiteral(Ⴍ, Ⴓ);
+					return;
+				case 3:
+					num = (Ⴗ ? 6 : 5);
+					continue;
+				case 5:
+				{
+					Type type = Ⴈ.GetType();
+					num = (((object)type == typeof(SpecialActions)) ? 6 : 0);
+					continue;
+				}
+				case 0:
+					throw CreateUnknownTypeException(Ⴈ);
+				case 6:
+					WriteStartElement(Ⴍ, Ⴓ, Ⴈ, writePrefixed: false, null);
+					num = ((!Ⴗ) ? 9 : 4);
+					continue;
+				case 4:
+					WriteXsiType(Ⴀ.ႳႭႨ(137679785), Ⴀ.ႳႭႨ(137679770));
+					break;
+				case 9:
+					break;
+				}
+				break;
+			}
+			ႳႷ(Ⴀ.ႳႭႨ(137679784), Ⴀ.ႳႭႨ(137679770), Ⴈ.Talk2Me_Hello_Full, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679791), Ⴀ.ႳႭႨ(137679770), Ⴈ.Talk2Me_NothingGoingOn, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679790), Ⴀ.ႳႭႨ(137679770), Ⴈ.ByeBye, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679789), Ⴀ.ႳႭႨ(137679770), Ⴈ.Chatmates_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679788), Ⴀ.ႳႭႨ(137679770), Ⴈ.Chatmates_NothingGoingOn, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679779), Ⴀ.ႳႭႨ(137679770), Ⴈ.Personality_Action_Share, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679778), Ⴀ.ႳႭႨ(137679770), Ⴈ.Personality_Action_Web_Action_OK, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679776), Ⴀ.ႳႭႨ(137679770), Ⴈ.Personality_Delete_Selected, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679783), Ⴀ.ႳႭႨ(137679770), Ⴈ.Personality_Delete_Done, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679781), Ⴀ.ႳႭႨ(137679770), Ⴈ.Personality_Action_DesignNew, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679780), Ⴀ.ႳႭႨ(137679770), Ⴈ.Action_Delete_Selected, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679834), Ⴀ.ႳႭႨ(137679770), Ⴈ.Action_Delete_Done, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679832), Ⴀ.ႳႭႨ(137679770), Ⴈ.Action_Clone, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679839), Ⴀ.ႳႭႨ(137679770), Ⴈ.ActionInfo_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679837), Ⴀ.ႳႭႨ(137679770), Ⴈ.ActionInfo_Save, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679827), Ⴀ.ႳႭႨ(137679770), Ⴈ.Talk2Friends_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679825), Ⴀ.ႳႭႨ(137679770), Ⴈ.Talk2Friends_IMIconClicked, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679831), Ⴀ.ႳႭႨ(137679770), Ⴈ.Mood_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679829), Ⴀ.ႳႭႨ(137679770), Ⴈ.Mood_Saved, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679819), Ⴀ.ႳႭႨ(137679770), Ⴈ.Apps_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679816), Ⴀ.ႳႭႨ(137679770), Ⴈ.RemindMe_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679822), Ⴀ.ႳႭႨ(137679770), Ⴈ.Reminder_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679820), Ⴀ.ႳႭႨ(137679770), Ⴈ.Reminder_Step2, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679809), Ⴀ.ႳႭႨ(137679770), Ⴈ.Reminder_Save, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679815), Ⴀ.ႳႭႨ(137679770), Ⴈ.PushButton_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679813), Ⴀ.ႳႭႨ(137679770), Ⴈ.PushButton_Save, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679812), Ⴀ.ႳႭႨ(137679770), Ⴈ.MoodWords_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679867), Ⴀ.ႳႭႨ(137679770), Ⴈ.UserProfile_Enter, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679866), Ⴀ.ႳႭႨ(137679770), Ⴈ.ConflictingMoods, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679865), Ⴀ.ႳႭႨ(137679770), Ⴈ.NoChitChats, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679864), Ⴀ.ႳႭႨ(137679770), Ⴈ.IWantToKnow, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679871), Ⴀ.ႳႭႨ(137679770), Ⴈ.IWantToKnowSingleWord, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679870), Ⴀ.ႳႭႨ(137679770), Ⴈ.IKnow, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679868), Ⴀ.ႳႭႨ(137679770), Ⴈ.Personalities, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679859), Ⴀ.ႳႭႨ(137679770), Ⴈ.GamesAndMore, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679858), Ⴀ.ႳႭႨ(137679770), Ⴈ.Games, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679857), Ⴀ.ႳႭႨ(137679770), Ⴈ.PhotosAndVideos, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679863), Ⴀ.ႳႭႨ(137679770), Ⴈ.Homework, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679862), Ⴀ.ႳႭႨ(137679770), Ⴈ.CoolWebSiteSearch, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679861), Ⴀ.ႳႭႨ(137679770), Ⴈ.ImageSearch, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679851), Ⴀ.ႳႭႨ(137679770), Ⴈ.IWantTo_Cinema, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679850), Ⴀ.ႳႭႨ(137679770), Ⴈ.IWantTo_Searching, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679848), Ⴀ.ႳႭႨ(137679770), Ⴈ.AppsAndDownloads, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679855), Ⴀ.ႳႭႨ(137679770), Ⴈ.MyApps, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679854), Ⴀ.ႳႭႨ(137679770), Ⴈ.DownloadChitChats, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679852), Ⴀ.ႳႭႨ(137679770), Ⴈ.ApplicationStore, Ⴃ: false, Ⴗ: false);
+			ႳႷ(Ⴀ.ႳႭႨ(137679843), Ⴀ.ႳႭႨ(137679770), Ⴈ.Options, Ⴃ: false, Ⴗ: false);
+			WriteEndElement(Ⴈ);
+		}
+
+		protected override void InitCallbacks()
+		{
+		}
+	}
+	public abstract class XmlSerializer1 : XmlSerializer
+	{
+		protected override XmlSerializationReader CreateReader()
+		{
+			return new XmlSerializationReader1();
+		}
+
+		protected override XmlSerializationWriter CreateWriter()
+		{
+			return new XmlSerializationWriter1();
+		}
+	}
+	public class XmlSerializerContract : XmlSerializerImplementation
+	{
+		private Hashtable Ⴍ;
+
+		private Hashtable Ⴓ;
+
+		private Hashtable Ⴈ;
+
+		public override XmlSerializationReader Reader => new XmlSerializationReader1();
+
+		public override XmlSerializationWriter Writer => new XmlSerializationWriter1();
+
+		public override Hashtable ReadMethods
+		{
+			get
+			{
+				int num = 0;
+				Hashtable hashtable = default(Hashtable);
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = ((Ⴍ == null) ? 1 : 2);
+						break;
+					case 1:
+						hashtable = new Hashtable();
+						hashtable[Ⴀ.ႳႭႨ(137679842)] = Ⴀ.ႳႭႨ(137679841);
+						hashtable[Ⴀ.ႳႭႨ(137679840)] = Ⴀ.ႳႭႨ(137679847);
+						hashtable[Ⴀ.ႳႭႨ(137679846)] = Ⴀ.ႳႭႨ(137679845);
+						hashtable[Ⴀ.ႳႭႨ(137679844)] = Ⴀ.ႳႭႨ(137679643);
+						hashtable[Ⴀ.ႳႭႨ(137679642)] = Ⴀ.ႳႭႨ(137679641);
+						hashtable[Ⴀ.ႳႭႨ(137679640)] = Ⴀ.ႳႭႨ(137679647);
+						hashtable[Ⴀ.ႳႭႨ(137679646)] = Ⴀ.ႳႭႨ(137679645);
+						hashtable[Ⴀ.ႳႭႨ(137679644)] = Ⴀ.ႳႭႨ(137679635);
+						hashtable[Ⴀ.ႳႭႨ(137679634)] = Ⴀ.ႳႭႨ(137679633);
+						hashtable[Ⴀ.ႳႭႨ(137679632)] = Ⴀ.ႳႭႨ(137679639);
+						hashtable[Ⴀ.ႳႭႨ(137679638)] = Ⴀ.ႳႭႨ(137679637);
+						hashtable[Ⴀ.ႳႭႨ(137679636)] = Ⴀ.ႳႭႨ(137679627);
+						hashtable[Ⴀ.ႳႭႨ(137679626)] = Ⴀ.ႳႭႨ(137679625);
+						hashtable[Ⴀ.ႳႭႨ(137679624)] = Ⴀ.ႳႭႨ(137679631);
+						hashtable[Ⴀ.ႳႭႨ(137679630)] = Ⴀ.ႳႭႨ(137679629);
+						hashtable[Ⴀ.ႳႭႨ(137679628)] = Ⴀ.ႳႭႨ(137679619);
+						hashtable[Ⴀ.ႳႭႨ(137679618)] = Ⴀ.ႳႭႨ(137679617);
+						num = ((Ⴍ != null) ? 2 : 3);
+						break;
+					case 3:
+						Ⴍ = hashtable;
+						num = 2;
+						break;
+					case 2:
+						return Ⴍ;
+					}
+				}
+			}
+		}
+
+		public override Hashtable WriteMethods
+		{
+			get
+			{
+				int num = 2;
+				Hashtable hashtable = default(Hashtable);
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = ((Ⴓ == null) ? 1 : 0);
+						break;
+					case 1:
+						hashtable = new Hashtable();
+						hashtable[Ⴀ.ႳႭႨ(137679842)] = Ⴀ.ႳႭႨ(137679616);
+						hashtable[Ⴀ.ႳႭႨ(137679840)] = Ⴀ.ႳႭႨ(137679623);
+						hashtable[Ⴀ.ႳႭႨ(137679846)] = Ⴀ.ႳႭႨ(137679622);
+						hashtable[Ⴀ.ႳႭႨ(137679844)] = Ⴀ.ႳႭႨ(137679621);
+						hashtable[Ⴀ.ႳႭႨ(137679642)] = Ⴀ.ႳႭႨ(137679620);
+						hashtable[Ⴀ.ႳႭႨ(137679640)] = Ⴀ.ႳႭႨ(137679675);
+						hashtable[Ⴀ.ႳႭႨ(137679646)] = Ⴀ.ႳႭႨ(137679674);
+						hashtable[Ⴀ.ႳႭႨ(137679644)] = Ⴀ.ႳႭႨ(137679673);
+						hashtable[Ⴀ.ႳႭႨ(137679634)] = Ⴀ.ႳႭႨ(137679672);
+						hashtable[Ⴀ.ႳႭႨ(137679632)] = Ⴀ.ႳႭႨ(137679679);
+						hashtable[Ⴀ.ႳႭႨ(137679638)] = Ⴀ.ႳႭႨ(137679678);
+						hashtable[Ⴀ.ႳႭႨ(137679636)] = Ⴀ.ႳႭႨ(137679677);
+						hashtable[Ⴀ.ႳႭႨ(137679626)] = Ⴀ.ႳႭႨ(137679676);
+						hashtable[Ⴀ.ႳႭႨ(137679624)] = Ⴀ.ႳႭႨ(137679667);
+						hashtable[Ⴀ.ႳႭႨ(137679630)] = Ⴀ.ႳႭႨ(137679666);
+						hashtable[Ⴀ.ႳႭႨ(137679628)] = Ⴀ.ႳႭႨ(137679665);
+						hashtable[Ⴀ.ႳႭႨ(137679618)] = Ⴀ.ႳႭႨ(137679664);
+						num = ((Ⴓ == null) ? 3 : 0);
+						break;
+					case 3:
+						Ⴓ = hashtable;
+						num = 0;
+						break;
+					case 0:
+						return Ⴓ;
+					}
+				}
+			}
+		}
+
+		public override Hashtable TypedSerializers
+		{
+			get
+			{
+				int num = 3;
+				Hashtable hashtable = default(Hashtable);
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = ((Ⴈ == null) ? 2 : 0);
+						break;
+					case 2:
+						hashtable = new Hashtable();
+						hashtable.Add(Ⴀ.ႳႭႨ(137679626), new ControllerBaseSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679618), new WebKitOnWindowsSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679644), new WebKitWindowBaseSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679646), new TrayMenuItemSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679638), new TrayGUIManagerSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679628), new PageControllerBaseSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679636), new ResourcesSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679842), new SpecialActionsSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679640), new TrayMenuItemsListSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679840), new SpecialActionActivationTypeSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679844), new ActionLookupModeSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679624), new TrayRefresherSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679630), new DefaultTrayMenuItemBuilderSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679632), new BrowserCommandSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679634), new WebKitStateSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679846), new SpecialActionSubmitterSerializer());
+						hashtable.Add(Ⴀ.ႳႭႨ(137679642), new SpecialActionUtilsSerializer());
+						num = ((Ⴈ == null) ? 1 : 0);
+						break;
+					case 1:
+						Ⴈ = hashtable;
+						num = 0;
+						break;
+					case 0:
+						return Ⴈ;
+					}
+				}
+			}
+		}
+
+		public override bool CanSerialize(Type type)
+		{
+			//Discarded unreachable code: IL_0005, IL_002d, IL_0054, IL_0079, IL_00a5, IL_00cd, IL_00f7, IL_011c, IL_0143, IL_0178, IL_019a, IL_01c7, IL_01ef, IL_0219, IL_0243, IL_026f, IL_028b, IL_02bf
+			if ((object)type != typeof(SpecialActions))
+			{
+				while ((object)type != typeof(SpecialActionActivationType))
+				{
+					if ((object)type == typeof(SpecialActionSubmitter))
+					{
+						goto IL_0090;
+					}
+					if ((object)type != typeof(ActionLookupMode))
+					{
+						if ((object)type != typeof(SpecialActionUtils))
+						{
+							if ((object)type != typeof(TrayMenuItemsList))
+							{
+								while ((object)type != typeof(TrayMenuItem))
+								{
+									if ((object)type == typeof(WebKitWindowBase))
+									{
+										goto IL_0041;
+									}
+									if ((object)type == typeof(WebKitState))
+									{
+										goto IL_00b7;
+									}
+									if ((object)type == typeof(BrowserCommand))
+									{
+										if (659 <= 659 - 500)
+										{
+											continue;
+										}
+										return true;
+									}
+									goto IL_01cc;
+								}
+								goto IL_00e2;
+							}
+							goto IL_0162;
+						}
+						goto IL_018a;
+					}
+					if (531 < 531 - 497)
+					{
+						goto IL_0121;
+					}
+					goto IL_0248;
+					IL_01cc:
+					if ((object)type == typeof(TrayGUIManager))
+					{
+						if (923 >= 923 - 80)
+						{
+							goto IL_0121;
+						}
+					}
+					else
+					{
+						if ((object)type == typeof(Resources))
+						{
+							goto IL_02a9;
+						}
+						if ((object)type == typeof(ControllerBase))
+						{
+							goto IL_025a;
+						}
+					}
+					goto IL_00fc;
+					IL_0121:
+					return true;
+					IL_0041:
+					if (234 >= 234 - 99)
+					{
+						return true;
+					}
+					goto IL_00fc;
+					IL_00fc:
+					if ((object)type != typeof(TrayRefresher))
+					{
+						if ((object)type != typeof(DefaultTrayMenuItemBuilder))
+						{
+							goto IL_0059;
+						}
+						if (626 <= 626 - 515)
+						{
+							continue;
+						}
+						goto IL_019f;
+					}
+					if (105 <= 105 - 30)
+					{
+						goto IL_0248;
+					}
+					return true;
+				}
+				if (766 <= 766 - 442)
+				{
+					goto IL_0294;
+				}
+				goto IL_0296;
+			}
+			if (829 > 829 - 331)
+			{
+				goto IL_014a;
+			}
+			goto IL_0298;
+			IL_025a:
+			if ((512 + 512 * 512) % 2 == 0)
+			{
+				return true;
+			}
+			goto IL_007e;
+			IL_02a9:
+			if (519 >= 519 - 310)
+			{
+				goto IL_007e;
+			}
+			goto IL_014a;
+			IL_014a:
+			return true;
+			IL_0296:
+			return true;
+			IL_0090:
+			if (false)
+			{
+				goto IL_0274;
+			}
+			goto IL_0290;
+			IL_019f:
+			return true;
+			IL_00b7:
+			if (918 > 918 - 747)
+			{
+				goto IL_01f4;
+			}
+			goto IL_0296;
+			IL_0059:
+			if ((object)type == typeof(PageControllerBase))
+			{
+				if (80 <= 80 - 53)
+				{
+					goto IL_019f;
+				}
+				return true;
+			}
+			goto IL_0274;
+			IL_018a:
+			if (137 >= 137 - 77)
+			{
+				return true;
+			}
+			goto IL_007e;
+			IL_0248:
+			return true;
+			IL_01f4:
+			return true;
+			IL_0162:
+			if (501 <= 501 - 276)
+			{
+				goto IL_01f4;
+			}
+			goto IL_0298;
+			IL_0298:
+			return true;
+			IL_007e:
+			return true;
+			IL_00e2:
+			if (false)
+			{
+				goto IL_0290;
+			}
+			return true;
+			IL_0290:
+			return true;
+			IL_0274:
+			if ((object)type == typeof(WebKitOnWindows))
+			{
+				if (70 > 70 - 27)
+				{
+					return true;
+				}
+				goto IL_0248;
+			}
+			goto IL_0294;
+			IL_0294:
+			return false;
+		}
+
+		public override XmlSerializer GetSerializer(Type type)
+		{
+			//Discarded unreachable code: IL_0005, IL_002a, IL_0055, IL_0080, IL_00b0, IL_00d2, IL_00fa, IL_0122, IL_014a, IL_018d, IL_01af, IL_01ff, IL_022a, IL_0258, IL_0289, IL_02ad, IL_02f2
+			if ((object)type != typeof(SpecialActions))
+			{
+				if ((object)type != typeof(SpecialActionActivationType))
+				{
+					if ((object)type != typeof(SpecialActionSubmitter))
+					{
+						goto IL_0235;
+					}
+					if (false)
+					{
+						goto IL_000a;
+					}
+					goto IL_02b2;
+				}
+				if (false)
+				{
+					goto IL_02be;
+				}
+				return new SpecialActionActivationTypeSerializer();
+			}
+			if (594 < 594 - 91)
+			{
+				goto IL_00ff;
+			}
+			goto IL_0152;
+			IL_02be:
+			return null;
+			IL_000a:
+			if ((object)type == typeof(DefaultTrayMenuItemBuilder))
+			{
+				if (484 >= 484 - 35)
+				{
+					return new DefaultTrayMenuItemBuilderSerializer();
+				}
+				goto IL_01dc;
+			}
+			if ((object)type != typeof(PageControllerBase))
+			{
+				goto IL_028e;
+			}
+			if (253 > 253 - 226)
+			{
+				goto IL_015e;
+			}
+			goto IL_02b2;
+			IL_0032:
+			if ((object)type == typeof(WebKitWindowBase))
+			{
+				if (598 >= 598 - 133)
+				{
+					return new WebKitWindowBaseSerializer();
+				}
+				goto IL_0263;
+			}
+			if ((object)type == typeof(WebKitState))
+			{
+				if (59 >= 59 - 41)
+				{
+					return new WebKitStateSerializer();
+				}
+				goto IL_02c6;
+			}
+			if ((object)type != typeof(BrowserCommand))
+			{
+				goto IL_01dc;
+			}
+			if (53 > 53 - 38)
+			{
+				goto IL_0164;
+			}
+			goto IL_028e;
+			IL_0263:
+			if ((object)type != typeof(ControllerBase))
+			{
+				goto IL_00ff;
+			}
+			if (645 >= 645 - 392)
+			{
+				return new ControllerBaseSerializer();
+			}
+			goto IL_0164;
+			IL_025d:
+			return new ActionLookupModeSerializer();
+			IL_0085:
+			return new ResourcesSerializer();
+			IL_0235:
+			if ((object)type != typeof(ActionLookupMode))
+			{
+				if ((object)type != typeof(SpecialActionUtils))
+				{
+					if ((object)type != typeof(TrayMenuItemsList))
+					{
+						if ((object)type != typeof(TrayMenuItem))
+						{
+							goto IL_0032;
+						}
+						if (876 <= 876 - 29)
+						{
+							goto IL_02be;
+						}
+						return new TrayMenuItemSerializer();
+					}
+					if (984 < 984 - 65)
+					{
+						goto IL_0085;
+					}
+					goto IL_02c6;
+				}
+				if (850 > 850 - 659)
+				{
+					return new SpecialActionUtilsSerializer();
+				}
+				goto IL_015e;
+			}
+			if (935 < 935 - 763)
+			{
+				goto IL_0152;
+			}
+			goto IL_025d;
+			IL_02b2:
+			return new SpecialActionSubmitterSerializer();
+			IL_0152:
+			return new SpecialActionsSerializer();
+			IL_0164:
+			return new BrowserCommandSerializer();
+			IL_028e:
+			if ((object)type == typeof(WebKitOnWindows))
+			{
+				if ((824 + 824 * 824) % 2 == 0)
+				{
+					return new WebKitOnWindowsSerializer();
+				}
+				goto IL_0032;
+			}
+			goto IL_02be;
+			IL_01dc:
+			if ((object)type == typeof(TrayGUIManager))
+			{
+				if (619 > 619 - 308)
+				{
+					return new TrayGUIManagerSerializer();
+				}
+				goto IL_0235;
+			}
+			if ((object)type == typeof(Resources))
+			{
+				if (187 > 187 - 25)
+				{
+					goto IL_0085;
+				}
+				goto IL_025d;
+			}
+			goto IL_0263;
+			IL_00ff:
+			if ((object)type != typeof(TrayRefresher))
+			{
+				goto IL_000a;
+			}
+			if (313 >= 313 - 69)
+			{
+				return new TrayRefresherSerializer();
+			}
+			goto IL_02c6;
+			IL_015e:
+			return new PageControllerBaseSerializer();
+			IL_02c6:
+			return new TrayMenuItemsListSerializer();
+		}
+	}
+}
+namespace ႰႨႭ
+{
+	internal sealed class Ⴀ
+	{
+		private static readonly char[] Ⴍ;
+
+		private static readonly string[] Ⴍ;
+
+		internal static string ႳႭႨ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x834D39B;
+			string result;
+			if ((result = Ⴀ.Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "ञ\u0599";
+				break;
+			case 1:
+				obj = "";
+				break;
+			case 2:
+				obj = "న\u0df5न\u05bbսटס\u0cd4ఘ\u0df1त\u05b7պ\u093f\u05eeೡఒ\u0df3ब\u05acսऑף\u0cc1\u0c02\u0df5न";
+				break;
+			case 3:
+				obj = "\u0cc6ఋ\u0de0म\u05b1յऒ\u05cc\u0cf6ఏ෬ढ\u05b6Շऋׯ\u0cf8ఒ\u0df1ह\u05bdզ";
+				break;
+			case 4:
+				obj = "\u05cc\u0cf6ఏ෬ढ\u05b6\u0558ऑע\u0cfeఎ\u0df5\u0900\u05b7հछ";
+				break;
+			case 5:
+				obj = "भ\u05fd\u0cf0ఘ෬ब\u05b4Օझ\u05f9\u0cfcఔ෫घ\u05acսऒ\u05fe";
+				break;
+			case 6:
+				obj = "Հऌ\u05ec೬శ\u0de0ण\u05ad՝ऊר\u0cf8ఈ\u0dc9त\u05abՠ";
+				break;
+			case 7:
+				obj = "\u058cզट״\u0cd8ఞ෫स\u0591ՠछנ";
+				break;
+			case 8:
+				obj = "च\u05bdնवפೡబ෬ण\u05bcջउ\u05cf\u0cf4ఈ\u0de0";
+				break;
+			case 9:
+				obj = "\u0dd2न\u05ba՟ग\u05f9\u0cc6ఏ\u0de4ह\u05bd";
+				break;
+			case 10:
+				obj = "హ\u0df7ढ\u05afէछ\u05ff\u0cd6ఔ෨ठ\u05b9պच";
+				break;
+			case 11:
+				obj = "\u0cc1ఉ\u0de4ऴ\u059fՁष׀\u0cf4క\u0de4प\u05bdզ";
+				break;
+			case 12:
+				obj = "ן\u0cf0ఈ෪स\u05aaշछ\u05fe";
+				break;
+			case 13:
+				obj = "ऽע\u0cfbఏ\u0df7ढ\u05b4ոछ\u05ff\u0cd7చ\u0df6न";
+				break;
+			case 14:
+				obj = "Հऌ\u05ec೬\u0c29\u0de0फ\u05aaձऍץ\u0cf0ఉ";
+				break;
+			case 15:
+				obj = "\u059cձघ\u05ecೠగ\u0df1ङ\u05aaյइ׀\u0cf0క\u0df0ऄ\u05acձओ\u05cfೠఒ෩ऩ\u05bdզ";
+				break;
+			case 16:
+				obj = "झ\u05b9ճछ\u05ce\u0cfaక\u0df1\u093f\u05b7ոऒר೧హ\u0de4\u093e\u05bd";
+				break;
+			case 17:
+				obj = "\u0dd2न\u05ba՟ग\u05f9\u0cdaక\u0dd2त\u05b6հऑ\u05fa೦";
+				break;
+			case 18:
+				obj = "స\u0df0\u093f\u05aaձऐ\u05f9\u0cc2ఞ෧आ\u05b1ՠभ\u05f9\u0cf4ఏ\u0de0";
+				break;
+			case 19:
+				obj = "\u0cdbఔ\u0df1ञ\u05acյऌ\u05f9ೡఞ\u0de1";
+				break;
+			case 20:
+				obj = "ןೠక෫त\u05b6ճ\u093fסೡఽනअ\u05b1հछ";
+				break;
+			case 21:
+				obj = "ब\u05f8\u0cfbక෬ण\u05bfՕऒ\u05f9\u0cd3\u0c4fෆड\u05b7էछ";
+				break;
+			case 22:
+				obj = "Մऌר\u0ce5చ\u0df7त\u05b6ճपע\u0cc6ఓ\u0df0ह\u059cջउף";
+				break;
+			case 23:
+				obj = "\u058bռऋ\u05f9ೡఒ෫प\u059cջउף";
+				break;
+			case 24:
+				obj = "ञ\u05b0աऊ\u05f9\u0cf0ట෪\u093a\u05b6";
+				break;
+			case 25:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbb\u0c3c\u0dd0ऄ\u05f6՝ऐ\u05eb೧చ\u0df6ह\u05aaաझ\u05f9ೠఉ\u0de0\u0963֏ձज׆\u0cfcఏ\u0dd6ह\u05b9ՠछ";
+				break;
+			case 26:
+				obj = "\u0c3c෪ए\u05b9շक";
+				break;
+			case 27:
+				obj = "\u0cd2ఔසढ\u05aaգट\u05ffೱ";
+				break;
+			case 28:
+				obj = "ן\u0cfaక\u0de1ऴ\u05b7Ժऽץ\u0cf4ఏ෨ब\u05b6Ժहט\u0cdc\u0c55\u0dccण־զट\u05feೡఉ\u0df0म\u05acաऌר\u0cbbబ\u0de0य\u059aզऑ\u05fa೦ఞ\u0df7\u0963\u059aզऑ\u05fa೦ఞ\u0df7ऎ\u05b7չओ\u05ec\u0cfbట";
+				break;
+			case 29:
+				obj = "ष\u05c9";
+				break;
+			case 30:
+				obj = "՚टנ\u0cf0";
+				break;
+			case 31:
+				obj = "\u0599էऍר\u0cf8ఙ෩ऴֈյऊץ";
+				break;
+			case 32:
+				obj = "\u0902\u05baվछ\u05eeೡవ\u0de4ठ\u05bd";
+				break;
+			case 33:
+				obj = "\u0dd1\u093f\u05b9խळר\u0cfbఎ\u0dccह\u05bdչऍ";
+				break;
+			case 34:
+				obj = "\u0c3f\u0de0फ\u05b9աऒ\u05f9\u0cc5ఞ\u0df7\u093e\u05b7պटס\u0cfcఏ\u0dfc";
+				break;
+			case 35:
+				obj = "\u0cd4ఘ\u0df1त\u05aeձमר೧ఈ෪ण\u05b9ոग\u05f9೬";
+				break;
+			case 36:
+				obj = "\u05cf\u0cfaఏ෭";
+				break;
+			case 37:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Փफ\u05c4\u0cbbల෫फ\u05aaյऍ\u05f9೧ఎ෦ह\u05adզछ\u05a3\u0cd4ఘ\u0df1त\u05b7պलע\u0cfaఐ\u0df0ऽ\u0595ջचר";
+				break;
+			case 38:
+				obj = "\u0558ट\u05feೡ\u0c29\u0de0फ\u05bdզछף\u0cf6ఞශब\u05acձपפ\u0cf8ఞ";
+				break;
+			case 39:
+				obj = "\u0594յऍ\u05f9\u0cc7ఞ\u0de3न\u05aaձऐ\u05ee\u0cf0భ\u0de4ड\u05adձ";
+				break;
+			case 40:
+				obj = "ऋ\u05b1զऍ\u05f9\u0cc1ఒ෨न\u059cջऐר";
+				break;
+			case 41:
+				obj = "\u0dc9ब\u05abՠफ\u05fe\u0cf0ట\u0dccण\u05bcձआ";
+				break;
+			case 42:
+				obj = "\u0c3e\u0df3न\u05aaխऊפ\u0cf8ఞ";
+				break;
+			case 43:
+				obj = "\u0cd0\u0c0d\u0de0\u093f\u05a1ՠगנ\u0cf0శ෬ण\u0591պऊר೧\u0c0d\u0de4ड";
+				break;
+			case 44:
+				obj = "\u05c4\u0cfbచ෦ह\u05b1բग\u05f9೬";
+				break;
+			case 45:
+				obj = "\u093b\u05fb\u0cf0ఉ\u0dfcऋ\u05bdգपפ\u0cf8ఞ\u0df6";
+				break;
+			case 46:
+				obj = "Ւग\u05ff೦ఏ\u0dd1त\u05b5ձ\u093fףೱ\u0c3e\u0df3न\u05aaխसר\u0ce2య෬ठ\u05bdէ";
+				break;
+			case 47:
+				obj = "\u0591պट\u05eeೡఒ\u0df3त\u05acխ\u093aר\u0cf8ఒ෫त\u05abռगףೲ";
+				break;
+			case 48:
+				obj = "ऄ\u05b6յझ\u05f9\u0cfc\u0c0d෬ह\u05a1՛ऐר\u0cc1ఒ෨न";
+				break;
+			case 49:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbb\u0c3c\u0dd0ऄ\u05f6՝ऐ\u05eb೧చ\u0df6ह\u05aaաझ\u05f9ೠఉ\u0de0\u0963\u058bդछ\u05ee\u0cfcచ෩ऌ\u05bbՠगע\u0cfb\u0c3a෦ह\u05b1բट\u05f9\u0cfcఔ෫ङ\u05a1դछ";
+				break;
+			case 50:
+				obj = "న\u0df5न\u05bbսटס\u0cd4ఘ\u0df1त\u05b7պऍ";
+				break;
+			case 51:
+				obj = "\u0cc1చ෩दת\u0559छג\u0cddఞ෩ड\u05b7Ջस\u05f8\u0cf9గ";
+				break;
+			case 52:
+				obj = "י\u0cf4గ෮ॿ\u0595ձड׃\u0cfaఏ෭त\u05b6ճहע\u0cfcక\u0de2\u0902\u05b6";
+				break;
+			case 53:
+				obj = "\u093c״\u0cf0హ\u0dfcन";
+				break;
+			case 54:
+				obj = "\u0557ख\u05ecೡఖ\u0de4ह\u05bdէड\u05c8\u0cfbఏ\u0de0\u093f";
+				break;
+			case 55:
+				obj = "\u059bռट\u05f9\u0cf8చ\u0df1न\u05abՋरעೡఓ෬ण\u05bfՓऑפ\u0cfbజ\u0dcaण";
+				break;
+			case 56:
+				obj = "झ\u05bdզऍע\u0cfbచ෩त\u05acխड\u05cc\u0cf6ఏ෬ढ\u05b6Ջभץ\u0cf4ఉ\u0de0";
+				break;
+			case 57:
+				obj = "\u0dd5न\u05aaէऑף\u0cf4గ෬ह\u05a1Ջ\u093f\u05eeೡఒ෪णևՃछׯ\u0cca\u0c3a෦ह\u05b1ջऐג\u0cdaర";
+				break;
+			case 58:
+				obj = "\u0c41\u0dd6ऌ";
+				break;
+			case 59:
+				obj = "\u0cc5ఞ\u0df7\u093e\u05b7պटס\u0cfcఏ\u0dfcऒ\u059cձऒרೡఞ\u0ddaञ\u05bdոछ\u05eeೡఞ\u0de1";
+				break;
+			case 60:
+				obj = "ם\u0cf0ఉ\u0df6ढ\u05b6յऒפೡ\u0c02\u0ddaउ\u05bdոछ\u05f9\u0cf0తශढ\u05b6ձ";
+				break;
+			case 61:
+				obj = "\u0944מ\u0ce5ఞ෦त\u05b9ո\u093f\u05eeೡఒ෪ण\u0599շऊפ\u0ce3చ\u0df1त\u05b7պप״\u0ce5ఞ";
+				break;
+			case 62:
+				obj = "Մछ\u05ff೦ఔ෫ब\u05b4սऊ״\u0cca\u0c3a෦ह\u05b1ջऐג\u0cd1ఞ\u0df6त\u05bfպरר\u0ce2";
+				break;
+			case 63:
+				obj = "\u0599շऊפ\u0cfaక\u0ddaउ\u05bdոछ\u05f9\u0cf0త\u0dd6न\u05b4ձझ\u05f9\u0cf0ట";
+				break;
+			case 64:
+				obj = "ॷ\u058bդछ\u05ee\u0cfcచ෩ऌ\u05bbՠगע\u0cfbన\u0df0य\u05b5սऊ\u05f9\u0cf0ఉ";
+				break;
+			case 65:
+				obj = "හम\u05acսऑף\u0cca\u0c3f\u0de0ड\u05bdՠछג\u0cd1ఔ෫न";
+				break;
+			case 66:
+				obj = "\u0c41හम\u05acսऑף\u0cd9ఔ෪द\u05adդळעೱఞ";
+				break;
+			case 67:
+				obj = "\u0cd4ఘ\u0df1त\u05b7պड\u05ce\u0cf9ఔ෫न";
+				break;
+			case 68:
+				obj = "\u05cc\u0cf6ఏ෬ढ\u05b6՝ऐ\u05eb\u0cfaతවण\u05acձऌ";
+				break;
+			case 69:
+				obj = "\u0944מ\u0ce5ఞ෦त\u05b9ո\u093f\u05eeೡఒ෪ण֍ՠगס೦";
+				break;
+			case 70:
+				obj = "Օझ\u05f9\u0cfcఔ෫ऄ\u05b6ղऑג\u0cc6చ\u0df3न";
+				break;
+			case 71:
+				obj = "עՀऌ\u05ec೬శ\u0de0ण\u05ad՝ऊר\u0cf8ఈ\u0dc9त\u05abՠ";
+				break;
+			case 72:
+				obj = "ङ\u05b9ոक\u05bf\u0cd3ఉ෬न\u05b6հऍג\u0cd0క\u0df1न\u05aa";
+				break;
+			case 73:
+				obj = "\u0dbfङ\u05aaյइ׀\u0cf0క\u0df0ऄ\u05acձओ";
+				break;
+			case 74:
+				obj = "య\u0de4ड\u05b3Ԧस\u05ff\u0cfcఞ෫ऩ\u05abՋष׀\u0cdcఘ෪ण\u059bոग\u05ee\u0cfeఞ\u0de1";
+				break;
+			case 75:
+				obj = "ಯబ\u0de0य\u0593սऊך\u0cfcక\u0de1ढ\u05afՖट\u05fe\u0cf0";
+				break;
+			case 76:
+				obj = "׀\u0cfaఔ\u0de1ऒ\u059dպऊר೧";
+				break;
+			case 77:
+				obj = "\u0944ך\u0cf0ఙ\u0dceत\u05acՇऊ\u05ecೡఞ";
+				break;
+			case 78:
+				obj = "\u0559ऑעೱత\u0dd6ब\u05aeձच";
+				break;
+			case 79:
+				obj = "עՖऌע\u0ce2ఈ\u0de0\u093f\u059bջओנ\u0cf4క\u0de1";
+				break;
+			case 80:
+				obj = "ऌ\u05a8դऍג\u0cd0క\u0df1न\u05aa";
+				break;
+			case 81:
+				obj = "\u0dbfङ\u05aaյइ\u05ca\u0cc0ల\u0dc8ब\u05b6յङר೧";
+				break;
+			case 82:
+				obj = "\u0c41\u0dd7न\u05abջऋ\u05ff\u0cf6ఞ\u0df6";
+				break;
+			case 83:
+				obj = "\u0cc7ఞ෨त\u05b6հळר\u0cca\u0c3e෫ह\u05bdզ";
+				break;
+			case 84:
+				obj = "\u05b7\u0cd6ఔ෫ह\u05aaջऒס\u0cf0ఉ\u0dc7ब\u05abձ";
+				break;
+			case 85:
+				obj = "बר\u0cf8ఒ෫ऩ\u05bdզड\u05c8\u0cfbఏ\u0de0\u093f";
+				break;
+			case 86:
+				obj = "Ԯप\u05ff\u0cf4\u0c02\u0dd7न־զछ\u05fe\u0cfdఞ\u0df7";
+				break;
+			case 87:
+				obj = "֊ձओפ\u0cfbట\u0de0\u093fևՇऊר\u0ce5\u0c49";
+				break;
+			case 88:
+				obj = "ॷ\u059cձघ\u05ecೠగ\u0df1ङ\u05aaյइ׀\u0cf0క\u0df0ऄ\u05acձओ\u05cfೠఒ෩ऩ\u05bdզ";
+				break;
+			case 89:
+				obj = "\u0dbfझ\u05b9ճछ\u05ce\u0cfaక\u0df1\u093f\u05b7ոऒר೧హ\u0de4\u093e\u05bd";
+				break;
+			case 90:
+				obj = "\u0c29\u0de0ठ\u05b1պचר೧త\u0dd6ब\u05aeձ";
+				break;
+			case 91:
+				obj = "ಯబ\u0de0य\u0593սऊ\u05c2\u0cfbబ෬ण\u05bcջउ\u05fe";
+				break;
+			case 92:
+				obj = "םೠఈ෭ए\u05adՠऊע\u0cfbతවण\u05acձऌ";
+				break;
+			case 93:
+				obj = "\u0944\u05ceೠఉ\u0df7न\u05b6ՠऩר\u0cf7ర෬ह\u058bՠट\u05f9\u0cf0";
+				break;
+			case 94:
+				obj = "Մऋ\u05fe\u0cfdహ\u0df0ह\u05acջऐג\u0cc6చ\u0df3न";
+				break;
+			case 95:
+				obj = "\u0595ջऑש\u0cc2ఔ\u0df7ऩ\u05abՋ\u093bףೡఞ\u0df7";
+				break;
+			case 96:
+				obj = "घ\u05abձऌם೧ఔ\u0de3त\u05b4ձड\u05c8\u0cfbఏ\u0de0\u093f";
+				break;
+			case 97:
+				obj = "ෆढ\u05b6ղऒפ\u0cf6ఏ෬ण\u05bf\u0559ऑעೱఈ";
+				break;
+			case 98:
+				obj = "వ෪ऎ\u05b0սऊ\u05ce\u0cfdచ\u0df1\u093e";
+				break;
+			case 99:
+				obj = "\u0cdcబ\u0de4ण\u05acՀऑ׆\u0cfbఔ\u0df2";
+				break;
+			case 100:
+				obj = "\u05c4\u0cc2చ෫ह\u058cջवף\u0cfaఌ\u0dd6त\u05b6ճऒר\u0cc2ఔ\u0df7ऩ";
+				break;
+			case 101:
+				obj = "ष׆\u0cfbఔ\u0df2";
+				break;
+			case 102:
+				obj = "ճऒע\u0cf7చ෩ॷעՆऑףೱ\u0c02෪\u0963\u059bռट\u05f9\u0cf8చ෫\u0963\u059fՁष\u05a3\u0cdcక\u0de3\u093f\u05b9էऊ\u05ffೠఘ\u0df1स\u05aaձॐם೧ఔ\u0df5न\u05aaՠगר೦\u0c55\u0dd7न\u05abջऋ\u05ff\u0cf6ఞ\u0df6";
+				break;
+			case 103:
+				obj = "ֈձऌ\u05fe\u0cfaక\u0de4ड\u05b1ՠगר೦";
+				break;
+			case 104:
+				obj = "ऊ\u05b9չछ\u05fe\u0cd4క\u0de1\u0900\u05b7զछ";
+				break;
+			case 105:
+				obj = "ෂब\u05b5ձऍ";
+				break;
+			case 106:
+				obj = "ఫ෭ढ\u05acջऍ\u05cc\u0cfbట\u0dd3त\u05bcձऑ\u05fe";
+				break;
+			case 107:
+				obj = "ಯలශॡ\u05f8Ԯर\u05ec\u0cf8ఞඩ७עՕऍ\u05fe\u0cf0ఖ෧ड\u05a1Մट\u05f9\u0cfd\u0c57ඥॷ\u0597նऔר\u0cf6ఏ\u0dcbब\u05b5ձ";
+				break;
+			case 108:
+				obj = "\u05c5\u0cfaఖ\u0de0\u093a\u05b7զक";
+				break;
+			case 109:
+				obj = "ऽע\u0cfaగ\u0dd2न\u05baՇग\u05f9\u0cf0న\u0de0ब\u05aaշख";
+				break;
+			case 110:
+				obj = "՝ओ\u05ecೲఞ\u0dd6न\u05b9զझץ";
+				break;
+			case 111:
+				obj = "עՀऌ\u05ec೬శ\u0de0ण\u05ad՝ऊר\u0cf8ఈ";
+				break;
+			case 112:
+				obj = "ऄ֏յऐ\u05f9\u0cc1ఔ\u0ddaऎ\u05b1պछנ\u0cf4";
+				break;
+			case 113:
+				obj = "\u0dccच\u05b9պऊי\u0cfaత\u0dd6न\u05b9զझץ\u0cfcక\u0de2";
+				break;
+			case 114:
+				obj = "\u0c41\u0dc9ब\u05abՠबר\u0cf3ఞ\u0df7न\u05b6շछ\u05c9\u0cf4ఏ\u0de0ङ\u05b1չछ\u05a1ವ\u0c41\u0dc9ब\u05abՠबר\u0cf3ఞ\u0df7न\u05b6շछכ\u0cf4గ\u0df0न״Դ\u0944\u05cb\u0cfcఉ\u0df6ह\u058cսओר\u0cd1ఔ෫न״Դ\u0944\u05c1\u0cf4ఈ\u0df1घ\u05abձच\u05c4\u0cfbట\u0de0व";
+				break;
+			case 115:
+				obj = "\u0cd4ఋ\u0df5\u093e\u0599պच\u05c9\u0cfaఌ෫ड\u05b7յच\u05fe";
+				break;
+			case 116:
+				obj = "׀೬\u0c3a\u0df5ऽ\u05ab";
+				break;
+			case 117:
+				obj = "\u093aע\u0ce2క෩ढ\u05b9հऽץ\u0cfcఏෆथ\u05b9ՠऍ";
+				break;
+			case 118:
+				obj = "Ԯप\u05ec\u0cf9ఐභ\u0900\u05bdՋशר\u0cf9గ෪ऒ\u059eաऒסಹ\u0c5b\u0dbfङ\u05b9ոक\u05bf\u0cd8ఞ\u0dda\u0903\u05b7ՠखפ\u0cfbజෂढ\u05b1պङ\u05c2\u0cfb\u0c57ඥॷ\u059aխछ\u05cf೬ఞඩ७ע\u0557ख\u05ecೡఖ\u0de4ह\u05bdէड\u05c8\u0cfbఏ\u0de0\u093f״Դ\u0944\u05ce\u0cfdచ\u0df1ठ\u05b9ՠछ\u05fe\u0ccaవ෪ह\u05b0սऐת\u0cd2ఔ෬ण\u05bf՛ऐ\u05a1ವ\u0c41\u0dd5न\u05aaէऑף\u0cf4గ෬ह\u05a1Ջ\u093f\u05eeೡఒ෪णևՇख\u05ec೧ఞඩ७עՄछ\u05ff೦ఔ෫ब\u05b4սऊ״\u0cca\u0c3a෦ह\u05b1ջऐג\u0cc2ఞ෧ऒ\u0599շऊפ\u0cfaక\u0dda\u0902\u0593Ըफ़\u05b7\u0cc5ఞ\u0df7\u093e\u05b7պटס\u0cfcఏ\u0dfcऒ\u059cձऒרೡఞ\u0ddaञ\u05bdոछ\u05eeೡఞ\u0de1ॡ\u05f8Ԯमר೧ఈ෪ण\u05b9ոग\u05f9೬తශन\u05b4ձऊר\u0cca\u0c3f෪ण\u05bdԸफ़\u05b7\u0cc5ఞ\u0df7\u093e\u05b7պटס\u0cfcఏ\u0dfcऒ\u0599շऊפ\u0cfaక\u0ddaउ\u05bdէगת\u0cfbవ\u0de0\u093a״Դ\u0944\u05cc\u0cf6ఏ෬ढ\u05b6Ջ\u093aר\u0cf9ఞ\u0df1नևՇछס\u0cf0ఘ\u0df1न\u05bcԸफ़\u05b7\u0cd4ఘ\u0df1त\u05b7պड\u05c9\u0cf0గ\u0de0ह\u05bdՋ\u093aע\u0cfbఞඩ७עՕझ\u05f9\u0cfcఔ෫ऒ\u059bոऑף\u0cf0\u0c57ඥॷ\u0599շऊפ\u0cfaక\u0dccण־ջड\u05c8\u0cfbఏ\u0de0\u093f״Դ\u0944\u05cc\u0cf6ఏ෬ढ\u05b6՝ऐ\u05eb\u0cfaత\u0dd6ब\u05aeձ\u0952\u05adಯయ\u0de4ड\u05b3Ԧस\u05ff\u0cfcఞ෫ऩ\u05abՋ\u093bףೡఞ\u0df7ॡ\u05f8Ԯप\u05ec\u0cf9ఐභऋ\u05aaսछףೱఈ\u0ddaऄ\u0595՝झע\u0cfbస෩त\u05bbտछשಹ\u0c5b\u0dbf\u0900\u05b7ջचג\u0cd0క\u0df1न\u05aaԸफ़\u05b7\u0cd8ఔ෪ऩևՇट\u05fb\u0cf0టඩ७עՕऎ\u05fd೦తවण\u05acձऌ\u05a1ವ\u0c41\u0dd7न\u05b5սऐש\u0cd8ఞ\u0ddaई\u05b6ՠछ\u05ffಹ\u0c5b\u0dbfट\u05bdչगףೱఞ\u0df7ऒ\u059dպऊר೧\u0c57ඥॷ֊ձओפ\u0cfbట\u0de0\u093fևՇऊר\u0ce5\u0c49ඩ७עՆछנ\u0cfcక\u0de1न\u05aaՋभ\u05ec\u0ce3ఞඩ७עՄऋ\u05fe\u0cfdహ\u0df0ह\u05acջऐג\u0cd0క\u0df1न\u05aaԸफ़\u05b7\u0cc5ఎ\u0df6थ\u059aաऊ\u05f9\u0cfaక\u0ddaञ\u05b9բछ\u05a1ವ\u0c41\u0dc8ढ\u05b7հऩע೧ట\u0df6ऒ\u059dպऊר೧\u0c57ඥॷ֍էछ\u05ff\u0cc5ఉ෪फ\u05b1ոछג\u0cd0క\u0df1न\u05aaԸफ़\u05b7\u0cd6ఔ෫फ\u05b4սझ\u05f9\u0cfcక\u0de2\u0900\u05b7ջच\u05feಹ\u0c5b\u0dbf\u0903\u05b7\u0557खפೡస෭ब\u05acէ\u0952\u05adಯల\u0dd2ब\u05b6ՠपעೞక෪\u093a״Դ\u0944\u05c4\u0cc2చ෫ह\u058cջवף\u0cfaఌ\u0dd6त\u05b6ճऒר\u0cc2ఔ\u0df7ऩ״Դ\u0944\u05c4ೞక෪\u093a״Դ\u0944ם\u0cf0ఉ\u0df6ढ\u05b6յऒפೡఒ\u0de0\u093e״Դ\u0944\u05ca\u0cf4ఖ\u0de0\u093e\u0599պच׀\u0cfaఉ\u0de0ॡ\u05f8Ԯह\u05ec\u0cf8ఞ\u0df6ॡ\u05f8Ԯमץ\u0cfaఏ෪\u093e\u0599պचכ\u0cfcట\u0de0ढ\u05abԸफ़\u05b7\u0cddఔ෨न\u05afջऌצಹ\u0c5b\u0dbfऎ\u05b7ջऒך\u0cf0ఙ\u0dd6त\u05acձभר\u0cf4ఉ෦थ״Դ\u0944\u05c4\u0cf8చ\u0de2न\u058bձट\u05ff\u0cf6ఓඩ७ע՝ऩ\u05ec\u0cfbఏ\u0dd1ढև\u0557गף\u0cf0ఖ\u0de4ॡ\u05f8Ԯषך\u0cf4క\u0df1ङ\u05b7Ջभר\u0cf4ఉ෦थ\u05b1պङ\u05a1ವ\u0c41හऽ\u05a8է\u093fףೱ\u0c3f෪\u093a\u05b6ոऑ\u05ecೱఈඩ७ע\u0559इ\u05cc\u0ce5ఋ\u0df6ॡ\u05f8Ԯ\u093aע\u0ce2క෩ढ\u05b9հऽץ\u0cfcఏෆथ\u05b9ՠऍ\u05a1ವ\u0c41හऽ\u05a8ոग\u05ee\u0cf4ఏ෬ढ\u05b6Շऊע೧ఞඩ७ע՛ऎ\u05f9\u0cfcఔ෫\u093e";
+				break;
+			case 119:
+				obj = "\u0599դऎס\u0cfcఘ\u0de4ह\u05b1ջऐמೡఔ\u0df7न";
+				break;
+			case 120:
+				obj = "\u0902\u05a8ՠगע\u0cfbఈ";
+				break;
+			case 121:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbb\u0c3c\u0dd0ऄ\u05f6՝ऐ\u05eb೧చ\u0df6ह\u05aaաझ\u05f9ೠఉ\u0de0\u0963\u058bդछ\u05ee\u0cfcచ෩ऌ\u05bbՠगע\u0cfbఈ\u0dbfॷ\u058bՕ\u0944י೧ఎ\u0de0ॷ";
+				break;
+			case 122:
+				obj = "\u0c29\u0de0ब\u05bcԥ\u0947ג\u0cc6\u0c3a";
+				break;
+			case 123:
+				obj = "\u0cc7ఔ෫ऩ\u05a1ջॐ\u05ce\u0cfdచ\u0df1ठ\u05b9պॐ\u05ca\u0cc0లණऄ\u05b6ղऌ\u05ec೦ఏ\u0df7स\u05bbՠऋ\u05ff\u0cf0\u0c55\u0dd6ऽ\u05bdշग\u05ec\u0cf9\u0c3a෦ह\u05b1ջऐ\u05cc\u0cf6ఏ෬\u093b\u05b9ՠगע\u0cfbయ\u0dfcऽ\u05bdԮ\u0944";
+				break;
+			case 124:
+				obj = "ן\u0cf0చ\u0de1ॿרՋभ\u05fd\u0cf0ఘ෬ब\u05b4Օझ\u05f9\u0cfcఔ෫ऌ\u05bbՠग\u05fb\u0cf4ఏ෬ढ\u05b6Հइ\u05fd\u0cf0";
+				break;
+			case 125:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Փफ\u05c4\u0cbbల෫फ\u05aaյऍ\u05f9೧ఎ෦ह\u05adզछ\u05a3\u0cc6ఋ\u0de0म\u05b1յऒ\u05cc\u0cf6ఏ෬ढ\u05b6Շऋׯ\u0cf8ఒ\u0df1ह\u05bdզ\u0944\u05b7";
+				break;
+			case 126:
+				obj = "Նछ\u05ecೱ\u0c49පऒ\u058bդछ\u05ee\u0cfcచ෩ऌ\u05bbՠगע\u0cfbన\u0df0य\u05b5սऊ\u05f9\u0cf0ఉ";
+				break;
+			case 127:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණऊ֍՝ॐ\u05c4\u0cfbఝ\u0df7ब\u05abՠऌ\u05f8\u0cf6ఏ\u0df0\u093f\u05bdԺ\u093f\u05eeೡఒ෪ण\u0594ջऑצೠఋ\u0dc8ढ\u05bcձ\u0944\u05b7";
+				break;
+			case 128:
+				obj = "ट\u05bdյच\u05bfಧతහम\u05acսऑף\u0cd9ఔ෪द\u05adդळעೱఞ";
+				break;
+			case 129:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbb\u0c3c\u0dd0ऄ\u05f6՝ऐ\u05eb೧చ\u0df6ह\u05aaաझ\u05f9ೠఉ\u0de0\u0963\u058bդछ\u05ee\u0cfcచ෩ऌ\u05bbՠगע\u0cfbమ\u0df1त\u05b4է\u0944\u05b7";
+				break;
+			case 130:
+				obj = "\u0c29\u0de0ब\u05bcԦ\u094dג\u0cc6ఋ\u0de0म\u05b1յऒ\u05cc\u0cf6ఏ෬ढ\u05b6Ձऊפ\u0cf9ఈ";
+				break;
+			case 131:
+				obj = "\u0cc7ఔ෫ऩ\u05a1ջॐ\u05ce\u0cfdచ\u0df1ठ\u05b9պॐ\u05ca\u0cc0లණङ\u05aaյइ\u05a3\u0cd6ఔ෫फ\u05b1ճऋ\u05ff\u0cf4ఏ෬ढ\u05b6Ժप\u05ff\u0cf4\u0c02\u0dc8न\u05b6աष\u05f9\u0cf0ఖ\u0df6\u0901\u05b1էऊ\u05b7ಯయ\u0df7ब\u05a1\u0559छףೠల\u0df1न\u05b5էलפ೦ఏ\u0dbfङ\u05aaաछ\u05b7";
+				break;
+			case 132:
+				obj = "ן\u0cf0చ\u0de1ॿ\u05ecՋप\u05ff\u0cf4\u0c02\u0dc8न\u05b6աष\u05f9\u0cf0ఖ\u0df6\u0901\u05b1էऊ";
+				break;
+			case 133:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Փफ\u05c4\u0cbbయ\u0df7ब\u05a1Ժऽע\u0cfbఝ෬प\u05adզट\u05f9\u0cfcఔ෫\u0963\u058cզट״\u0cd8ఞ෫स\u0591ՠछנಯ\u0c41";
+				break;
+			case 134:
+				obj = "Նछ\u05ecೱ\u0c49ධऒ\u058cզट״\u0cd8ఞ෫स\u0591ՠछנ";
+				break;
+			case 135:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණऊ֍՝ॐ\u05c4\u0cfbఝ\u0df7ब\u05abՠऌ\u05f8\u0cf6ఏ\u0df0\u093f\u05bdԺऩר\u0cf7ర෬ह֏սऐש\u0cfaఌ\u0dc7ब\u05abձ\u0944\u05b7";
+				break;
+			case 136:
+				obj = "ट\u05bdյच\u05bfಣత\u0dd2न\u05ba՟ग\u05f9\u0cc2ఒ෫ऩ\u05b7գ\u093c\u05ec೦ఞ";
+				break;
+			case 137:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbb\u0c3c\u0dd0ऄ\u05f6՝ऐ\u05eb೧చ\u0df6ह\u05aaաझ\u05f9ೠఉ\u0de0\u0963֏ձज׆\u0cfcఏ\u0dd6ह\u05b9ՠछ\u05b7ಯ";
+				break;
+			case 138:
+				obj = "\u0c29\u0de0ब\u05bcԦ\u0949ג\u0cc2ఞ෧आ\u05b1ՠभ\u05f9\u0cf4ఏ\u0de0";
+				break;
+			case 139:
+				obj = "\u0cc7ఔ෫ऩ\u05a1ջॐ\u05ce\u0cfdచ\u0df1ठ\u05b9պॐ\u05ca\u0cc0లණऄ\u05b6ղऌ\u05ec೦ఏ\u0df7स\u05bbՠऋ\u05ff\u0cf0\u0c55\u0dd2न\u05baՖऌע\u0ce2ఈ\u0de0\u093f\u05f6Ֆऌע\u0ce2ఈ\u0de0\u093f\u059bջओנ\u0cf4క\u0de1ॷע";
+				break;
+			case 140:
+				obj = "ן\u0cf0చ\u0de1ॿנՋ\u093c\u05ff\u0cfaఌ\u0df6न\u05aa\u0557ऑנ\u0cf8చ෫ऩ";
+				break;
+			case 141:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Փफ\u05c4\u0cbbయ\u0df7ब\u05a1Ժप\u05ff\u0cf4\u0c02ෂघ\u0591\u0559टף\u0cf4జ\u0de0\u093fעԮ";
+				break;
+			case 142:
+				obj = "Նछ\u05ecೱ\u0c49\u0dbcऒ\u058cզट״\u0cd2మ\u0dcc\u0900\u05b9պटת\u0cf0ఉ";
+				break;
+			case 143:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණऊ֍՝ॐ\u05c4\u0cfbఝ\u0df7ब\u05abՠऌ\u05f8\u0cf6ఏ\u0df0\u093f\u05bdԺम\u05ff\u0cfaఋ\u0de0\u093f\u05acսछ\u05fe\u0cbb\u0c29\u0de0\u093e\u05b7աऌ\u05ee\u0cf0ఈ\u0dbfॷ";
+				break;
+			case 144:
+				obj = "ट\u05bdյच־ಥత\u0dd7न\u05abջऋ\u05ff\u0cf6ఞ\u0df6";
+				break;
+			case 145:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbb\u0c3c\u0dd0ऄ\u05f6՝ऐ\u05eb೧చ\u0df6ह\u05aaաझ\u05f9ೠఉ\u0de0\u0963\u059bջऐ\u05f9೧ఔ෩ड\u05bdզऍ\u05a3\u0cd6ఔ෫ह\u05aaջऒס\u0cf0ఉ\u0dc7ब\u05abձ\u0944\u05b7";
+				break;
+			case 146:
+				obj = "\u0c29\u0de0ब\u05bcԧ\u094fג\u0cd6ఔ෫ह\u05aaջऒס\u0cf0ఉ\u0dc7ब\u05abձ";
+				break;
+			case 147:
+				obj = "\u0cc7ఔ෫ऩ\u05a1ջॐ\u05ce\u0cfdచ\u0df1ठ\u05b9պॐ\u05ca\u0cc0లණङ\u05aaյइ\u05a3\u0cc1ఉ\u0de4ऴ֊ձघ\u05ff\u0cf0ఈ෭न\u05aaԮ\u0944";
+				break;
+			case 148:
+				obj = "ן\u0cf0చ\u0de1ॾתՋप\u05ff\u0cf4\u0c02\u0dd7न־զछ\u05fe\u0cfdఞ\u0df7";
+				break;
+			case 149:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Փफ\u05c4\u0cbbయ\u0df7ब\u05a1Ժळר\u0cfbఎ\u0dccह\u05bdչऍ\u05a3\u0cd1ఞ\u0de3ब\u05adոऊי೧చ\u0dfc\u0900\u05bdպऋ\u05c4ೡఞ෨ए\u05adսऒש\u0cf0ఉ\u0dbfॷ";
+				break;
+			case 150:
+				obj = "Նछ\u05ecೱ\u0c48බऒ\u059cձघ\u05ecೠగ\u0df1ङ\u05aaյइ׀\u0cf0క\u0df0ऄ\u05acձओ\u05cfೠఒ෩ऩ\u05bdզ";
+				break;
+			case 151:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණऊ֍՝ॐ\u05c4\u0cfbఝ\u0df7ब\u05abՠऌ\u05f8\u0cf6ఏ\u0df0\u093f\u05bdԺऽע\u0cfbఏ\u0df7ढ\u05b4ոछ\u05ff೦\u0c55\u0dd5ब\u05bfձऽע\u0cfbఏ\u0df7ढ\u05b4ոछ\u05ff\u0cd7చ\u0df6नעԮ";
+				break;
+			case 152:
+				obj = "ट\u05bdյच־ಡత\u0dd5ब\u05bfձऽע\u0cfbఏ\u0df7ढ\u05b4ոछ\u05ff\u0cd7చ\u0df6न";
+				break;
+			case 153:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbb\u0c3c\u0dd0ऄ\u05f6՝ऐ\u05eb೧చ\u0df6ह\u05aaաझ\u05f9ೠఉ\u0de0\u0963֏ձज׆\u0cfcఏ\u0dcaण֏սऐש\u0cfaఌ\u0df6ॷע";
+				break;
+			case 154:
+				obj = "\u0c29\u0de0ब\u05bcԧ\u094bג\u0cc2ఞ෧आ\u05b1ՠऱף\u0cc2ఒ෫ऩ\u05b7գऍ";
+				break;
+			case 155:
+				obj = "\u0cc2ఉ෬ह\u05bdԥ\u0947ג\u0cc6\u0c3a";
+				break;
+			case 156:
+				obj = "ך೧ఒ\u0df1नתԤडמ\u0ce5ఞ෦त\u05b9ո\u093f\u05eeೡఒ෪ण\u0599շऊפ\u0ce3చ\u0df1त\u05b7պप״\u0ce5ఞ";
+				break;
+			case 157:
+				obj = "ऩ\u05ff\u0cfcఏ\u0de0ॿשՋभ\u05fd\u0cf0ఘ෬ब\u05b4Օझ\u05f9\u0cfcఔ෫ञ\u05adնओפೡఏ\u0de0\u093f";
+				break;
+			case 158:
+				obj = "ՃऌפೡఞභॿևՕझ\u05f9\u0cfcఔ෫\u0901\u05b7ջक\u05f8\u0ce5శ෪ऩ\u05bd";
+				break;
+			case 159:
+				obj = "֏զग\u05f9\u0cf0\u0c49බऒ\u058bդछ\u05ee\u0cfcచ෩ऌ\u05bbՠगע\u0cfbమ\u0df1त\u05b4է";
+				break;
+			case 160:
+				obj = "च\u05aaսऊרಧ\u0c4f\u0ddaङ\u05aaյइ׀\u0cf0క\u0df0ऄ\u05acձओ\u05fe\u0cd9ఒ\u0df6ह";
+				break;
+			case 161:
+				obj = "\u0dd2\u093f\u05b1ՠछ\u05bfಠత\u0dd1\u093f\u05b9խळר\u0cfbఎ\u0dccह\u05bdչ";
+				break;
+			case 162:
+				obj = "బ\u0df7त\u05acձ\u094c\u05bb\u0ccaబ\u0de0य\u0593սऊך\u0cfcక\u0de1ढ\u05afՖट\u05fe\u0cf0";
+				break;
+			case 163:
+				obj = "\u0cc2ఉ෬ह\u05bdԦ\u0949ג\u0cc2ఞ෧आ\u05b1ՠभ\u05f9\u0cf4ఏ\u0de0";
+				break;
+			case 164:
+				obj = "ך೧ఒ\u0df1नתԬड\u05cf೧ఔ\u0df2\u093e\u05bdզऽע\u0cf8ఖ\u0de4ण\u05bc";
+				break;
+			case 165:
+				obj = "ऩ\u05ff\u0cfcఏ\u0de0ॿסՋप\u05ff\u0cf4\u0c02ෂघ\u0591\u0559टף\u0cf4జ\u0de0\u093f";
+				break;
+			case 166:
+				obj = "ՃऌפೡఞබॽևՆछ\u05fe\u0cfaఎ\u0df7म\u05bdէ";
+				break;
+			case 167:
+				obj = "֏զग\u05f9\u0cf0\u0c48පऒ\u059bջऐ\u05f9೧ఔ෩ड\u05bdզ\u093c\u05ec೦ఞ";
+				break;
+			case 168:
+				obj = "च\u05aaսऊרದ\u0c49\u0ddaङ\u05aaյइן\u0cf0ఝ\u0df7न\u05abռछ\u05ff";
+				break;
+			case 169:
+				obj = "\u0dd2\u093f\u05b1ՠछ־ದతශन־յऋסೡయ\u0df7ब\u05a1\u0559छףೠల\u0df1न\u05b5Ֆऋפ\u0cf9ట\u0de0\u093f";
+				break;
+			case 170:
+				obj = "బ\u0df7त\u05acձ\u094d\u05b9\u0ccaఫ\u0de4प\u05bd\u0557ऑףೡఉ෪ड\u05b4ձऌ\u05cf\u0cf4ఈ\u0de0";
+				break;
+			case 171:
+				obj = "\u0cc2ఉ෬ह\u05bdԧ\u094bג\u0cc2ఞ෧आ\u05b1ՠऱף\u0cc2ఒ෫ऩ\u05b7գऍ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)Ⴀ.Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			Ⴀ.Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴀ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴀ.Ⴍ = (string[])(object)array;
+			Ⴍ = new string[172];
+		}
+	}
+}

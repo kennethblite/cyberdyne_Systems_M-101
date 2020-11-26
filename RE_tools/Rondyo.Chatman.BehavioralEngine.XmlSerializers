@@ -1,0 +1,5553 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.BehavioralEngine.XmlSerializers.dll
+// Rondyo.Chatman.BehavioralEngine.XmlSerializers, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.BehavioralEngine.Configuration;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security;
+using System.Xml;
+using System.Xml.Serialization;
+using ႭႭ;
+using ႳႨ;
+using ႳႰ;
+using ႳႳ;
+
+[assembly: CompilationRelaxations(8)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AllowPartiallyTrustedCallers]
+[assembly: XmlSerializerVersion(Version = "2.0.0.0", ParentAssemblyId = "6a9101a1-0da4-4583-9e31-0395f84c0709,")]
+[assembly: SecurityTransparent]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Microsoft.Xml.Serialization.GeneratedAssembly
+{
+	public sealed class ActionProducerComponentSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394855), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write17_ActionProducerComponent(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read17_ActionProducerComponent();
+		}
+	}
+	public sealed class ActionProducerComponentsListSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394854), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write16_ActionProducerComponentsList(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read16_ActionProducerComponentsList();
+		}
+	}
+	public sealed class ActivityLoggerSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394857), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write27_ActivityLogger(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read27_ActivityLogger();
+		}
+	}
+	public sealed class ConstraintsFilterComponentSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394862), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write24_ConstraintsFilterComponent(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read24_ConstraintsFilterComponent();
+		}
+	}
+	public sealed class ConstraintsFilterComponentsListSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394861), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write23_Item(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read23_Item();
+		}
+	}
+	public sealed class ErrorReportingEngineSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394860), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write22_ErrorReportingEngine(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read22_ErrorReportingEngine();
+		}
+	}
+	public sealed class EventProcessorComponentSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394849), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write19_EventProcessorComponent(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read19_EventProcessorComponent();
+		}
+	}
+	public sealed class EventProcessorComponentsListSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394848), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write18_EventProcessorComponentsList(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read18_EventProcessorComponentsList();
+		}
+	}
+	public sealed class EventProcessorStateSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394852), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write15_EventProcessorState(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read15_EventProcessorState();
+		}
+	}
+	public sealed class NightMuteManagerSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394856), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write26_NightMuteManager(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read26_NightMuteManager();
+		}
+	}
+	public sealed class SupportedEventSourceSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394851), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write21_SupportedEventSource(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read21_SupportedEventSource();
+		}
+	}
+	public sealed class SupportedEventTypeSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394850), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write20_SupportedEventType(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read20_SupportedEventType();
+		}
+	}
+	public sealed class SystemAndUserStateSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.Ⴍ(1821394863), Ⴍ.Ⴍ(1821394853));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write25_SystemAndUserState(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read25_SystemAndUserState();
+		}
+	}
+	public class XmlSerializationReader1 : XmlSerializationReader
+	{
+		private string Ⴍ;
+
+		private string Ⴓ;
+
+		private string Ⴈ;
+
+		private string Ⴃ;
+
+		private string m_Ⴗ;
+
+		private string Ⴅ;
+
+		private string Ⴐ;
+
+		private string Ⴀ;
+
+		private string Ⴄ;
+
+		private string Ⴜ;
+
+		private string ႳႭ;
+
+		private string ႳႳ;
+
+		private string ႳႨ;
+
+		private string ႳႣ;
+
+		private string ႳႷ;
+
+		private string ႳႥ;
+
+		private string ႳႰ;
+
+		private string ႳႠ;
+
+		private string ႳႤ;
+
+		private string ႳႼ;
+
+		private string ႨႭ;
+
+		private string ႨႳ;
+
+		private string ႨႨ;
+
+		private string ႨႣ;
+
+		public object Read15_EventProcessorState()
+		{
+			//Discarded unreachable code: IL_0027, IL_0055, IL_0075, IL_009b, IL_00c0
+			object result = null;
+			base.Reader.MoveToContent();
+			if (base.Reader.NodeType == XmlNodeType.Element)
+			{
+				if (557 < 557 - 286 || (object)base.Reader.LocalName != ႨႳ)
+				{
+					goto IL_00a0;
+				}
+				if (false)
+				{
+					goto IL_0077;
+				}
+			}
+			else
+			{
+				UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394872));
+				if (142 > 142 - 50)
+				{
+					goto IL_0077;
+				}
+			}
+			if ((object)base.Reader.NamespaceURI == ႳႨ)
+			{
+				if ((722 + 722 * 722) % 2 == 0)
+				{
+					result = Ⴗ(base.Reader.ReadElementString());
+				}
+				goto IL_0077;
+			}
+			goto IL_00a0;
+			IL_0077:
+			return result;
+			IL_00a0:
+			throw CreateUnknownNodeException();
+		}
+
+		public object Read16_ActionProducerComponentsList()
+		{
+			//Discarded unreachable code: IL_0002, IL_004f, IL_006f, IL_0090, IL_00a4
+			object result = null;
+			base.Reader.MoveToContent();
+			if (base.Reader.NodeType == XmlNodeType.Element)
+			{
+				if (37 >= 37 - 30)
+				{
+				}
+				if ((object)base.Reader.LocalName == Ⴐ)
+				{
+					if (false)
+					{
+						goto IL_0051;
+					}
+					if ((object)base.Reader.NamespaceURI == ႳႨ)
+					{
+						if (33 > 33 - 16)
+						{
+						}
+						goto IL_0099;
+					}
+				}
+				throw CreateUnknownNodeException();
+			}
+			goto IL_0051;
+			IL_0099:
+			result = ႠႣ(Ⴀ: true, Ⴍ: true);
+			goto IL_0071;
+			IL_0071:
+			return result;
+			IL_0051:
+			UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394873));
+			if (850 >= 850 - 49)
+			{
+				goto IL_0071;
+			}
+			goto IL_0099;
+		}
+
+		public object Read17_ActionProducerComponent()
+		{
+			int num = 5;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType == XmlNodeType.Element) ? 1 : 3);
+					continue;
+				case 1:
+					num = (((object)base.Reader.LocalName != Ⴍ) ? 2 : 6);
+					continue;
+				case 6:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 2 : 4);
+					continue;
+				case 4:
+					result = ႠႭ(Ⴀ: true, Ⴍ: true);
+					num = 0;
+					continue;
+				case 2:
+					throw CreateUnknownNodeException();
+				case 3:
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394874));
+					break;
+				case 0:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read18_EventProcessorComponentsList()
+		{
+			//Discarded unreachable code: IL_0002, IL_0030, IL_0060, IL_0083, IL_00aa, IL_00be
+			while (true)
+			{
+				object result = null;
+				while (true)
+				{
+					base.Reader.MoveToContent();
+					if (base.Reader.NodeType == XmlNodeType.Element)
+					{
+						if (false)
+						{
+							break;
+						}
+						while (true)
+						{
+							if ((object)base.Reader.LocalName == ႳႼ)
+							{
+								if (709 < 709 - 343)
+								{
+									break;
+								}
+								if ((object)base.Reader.NamespaceURI == ႳႨ)
+								{
+									if (230 >= 230 - 121)
+									{
+										break;
+									}
+									continue;
+								}
+							}
+							throw CreateUnknownNodeException();
+						}
+						result = ႠႰ(Ⴀ: true, Ⴍ: true);
+					}
+					else
+					{
+						UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394875));
+						if (684 <= 684 - 310)
+						{
+							continue;
+						}
+					}
+					return result;
+				}
+			}
+		}
+
+		public object Read19_EventProcessorComponent()
+		{
+			int num = 4;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 1 : 5);
+					continue;
+				case 5:
+					num = (((object)base.Reader.LocalName == ႳႰ) ? 2 : 0);
+					continue;
+				case 2:
+					num = (((object)base.Reader.NamespaceURI == ႳႨ) ? 6 : 0);
+					continue;
+				case 6:
+					result = ႠႠ(Ⴀ: true, Ⴍ: true);
+					num = 3;
+					continue;
+				case 0:
+					throw CreateUnknownNodeException();
+				case 1:
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394820));
+					break;
+				case 3:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read20_SupportedEventType()
+		{
+			//Discarded unreachable code: IL_0002, IL_0027, IL_0057, IL_0077, IL_009b, IL_00af
+			object result = null;
+			base.Reader.MoveToContent();
+			if (base.Reader.NodeType == XmlNodeType.Element)
+			{
+				if (false)
+				{
+					goto IL_0079;
+				}
+				if ((object)base.Reader.LocalName == ႳႭ)
+				{
+					if (52 >= 52 - 46)
+					{
+					}
+					while ((object)base.Reader.NamespaceURI == ႳႨ)
+					{
+						if (367 <= 367 - 51)
+						{
+							continue;
+						}
+						goto IL_00a4;
+					}
+				}
+			}
+			else
+			{
+				UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394821));
+				if (166 > 166 - 89)
+				{
+					goto IL_0079;
+				}
+			}
+			throw CreateUnknownNodeException();
+			IL_0079:
+			return result;
+			IL_00a4:
+			result = ႠႥ(Ⴀ: true, Ⴍ: true);
+			goto IL_0079;
+		}
+
+		public object Read21_SupportedEventSource()
+		{
+			//Discarded unreachable code: IL_0002, IL_002a, IL_0055, IL_0078, IL_009c, IL_00b0
+			object result = null;
+			base.Reader.MoveToContent();
+			if (base.Reader.NodeType == XmlNodeType.Element)
+			{
+				if (73 > 73 - 22)
+				{
+					goto IL_0007;
+				}
+			}
+			else
+			{
+				UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394822));
+				if (931 < 931 - 425)
+				{
+					goto IL_0007;
+				}
+			}
+			goto IL_007a;
+			IL_007a:
+			return result;
+			IL_009e:
+			throw CreateUnknownNodeException();
+			IL_0007:
+			if ((object)base.Reader.LocalName == Ⴈ)
+			{
+				if (116 > 116 - 110)
+				{
+					if ((object)base.Reader.NamespaceURI != ႳႨ)
+					{
+						goto IL_009e;
+					}
+					if (400 > 400 - 105)
+					{
+						result = ႠႳ(Ⴀ: true, Ⴍ: true);
+					}
+				}
+				goto IL_007a;
+			}
+			goto IL_009e;
+		}
+
+		public object Read22_ErrorReportingEngine()
+		{
+			//Discarded unreachable code: IL_0002, IL_0030, IL_005d, IL_007d, IL_00a0, IL_00b4
+			while (true)
+			{
+				object result = null;
+				while (true)
+				{
+					base.Reader.MoveToContent();
+					if (base.Reader.NodeType == XmlNodeType.Element)
+					{
+						if (false)
+						{
+							continue;
+						}
+						if ((object)base.Reader.LocalName == ႳႷ)
+						{
+							if (883 > 883 - 572 && (object)base.Reader.NamespaceURI == ႳႨ)
+							{
+								if (false)
+								{
+									break;
+								}
+								result = ႥႼ(Ⴀ: true, Ⴍ: true);
+								goto IL_007f;
+							}
+						}
+						throw CreateUnknownNodeException();
+					}
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394823));
+					if (227 > 227 - 96)
+					{
+					}
+					goto IL_007f;
+					IL_007f:
+					return result;
+				}
+			}
+		}
+
+		public object Read23_Item()
+		{
+			//Discarded unreachable code: IL_0002, IL_002a, IL_0057, IL_007a, IL_00a0, IL_00b4
+			object result = null;
+			base.Reader.MoveToContent();
+			while (true)
+			{
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if ((1018 + 1018 * 1018) % 2 == 0)
+					{
+						while ((object)base.Reader.LocalName == this.m_Ⴗ)
+						{
+							if (916 <= 916 - 403)
+							{
+								continue;
+							}
+							goto IL_007e;
+						}
+						break;
+					}
+				}
+				UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394816));
+				if (287 >= 287 - 277)
+				{
+					goto IL_007c;
+				}
+				goto IL_007e;
+				IL_007e:
+				if ((object)base.Reader.NamespaceURI != ႳႨ)
+				{
+					break;
+				}
+				if (false)
+				{
+					continue;
+				}
+				result = ႥႨ(Ⴀ: true, Ⴍ: true);
+				goto IL_007c;
+				IL_007c:
+				return result;
+			}
+			throw CreateUnknownNodeException();
+		}
+
+		public object Read24_ConstraintsFilterComponent()
+		{
+			int num = 1;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType == XmlNodeType.Element) ? 2 : 0);
+					continue;
+				case 2:
+					num = (((object)base.Reader.LocalName != ႳႳ) ? 6 : 5);
+					continue;
+				case 5:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 6 : 3);
+					continue;
+				case 3:
+					result = ႥႣ(Ⴐ: true, Ⴓ: true);
+					num = 4;
+					continue;
+				case 6:
+					throw CreateUnknownNodeException();
+				case 0:
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394817));
+					break;
+				case 4:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read25_SystemAndUserState()
+		{
+			int num = 6;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 2 : 3);
+					continue;
+				case 3:
+					num = (((object)base.Reader.LocalName != Ⴀ) ? 1 : 0);
+					continue;
+				case 0:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 1 : 5);
+					continue;
+				case 5:
+					result = ႥႭ(Ⴐ: true, Ⴗ: true);
+					num = 4;
+					continue;
+				case 1:
+					throw CreateUnknownNodeException();
+				case 2:
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394818));
+					break;
+				case 4:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read26_NightMuteManager()
+		{
+			int num = 3;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 4 : 6);
+					continue;
+				case 6:
+					num = (((object)base.Reader.LocalName != ႨႨ) ? 5 : 2);
+					continue;
+				case 2:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 5 : 0);
+					continue;
+				case 0:
+					result = ႥႰ(Ⴐ: true, Ⴗ: true);
+					num = 1;
+					continue;
+				case 5:
+					throw CreateUnknownNodeException();
+				case 4:
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394819));
+					break;
+				case 1:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		public object Read27_ActivityLogger()
+		{
+			int num = 0;
+			object result = default(object);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					result = null;
+					base.Reader.MoveToContent();
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 4 : 3);
+					continue;
+				case 3:
+					num = (((object)base.Reader.LocalName != Ⴓ) ? 1 : 2);
+					continue;
+				case 2:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 1 : 5);
+					continue;
+				case 5:
+					result = ႥႳ(Ⴅ: true, Ⴃ: true);
+					num = 6;
+					continue;
+				case 1:
+					throw CreateUnknownNodeException();
+				case 4:
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394828));
+					break;
+				case 6:
+					break;
+				}
+				break;
+			}
+			return result;
+		}
+
+		private Ⴀ ႥႳ(bool Ⴅ, bool Ⴃ)
+		{
+			int num = 20;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			Ⴀ ⴀ = default(Ⴀ);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴃ ? 10 : 24);
+					break;
+				case 24:
+					obj = null;
+					goto IL_0085;
+				case 10:
+					obj = GetXsiType();
+					goto IL_0085;
+				case 12:
+					flag = ReadNull();
+					num = 3;
+					break;
+				case 3:
+					num = ((!Ⴃ) ? 7 : 11);
+					break;
+				case 11:
+					num = ((xmlQualifiedName == null) ? 7 : 19);
+					break;
+				case 19:
+					num = (((object)xmlQualifiedName.Name != Ⴓ) ? 22 : 17);
+					break;
+				case 17:
+					num = (((object)xmlQualifiedName.Namespace == ႳႨ) ? 7 : 22);
+					break;
+				case 22:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 7:
+					num = ((!flag) ? 15 : 8);
+					break;
+				case 8:
+					return null;
+				case 15:
+					ⴀ = new Ⴀ();
+					num = 0;
+					break;
+				case 16:
+					num = ((!IsXmlnsAttribute(base.Reader.Name)) ? 21 : 0);
+					break;
+				case 21:
+					UnknownNode(ⴀ);
+					goto case 0;
+				case 0:
+					num = (base.Reader.MoveToNextAttribute() ? 16 : 5);
+					break;
+				case 5:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 13 : 2);
+					break;
+				case 2:
+					base.Reader.Skip();
+					return ⴀ;
+				case 13:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 23;
+					break;
+				case 4:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 14 : 9);
+					break;
+				case 9:
+					UnknownNode(ⴀ, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					num = 18;
+					break;
+				case 14:
+					UnknownNode(ⴀ, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					goto case 18;
+				case 18:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 23;
+				case 23:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 1 : 6);
+					break;
+				case 6:
+					num = ((base.Reader.NodeType == XmlNodeType.None) ? 1 : 4);
+					break;
+				case 1:
+					{
+						ReadEndElement();
+						return ⴀ;
+					}
+					IL_0085:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴅ) ? 3 : 12);
+					break;
+				}
+			}
+		}
+
+		private Ⴈ ႥႰ(bool Ⴐ, bool Ⴗ)
+		{
+			//Discarded unreachable code: IL_0002, IL_000d, IL_0031, IL_004e, IL_007a, IL_00a2, IL_00ce, IL_00fe, IL_0121, IL_0151, IL_0174, IL_018b, IL_0198, IL_01b3, IL_01f6, IL_0219, IL_0234, IL_0256, IL_0281, IL_0299, IL_02b7, IL_02df, IL_02ef
+			if (!Ⴗ)
+			{
+				if ((241 + 241 * 241) % 2 == 0)
+				{
+					goto IL_0007;
+				}
+				goto IL_021b;
+			}
+			object obj = GetXsiType();
+			goto IL_019a;
+			IL_007f:
+			while (base.Reader.MoveToNextAttribute())
+			{
+				if (IsXmlnsAttribute(base.Reader.Name))
+				{
+					continue;
+				}
+				goto IL_01e0;
+			}
+			if (402 <= 402 - 351)
+			{
+				goto IL_02bc;
+			}
+			base.Reader.MoveToElement();
+			if (base.Reader.IsEmptyElement)
+			{
+				if (false)
+				{
+					goto IL_0158;
+				}
+				base.Reader.Skip();
+				goto IL_01c8;
+			}
+			goto IL_025b;
+			IL_01b5:
+			ReadEndElement();
+			Ⴈ ⴈ = default(Ⴈ);
+			return ⴈ;
+			IL_019a:
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = false;
+			if (!Ⴐ)
+			{
+				goto IL_0176;
+			}
+			if (395 >= 395 - 13)
+			{
+				goto IL_0239;
+			}
+			goto IL_02e4;
+			IL_02e4:
+			ⴈ = new Ⴈ();
+			goto IL_007f;
+			IL_0176:
+			while (Ⴗ)
+			{
+				if (31 > 31 - 8)
+				{
+					if (xmlQualifiedName == null)
+					{
+						break;
+					}
+					if (20 < 20 - 11)
+					{
+						goto IL_0239;
+					}
+					if ((object)xmlQualifiedName.Name != ႨႨ)
+					{
+						goto IL_01fb;
+					}
+					if (261 <= 261 - 152)
+					{
+						continue;
+					}
+				}
+				if ((object)xmlQualifiedName.Namespace == ႳႨ)
+				{
+					break;
+				}
+				if (560 < 560 - 410)
+				{
+					goto IL_0007;
+				}
+				goto IL_01fb;
+				IL_01fb:
+				throw CreateUnknownTypeException(xmlQualifiedName);
+			}
+			goto IL_021b;
+			IL_01c8:
+			return ⴈ;
+			IL_000f:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (127 >= 127 - 17)
+				{
+					goto IL_0158;
+				}
+			}
+			goto IL_01b5;
+			IL_0158:
+			if (base.Reader.NodeType == XmlNodeType.None)
+			{
+				if (59 > 59 - 8)
+				{
+					goto IL_01b5;
+				}
+				goto IL_021b;
+			}
+			goto IL_02bc;
+			IL_029e:
+			UnknownNode(ⴈ);
+			if (false)
+			{
+				goto IL_000f;
+			}
+			goto IL_007f;
+			IL_0272:
+			int whileIterations = 0;
+			int readerCount = base.ReaderCount;
+			goto IL_000f;
+			IL_025b:
+			base.Reader.ReadStartElement();
+			base.Reader.MoveToContent();
+			goto IL_0272;
+			IL_01e0:
+			if (861 <= 861 - 385)
+			{
+				goto IL_0272;
+			}
+			goto IL_029e;
+			IL_02bc:
+			if (base.Reader.NodeType != XmlNodeType.Element)
+			{
+				UnknownNode(ⴈ, ႭႭ.Ⴍ.Ⴍ(1821394853));
+				if (333 < 333 - 316)
+				{
+					goto IL_029e;
+				}
+			}
+			else
+			{
+				if (false)
+				{
+					goto IL_025b;
+				}
+				UnknownNode(ⴈ, ႭႭ.Ⴍ.Ⴍ(1821394853));
+			}
+			base.Reader.MoveToContent();
+			CheckReaderCount(ref whileIterations, ref readerCount);
+			if ((456 + 456 * 456) % 2 == 0)
+			{
+				goto IL_000f;
+			}
+			goto IL_01c8;
+			IL_0239:
+			flag = ReadNull();
+			if (954 <= 954 - 541)
+			{
+				goto IL_0007;
+			}
+			goto IL_0176;
+			IL_0007:
+			obj = null;
+			goto IL_019a;
+			IL_021b:
+			if (flag)
+			{
+				if (190 >= 190 - 123)
+				{
+					return null;
+				}
+				goto IL_0158;
+			}
+			goto IL_02e4;
+		}
+
+		private Ⴄ ႥႭ(bool Ⴐ, bool Ⴗ)
+		{
+			int num = 9;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			Ⴄ ⴄ = default(Ⴄ);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴗ ? 13 : 18);
+					break;
+				case 18:
+					obj = null;
+					goto IL_0085;
+				case 13:
+					obj = GetXsiType();
+					goto IL_0085;
+				case 22:
+					flag = ReadNull();
+					num = 20;
+					break;
+				case 20:
+					num = (Ⴗ ? 1 : 19);
+					break;
+				case 1:
+					num = ((xmlQualifiedName == null) ? 19 : 21);
+					break;
+				case 21:
+					num = (((object)xmlQualifiedName.Name != Ⴀ) ? 12 : 17);
+					break;
+				case 17:
+					num = (((object)xmlQualifiedName.Namespace == ႳႨ) ? 19 : 12);
+					break;
+				case 12:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 19:
+					num = ((!flag) ? 16 : 2);
+					break;
+				case 2:
+					return null;
+				case 16:
+					ⴄ = new Ⴄ();
+					num = 24;
+					break;
+				case 7:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 24 : 0);
+					break;
+				case 0:
+					UnknownNode(ⴄ);
+					goto case 24;
+				case 24:
+					num = (base.Reader.MoveToNextAttribute() ? 7 : 3);
+					break;
+				case 3:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 5 : 4);
+					break;
+				case 4:
+					base.Reader.Skip();
+					return ⴄ;
+				case 5:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 6;
+					break;
+				case 11:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 10 : 14);
+					break;
+				case 14:
+					UnknownNode(ⴄ, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					num = 8;
+					break;
+				case 10:
+					UnknownNode(ⴄ, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					goto case 8;
+				case 8:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 6;
+				case 6:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 15 : 23);
+					break;
+				case 23:
+					num = ((base.Reader.NodeType != 0) ? 11 : 15);
+					break;
+				case 15:
+					{
+						ReadEndElement();
+						return ⴄ;
+					}
+					IL_0085:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴐ) ? 20 : 22);
+					break;
+				}
+			}
+		}
+
+		private ConstraintsFilterComponent ႥႣ(bool Ⴐ, bool Ⴓ)
+		{
+			int num = 0;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			ConstraintsFilterComponent constraintsFilterComponent = default(ConstraintsFilterComponent);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴓ ? 39 : 20);
+					break;
+				case 20:
+					obj = null;
+					goto IL_00c7;
+				case 39:
+					obj = GetXsiType();
+					goto IL_00c7;
+				case 7:
+					flag = ReadNull();
+					num = 3;
+					break;
+				case 3:
+					num = ((!Ⴓ) ? 2 : 11);
+					break;
+				case 11:
+					num = ((xmlQualifiedName == null) ? 2 : 33);
+					break;
+				case 33:
+					num = (((object)xmlQualifiedName.Name != ႳႳ) ? 12 : 31);
+					break;
+				case 31:
+					num = (((object)xmlQualifiedName.Namespace == ႳႨ) ? 2 : 12);
+					break;
+				case 12:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 2:
+					num = ((!flag) ? 15 : 36);
+					break;
+				case 36:
+					return null;
+				case 15:
+					constraintsFilterComponent = new ConstraintsFilterComponent();
+					array = new bool[4];
+					num = 38;
+					break;
+				case 16:
+					num = (array[0] ? 40 : 27);
+					break;
+				case 27:
+					num = (((object)base.Reader.LocalName != ႳႤ) ? 40 : 4);
+					break;
+				case 4:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 40 : 32);
+					break;
+				case 32:
+					constraintsFilterComponent.ID = XmlConvert.ToInt32(base.Reader.Value);
+					array[0] = true;
+					num = 38;
+					break;
+				case 40:
+					num = (array[1] ? 14 : 29);
+					break;
+				case 29:
+					num = (((object)base.Reader.LocalName != ႳႠ) ? 14 : 6);
+					break;
+				case 6:
+					num = (((object)base.Reader.NamespaceURI == ႳႨ) ? 1 : 14);
+					break;
+				case 1:
+					constraintsFilterComponent.Name = base.Reader.Value;
+					array[1] = true;
+					num = 38;
+					break;
+				case 14:
+					num = (array[2] ? 19 : 34);
+					break;
+				case 34:
+					num = (((object)base.Reader.LocalName != ႳႣ) ? 19 : 21);
+					break;
+				case 21:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 19 : 8);
+					break;
+				case 8:
+					constraintsFilterComponent.AssemblyPath = base.Reader.Value;
+					array[2] = true;
+					num = 38;
+					break;
+				case 19:
+					num = (array[3] ? 30 : 26);
+					break;
+				case 26:
+					num = (((object)base.Reader.LocalName != Ⴜ) ? 30 : 18);
+					break;
+				case 18:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 30 : 17);
+					break;
+				case 17:
+					constraintsFilterComponent.ObjectName = base.Reader.Value;
+					array[3] = true;
+					num = 38;
+					break;
+				case 30:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 38 : 37);
+					break;
+				case 37:
+					UnknownNode(constraintsFilterComponent, ႭႭ.Ⴍ.Ⴍ(1821394829));
+					goto case 38;
+				case 38:
+					num = (base.Reader.MoveToNextAttribute() ? 16 : 24);
+					break;
+				case 24:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 9 : 22);
+					break;
+				case 22:
+					base.Reader.Skip();
+					return constraintsFilterComponent;
+				case 9:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 28;
+					break;
+				case 25:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 35 : 13);
+					break;
+				case 13:
+					UnknownNode(constraintsFilterComponent, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					num = 10;
+					break;
+				case 35:
+					UnknownNode(constraintsFilterComponent, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					goto case 10;
+				case 10:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 28;
+				case 28:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 5 : 23);
+					break;
+				case 23:
+					num = ((base.Reader.NodeType != 0) ? 25 : 5);
+					break;
+				case 5:
+					{
+						ReadEndElement();
+						return constraintsFilterComponent;
+					}
+					IL_00c7:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴐ) ? 3 : 7);
+					break;
+				}
+			}
+		}
+
+		private ConstraintsFilterComponentsList ႥႨ(bool Ⴀ, bool Ⴍ)
+		{
+			int num = 9;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			ConstraintsFilterComponentsList constraintsFilterComponentsList = default(ConstraintsFilterComponentsList);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			List<ConstraintsFilterComponent> constraintsFilterComponents = default(List<ConstraintsFilterComponent>);
+			int whileIterations2 = default(int);
+			int readerCount2 = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴍ ? 37 : 4);
+					break;
+				case 4:
+					obj = null;
+					goto IL_00df;
+				case 37:
+					obj = GetXsiType();
+					goto IL_00df;
+				case 22:
+					flag = ReadNull();
+					num = 29;
+					break;
+				case 29:
+					num = ((!Ⴍ) ? 11 : 17);
+					break;
+				case 17:
+					num = ((xmlQualifiedName == null) ? 11 : 27);
+					break;
+				case 27:
+					num = (((object)xmlQualifiedName.Name != this.m_Ⴗ) ? 21 : 38);
+					break;
+				case 38:
+					num = (((object)xmlQualifiedName.Namespace == ႳႨ) ? 11 : 21);
+					break;
+				case 21:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 11:
+					num = ((!flag) ? 5 : 20);
+					break;
+				case 20:
+					return null;
+				case 5:
+					constraintsFilterComponentsList = new ConstraintsFilterComponentsList();
+					num = ((constraintsFilterComponentsList.ConstraintsFilterComponents != null) ? 28 : 45);
+					break;
+				case 45:
+					constraintsFilterComponentsList.ConstraintsFilterComponents = new List<ConstraintsFilterComponent>();
+					goto case 28;
+				case 28:
+					_ = constraintsFilterComponentsList.ConstraintsFilterComponents;
+					num = 3;
+					break;
+				case 8:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 3 : 0);
+					break;
+				case 0:
+					UnknownNode(constraintsFilterComponentsList);
+					goto case 3;
+				case 3:
+					num = (base.Reader.MoveToNextAttribute() ? 8 : 39);
+					break;
+				case 39:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 43 : 19);
+					break;
+				case 19:
+					base.Reader.Skip();
+					return constraintsFilterComponentsList;
+				case 43:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 33;
+					break;
+				case 13:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 35 : 30);
+					break;
+				case 30:
+					num = (((object)base.Reader.LocalName != ႨႭ) ? 14 : 7);
+					break;
+				case 7:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 14 : 26);
+					break;
+				case 26:
+					num = (ReadNull() ? 1 : 44);
+					break;
+				case 44:
+					num = ((constraintsFilterComponentsList.ConstraintsFilterComponents != null) ? 31 : 41);
+					break;
+				case 41:
+					constraintsFilterComponentsList.ConstraintsFilterComponents = new List<ConstraintsFilterComponent>();
+					goto case 31;
+				case 31:
+					constraintsFilterComponents = constraintsFilterComponentsList.ConstraintsFilterComponents;
+					num = ((!base.Reader.IsEmptyElement) ? 12 : 32);
+					break;
+				case 32:
+					base.Reader.Skip();
+					num = 1;
+					break;
+				case 12:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations2 = 0;
+					readerCount2 = base.ReaderCount;
+					num = 36;
+					break;
+				case 46:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 42 : 6);
+					break;
+				case 6:
+					num = (((object)base.Reader.LocalName != ႳႳ) ? 40 : 2);
+					break;
+				case 2:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 40 : 18);
+					break;
+				case 18:
+					num = ((constraintsFilterComponents != null) ? 16 : 25);
+					break;
+				case 25:
+					base.Reader.Skip();
+					num = 15;
+					break;
+				case 16:
+					constraintsFilterComponents.Add(ႥႣ(Ⴐ: true, Ⴓ: true));
+					num = 15;
+					break;
+				case 40:
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394817));
+					num = 15;
+					break;
+				case 42:
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394817));
+					goto case 15;
+				case 15:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations2, ref readerCount2);
+					goto case 36;
+				case 36:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 10 : 23);
+					break;
+				case 23:
+					num = ((base.Reader.NodeType != 0) ? 46 : 10);
+					break;
+				case 10:
+					ReadEndElement();
+					num = 1;
+					break;
+				case 14:
+					UnknownNode(constraintsFilterComponentsList, ႭႭ.Ⴍ.Ⴍ(1821394830));
+					num = 1;
+					break;
+				case 35:
+					UnknownNode(constraintsFilterComponentsList, ႭႭ.Ⴍ.Ⴍ(1821394830));
+					goto case 1;
+				case 1:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 33;
+				case 33:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 34 : 24);
+					break;
+				case 24:
+					num = ((base.Reader.NodeType != 0) ? 13 : 34);
+					break;
+				case 34:
+					{
+						ReadEndElement();
+						return constraintsFilterComponentsList;
+					}
+					IL_00df:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴀ) ? 29 : 22);
+					break;
+				}
+			}
+		}
+
+		private Ⴅ ႥႼ(bool Ⴀ, bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_000d, IL_0039, IL_0054, IL_0080, IL_00a5, IL_00ff, IL_0128, IL_0158, IL_0182, IL_019d, IL_01aa, IL_01c8, IL_020b, IL_022e, IL_024e, IL_0267, IL_0292, IL_02aa, IL_02c9, IL_02ef, IL_02ff
+			object obj;
+			if (!Ⴍ)
+			{
+				if (463 < 463 - 79)
+				{
+					goto IL_026c;
+				}
+				obj = null;
+			}
+			else
+			{
+				obj = GetXsiType();
+			}
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = false;
+			if (Ⴀ)
+			{
+				if (217 < 217 - 147)
+				{
+					goto IL_0012;
+				}
+				flag = ReadNull();
+				if (483 <= 483 - 9)
+				{
+					goto IL_02ce;
+				}
+			}
+			if (Ⴍ)
+			{
+				if (482 < 482 - 473)
+				{
+					goto IL_0139;
+				}
+				if (!(xmlQualifiedName == null))
+				{
+					if (48 >= 48 - 47)
+					{
+						goto IL_0104;
+					}
+					goto IL_012d;
+				}
+			}
+			goto IL_0233;
+			IL_0012:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (false)
+				{
+					goto IL_012d;
+				}
+				goto IL_015f;
+			}
+			goto IL_01ca;
+			IL_012d:
+			base.Reader.MoveToContent();
+			goto IL_0139;
+			IL_0139:
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			CheckReaderCount(ref whileIterations, ref readerCount);
+			if ((324 + 324 * 324) % 2 == 0)
+			{
+				goto IL_0012;
+			}
+			goto IL_01d0;
+			IL_02ce:
+			Ⴅ ⴅ = default(Ⴅ);
+			if (base.Reader.NodeType != XmlNodeType.Element)
+			{
+				UnknownNode(ⴅ, ႭႭ.Ⴍ.Ⴍ(1821394853));
+				if (176 <= 176 - 142)
+				{
+					goto IL_0104;
+				}
+			}
+			else
+			{
+				if (501 <= 501 - 236)
+				{
+					goto IL_0012;
+				}
+				UnknownNode(ⴅ, ႭႭ.Ⴍ.Ⴍ(1821394853));
+			}
+			goto IL_012d;
+			IL_01ca:
+			ReadEndElement();
+			goto IL_01d0;
+			IL_0104:
+			if ((object)xmlQualifiedName.Name == ႳႷ)
+			{
+				if (974 <= 974 - 864)
+				{
+					goto IL_0277;
+				}
+				if ((object)xmlQualifiedName.Namespace == ႳႨ)
+				{
+					goto IL_0233;
+				}
+				if (false)
+				{
+					goto IL_015f;
+				}
+			}
+			throw CreateUnknownTypeException(xmlQualifiedName);
+			IL_01d0:
+			return ⴅ;
+			IL_0277:
+			base.Reader.MoveToContent();
+			whileIterations = 0;
+			readerCount = base.ReaderCount;
+			goto IL_0012;
+			IL_026c:
+			base.Reader.ReadStartElement();
+			goto IL_0277;
+			IL_015f:
+			if (base.Reader.NodeType == XmlNodeType.None)
+			{
+				if (941 > 941 - 931)
+				{
+					goto IL_01ca;
+				}
+				goto IL_0277;
+			}
+			goto IL_02ce;
+			IL_0233:
+			while (true)
+			{
+				IL_0233:
+				if (flag)
+				{
+					if ((492 + 492 * 492) % 2 == 0)
+					{
+						return null;
+					}
+				}
+				else
+				{
+					ⴅ = new Ⴅ();
+				}
+				while (base.Reader.MoveToNextAttribute())
+				{
+					if (IsXmlnsAttribute(base.Reader.Name))
+					{
+						continue;
+					}
+					if (196 >= 196 - 174)
+					{
+						UnknownNode(ⴅ);
+						if (241 > 241 - 94)
+						{
+							continue;
+						}
+						goto IL_0233;
+					}
+					goto IL_0104;
+				}
+				break;
+			}
+			if (289 >= 289 - 279)
+			{
+				base.Reader.MoveToElement();
+				if (!base.Reader.IsEmptyElement)
+				{
+					goto IL_026c;
+				}
+				if (653 > 653 - 220)
+				{
+					base.Reader.Skip();
+					return ⴅ;
+				}
+			}
+			goto IL_0104;
+		}
+
+		private SupportedEventSource ႠႳ(bool Ⴀ, bool Ⴍ)
+		{
+			int num = 28;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			SupportedEventSource supportedEventSource = default(SupportedEventSource);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴍ ? 15 : 6);
+					break;
+				case 6:
+					obj = null;
+					goto IL_0097;
+				case 15:
+					obj = GetXsiType();
+					goto IL_0097;
+				case 16:
+					flag = ReadNull();
+					num = 8;
+					break;
+				case 8:
+					num = ((!Ⴍ) ? 25 : 21);
+					break;
+				case 21:
+					num = ((xmlQualifiedName == null) ? 25 : 0);
+					break;
+				case 0:
+					num = (((object)xmlQualifiedName.Name != Ⴈ) ? 18 : 27);
+					break;
+				case 27:
+					num = (((object)xmlQualifiedName.Namespace == ႳႨ) ? 25 : 18);
+					break;
+				case 18:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 25:
+					num = ((!flag) ? 11 : 24);
+					break;
+				case 24:
+					return null;
+				case 11:
+					supportedEventSource = new SupportedEventSource();
+					array = new bool[1];
+					num = 17;
+					break;
+				case 23:
+					num = (array[0] ? 4 : 19);
+					break;
+				case 19:
+					num = (((object)base.Reader.LocalName != ႳႤ) ? 4 : 20);
+					break;
+				case 20:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 4 : 10);
+					break;
+				case 10:
+					supportedEventSource.ID = XmlConvert.ToInt32(base.Reader.Value);
+					array[0] = true;
+					num = 17;
+					break;
+				case 4:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 17 : 2);
+					break;
+				case 2:
+					UnknownNode(supportedEventSource, ႭႭ.Ⴍ.Ⴍ(1821394831));
+					goto case 17;
+				case 17:
+					num = (base.Reader.MoveToNextAttribute() ? 23 : 13);
+					break;
+				case 13:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 26 : 12);
+					break;
+				case 12:
+					base.Reader.Skip();
+					return supportedEventSource;
+				case 26:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 1;
+					break;
+				case 5:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 3 : 9);
+					break;
+				case 9:
+					UnknownNode(supportedEventSource, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					num = 7;
+					break;
+				case 3:
+					UnknownNode(supportedEventSource, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					goto case 7;
+				case 7:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 1;
+				case 1:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 22 : 14);
+					break;
+				case 14:
+					num = ((base.Reader.NodeType != 0) ? 5 : 22);
+					break;
+				case 22:
+					{
+						ReadEndElement();
+						return supportedEventSource;
+					}
+					IL_0097:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴀ) ? 8 : 16);
+					break;
+				}
+			}
+		}
+
+		private SupportedEventType ႠႥ(bool Ⴀ, bool Ⴍ)
+		{
+			int num = 7;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			SupportedEventType supportedEventType = default(SupportedEventType);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴍ ? 12 : 8);
+					break;
+				case 8:
+					obj = null;
+					goto IL_0096;
+				case 12:
+					obj = GetXsiType();
+					goto IL_0096;
+				case 1:
+					flag = ReadNull();
+					num = 17;
+					break;
+				case 17:
+					num = ((!Ⴍ) ? 14 : 22);
+					break;
+				case 22:
+					num = ((xmlQualifiedName == null) ? 14 : 25);
+					break;
+				case 25:
+					num = (((object)xmlQualifiedName.Name != ႳႭ) ? 27 : 2);
+					break;
+				case 2:
+					num = (((object)xmlQualifiedName.Namespace == ႳႨ) ? 14 : 27);
+					break;
+				case 27:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 14:
+					num = ((!flag) ? 24 : 6);
+					break;
+				case 6:
+					return null;
+				case 24:
+					supportedEventType = new SupportedEventType();
+					array = new bool[1];
+					num = 20;
+					break;
+				case 15:
+					num = (array[0] ? 11 : 0);
+					break;
+				case 0:
+					num = (((object)base.Reader.LocalName != ႳႤ) ? 11 : 16);
+					break;
+				case 16:
+					num = (((object)base.Reader.NamespaceURI != ႳႨ) ? 11 : 4);
+					break;
+				case 4:
+					supportedEventType.ID = XmlConvert.ToInt32(base.Reader.Value);
+					array[0] = true;
+					num = 20;
+					break;
+				case 11:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 20 : 28);
+					break;
+				case 28:
+					UnknownNode(supportedEventType, ႭႭ.Ⴍ.Ⴍ(1821394831));
+					goto case 20;
+				case 20:
+					num = (base.Reader.MoveToNextAttribute() ? 15 : 9);
+					break;
+				case 9:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 10 : 5);
+					break;
+				case 5:
+					base.Reader.Skip();
+					return supportedEventType;
+				case 10:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 13;
+					break;
+				case 21:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 19 : 26);
+					break;
+				case 26:
+					UnknownNode(supportedEventType, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					num = 18;
+					break;
+				case 19:
+					UnknownNode(supportedEventType, ႭႭ.Ⴍ.Ⴍ(1821394853));
+					goto case 18;
+				case 18:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 13;
+				case 13:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 3 : 23);
+					break;
+				case 23:
+					num = ((base.Reader.NodeType != 0) ? 21 : 3);
+					break;
+				case 3:
+					{
+						ReadEndElement();
+						return supportedEventType;
+					}
+					IL_0096:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = (Ⴀ ? 1 : 17);
+					break;
+				}
+			}
+		}
+
+		private EventProcessorComponent ႠႠ(bool Ⴀ, bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0036, IL_0058, IL_008b, IL_00b3, IL_00d7, IL_00e2, IL_0103, IL_0134, IL_014f, IL_0180, IL_01ab, IL_01d8, IL_01fa, IL_022b, IL_0254, IL_0261, IL_0284, IL_02b0, IL_02dd, IL_030b, IL_032d, IL_035a, IL_0372, IL_039e, IL_03c7, IL_03e0, IL_040b, IL_042b, IL_0440, IL_046e, IL_047e, IL_04af, IL_04cd, IL_04ef, IL_0512, IL_053b, IL_055a, IL_0586, IL_05a9, IL_05d5, IL_05ed, IL_061e, IL_063a, IL_0665, IL_0693, IL_06bb, IL_06e9, IL_071b, IL_074c, IL_0777, IL_079e, IL_07c1, IL_07da, IL_07f9, IL_0826, IL_0852, IL_0867, IL_088d, IL_08c3, IL_08d8, IL_08f9, IL_091c, IL_094d, IL_0966, IL_0988, IL_09b1, IL_09df, IL_0a15, IL_0a43, IL_0a66, IL_0a76, IL_0a99, IL_0ac9, IL_0b07, IL_0b35, IL_0b5b, IL_0b8b, IL_0bb1, IL_0bdf, IL_0bff, IL_0c2a
+			if (Ⴍ)
+			{
+				goto IL_0259;
+			}
+			object obj;
+			if (238 > 238 - 91)
+			{
+				obj = null;
+				goto IL_0266;
+			}
+			goto IL_0adb;
+			IL_0445:
+			base.Reader.MoveToContent();
+			goto IL_0451;
+			IL_0451:
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			CheckReaderCount(ref whileIterations, ref readerCount);
+			if (629 < 629 - 306)
+			{
+				goto IL_04d2;
+			}
+			goto IL_098d;
+			IL_0259:
+			obj = GetXsiType();
+			goto IL_0266;
+			IL_0266:
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = false;
+			if (Ⴀ)
+			{
+				if (false)
+				{
+					goto IL_06ee;
+				}
+				flag = ReadNull();
+				if (false)
+				{
+					goto IL_0751;
+				}
+			}
+			if (Ⴍ)
+			{
+				if (false)
+				{
+					goto IL_082b;
+				}
+				if (!(xmlQualifiedName == null))
+				{
+					if (632 > 632 - 200)
+					{
+						if ((object)xmlQualifiedName.Name == ႳႰ)
+						{
+							if (783 <= 783 - 615)
+							{
+								goto IL_03ab;
+							}
+							if ((object)xmlQualifiedName.Namespace == ႳႨ)
+							{
+								goto IL_08dd;
+							}
+							if (false)
+							{
+								goto IL_058b;
+							}
+						}
+						throw CreateUnknownTypeException(xmlQualifiedName);
+					}
+					goto IL_0185;
+				}
+			}
+			goto IL_08dd;
+			IL_0382:
+			base.Reader.MoveToContent();
+			int whileIterations2 = 0;
+			goto IL_0391;
+			IL_0b0c:
+			if ((object)base.Reader.NamespaceURI != ႳႨ)
+			{
+				goto IL_0483;
+			}
+			if (331 <= 331 - 53)
+			{
+				goto IL_055f;
+			}
+			goto IL_058b;
+			IL_04d2:
+			List<SupportedEventSource> supportedEventSources = default(List<SupportedEventSource>);
+			if (supportedEventSources != null)
+			{
+				supportedEventSources.Add(ႠႳ(Ⴀ: true, Ⴍ: true));
+			}
+			else
+			{
+				if (1013 < 1013 - 455)
+				{
+					goto IL_0445;
+				}
+				base.Reader.Skip();
+			}
+			goto IL_01ff;
+			IL_05d7:
+			EventProcessorComponent eventProcessorComponent = default(EventProcessorComponent);
+			UnknownNode(eventProcessorComponent, ႭႭ.Ⴍ.Ⴍ(1821394825));
+			goto IL_0921;
+			IL_01ff:
+			base.Reader.MoveToContent();
+			goto IL_020b;
+			IL_020b:
+			int readerCount2 = default(int);
+			CheckReaderCount(ref whileIterations2, ref readerCount2);
+			if (623 < 623 - 432)
+			{
+				goto IL_058b;
+			}
+			goto IL_07fe;
+			IL_058b:
+			if (ReadNull())
+			{
+				goto IL_0921;
+			}
+			if (426 >= 426 - 127)
+			{
+				if (eventProcessorComponent.SupportedEventTypes != null)
+				{
+					goto IL_06ee;
+				}
+				if (183 <= 183 - 53)
+				{
+					goto IL_0230;
+				}
+				goto IL_07a3;
+			}
+			goto IL_0a48;
+			IL_0960:
+			bool[] array = default(bool[]);
+			array[1] = true;
+			goto IL_08fe;
+			IL_09f4:
+			if (eventProcessorComponent.SupportedEventSources == null)
+			{
+				if (975 <= 975 - 808)
+				{
+					goto IL_094f;
+				}
+				eventProcessorComponent.SupportedEventSources = new List<SupportedEventSource>();
+				if (24 < 24 - 15)
+				{
+				}
+			}
+			supportedEventSources = eventProcessorComponent.SupportedEventSources;
+			goto IL_0065;
+			IL_07a3:
+			eventProcessorComponent.SupportedEventTypes = new List<SupportedEventType>();
+			if (667 <= 667 - 107)
+			{
+				goto IL_01b8;
+			}
+			goto IL_06ee;
+			IL_01b8:
+			if (ReadNull())
+			{
+				goto IL_0921;
+			}
+			if (false)
+			{
+				goto IL_0451;
+			}
+			goto IL_09f4;
+			IL_08dd:
+			if (!flag)
+			{
+				goto IL_055f;
+			}
+			if (885 <= 885 - 767)
+			{
+				goto IL_0445;
+			}
+			goto IL_0751;
+			IL_06ee:
+			List<SupportedEventType> supportedEventTypes = eventProcessorComponent.SupportedEventTypes;
+			goto IL_06f6;
+			IL_055f:
+			eventProcessorComponent = new EventProcessorComponent();
+			if (eventProcessorComponent.SupportedEventTypes == null)
+			{
+				if (877 < 877 - 607)
+				{
+					goto IL_020b;
+				}
+				eventProcessorComponent.SupportedEventTypes = new List<SupportedEventType>();
+				if (649 < 649 - 332)
+				{
+					goto IL_0259;
+				}
+			}
+			_ = eventProcessorComponent.SupportedEventTypes;
+			if (eventProcessorComponent.SupportedEventSources == null)
+			{
+				if (620 <= 620 - 389)
+				{
+					goto IL_0230;
+				}
+				eventProcessorComponent.SupportedEventSources = new List<SupportedEventSource>();
+				if (638 <= 638 - 173)
+				{
+					goto IL_01ff;
+				}
+			}
+			_ = eventProcessorComponent.SupportedEventSources;
+			array = new bool[6];
+			goto IL_08fe;
+			IL_094f:
+			eventProcessorComponent.Name = base.Reader.Value;
+			goto IL_0960;
+			IL_0154:
+			if ((object)base.Reader.NamespaceURI != ႳႨ)
+			{
+				goto IL_096b;
+			}
+			if (831 > 831 - 489)
+			{
+				eventProcessorComponent.ID = XmlConvert.ToInt32(base.Reader.Value);
+				array[0] = true;
+				goto IL_08fe;
+			}
+			goto IL_098d;
+			IL_06f6:
+			if (!base.Reader.IsEmptyElement)
+			{
+				goto IL_03a0;
+			}
+			if ((735 + 735 * 735) % 2 == 0)
+			{
+				base.Reader.Skip();
+				goto IL_0921;
+			}
+			goto IL_0154;
+			IL_0065:
+			if (!base.Reader.IsEmptyElement)
+			{
+				goto IL_0377;
+			}
+			if (745 < 745 - 367)
+			{
+				goto IL_07df;
+			}
+			base.Reader.Skip();
+			goto IL_0921;
+			IL_02e2:
+			if ((object)base.Reader.NamespaceURI != ႳႨ)
+			{
+				goto IL_003b;
+			}
+			if (304 <= 304 - 79)
+			{
+				goto IL_089e;
+			}
+			goto IL_094f;
+			IL_0332:
+			if ((object)base.Reader.LocalName != ႳႠ)
+			{
+				goto IL_003b;
+			}
+			if ((456 + 456 * 456) % 2 == 0)
+			{
+				goto IL_02e2;
+			}
+			goto IL_0445;
+			IL_08fe:
+			if (!base.Reader.MoveToNextAttribute())
+			{
+				if (6 > 6 - 5)
+				{
+					base.Reader.MoveToElement();
+					goto IL_089e;
+				}
+				goto IL_01b6;
+			}
+			goto IL_0a48;
+			IL_0921:
+			base.Reader.MoveToContent();
+			int whileIterations3 = default(int);
+			int readerCount3 = default(int);
+			CheckReaderCount(ref whileIterations3, ref readerCount3);
+			if (466 >= 466 - 391)
+			{
+				goto IL_0230;
+			}
+			goto IL_0473;
+			IL_0230:
+			if (base.Reader.NodeType == XmlNodeType.EndElement)
+			{
+				goto IL_01b0;
+			}
+			if (false)
+			{
+				goto IL_01ff;
+			}
+			goto IL_03e5;
+			IL_0a48:
+			if (!array[0])
+			{
+				if (967 >= 967 - 368)
+				{
+					if ((object)base.Reader.LocalName != ႳႤ)
+					{
+						goto IL_096b;
+					}
+					if (942 >= 942 - 695)
+					{
+						goto IL_0154;
+					}
+				}
+				goto IL_06f6;
+			}
+			goto IL_096b;
+			IL_0ad9:
+			return eventProcessorComponent;
+			IL_03e5:
+			if (base.Reader.NodeType == XmlNodeType.None)
+			{
+				if (868 > 868 - 739)
+				{
+					goto IL_01b0;
+				}
+				goto IL_0960;
+			}
+			if (base.Reader.NodeType != XmlNodeType.Element)
+			{
+				UnknownNode(eventProcessorComponent, ႭႭ.Ⴍ.Ⴍ(1821394825));
+				if ((529 + 529 * 529) % 2 == 0)
+				{
+					goto IL_0921;
+				}
+				goto IL_0ad9;
+			}
+			if ((490 + 490 * 490) % 2 == 0)
+			{
+				if ((object)base.Reader.LocalName != Ⴄ)
+				{
+					goto IL_0483;
+				}
+				if (724 < 724 - 162)
+				{
+					goto IL_0377;
+				}
+				goto IL_0b0c;
+			}
+			goto IL_096b;
+			IL_089e:
+			if (!base.Reader.IsEmptyElement)
+			{
+				goto IL_082b;
+			}
+			if (false)
+			{
+				goto IL_0b0c;
+			}
+			base.Reader.Skip();
+			goto IL_0ad9;
+			IL_096b:
+			if (array[1])
+			{
+				goto IL_003b;
+			}
+			if ((705 + 705 * 705) % 2 == 0)
+			{
+				goto IL_0332;
+			}
+			goto IL_0921;
+			IL_07df:
+			eventProcessorComponent.AssemblyPath = base.Reader.Value;
+			array[2] = true;
+			goto IL_08fe;
+			IL_003b:
+			if (array[2])
+			{
+				goto IL_0310;
+			}
+			if (false)
+			{
+				goto IL_07a3;
+			}
+			goto IL_0adb;
+			IL_0377:
+			base.Reader.ReadStartElement();
+			goto IL_0382;
+			IL_0adb:
+			if ((object)base.Reader.LocalName == ႳႣ)
+			{
+				if (823 <= 823 - 447)
+				{
+					goto IL_0259;
+				}
+				if ((object)base.Reader.NamespaceURI == ႳႨ)
+				{
+					if (325 <= 325 - 36)
+					{
+						goto IL_0483;
+					}
+					goto IL_07df;
+				}
+			}
+			goto IL_0310;
+			IL_0391:
+			readerCount2 = base.ReaderCount;
+			goto IL_07fe;
+			IL_07fe:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (675 > 675 - 253)
+				{
+					if (base.Reader.NodeType != 0)
+					{
+						goto IL_05ae;
+					}
+					if (788 < 788 - 26)
+					{
+						goto IL_0751;
+					}
+				}
+			}
+			goto IL_0473;
+			IL_0483:
+			if ((object)base.Reader.LocalName != Ⴃ)
+			{
+				goto IL_05d7;
+			}
+			if (488 < 488 - 206)
+			{
+				goto IL_03a0;
+			}
+			goto IL_0a9e;
+			IL_0310:
+			if (!array[3])
+			{
+				if (false)
+				{
+					goto IL_09f4;
+				}
+				if ((object)base.Reader.LocalName == Ⴜ)
+				{
+					if (154 <= 154 - 117)
+					{
+						goto IL_02e2;
+					}
+					if ((object)base.Reader.NamespaceURI == ႳႨ)
+					{
+						if (996 < 996 - 956)
+						{
+							goto IL_0065;
+						}
+						eventProcessorComponent.ObjectName = base.Reader.Value;
+						array[3] = true;
+						goto IL_08fe;
+					}
+				}
+			}
+			if (!IsXmlnsAttribute(base.Reader.Name))
+			{
+				if (772 >= 772 - 105)
+				{
+					goto IL_0185;
+				}
+				goto IL_05f2;
+			}
+			goto IL_08fe;
+			IL_03a0:
+			base.Reader.ReadStartElement();
+			goto IL_03ab;
+			IL_03ab:
+			base.Reader.MoveToContent();
+			whileIterations = 0;
+			readerCount = base.ReaderCount;
+			goto IL_098d;
+			IL_098d:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (false)
+				{
+					goto IL_03e5;
+				}
+				if (base.Reader.NodeType != 0)
+				{
+					goto IL_0753;
+				}
+				if (38 <= 38 - 24)
+				{
+					goto IL_0259;
+				}
+			}
+			ReadEndElement();
+			goto IL_0921;
+			IL_0473:
+			ReadEndElement();
+			goto IL_0921;
+			IL_0751:
+			return null;
+			IL_05ae:
+			if (base.Reader.NodeType == XmlNodeType.Element)
+			{
+				if (992 < 992 - 878)
+				{
+					goto IL_0332;
+				}
+				if ((object)base.Reader.LocalName == Ⴈ)
+				{
+					if (680 <= 680 - 166)
+					{
+						goto IL_0382;
+					}
+					if ((object)base.Reader.NamespaceURI == ႳႨ)
+					{
+						if ((782 + 782 * 782) % 2 == 0)
+						{
+							goto IL_04d2;
+						}
+						goto IL_058b;
+					}
+				}
+				UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394822));
+			}
+			else
+			{
+				do
+				{
+					UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394822));
+				}
+				while (223 < 223 - 44);
+			}
+			goto IL_01ff;
+			IL_01b0:
+			ReadEndElement();
+			goto IL_01b6;
+			IL_0753:
+			if (base.Reader.NodeType != XmlNodeType.Element)
+			{
+				UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394821));
+				if (999 <= 999 - 770)
+				{
+					goto IL_0391;
+				}
+				goto IL_0445;
+			}
+			if (736 > 736 - 79)
+			{
+				goto IL_05f2;
+			}
+			goto IL_0a9e;
+			IL_0185:
+			UnknownNode(eventProcessorComponent, ႭႭ.Ⴍ.Ⴍ(1821394829));
+			if (false)
+			{
+				goto IL_07a3;
+			}
+			goto IL_08fe;
+			IL_05f2:
+			if ((object)base.Reader.LocalName == ႳႭ)
+			{
+				if (912 <= 912 - 443)
+				{
+					goto IL_0753;
+				}
+				if ((object)base.Reader.NamespaceURI == ႳႨ)
+				{
+					if (291 > 291 - 37)
+					{
+						goto IL_0540;
+					}
+					goto IL_0ad9;
+				}
+			}
+			UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394821));
+			goto IL_0445;
+			IL_0a9e:
+			if ((object)base.Reader.NamespaceURI == ႳႨ)
+			{
+				if ((380 + 380 * 380) % 2 == 0)
+				{
+					goto IL_01b8;
+				}
+				goto IL_0540;
+			}
+			goto IL_05d7;
+			IL_082b:
+			base.Reader.ReadStartElement();
+			base.Reader.MoveToContent();
+			whileIterations3 = 0;
+			readerCount3 = base.ReaderCount;
+			goto IL_0230;
+			IL_0540:
+			if (supportedEventTypes == null)
+			{
+				if (755 < 755 - 749)
+				{
+					goto IL_05ae;
+				}
+				base.Reader.Skip();
+			}
+			else
+			{
+				supportedEventTypes.Add(ႠႥ(Ⴀ: true, Ⴍ: true));
+			}
+			goto IL_0445;
+			IL_01b6:
+			return eventProcessorComponent;
+		}
+
+		private EventProcessorComponentsList ႠႰ(bool Ⴀ, bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0025, IL_0046, IL_0069, IL_0090, IL_00c1, IL_00e7, IL_0113, IL_0139, IL_0167, IL_0190, IL_01aa, IL_01c5, IL_01d2, IL_01f5, IL_020e, IL_0213, IL_0223, IL_024e, IL_026d, IL_0298, IL_02aa, IL_02d6, IL_02f6, IL_0324, IL_0339, IL_0357, IL_0385, IL_03b9, IL_03d1, IL_03f1, IL_0422, IL_046e, IL_0491, IL_04c5, IL_04fd, IL_051b, IL_0546, IL_0571, IL_0599, IL_05c4, IL_05f3, IL_060e, IL_063f
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			bool flag = default(bool);
+			EventProcessorComponentsList eventProcessorComponentsList = default(EventProcessorComponentsList);
+			List<EventProcessorComponent> eventProcessorComponents = default(List<EventProcessorComponent>);
+			int whileIterations2 = default(int);
+			int readerCount2 = default(int);
+			while (true)
+			{
+				if (Ⴍ)
+				{
+					goto IL_01ca;
+				}
+				object obj;
+				if (882 >= 882 - 706)
+				{
+					obj = null;
+					goto IL_01d7;
+				}
+				goto IL_027d;
+				IL_035c:
+				base.Reader.MoveToContent();
+				CheckReaderCount(ref whileIterations, ref readerCount);
+				if (266 < 266 - 72)
+				{
+					goto IL_0195;
+				}
+				goto IL_02af;
+				IL_0218:
+				ReadEndElement();
+				goto IL_03f6;
+				IL_01ca:
+				obj = GetXsiType();
+				goto IL_01d7;
+				IL_01d7:
+				xmlQualifiedName = (XmlQualifiedName)obj;
+				goto IL_01d8;
+				IL_01d8:
+				flag = false;
+				if (!Ⴀ)
+				{
+					goto IL_02db;
+				}
+				if ((964 + 964 * 964) % 2 == 0)
+				{
+					goto IL_033e;
+				}
+				goto IL_04b5;
+				IL_033e:
+				flag = ReadNull();
+				if ((1016 + 1016 * 1016) % 2 == 0)
+				{
+					goto IL_02db;
+				}
+				goto IL_035c;
+				IL_02db:
+				if (Ⴍ)
+				{
+					if (false)
+					{
+						goto IL_03f6;
+					}
+					if (!(xmlQualifiedName == null))
+					{
+						if (false)
+						{
+							continue;
+						}
+						if ((object)xmlQualifiedName.Name != ႳႼ)
+						{
+							goto IL_0496;
+						}
+						if (308 <= 308 - 272)
+						{
+							goto IL_01ca;
+						}
+						goto IL_054b;
+					}
+				}
+				goto IL_0195;
+				IL_01f7:
+				UnknownNode(eventProcessorComponentsList);
+				if (188 >= 188 - 66)
+				{
+					goto IL_0228;
+				}
+				goto IL_04b5;
+				IL_03c0:
+				eventProcessorComponents.Add(ႠႠ(Ⴀ: true, Ⴍ: true));
+				goto IL_035c;
+				IL_05f8:
+				UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394820));
+				goto IL_035c;
+				IL_0095:
+				if ((object)base.Reader.NamespaceURI != ႳႨ)
+				{
+					goto IL_01af;
+				}
+				if (825 < 825 - 804)
+				{
+					goto IL_054b;
+				}
+				if (ReadNull())
+				{
+					goto IL_03f6;
+				}
+				if (284 < 284 - 48)
+				{
+					goto IL_02f8;
+				}
+				if (eventProcessorComponentsList.EventProcessorComponents == null)
+				{
+					if (772 <= 772 - 670)
+					{
+						break;
+					}
+					goto IL_03d3;
+				}
+				goto IL_05c6;
+				IL_03d3:
+				eventProcessorComponentsList.EventProcessorComponents = new List<EventProcessorComponent>();
+				if (332 <= 332 - 159)
+				{
+					goto IL_03c0;
+				}
+				goto IL_05c6;
+				IL_0195:
+				if (!flag)
+				{
+					eventProcessorComponentsList = new EventProcessorComponentsList();
+					if (eventProcessorComponentsList.EventProcessorComponents == null)
+					{
+						if (771 <= 771 - 553)
+						{
+							goto IL_0427;
+						}
+						eventProcessorComponentsList.EventProcessorComponents = new List<EventProcessorComponent>();
+						if (746 < 746 - 506)
+						{
+							goto IL_03f6;
+						}
+					}
+					goto IL_050f;
+				}
+				if (25 >= 25 - 3)
+				{
+					goto IL_03be;
+				}
+				goto IL_054b;
+				IL_05c6:
+				eventProcessorComponents = eventProcessorComponentsList.EventProcessorComponents;
+				if (!base.Reader.IsEmptyElement)
+				{
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					goto IL_04b5;
+				}
+				if ((521 + 521 * 521) % 2 == 0)
+				{
+					goto IL_0329;
+				}
+				goto IL_0496;
+				IL_054b:
+				if ((object)xmlQualifiedName.Namespace == ႳႨ)
+				{
+					goto IL_0195;
+				}
+				if (false)
+				{
+					goto IL_03f6;
+				}
+				goto IL_0496;
+				IL_01af:
+				UnknownNode(eventProcessorComponentsList, ႭႭ.Ⴍ.Ⴍ(1821394824));
+				goto IL_03f6;
+				IL_04b5:
+				whileIterations = 0;
+				goto IL_04b8;
+				IL_050f:
+				_ = eventProcessorComponentsList.EventProcessorComponents;
+				goto IL_0228;
+				IL_0228:
+				while (base.Reader.MoveToNextAttribute())
+				{
+					if (IsXmlnsAttribute(base.Reader.Name))
+					{
+						continue;
+					}
+					goto IL_0154;
+				}
+				if (573 >= 573 - 488)
+				{
+					base.Reader.MoveToElement();
+					if (!base.Reader.IsEmptyElement)
+					{
+						base.Reader.ReadStartElement();
+						goto IL_027d;
+					}
+					if (734 < 734 - 109)
+					{
+						goto IL_02af;
+					}
+					base.Reader.Skip();
+					break;
+				}
+				goto IL_035c;
+				IL_04b8:
+				readerCount = base.ReaderCount;
+				goto IL_02af;
+				IL_02af:
+				if (base.Reader.NodeType != XmlNodeType.EndElement)
+				{
+					if (false)
+					{
+						goto IL_03be;
+					}
+					if (base.Reader.NodeType != 0)
+					{
+						goto IL_0427;
+					}
+					if (851 < 851 - 611)
+					{
+						goto IL_028b;
+					}
+				}
+				goto IL_0218;
+				IL_0496:
+				throw CreateUnknownTypeException(xmlQualifiedName);
+				IL_02f8:
+				if ((object)base.Reader.NamespaceURI == ႳႨ)
+				{
+					if (760 >= 760 - 194)
+					{
+						if (eventProcessorComponents == null)
+						{
+							if (304 < 304 - 273)
+							{
+								goto IL_033e;
+							}
+							base.Reader.Skip();
+							goto IL_035c;
+						}
+						goto IL_03c0;
+					}
+					goto IL_04b8;
+				}
+				goto IL_05f8;
+				IL_03be:
+				return null;
+				IL_027d:
+				base.Reader.MoveToContent();
+				whileIterations2 = 0;
+				goto IL_028b;
+				IL_0154:
+				if (596 >= 596 - 77)
+				{
+					goto IL_01f7;
+				}
+				goto IL_0329;
+				IL_0329:
+				base.Reader.Skip();
+				goto IL_03f6;
+				IL_03f6:
+				base.Reader.MoveToContent();
+				CheckReaderCount(ref whileIterations2, ref readerCount2);
+				if (241 > 241 - 234)
+				{
+					goto IL_006b;
+				}
+				goto IL_01d8;
+				IL_006b:
+				if (base.Reader.NodeType != XmlNodeType.EndElement)
+				{
+					if (218 <= 218 - 20)
+					{
+						goto IL_05c6;
+					}
+					if (base.Reader.NodeType != 0)
+					{
+						if (base.Reader.NodeType != XmlNodeType.Element)
+						{
+							UnknownNode(eventProcessorComponentsList, ႭႭ.Ⴍ.Ⴍ(1821394824));
+							if (224 <= 224 - 76)
+							{
+								goto IL_03d3;
+							}
+						}
+						else
+						{
+							if (false)
+							{
+								goto IL_01f7;
+							}
+							if ((object)base.Reader.LocalName != Ⴅ)
+							{
+								goto IL_01af;
+							}
+							if (559 > 559 - 238)
+							{
+								goto IL_0095;
+							}
+						}
+						goto IL_03f6;
+					}
+					if (436 < 436 - 213)
+					{
+						goto IL_050f;
+					}
+				}
+				ReadEndElement();
+				return eventProcessorComponentsList;
+				IL_028b:
+				readerCount2 = base.ReaderCount;
+				goto IL_006b;
+				IL_0427:
+				if (base.Reader.NodeType == XmlNodeType.Element)
+				{
+					if (651 < 651 - 111)
+					{
+						goto IL_0095;
+					}
+					if ((object)base.Reader.LocalName == ႳႰ)
+					{
+						if (false)
+						{
+							goto IL_0218;
+						}
+						goto IL_02f8;
+					}
+					goto IL_05f8;
+				}
+				UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394820));
+				if (false)
+				{
+					goto IL_0228;
+				}
+				goto IL_035c;
+			}
+			return eventProcessorComponentsList;
+		}
+
+		private ActionProducerComponent ႠႭ(bool Ⴀ, bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0033, IL_0054, IL_0080, IL_00a9, IL_00cd, IL_00fb, IL_0133, IL_0158, IL_017e, IL_018b, IL_01af, IL_01e0, IL_01e8, IL_0222, IL_0252, IL_0278, IL_0295, IL_02b6, IL_02de, IL_030b, IL_0329, IL_035a, IL_0376, IL_0396, IL_03bd, IL_03ed, IL_041b, IL_0437, IL_044e, IL_0469, IL_0494, IL_04b4, IL_04d1, IL_0501, IL_051c, IL_0538, IL_0561, IL_0586, IL_05b2, IL_0604, IL_0621
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			bool flag = default(bool);
+			ActionProducerComponent actionProducerComponent = default(ActionProducerComponent);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				if (!Ⴍ)
+				{
+					if (383 <= 383 - 185)
+					{
+						goto IL_0259;
+					}
+					obj = null;
+				}
+				else
+				{
+					obj = GetXsiType();
+				}
+				xmlQualifiedName = (XmlQualifiedName)obj;
+				flag = false;
+				if (!Ⴀ)
+				{
+					goto IL_029a;
+				}
+				if (850 <= 850 - 191)
+				{
+					goto IL_0259;
+				}
+				goto IL_0310;
+				IL_041d:
+				actionProducerComponent.ObjectName = base.Reader.Value;
+				array[3] = true;
+				goto IL_0566;
+				IL_05b4:
+				if ((object)base.Reader.LocalName == Ⴜ)
+				{
+					if (574 <= 574 - 280)
+					{
+						goto IL_0566;
+					}
+					if ((object)base.Reader.NamespaceURI == ႳႨ)
+					{
+						if (543 > 543 - 216)
+						{
+							goto IL_041d;
+						}
+						goto IL_0596;
+					}
+				}
+				goto IL_04b6;
+				IL_00ae:
+				actionProducerComponent.ID = XmlConvert.ToInt32(base.Reader.Value);
+				goto IL_00c4;
+				IL_00c4:
+				array[0] = true;
+				goto IL_0566;
+				IL_0596:
+				base.Reader.MoveToContent();
+				goto IL_05a2;
+				IL_029a:
+				if (Ⴍ)
+				{
+					if (723 <= 723 - 563)
+					{
+						goto IL_041d;
+					}
+					if (!(xmlQualifiedName == null))
+					{
+						if (false)
+						{
+							goto IL_0259;
+						}
+						if ((object)xmlQualifiedName.Name != this.Ⴍ)
+						{
+							break;
+						}
+						if (1008 < 1008 - 878)
+						{
+							goto IL_05a2;
+						}
+						while ((object)xmlQualifiedName.Namespace != ႳႨ)
+						{
+							if (520 > 520 - 424)
+							{
+								goto end_IL_0038;
+							}
+						}
+					}
+				}
+				if (!flag)
+				{
+					goto IL_043c;
+				}
+				if ((768 + 768 * 768) % 2 == 0)
+				{
+					return null;
+				}
+				goto IL_0596;
+				IL_05a2:
+				whileIterations = 0;
+				readerCount = base.ReaderCount;
+				goto IL_02e3;
+				IL_027a:
+				if (array[3])
+				{
+					goto IL_04b6;
+				}
+				if (659 <= 659 - 48)
+				{
+					goto IL_0108;
+				}
+				goto IL_05b4;
+				IL_0259:
+				actionProducerComponent.Priority = XmlConvert.ToInt32(base.Reader.Value);
+				array[4] = true;
+				goto IL_0566;
+				IL_0108:
+				if ((object)base.Reader.LocalName == ႳႣ)
+				{
+					if (false)
+					{
+						goto IL_0310;
+					}
+					if ((object)base.Reader.NamespaceURI == ႳႨ)
+					{
+						if (387 <= 387 - 385)
+						{
+							goto IL_04d6;
+						}
+						actionProducerComponent.AssemblyPath = base.Reader.Value;
+						goto IL_03b4;
+					}
+				}
+				goto IL_027a;
+				IL_04d6:
+				if ((object)base.Reader.LocalName == ႳႠ)
+				{
+					if ((958 + 958 * 958) % 2 == 0)
+					{
+						goto IL_01b4;
+					}
+				}
+				goto IL_0606;
+				IL_0310:
+				flag = ReadNull();
+				if (false)
+				{
+					goto IL_0108;
+				}
+				goto IL_029a;
+				IL_0606:
+				if (!array[2])
+				{
+					if (323 > 323 - 93)
+					{
+						goto IL_0108;
+					}
+					goto IL_01b4;
+				}
+				goto IL_027a;
+				IL_0106:
+				return actionProducerComponent;
+				IL_01b4:
+				if ((object)base.Reader.NamespaceURI == ႳႨ)
+				{
+					if (644 <= 644 - 378)
+					{
+						goto IL_0453;
+					}
+					actionProducerComponent.Name = base.Reader.Value;
+					array[1] = true;
+					goto IL_0566;
+				}
+				goto IL_0606;
+				IL_043c:
+				actionProducerComponent = new ActionProducerComponent();
+				array = new bool[5];
+				goto IL_0566;
+				IL_0566:
+				if (base.Reader.MoveToNextAttribute())
+				{
+					if (!array[0])
+					{
+						if (5 < 5 - 4)
+						{
+							goto IL_029a;
+						}
+						if ((object)base.Reader.LocalName == ႳႤ)
+						{
+							if (301 < 301 - 70)
+							{
+								goto IL_04b6;
+							}
+							while ((object)base.Reader.NamespaceURI == ႳႨ)
+							{
+								if (false)
+								{
+									continue;
+								}
+								goto IL_00ae;
+							}
+						}
+					}
+					if (!array[1])
+					{
+						if (390 <= 390 - 1)
+						{
+							goto IL_043c;
+						}
+						goto IL_04d6;
+					}
+					goto IL_0606;
+				}
+				if (582 > 582 - 36)
+				{
+					base.Reader.MoveToElement();
+					if (base.Reader.IsEmptyElement)
+					{
+						if (32 > 32 - 14)
+						{
+							base.Reader.Skip();
+							return actionProducerComponent;
+						}
+						goto IL_041d;
+					}
+					goto IL_058b;
+				}
+				goto IL_0106;
+				IL_03c2:
+				base.Reader.MoveToContent();
+				goto IL_03ce;
+				IL_0453:
+				UnknownNode(actionProducerComponent, ႭႭ.Ⴍ.Ⴍ(1821394853));
+				goto IL_03c2;
+				IL_02e3:
+				if (base.Reader.NodeType != XmlNodeType.EndElement)
+				{
+					if (603 < 603 - 359)
+					{
+						goto IL_0596;
+					}
+					if (base.Reader.NodeType != 0)
+					{
+						if (base.Reader.NodeType != XmlNodeType.Element)
+						{
+							UnknownNode(actionProducerComponent, ႭႭ.Ⴍ.Ⴍ(1821394853));
+							if (135 >= 135 - 88)
+							{
+								goto IL_03c2;
+							}
+							goto IL_03ce;
+						}
+						if (24 <= 24 - 12)
+						{
+							continue;
+						}
+						goto IL_0453;
+					}
+					if (558 <= 558 - 113)
+					{
+						goto IL_00c4;
+					}
+				}
+				ReadEndElement();
+				goto IL_0106;
+				IL_058b:
+				base.Reader.ReadStartElement();
+				goto IL_0596;
+				IL_04b6:
+				if (!array[4])
+				{
+					if (504 <= 504 - 347)
+					{
+						goto IL_0566;
+					}
+					if ((object)base.Reader.LocalName == ႨႣ)
+					{
+						if (902 <= 902 - 704)
+						{
+							goto IL_05b4;
+						}
+						if ((object)base.Reader.NamespaceURI == ႳႨ)
+						{
+							if (80 >= 80 - 35)
+							{
+								goto IL_0259;
+							}
+							goto IL_04d6;
+						}
+					}
+				}
+				if (!IsXmlnsAttribute(base.Reader.Name))
+				{
+					if (false)
+					{
+						goto IL_058b;
+					}
+					UnknownNode(actionProducerComponent, ႭႭ.Ⴍ.Ⴍ(1821394826));
+					if (507 <= 507 - 118)
+					{
+						goto IL_03b4;
+					}
+				}
+				goto IL_0566;
+				IL_03ce:
+				CheckReaderCount(ref whileIterations, ref readerCount);
+				if (false)
+				{
+					goto IL_027a;
+				}
+				goto IL_02e3;
+				IL_03b4:
+				array[2] = true;
+				goto IL_0566;
+				continue;
+				end_IL_0038:
+				break;
+			}
+			throw CreateUnknownTypeException(xmlQualifiedName);
+		}
+
+		private ActionProducerComponentsList ႠႣ(bool Ⴀ, bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0028, IL_0048, IL_006c, IL_00bb, IL_00e6, IL_0129, IL_015a, IL_0180, IL_01b1, IL_01be, IL_01e2, IL_0200, IL_0208, IL_0218, IL_023d, IL_025b, IL_0286, IL_029b, IL_02c7, IL_02e4, IL_0312, IL_0327, IL_0343, IL_0371, IL_03a2, IL_03ba, IL_03dc, IL_0407, IL_042a, IL_044e, IL_0473, IL_04a7, IL_04dd, IL_04fb, IL_0526, IL_054f, IL_057a, IL_05a5, IL_05d8, IL_05f3, IL_0620
+			if (Ⴍ)
+			{
+				goto IL_01b6;
+			}
+			if (false)
+			{
+				goto IL_05dd;
+			}
+			object obj = null;
+			goto IL_01c3;
+			IL_0354:
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			do
+			{
+				CheckReaderCount(ref whileIterations, ref readerCount);
+			}
+			while (920 < 920 - 352);
+			goto IL_02a0;
+			IL_03a9:
+			List<ActionProducerComponent> actionProducerComponents = default(List<ActionProducerComponent>);
+			actionProducerComponents.Add(ႠႭ(Ⴀ: true, Ⴍ: true));
+			goto IL_0348;
+			IL_01b6:
+			obj = GetXsiType();
+			goto IL_01c3;
+			IL_01c3:
+			XmlQualifiedName xmlQualifiedName = (XmlQualifiedName)obj;
+			bool flag = false;
+			goto IL_01c6;
+			IL_01c6:
+			if (Ⴀ)
+			{
+				if (942 >= 942 - 745)
+				{
+				}
+				flag = ReadNull();
+				if (453 < 453 - 63)
+				{
+					goto IL_03e1;
+				}
+			}
+			if (Ⴍ)
+			{
+				if (false)
+				{
+					goto IL_03a7;
+				}
+				if (!(xmlQualifiedName == null))
+				{
+					if (814 > 814 - 90)
+					{
+						goto IL_015f;
+					}
+					goto IL_04ef;
+				}
+			}
+			goto IL_0182;
+			IL_05f8:
+			ActionProducerComponentsList actionProducerComponentsList = default(ActionProducerComponentsList);
+			if ((object)base.Reader.LocalName == ႳႥ)
+			{
+				if (334 < 334 - 7)
+				{
+					goto IL_0279;
+				}
+				if ((object)base.Reader.NamespaceURI == ႳႨ)
+				{
+					if (162 < 162 - 6)
+					{
+						goto IL_00eb;
+					}
+					if (!ReadNull())
+					{
+						if (494 <= 494 - 239)
+						{
+							goto IL_019b;
+						}
+						if (actionProducerComponentsList.ActionProducerComponents != null)
+						{
+							goto IL_05aa;
+						}
+						if ((32 + 32 * 32) % 2 == 0)
+						{
+							goto IL_03bf;
+						}
+					}
+					goto IL_03e1;
+				}
+			}
+			goto IL_019b;
+			IL_05dd:
+			UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394874));
+			goto IL_0348;
+			IL_0373:
+			base.Reader.MoveToElement();
+			while (base.Reader.IsEmptyElement)
+			{
+				if (1004 >= 1004 - 916)
+				{
+					base.Reader.Skip();
+					return actionProducerComponentsList;
+				}
+			}
+			base.Reader.ReadStartElement();
+			base.Reader.MoveToContent();
+			int whileIterations2 = 0;
+			goto IL_0279;
+			IL_028b:
+			base.Reader.Skip();
+			goto IL_0348;
+			IL_05aa:
+			actionProducerComponents = actionProducerComponentsList.ActionProducerComponents;
+			if (!base.Reader.IsEmptyElement)
+			{
+				base.Reader.ReadStartElement();
+				base.Reader.MoveToContent();
+				whileIterations = 0;
+				readerCount = base.ReaderCount;
+				goto IL_02a0;
+			}
+			if (1000 < 1000 - 922)
+			{
+				goto IL_028b;
+			}
+			base.Reader.Skip();
+			goto IL_03e1;
+			IL_0279:
+			int readerCount2 = base.ReaderCount;
+			goto IL_0071;
+			IL_0182:
+			if (!flag)
+			{
+				goto IL_00eb;
+			}
+			if (963 > 963 - 112)
+			{
+				goto IL_03a7;
+			}
+			goto IL_0478;
+			IL_0071:
+			while (true)
+			{
+				if (base.Reader.NodeType != XmlNodeType.EndElement)
+				{
+					if (252 < 252 - 174)
+					{
+						break;
+					}
+					if (base.Reader.NodeType != 0)
+					{
+						if (base.Reader.NodeType != XmlNodeType.Element)
+						{
+							break;
+						}
+						if (false)
+						{
+							continue;
+						}
+						goto IL_05f8;
+					}
+					if (false)
+					{
+						goto IL_01b6;
+					}
+				}
+				ReadEndElement();
+				return actionProducerComponentsList;
+			}
+			UnknownNode(actionProducerComponentsList, ႭႭ.Ⴍ.Ⴍ(1821394827));
+			if (false)
+			{
+				goto IL_0354;
+			}
+			goto IL_03e1;
+			IL_00eb:
+			actionProducerComponentsList = new ActionProducerComponentsList();
+			while (actionProducerComponentsList.ActionProducerComponents == null)
+			{
+				if (133 <= 133 - 76)
+				{
+					goto IL_015f;
+				}
+				actionProducerComponentsList.ActionProducerComponents = new List<ActionProducerComponent>();
+				if ((729 + 729 * 729) % 2 == 0)
+				{
+					break;
+				}
+			}
+			goto IL_04ef;
+			IL_0348:
+			base.Reader.MoveToContent();
+			goto IL_0354;
+			IL_02a0:
+			if (base.Reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (false)
+				{
+					goto IL_0071;
+				}
+				if (base.Reader.NodeType != 0)
+				{
+					if (base.Reader.NodeType != XmlNodeType.Element)
+					{
+						goto IL_0554;
+					}
+					if (261 < 261 - 66)
+					{
+						goto IL_03a9;
+					}
+					if ((object)base.Reader.LocalName == this.Ⴍ)
+					{
+						if (693 <= 693 - 93)
+						{
+							goto IL_01c6;
+						}
+						if ((object)base.Reader.NamespaceURI == ႳႨ)
+						{
+							if (372 > 372 - 338)
+							{
+								if (actionProducerComponents == null)
+								{
+									if (false)
+									{
+										goto IL_00eb;
+									}
+									goto IL_028b;
+								}
+								goto IL_03a9;
+							}
+							goto IL_0348;
+						}
+					}
+					goto IL_05dd;
+				}
+				if (443 < 443 - 132)
+				{
+					goto IL_03bf;
+				}
+			}
+			ReadEndElement();
+			goto IL_03e1;
+			IL_015f:
+			if ((object)xmlQualifiedName.Name == Ⴐ)
+			{
+				if (118 <= 118 - 107)
+				{
+					goto IL_0554;
+				}
+				if ((object)xmlQualifiedName.Namespace == ႳႨ)
+				{
+					goto IL_0182;
+				}
+				if (714 <= 714 - 23)
+				{
+					goto IL_03a7;
+				}
+			}
+			goto IL_0478;
+			IL_03e1:
+			base.Reader.MoveToContent();
+			CheckReaderCount(ref whileIterations2, ref readerCount2);
+			if (314 > 314 - 28)
+			{
+				goto IL_0071;
+			}
+			goto IL_03a9;
+			IL_0554:
+			UnknownNode(null, ႭႭ.Ⴍ.Ⴍ(1821394874));
+			if ((837 + 837 * 837) % 2 == 0)
+			{
+				goto IL_0348;
+			}
+			goto IL_0373;
+			IL_03bf:
+			actionProducerComponentsList.ActionProducerComponents = new List<ActionProducerComponent>();
+			if (false)
+			{
+				goto IL_0071;
+			}
+			goto IL_05aa;
+			IL_03a7:
+			return null;
+			IL_0478:
+			throw CreateUnknownTypeException(xmlQualifiedName);
+			IL_019b:
+			UnknownNode(actionProducerComponentsList, ႭႭ.Ⴍ.Ⴍ(1821394827));
+			goto IL_03e1;
+			IL_04ef:
+			_ = actionProducerComponentsList.ActionProducerComponents;
+			while (true)
+			{
+				if (!base.Reader.MoveToNextAttribute())
+				{
+					if (801 > 801 - 111)
+					{
+						break;
+					}
+				}
+				while (!IsXmlnsAttribute(base.Reader.Name))
+				{
+					if (850 >= 850 - 289)
+					{
+						UnknownNode(actionProducerComponentsList);
+						if ((886 + 886 * 886) % 2 == 0)
+						{
+							break;
+						}
+						continue;
+					}
+					break;
+				}
+			}
+			goto IL_0373;
+		}
+
+		private Ⴃ Ⴗ(string Ⴀ)
+		{
+			int num = 1;
+			string a = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (((a = Ⴀ) == null) ? 3 : 8);
+					break;
+				case 8:
+					num = ((a == ႭႭ.Ⴍ.Ⴍ(1821394876)) ? 7 : 4);
+					break;
+				case 4:
+					num = ((a == ႭႭ.Ⴍ.Ⴍ(1821394877)) ? 5 : 0);
+					break;
+				case 0:
+					num = ((a == ႭႭ.Ⴍ.Ⴍ(1821394878)) ? 6 : 2);
+					break;
+				case 2:
+					num = 3;
+					break;
+				case 7:
+					return global::ႳႰ.Ⴃ.Ⴐ;
+				case 5:
+					return global::ႳႰ.Ⴃ.Ⴈ;
+				case 6:
+					return global::ႳႰ.Ⴃ.Ⴓ;
+				case 3:
+					throw CreateUnknownConstantException(Ⴀ, typeof(Ⴃ));
+				}
+			}
+		}
+
+		protected override void InitCallbacks()
+		{
+		}
+
+		protected override void InitIDs()
+		{
+			Ⴍ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394855));
+			Ⴓ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394857));
+			Ⴈ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394851));
+			Ⴃ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394864));
+			this.m_Ⴗ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394861));
+			Ⴅ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394865));
+			Ⴐ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394854));
+			Ⴀ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394863));
+			Ⴄ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394871));
+			Ⴜ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394869));
+			ႳႭ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394850));
+			ႳႳ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394862));
+			ႳႨ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394853));
+			ႳႣ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394868));
+			ႳႷ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394860));
+			ႳႥ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394867));
+			ႳႰ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394849));
+			ႳႠ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394859));
+			ႳႤ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394858));
+			ႳႼ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394848));
+			ႨႭ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394870));
+			ႨႳ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394852));
+			ႨႨ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394856));
+			ႨႣ = base.Reader.NameTable.Add(ႭႭ.Ⴍ.Ⴍ(1821394866));
+		}
+	}
+	public class XmlSerializationWriter1 : XmlSerializationWriter
+	{
+		public void Write15_EventProcessorState(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_001d
+			do
+			{
+				WriteStartDocument();
+				if (o != null)
+				{
+					WriteElementString(global::ႭႭ.Ⴍ.Ⴍ(1821394852), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴗ((Ⴃ)o));
+					return;
+				}
+			}
+			while (760 <= 760 - 393);
+			WriteEmptyTag(global::ႭႭ.Ⴍ.Ⴍ(1821394852), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+		}
+
+		public void Write16_ActionProducerComponentsList(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 2 : 0);
+					break;
+				case 0:
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394854), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					return;
+				case 2:
+					TopLevelElement();
+					ႭႳ(global::ႭႭ.Ⴍ.Ⴍ(1821394854), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (ActionProducerComponentsList)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write17_ActionProducerComponent(object o)
+		{
+			int num = 2;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 1 : 0);
+					break;
+				case 0:
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394855), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					return;
+				case 1:
+					TopLevelElement();
+					ႭႤ(global::ႭႭ.Ⴍ.Ⴍ(1821394855), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (ActionProducerComponent)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write18_EventProcessorComponentsList(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_0018
+			do
+			{
+				WriteStartDocument();
+				if (o != null)
+				{
+					TopLevelElement();
+					ႭႭ(global::ႭႭ.Ⴍ.Ⴍ(1821394848), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (EventProcessorComponentsList)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+			}
+			while (false);
+			WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394848), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+		}
+
+		public void Write19_EventProcessorComponent(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_001d
+			WriteStartDocument();
+			if (o == null)
+			{
+				if (625 >= 625 - 226)
+				{
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394849), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+				}
+			}
+			else
+			{
+				TopLevelElement();
+				ႭႠ(global::ႭႭ.Ⴍ.Ⴍ(1821394849), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (EventProcessorComponent)o, Ⴗ: true, Ⴈ: false);
+			}
+		}
+
+		public void Write20_SupportedEventType(object o)
+		{
+			int num = 0;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 1 : 2);
+					break;
+				case 1:
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394850), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					return;
+				case 2:
+					TopLevelElement();
+					Ⴜ(global::ႭႭ.Ⴍ.Ⴍ(1821394850), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (SupportedEventType)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write21_SupportedEventSource(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_001c
+			WriteStartDocument();
+			if (o == null)
+			{
+				if ((139 + 139 * 139) % 2 == 0)
+				{
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394851), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+				}
+			}
+			else
+			{
+				TopLevelElement();
+				Ⴈ(global::ႭႭ.Ⴍ.Ⴍ(1821394851), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (SupportedEventSource)o, Ⴗ: true, Ⴈ: false);
+			}
+		}
+
+		public void Write22_ErrorReportingEngine(object o)
+		{
+			int num = 0;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 1 : 2);
+					break;
+				case 2:
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394860), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					return;
+				case 1:
+					TopLevelElement();
+					Ⴅ(global::ႭႭ.Ⴍ.Ⴍ(1821394860), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (Ⴅ)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write23_Item(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_001d
+			WriteStartDocument();
+			do
+			{
+				if (o != null)
+				{
+					TopLevelElement();
+					Ⴃ(global::ႭႭ.Ⴍ.Ⴍ(1821394861), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (ConstraintsFilterComponentsList)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+			}
+			while (372 <= 372 - 167);
+			WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394861), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+		}
+
+		public void Write24_ConstraintsFilterComponent(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o != null) ? 2 : 0);
+					break;
+				case 0:
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394862), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					return;
+				case 2:
+					TopLevelElement();
+					Ⴗ(global::ႭႭ.Ⴍ.Ⴍ(1821394862), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (ConstraintsFilterComponent)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write25_SystemAndUserState(object o)
+		{
+			int num = 0;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 1 : 2);
+					break;
+				case 1:
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394863), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					return;
+				case 2:
+					TopLevelElement();
+					Ⴓ(global::ႭႭ.Ⴍ.Ⴍ(1821394863), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (Ⴄ)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		public void Write26_NightMuteManager(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_001c
+			do
+			{
+				WriteStartDocument();
+				if (o != null)
+				{
+					TopLevelElement();
+					Ⴄ(global::ႭႭ.Ⴍ.Ⴍ(1821394856), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (Ⴈ)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+			}
+			while (false);
+			WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394856), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+		}
+
+		public void Write27_ActivityLogger(object o)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					WriteStartDocument();
+					num2 = ((o == null) ? 2 : 0);
+					break;
+				case 2:
+					WriteNullTagLiteral(global::ႭႭ.Ⴍ.Ⴍ(1821394857), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					return;
+				case 0:
+					TopLevelElement();
+					Ⴍ(global::ႭႭ.Ⴍ.Ⴍ(1821394857), global::ႭႭ.Ⴍ.Ⴍ(1821394853), (Ⴀ)o, Ⴗ: true, Ⴈ: false);
+					return;
+				}
+				num = num2;
+			}
+		}
+
+		private void Ⴍ(string Ⴃ, string Ⴀ, Ⴀ Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			int num = 7;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((Ⴄ != null) ? 3 : 4);
+					continue;
+				case 4:
+					num = (Ⴗ ? 6 : 0);
+					continue;
+				case 6:
+					WriteNullTagLiteral(Ⴃ, Ⴀ);
+					return;
+				case 3:
+					num = (Ⴈ ? 5 : 2);
+					continue;
+				case 2:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type != typeof(Ⴀ)) ? 1 : 5);
+					continue;
+				}
+				case 1:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 5:
+					WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+					num = ((!Ⴈ) ? 9 : 8);
+					continue;
+				case 8:
+					WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394857), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					break;
+				case 9:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴄ);
+		}
+
+		private void Ⴄ(string Ⴃ, string Ⴀ, Ⴈ Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			int num = 5;
+			while (true)
+			{
+				switch (num)
+				{
+				case 8:
+					return;
+				default:
+					num = ((Ⴄ != null) ? 1 : 9);
+					continue;
+				case 9:
+					num = ((!Ⴗ) ? 8 : 6);
+					continue;
+				case 6:
+					WriteNullTagLiteral(Ⴃ, Ⴀ);
+					return;
+				case 1:
+					num = (Ⴈ ? 2 : 7);
+					continue;
+				case 7:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type == typeof(Ⴈ)) ? 2 : 0);
+					continue;
+				}
+				case 0:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 2:
+					WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+					num = ((!Ⴈ) ? 3 : 4);
+					continue;
+				case 4:
+					WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394856), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					break;
+				case 3:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴄ);
+		}
+
+		private void Ⴓ(string Ⴃ, string Ⴀ, Ⴄ Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001b, IL_0040, IL_0059, IL_006c, IL_0091, IL_00bf, IL_00ea
+			Type type = default(Type);
+			while (true)
+			{
+				if (Ⴄ == null)
+				{
+					if ((6 + 6 * 6) % 2 == 0)
+					{
+						goto IL_0007;
+					}
+				}
+				else if (!Ⴈ)
+				{
+					if ((971 + 971 * 971) % 2 == 0)
+					{
+						type = Ⴄ.GetType();
+						goto IL_0075;
+					}
+					goto IL_0007;
+				}
+				goto IL_001e;
+				IL_0007:
+				if (!Ⴗ)
+				{
+					return;
+				}
+				if (410 >= 410 - 236)
+				{
+					WriteNullTagLiteral(Ⴃ, Ⴀ);
+					if ((282 + 282 * 282) % 2 == 0)
+					{
+					}
+					return;
+				}
+				continue;
+				IL_001e:
+				WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+				if (!Ⴈ)
+				{
+					break;
+				}
+				if (458 < 458 - 278)
+				{
+					continue;
+				}
+				WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394863), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+				if ((275 + 275 * 275) % 2 == 0)
+				{
+					break;
+				}
+				goto IL_0075;
+				IL_0075:
+				while ((object)type != typeof(Ⴄ))
+				{
+					if (false)
+					{
+						continue;
+					}
+					throw CreateUnknownTypeException(Ⴄ);
+				}
+				goto IL_001e;
+			}
+			WriteEndElement(Ⴄ);
+		}
+
+		private void Ⴗ(string Ⴃ, string Ⴀ, ConstraintsFilterComponent Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001a, IL_0041, IL_005e, IL_0075, IL_009e, IL_00cd, IL_0180
+			if (Ⴄ == null)
+			{
+				if ((870 + 870 * 870) % 2 == 0 && Ⴗ)
+				{
+					if ((801 + 801 * 801) % 2 == 0)
+					{
+					}
+					goto IL_0046;
+				}
+				return;
+			}
+			goto IL_0164;
+			IL_0046:
+			WriteNullTagLiteral(Ⴃ, Ⴀ);
+			if (325 > 325 - 283)
+			{
+				return;
+			}
+			goto IL_007e;
+			IL_0114:
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394868), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.AssemblyPath);
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394869), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.ObjectName);
+			WriteEndElement(Ⴄ);
+			return;
+			IL_007e:
+			Type type = default(Type);
+			if ((object)type == typeof(ConstraintsFilterComponent))
+			{
+				goto IL_001d;
+			}
+			if (897 <= 897 - 378)
+			{
+				goto IL_0114;
+			}
+			throw CreateUnknownTypeException(Ⴄ);
+			IL_0164:
+			if (Ⴈ)
+			{
+				goto IL_001d;
+			}
+			if ((256 + 256 * 256) % 2 == 0)
+			{
+				type = Ⴄ.GetType();
+				goto IL_007e;
+			}
+			goto IL_0046;
+			IL_001d:
+			while (true)
+			{
+				WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+				if (!Ⴈ)
+				{
+					break;
+				}
+				if (false)
+				{
+					goto IL_0164;
+				}
+				WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394862), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+				if (647 > 647 - 342)
+				{
+					break;
+				}
+			}
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394858), global::ႭႭ.Ⴍ.Ⴍ(1821394853), XmlConvert.ToString(Ⴄ.ID));
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394859), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.Name);
+			goto IL_0114;
+		}
+
+		private void Ⴃ(string Ⴃ, string Ⴀ, ConstraintsFilterComponentsList Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0041, IL_0070, IL_008e, IL_00b7, IL_00e9, IL_0100, IL_011f, IL_0134, IL_0156, IL_0174, IL_0194, IL_01bc
+			if (Ⴄ == null)
+			{
+				if (276 < 276 - 253)
+				{
+					goto IL_0098;
+				}
+				goto IL_0121;
+			}
+			if (!Ⴈ)
+			{
+				if (912 < 912 - 305)
+				{
+					goto IL_0098;
+				}
+				Type type = Ⴄ.GetType();
+				if ((object)type != typeof(ConstraintsFilterComponentsList))
+				{
+					if (843 < 843 - 838)
+					{
+						goto IL_0121;
+					}
+					goto IL_01c1;
+				}
+			}
+			WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+			while (Ⴈ)
+			{
+				if (337 <= 337 - 3)
+				{
+					continue;
+				}
+				goto IL_00bc;
+			}
+			goto IL_0136;
+			IL_00bc:
+			WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394861), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+			if (504 > 504 - 478)
+			{
+				goto IL_0136;
+			}
+			goto IL_01c1;
+			IL_0136:
+			List<ConstraintsFilterComponent> constraintsFilterComponents = Ⴄ.ConstraintsFilterComponents;
+			if (constraintsFilterComponents == null)
+			{
+				goto IL_0090;
+			}
+			if (425 < 425 - 252)
+			{
+				goto IL_0007;
+			}
+			goto IL_0199;
+			IL_0007:
+			int num = default(int);
+			this.Ⴗ(global::ႭႭ.Ⴍ.Ⴍ(1821394862), global::ႭႭ.Ⴍ.Ⴍ(1821394853), constraintsFilterComponents[num], Ⴗ: true, Ⴈ: false);
+			num++;
+			if (762 >= 762 - 157)
+			{
+				goto IL_0098;
+			}
+			goto IL_01c1;
+			IL_0098:
+			if (num < ((ICollection)constraintsFilterComponents).Count)
+			{
+				goto IL_0007;
+			}
+			if (422 <= 422 - 372)
+			{
+				goto IL_0121;
+			}
+			WriteEndElement();
+			if (991 > 991 - 382)
+			{
+				goto IL_0090;
+			}
+			goto IL_01c1;
+			IL_0199:
+			WriteStartElement(global::ႭႭ.Ⴍ.Ⴍ(1821394870), global::ႭႭ.Ⴍ.Ⴍ(1821394853), null, writePrefixed: false);
+			num = 0;
+			goto IL_0098;
+			IL_01c1:
+			throw CreateUnknownTypeException(Ⴄ);
+			IL_0121:
+			if (!Ⴗ)
+			{
+				return;
+			}
+			if ((882 + 882 * 882) % 2 == 0)
+			{
+				do
+				{
+					WriteNullTagLiteral(Ⴃ, Ⴀ);
+				}
+				while (false);
+				return;
+			}
+			goto IL_0199;
+			IL_0090:
+			WriteEndElement(Ⴄ);
+		}
+
+		private void Ⴅ(string Ⴃ, string Ⴀ, Ⴅ Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0017, IL_003f, IL_005c, IL_0077, IL_009d, IL_00c8, IL_00f7
+			Type type = default(Type);
+			while (true)
+			{
+				if (Ⴄ == null)
+				{
+					if (474 <= 474 - 253)
+					{
+						goto IL_001a;
+					}
+					if (!Ⴗ)
+					{
+						return;
+					}
+					if ((63 + 63 * 63) % 2 == 0)
+					{
+						WriteNullTagLiteral(Ⴃ, Ⴀ);
+						if (330 >= 330 - 197)
+						{
+							return;
+						}
+						goto IL_0080;
+					}
+				}
+				else
+				{
+					if (Ⴈ)
+					{
+						goto IL_001a;
+					}
+					if (881 <= 881 - 856)
+					{
+						return;
+					}
+				}
+				goto IL_0079;
+				IL_0080:
+				if ((object)type == typeof(Ⴅ))
+				{
+					goto IL_001a;
+				}
+				if (888 > 888 - 668)
+				{
+					break;
+				}
+				goto IL_0079;
+				IL_001a:
+				WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+				while (true)
+				{
+					if (Ⴈ)
+					{
+						if (535 <= 535 - 178)
+						{
+							continue;
+						}
+						WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394860), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+						if (false)
+						{
+							break;
+						}
+					}
+					WriteEndElement(Ⴄ);
+					return;
+				}
+				continue;
+				IL_0079:
+				type = Ⴄ.GetType();
+				goto IL_0080;
+			}
+			throw CreateUnknownTypeException(Ⴄ);
+		}
+
+		private void Ⴈ(string Ⴃ, string Ⴀ, SupportedEventSource Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			//Discarded unreachable code: IL_0018, IL_0040, IL_0060, IL_007b, IL_00a1, IL_00cd, IL_011e
+			if (Ⴄ == null)
+			{
+				if (607 >= 607 - 273)
+				{
+					if (!Ⴗ)
+					{
+						return;
+					}
+					if ((414 + 414 * 414) % 2 == 0)
+					{
+						WriteNullTagLiteral(Ⴃ, Ⴀ);
+						if (473 > 473 - 440)
+						{
+							return;
+						}
+					}
+					goto IL_00fc;
+				}
+			}
+			else
+			{
+				if (Ⴈ)
+				{
+					goto IL_001b;
+				}
+				if (363 < 363 - 305)
+				{
+					return;
+				}
+			}
+			goto IL_007d;
+			IL_00fc:
+			throw CreateUnknownTypeException(Ⴄ);
+			IL_001b:
+			WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+			if (Ⴈ)
+			{
+				if (846 <= 846 - 504)
+				{
+					goto IL_007d;
+				}
+				WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394851), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+				if (979 <= 979 - 477)
+				{
+					goto IL_0084;
+				}
+			}
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394858), global::ႭႭ.Ⴍ.Ⴍ(1821394853), XmlConvert.ToString(Ⴄ.ID));
+			WriteEndElement(Ⴄ);
+			return;
+			IL_0084:
+			Type type = default(Type);
+			if ((object)type == typeof(SupportedEventSource))
+			{
+				goto IL_001b;
+			}
+			if (470 <= 470 - 392)
+			{
+				return;
+			}
+			goto IL_00fc;
+			IL_007d:
+			type = Ⴄ.GetType();
+			goto IL_0084;
+		}
+
+		private void Ⴜ(string Ⴃ, string Ⴀ, SupportedEventType Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			int num = 3;
+			while (true)
+			{
+				switch (num)
+				{
+				case 6:
+					return;
+				default:
+					num = ((Ⴄ == null) ? 1 : 2);
+					continue;
+				case 1:
+					num = ((!Ⴗ) ? 6 : 9);
+					continue;
+				case 9:
+					WriteNullTagLiteral(Ⴃ, Ⴀ);
+					return;
+				case 2:
+					num = (Ⴈ ? 7 : 8);
+					continue;
+				case 8:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type == typeof(SupportedEventType)) ? 7 : 4);
+					continue;
+				}
+				case 4:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 7:
+					WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+					num = ((!Ⴈ) ? 5 : 0);
+					continue;
+				case 0:
+					WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394850), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					break;
+				case 5:
+					break;
+				}
+				break;
+			}
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394858), global::ႭႭ.Ⴍ.Ⴍ(1821394853), XmlConvert.ToString(Ⴄ.ID));
+			WriteEndElement(Ⴄ);
+		}
+
+		private void ႭႠ(string Ⴃ, string Ⴀ, EventProcessorComponent Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			int num = 15;
+			List<SupportedEventType> supportedEventTypes = default(List<SupportedEventType>);
+			int num3 = default(int);
+			List<SupportedEventSource> supportedEventSources = default(List<SupportedEventSource>);
+			int num2 = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((Ⴄ != null) ? 2 : 10);
+					continue;
+				case 10:
+					num = (Ⴗ ? 17 : 0);
+					continue;
+				case 17:
+					WriteNullTagLiteral(Ⴃ, Ⴀ);
+					return;
+				case 2:
+					num = (Ⴈ ? 8 : 3);
+					continue;
+				case 3:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type == typeof(EventProcessorComponent)) ? 8 : 4);
+					continue;
+				}
+				case 4:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 8:
+					WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+					num = ((!Ⴈ) ? 11 : 9);
+					continue;
+				case 9:
+					WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394849), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					goto case 11;
+				case 11:
+					WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394858), global::ႭႭ.Ⴍ.Ⴍ(1821394853), XmlConvert.ToString(Ⴄ.ID));
+					WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394859), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.Name);
+					WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394868), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.AssemblyPath);
+					WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394869), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.ObjectName);
+					supportedEventTypes = Ⴄ.SupportedEventTypes;
+					num = ((supportedEventTypes == null) ? 19 : 12);
+					continue;
+				case 12:
+					WriteStartElement(global::ႭႭ.Ⴍ.Ⴍ(1821394871), global::ႭႭ.Ⴍ.Ⴍ(1821394853), null, writePrefixed: false);
+					num3 = 0;
+					num = 7;
+					continue;
+				case 16:
+					Ⴜ(global::ႭႭ.Ⴍ.Ⴍ(1821394850), global::ႭႭ.Ⴍ.Ⴍ(1821394853), supportedEventTypes[num3], Ⴗ: true, Ⴈ: false);
+					num3++;
+					num = 7;
+					continue;
+				case 7:
+					num = ((num3 < ((ICollection)supportedEventTypes).Count) ? 16 : 6);
+					continue;
+				case 6:
+					WriteEndElement();
+					goto case 19;
+				case 19:
+					supportedEventSources = Ⴄ.SupportedEventSources;
+					num = ((supportedEventSources == null) ? 13 : 5);
+					continue;
+				case 5:
+					WriteStartElement(global::ႭႭ.Ⴍ.Ⴍ(1821394864), global::ႭႭ.Ⴍ.Ⴍ(1821394853), null, writePrefixed: false);
+					num2 = 0;
+					num = 14;
+					continue;
+				case 1:
+					this.Ⴈ(global::ႭႭ.Ⴍ.Ⴍ(1821394851), global::ႭႭ.Ⴍ.Ⴍ(1821394853), supportedEventSources[num2], Ⴗ: true, Ⴈ: false);
+					num2++;
+					num = 14;
+					continue;
+				case 14:
+					num = ((num2 < ((ICollection)supportedEventSources).Count) ? 1 : 18);
+					continue;
+				case 18:
+					WriteEndElement();
+					break;
+				case 13:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴄ);
+		}
+
+		private void ႭႭ(string Ⴃ, string Ⴀ, EventProcessorComponentsList Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			int num = 11;
+			List<EventProcessorComponent> eventProcessorComponents = default(List<EventProcessorComponent>);
+			int num2 = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				case 13:
+					return;
+				default:
+					num = ((Ⴄ != null) ? 12 : 2);
+					continue;
+				case 2:
+					num = ((!Ⴗ) ? 13 : 8);
+					continue;
+				case 8:
+					WriteNullTagLiteral(Ⴃ, Ⴀ);
+					return;
+				case 12:
+					num = (Ⴈ ? 9 : 4);
+					continue;
+				case 4:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type == typeof(EventProcessorComponentsList)) ? 9 : 10);
+					continue;
+				}
+				case 10:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 9:
+					WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+					num = (Ⴈ ? 1 : 0);
+					continue;
+				case 1:
+					WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394848), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					goto case 0;
+				case 0:
+					eventProcessorComponents = Ⴄ.EventProcessorComponents;
+					num = ((eventProcessorComponents == null) ? 14 : 5);
+					continue;
+				case 5:
+					WriteStartElement(global::ႭႭ.Ⴍ.Ⴍ(1821394865), global::ႭႭ.Ⴍ.Ⴍ(1821394853), null, writePrefixed: false);
+					num2 = 0;
+					num = 6;
+					continue;
+				case 7:
+					ႭႠ(global::ႭႭ.Ⴍ.Ⴍ(1821394849), global::ႭႭ.Ⴍ.Ⴍ(1821394853), eventProcessorComponents[num2], Ⴗ: true, Ⴈ: false);
+					num2++;
+					num = 6;
+					continue;
+				case 6:
+					num = ((num2 < ((ICollection)eventProcessorComponents).Count) ? 7 : 3);
+					continue;
+				case 3:
+					WriteEndElement();
+					break;
+				case 14:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴄ);
+		}
+
+		private void ႭႤ(string Ⴃ, string Ⴀ, ActionProducerComponent Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			int num = 4;
+			while (true)
+			{
+				switch (num)
+				{
+				case 5:
+					return;
+				default:
+					num = ((Ⴄ != null) ? 1 : 6);
+					continue;
+				case 6:
+					num = ((!Ⴗ) ? 5 : 7);
+					continue;
+				case 7:
+					WriteNullTagLiteral(Ⴃ, Ⴀ);
+					return;
+				case 1:
+					num = (Ⴈ ? 2 : 8);
+					continue;
+				case 8:
+				{
+					Type type = Ⴄ.GetType();
+					num = (((object)type == typeof(ActionProducerComponent)) ? 2 : 3);
+					continue;
+				}
+				case 3:
+					throw CreateUnknownTypeException(Ⴄ);
+				case 2:
+					WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+					num = ((!Ⴈ) ? 9 : 0);
+					continue;
+				case 0:
+					WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394855), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+					break;
+				case 9:
+					break;
+				}
+				break;
+			}
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394858), global::ႭႭ.Ⴍ.Ⴍ(1821394853), XmlConvert.ToString(Ⴄ.ID));
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394859), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.Name);
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394868), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.AssemblyPath);
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394869), global::ႭႭ.Ⴍ.Ⴍ(1821394853), Ⴄ.ObjectName);
+			WriteAttribute(global::ႭႭ.Ⴍ.Ⴍ(1821394866), global::ႭႭ.Ⴍ.Ⴍ(1821394853), XmlConvert.ToString(Ⴄ.Priority));
+			WriteEndElement(Ⴄ);
+		}
+
+		private void ႭႳ(string Ⴃ, string Ⴀ, ActionProducerComponentsList Ⴄ, bool Ⴗ, bool Ⴈ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0041, IL_006f, IL_0090, IL_00bc, IL_00eb, IL_0105, IL_011a, IL_0133, IL_0152, IL_0173, IL_01bd
+			if (Ⴄ == null)
+			{
+				if (582 >= 582 - 284)
+				{
+					if (!Ⴗ)
+					{
+						return;
+					}
+					if (843 > 843 - 611)
+					{
+						WriteNullTagLiteral(Ⴃ, Ⴀ);
+						if ((116 + 116 * 116) % 2 == 0)
+						{
+							return;
+						}
+					}
+					goto IL_0007;
+				}
+			}
+			if (!Ⴈ)
+			{
+				if (false)
+				{
+					goto IL_0157;
+				}
+				Type type = Ⴄ.GetType();
+				if ((object)type != typeof(ActionProducerComponentsList))
+				{
+					if (false)
+					{
+						goto IL_0095;
+					}
+					throw CreateUnknownTypeException(Ⴄ);
+				}
+			}
+			WriteStartElement(Ⴃ, Ⴀ, Ⴄ, writePrefixed: false, null);
+			if (Ⴈ)
+			{
+				if (223 < 223 - 95)
+				{
+					return;
+				}
+				goto IL_00c1;
+			}
+			goto IL_0135;
+			IL_00c1:
+			do
+			{
+				WriteXsiType(global::ႭႭ.Ⴍ.Ⴍ(1821394854), global::ႭႭ.Ⴍ.Ⴍ(1821394853));
+			}
+			while (999 < 999 - 423);
+			goto IL_0135;
+			IL_0007:
+			List<ActionProducerComponent> actionProducerComponents = default(List<ActionProducerComponent>);
+			int num = default(int);
+			ႭႤ(global::ႭႭ.Ⴍ.Ⴍ(1821394855), global::ႭႭ.Ⴍ.Ⴍ(1821394853), actionProducerComponents[num], Ⴗ: true, Ⴈ: false);
+			goto IL_002a;
+			IL_0135:
+			actionProducerComponents = Ⴄ.ActionProducerComponents;
+			if (actionProducerComponents == null)
+			{
+				goto IL_0095;
+			}
+			if (638 <= 638 - 42)
+			{
+				goto IL_00c1;
+			}
+			goto IL_019a;
+			IL_002a:
+			num++;
+			if (644 > 644 - 158)
+			{
+				goto IL_009d;
+			}
+			goto IL_019a;
+			IL_0157:
+			WriteEndElement();
+			if (792 < 792 - 226)
+			{
+				goto IL_002a;
+			}
+			goto IL_0095;
+			IL_019a:
+			WriteStartElement(global::ႭႭ.Ⴍ.Ⴍ(1821394867), global::ႭႭ.Ⴍ.Ⴍ(1821394853), null, writePrefixed: false);
+			num = 0;
+			goto IL_009d;
+			IL_009d:
+			while (num >= ((ICollection)actionProducerComponents).Count)
+			{
+				if (601 >= 601 - 14)
+				{
+					goto IL_0157;
+				}
+			}
+			goto IL_0007;
+			IL_0095:
+			WriteEndElement(Ⴄ);
+		}
+
+		private string Ⴗ(Ⴃ Ⴃ)
+		{
+			int num = 5;
+			string result = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				case 4:
+					num = 3;
+					continue;
+				case 1:
+					result = global::ႭႭ.Ⴍ.Ⴍ(1821394876);
+					num = 0;
+					continue;
+				case 6:
+					result = global::ႭႭ.Ⴍ.Ⴍ(1821394877);
+					num = 0;
+					continue;
+				case 2:
+					result = global::ႭႭ.Ⴍ.Ⴍ(1821394878);
+					num = 0;
+					continue;
+				case 3:
+					throw CreateInvalidEnumValueException(((long)Ⴃ).ToString(CultureInfo.InvariantCulture), global::ႭႭ.Ⴍ.Ⴍ(1821394879));
+				case 0:
+					return result;
+				}
+				result = null;
+				int num2;
+				switch (Ⴃ)
+				{
+				default:
+					num2 = 4;
+					break;
+				case ႳႰ.Ⴃ.Ⴐ:
+					num2 = 1;
+					break;
+				case ႳႰ.Ⴃ.Ⴈ:
+					num2 = 6;
+					break;
+				case ႳႰ.Ⴃ.Ⴓ:
+					num2 = 2;
+					break;
+				}
+				num = num2;
+			}
+		}
+
+		protected override void InitCallbacks()
+		{
+		}
+	}
+	public abstract class XmlSerializer1 : XmlSerializer
+	{
+		protected override XmlSerializationReader CreateReader()
+		{
+			return new XmlSerializationReader1();
+		}
+
+		protected override XmlSerializationWriter CreateWriter()
+		{
+			return new XmlSerializationWriter1();
+		}
+	}
+	public class XmlSerializerContract : XmlSerializerImplementation
+	{
+		private Hashtable Ⴍ;
+
+		private Hashtable Ⴓ;
+
+		private Hashtable Ⴈ;
+
+		public override XmlSerializationReader Reader => new XmlSerializationReader1();
+
+		public override XmlSerializationWriter Writer => new XmlSerializationWriter1();
+
+		public override Hashtable ReadMethods
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_0021, IL_0043, IL_01bb
+				if (Ⴍ != null)
+				{
+					goto IL_0026;
+				}
+				if ((947 + 947 * 947) % 2 == 0)
+				{
+					goto IL_0045;
+				}
+				goto IL_0135;
+				IL_0026:
+				return Ⴍ;
+				IL_0045:
+				Hashtable hashtable = new Hashtable();
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394836)] = ႭႭ.Ⴍ.Ⴍ(1821394837);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394838)] = ႭႭ.Ⴍ.Ⴍ(1821394832);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394833)] = ႭႭ.Ⴍ.Ⴍ(1821394835);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394844)] = ႭႭ.Ⴍ.Ⴍ(1821394845);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394846)] = ႭႭ.Ⴍ.Ⴍ(1821394847);
+				goto IL_00cd;
+				IL_00cd:
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394840)] = ႭႭ.Ⴍ.Ⴍ(1821394841);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394842)] = ႭႭ.Ⴍ.Ⴍ(1821394843);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394916)] = ႭႭ.Ⴍ.Ⴍ(1821394917);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394918)] = ႭႭ.Ⴍ.Ⴍ(1821394919);
+				goto IL_0135;
+				IL_0135:
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394912)] = ႭႭ.Ⴍ.Ⴍ(1821394913);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394914)] = ႭႭ.Ⴍ.Ⴍ(1821394915);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394924)] = ႭႭ.Ⴍ.Ⴍ(1821394925);
+				hashtable[ႭႭ.Ⴍ.Ⴍ(1821394926)] = ႭႭ.Ⴍ.Ⴍ(1821394927);
+				if (Ⴍ == null)
+				{
+					if (654 < 654 - 73)
+					{
+						goto IL_00cd;
+					}
+					Ⴍ = hashtable;
+					if (false)
+					{
+						goto IL_0045;
+					}
+				}
+				goto IL_0026;
+			}
+		}
+
+		public override Hashtable WriteMethods
+		{
+			get
+			{
+				int num = 0;
+				Hashtable hashtable = default(Hashtable);
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = ((Ⴓ == null) ? 1 : 3);
+						break;
+					case 1:
+						hashtable = new Hashtable();
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394836)] = ႭႭ.Ⴍ.Ⴍ(1821394839);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394838)] = ႭႭ.Ⴍ.Ⴍ(1821394834);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394833)] = ႭႭ.Ⴍ.Ⴍ(1821394920);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394844)] = ႭႭ.Ⴍ.Ⴍ(1821394921);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394846)] = ႭႭ.Ⴍ.Ⴍ(1821394922);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394840)] = ႭႭ.Ⴍ.Ⴍ(1821394923);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394842)] = ႭႭ.Ⴍ.Ⴍ(1821394932);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394916)] = ႭႭ.Ⴍ.Ⴍ(1821394933);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394918)] = ႭႭ.Ⴍ.Ⴍ(1821394934);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394912)] = ႭႭ.Ⴍ.Ⴍ(1821394935);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394914)] = ႭႭ.Ⴍ.Ⴍ(1821394928);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394924)] = ႭႭ.Ⴍ.Ⴍ(1821394929);
+						hashtable[ႭႭ.Ⴍ.Ⴍ(1821394926)] = ႭႭ.Ⴍ.Ⴍ(1821394930);
+						num = ((Ⴓ != null) ? 3 : 2);
+						break;
+					case 2:
+						Ⴓ = hashtable;
+						num = 3;
+						break;
+					case 3:
+						return Ⴓ;
+					}
+				}
+			}
+		}
+
+		public override Hashtable TypedSerializers
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_001f, IL_003b, IL_0177
+				if (Ⴈ != null)
+				{
+					goto IL_0021;
+				}
+				if (309 <= 309 - 277)
+				{
+					goto IL_0028;
+				}
+				Hashtable hashtable = new Hashtable();
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394924), new NightMuteManagerSerializer());
+				goto IL_005b;
+				IL_0021:
+				return Ⴈ;
+				IL_0028:
+				Ⴈ = hashtable;
+				if ((73 + 73 * 73) % 2 == 0)
+				{
+					goto IL_0021;
+				}
+				goto IL_005b;
+				IL_005b:
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394836), new EventProcessorStateSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394918), new ConstraintsFilterComponentsListSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394914), new SystemAndUserStateSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394912), new ConstraintsFilterComponentSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394833), new ActionProducerComponentSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394842), new SupportedEventSourceSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394838), new ActionProducerComponentsListSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394840), new SupportedEventTypeSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394844), new EventProcessorComponentsListSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394916), new ErrorReportingEngineSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394846), new EventProcessorComponentSerializer());
+				hashtable.Add(ႭႭ.Ⴍ.Ⴍ(1821394926), new ActivityLoggerSerializer());
+				if (Ⴈ == null)
+				{
+					if ((620 + 620 * 620) % 2 == 0)
+					{
+						goto IL_0028;
+					}
+				}
+				goto IL_0021;
+			}
+		}
+
+		public override bool CanSerialize(Type type)
+		{
+			//Discarded unreachable code: IL_0002, IL_002f, IL_0057, IL_007e, IL_00a0, IL_00c2, IL_00e1, IL_010e, IL_0132, IL_0158, IL_017d, IL_01a1, IL_01cc, IL_01f6
+			while (true)
+			{
+				if ((object)type == typeof(Ⴃ))
+				{
+					if ((968 + 968 * 968) % 2 == 0)
+					{
+						return true;
+					}
+					goto IL_00e7;
+				}
+				if ((object)type == typeof(ActionProducerComponentsList))
+				{
+					if (285 >= 285 - 30)
+					{
+						return true;
+					}
+					goto IL_01a5;
+				}
+				if ((object)type != typeof(ActionProducerComponent))
+				{
+					if ((object)type != typeof(EventProcessorComponentsList))
+					{
+						goto IL_00c4;
+					}
+					if ((478 + 478 * 478) % 2 == 0)
+					{
+						return true;
+					}
+				}
+				else if ((1000 + 1000 * 1000) % 2 == 0)
+				{
+					goto IL_00e9;
+				}
+				goto IL_015a;
+				IL_0110:
+				if ((object)type == typeof(Ⴀ))
+				{
+					if (false)
+					{
+						goto IL_0034;
+					}
+					return true;
+				}
+				goto IL_00ed;
+				IL_0009:
+				if ((object)type == typeof(Ⴈ))
+				{
+					if (383 < 383 - 354)
+					{
+						break;
+					}
+					return true;
+				}
+				goto IL_0110;
+				IL_00c4:
+				if ((object)type == typeof(EventProcessorComponent))
+				{
+					if (326 <= 326 - 52)
+					{
+						goto IL_00e9;
+					}
+					return true;
+				}
+				goto IL_015a;
+				IL_00e9:
+				return true;
+				IL_015a:
+				if ((object)type == typeof(SupportedEventType))
+				{
+					if (544 <= 544 - 382)
+					{
+						goto IL_0009;
+					}
+					goto IL_00e7;
+				}
+				if ((object)type != typeof(SupportedEventSource))
+				{
+					if ((object)type != typeof(Ⴅ))
+					{
+						if ((object)type == typeof(ConstraintsFilterComponentsList))
+						{
+							if (944 > 944 - 604)
+							{
+								return true;
+							}
+						}
+						else
+						{
+							if ((object)type != typeof(ConstraintsFilterComponent))
+							{
+								if ((object)type != typeof(Ⴄ))
+								{
+									goto IL_0009;
+								}
+								if (716 <= 716 - 490)
+								{
+									goto IL_0110;
+								}
+								goto IL_01a5;
+							}
+							if ((22 + 22 * 22) % 2 == 0)
+							{
+								break;
+							}
+						}
+						goto IL_00ed;
+					}
+					if ((476 + 476 * 476) % 2 == 0)
+					{
+						return true;
+					}
+					goto IL_00c4;
+				}
+				if (264 <= 264 - 188)
+				{
+					continue;
+				}
+				goto IL_0034;
+				IL_01a5:
+				return true;
+				IL_0034:
+				return true;
+				IL_00e7:
+				return true;
+				IL_00ed:
+				return false;
+			}
+			return true;
+		}
+
+		public override XmlSerializer GetSerializer(Type type)
+		{
+			//Discarded unreachable code: IL_0002, IL_0030, IL_0086, IL_00a8, IL_00cc, IL_00ed, IL_0134, IL_0150, IL_017d, IL_01a8, IL_01d0, IL_0206, IL_0234
+			if ((object)type == typeof(Ⴃ))
+			{
+				if (false)
+				{
+					goto IL_005d;
+				}
+			}
+			else
+			{
+				while ((object)type != typeof(ActionProducerComponentsList))
+				{
+					if ((object)type != typeof(ActionProducerComponent))
+					{
+						if ((object)type == typeof(EventProcessorComponentsList))
+						{
+							goto IL_0168;
+						}
+					}
+					else if (557 > 557 - 298)
+					{
+						return new ActionProducerComponentSerializer();
+					}
+					if ((object)type == typeof(EventProcessorComponent))
+					{
+						if (false)
+						{
+							goto IL_010f;
+						}
+						return new EventProcessorComponentSerializer();
+					}
+					if ((object)type == typeof(SupportedEventType))
+					{
+						goto IL_0192;
+					}
+					if ((object)type != typeof(SupportedEventSource))
+					{
+						if ((object)type != typeof(Ⴅ))
+						{
+							goto IL_0088;
+						}
+						if (false)
+						{
+							continue;
+						}
+						goto IL_00f5;
+					}
+					goto IL_021e;
+					IL_0088:
+					if ((object)type == typeof(ConstraintsFilterComponentsList))
+					{
+						if (873 < 873 - 171)
+						{
+							continue;
+						}
+						goto IL_005d;
+					}
+					goto IL_010f;
+					IL_010f:
+					if ((object)type != typeof(ConstraintsFilterComponent))
+					{
+						goto IL_0063;
+					}
+					if (false)
+					{
+						goto IL_0088;
+					}
+					return new ConstraintsFilterComponentSerializer();
+				}
+				if ((635 + 635 * 635) % 2 == 0)
+				{
+					return new ActionProducerComponentsListSerializer();
+				}
+			}
+			goto IL_003b;
+			IL_005d:
+			return new ConstraintsFilterComponentsListSerializer();
+			IL_0035:
+			return new SupportedEventSourceSerializer();
+			IL_021e:
+			if (645 > 645 - 279)
+			{
+				goto IL_0035;
+			}
+			goto IL_003b;
+			IL_00fb:
+			return new SupportedEventTypeSerializer();
+			IL_003b:
+			return new EventProcessorStateSerializer();
+			IL_00f5:
+			return new ErrorReportingEngineSerializer();
+			IL_0063:
+			if ((object)type != typeof(Ⴄ))
+			{
+				if ((object)type == typeof(Ⴈ))
+				{
+					if (385 <= 385 - 111)
+					{
+						goto IL_00fb;
+					}
+					return new NightMuteManagerSerializer();
+				}
+				if ((object)type == typeof(Ⴀ))
+				{
+					if (83 >= 83 - 44)
+					{
+						return new ActivityLoggerSerializer();
+					}
+					goto IL_00f5;
+				}
+			}
+			else if (631 >= 631 - 598)
+			{
+				return new SystemAndUserStateSerializer();
+			}
+			return null;
+			IL_0192:
+			if (273 < 273 - 158)
+			{
+				goto IL_003b;
+			}
+			goto IL_00fb;
+			IL_0168:
+			if ((786 + 786 * 786) % 2 == 0)
+			{
+				return new EventProcessorComponentsListSerializer();
+			}
+			goto IL_0035;
+		}
+	}
+}
+namespace ႭႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] Ⴓ;
+
+		private static readonly string[] Ⴓ;
+
+		internal static string Ⴍ(int Ⴀ)
+		{
+			int num = Ⴀ ^ 0x6C9047A4;
+			string result;
+			if ((result = Ⴓ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "\u059dբछףೡఫ\u0df7ढ\u05bbձऍ\u05fe\u0cfaఉ\u0dd6ह\u05b9ՠछ";
+				break;
+			case 1:
+				obj = "";
+				break;
+			case 2:
+				obj = "\u093f\u05eeೡఒ෪णֈզऑשೠఘ\u0de0\u093f\u059bջओ\u05fd\u0cfaక\u0de0ण\u05acէलפ೦ఏ";
+				break;
+			case 3:
+				obj = "\u05cc\u0cf6ఏ෬ढ\u05b6Մऌעೱఎ෦न\u05aa\u0557ऑנ\u0ce5ఔ෫न\u05b6ՠ";
+				break;
+			case 4:
+				obj = "\u0cd0\u0c0d\u0de0ण\u05acՄऌע\u0cf6ఞ\u0df6\u093e\u05b7զऽע\u0cf8ఋ෪ण\u05bdպऊ\u05fe\u0cd9ఒ\u0df6ह";
+				break;
+			case 5:
+				obj = "\u0c3e\u0df3न\u05b6ՠम\u05ff\u0cfaఘ\u0de0\u093e\u05abջऌ\u05ce\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9";
+				break;
+			case 6:
+				obj = "\u0dd6स\u05a8դऑ\u05ffೡఞ\u0de1ई\u05aeձऐ\u05f9\u0cc1\u0c02\u0df5न";
+				break;
+			case 7:
+				obj = "ञ\u05adդऎע೧ఏ\u0de0ऩ\u059dբछףೡన෪स\u05aaշछ";
+				break;
+			case 8:
+				obj = "\u059dզऌע೧\u0c29\u0de0ऽ\u05b7զऊפ\u0cfbజවण\u05bfսऐר";
+				break;
+			case 9:
+				obj = "\u0557ऑף೦ఏ\u0df7ब\u05b1պऊ\u05fe\u0cd3ఒ෩ह\u05bdզऽע\u0cf8ఋ෪ण\u05bdպऊ\u05fe\u0cd9ఒ\u0df6ह";
+				break;
+			case 10:
+				obj = "ऽע\u0cfbఈ\u0df1\u093f\u05b9սऐ\u05f9೦ఽ෬ड\u05acձऌ\u05ce\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9";
+				break;
+			case 11:
+				obj = "מ೬ఈ\u0df1न\u05b5Օऐש\u0cc0ఈ\u0de0\u093f\u058bՠट\u05f9\u0cf0";
+				break;
+			case 12:
+				obj = "\u0cdbఒ\u0de2थ\u05ac\u0559ऋ\u05f9\u0cf0శ\u0de4ण\u05b9ճछ\u05ff";
+				break;
+			case 13:
+				obj = "\u0c3a෦ह\u05b1բग\u05f9೬ష෪प\u05bfձऌ";
+				break;
+			case 14:
+				obj = "\u0dccउ";
+				break;
+			case 15:
+				obj = "\u0903\u05b9չछ";
+				break;
+			case 16:
+				obj = "\u0599էऍר\u0cf8ఙ෩ऴֈյऊץ";
+				break;
+			case 17:
+				obj = "՛जק\u0cf0ఘ\u0df1\u0903\u05b9չछ";
+				break;
+			case 18:
+				obj = "ऽע\u0cfbఈ\u0df1\u093f\u05b9սऐ\u05f9೦ఽ෬ड\u05acձऌ\u05ce\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9೦";
+				break;
+			case 19:
+				obj = "מೠఋ\u0df5ढ\u05aaՠछש\u0cd0\u0c0d\u0de0ण\u05acՀइ\u05fd\u0cf0ఈ";
+				break;
+			case 20:
+				obj = "\u0cc6ఎ\u0df5ऽ\u05b7զऊרೱ\u0c3e\u0df3न\u05b6ՠभעೠఉ෦न\u05ab";
+				break;
+			case 21:
+				obj = "\u0c3e\u0df3न\u05b6ՠम\u05ff\u0cfaఘ\u0de0\u093e\u05abջऌ\u05ce\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9೦";
+				break;
+			case 22:
+				obj = "\u0dd5\u093f\u05b1ջऌפೡ\u0c02";
+				break;
+			case 23:
+				obj = "ऌ\u05bbՠगע\u0cfbఫ\u0df7ढ\u05bcաझר೧స෪ठ\u05a8ջऐר\u0cfbఏ\u0df6";
+				break;
+			case 24:
+				obj = "\u0591պग\u05f9\u0cfcచ෩त\u05a2սऐת";
+				break;
+			case 25:
+				obj = "՝चס\u0cf0";
+				break;
+			case 26:
+				obj = "म\u05ff\u0cfaఘ\u0de0\u093e\u05abսऐת";
+				break;
+			case 27:
+				obj = "ן\u0cfaక\u0de1ऴ\u05b7Ժऽץ\u0cf4ఏ෨ब\u05b6Ժ\u093cר\u0cfdచ\u0df3त\u05b7զटס\u0cd0క\u0de2त\u05b6ձॐ\u05c4\u0cfbఏ\u0de0\u093f\u05b9շऊפ\u0cfaకණई\u05aeձऐ\u05f9\u0cc5ఉ෪म\u05bdէऍע೧న\u0df1ब\u05acձ";
+				break;
+			case 28:
+				obj = "ಯ\u0c3e\u0df3न\u05b6ՠम\u05ff\u0cfaఘ\u0de0\u093e\u05abջऌמೡచ\u0df1न";
+				break;
+			case 29:
+				obj = "\u0c41හम\u05acսऑף\u0cc5ఉ෪ऩ\u05adշछ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡఈ\u0dc9त\u05abՠ";
+				break;
+			case 30:
+				obj = "\u0dbfऌ\u05bbՠगע\u0cfbఫ\u0df7ढ\u05bcաझר೧స෪ठ\u05a8ջऐר\u0cfbఏ";
+				break;
+			case 31:
+				obj = "ॷ\u059dբछףೡఫ\u0df7ढ\u05bbձऍ\u05fe\u0cfaఉෆढ\u05b5դऑף\u0cf0క\u0df1\u093e\u0594սऍ\u05f9";
+				break;
+			case 32:
+				obj = "עՑईר\u0cfbఏ\u0dd5\u093f\u05b7շछ\u05fe೦ఔ\u0df7ऎ\u05b7չऎע\u0cfbఞ෫ह";
+				break;
+			case 33:
+				obj = "Ԯभ\u05f8\u0ce5ఋ෪\u093f\u05acձच\u05c8\u0ce3ఞ෫ह\u058cխऎר";
+				break;
+			case 34:
+				obj = "\u0944מೠఋ\u0df5ढ\u05aaՠछש\u0cd0\u0c0d\u0de0ण\u05acՇऑ\u05f8೧ఘ\u0de0";
+				break;
+			case 35:
+				obj = "\u05b7\u0cd0ఉ\u0df7ढ\u05aaՆछ\u05fd\u0cfaఉ\u0df1त\u05b6ճ\u093bףೲఒ෫न";
+				break;
+			case 36:
+				obj = "ಯస෪ण\u05abՠऌ\u05ec\u0cfcక\u0df1\u093e\u059eսऒ\u05f9\u0cf0ఉෆढ\u05b5դऑף\u0cf0క\u0df1\u093e\u0594սऍ\u05f9";
+				break;
+			case 37:
+				obj = "\u0c41ෆढ\u05b6էऊ\u05ff\u0cf4ఒ෫ह\u05abՒगסೡఞ\u0df7ऎ\u05b7չऎע\u0cfbఞ෫ह";
+				break;
+			case 38:
+				obj = "\u0dbfञ\u05a1էऊר\u0cf8\u0c3a෫ऩ֍էछ\u05ff\u0cc6ఏ\u0de4ह\u05bd";
+				break;
+			case 39:
+				obj = "ॷ\u0596սङץೡశ\u0df0ह\u05bd\u0559टף\u0cf4జ\u0de0\u093f";
+				break;
+			case 40:
+				obj = "עՕझ\u05f9\u0cfc\u0c0d෬ह\u05a1\u0558ऑתೲఞ\u0df7";
+				break;
+			case 41:
+				obj = "Ԯष\u05c9ಹ\u0c5b\u0dbf\u0903\u05b9չछ\u05a1ವ\u0c41හ\u093e\u05abձओׯ\u0cf9\u0c02\u0dd5ब\u05acռ\u0952\u05adಯఴ෧ध\u05bdշऊ׃\u0cf4ఖ\u0de0";
+				break;
+			case 42:
+				obj = "\u0944\u05ce\u0cfaక\u0df6ह\u05aaյगףೡఈසत\u05b4ՠछ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡఈ";
+				break;
+			case 43:
+				obj = "\u05b7\u0cdc\u0c3f";
+				break;
+			case 44:
+				obj = "ಯ\u0c3e\u0df3न\u05b6ՠम\u05ff\u0cfaఘ\u0de0\u093e\u05abջऌ\u05ce\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9೦";
+				break;
+			case 45:
+				obj = "\u0c41\u0dd6स\u05a8դऑ\u05ffೡఞ\u0de1ई\u05aeձऐ\u05f9\u0cc1\u0c02\u0df5न\u05abԸफ़\u05b7\u0cc6ఎ\u0df5ऽ\u05b7զऊרೱ\u0c3e\u0df3न\u05b6ՠभעೠఉ෦न\u05ab";
+				break;
+			case 46:
+				obj = "\u0dbfऄ\u059cԸफ़\u05b7\u0cdbచ෨न״Դ\u0944\u05cc೦ఈ\u0de0ठ\u05baոइם\u0cf4ఏ෭ॡ\u05f8Ԯऱׯ\u0cffఞ෦ह\u0596յओרಹ\u0c5b\u0dbfझ\u05aaսऑ\u05ff\u0cfcఏ\u0dfc";
+				break;
+			case 47:
+				obj = "ॷ\u0599շऊפ\u0cfaక\u0dd5\u093f\u05b7հऋ\u05ee\u0cf0ఉෆढ\u05b5դऑף\u0cf0క\u0df1\u093e";
+				break;
+			case 48:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණए\u05bdռट\u05fb\u0cfcఔ\u0df7ब\u05b4Ցऐת\u0cfcక\u0de0\u0963\u0591պऊר೧చ෦ह\u05b1ջऐ\u05a3\u0cd0\u0c0d\u0de0ण\u05acՄऌע\u0cf6ఞ\u0df6\u093e\u05b7զभ\u05f9\u0cf4ఏ\u0de0ॷע";
+				break;
+			case 49:
+				obj = "Նछ\u05ecೱ\u0c4aධऒ\u059dբछףೡఫ\u0df7ढ\u05bbձऍ\u05fe\u0cfaఉ\u0dd6ह\u05b9ՠछ";
+				break;
+			case 50:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Ֆछץ\u0cf4\u0c0d෬ढ\u05aaյऒ\u05c8\u0cfbజ෬ण\u05bdԺऽע\u0cfbఝ෬प\u05adզट\u05f9\u0cfcఔ෫\u0963\u0599շऊפ\u0cfaక\u0dd5\u093f\u05b7հऋ\u05ee\u0cf0ఉෆढ\u05b5դऑף\u0cf0క\u0df1\u093e\u0594սऍ\u05f9ಯ\u0c41හम\u05acսऑף\u0cc5ఉ෪ऩ\u05adշछ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡఈ\u0dc9त\u05abՠ\u0944י೧ఎ\u0de0ॷ";
+				break;
+			case 51:
+				obj = "ך೧ఒ\u0df1नשԡड\u05c8\u0ce3ఞ෫हֈզऑ\u05ee\u0cf0ఈ\u0df6ढ\u05aaՇऊ\u05ecೡఞ";
+				break;
+			case 52:
+				obj = "\u0cc7ఞ\u0de4ऩשԢड\u05cc\u0cf6ఏ෬ढ\u05b6Մऌעೱఎ෦न\u05aa\u0557ऑנ\u0ce5ఔ෫न\u05b6ՠऍ\u05c1\u0cfcఈ\u0df1";
+				break;
+			case 53:
+				obj = "\u0c29෪ण\u05bcխऑ\u05a3\u0cd6ఓ\u0de4ह\u05b5յऐ\u05a3\u0cd7ఞ෭ब\u05aeսऑ\u05ff\u0cf4గවण\u05bfսऐר\u0cbbస෪ण־սङ\u05f8೧చ\u0df1त\u05b7պॐ\u05cc\u0cf6ఏ෬ढ\u05b6Մऌעೱఎ෦न\u05aa\u0557ऑנ\u0ce5ఔ෫न\u05b6ՠ\u0944\u05b7";
+				break;
+			case 54:
+				obj = "\u0dd2\u093f\u05b1ՠछ\u05bcಣతහम\u05acսऑף\u0cc5ఉ෪ऩ\u05adշछ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡఈ\u0dc9त\u05abՠ";
+				break;
+			case 55:
+				obj = "ट\u05bdյच\u05bcಢతහम\u05acսऑף\u0cc5ఉ෪ऩ\u05adշछ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡ";
+				break;
+			case 56:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණए\u05bdռट\u05fb\u0cfcఔ\u0df7ब\u05b4Ցऐת\u0cfcక\u0de0\u0963\u059bջऐ\u05eb\u0cfcజ\u0df0\u093f\u05b9ՠगע\u0cfb\u0c55ව\u093b\u05bdպऊם೧ఔ෦न\u05abէऑ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡఈ\u0dc9त\u05abՠ\u0944\u05b7\u0cd0\u0c0d\u0de0ण\u05acՄऌע\u0cf6ఞ\u0df6\u093e\u05b7զऽע\u0cf8ఋ෪ण\u05bdպऊ\u05fe\u0cd9ఒ\u0df6हעՀऌ\u05f8\u0cf0\u0c41";
+				break;
+			case 57:
+				obj = "Նछ\u05ecೱ\u0c4aලऒ\u059dբछףೡఫ\u0df7ढ\u05bbձऍ\u05fe\u0cfaఉෆढ\u05b5դऑף\u0cf0క\u0df1\u093e\u0594սऍ\u05f9";
+				break;
+			case 58:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Ֆछץ\u0cf4\u0c0d෬ढ\u05aaյऒ\u05c8\u0cfbజ෬ण\u05bdԺऽע\u0cfbఝ෬प\u05adզट\u05f9\u0cfcఔ෫\u0963\u059dբछףೡఫ\u0df7ढ\u05bbձऍ\u05fe\u0cfaఉෆढ\u05b5դऑף\u0cf0క\u0df1ॷע";
+				break;
+			case 59:
+				obj = "ן\u0cf0చ\u0de1ॼסՋ\u093b\u05fb\u0cf0క\u0df1झ\u05aaջझר೦ఈ෪\u093f\u059bջओ\u05fd\u0cfaక\u0de0ण\u05ac";
+				break;
+			case 60:
+				obj = "\u0cc7ఔ෫ऩ\u05a1ջॐ\u05ce\u0cfdచ\u0df1ठ\u05b9պॐ\u05cf\u0cf0ఓ\u0de4\u093b\u05b1ջऌ\u05ec\u0cf9\u0c3e෫प\u05b1պछ\u05a3\u0cd6ఔ෫फ\u05b1ճऋ\u05ff\u0cf4ఏ෬ढ\u05b6Ժभ\u05f8\u0ce5ఋ෪\u093f\u05acձच\u05c8\u0ce3ఞ෫ह\u058cխऎרಯ\u0c41";
+				break;
+			case 61:
+				obj = "\u0c29\u0de0ब\u05bcԦ\u094eג\u0cc6ఎ\u0df5ऽ\u05b7զऊרೱ\u0c3e\u0df3न\u05b6ՠप״\u0ce5ఞ";
+				break;
+			case 62:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbbహ\u0de0थ\u05b9բगע೧చ෩ई\u05b6ճगף\u0cf0\u0c55ෆढ\u05b6ղगתೠఉ\u0de4ह\u05b1ջऐ\u05a3\u0cc6ఎ\u0df5ऽ\u05b7զऊרೱ\u0c3e\u0df3न\u05b6ՠभעೠఉ෦नעԮ";
+				break;
+			case 63:
+				obj = "ट\u05bdյच\u05bfತత\u0dd6स\u05a8դऑ\u05ffೡఞ\u0de1ई\u05aeձऐ\u05f9\u0cc6ఔ\u0df0\u093f\u05bbձ";
+				break;
+			case 64:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණऋ\u05aaյओר\u0ce2ఔ\u0df7द\u05f6\u0558ऑתೲఒ෫प\u05f6Ցऌ\u05ff\u0cfaఉ\u0dd7न\u05a8ջऌ\u05f9\u0cfcక\u0de2ई\u05b6ճगף\u0cf0\u0c41\u0dbf";
+				break;
+			case 65:
+				obj = "Նछ\u05ecೱ\u0c49භऒ\u059dզऌע೧\u0c29\u0de0ऽ\u05b7զऊפ\u0cfbజවण\u05bfսऐר";
+				break;
+			case 66:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Ֆछץ\u0cf4\u0c0d෬ढ\u05aaյऒ\u05c8\u0cfbజ෬ण\u05bdԺऽע\u0cfbఝ෬प\u05adզट\u05f9\u0cfcఔ෫\u0963\u059bջऐ\u05feೡఉ\u0de4त\u05b6ՠऍ\u05cb\u0cfcగ\u0df1न\u05aa\u0557ऑנ\u0ce5ఔ෫न\u05b6ՠऍ\u05c1\u0cfcఈ\u0df1ॷע\u0557ऑף೦ఏ\u0df7ब\u05b1պऊ\u05fe\u0cd3ఒ෩ह\u05bdզऽע\u0cf8ఋ෪ण\u05bdպऊ\u05fe\u0cd9ఒ\u0df6हעՀऌ\u05f8\u0cf0\u0c41";
+				break;
+			case 67:
+				obj = "ן\u0cf0చ\u0de1ॿ\u05ebՋष\u05f9\u0cf0ఖ";
+				break;
+			case 68:
+				obj = "\u0cc7ఔ෫ऩ\u05a1ջॐ\u05ce\u0cfdచ\u0df1ठ\u05b9պॐ\u05cf\u0cf0ఓ\u0de4\u093b\u05b1ջऌ\u05ec\u0cf9\u0c3e෫प\u05b1պछ\u05a3\u0cd6ఔ෫फ\u05b1ճऋ\u05ff\u0cf4ఏ෬ढ\u05b6Ժऽע\u0cfbఈ\u0df1\u093f\u05b9սऐ\u05f9೦ఽ෬ड\u05acձऌ\u05ce\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9ಯ\u0c41";
+				break;
+			case 69:
+				obj = "\u0c29\u0de0ब\u05bcԦ\u094aג\u0cd6ఔ෫\u093e\u05acզटפ\u0cfbఏ\u0df6ऋ\u05b1ոऊר೧స෪ठ\u05a8ջऐר\u0cfbఏ";
+				break;
+			case 70:
+				obj = "\u0dd7ढ\u05b6հइע\u0cbbస෭ब\u05acչटף\u0cbbహ\u0de0थ\u05b9բगע೧చ෩ई\u05b6ճगף\u0cf0\u0c55\u0dccण\u05acձऌ\u05ec\u0cf6ఏ෬ढ\u05b6Ժभ״೦ఏ\u0de0ठ\u0599պचט೦ఞ\u0df7ञ\u05acյऊרಯ\u0c41";
+				break;
+			case 71:
+				obj = "ट\u05bdյच\u05bfಠత\u0dd6ऴ\u05abՠछנ\u0cd4క\u0de1घ\u05abձऌמೡచ\u0df1न";
+				break;
+			case 72:
+				obj = "֊ջऐש೬ఔණऎ\u05b0յऊנ\u0cf4కණए\u05bdռट\u05fb\u0cfcఔ\u0df7ब\u05b4Ցऐת\u0cfcక\u0de0\u0963\u0591պऊר೧చ෦ह\u05b1ջऐ\u05a3\u0cdbఒ\u0de2थ\u05ac\u0559ऋ\u05f9\u0cf0శ\u0de4ण\u05b9ճछ\u05ffಯ\u0c41";
+				break;
+			case 73:
+				obj = "Նछ\u05ecೱ\u0c49ඳऒ\u0596սङץೡశ\u0df0ह\u05bd\u0559टף\u0cf4జ\u0de0\u093f";
+				break;
+			case 74:
+				obj = "बע\u0cfbట\u0dfcढ\u05f6\u0557ख\u05ecೡఖ\u0de4ण\u05f6Ֆछץ\u0cf4\u0c0d෬ढ\u05aaյऒ\u05c8\u0cfbజ෬ण\u05bdԺ\u093f\u05eeೡఒ\u0df3त\u05acխलעೲజ\u0de0\u093fעԮ";
+				break;
+			case 75:
+				obj = "ן\u0cf0చ\u0de1ॿׯՋ\u093f\u05eeೡఒ\u0df3त\u05acխलעೲజ\u0de0\u093f";
+				break;
+			case 76:
+				obj = "\u0cc2ఉ෬ह\u05bdԥ\u0949ג\u0cd4ఘ\u0df1त\u05b7պम\u05ff\u0cfaట\u0df0म\u05bdզऽע\u0cf8ఋ෪ण\u05bdպऊ";
+				break;
+			case 77:
+				obj = "బ\u0df7त\u05acձ\u094f\u05b5\u0cca\u0c3e\u0df3न\u05b6ՠम\u05ff\u0cfaఘ\u0de0\u093e\u05abջऌ\u05ce\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9೦ష෬\u093e\u05ac";
+				break;
+			case 78:
+				obj = "\u0dd2\u093f\u05b1ՠछ\u05bcಬతව\u093b\u05bdպऊם೧ఔ෦न\u05abէऑ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡ";
+				break;
+			case 79:
+				obj = "च\u05aaսऊרಧ\u0c4b\u0ddaञ\u05adդऎע೧ఏ\u0de0ऩ\u059dբछףೡయ\u0dfcऽ\u05bd";
+				break;
+			case 80:
+				obj = "֏զग\u05f9\u0cf0\u0c49පऒ\u058bաऎ\u05fd\u0cfaఉ\u0df1न\u05bcՑईר\u0cfbఏ\u0dd6ढ\u05adզझר";
+				break;
+			case 81:
+				obj = "ՃऌפೡఞභॿևՑऌ\u05ff\u0cfaఉ\u0dd7न\u05a8ջऌ\u05f9\u0cfcక\u0de2ई\u05b6ճगף\u0cf0";
+				break;
+			case 82:
+				obj = "ऩ\u05ff\u0cfcఏ\u0de0ॿ\u05ebՋष\u05f9\u0cf0ఖ";
+				break;
+			case 83:
+				obj = "ך೧ఒ\u0df1नתԠड\u05ce\u0cfaక\u0df6ह\u05aaյगףೡఈසत\u05b4ՠछ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡ";
+				break;
+			case 84:
+				obj = "\u0cc2ఉ෬ह\u05bdԦ\u094bג\u0cc6\u0c02\u0df6ह\u05bdչ\u093fףೱమ\u0df6न\u05aaՇऊ\u05ecೡఞ";
+				break;
+			case 85:
+				obj = "బ\u0df7त\u05acձ\u094c\u05bb\u0ccaవ෬प\u05b0ՠळ\u05f8ೡఞ\u0dc8ब\u05b6յङר೧";
+				break;
+			case 86:
+				obj = "\u0dd2\u093f\u05b1ՠछ\u05bfಢతහम\u05acսईפೡ\u0c02\u0dc9ढ\u05bfճछ\u05ff";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴓ = (char[])(object)ႭႭ.Ⴍ.Ⴓ;
+			int num2 = ⴓ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴓ[(num3 + Ⴀ) % num2]);
+			}
+			result = new string(array);
+			Ⴓ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႭႭ.Ⴍ.Ⴓ = (string[])(object)array;
+			Ⴓ = new string[87];
+		}
+	}
+}

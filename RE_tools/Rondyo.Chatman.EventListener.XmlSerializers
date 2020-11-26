@@ -1,0 +1,965 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.EventListener.XmlSerializers.dll
+// Rondyo.Chatman.EventListener.XmlSerializers, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.EventListener.Configuration;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security;
+using System.Xml;
+using System.Xml.Serialization;
+using ႥႨႭ;
+
+[assembly: CompilationRelaxations(8)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AllowPartiallyTrustedCallers]
+[assembly: XmlSerializerVersion(Version = "2.0.0.0", ParentAssemblyId = "65a6842e-eab1-40e6-8466-e623d5b03c36,")]
+[assembly: SecurityTransparent]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Microsoft.Xml.Serialization.GeneratedAssembly
+{
+	public sealed class EventListenerComponentSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.ႰႠ(444439135), Ⴍ.ႰႠ(444439132));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write5_EventListenerComponent(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read5_EventListenerComponent();
+		}
+	}
+	public sealed class EventListenerComponentsListSerializer : XmlSerializer1
+	{
+		public override bool CanDeserialize(XmlReader xmlReader)
+		{
+			return xmlReader.IsStartElement(Ⴍ.ႰႠ(444439133), Ⴍ.ႰႠ(444439132));
+		}
+
+		protected override void Serialize(object objectToSerialize, XmlSerializationWriter writer)
+		{
+			((XmlSerializationWriter1)writer).Write4_EventListenerComponentsList(objectToSerialize);
+		}
+
+		protected override object Deserialize(XmlSerializationReader reader)
+		{
+			return ((XmlSerializationReader1)reader).Read4_EventListenerComponentsList();
+		}
+	}
+	public class XmlSerializationReader1 : XmlSerializationReader
+	{
+		private string Ⴐ;
+
+		private string Ⴗ;
+
+		private string Ⴓ;
+
+		private string Ⴍ;
+
+		private string Ⴄ;
+
+		private string Ⴈ;
+
+		private string Ⴅ;
+
+		private string Ⴃ;
+
+		public object Read4_EventListenerComponentsList()
+		{
+			//Discarded unreachable code: IL_0002, IL_0027, IL_0055, IL_007f, IL_008f, IL_00bd
+			while (true)
+			{
+				object result = null;
+				base.Reader.MoveToContent();
+				if (base.Reader.NodeType != XmlNodeType.Element)
+				{
+					UnknownNode(null, ႥႨႭ.Ⴍ.ႰႠ(444439125));
+					if (434 <= 434 - 219)
+					{
+						continue;
+					}
+				}
+				else
+				{
+					if (504 <= 504 - 4 || (object)base.Reader.LocalName != Ⴐ)
+					{
+						break;
+					}
+					if (828 >= 828 - 249)
+					{
+					}
+					if ((object)base.Reader.NamespaceURI != Ⴈ)
+					{
+						break;
+					}
+					if (false)
+					{
+						continue;
+					}
+					result = ႥႰ(Ⴃ: true, Ⴀ: true);
+				}
+				return result;
+			}
+			throw CreateUnknownNodeException();
+		}
+
+		public object Read5_EventListenerComponent()
+		{
+			//Discarded unreachable code: IL_0024, IL_0053, IL_0081, IL_0091, IL_00b9
+			object result = null;
+			base.Reader.MoveToContent();
+			if (base.Reader.NodeType != XmlNodeType.Element)
+			{
+				UnknownNode(null, ႥႨႭ.Ⴍ.ႰႠ(444439124));
+				if ((229 + 229 * 229) % 2 == 0)
+				{
+				}
+			}
+			else
+			{
+				if (351 < 351 - 206 || (object)base.Reader.LocalName != Ⴍ)
+				{
+					goto IL_0029;
+				}
+				if (835 >= 835 - 291)
+				{
+					if ((object)base.Reader.NamespaceURI != Ⴈ)
+					{
+						goto IL_0029;
+					}
+					if (643 <= 643 - 206)
+					{
+						goto IL_0002;
+					}
+				}
+				result = ႥႳ(Ⴓ: true, Ⴅ: true);
+			}
+			goto IL_0002;
+			IL_0029:
+			throw CreateUnknownNodeException();
+			IL_0002:
+			return result;
+		}
+
+		private EventListenerComponent ႥႳ(bool Ⴓ, bool Ⴅ)
+		{
+			int num = 39;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			EventListenerComponent eventListenerComponent = default(EventListenerComponent);
+			bool[] array = default(bool[]);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴅ ? 36 : 30);
+					break;
+				case 30:
+					obj = null;
+					goto IL_00c8;
+				case 36:
+					obj = GetXsiType();
+					goto IL_00c8;
+				case 37:
+					flag = ReadNull();
+					num = 6;
+					break;
+				case 6:
+					num = ((!Ⴅ) ? 9 : 23);
+					break;
+				case 23:
+					num = ((!(xmlQualifiedName == null)) ? 1 : 9);
+					break;
+				case 1:
+					num = (((object)xmlQualifiedName.Name != Ⴍ) ? 7 : 2);
+					break;
+				case 2:
+					num = (((object)xmlQualifiedName.Namespace == Ⴈ) ? 9 : 7);
+					break;
+				case 7:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 9:
+					num = ((!flag) ? 28 : 14);
+					break;
+				case 14:
+					return null;
+				case 28:
+					eventListenerComponent = new EventListenerComponent();
+					array = new bool[4];
+					num = 11;
+					break;
+				case 26:
+					num = ((!array[0]) ? 4 : 0);
+					break;
+				case 4:
+					num = (((object)base.Reader.LocalName == this.Ⴓ) ? 22 : 0);
+					break;
+				case 22:
+					num = (((object)base.Reader.NamespaceURI == Ⴈ) ? 29 : 0);
+					break;
+				case 29:
+					eventListenerComponent.ID = XmlConvert.ToInt32(base.Reader.Value);
+					array[0] = true;
+					num = 11;
+					break;
+				case 0:
+					num = (array[1] ? 20 : 16);
+					break;
+				case 16:
+					num = (((object)base.Reader.LocalName != Ⴗ) ? 20 : 35);
+					break;
+				case 35:
+					num = (((object)base.Reader.NamespaceURI != Ⴈ) ? 20 : 19);
+					break;
+				case 19:
+					eventListenerComponent.Name = base.Reader.Value;
+					array[1] = true;
+					num = 11;
+					break;
+				case 20:
+					num = (array[2] ? 5 : 13);
+					break;
+				case 13:
+					num = (((object)base.Reader.LocalName != this.Ⴅ) ? 5 : 10);
+					break;
+				case 10:
+					num = (((object)base.Reader.NamespaceURI != Ⴈ) ? 5 : 40);
+					break;
+				case 40:
+					eventListenerComponent.AssemblyPath = base.Reader.Value;
+					array[2] = true;
+					num = 11;
+					break;
+				case 5:
+					num = (array[3] ? 15 : 25);
+					break;
+				case 25:
+					num = (((object)base.Reader.LocalName != Ⴃ) ? 15 : 24);
+					break;
+				case 24:
+					num = (((object)base.Reader.NamespaceURI != Ⴈ) ? 15 : 17);
+					break;
+				case 17:
+					eventListenerComponent.MustKeepThreadAlive = XmlConvert.ToBoolean(base.Reader.Value);
+					array[3] = true;
+					num = 11;
+					break;
+				case 15:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 11 : 34);
+					break;
+				case 34:
+					UnknownNode(eventListenerComponent, ႥႨႭ.Ⴍ.ႰႠ(444439127));
+					goto case 11;
+				case 11:
+					num = (base.Reader.MoveToNextAttribute() ? 26 : 31);
+					break;
+				case 31:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 18 : 8);
+					break;
+				case 8:
+					base.Reader.Skip();
+					return eventListenerComponent;
+				case 18:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 12;
+					break;
+				case 32:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 27 : 33);
+					break;
+				case 33:
+					UnknownNode(eventListenerComponent, ႥႨႭ.Ⴍ.ႰႠ(444439132));
+					num = 3;
+					break;
+				case 27:
+					UnknownNode(eventListenerComponent, ႥႨႭ.Ⴍ.ႰႠ(444439132));
+					goto case 3;
+				case 3:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 12;
+				case 12:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 38 : 21);
+					break;
+				case 21:
+					num = ((base.Reader.NodeType != 0) ? 32 : 38);
+					break;
+				case 38:
+					{
+						ReadEndElement();
+						return eventListenerComponent;
+					}
+					IL_00c8:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴓ) ? 6 : 37);
+					break;
+				}
+			}
+		}
+
+		private EventListenerComponentsList ႥႰ(bool Ⴃ, bool Ⴀ)
+		{
+			int num = 28;
+			bool flag = default(bool);
+			XmlQualifiedName xmlQualifiedName = default(XmlQualifiedName);
+			EventListenerComponentsList eventListenerComponentsList = default(EventListenerComponentsList);
+			int whileIterations = default(int);
+			int readerCount = default(int);
+			List<EventListenerComponent> eventListenerComponents = default(List<EventListenerComponent>);
+			int whileIterations2 = default(int);
+			int readerCount2 = default(int);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				default:
+					num = (Ⴀ ? 30 : 19);
+					break;
+				case 19:
+					obj = null;
+					goto IL_00e0;
+				case 30:
+					obj = GetXsiType();
+					goto IL_00e0;
+				case 4:
+					flag = ReadNull();
+					num = 7;
+					break;
+				case 7:
+					num = ((!Ⴀ) ? 2 : 16);
+					break;
+				case 16:
+					num = ((xmlQualifiedName == null) ? 2 : 8);
+					break;
+				case 8:
+					num = (((object)xmlQualifiedName.Name != Ⴐ) ? 13 : 39);
+					break;
+				case 39:
+					num = (((object)xmlQualifiedName.Namespace == Ⴈ) ? 2 : 13);
+					break;
+				case 13:
+					throw CreateUnknownTypeException(xmlQualifiedName);
+				case 2:
+					num = ((!flag) ? 29 : 17);
+					break;
+				case 17:
+					return null;
+				case 29:
+					eventListenerComponentsList = new EventListenerComponentsList();
+					num = ((eventListenerComponentsList.EventListenerComponents != null) ? 20 : 12);
+					break;
+				case 12:
+					eventListenerComponentsList.EventListenerComponents = new List<EventListenerComponent>();
+					goto case 20;
+				case 20:
+					_ = eventListenerComponentsList.EventListenerComponents;
+					num = 43;
+					break;
+				case 35:
+					num = (IsXmlnsAttribute(base.Reader.Name) ? 43 : 5);
+					break;
+				case 5:
+					UnknownNode(eventListenerComponentsList);
+					goto case 43;
+				case 43:
+					num = (base.Reader.MoveToNextAttribute() ? 35 : 34);
+					break;
+				case 34:
+					base.Reader.MoveToElement();
+					num = ((!base.Reader.IsEmptyElement) ? 41 : 40);
+					break;
+				case 40:
+					base.Reader.Skip();
+					return eventListenerComponentsList;
+				case 41:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations = 0;
+					readerCount = base.ReaderCount;
+					num = 36;
+					break;
+				case 31:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 33 : 26);
+					break;
+				case 26:
+					num = (((object)base.Reader.LocalName != Ⴄ) ? 24 : 3);
+					break;
+				case 3:
+					num = (((object)base.Reader.NamespaceURI != Ⴈ) ? 24 : 38);
+					break;
+				case 38:
+					num = (ReadNull() ? 37 : 27);
+					break;
+				case 27:
+					num = ((eventListenerComponentsList.EventListenerComponents != null) ? 15 : 44);
+					break;
+				case 44:
+					eventListenerComponentsList.EventListenerComponents = new List<EventListenerComponent>();
+					goto case 15;
+				case 15:
+					eventListenerComponents = eventListenerComponentsList.EventListenerComponents;
+					num = ((!base.Reader.IsEmptyElement) ? 42 : 10);
+					break;
+				case 10:
+					base.Reader.Skip();
+					num = 37;
+					break;
+				case 42:
+					base.Reader.ReadStartElement();
+					base.Reader.MoveToContent();
+					whileIterations2 = 0;
+					readerCount2 = base.ReaderCount;
+					num = 45;
+					break;
+				case 32:
+					num = ((base.Reader.NodeType != XmlNodeType.Element) ? 21 : 9);
+					break;
+				case 9:
+					num = (((object)base.Reader.LocalName != Ⴍ) ? 14 : 46);
+					break;
+				case 46:
+					num = (((object)base.Reader.NamespaceURI != Ⴈ) ? 14 : 11);
+					break;
+				case 11:
+					num = ((eventListenerComponents != null) ? 25 : 23);
+					break;
+				case 23:
+					base.Reader.Skip();
+					num = 6;
+					break;
+				case 25:
+					eventListenerComponents.Add(ႥႳ(Ⴓ: true, Ⴅ: true));
+					num = 6;
+					break;
+				case 14:
+					UnknownNode(null, ႥႨႭ.Ⴍ.ႰႠ(444439124));
+					num = 6;
+					break;
+				case 21:
+					UnknownNode(null, ႥႨႭ.Ⴍ.ႰႠ(444439124));
+					goto case 6;
+				case 6:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations2, ref readerCount2);
+					goto case 45;
+				case 45:
+					num = ((base.Reader.NodeType == XmlNodeType.EndElement) ? 1 : 18);
+					break;
+				case 18:
+					num = ((base.Reader.NodeType == XmlNodeType.None) ? 1 : 32);
+					break;
+				case 1:
+					ReadEndElement();
+					num = 37;
+					break;
+				case 24:
+					UnknownNode(eventListenerComponentsList, ႥႨႭ.Ⴍ.ႰႠ(444439126));
+					num = 37;
+					break;
+				case 33:
+					UnknownNode(eventListenerComponentsList, ႥႨႭ.Ⴍ.ႰႠ(444439126));
+					goto case 37;
+				case 37:
+					base.Reader.MoveToContent();
+					CheckReaderCount(ref whileIterations, ref readerCount);
+					goto case 36;
+				case 36:
+					num = ((base.Reader.NodeType != XmlNodeType.EndElement) ? 22 : 0);
+					break;
+				case 22:
+					num = ((base.Reader.NodeType != 0) ? 31 : 0);
+					break;
+				case 0:
+					{
+						ReadEndElement();
+						return eventListenerComponentsList;
+					}
+					IL_00e0:
+					xmlQualifiedName = (XmlQualifiedName)obj;
+					flag = false;
+					num = ((!Ⴃ) ? 7 : 4);
+					break;
+				}
+			}
+		}
+
+		protected override void InitCallbacks()
+		{
+		}
+
+		protected override void InitIDs()
+		{
+			Ⴐ = base.Reader.NameTable.Add(ႥႨႭ.Ⴍ.ႰႠ(444439133));
+			Ⴗ = base.Reader.NameTable.Add(ႥႨႭ.Ⴍ.ႰႠ(444439129));
+			Ⴓ = base.Reader.NameTable.Add(ႥႨႭ.Ⴍ.ႰႠ(444439134));
+			Ⴍ = base.Reader.NameTable.Add(ႥႨႭ.Ⴍ.ႰႠ(444439135));
+			Ⴄ = base.Reader.NameTable.Add(ႥႨႭ.Ⴍ.ႰႠ(444439130));
+			Ⴈ = base.Reader.NameTable.Add(ႥႨႭ.Ⴍ.ႰႠ(444439132));
+			Ⴅ = base.Reader.NameTable.Add(ႥႨႭ.Ⴍ.ႰႠ(444439128));
+			Ⴃ = base.Reader.NameTable.Add(ႥႨႭ.Ⴍ.ႰႠ(444439131));
+		}
+	}
+	public class XmlSerializationWriter1 : XmlSerializationWriter
+	{
+		public void Write4_EventListenerComponentsList(object o)
+		{
+			//Discarded unreachable code: IL_0002, IL_0060
+			WriteStartDocument();
+			if (o != null)
+			{
+				TopLevelElement();
+			}
+			else if ((381 + 381 * 381) % 2 == 0)
+			{
+				WriteNullTagLiteral(ႥႨႭ.Ⴍ.ႰႠ(444439133), ႥႨႭ.Ⴍ.ႰႠ(444439132));
+				return;
+			}
+			Ⴄ(ႥႨႭ.Ⴍ.ႰႠ(444439133), ႥႨႭ.Ⴍ.ႰႠ(444439132), (EventListenerComponentsList)o, Ⴈ: true, Ⴗ: false);
+		}
+
+		public void Write5_EventListenerComponent(object o)
+		{
+			//Discarded unreachable code: IL_005f
+			WriteStartDocument();
+			do
+			{
+				if (o != null)
+				{
+					TopLevelElement();
+					Ⴍ(ႥႨႭ.Ⴍ.ႰႠ(444439135), ႥႨႭ.Ⴍ.ႰႠ(444439132), (EventListenerComponent)o, Ⴈ: true, Ⴗ: false);
+					return;
+				}
+			}
+			while (762 < 762 - 350);
+			WriteNullTagLiteral(ႥႨႭ.Ⴍ.ႰႠ(444439135), ႥႨႭ.Ⴍ.ႰႠ(444439132));
+		}
+
+		private void Ⴍ(string Ⴓ, string Ⴅ, EventListenerComponent Ⴐ, bool Ⴈ, bool Ⴗ)
+		{
+			//Discarded unreachable code: IL_0005, IL_00cb, IL_00eb, IL_0104, IL_012a, IL_0140, IL_0166, IL_017d
+			Type type = default(Type);
+			if (Ⴐ != null)
+			{
+				if (Ⴗ)
+				{
+					goto IL_0106;
+				}
+				if ((557 + 557 * 557) % 2 == 0)
+				{
+					type = Ⴐ.GetType();
+					goto IL_0149;
+				}
+			}
+			else if (157 > 157 - 50)
+			{
+				if (!Ⴈ)
+				{
+					return;
+				}
+				if (648 < 648 - 216)
+				{
+					goto IL_006f;
+				}
+			}
+			WriteNullTagLiteral(Ⴓ, Ⴅ);
+			if (173 > 173 - 59)
+			{
+			}
+			return;
+			IL_0149:
+			if ((object)type != typeof(EventListenerComponent))
+			{
+				if (801 > 801 - 75)
+				{
+					throw CreateUnknownTypeException(Ⴐ);
+				}
+				return;
+			}
+			goto IL_0106;
+			IL_006f:
+			WriteAttribute(ႥႨႭ.Ⴍ.ႰႠ(444439131), ႥႨႭ.Ⴍ.ႰႠ(444439132), XmlConvert.ToString(Ⴐ.MustKeepThreadAlive));
+			WriteEndElement(Ⴐ);
+			return;
+			IL_0106:
+			WriteStartElement(Ⴓ, Ⴅ, Ⴐ, writePrefixed: false, null);
+			if (Ⴗ)
+			{
+				if (false)
+				{
+					return;
+				}
+				WriteXsiType(ႥႨႭ.Ⴍ.ႰႠ(444439135), ႥႨႭ.Ⴍ.ႰႠ(444439132));
+				if (false)
+				{
+					goto IL_0149;
+				}
+			}
+			WriteAttribute(ႥႨႭ.Ⴍ.ႰႠ(444439134), ႥႨႭ.Ⴍ.ႰႠ(444439132), XmlConvert.ToString(Ⴐ.ID));
+			WriteAttribute(ႥႨႭ.Ⴍ.ႰႠ(444439129), ႥႨႭ.Ⴍ.ႰႠ(444439132), Ⴐ.Name);
+			WriteAttribute(ႥႨႭ.Ⴍ.ႰႠ(444439128), ႥႨႭ.Ⴍ.ႰႠ(444439132), Ⴐ.AssemblyPath);
+			goto IL_006f;
+		}
+
+		private void Ⴄ(string Ⴓ, string Ⴅ, EventListenerComponentsList Ⴐ, bool Ⴈ, bool Ⴗ)
+		{
+			int num = 11;
+			List<EventListenerComponent> eventListenerComponents = default(List<EventListenerComponent>);
+			int num2 = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					return;
+				default:
+					num = ((Ⴐ != null) ? 14 : 7);
+					continue;
+				case 7:
+					num = ((!Ⴈ) ? 2 : 4);
+					continue;
+				case 4:
+					WriteNullTagLiteral(Ⴓ, Ⴅ);
+					return;
+				case 14:
+					num = (Ⴗ ? 6 : 3);
+					continue;
+				case 3:
+				{
+					Type type = Ⴐ.GetType();
+					num = (((object)type == typeof(EventListenerComponentsList)) ? 6 : 10);
+					continue;
+				}
+				case 10:
+					throw CreateUnknownTypeException(Ⴐ);
+				case 6:
+					WriteStartElement(Ⴓ, Ⴅ, Ⴐ, writePrefixed: false, null);
+					num = ((!Ⴗ) ? 9 : 12);
+					continue;
+				case 12:
+					WriteXsiType(ႥႨႭ.Ⴍ.ႰႠ(444439133), ႥႨႭ.Ⴍ.ႰႠ(444439132));
+					goto case 9;
+				case 9:
+					eventListenerComponents = Ⴐ.EventListenerComponents;
+					num = ((eventListenerComponents != null) ? 13 : 0);
+					continue;
+				case 13:
+					WriteStartElement(ႥႨႭ.Ⴍ.ႰႠ(444439130), ႥႨႭ.Ⴍ.ႰႠ(444439132), null, writePrefixed: false);
+					num2 = 0;
+					num = 1;
+					continue;
+				case 8:
+					Ⴍ(ႥႨႭ.Ⴍ.ႰႠ(444439135), ႥႨႭ.Ⴍ.ႰႠ(444439132), eventListenerComponents[num2], Ⴈ: true, Ⴗ: false);
+					num2++;
+					num = 1;
+					continue;
+				case 1:
+					num = ((num2 < ((ICollection)eventListenerComponents).Count) ? 8 : 5);
+					continue;
+				case 5:
+					WriteEndElement();
+					break;
+				case 0:
+					break;
+				}
+				break;
+			}
+			WriteEndElement(Ⴐ);
+		}
+
+		protected override void InitCallbacks()
+		{
+		}
+	}
+	public abstract class XmlSerializer1 : XmlSerializer
+	{
+		protected override XmlSerializationReader CreateReader()
+		{
+			return new XmlSerializationReader1();
+		}
+
+		protected override XmlSerializationWriter CreateWriter()
+		{
+			return new XmlSerializationWriter1();
+		}
+	}
+	public class XmlSerializerContract : XmlSerializerImplementation
+	{
+		private Hashtable Ⴐ;
+
+		private Hashtable Ⴓ;
+
+		private Hashtable Ⴀ;
+
+		public override XmlSerializationReader Reader => new XmlSerializationReader1();
+
+		public override XmlSerializationWriter Writer => new XmlSerializationWriter1();
+
+		public override Hashtable ReadMethods
+		{
+			get
+			{
+				int num = 2;
+				Hashtable hashtable = default(Hashtable);
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = ((Ⴐ == null) ? 1 : 0);
+						break;
+					case 1:
+						hashtable = new Hashtable();
+						hashtable[Ⴍ.ႰႠ(444439121)] = Ⴍ.ႰႠ(444439120);
+						hashtable[Ⴍ.ႰႠ(444439123)] = Ⴍ.ႰႠ(444439117);
+						num = ((Ⴐ == null) ? 3 : 0);
+						break;
+					case 3:
+						Ⴐ = hashtable;
+						num = 0;
+						break;
+					case 0:
+						return Ⴐ;
+					}
+				}
+			}
+		}
+
+		public override Hashtable WriteMethods
+		{
+			get
+			{
+				int num = 0;
+				Hashtable hashtable = default(Hashtable);
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = ((Ⴓ == null) ? 1 : 3);
+						break;
+					case 1:
+						hashtable = new Hashtable();
+						hashtable[Ⴍ.ႰႠ(444439121)] = Ⴍ.ႰႠ(444439122);
+						hashtable[Ⴍ.ႰႠ(444439123)] = Ⴍ.ႰႠ(444439116);
+						num = ((Ⴓ != null) ? 3 : 2);
+						break;
+					case 2:
+						Ⴓ = hashtable;
+						num = 3;
+						break;
+					case 3:
+						return Ⴓ;
+					}
+				}
+			}
+		}
+
+		public override Hashtable TypedSerializers
+		{
+			get
+			{
+				int num = 2;
+				Hashtable hashtable = default(Hashtable);
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						num = ((Ⴀ != null) ? 1 : 3);
+						break;
+					case 3:
+						hashtable = new Hashtable();
+						hashtable.Add(Ⴍ.ႰႠ(444439121), new EventListenerComponentsListSerializer());
+						hashtable.Add(Ⴍ.ႰႠ(444439123), new EventListenerComponentSerializer());
+						num = ((Ⴀ != null) ? 1 : 0);
+						break;
+					case 0:
+						Ⴀ = hashtable;
+						num = 1;
+						break;
+					case 1:
+						return Ⴀ;
+					}
+				}
+			}
+		}
+
+		public override bool CanSerialize(Type type)
+		{
+			//Discarded unreachable code: IL_0002, IL_0024, IL_0042
+			while (true)
+			{
+				if ((object)type == typeof(EventListenerComponentsList))
+				{
+					if ((498 + 498 * 498) % 2 == 0)
+					{
+						break;
+					}
+				}
+				if ((object)type != typeof(EventListenerComponent))
+				{
+					return false;
+				}
+				if ((228 + 228 * 228) % 2 == 0)
+				{
+					return true;
+				}
+			}
+			return true;
+		}
+
+		public override XmlSerializer GetSerializer(Type type)
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (((object)type != typeof(EventListenerComponentsList)) ? 3 : 2);
+					break;
+				case 2:
+					return new EventListenerComponentsListSerializer();
+				case 3:
+					num = (((object)type == typeof(EventListenerComponent)) ? 1 : 4);
+					break;
+				case 1:
+					return new EventListenerComponentSerializer();
+				case 4:
+					return null;
+				}
+			}
+		}
+	}
+}
+namespace ႥႨႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] Ⴀ;
+
+		private static readonly string[] Ⴀ;
+
+		internal static string ႰႠ(int Ⴃ)
+		{
+			int num = Ⴃ ^ 0x1A7D9A5D;
+			string result;
+			if ((result = Ⴀ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "Ցईר\u0cfbఏ\u0dc9त\u05abՠछף\u0cf0ఉෆढ\u05b5դऑף\u0cf0క\u0df1\u093e\u0594սऍ\u05f9";
+				break;
+			case 1:
+				obj = "";
+				break;
+			case 2:
+				obj = "\u05c8\u0ce3ఞ෫ह\u0594սऍ\u05f9\u0cf0క\u0de0\u093f\u059bջओ\u05fd\u0cfaక\u0de0ण\u05ac";
+				break;
+			case 3:
+				obj = "ष\u05c9";
+				break;
+			case 4:
+				obj = "వ\u0de4ठ\u05bd";
+				break;
+			case 5:
+				obj = "\u0cd4ఈ\u0df6न\u05b5նऒ״\u0cc5చ\u0df1थ";
+				break;
+			case 6:
+				obj = "\u0900\u05adէऊ׆\u0cf0ఞ\u0df5ङ\u05b0զछ\u05ecೱ\u0c3a෩त\u05aeձ";
+				break;
+			case 7:
+				obj = "ව\u093b\u05bdպऊ\u05c1\u0cfcఈ\u0df1न\u05b6ձऌ\u05ce\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9೦";
+				break;
+			case 8:
+				obj = "Ԯ\u093b\u05fb\u0cf0క\u0df1\u0901\u05b1էऊר\u0cfbఞ\u0df7ऎ\u05b7չऎע\u0cfbఞ෫ह\u05ab\u0558ग\u05feೡ";
+				break;
+			case 9:
+				obj = "עՑईר\u0cfbఏ\u0dc9त\u05abՠछף\u0cf0ఉෆढ\u05b5դऑף\u0cf0క\u0df1";
+				break;
+			case 10:
+				obj = "\u05b7\u0cdc\u0c3fඩ७ע՚टנ\u0cf0\u0c57ඥॷ\u0599էऍר\u0cf8ఙ෩ऴֈյऊץಹ\u0c5b\u0dbf\u0900\u05adէऊ׆\u0cf0ఞ\u0df5ङ\u05b0զछ\u05ecೱ\u0c3a෩त\u05aeձ";
+				break;
+			case 11:
+				obj = "\u0944\u05c8\u0ce3ఞ෫ह\u0594սऍ\u05f9\u0cf0క\u0de0\u093f\u059bջओ\u05fd\u0cfaక\u0de0ण\u05acէ";
+				break;
+			case 12:
+				obj = "\u0c29෪ण\u05bcխऑ\u05a3\u0cd6ఓ\u0de4ह\u05b5յऐ\u05a3\u0cd0\u0c0d\u0de0ण\u05ac\u0558ग\u05feೡఞ෫न\u05aaԺऽע\u0cfbఝ෬प\u05adզट\u05f9\u0cfcఔ෫\u0963\u059dբछףೡష෬\u093e\u05acձऐר೧స෪ठ\u05a8ջऐר\u0cfbఏ\u0df6\u0901\u05b1էऊ\u05b7ಯ\u0c3e\u0df3न\u05b6ՠलפ೦ఏ\u0de0ण\u05bdզऽע\u0cf8ఋ෪ण\u05bdպऊ\u05fe\u0cd9ఒ\u0df6हעՀऌ\u05f8\u0cf0\u0c41";
+				break;
+			case 13:
+				obj = "\u0cc7ఞ\u0de4ऩ\u05ecՋ\u093b\u05fb\u0cf0క\u0df1\u0901\u05b1էऊר\u0cfbఞ\u0df7ऎ\u05b7չऎע\u0cfbఞ෫ह\u05ab\u0558ग\u05feೡ";
+				break;
+			case 14:
+				obj = "ट\u05b7պच״\u0cfa\u0c55ෆथ\u05b9ՠओ\u05ec\u0cfb\u0c55ව\u093b\u05bdպऊ\u05c1\u0cfcఈ\u0df1न\u05b6ձऌ\u05a3\u0cd6ఔ෫फ\u05b1ճऋ\u05ff\u0cf4ఏ෬ढ\u05b6Ժ\u093b\u05fb\u0cf0క\u0df1\u0901\u05b1էऊר\u0cfbఞ\u0df7ऎ\u05b7չऎע\u0cfbఞ෫हעԮ";
+				break;
+			case 15:
+				obj = "\u0dd2\u093f\u05b1ՠछ\u05b9\u0cca\u0c3e\u0df3न\u05b6ՠलפ೦ఏ\u0de0ण\u05bdզऽע\u0cf8ఋ෪ण\u05bdպऊ\u05fe\u0cd9ఒ\u0df6ह";
+				break;
+			case 16:
+				obj = "Նछ\u05ecೱ\u0c4e\u0ddaई\u05aeձऐ\u05f9\u0cd9ఒ\u0df6ह\u05bdպछ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡ";
+				break;
+			case 17:
+				obj = "֏զग\u05f9\u0cf0\u0c4e\u0ddaई\u05aeձऐ\u05f9\u0cd9ఒ\u0df6ह\u05bdպछ\u05ff\u0cd6ఔ෨ऽ\u05b7պछףೡ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴀ = (char[])(object)Ⴍ.Ⴀ;
+			int num2 = ⴀ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴀ[(num3 + Ⴃ) % num2]);
+			}
+			result = new string(array);
+			Ⴀ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴍ.Ⴀ = (string[])(object)array;
+			Ⴀ = new string[18];
+		}
+	}
+}

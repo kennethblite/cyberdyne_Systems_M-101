@@ -1,0 +1,799 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.EventListener.dll
+// Rondyo.Chatman.EventListener, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Data.Events;
+using Rondyo.Chatman.EventListener;
+using Rondyo.Chatman.EventListener.Configuration;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
+using System.Xml.Serialization;
+using ႣႥ;
+using ႥႤႭ;
+using ႥႥႥ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႣ;
+using ႥႥႨႥ;
+using ႥႥႨႨ;
+using ႥႥႨႭ;
+using ႨႥႨ;
+using ႨႥႰ;
+using ႨႳႨ;
+using ႨႷႨ;
+using ႭႷႰ;
+using ႷႠႨ;
+using ႷႭႠ;
+using ႷႭႣ;
+using ႷႭႥ;
+using ႷႭႨ;
+
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: Guid("6866dfd1-9418-4189-b40c-f5f6881dac86")]
+[assembly: AssemblyTrademark("")]
+[assembly: ComVisible(false)]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Rondyo.Chatman.EventListener.Configuration
+{
+	[Serializable]
+	public class EventListenerComponent
+	{
+		private int id;
+
+		private string name;
+
+		private string assemblyPath;
+
+		private bool mustKeepThreadAlive;
+
+		[NonSerialized]
+		private ႷႭႥ.Ⴈ eventListenerComponentInstance;
+
+		[XmlAttribute]
+		public int ID
+		{
+			get
+			{
+				return id;
+			}
+			set
+			{
+				id = value;
+			}
+		}
+
+		[XmlAttribute]
+		public string Name
+		{
+			get
+			{
+				return name;
+			}
+			set
+			{
+				name = value;
+			}
+		}
+
+		[XmlAttribute]
+		public string AssemblyPath
+		{
+			get
+			{
+				return assemblyPath;
+			}
+			set
+			{
+				assemblyPath = value;
+			}
+		}
+
+		[XmlAttribute]
+		public bool MustKeepThreadAlive
+		{
+			get
+			{
+				return mustKeepThreadAlive;
+			}
+			set
+			{
+				mustKeepThreadAlive = value;
+			}
+		}
+
+		[XmlIgnore]
+		public ႷႭႥ.Ⴈ EventListenerComponentInstance
+		{
+			get
+			{
+				return eventListenerComponentInstance;
+			}
+			set
+			{
+				eventListenerComponentInstance = value;
+			}
+		}
+	}
+	[Serializable]
+	[XmlRoot("EventListenerComponentsList")]
+	public class EventListenerComponentsList
+	{
+		private List<EventListenerComponent> eventListenerComponents = new List<EventListenerComponent>();
+
+		[NonSerialized]
+		private bool eventListenerComponentsSet;
+
+		[XmlArray("EventListenerComponents")]
+		[XmlArrayItem("EventListenerComponent", typeof(EventListenerComponent))]
+		public List<EventListenerComponent> EventListenerComponents
+		{
+			get
+			{
+				return eventListenerComponents;
+			}
+			set
+			{
+				int num = 0;
+				while (true)
+				{
+					int num2;
+					switch (num)
+					{
+					default:
+						num2 = ((!eventListenerComponentsSet) ? 1 : 2);
+						break;
+					case 2:
+						throw new InvalidOperationException();
+					case 1:
+						eventListenerComponents = value;
+						eventListenerComponentsSet = true;
+						return;
+					}
+					num = num2;
+				}
+			}
+		}
+
+		internal static EventListenerComponentsList ႨႰႣ()
+		{
+			return new EventListenerComponentsList();
+		}
+	}
+}
+namespace Rondyo.Chatman.EventListener
+{
+	public class RondyoListenerWindow : Form
+	{
+		private ႷႠႨ.Ⴐ Ⴐ;
+
+		private IContainer Ⴐ = null;
+
+		public static string Ⴃ => ႥႤႭ.Ⴍ.ႰႷ(1821394870);
+
+		public event ႷႠႨ.Ⴐ Ⴈ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.Ⴐ = (IContainer)(object)(ႷႠႨ.Ⴐ)Delegate.Combine((Delegate)this.Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.Ⴐ = (IContainer)(object)(ႷႠႨ.Ⴐ)Delegate.Remove((Delegate)this.Ⴐ, value);
+			}
+		}
+
+		public RondyoListenerWindow()
+		{
+			ႭႨ();
+			Text = Ⴃ;
+			base.WindowState = FormWindowState.Minimized;
+			base.ShowInTaskbar = false;
+		}
+
+		protected override void WndProc(ref Message Ⴓ)
+		{
+			if (Ⴓ.Msg == 74)
+			{
+				ႥႥႨႭ.Ⴀ.ႣႤ ⴃႤ = default(ႥႥႨႭ.Ⴀ.ႣႤ);
+				ⴃႤ = (ႥႥႨႭ.Ⴀ.ႣႤ)Marshal.PtrToStructure(Ⴓ.LParam, typeof(ႥႥႨႭ.Ⴀ.ႣႤ));
+				if (ⴃႤ.Ⴅ > 0)
+				{
+					byte[] array = new byte[ⴃႤ.Ⴅ];
+					Marshal.Copy(ⴃႤ.Ⴈ, array, 0, ⴃႤ.Ⴅ);
+					string @string = Encoding.Unicode.GetString(array);
+					try
+					{
+						ႷႠႨ.Ⴈ ⴓ = new ႷႠႨ.Ⴈ(@string);
+						if (this.Ⴐ != null)
+						{
+							this.Ⴐ(this, ⴓ);
+						}
+					}
+					catch (Exception ⴍ)
+					{
+						ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+					}
+					Ⴓ.Result = (IntPtr)1;
+				}
+			}
+			base.WndProc(ref Ⴓ);
+		}
+
+		internal void ႰႳ()
+		{
+			Close();
+		}
+
+		internal void ႰႼ()
+		{
+			Show();
+			Hide();
+		}
+
+		protected override void Dispose(bool Ⴍ)
+		{
+			int num = 1;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num = (Ⴍ ? 2 : 0);
+					break;
+				case 2:
+					num2 = ((Ⴐ == null) ? 1 : 0);
+					goto IL_003a;
+				case 0:
+					num2 = 1;
+					goto IL_003a;
+				case 4:
+					num = ((Ⴐ == null) ? 5 : 3);
+					break;
+				case 3:
+					Ⴐ.Dispose();
+					num = 5;
+					break;
+				case 5:
+					num = 6;
+					break;
+				case 6:
+					{
+						base.Dispose(Ⴍ);
+						return;
+					}
+					IL_003a:
+					num = ((num2 != 0) ? 6 : 4);
+					break;
+				}
+			}
+		}
+
+		private void ႭႨ()
+		{
+			Ⴐ = new Container();
+			base.AutoScaleMode = AutoScaleMode.Font;
+			Text = ႥႤႭ.Ⴍ.ႰႷ(1821394870);
+		}
+	}
+}
+namespace ႥႤႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string ႰႷ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x6C9047A4;
+			string result;
+			if ((result = ႥႤႭ.Ⴍ.m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "\u058bՠट\u05ffೡఒ෫प\u05f8ձईר\u0cfbఏඥड\u05b1էऊר\u0cfbఞ\u0df7";
+				break;
+			case 1:
+				obj = "՝ऐפೡఒ\u0de4ड\u05b1ծगףೲ\u0c5b\u0de0\u093b\u05bdպऊ\u05ad\u0cf9ఒ\u0df6ह\u05bdպछ\u05ffವఌ෬ण\u05bcջउ";
+				break;
+			case 2:
+				obj = "\u093b\u05ff೧ఔ\u0df7७\u05b1պग\u05f9\u0cfcచ෩त\u05a2սऐתವగ෬\u093e\u05acձऐר೧";
+				break;
+			case 3:
+				obj = "יೠక෫त\u05b6ճफ़\u05f9\u0cfdఉ\u0de0ब\u05bcԴऊעವఒ෫त\u05acսटס\u0cfc\u0c01\u0de0७\u05bdբछףೡ\u0c5b෩त\u05abՠछף\u0cf0ఉඥम\u05b7չऎע\u0cfbఞ෫ह\u05ab";
+				break;
+			case 4:
+				obj = "\u0cdcక෬ह\u05b1յऒפ೯ఒ෫प\u05f8ձईר\u0cfbఏඥड\u05b1էऊר\u0cfbఞ\u0df7७\u05bbջओ\u05fd\u0cfaక\u0de0ण\u05acէफ़\u05a0ವఈ\u0df1ब\u05acձफ़פ೦\u0c41ඥशרթ";
+				break;
+			case 5:
+				obj = "న\u0df1ब\u05aaՠगףೲ\u0c5b\u0de0\u093b\u05bdպऊ\u05ad\u0cf9ఒ\u0df6ह\u05bdպछ\u05ffವ";
+				break;
+			case 6:
+				obj = "ව\u093f\u05aaջऌ\u05ad\u0cfcక෬ह\u05b1յऒפ೯ఒ෫प\u05f8ձईר\u0cfbఏඥड\u05b1էऊר\u0cfbఞ\u0df7७\u05bbջओ\u05fd\u0cfaక\u0de0ण\u05acԴअ\u05bd೨\u0c5b෬ण\u05f8Ցईר\u0cfbఏඥड\u05b1էऊר\u0cfbఞ\u0df7\u0963";
+				break;
+			case 7:
+				obj = "ई\u05aeձऐ\u05f9ವగ෬\u093e\u05acձऐר೧ఈඥ\u093e\u05acյऌ\u05f9\u0cf0ట";
+				break;
+			case 8:
+				obj = "\u058bՠऑ\u05fd\u0ce5ఒ෫प\u05f8ձईר\u0cfbఏඥड\u05b1էऊר\u0cfbఞ\u0df7";
+				break;
+			case 9:
+				obj = "Ցऌ\u05ff\u0cfaఉඥऩ\u05b1էऎע೦ఒ෫प\u05f8ջघ\u05ad\u0cf0\u0c0d\u0de0ण\u05acԴऒפ೦ఏ\u0de0ण\u05bdզफ़\u05ee\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9ವ\u0c00ඵर\u05f8սऐ\u05ad\u0cd0\u0c0d\u0de0ण\u05acԴऒפ೦ఏ\u0de0ण\u05bdզ";
+				break;
+			case 10:
+				obj = "पר೧ఖ෬ण\u05b9ՠगףೲ\u0c5b\u0de0\u093b\u05bdպऊ\u05ad\u0cf9ఒ\u0df6ह\u05bdպछ\u05ffವఌ෬ण\u05bcջउ";
+				break;
+			case 11:
+				obj = "\u05c8\u0ce3ఞ෫ह\u05f8ոग\u05feೡఞ෫न\u05aaԴऍ\u05f9\u0cfaఋ\u0df5न\u05bc";
+				break;
+			case 12:
+				obj = "\u0cd9ఔ\u0de4ऩ\u05b1պङ\u05ad\u0cf0\u0c0d\u0de0ण\u05acԴऒפ೦ఏ\u0de0ण\u05bdզफ़\u05ee\u0cfaఖ\u0df5ढ\u05b6ձऐ\u05f9೦";
+				break;
+			case 13:
+				obj = "\u0c3e\u0df3न\u05b6ՠलפ೦ఏ\u0de0ण\u05bdզऽע\u0cf8ఋ෪ण\u05bdպऊ\u05fe\u0cbbట\u0de4ह";
+				break;
+			case 14:
+				obj = "හ\u093e\u05abձओׯ\u0cf9\u0c02\u0dd5ब\u05acռ";
+				break;
+			case 15:
+				obj = "ई\u05aeձऐ\u05f9ವగ෬\u093e\u05acձऐר೧\u0c5b෦ढ\u05b5դऑף\u0cf0క\u0df1\u093e\u05f8ոऑ\u05ecೱఞ\u0de1";
+				break;
+			case 16:
+				obj = "\u059dլझר\u0ce5ఏ෬ढ\u05b6Դगףವగ෬\u093e\u05acձऐר೧బ෬ण\u05bcջउג\u0cd8ఞ\u0df6\u093e\u05b9ճछן\u0cf0ఘ\u0de0त\u05aeձच\u05ac";
+				break;
+			case 17:
+				obj = "Ցईר\u0cfbఏ\u0dbf७";
+				break;
+			case 18:
+				obj = "बע\u0cfbట\u0dfcढ\u0594սऍ\u05f9\u0cf0క\u0de0\u093f֏սऐש\u0cfaఌ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႥႤႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			ႥႤႭ.Ⴍ.m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႥႤႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[19];
+		}
+	}
+}
+namespace ႭႤႰ
+{
+	public class Ⴈ : IDisposable, ႷႭႥ.Ⴓ
+	{
+		private sealed class <>c__DisplayClass2
+		{
+			public bool persistentThreadOnly;
+
+			public bool <InitializeListenersThreadProc>b__1(ႷႭႥ.Ⴈ theEventListenerComponent)
+			{
+				return theEventListenerComponent.Ⴐ == persistentThreadOnly;
+			}
+		}
+
+		private readonly ႣႥ.Ⴈ Ⴓ;
+
+		private Queue<ႭႷႰ.Ⴐ> Ⴐ;
+
+		private ႥႥႨႥ.Ⴓ Ⴀ;
+
+		private AutoResetEvent Ⴀ;
+
+		private RondyoListenerWindow m_Ⴈ;
+
+		private EventListenerComponentsList Ⴀ;
+
+		private List<ႷႭႥ.Ⴈ> Ⴀ;
+
+		private ႷႭႨ.Ⴀ Ⴀ = ႷႭႨ.Ⴀ.Ⴐ;
+
+		private ႷႭႨ.Ⴀ Ⴄ;
+
+		private EventListenerComponentsList Ⴄ;
+
+		private static int Ⴗ;
+
+		private bool Ⴗ;
+
+		public Ⴈ(ႣႥ.Ⴈ Ⴀ)
+		{
+			Ⴓ = Ⴀ;
+			ႨႰႤ();
+		}
+
+		~Ⴈ()
+		{
+			ႰႣ(Ⴀ: false);
+		}
+
+		public unsafe void ႨႰႤ()
+		{
+			if (Ⴀ != ႷႭႨ.Ⴀ.Ⴈ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394852));
+				ႨႨႷ();
+				ႨႨႥ();
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394853));
+				Ⴐ ⴐ;
+				try
+				{
+					Ⴐ = new Queue<ႭႷႰ.Ⴐ>();
+					*(AutoResetEvent*)(&this.Ⴀ) = new AutoResetEvent(initialState: false);
+					*(ႥႥႨႥ.Ⴓ*)(&this.Ⴀ) = ႥႥႨႥ.Ⴓ.ႨႷႼ(ႨႨႠ);
+					ႨႨႳ();
+					ⴐ = new Ⴐ(Process.GetCurrentProcess().ProcessName, RondyoListenerWindow.Ⴃ);
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(string.Format(ႥႤႭ.Ⴍ.ႰႷ(1821394854)), ⴓ);
+					throw;
+				}
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394855));
+				ႰႳ(ⴐ, true);
+				ႥႥႨႥ.Ⴓ.Ⴃ(ႰႳ, false, ⴐ, false);
+			}
+		}
+
+		private void ႨႨႳ()
+		{
+			ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+			{
+				m_Ⴈ = new RondyoListenerWindow();
+				m_Ⴈ.Ⴈ += ႰႨ;
+				m_Ⴈ.ႰႼ();
+			});
+		}
+
+		private unsafe void ႰႳ(params object[] Ⴀ)
+		{
+			<>c__DisplayClass2 CS$<>8__locals0 = new <>c__DisplayClass2();
+			Ⴐ ⴓ = (Ⴐ)Ⴀ[0];
+			CS$<>8__locals0.persistentThreadOnly = (bool)Ⴀ[1];
+			ႥႥႨ.Ⴗ.ႳႭ(ႥႤႭ.Ⴍ.ႰႷ(1821394848), CS$<>8__locals0.persistentThreadOnly);
+			foreach (ႷႭႥ.Ⴈ item in (*(List<ႷႭႥ.Ⴈ>*)(&this.Ⴀ)).Where((ႷႭႥ.Ⴈ theEventListenerComponent) => theEventListenerComponent.Ⴐ == CS$<>8__locals0.persistentThreadOnly))
+			{
+				try
+				{
+					ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394849) + item.GetType().Name);
+					item.ႰႣ(ⴓ);
+					if (ႥႥႨႣ.Ⴀ.Ⴈ.WaitOne(1000))
+					{
+						return;
+					}
+				}
+				catch (Exception ⴓ2)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(string.Format(ႥႤႭ.Ⴍ.ႰႷ(1821394850), item.GetType()), ⴓ2);
+				}
+			}
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394851));
+			this.Ⴀ = ႷႭႨ.Ⴀ.Ⴈ;
+		}
+
+		public unsafe void ႨႰႼ()
+		{
+			if (Ⴀ == ႷႭႨ.Ⴀ.Ⴈ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394860));
+				try
+				{
+					((ႥႥႨႥ.Ⴓ*)(&this.Ⴀ))->ႨႳႭ();
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+				}
+				IEnumerable<ႷႭႥ.Ⴈ> enumerable = Enumerable.Reverse(*(List<ႷႭႥ.Ⴈ>*)(&this.Ⴀ));
+				foreach (ႷႭႥ.Ⴈ item in enumerable)
+				{
+					try
+					{
+						item.Dispose();
+					}
+					catch (Exception ⴍ)
+					{
+						ႥႥႨ.Ⴗ.ႳႤ(string.Format(ႥႤႭ.Ⴍ.ႰႷ(1821394861), item.GetType()), ⴍ);
+					}
+				}
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394862));
+				try
+				{
+					ႥႥႨႣ.Ⴀ.ႨႠႠ(delegate
+					{
+						m_Ⴈ.ႰႳ();
+					});
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				}
+				ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394863));
+				Ⴀ = ႷႭႨ.Ⴀ.Ⴓ;
+			}
+		}
+
+		public unsafe void ႨႨႰ()
+		{
+			*(ႷႭႨ.Ⴀ*)(&this.Ⴄ) = Ⴀ;
+			Ⴀ = ႷႭႨ.Ⴀ.Ⴗ;
+		}
+
+		public unsafe void ႨႨႨ()
+		{
+			Ⴀ = *(ႷႭႨ.Ⴀ*)(&this.Ⴄ);
+		}
+
+		private void ႨႨႷ()
+		{
+			Ⴄ = new EventListenerComponentsList();
+			List<EventListenerComponent> list = new List<EventListenerComponent>();
+			Ⴄ.EventListenerComponents = list;
+			list.Add(new EventListenerComponent
+			{
+				AssemblyPath = string.Empty,
+				EventListenerComponentInstance = new ႨႳႨ.Ⴈ(),
+				MustKeepThreadAlive = true
+			});
+			list.Add(new EventListenerComponent
+			{
+				AssemblyPath = string.Empty,
+				EventListenerComponentInstance = new ႨႷႨ.Ⴈ()
+			});
+			list.Add(new EventListenerComponent
+			{
+				AssemblyPath = string.Empty,
+				EventListenerComponentInstance = new ႨႥႨ.Ⴈ()
+			});
+			list.Add(new EventListenerComponent
+			{
+				AssemblyPath = string.Empty,
+				EventListenerComponentInstance = new ႨႥႰ.Ⴐ()
+			});
+		}
+
+		private unsafe void ႨႨႥ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394856));
+			try
+			{
+				string text = ႣႳ.ႨႷႭ(ႥႤႭ.Ⴍ.ႰႷ(1821394857));
+				if (File.Exists(text))
+				{
+					*(EventListenerComponentsList*)(&this.Ⴀ) = Ⴈ<EventListenerComponentsList>.ႨႷႭ(text);
+				}
+				else
+				{
+					*(EventListenerComponentsList*)(&this.Ⴀ) = EventListenerComponentsList.ႨႰႣ();
+				}
+				((EventListenerComponentsList*)(&this.Ⴀ))->EventListenerComponents.AddRange(Ⴄ.EventListenerComponents);
+				EventListenerComponent[] array = ((EventListenerComponentsList*)(&this.Ⴀ))->EventListenerComponents.ToArray();
+				ႥႥႨႨ.Ⴈ.Ⴗ(array, ႥႤႭ.Ⴍ.ႰႷ(1821394858), out *(List<ႷႭႥ.Ⴈ>*)(&this.Ⴀ));
+				int num = array.Length;
+				for (int i = 0; i < num; i++)
+				{
+					if (array[i].EventListenerComponentInstance == null)
+					{
+						array[i].EventListenerComponentInstance = (*(List<ႷႭႥ.Ⴈ>*)(&this.Ⴀ))[i];
+					}
+					else if (!((List<ႷႭႥ.Ⴈ>*)(&this.Ⴀ))->Contains(array[i].EventListenerComponentInstance))
+					{
+						((List<ႷႭႥ.Ⴈ>*)(&this.Ⴀ))->Add(array[i].EventListenerComponentInstance);
+					}
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw;
+			}
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႥႤႭ.Ⴍ.ႰႷ(1821394859));
+		}
+
+		private void ႰႨ(object Ⴀ, ႷႠႨ.Ⴈ Ⴍ)
+		{
+			try
+			{
+				if (this.Ⴀ != ႷႭႨ.Ⴀ.Ⴗ)
+				{
+					ႳႳ(Ⴍ.Ⴃ, Ⴍ.Ⴀ);
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႠ(ႥႤႭ.Ⴍ.ႰႷ(1821394868), ⴓ);
+			}
+		}
+
+		public unsafe void ႳႳ(string Ⴀ, DateTime Ⴍ)
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႥႤႭ.Ⴍ.ႰႷ(1821394869) + Ⴀ);
+			EventDetails item = EventDetails.ႳႳ(Ⴀ, Ⴍ);
+			lock (Ⴐ)
+			{
+				Ⴐ.Enqueue(item);
+			}
+			((AutoResetEvent*)(&this.Ⴀ))->Set();
+		}
+
+		private unsafe void ႨႨႠ()
+		{
+			Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+			while (!ႥႥႨႣ.Ⴀ.Ⴐ)
+			{
+				if (!((AutoResetEvent*)(&this.Ⴀ))->WaitOne(500))
+				{
+					if (ႥႥႨႣ.Ⴀ.Ⴐ)
+					{
+						break;
+					}
+					continue;
+				}
+				ႭႷႰ.Ⴐ[] array;
+				lock (Ⴐ)
+				{
+					array = Ⴐ.ToArray();
+					Ⴐ.Clear();
+				}
+				if (array.Length <= 0)
+				{
+					continue;
+				}
+				Ⴓ.ႠႨ(array);
+				if (array[0].Ⴗ == 9)
+				{
+					(*(int*)(&ႭႤႰ.Ⴈ.Ⴗ))++;
+					if (*(int*)(&ႭႤႰ.Ⴈ.Ⴗ) % 5 == 0)
+					{
+						Ⴓ.Ⴀ.ႨႤႥ(ႷႭႠ.Ⴗ.ႨႳ);
+					}
+				}
+			}
+		}
+
+		public void Dispose()
+		{
+			ႰႣ(Ⴀ: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected void ႰႣ(bool Ⴀ)
+		{
+			int num = 4;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = (Ⴗ ? 1 : 0);
+					break;
+				case 0:
+					num = ((!Ⴀ) ? 3 : 2);
+					break;
+				case 2:
+					ႨႰႼ();
+					num = 3;
+					break;
+				case 3:
+					num = 1;
+					break;
+				case 1:
+					Ⴗ = true;
+					return;
+				}
+			}
+		}
+
+		private void <InitializeEventListenerReceiver>b__0()
+		{
+			m_Ⴈ = new RondyoListenerWindow();
+			m_Ⴈ.Ⴈ += ႰႨ;
+			m_Ⴈ.ႰႼ();
+		}
+
+		private void <Stop>b__4()
+		{
+			m_Ⴈ.ႰႳ();
+		}
+	}
+	internal sealed class Ⴐ : ႷႭႣ.Ⴜ
+	{
+		private string Ⴓ;
+
+		private string Ⴃ;
+
+		public Ⴐ(string Ⴀ, string Ⴍ)
+		{
+			Ⴓ = Ⴀ;
+			Ⴃ = Ⴍ;
+		}
+
+		public string ႨႰႣ()
+		{
+			return Ⴓ;
+		}
+
+		public string ႨႰႭ()
+		{
+			return Ⴃ;
+		}
+	}
+}
+namespace ႷႠႨ
+{
+	public class Ⴈ
+	{
+		private string m_Ⴈ;
+
+		private DateTime m_Ⴈ;
+
+		public unsafe string Ⴃ => *(string*)(&this.m_Ⴈ);
+
+		public DateTime Ⴀ => m_Ⴈ;
+
+		internal unsafe Ⴈ(string Ⴍ)
+		{
+			*(string*)(&this.m_Ⴈ) = Ⴍ;
+			m_Ⴈ = DateTime.Now;
+		}
+	}
+	public delegate void Ⴐ(object Ⴍ, Ⴈ Ⴓ);
+}

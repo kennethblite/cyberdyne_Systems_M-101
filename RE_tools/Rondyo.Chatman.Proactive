@@ -1,0 +1,3699 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Proactive.dll
+// Rondyo.Chatman.Proactive, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Data;
+using Rondyo.Chatman.Proactive.Auxiliaries;
+using Rondyo.Chatman.Proactive.Base;
+using Rondyo.Chatman.Proactive.Conditions;
+using Rondyo.Chatman.Proactive.Data;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+using ႥႥႤ;
+using ႥႥႥ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႣ;
+using ႥႥႨႥ;
+using ႥႷႭ;
+using ႭႨႰ;
+using ႭႭႰ;
+using ႭႷႭ;
+using ႷႭႣ;
+using ႷႭႥ;
+using ႷႭႳ;
+using ႷႭႼ;
+
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: CompilationRelaxations(8)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyTrademark("")]
+[assembly: ComVisible(false)]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: Guid("0878a070-1c67-4ea4-ac5d-9c5310d22652")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Rondyo.Chatman.Proactive.Auxiliaries
+{
+	public class DateTimeRange : IComparable
+	{
+		private DateTime date;
+
+		private int durationInDays = 1;
+
+		public DateTime DateStart
+		{
+			get
+			{
+				return date;
+			}
+			set
+			{
+				date = value;
+			}
+		}
+
+		public DateTime DateEnd => date.AddDays(durationInDays - 1);
+
+		public int DurationInDays
+		{
+			get
+			{
+				return durationInDays;
+			}
+			set
+			{
+				durationInDays = value;
+			}
+		}
+
+		public DateTimeRange()
+		{
+		}
+
+		public DateTimeRange(DateTime startDate)
+		{
+			date = startDate;
+		}
+
+		public override string ToString()
+		{
+			return ႭႷႭ.Ⴍ.ႠႣႣ(1933791547) + DateStart.ToString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791546)) + ႭႷႭ.Ⴍ.ႠႣႣ(1933791545) + durationInDays + ႭႷႭ.Ⴍ.ႠႣႣ(1933791544);
+		}
+
+		public int CompareTo(object obj)
+		{
+			//Discarded unreachable code: IL_0002, IL_0030, IL_005d
+			if (obj is DateTimeRange)
+			{
+				if (665 >= 665 - 561)
+				{
+					DateTimeRange dateTimeRange = (DateTimeRange)obj;
+					int num = date.CompareTo(dateTimeRange.DateStart);
+					while (num != 0)
+					{
+						if ((715 + 715 * 715) % 2 == 0)
+						{
+							return num;
+						}
+					}
+					return durationInDays.CompareTo(dateTimeRange.DurationInDays);
+				}
+			}
+			return -1;
+		}
+	}
+	[XmlRoot("SerializableDictionaryStringDateTime")]
+	public class SerializableDictionaryStringDateTime : Dictionary<string, DateTime>, IXmlSerializable
+	{
+		private const string DateTimeFormat = "MM/dd/yyyy HH:mm:ss";
+
+		public XmlSchema GetSchema()
+		{
+			return null;
+		}
+
+		public void ReadXml(XmlReader reader)
+		{
+			int num = 2;
+			string name = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+				{
+					reader.MoveToContent();
+					name = reader.Name;
+					bool isEmptyElement = reader.IsEmptyElement;
+					reader.ReadStartElement();
+					num = (isEmptyElement ? 1 : 0);
+					break;
+				}
+				case 0:
+				{
+					reader.MoveToContent();
+					string key = reader.GetAttribute(ႭႷႭ.Ⴍ.ႠႣႣ(1933791495)) ?? ႭႷႭ.Ⴍ.ႠႣႣ(1933791494);
+					string attribute = reader.GetAttribute(ႭႷႭ.Ⴍ.ႠႣႣ(1933791506));
+					DateTime dateTime2 = base[key] = DateTime.ParseExact(attribute, ႭႷႭ.Ⴍ.ႠႣႣ(1933791491), CultureInfo.InvariantCulture);
+					reader.Read();
+					num = ((!(reader.Name != name)) ? 3 : 0);
+					break;
+				}
+				case 3:
+					reader.ReadEndElement();
+					return;
+				}
+			}
+		}
+
+		public void WriteXml(XmlWriter writer)
+		{
+			using (Enumerator enumerator = GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					KeyValuePair<string, DateTime> current = enumerator.Current;
+					writer.WriteStartElement(ႭႷႭ.Ⴍ.ႠႣႣ(1933791489));
+					writer.WriteAttributeString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791495), current.Key);
+					writer.WriteAttributeString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791506), current.Value.ToString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791491)));
+					writer.WriteEndElement();
+				}
+			}
+		}
+	}
+	[XmlRoot("SerializableDictionaryStringDateTimeList")]
+	public class SerializableDictionaryStringDateTimeList : Dictionary<string, List<DateTimeRange>>, IXmlSerializable
+	{
+		private const string DateTimeFormat = "MM/dd/yyyy HH:mm:ss";
+
+		public XmlSchema GetSchema()
+		{
+			return null;
+		}
+
+		public void ReadXml(XmlReader reader)
+		{
+			//Discarded unreachable code: IL_0005, IL_0026, IL_0038, IL_0059, IL_0084, IL_00be, IL_00c8, IL_00ff, IL_0116, IL_0125, IL_0177, IL_0197
+			int durationInDays = default(int);
+			string s = default(string);
+			string key = default(string);
+			List<DateTimeRange> list = default(List<DateTimeRange>);
+			while (true)
+			{
+				reader.MoveToContent();
+				string name = reader.Name;
+				while (true)
+				{
+					bool isEmptyElement = reader.IsEmptyElement;
+					reader.ReadStartElement();
+					if (isEmptyElement)
+					{
+						return;
+					}
+					if (369 > 369 - 360)
+					{
+						goto IL_000a;
+					}
+					goto IL_0119;
+					IL_012a:
+					string text;
+					durationInDays = int.Parse((string)text);
+					s = reader.ReadElementString();
+					goto IL_0139;
+					IL_000a:
+					reader.MoveToContent();
+					key = (reader.GetAttribute(ႭႷႭ.Ⴍ.ႠႣႣ(1933791495)) ?? ႭႷႭ.Ⴍ.ႠႣႣ(1933791494));
+					list = new List<DateTimeRange>();
+					if (!reader.IsEmptyElement)
+					{
+						if (245 <= 245 - 120)
+						{
+							break;
+						}
+						reader.ReadStartElement();
+					}
+					goto IL_005b;
+					IL_0119:
+					text = ႭႷႭ.Ⴍ.ႠႣႣ(1933791492);
+					goto IL_012a;
+					IL_005b:
+					if (!(reader.Name == ႭႷႭ.Ⴍ.ႠႣႣ(1933791490)))
+					{
+						if (false)
+						{
+						}
+						while (true)
+						{
+							base[key] = list;
+							reader.Read();
+							if (reader.Name != name)
+							{
+								break;
+							}
+							if (false)
+							{
+								goto IL_0139;
+							}
+							reader.ReadEndElement();
+							if ((903 + 903 * 903) % 2 == 0)
+							{
+								return;
+							}
+						}
+						goto IL_000a;
+					}
+					text = reader.GetAttribute(ႭႷႭ.Ⴍ.ႠႣႣ(1933791493));
+					if (text == null)
+					{
+						goto IL_0119;
+					}
+					goto IL_012a;
+					IL_0139:
+					list.Add(new DateTimeRange(DateTime.ParseExact(s, ႭႷႭ.Ⴍ.ႠႣႣ(1933791491), CultureInfo.InvariantCulture))
+					{
+						DurationInDays = durationInDays
+					});
+					if (23 <= 23 - 20)
+					{
+						continue;
+					}
+					goto IL_005b;
+				}
+			}
+		}
+
+		public void WriteXml(XmlWriter writer)
+		{
+			using (Enumerator enumerator = GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					KeyValuePair<string, List<DateTimeRange>> current = enumerator.Current;
+					writer.WriteStartElement(ႭႷႭ.Ⴍ.ႠႣႣ(1933791489));
+					writer.WriteAttributeString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791495), current.Key);
+					foreach (DateTimeRange item in current.Value)
+					{
+						writer.WriteStartElement(ႭႷႭ.Ⴍ.ႠႣႣ(1933791490));
+						if (item.DurationInDays != 1)
+						{
+							writer.WriteAttributeString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791493), item.DurationInDays.ToString());
+						}
+						writer.WriteString(item.DateStart.ToString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791491)));
+						writer.WriteEndElement();
+					}
+					writer.WriteEndElement();
+				}
+			}
+		}
+	}
+}
+namespace Rondyo.Chatman.Proactive.Base
+{
+	[Serializable]
+	[XmlType("Occurrence")]
+	public class OccurrencePattern : ProactiveEventCondition
+	{
+		private ProactiveEventOccurrencePattern Pattern;
+
+		private string <PatternName>k__BackingField;
+
+		[XmlAttribute("PatternName")]
+		public string PatternName
+		{
+			get
+			{
+				return <PatternName>k__BackingField;
+			}
+			set
+			{
+				<PatternName>k__BackingField = value;
+			}
+		}
+
+		public override bool IsActive
+		{
+			get
+			{
+				throw new ApplicationException(ႭႷႭ.Ⴍ.ႠႣႣ(1933791512));
+			}
+		}
+
+		public bool IsOccurrenceAllowable(string targetScenarioName)
+		{
+			int num = 3;
+			int num2;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((Pattern != null) ? 4 : 2);
+					continue;
+				case 2:
+					Pattern = ႭႥ.ႳႠႰ(PatternName);
+					num = 4;
+					continue;
+				case 4:
+					num = ((Pattern != null) ? 1 : 0);
+					continue;
+				case 1:
+					num2 = (Pattern.IsOccurrenceAllowable(targetScenarioName) ? 1 : 0);
+					break;
+				case 0:
+					num2 = 0;
+					break;
+				}
+				break;
+			}
+			bool flag = (byte)num2 != 0;
+			ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791514), targetScenarioName, flag ? ႭႷႭ.Ⴍ.ႠႣႣ(1933791494) : ႭႷႭ.Ⴍ.ႠႣႣ(1933791513), (Pattern == null) ? ႭႷႭ.Ⴍ.ႠႣႣ(1933791522) : Pattern.PatternName);
+			return flag;
+		}
+	}
+	[Serializable]
+	public abstract class ProactiveEventCondition
+	{
+		private bool <InvertCondition>k__BackingField;
+
+		public abstract bool IsActive
+		{
+			get;
+		}
+
+		[XmlAttribute("Invert")]
+		[DefaultValue(false)]
+		public bool InvertCondition
+		{
+			get
+			{
+				return <InvertCondition>k__BackingField;
+			}
+			set
+			{
+				<InvertCondition>k__BackingField = value;
+			}
+		}
+	}
+}
+namespace Rondyo.Chatman.Proactive.Conditions
+{
+	[Serializable]
+	[XmlType("ActiveChatmanProperties")]
+	public enum ActiveChatmanProperties
+	{
+		[XmlEnum]
+		BrainPowerLevel,
+		[XmlEnum]
+		BrainPowerLevelChangeDirection,
+		[XmlEnum]
+		FriendshipLevel,
+		[XmlEnum]
+		FriendshipChangeDirection,
+		[XmlEnum]
+		HasCredentials,
+		[XmlEnum]
+		UserGender,
+		[XmlEnum]
+		UserAgeYr,
+		[XmlEnum]
+		PcIsIdle,
+		[XmlEnum]
+		Credits,
+		[XmlEnum]
+		SadMoodCounter,
+		[XmlEnum]
+		AngryMoodCounter
+	}
+	[Serializable]
+	[XmlType("ComparisonType")]
+	public enum ComparisonType
+	{
+		[XmlEnum]
+		Equal,
+		[XmlEnum]
+		Greater,
+		[XmlEnum]
+		Less
+	}
+	[Serializable]
+	[XmlType("ActiveChatmanProperty")]
+	public class ProactiveEventConditionActiveChatmanProperty : ProactiveEventCondition
+	{
+		private string propertyValueString;
+
+		private IComparable propertyValue;
+
+		[XmlIgnore]
+		private TimeSpan conditionIsActiveForAtLeast = new TimeSpan(0, 0, 0);
+
+		private ActiveChatmanProperties <PropertyName>k__BackingField;
+
+		private ComparisonType <ComparisonKind>k__BackingField;
+
+		private static Rondyo.Chatman.Data.Chatman ActiveChatman => ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴈ.Ⴐ;
+
+		private static ႷႭႳ.Ⴈ ChatmanServices => ႭႨႰ.Ⴐ.Ⴐ.Ⴃ as ႷႭႳ.Ⴈ;
+
+		private static Personality ActivePersonality => ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴓ.ႷႳ();
+
+		[XmlIgnore]
+		public override bool IsActive
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0005, IL_000f, IL_0148
+				ActiveChatmanProperties propertyName = PropertyName;
+				do
+				{
+					switch (propertyName)
+					{
+					case ActiveChatmanProperties.FriendshipChangeDirection:
+						return CheckIsActiveForValue(ActiveChatman.Friendship.LevelChangeDirection);
+					case ActiveChatmanProperties.BrainPowerLevel:
+						return CheckIsActiveForValue(ActiveChatman.BrainPower.Level);
+					case ActiveChatmanProperties.PcIsIdle:
+						return CheckIsActiveForValue(ChatmanServices.Ⴍ.Ⴈ);
+					case ActiveChatmanProperties.BrainPowerLevelChangeDirection:
+						return CheckIsActiveForValue(ActiveChatman.BrainPower.LevelChangeDirection);
+					case ActiveChatmanProperties.FriendshipLevel:
+						return CheckIsActiveForValue(ActiveChatman.Friendship.AdjustedLevel);
+					case ActiveChatmanProperties.SadMoodCounter:
+						return CheckIsActiveForValue(MoodCounter(ႭႷႭ.Ⴍ.ႠႣႣ(1933791500)));
+					case ActiveChatmanProperties.Credits:
+						return CheckIsActiveForValue(ActiveChatman.NumberOfCredits);
+					case ActiveChatmanProperties.UserGender:
+						return CheckIsActiveForValue(ActiveChatman.UserGender);
+					case ActiveChatmanProperties.UserAgeYr:
+						return CheckIsActiveForValue(ActiveChatman.UserAge);
+					case ActiveChatmanProperties.HasCredentials:
+						return CheckIsActiveForValue(ActiveChatman.Ⴐ);
+					case ActiveChatmanProperties.AngryMoodCounter:
+						return CheckIsActiveForValue(MoodCounter(ႭႷႭ.Ⴍ.ႠႣႣ(1933791502)));
+					}
+				}
+				while (796 <= 796 - 199);
+				throw new ArgumentOutOfRangeException();
+			}
+		}
+
+		private string HistoryRecordName => PropertyNameString + ComparisonKindString + PropertyValueString;
+
+		[XmlAttribute("PropertyName")]
+		public string PropertyNameString
+		{
+			get
+			{
+				return PropertyName.ToString();
+			}
+			set
+			{
+				PropertyName = (ActiveChatmanProperties)Enum.Parse(typeof(ActiveChatmanProperties), value, ignoreCase: true);
+			}
+		}
+
+		[XmlIgnore]
+		public ActiveChatmanProperties PropertyName
+		{
+			get
+			{
+				return <PropertyName>k__BackingField;
+			}
+			set
+			{
+				<PropertyName>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("Value")]
+		public string PropertyValueString
+		{
+			get
+			{
+				return propertyValueString;
+			}
+			set
+			{
+				propertyValue = null;
+				propertyValueString = value;
+			}
+		}
+
+		[XmlIgnore]
+		public IComparable PropertyValue
+		{
+			get
+			{
+				switch (0)
+				{
+				default:
+					return propertyValue ?? (propertyValue = ParseValue(propertyValueString));
+				}
+			}
+			set
+			{
+				PropertyValueString = value.ToString();
+			}
+		}
+
+		[XmlAttribute("ComparisonType")]
+		[DefaultValue("Equal")]
+		public string ComparisonKindString
+		{
+			get
+			{
+				return ComparisonKind.ToString();
+			}
+			set
+			{
+				ComparisonKind = (ComparisonType)Enum.Parse(typeof(ComparisonType), value, ignoreCase: true);
+			}
+		}
+
+		[XmlIgnore]
+		public ComparisonType ComparisonKind
+		{
+			get
+			{
+				return <ComparisonKind>k__BackingField;
+			}
+			set
+			{
+				<ComparisonKind>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("ConditionIsActiveForAtLeast")]
+		public string ConditionIsActiveForAtLeastString
+		{
+			get
+			{
+				if (!(conditionIsActiveForAtLeast.TotalSeconds < 1.0))
+				{
+					if (313 >= 313 - 299)
+					{
+						return conditionIsActiveForAtLeast.ToString();
+					}
+				}
+				return ႭႷႭ.Ⴍ.ႠႣႣ(1933791494);
+			}
+			set
+			{
+				//Discarded unreachable code: IL_0002, IL_000f, IL_0019, IL_0025
+				conditionIsActiveForAtLeast = (string.IsNullOrEmpty(value) ? new TimeSpan(0, 0, 0) : TimeSpan.Parse(value));
+			}
+		}
+
+		private bool CheckIsActiveForValue(IComparable targetValue)
+		{
+			bool flag = PassThruHistoryRecords(Compare(targetValue) ^ base.InvertCondition);
+			ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791501), PropertyNameString, ComparisonKindString, PropertyValueString, targetValue, flag);
+			return flag;
+		}
+
+		private bool PassThruHistoryRecords(bool isNowActive)
+		{
+			//Discarded unreachable code: IL_0005, IL_0025, IL_003c, IL_0076, IL_0094, IL_00d3, IL_00f1, IL_0129, IL_0151, IL_016c, IL_0193, IL_01ad, IL_01d9, IL_01f8, IL_020f, IL_0245, IL_025d, IL_0271
+			DateTime? dateTime = default(DateTime?);
+			List<DateTimeRange> list = default(List<DateTimeRange>);
+			if (!(conditionIsActiveForAtLeast.TotalSeconds < 1.0))
+			{
+				dateTime = null;
+				list = null;
+				if (ႭႥ.ႳႠႼ().ContainsKey(HistoryRecordName))
+				{
+					if (856 < 856 - 364)
+					{
+						goto IL_0156;
+					}
+					list = ႭႥ.ႳႠႼ()[HistoryRecordName];
+					if (false)
+					{
+						goto IL_01fa;
+					}
+				}
+			}
+			else if (717 >= 717 - 136)
+			{
+				goto IL_01c2;
+			}
+			if (list != null)
+			{
+				if (890 < 890 - 311)
+				{
+					goto IL_01e0;
+				}
+				if (list.Count > 0)
+				{
+					if (607 < 607 - 94)
+					{
+						goto IL_0099;
+					}
+					if (isNowActive)
+					{
+						if ((998 + 998 * 998) % 2 == 0)
+						{
+							goto IL_0156;
+						}
+						goto IL_01c2;
+					}
+					goto IL_024a;
+				}
+			}
+			if (isNowActive)
+			{
+				if (25 <= 25 - 14)
+				{
+					goto IL_002a;
+				}
+				goto IL_0099;
+			}
+			goto IL_01fa;
+			IL_00fd:
+			DateTime now = DateTime.Now;
+			DateTime? dateTime2 = dateTime;
+			goto IL_0107;
+			IL_024a:
+			ႭႥ.ႳႠႼ().Remove(HistoryRecordName);
+			goto IL_01fa;
+			IL_0099:
+			ႭႥ.ႳႠႼ()[HistoryRecordName] = new List<DateTimeRange>
+			{
+				new DateTimeRange(DateTime.Now)
+			};
+			if (750 <= 750 - 380)
+			{
+				goto IL_00fd;
+			}
+			goto IL_01fa;
+			IL_002a:
+			return false;
+			IL_01de:
+			TimeSpan? obj;
+			TimeSpan? timeSpan = (TimeSpan?)obj;
+			goto IL_01e0;
+			IL_01fa:
+			TimeSpan t = default(TimeSpan);
+			if (isNowActive)
+			{
+				if (dateTime.HasValue)
+				{
+					t = conditionIsActiveForAtLeast;
+					goto IL_00fd;
+				}
+				if (269 > 269 - 208)
+				{
+					goto IL_002a;
+				}
+				goto IL_0107;
+			}
+			if (false)
+			{
+			}
+			return false;
+			IL_0107:
+			if (!dateTime2.HasValue)
+			{
+				if (949 <= 949 - 399)
+				{
+					goto IL_01c2;
+				}
+				goto IL_0262;
+			}
+			obj = now - dateTime2.GetValueOrDefault();
+			goto IL_01de;
+			IL_01c2:
+			return isNowActive;
+			IL_01e0:
+			if (timeSpan.HasValue)
+			{
+				return t < timeSpan.GetValueOrDefault();
+			}
+			if ((431 + 431 * 431) % 2 == 0)
+			{
+				return false;
+			}
+			goto IL_0262;
+			IL_0262:
+			obj = null;
+			goto IL_01de;
+			IL_0156:
+			if (list[0] != null)
+			{
+				if (92 < 92 - 47)
+				{
+					goto IL_00fd;
+				}
+				dateTime = list[0].DateStart;
+				goto IL_01fa;
+			}
+			goto IL_024a;
+		}
+
+		private int MoodCounter(string moodName)
+		{
+			//Discarded unreachable code: IL_0002, IL_0030, IL_005c, IL_0082
+			Mood mood = ActivePersonality.MoodList.ႨႳႼ(moodName);
+			while (mood != null)
+			{
+				if (false)
+				{
+				}
+				while (ActivePersonality.StateMoodCounters.ContainsKey(mood.ID))
+				{
+					if (136 <= 136 - 91)
+					{
+						continue;
+					}
+					goto IL_0004;
+				}
+				break;
+				IL_0004:
+				MoodCounter moodCounter = ActivePersonality.StateMoodCounters[mood.ID];
+				if (moodCounter == null)
+				{
+					break;
+				}
+				if (975 <= 975 - 720)
+				{
+					continue;
+				}
+				return moodCounter.TotalCounter;
+			}
+			return -1;
+		}
+
+		private bool Compare(IComparable targetValue)
+		{
+			int num = 4;
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					num = 1;
+					continue;
+				case 0:
+					return PropertyValue.CompareTo(targetValue) < 0;
+				case 3:
+					return PropertyValue.CompareTo(targetValue) > 0;
+				case 1:
+					return targetValue.Equals(PropertyValue);
+				}
+				int num2;
+				switch (ComparisonKind)
+				{
+				default:
+					num2 = 2;
+					break;
+				case ComparisonType.Greater:
+					num2 = 0;
+					break;
+				case ComparisonType.Less:
+					num2 = 3;
+					break;
+				}
+				num = num2;
+			}
+		}
+
+		private IComparable ParseValue(string newValue)
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					num = 4;
+					continue;
+				case 3:
+					return int.Parse(newValue);
+				case 6:
+					return float.Parse(newValue);
+				case 0:
+					return (LevelLastChangeDirection)Enum.Parse(typeof(LevelLastChangeDirection), newValue);
+				case 5:
+					return bool.Parse(newValue);
+				case 7:
+					return (Gender)Enum.Parse(typeof(Gender), newValue);
+				case 4:
+					throw new ArgumentOutOfRangeException();
+				}
+				int num2;
+				switch (PropertyName)
+				{
+				default:
+					num2 = 2;
+					break;
+				case ActiveChatmanProperties.BrainPowerLevel:
+					num2 = 3;
+					break;
+				case ActiveChatmanProperties.BrainPowerLevelChangeDirection:
+					num2 = 0;
+					break;
+				case ActiveChatmanProperties.FriendshipLevel:
+					num2 = 3;
+					break;
+				case ActiveChatmanProperties.FriendshipChangeDirection:
+					num2 = 0;
+					break;
+				case ActiveChatmanProperties.HasCredentials:
+					num2 = 5;
+					break;
+				case ActiveChatmanProperties.UserGender:
+					num2 = 7;
+					break;
+				case ActiveChatmanProperties.UserAgeYr:
+					num2 = 6;
+					break;
+				case ActiveChatmanProperties.PcIsIdle:
+					num2 = 5;
+					break;
+				case ActiveChatmanProperties.Credits:
+					num2 = 3;
+					break;
+				case ActiveChatmanProperties.SadMoodCounter:
+					num2 = 3;
+					break;
+				case ActiveChatmanProperties.AngryMoodCounter:
+					num2 = 3;
+					break;
+				}
+				num = num2;
+			}
+		}
+	}
+	[Serializable]
+	[XmlType("EventReceived")]
+	public class ProactiveEventConditionEventReceived : ProactiveEventCondition
+	{
+		[XmlIgnore]
+		private TimeSpan minimumInterval;
+
+		private string <EventName>k__BackingField;
+
+		private bool <EventCanBeAbsent>k__BackingField;
+
+		[XmlIgnore]
+		public override bool IsActive
+		{
+			get
+			{
+				int num = 3;
+				DateTime? dateTime = default(DateTime?);
+				bool flag = default(bool);
+				while (true)
+				{
+					switch (num)
+					{
+					default:
+						dateTime = ႭႥ.ႳႠႼ(EventName);
+						num = ((!dateTime.HasValue) ? 1 : 2);
+						break;
+					case 1:
+						flag = EventCanBeAbsent;
+						num = 0;
+						break;
+					case 2:
+						flag = (DateTime.Now - dateTime.Value > minimumInterval);
+						num = 0;
+						break;
+					case 0:
+						return flag ^ base.InvertCondition;
+					}
+				}
+			}
+		}
+
+		[XmlAttribute("EventName")]
+		public string EventName
+		{
+			get
+			{
+				return <EventName>k__BackingField;
+			}
+			set
+			{
+				<EventName>k__BackingField = value;
+			}
+		}
+
+		[DefaultValue(false)]
+		[XmlAttribute("EventCanBeAbsent")]
+		public bool EventCanBeAbsent
+		{
+			get
+			{
+				return <EventCanBeAbsent>k__BackingField;
+			}
+			set
+			{
+				<EventCanBeAbsent>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("MinimumInterval")]
+		public string MinimumIntervalString
+		{
+			get
+			{
+				return minimumInterval.ToString();
+			}
+			set
+			{
+				minimumInterval = TimeSpan.Parse(value);
+			}
+		}
+	}
+	[Serializable]
+	[XmlType("PerTimeRunsLimit")]
+	public class ProactiveEventConditionPerTimeRunsLimit : ProactiveEventOccurrencePattern
+	{
+		private static readonly object LockObject = new object();
+
+		private static bool isSubscried;
+
+		private static readonly List<string> SubscriptionScenarioNames = new List<string>();
+
+		private int <TimesToRun>k__BackingField;
+
+		private TimeSpan <PerTime>k__BackingField;
+
+		private bool <AlignToMidnight>k__BackingField;
+
+		[XmlIgnore]
+		public override bool IsActive => false;
+
+		[XmlAttribute("TimesToRun")]
+		public int TimesToRun
+		{
+			get
+			{
+				return <TimesToRun>k__BackingField;
+			}
+			set
+			{
+				<TimesToRun>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("PerTime")]
+		public string PerTimeString
+		{
+			get
+			{
+				return PerTime.ToString();
+			}
+			set
+			{
+				PerTime = TimeSpan.Parse(value);
+			}
+		}
+
+		[XmlIgnore]
+		private TimeSpan PerTime
+		{
+			get
+			{
+				return <PerTime>k__BackingField;
+			}
+			set
+			{
+				<PerTime>k__BackingField = value;
+			}
+		}
+
+		[DefaultValue(false)]
+		[XmlAttribute("AlignToMidnight")]
+		public bool AlignToMidnight
+		{
+			get
+			{
+				return <AlignToMidnight>k__BackingField;
+			}
+			set
+			{
+				<AlignToMidnight>k__BackingField = value;
+			}
+		}
+
+		~ProactiveEventConditionPerTimeRunsLimit()
+		{
+			if (isSubscried)
+			{
+				ႭႥ.ႳႠႣ(CalculateScenarioExecutions);
+			}
+		}
+
+		private void CalculateScenarioExecutions(ႷႭႼ.Ⴗ scenario, int selectedAction)
+		{
+			int num = 2;
+			string scenarioName = default(string);
+			List<DateTimeRange> list = default(List<DateTimeRange>);
+			while (true)
+			{
+				object obj;
+				switch (num)
+				{
+				case 3:
+					return;
+				case 5:
+					return;
+				case 6:
+					return;
+				default:
+					num = ((scenario != null) ? 7 : 3);
+					continue;
+				case 7:
+					scenarioName = scenario.ScenarioName;
+					num = ((!SubscriptionScenarioNames.Contains(scenarioName)) ? 6 : 0);
+					continue;
+				case 0:
+					num = ((TimesToRun > 1) ? 10 : 6);
+					continue;
+				case 10:
+					num = (ႭႥ.ႳႠႼ().ContainsKey(scenarioName) ? 4 : 8);
+					continue;
+				case 8:
+					obj = new List<DateTimeRange>();
+					goto IL_009b;
+				case 4:
+					obj = (ႭႥ.ႳႠႼ()[scenarioName] ?? new List<DateTimeRange>());
+					goto IL_009b;
+				case 1:
+					list.RemoveAt(0);
+					break;
+				case 9:
+					break;
+					IL_009b:
+					list = (List<DateTimeRange>)obj;
+					list.Add(new DateTimeRange(DateTime.Now));
+					ႭႥ.ႳႠႼ()[scenarioName] = list;
+					list.Sort();
+					num = 9;
+					continue;
+				}
+				num = ((list.Count > TimesToRun) ? 1 : 5);
+			}
+		}
+
+		public override bool IsOccurrenceAllowable(string targetScenarioName)
+		{
+			int num = 2;
+			DateTime? dateTime = default(DateTime?);
+			List<DateTimeRange> list = default(List<DateTimeRange>);
+			int num2 = default(int);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((TimesToRun >= 1) ? 7 : 6);
+					break;
+				case 6:
+					return false;
+				case 7:
+					num = ((TimesToRun != 1) ? 5 : 0);
+					break;
+				case 0:
+					dateTime = ႭႥ.ႳႳႠ(targetScenarioName);
+					num = (dateTime.HasValue ? 11 : 13);
+					break;
+				case 13:
+					return true;
+				case 11:
+					return GetAlignOccurTimeSpan(dateTime.Value) > PerTime;
+				case 5:
+					InitializeManualHistoryRecording(targetScenarioName);
+					num = (ႭႥ.ႳႠႼ().ContainsKey(targetScenarioName) ? 15 : 8);
+					break;
+				case 8:
+					return true;
+				case 15:
+					list = (ႭႥ.ႳႠႼ()[targetScenarioName] ?? new List<DateTimeRange>());
+					num = ((list.Count >= TimesToRun) ? 3 : 12);
+					break;
+				case 12:
+					return true;
+				case 3:
+					num2 = list.Count - 1;
+					num = 14;
+					break;
+				case 1:
+					num = ((!(GetAlignOccurTimeSpan(list[num2].DateStart) > PerTime)) ? 9 : 4);
+					break;
+				case 4:
+					list.RemoveAt(num2);
+					goto case 9;
+				case 9:
+					num2--;
+					num = 14;
+					break;
+				case 14:
+					num = ((num2 >= 0) ? 1 : 10);
+					break;
+				case 10:
+					return list.Count < TimesToRun;
+				}
+			}
+		}
+
+		private void InitializeManualHistoryRecording(string targetScenarioName)
+		{
+			if (!isSubscried)
+			{
+				lock (LockObject)
+				{
+					if (!isSubscried)
+					{
+						ႭႥ.ႳႠႨ(CalculateScenarioExecutions);
+					}
+					isSubscried = true;
+				}
+			}
+			if (!SubscriptionScenarioNames.Contains(targetScenarioName))
+			{
+				SubscriptionScenarioNames.Add(targetScenarioName);
+			}
+		}
+
+		private TimeSpan GetAlignOccurTimeSpan(DateTime occurDateTime)
+		{
+			//Discarded unreachable code: IL_002f
+			if (AlignToMidnight)
+			{
+				if (521 >= 521 - 31)
+				{
+					return DateTime.Now - occurDateTime + occurDateTime.TimeOfDay;
+				}
+			}
+			return DateTime.Now - occurDateTime;
+		}
+	}
+	[Serializable]
+	[XmlType("ProactiveScenarioPlayed")]
+	public class ProactiveEventConditionScenarioPlayed : ProactiveEventCondition
+	{
+		[XmlIgnore]
+		private TimeSpan minimumInterval;
+
+		[XmlIgnore]
+		private TimeSpan? maximumInterval;
+
+		private string <ScenarioName>k__BackingField;
+
+		private string <ScenarioGroupName>k__BackingField;
+
+		private bool <CanBeAbsent>k__BackingField;
+
+		[XmlIgnore]
+		public override bool IsActive
+		{
+			get
+			{
+				bool flag = true;
+				DateTime now = DateTime.Now;
+				List<string> list = string.IsNullOrEmpty(ScenarioGroupName) ? new List<string>() : ႭႥ.ႳႠႷ(ScenarioGroupName);
+				if (!string.IsNullOrEmpty(ScenarioName))
+				{
+					list.Add(ScenarioName);
+				}
+				foreach (string item in list)
+				{
+					DateTime? dateTime = ႭႥ.ႳႳႠ(item);
+					if (!CanBeAbsent || dateTime.HasValue)
+					{
+						if (!dateTime.HasValue)
+						{
+							dateTime = ႭႥ.Ⴀ;
+						}
+						flag &= (now - dateTime.Value > minimumInterval);
+					}
+				}
+				ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791497), string.IsNullOrEmpty(ScenarioName) ? ႭႷႭ.Ⴍ.ႠႣႣ(1933791494) : (ႭႷႭ.Ⴍ.ႠႣႣ(1933791496) + ScenarioName + ႭႷႭ.Ⴍ.ႠႣႣ(1933791511)), string.IsNullOrEmpty(ScenarioGroupName) ? ႭႷႭ.Ⴍ.ႠႣႣ(1933791494) : (ႭႷႭ.Ⴍ.ႠႣႣ(1933791510) + ScenarioGroupName + ႭႷႭ.Ⴍ.ႠႣႣ(1933791511)), flag ^ base.InvertCondition);
+				return flag ^ base.InvertCondition;
+			}
+		}
+
+		[XmlAttribute("ScenarioName")]
+		public string ScenarioName
+		{
+			get
+			{
+				return <ScenarioName>k__BackingField;
+			}
+			set
+			{
+				<ScenarioName>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("ScenarioGroup")]
+		public string ScenarioGroupName
+		{
+			get
+			{
+				return <ScenarioGroupName>k__BackingField;
+			}
+			set
+			{
+				<ScenarioGroupName>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("MinimumInterval")]
+		public string MinimumIntervalString
+		{
+			get
+			{
+				return minimumInterval.ToString();
+			}
+			set
+			{
+				minimumInterval = TimeSpan.Parse(value);
+			}
+		}
+
+		[XmlAttribute("MaximumInterval")]
+		[DefaultValue("")]
+		public string MaximumIntervalString
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0025
+				if (!maximumInterval.HasValue)
+				{
+					if (949 <= 949 - 845)
+					{
+					}
+					return string.Empty;
+				}
+				return maximumInterval.Value.ToString();
+			}
+			set
+			{
+				switch (0)
+				{
+				}
+				maximumInterval = (string.IsNullOrEmpty(value) ? null : new TimeSpan?(TimeSpan.Parse(value)));
+			}
+		}
+
+		[DefaultValue(false)]
+		[XmlAttribute("CanBeAbsent")]
+		public bool CanBeAbsent
+		{
+			get
+			{
+				return <CanBeAbsent>k__BackingField;
+			}
+			set
+			{
+				<CanBeAbsent>k__BackingField = value;
+			}
+		}
+	}
+	[Serializable]
+	[XmlType("SpecialDay")]
+	public class ProactiveEventConditionSpecialDay : ProactiveEventCondition
+	{
+		private SpecialDays <DayName>k__BackingField;
+
+		private int <DayOffset>k__BackingField;
+
+		private int <MonthOffset>k__BackingField;
+
+		[XmlIgnore]
+		public override bool IsActive
+		{
+			get
+			{
+				DateTime targetDate = DateTime.Now.AddDays(-DayOffset).AddMonths(-MonthOffset);
+				bool flag = IsSpecialDay(targetDate, DayName) ^ base.InvertCondition;
+				ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791488), DayName, flag);
+				return flag;
+			}
+		}
+
+		[XmlAttribute("Name")]
+		public SpecialDays DayName
+		{
+			get
+			{
+				return <DayName>k__BackingField;
+			}
+			set
+			{
+				<DayName>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("DayOffset")]
+		[DefaultValue(0)]
+		public int DayOffset
+		{
+			get
+			{
+				return <DayOffset>k__BackingField;
+			}
+			set
+			{
+				<DayOffset>k__BackingField = value;
+			}
+		}
+
+		[DefaultValue(0)]
+		[XmlAttribute("MonthOffset")]
+		public int MonthOffset
+		{
+			get
+			{
+				return <MonthOffset>k__BackingField;
+			}
+			set
+			{
+				<MonthOffset>k__BackingField = value;
+			}
+		}
+
+		private static Rondyo.Chatman.Data.Chatman ActiveChatman => ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴈ.Ⴐ;
+
+		private static bool IsSpecialDay(DateTime targetDate, SpecialDays specialDay)
+		{
+			//Discarded unreachable code: IL_0005, IL_0027, IL_0048, IL_006d, IL_0092, IL_00bb, IL_0114, IL_0142, IL_017a, IL_01a1, IL_01d2, IL_01f8, IL_0220, IL_0262, IL_029c, IL_02c3, IL_02ea, IL_030d, IL_033a, IL_036e, IL_03b4, IL_0400, IL_0453, IL_0477, IL_0509, IL_0534
+			DateTime? userBirthDate = default(DateTime?);
+			while (true)
+			{
+				IL_048b:
+				while (true)
+				{
+					switch (specialDay)
+					{
+					case SpecialDays.Halloween:
+						if (targetDate.Month == 10)
+						{
+							if (false)
+							{
+								goto IL_0373;
+							}
+							return targetDate.Day == 31;
+						}
+						return false;
+					case SpecialDays.Holiday:
+						return IsHoliday(targetDate);
+					case SpecialDays.July4Th:
+						if (targetDate.Month != 7)
+						{
+							goto IL_00c0;
+						}
+						if (411 >= 411 - 372)
+						{
+							return targetDate.Day == 4;
+						}
+						goto IL_00ea;
+					case SpecialDays.Summer:
+						if (targetDate.Month >= 6)
+						{
+							if (831 >= 831 - 563)
+							{
+								return targetDate.Month <= 8;
+							}
+							goto case SpecialDays.July4Th;
+						}
+						goto IL_01b1;
+					case SpecialDays.GeneralHoliday:
+						return false;
+					case SpecialDays.Autumn:
+						if (targetDate.Month >= 9)
+						{
+							if (false)
+							{
+								goto IL_0225;
+							}
+							return targetDate.Month <= 11;
+						}
+						return false;
+					case SpecialDays.ValentinesDay:
+						if (targetDate.Month == 2)
+						{
+							if (false)
+							{
+								goto IL_002c;
+							}
+							return targetDate.Day == 14;
+						}
+						return false;
+					case SpecialDays.Weekend:
+						if (targetDate.DayOfWeek == DayOfWeek.Sunday)
+						{
+							return true;
+						}
+						if (846 <= 846 - 302)
+						{
+							goto case SpecialDays.GeneralHoliday;
+						}
+						goto IL_0225;
+					case SpecialDays.Winter:
+						if (targetDate.Month != 1)
+						{
+							if (false)
+							{
+								goto IL_0124;
+							}
+							if (targetDate.Month != 2)
+							{
+								if (false)
+								{
+									goto IL_03c7;
+								}
+								return targetDate.Month == 12;
+							}
+						}
+						return true;
+					case SpecialDays.SchoolDay:
+						return !IsHoliday(targetDate);
+					case SpecialDays.Spring:
+						if (targetDate.Month < 3)
+						{
+							return false;
+						}
+						if (303 >= 303 - 224)
+						{
+							return targetDate.Month <= 5;
+						}
+						goto IL_0225;
+					case SpecialDays.Sunday:
+						return targetDate.DayOfWeek == DayOfWeek.Sunday;
+					case SpecialDays.Sukot:
+					case SpecialDays.MothersDay:
+					case SpecialDays.FathersDay:
+					case SpecialDays.Christmas:
+					case SpecialDays.ChristmasEve:
+					case SpecialDays.WinterBreak:
+					case SpecialDays.Hanukah:
+					case SpecialDays.Kwanzaa:
+					case SpecialDays.ThanksGiving:
+					case SpecialDays.Easter:
+					case SpecialDays.Passover:
+						goto IL_0402;
+					case SpecialDays.Any:
+						return true;
+					default:
+						{
+							if (434 < 434 - 387)
+							{
+								goto IL_002c;
+							}
+							switch (specialDay)
+							{
+							case SpecialDays.MartinLutherKingDay:
+								break;
+							case SpecialDays.EarthDay:
+								goto IL_0181;
+							case SpecialDays.StPatricksDay:
+								goto IL_0398;
+							case SpecialDays.PresidentsDay:
+								goto IL_03e3;
+							case SpecialDays.ChineseNewYear:
+							case SpecialDays.Purim:
+							case SpecialDays.CincoDeMayo:
+								goto IL_0402;
+							default:
+								goto IL_0443;
+							case SpecialDays.LaborDay:
+								goto IL_0510;
+							}
+							if (targetDate.Month == 1)
+							{
+								if (801 <= 801 - 758)
+								{
+									goto case SpecialDays.Winter;
+								}
+								if (targetDate.DayOfWeek == DayOfWeek.Monday)
+								{
+									if (441 > 441 - 340)
+									{
+										if (targetDate.Day < 15)
+										{
+											goto IL_002c;
+										}
+										if (false)
+										{
+											goto IL_01a5;
+										}
+										return targetDate.Day <= 21;
+									}
+									goto case SpecialDays.Halloween;
+								}
+							}
+							goto IL_03c7;
+						}
+						IL_0510:
+						if (targetDate.Month == 9)
+						{
+							if (725 < 725 - 430)
+							{
+								goto IL_01b1;
+							}
+							if (targetDate.DayOfWeek == DayOfWeek.Monday)
+							{
+								if (false)
+								{
+									break;
+								}
+								goto IL_00ea;
+							}
+						}
+						return false;
+						IL_002c:
+						return false;
+						IL_0124:
+						if (userBirthDate.HasValue)
+						{
+							if (false)
+							{
+								goto case SpecialDays.GeneralHoliday;
+							}
+							if (ActiveChatman.UserBirthDate.Value.Month == targetDate.Month)
+							{
+								if ((991 + 991 * 991) % 2 == 0)
+								{
+									return ActiveChatman.UserBirthDate.Value.Day == targetDate.Day;
+								}
+								goto IL_01a5;
+							}
+						}
+						return false;
+						IL_0225:
+						return targetDate.DayOfWeek == DayOfWeek.Saturday;
+						IL_0443:
+						if (103 < 103 - 88)
+						{
+							goto case SpecialDays.Weekend;
+						}
+						if (specialDay == SpecialDays.MyBirthday)
+						{
+							userBirthDate = ActiveChatman.UserBirthDate;
+							goto IL_0124;
+						}
+						if (301 > 301 - 207)
+						{
+							goto IL_0402;
+						}
+						goto IL_047c;
+						IL_00ea:
+						return targetDate.Day < 8;
+						IL_0373:
+						return targetDate.Day == 17;
+						IL_01a5:
+						return targetDate.Day == 22;
+						IL_03e3:
+						if (targetDate.Month == 2)
+						{
+							if (678 < 678 - 67)
+							{
+								goto case SpecialDays.Weekend;
+							}
+							if (targetDate.DayOfWeek == DayOfWeek.Monday)
+							{
+								if ((705 + 705 * 705) % 2 == 0)
+								{
+									if (targetDate.Day < 15)
+									{
+										goto IL_0241;
+									}
+									if (349 <= 349 - 162)
+									{
+										goto IL_00c0;
+									}
+									goto IL_047c;
+								}
+								goto IL_048b;
+							}
+						}
+						return false;
+						IL_01b1:
+						return false;
+						IL_03c7:
+						return false;
+						IL_047c:
+						return targetDate.Day <= 21;
+						IL_0398:
+						do
+						{
+							if (targetDate.Month != 3)
+							{
+								return false;
+							}
+						}
+						while (false);
+						goto IL_0373;
+						IL_0181:
+						if (targetDate.Month != 4)
+						{
+							return false;
+						}
+						if (643 <= 643 - 523)
+						{
+							break;
+						}
+						goto IL_01a5;
+						IL_0402:
+						return ႭႥ.ႭႨ(specialDay.ToString(), DateTime.Now);
+						IL_00c0:
+						return false;
+					}
+					continue;
+					IL_0241:
+					return false;
+				}
+			}
+		}
+
+		private static bool IsHoliday(DateTime targetDate)
+		{
+			int num = 9;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.Weekend)) ? 15 : 24);
+					break;
+				case 24:
+					return true;
+				case 15:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.Sunday)) ? 30 : 19);
+					break;
+				case 19:
+					return true;
+				case 30:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.MothersDay)) ? 23 : 26);
+					break;
+				case 26:
+					return true;
+				case 23:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.FathersDay)) ? 16 : 10);
+					break;
+				case 10:
+					return true;
+				case 16:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.Christmas)) ? 31 : 17);
+					break;
+				case 17:
+					return true;
+				case 31:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.ChristmasEve)) ? 4 : 2);
+					break;
+				case 2:
+					return true;
+				case 4:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.ThanksGiving)) ? 12 : 34);
+					break;
+				case 34:
+					return true;
+				case 12:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.Easter)) ? 20 : 14);
+					break;
+				case 14:
+					return true;
+				case 20:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.July4Th)) ? 1 : 21);
+					break;
+				case 21:
+					return true;
+				case 1:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.NewYear)) ? 22 : 32);
+					break;
+				case 32:
+					return true;
+				case 22:
+					num = (IsSpecialDay(targetDate, SpecialDays.NewYearsEve) ? 28 : 0);
+					break;
+				case 28:
+					return true;
+				case 0:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.PresidentsDay)) ? 13 : 11);
+					break;
+				case 11:
+					return true;
+				case 13:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.SchoolHoliday)) ? 5 : 7);
+					break;
+				case 7:
+					return true;
+				case 5:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.LaborDay)) ? 25 : 33);
+					break;
+				case 33:
+					return true;
+				case 25:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.MemorialDay)) ? 6 : 18);
+					break;
+				case 18:
+					return true;
+				case 6:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.BoxingDay)) ? 27 : 29);
+					break;
+				case 29:
+					return true;
+				case 27:
+					num = ((!IsSpecialDay(targetDate, SpecialDays.ColumbusDay)) ? 3 : 8);
+					break;
+				case 8:
+					return true;
+				case 3:
+					return false;
+				}
+			}
+		}
+	}
+	[Serializable]
+	[XmlType("TimeRangeCondition")]
+	public class ProactiveEventConditionTimeRange : ProactiveEventOccurrencePattern
+	{
+		[XmlIgnore]
+		private TimeSpan timeFrom;
+
+		[XmlIgnore]
+		private TimeSpan timeTo;
+
+		[XmlAttribute("TimeFrom")]
+		public string TimeFromString
+		{
+			get
+			{
+				return timeFrom.ToString();
+			}
+			set
+			{
+				timeFrom = TimeSpan.Parse(value);
+			}
+		}
+
+		[XmlAttribute("TimeTo")]
+		public string TimeToString
+		{
+			get
+			{
+				return timeTo.ToString();
+			}
+			set
+			{
+				timeTo = TimeSpan.Parse(value);
+			}
+		}
+
+		public override bool IsOccurrenceAllowable(string targetScenarioName)
+		{
+			//Discarded unreachable code: IL_0005, IL_002b, IL_005b, IL_006b, IL_00a7, IL_00ac, IL_00b4, IL_00c6
+			TimeSpan timeOfDay = DateTime.Now.TimeOfDay;
+			if (!(timeFrom < timeTo))
+			{
+				if (timeFrom <= timeOfDay)
+				{
+					goto IL_00b1;
+				}
+				if (false)
+				{
+					goto IL_000a;
+				}
+			}
+			else if (461 > 461 - 116)
+			{
+				goto IL_000a;
+			}
+			int num = (timeTo >= timeOfDay) ? 1 : 0;
+			goto IL_00b6;
+			IL_00b6:
+			bool flag = (byte)num != 0;
+			if ((505 + 505 * 505) % 2 == 0)
+			{
+				goto IL_006d;
+			}
+			goto IL_00b1;
+			IL_00b1:
+			num = 1;
+			goto IL_00b6;
+			IL_006d:
+			return flag ^ base.InvertCondition;
+			IL_000a:
+			int num2;
+			while (true)
+			{
+				if (timeFrom <= timeOfDay)
+				{
+					if (481 <= 481 - 333)
+					{
+						continue;
+					}
+					num2 = ((timeTo >= timeOfDay) ? 1 : 0);
+					break;
+				}
+				num2 = 0;
+				break;
+			}
+			flag = ((byte)num2 != 0);
+			goto IL_006d;
+		}
+	}
+	[Serializable]
+	public enum SpecialDays
+	{
+		Any,
+		Sunday,
+		Holiday,
+		Weekend,
+		SchoolDay,
+		Summer,
+		Winter,
+		Spring,
+		Autumn,
+		Halloween,
+		Sukot,
+		ValentinesDay,
+		MothersDay,
+		FathersDay,
+		Christmas,
+		ChristmasEve,
+		WinterBreak,
+		Hanukah,
+		Kwanzaa,
+		ThanksGiving,
+		Easter,
+		Passover,
+		July4Th,
+		GeneralHoliday,
+		NewYear,
+		NewYearsEve,
+		RoshHashanah,
+		TuBshvat,
+		MartinLutherKingDay,
+		ChineseNewYear,
+		Purim,
+		PresidentsDay,
+		StPatricksDay,
+		EarthDay,
+		CincoDeMayo,
+		LaborDay,
+		MemorialDay,
+		GrandparentsDay,
+		IdUlFaitr,
+		DaylightSavings,
+		DaylightSavingsEnds,
+		FirstDayOfSummer,
+		FirstDayOfSpring,
+		FirstDayOfAutumn,
+		FirstDayOfWinter,
+		MyBirthday,
+		BoxingDay,
+		ColumbusDay,
+		FlagDay,
+		GroundhogDay,
+		VeteransDay,
+		SchoolHoliday
+	}
+}
+namespace Rondyo.Chatman.Proactive.Data
+{
+	[Serializable]
+	[XmlRoot("Events")]
+	public class EventsList : IXmlSerializable
+	{
+		private readonly Dictionary<string, List<string>> events = new Dictionary<string, List<string>>();
+
+		public List<string> GetScenarioListForEvent(string eventName)
+		{
+			int num = 2;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num2 = ((!events.ContainsKey(eventName)) ? 1 : 0);
+					break;
+				case 1:
+					return new List<string>();
+				case 0:
+					return events[eventName];
+				}
+				num = num2;
+			}
+		}
+
+		internal void SetScenariosToEvents(string eventsName, string scenariosName)
+		{
+			int num = 6;
+			string[] array4 = default(string[]);
+			string[] array = default(string[]);
+			int num2 = default(int);
+			string text = default(string);
+			List<string> scenarioListForEvent = default(List<string>);
+			string[] array2 = default(string[]);
+			int num3 = default(int);
+			string item = default(string);
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					return;
+				case 4:
+					return;
+				default:
+					num = (string.IsNullOrEmpty(eventsName) ? 4 : 5);
+					break;
+				case 5:
+					num = ((!string.IsNullOrEmpty(scenariosName)) ? 1 : 4);
+					break;
+				case 1:
+				{
+					string[] array3 = eventsName.Split(',');
+					array4 = scenariosName.Split(',');
+					array = array3;
+					num2 = 0;
+					num = 11;
+					break;
+				}
+				case 0:
+					text = array[num2];
+					scenarioListForEvent = GetScenarioListForEvent(text);
+					array2 = array4;
+					num3 = 0;
+					num = 7;
+					break;
+				case 9:
+					item = array2[num3];
+					num = (scenarioListForEvent.Contains(item) ? 8 : 10);
+					break;
+				case 10:
+					scenarioListForEvent.Add(item);
+					goto case 8;
+				case 8:
+					num3++;
+					num = 7;
+					break;
+				case 7:
+					num = ((num3 < array2.Length) ? 9 : 3);
+					break;
+				case 3:
+					events[text] = scenarioListForEvent;
+					num2++;
+					num = 11;
+					break;
+				case 11:
+					num = ((num2 >= array.Length) ? 2 : 0);
+					break;
+				}
+			}
+		}
+
+		public XmlSchema GetSchema()
+		{
+			return null;
+		}
+
+		public void ReadXml(XmlReader reader)
+		{
+			//Discarded unreachable code: IL_0002, IL_001d, IL_004b, IL_00a8
+			reader.MoveToContent();
+			bool isEmptyElement = reader.IsEmptyElement;
+			reader.ReadStartElement(ႭႷႭ.Ⴍ.ႠႣႣ(1933791509));
+			while (!isEmptyElement)
+			{
+				if (4 >= 4 - 3)
+				{
+				}
+				while (true)
+				{
+					reader.MoveToContent();
+					SetScenariosToEvents(reader.GetAttribute(ႭႷႭ.Ⴍ.ႠႣႣ(1933791495)), reader.GetAttribute(ႭႷႭ.Ⴍ.ႠႣႣ(1933791508)));
+					reader.Read();
+					if (!(reader.Name != ႭႷႭ.Ⴍ.ႠႣႣ(1933791509)))
+					{
+						if (705 < 705 - 56)
+						{
+							break;
+						}
+						reader.ReadEndElement();
+						if (493 > 493 - 476)
+						{
+							return;
+						}
+					}
+				}
+			}
+		}
+
+		public void WriteXml(XmlWriter writer)
+		{
+			foreach (KeyValuePair<string, List<string>> @event in events)
+			{
+				if (@event.Value != null)
+				{
+					foreach (string item in @event.Value)
+					{
+						writer.WriteStartElement(ႭႷႭ.Ⴍ.ႠႣႣ(1933791507));
+						writer.WriteAttributeString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791495), @event.Key);
+						writer.WriteAttributeString(ႭႷႭ.Ⴍ.ႠႣႣ(1933791508), item);
+						writer.WriteEndElement();
+					}
+				}
+			}
+		}
+	}
+	[Serializable]
+	[XmlRoot("ProactiveData")]
+	public class ProactiveData
+	{
+		[XmlElement("Events")]
+		public EventsList ProactiveEventsList;
+
+		[XmlArrayItem(typeof(ProactiveEventConditionPerTimeRunsLimit))]
+		[XmlArray("OccurrencePatterns")]
+		[XmlArrayItem(typeof(ProactiveEventConditionTimeRange))]
+		public ProactiveEventOccurrencePattern[] OccurrencesList;
+
+		[XmlArray("ActionGroups")]
+		public SpecialActionCodesGroup[] ActionCodesGroups;
+
+		[XmlArray("ProactiveScenarios")]
+		public ProactiveScenario[] ProactiveScenarios;
+	}
+	[Serializable]
+	public abstract class ProactiveEventOccurrencePattern : ProactiveEventCondition
+	{
+		private string <PatternName>k__BackingField;
+
+		[XmlAttribute("PatternName")]
+		public string PatternName
+		{
+			get
+			{
+				return <PatternName>k__BackingField;
+			}
+			set
+			{
+				<PatternName>k__BackingField = value;
+			}
+		}
+
+		public override bool IsActive
+		{
+			get
+			{
+				throw new ApplicationException(ႭႷႭ.Ⴍ.ႠႣႣ(1933791503));
+			}
+		}
+
+		public abstract bool IsOccurrenceAllowable(string targetScenarioName);
+	}
+	[Serializable]
+	[XmlType("ProactiveRuntimeData")]
+	public class ProactiveRuntimeData
+	{
+		private SerializableDictionaryStringDateTime eventsHistory;
+
+		private SerializableDictionaryStringDateTime scenariosHistory;
+
+		private SerializableDictionaryStringDateTimeList customHistory;
+
+		[XmlElement("EventsHistory")]
+		public SerializableDictionaryStringDateTime EventsHistory
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_000f, IL_0022
+				return eventsHistory ?? (eventsHistory = new SerializableDictionaryStringDateTime());
+			}
+			set
+			{
+				eventsHistory = value;
+			}
+		}
+
+		[XmlElement("ScenariosHistory")]
+		public SerializableDictionaryStringDateTime ScenariosHistory
+		{
+			get
+			{
+				switch (0)
+				{
+				default:
+					return scenariosHistory ?? (scenariosHistory = new SerializableDictionaryStringDateTime());
+				}
+			}
+			set
+			{
+				scenariosHistory = value;
+			}
+		}
+
+		[XmlElement("CustomHistory")]
+		public SerializableDictionaryStringDateTimeList CustomHistory
+		{
+			get
+			{
+				switch (0)
+				{
+				default:
+					return customHistory ?? (customHistory = new SerializableDictionaryStringDateTimeList());
+				}
+			}
+			set
+			{
+				customHistory = value;
+			}
+		}
+	}
+	[Serializable]
+	[XmlType("ProactiveScenario")]
+	public class ProactiveScenario : ႷႭႼ.Ⴗ
+	{
+		private string textMessage;
+
+		[XmlArray("Occurrences")]
+		public OccurrencePattern[] OccurrencesPatterns;
+
+		[XmlArrayItem(typeof(ProactiveEventConditionEventReceived))]
+		[XmlArrayItem(typeof(ProactiveEventConditionScenarioPlayed))]
+		[XmlArrayItem(typeof(ProactiveEventConditionActiveChatmanProperty))]
+		[XmlArray("Conditions")]
+		[XmlArrayItem(typeof(ProactiveEventConditionSpecialDay))]
+		public ProactiveEventCondition[] EventConditions;
+
+		private string <ScenarioName>k__BackingField;
+
+		private string <Category>k__BackingField;
+
+		private int <Priority>k__BackingField;
+
+		private string <ScenarioGroup>k__BackingField;
+
+		private string <ActionGroupName>k__BackingField;
+
+		private QnAScenarioMatchActivity? <RequestedActivity>k__BackingField;
+
+		private static Func<ProactiveEventCondition, bool> CS$<>9__CachedAnonymousMethodDelegate2;
+
+		public bool IsActive
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0005, IL_003f, IL_0057, IL_0072
+				while (true)
+				{
+					if (OccurrencesPatterns.Any((OccurrencePattern condition) => !condition.IsOccurrenceAllowable(ScenarioName)))
+					{
+						if ((992 + 992 * 992) % 2 == 0)
+						{
+							return false;
+						}
+					}
+					ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791499), ScenarioName, Category);
+					ProactiveEventCondition[] eventConditions = EventConditions;
+					if (CS$<>9__CachedAnonymousMethodDelegate2 == null)
+					{
+						CS$<>9__CachedAnonymousMethodDelegate2 = ((ProactiveEventCondition condition) => !condition.IsActive);
+					}
+					if (!eventConditions.Any(CS$<>9__CachedAnonymousMethodDelegate2))
+					{
+						break;
+					}
+					if (387 >= 387 - 82)
+					{
+						return false;
+					}
+				}
+				ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791498), ScenarioName, Category);
+				return true;
+			}
+		}
+
+		[XmlAttribute("Name")]
+		public string ScenarioName
+		{
+			get
+			{
+				return <ScenarioName>k__BackingField;
+			}
+			set
+			{
+				<ScenarioName>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("Category")]
+		public string Category
+		{
+			get
+			{
+				return <Category>k__BackingField;
+			}
+			set
+			{
+				<Category>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("Priority")]
+		public int Priority
+		{
+			get
+			{
+				return <Priority>k__BackingField;
+			}
+			set
+			{
+				<Priority>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("Group")]
+		public string ScenarioGroup
+		{
+			get
+			{
+				return <ScenarioGroup>k__BackingField;
+			}
+			set
+			{
+				<ScenarioGroup>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("ActionGroupName")]
+		public string ActionGroupName
+		{
+			get
+			{
+				return <ActionGroupName>k__BackingField;
+			}
+			set
+			{
+				<ActionGroupName>k__BackingField = value;
+			}
+		}
+
+		[XmlIgnore]
+		public bool RequestedActivitySpecified => RequestedActivity.HasValue;
+
+		[XmlElement("RequestedActivity")]
+		public QnAScenarioMatchActivity? RequestedActivity
+		{
+			get
+			{
+				return <RequestedActivity>k__BackingField;
+			}
+			set
+			{
+				<RequestedActivity>k__BackingField = value;
+			}
+		}
+
+		[XmlElement("TextMessage")]
+		public string TextMessage
+		{
+			get
+			{
+				switch (0)
+				{
+				default:
+					return textMessage ?? ႭႷႭ.Ⴍ.ႠႣႣ(1933791494);
+				}
+			}
+			set
+			{
+				//Discarded unreachable code: IL_0002, IL_000b, IL_001a
+				textMessage = (value ?? ႭႷႭ.Ⴍ.ႠႣႣ(1933791494)).Trim();
+			}
+		}
+
+		private bool <get_IsActive>b__0(OccurrencePattern condition)
+		{
+			return !condition.IsOccurrenceAllowable(ScenarioName);
+		}
+
+		private static bool <get_IsActive>b__1(ProactiveEventCondition condition)
+		{
+			return !condition.IsActive;
+		}
+	}
+	[Serializable]
+	[XmlType("Action")]
+	public class SpecialActionCodesGroup
+	{
+		private string <GroupName>k__BackingField;
+
+		private int[] <SpecialActionCodes>k__BackingField;
+
+		private static Converter<int, string> CS$<>9__CachedAnonymousMethodDelegate1;
+
+		private static Converter<string, int> CS$<>9__CachedAnonymousMethodDelegate3;
+
+		[XmlAttribute("Name")]
+		public string GroupName
+		{
+			get
+			{
+				return <GroupName>k__BackingField;
+			}
+			set
+			{
+				<GroupName>k__BackingField = value;
+			}
+		}
+
+		[XmlAttribute("SpecialActionCodes")]
+		public string SpecialActionCodesString
+		{
+			get
+			{
+				switch (0)
+				{
+				default:
+				{
+					string separator = ႭႷႭ.Ⴍ.ႠႣႣ(1933791527);
+					int[] specialActionCodes = SpecialActionCodes;
+					if (CS$<>9__CachedAnonymousMethodDelegate1 == null)
+					{
+						CS$<>9__CachedAnonymousMethodDelegate1 = ((int i) => i.ToString());
+					}
+					return string.Join(separator, Array.ConvertAll(specialActionCodes, CS$<>9__CachedAnonymousMethodDelegate1));
+				}
+				}
+			}
+			set
+			{
+				switch (0)
+				{
+				}
+				string[] array = value.Split(',');
+				if (CS$<>9__CachedAnonymousMethodDelegate3 == null)
+				{
+					CS$<>9__CachedAnonymousMethodDelegate3 = ((string s) => int.Parse(s.Trim()));
+				}
+				SpecialActionCodes = Array.ConvertAll(array, CS$<>9__CachedAnonymousMethodDelegate3);
+			}
+		}
+
+		[XmlIgnore]
+		public int[] SpecialActionCodes
+		{
+			get
+			{
+				return <SpecialActionCodes>k__BackingField;
+			}
+			private set
+			{
+				<SpecialActionCodes>k__BackingField = value;
+			}
+		}
+
+		private static string <get_SpecialActionCodesString>b__0(int i)
+		{
+			return i.ToString();
+		}
+
+		private static int <set_SpecialActionCodesString>b__2(string s)
+		{
+			return int.Parse(s.Trim());
+		}
+	}
+}
+namespace ႥႷႭ
+{
+	internal sealed class ႭႥ
+	{
+		private sealed class <>c__DisplayClass12
+		{
+			public SpecialActionCodesGroup actionCodesGroup;
+
+			public bool <SelectSpecialActionCodeToSubmit>b__b(KeyValuePair<int, ChatmanAction> action)
+			{
+				return Enumerable.Contains(actionCodesGroup.SpecialActionCodes, action.Key);
+			}
+		}
+
+		private sealed class <>c__DisplayClass17
+		{
+			public ICollection<string> eventList;
+
+			public bool <SelectSenarioToExecute>b__14(ProactiveScenario scenario)
+			{
+				return eventList.Contains(scenario.ScenarioName);
+			}
+		}
+
+		private sealed class <>c__DisplayClass1a
+		{
+			public DateTime targetDate;
+
+			public bool <CheckSpecialDay>b__19(DateTimeRange dateTimeRange)
+			{
+				//Discarded unreachable code: IL_0002
+				DateTime dateStart = dateTimeRange.DateStart;
+				while (dateStart.Date <= targetDate)
+				{
+					if (193 > 193 - 12)
+					{
+						return dateTimeRange.DateEnd.Date >= targetDate;
+					}
+				}
+				return false;
+			}
+		}
+
+		private sealed class <>c__DisplayClass2
+		{
+			public string scenarioName;
+
+			public bool <GetScenarioByName>b__1(ProactiveScenario scenario)
+			{
+				return scenarioName.Equals(scenario.ScenarioName, StringComparison.OrdinalIgnoreCase);
+			}
+		}
+
+		private sealed class <>c__DisplayClass7
+		{
+			public List<string> eventList;
+
+			public bool <GetScenarioByEventName>b__4(ProactiveScenario scenario)
+			{
+				return eventList.Contains(scenario.ScenarioName);
+			}
+		}
+
+		private static readonly string Ⴅ;
+
+		private readonly string Ⴍ;
+
+		private readonly string Ⴈ = ႣႳ.ႨႷႤ(Path.Combine((string)(object)ႥႷႭ.ႭႥ.Ⴅ, ႭႷႭ.Ⴍ.ႠႣႣ(1933791539)));
+
+		private readonly string Ⴀ;
+
+		private readonly ProactiveData Ⴅ;
+
+		private readonly ProactiveRuntimeData Ⴅ;
+
+		private Dictionary<string, List<string>> Ⴅ;
+
+		private Dictionary<string, SpecialActionCodesGroup> Ⴄ;
+
+		private readonly SerializableDictionaryStringDateTimeList Ⴄ;
+
+		private readonly Random Ⴄ;
+
+		public static DateTime Ⴀ;
+
+		private readonly ႥႥႤ.Ⴀ Ⴅ;
+
+		private readonly ႥႥႤ.Ⴀ Ⴍ;
+
+		private readonly object Ⴃ;
+
+		private ProactiveScenario Ⴃ;
+
+		private int Ⴍ;
+
+		public static readonly AutoResetEvent Ⴍ;
+
+		private ႷႭႣ.Ⴀ Ⴍ = (ႷႭႣ.Ⴀ)(object)ႣႳ.ႨႷႤ(Path.Combine((string)(object)ႥႷႭ.ႭႥ.Ⴅ, ႭႷႭ.Ⴍ.ႠႣႣ(1933791540)));
+
+		private static readonly object Ⴗ;
+
+		private bool Ⴄ;
+
+		private static ႭႥ Ⴄ;
+
+		private static ႷႭႣ.Ⴄ Ⴄ;
+
+		private static Func<ProactiveScenario, bool> Ⴐ;
+
+		private static EventHandler Ⴐ;
+
+		private static Func<KeyValuePair<int, ChatmanAction>, ChatmanAction> Ⴐ;
+
+		private static Func<ChatmanAction, bool> Ⴐ;
+
+		private static Func<ChatmanAction, int> Ⴐ;
+
+		private static Func<ProactiveScenario, bool> Ⴓ;
+
+		public unsafe ႭႥ()
+		{
+			//Discarded unreachable code: IL_0005, IL_001b, IL_0046, IL_00b8, IL_019e, IL_020e
+			*(string*)(&this.Ⴀ) = ႣႳ.ႨႷႤ(Path.Combine((string)(object)ႥႷႭ.ႭႥ.Ⴅ, ႭႷႭ.Ⴍ.ႠႣႣ(1933791538)));
+			while (true)
+			{
+				this.Ⴄ = (ႷႭႣ.Ⴄ)(object)new Random();
+				Ⴅ = ႥႥႤ.Ⴀ.ႳႤ(ႳႳႠ, ႭႭႰ.Ⴈ.Ⴐ);
+				this.Ⴍ = (ႷႭႣ.Ⴀ)(object)ႥႥႤ.Ⴀ.ႳႤ(ႳႠႳ, new TimeSpan(0, 0, 3));
+				this.Ⴃ = (ProactiveScenario)new object();
+				while (true)
+				{
+					*(int*)(&this.Ⴍ) = -1;
+					*(bool*)(&this.Ⴄ) = true;
+					base..ctor();
+					if (!File.Exists((string)(object)this.Ⴍ))
+					{
+						if (false)
+						{
+							break;
+						}
+						Ⴈ<ProactiveRuntimeData>.ႳႠ((string)(object)this.Ⴍ, new ProactiveRuntimeData());
+						if (979 <= 979 - 135)
+						{
+							goto IL_0225;
+						}
+					}
+					this.Ⴅ = (ႥႥႤ.Ⴀ)(object)Ⴈ<ProactiveRuntimeData>.ႨႷႭ((string)(object)this.Ⴍ);
+					this.Ⴅ = (ႥႥႤ.Ⴀ)(object)Ⴈ<ProactiveData>.ႨႷႭ(Ⴈ);
+					this.Ⴄ = (ႷႭႣ.Ⴄ)(object)Ⴈ<SerializableDictionaryStringDateTimeList>.ႨႷႭ(*(string*)(&this.Ⴀ));
+					ႥႷႭ.ႭႥ.Ⴄ = (ႷႭႣ.Ⴄ)(object)this;
+					DateTime? dateTime = ႳႠႼ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791537));
+					if (!dateTime.HasValue)
+					{
+						ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791536), ((ProactiveData)(object)this.Ⴅ).ProactiveScenarios.Length);
+						Ⴀ = DateTime.Now;
+						do
+						{
+							((ProactiveRuntimeData)(object)this.Ⴅ).EventsHistory[ႭႷႭ.Ⴍ.ႠႣႣ(1933791537)] = DateTime.Now;
+							((ႥႥႤ.Ⴀ)(object)this.Ⴍ).ႳႣႣ();
+						}
+						while (551 < 551 - 81);
+					}
+					else
+					{
+						if (474 <= 474 - 412)
+						{
+							continue;
+						}
+						Ⴀ = dateTime.Value;
+					}
+					ႥႥႨႥ.Ⴓ.ႨႷႼ(ႳႠႤ);
+					goto IL_0225;
+					IL_0225:
+					ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791551), ((ProactiveData)(object)this.Ⴅ).ProactiveScenarios.Length);
+					return;
+				}
+			}
+		}
+
+		static ႭႥ()
+		{
+			ႥႷႭ.ႭႥ.Ⴅ = (ႥႥႤ.Ⴀ)(object)Path.Combine(Path.Combine(ႭႷႭ.Ⴍ.ႠႣႣ(1933791550), ႭႷႭ.Ⴍ.ႠႣႣ(1933791549)), ႭႷႭ.Ⴍ.ႠႣႣ(1933791548));
+			Ⴀ = DateTime.MinValue;
+			ႥႷႭ.ႭႥ.Ⴍ = (ႷႭႣ.Ⴀ)(object)new AutoResetEvent(initialState: false);
+			Ⴗ = new object();
+		}
+
+		private static ႷႭႥ.Ⴗ ႼႨ()
+		{
+			return ႭႨႰ.Ⴐ.Ⴐ.Ⴃ;
+		}
+
+		private static Personality ႼႼ()
+		{
+			return ႼႨ().Ⴓ.Ⴐ.ႰႠ(ႼႨ().Ⴈ.Ⴐ.ActivePersonalityId);
+		}
+
+		private static ႷႭႳ.Ⴈ ႳႠႠ()
+		{
+			return ႼႨ() as ႷႭႳ.Ⴈ;
+		}
+
+		private static void ႳႠႳ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0035
+			while (ႥႷႭ.ႭႥ.Ⴄ == null)
+			{
+				if ((915 + 915 * 915) % 2 == 0)
+				{
+					return;
+				}
+			}
+			((ႥႥႤ.Ⴀ)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴍ).ႳႣႳ();
+			((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).ႳႠႨ();
+		}
+
+		private Dictionary<string, List<string>> ႳႠႥ()
+		{
+			//Discarded unreachable code: IL_0005, IL_0020, IL_0040, IL_0075, IL_0094, IL_00ca, IL_00f0, IL_0117, IL_013e
+			if (this.Ⴅ == null)
+			{
+				goto IL_0025;
+			}
+			if (262 > 262 - 60 && ((Dictionary<string, List<string>>)(object)this.Ⴅ).Count == 0)
+			{
+				if (61 >= 61 - 21)
+				{
+					goto IL_0025;
+				}
+			}
+			goto IL_011c;
+			IL_011c:
+			return (Dictionary<string, List<string>>)(object)this.Ⴅ;
+			IL_0025:
+			do
+			{
+				IL_0025:
+				this.Ⴅ = (ႥႥႤ.Ⴀ)(object)new Dictionary<string, List<string>>();
+				ProactiveScenario[] proactiveScenarios = ((ProactiveData)(object)this.Ⴅ).ProactiveScenarios;
+				int num = 0;
+				while (num < proactiveScenarios.Length)
+				{
+					ProactiveScenario proactiveScenario = proactiveScenarios[num];
+					if (!string.IsNullOrEmpty(proactiveScenario.ScenarioGroup))
+					{
+						if (422 >= 422 - 333)
+						{
+						}
+						while (((Dictionary<string, List<string>>)(object)this.Ⴅ).ContainsKey(proactiveScenario.ScenarioGroup))
+						{
+							if (false)
+							{
+								continue;
+							}
+							goto IL_00ac;
+						}
+						((Dictionary<string, List<string>>)(object)this.Ⴅ)[proactiveScenario.ScenarioGroup] = new List<string>
+						{
+							proactiveScenario.ScenarioName
+						};
+						if (false)
+						{
+							goto IL_0025;
+						}
+					}
+					goto IL_0096;
+					IL_0096:
+					do
+					{
+						num++;
+					}
+					while (false);
+					continue;
+					IL_00ac:
+					((Dictionary<string, List<string>>)(object)this.Ⴅ)[proactiveScenario.ScenarioGroup].Add(proactiveScenario.ScenarioName);
+					goto IL_0096;
+				}
+			}
+			while (133 <= 133 - 44);
+			goto IL_011c;
+		}
+
+		private Dictionary<string, SpecialActionCodesGroup> ႳႠႭ()
+		{
+			int num = 6;
+			SpecialActionCodesGroup[] actionCodesGroups = default(SpecialActionCodesGroup[]);
+			int num2 = default(int);
+			SpecialActionCodesGroup specialActionCodesGroup = default(SpecialActionCodesGroup);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((this.Ⴄ == null) ? 2 : 3);
+					break;
+				case 3:
+					num = ((((Dictionary<string, SpecialActionCodesGroup>)(object)this.Ⴄ).Count != 0) ? 1 : 2);
+					break;
+				case 2:
+					this.Ⴄ = (ႷႭႣ.Ⴄ)(object)new Dictionary<string, SpecialActionCodesGroup>();
+					actionCodesGroups = ((ProactiveData)(object)this.Ⴅ).ActionCodesGroups;
+					num2 = 0;
+					num = 4;
+					break;
+				case 7:
+					specialActionCodesGroup = actionCodesGroups[num2];
+					num = (string.IsNullOrEmpty(specialActionCodesGroup.GroupName) ? 5 : 0);
+					break;
+				case 0:
+					((Dictionary<string, SpecialActionCodesGroup>)(object)this.Ⴄ)[specialActionCodesGroup.GroupName] = specialActionCodesGroup;
+					goto case 5;
+				case 5:
+					num2++;
+					num = 4;
+					break;
+				case 4:
+					num = ((num2 >= actionCodesGroups.Length) ? 1 : 7);
+					break;
+				case 1:
+					return (Dictionary<string, SpecialActionCodesGroup>)(object)this.Ⴄ;
+				}
+			}
+		}
+
+		public bool ႳႠႠ(string Ⴍ)
+		{
+			bool result = false;
+			DateTime now = DateTime.Now;
+			lock (Ⴗ)
+			{
+				((ProactiveRuntimeData)(object)this.Ⴅ).EventsHistory[Ⴍ] = now;
+				if (ႼႨ().Ⴈ.Ⴐ.DontProduceActions)
+				{
+					ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791526), Ⴍ);
+				}
+				else if (ႼႨ().Ⴈ.Ⴐ.ႼႳ())
+				{
+					ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791525), Ⴍ);
+				}
+				else
+				{
+					result = ႳႠႳ(Ⴍ);
+				}
+			}
+			((ႥႥႤ.Ⴀ)(object)this.Ⴍ).ႳႣႣ();
+			return result;
+		}
+
+		public ႷႭႼ.Ⴗ ႭႥ(string Ⴍ, out int? Ⴓ)
+		{
+			<>c__DisplayClass2 CS$<>8__locals0 = new <>c__DisplayClass2();
+			CS$<>8__locals0.scenarioName = Ⴍ;
+			ProactiveScenario proactiveScenario = ((ProactiveData)(object)this.Ⴅ).ProactiveScenarios.Where((ProactiveScenario scenario) => CS$<>8__locals0.scenarioName.Equals(scenario.ScenarioName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+			Ⴓ = ႳႠႥ(proactiveScenario);
+			return proactiveScenario;
+		}
+
+		public ႷႭႼ.Ⴗ ႭႭ(string Ⴍ, out int? Ⴓ)
+		{
+			switch (0)
+			{
+			default:
+			{
+				<>c__DisplayClass7 CS$<>8__locals0 = new <>c__DisplayClass7();
+				CS$<>8__locals0.eventList = ((ProactiveData)(object)this.Ⴅ).ProactiveEventsList.GetScenarioListForEvent(Ⴍ);
+				IEnumerable<ProactiveScenario> source = ((ProactiveData)(object)this.Ⴅ).ProactiveScenarios.Where((ProactiveScenario scenario) => CS$<>8__locals0.eventList.Contains(scenario.ScenarioName));
+				if (ႥႷႭ.ႭႥ.Ⴐ == null)
+				{
+					ႥႷႭ.ႭႥ.Ⴐ = (Func<ChatmanAction, int>)(object)(Func<ProactiveScenario, bool>)((ProactiveScenario scenario) => scenario.IsActive);
+				}
+				ProactiveScenario proactiveScenario = source.Where((Func<ProactiveScenario, bool>)(object)ႥႷႭ.ႭႥ.Ⴐ).FirstOrDefault();
+				Ⴓ = ႳႠႥ(proactiveScenario);
+				return proactiveScenario;
+			}
+			}
+		}
+
+		private unsafe bool ႳႠႳ(string Ⴍ)
+		{
+			List<string> scenarioListForEvent = ((ProactiveData)(object)this.Ⴅ).ProactiveEventsList.GetScenarioListForEvent(Ⴍ);
+			ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791524), scenarioListForEvent.Count, Ⴍ);
+			if (scenarioListForEvent.Count > 0)
+			{
+				ProactiveScenario proactiveScenario = ႳႠႭ(scenarioListForEvent);
+				ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791523), (proactiveScenario == null) ? ႭႷႭ.Ⴍ.ႠႣႣ(1933791522) : proactiveScenario.ScenarioName);
+				int? num = ႳႠႥ(proactiveScenario);
+				ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791521), num.HasValue ? num.Value.ToString() : ႭႷႭ.Ⴍ.ႠႣႣ(1933791520));
+				if (num.HasValue)
+				{
+					lock (this.Ⴃ)
+					{
+						Ⴃ = proactiveScenario;
+						*(int*)(&this.Ⴍ) = num.Value;
+						((EventWaitHandle)(object)ႥႷႭ.ႭႥ.Ⴍ).Set();
+					}
+					return true;
+				}
+			}
+			return false;
+		}
+
+		private unsafe void ႳႠႤ()
+		{
+			if (ႥႷႭ.ႭႥ.Ⴐ == null)
+			{
+				ႥႷႭ.ႭႥ.Ⴐ = (Func<ChatmanAction, int>)(object)(EventHandler)delegate
+				{
+					((EventWaitHandle)(object)ႥႷႭ.ႭႥ.Ⴍ).Set();
+				};
+			}
+			ႥႥႨႣ.Ⴀ.Ⴅ += (EventHandler)(object)ႥႷႭ.ႭႥ.Ⴐ;
+			while (!ႥႥႨႣ.Ⴀ.Ⴐ)
+			{
+				((WaitHandle)(object)ႥႷႭ.ႭႥ.Ⴍ).WaitOne(9999);
+				do
+				{
+					ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791535), ႭႭႰ.Ⴈ.Ⴈ);
+					if (ႥႥႨႣ.Ⴀ.Ⴈ.WaitOne(ႭႭႰ.Ⴈ.Ⴈ))
+					{
+						return;
+					}
+				}
+				while (ႳႠႣ());
+				try
+				{
+					if (Ⴃ != null && *(int*)(&this.Ⴍ) >= 0)
+					{
+						ႷႭႼ.Ⴈ ⴈ = ႼႨ().Ⴄ;
+						while (ⴈ.Ⴈ || ⴈ.Ⴐ)
+						{
+							ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791534));
+							if (ႥႥႨႣ.Ⴀ.Ⴈ.WaitOne(250))
+							{
+								return;
+							}
+						}
+						ProactiveScenario ⴃ;
+						int ⴍ;
+						lock (this.Ⴃ)
+						{
+							ⴃ = Ⴃ;
+							ⴍ = *(int*)(&this.Ⴍ);
+							*(int*)(&this.Ⴍ) = -1;
+							Ⴃ = null;
+						}
+						try
+						{
+							bool flag = true;
+							if (Ⴍ != null)
+							{
+								Ⴍ(ⴃ, ⴍ, ref flag);
+							}
+							if (!flag)
+							{
+								continue;
+							}
+						}
+						catch (Exception ⴍ2)
+						{
+							ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ2);
+						}
+						try
+						{
+							ႳႠႠ().ႥႠ(ႼႼ(), ⴍ);
+							ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791533), ⴍ, ⴃ.ScenarioName, ⴃ.TextMessage, ႼႼ().Name);
+							if (!string.IsNullOrEmpty(ⴃ.TextMessage.Trim()))
+							{
+								ႭႨႰ.Ⴐ.Ⴐ.Ⴍ.ShowProactiveWindow(ⴃ.TextMessage.Trim(), ⴍ, Ⴈ: true);
+							}
+							if (Ⴄ != null)
+							{
+								Ⴄ(ⴃ, ⴍ);
+							}
+							Ⴅ.ႳႣႣ();
+						}
+						catch (Exception ⴍ3)
+						{
+							ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791532), ⴍ);
+							ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ3);
+						}
+						lock (Ⴗ)
+						{
+							((ProactiveRuntimeData)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴅ).ScenariosHistory[ⴃ.ScenarioName] = DateTime.Now;
+							((ႥႥႤ.Ⴀ)(object)this.Ⴍ).ႳႣႣ();
+						}
+						ႥႥႨႣ.Ⴀ.Ⴈ.WaitOne(25000);
+					}
+				}
+				catch (Exception ⴍ4)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ4);
+				}
+			}
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791531));
+		}
+
+		private int? ႳႠႥ(ProactiveScenario Ⴍ)
+		{
+			int num = 5;
+			<>c__DisplayClass12 CS$<>8__locals0 = default(<>c__DisplayClass12);
+			ChatmanAction chatmanAction = default(ChatmanAction);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					CS$<>8__locals0 = new <>c__DisplayClass12();
+					num = ((Ⴍ != null) ? 4 : 0);
+					break;
+				case 0:
+					return null;
+				case 4:
+					CS$<>8__locals0.actionCodesGroup = ႳႠႭ()[Ⴍ.ActionGroupName];
+					num = ((CS$<>8__locals0.actionCodesGroup == null) ? 1 : 6);
+					break;
+				case 1:
+					return null;
+				case 6:
+				{
+					IEnumerable<KeyValuePair<int, ChatmanAction>> source = ႼႼ().SpecialActionsByCode.Where((KeyValuePair<int, ChatmanAction> action) => Enumerable.Contains(CS$<>8__locals0.actionCodesGroup.SpecialActionCodes, action.Key));
+					if (ႥႷႭ.ႭႥ.Ⴐ == null)
+					{
+						ႥႷႭ.ႭႥ.Ⴐ = (Func<ChatmanAction, int>)(object)(Func<KeyValuePair<int, ChatmanAction>, ChatmanAction>)((KeyValuePair<int, ChatmanAction> action) => action.Value);
+					}
+					List<ChatmanAction> source2 = source.Select((Func<KeyValuePair<int, ChatmanAction>, ChatmanAction>)(object)ႥႷႭ.ႭႥ.Ⴐ).ToList();
+					if (ႥႷႭ.ႭႥ.Ⴐ == null)
+					{
+						ႥႷႭ.ႭႥ.Ⴐ = (Func<ChatmanAction, int>)(object)(Func<ChatmanAction, bool>)delegate(ChatmanAction theAction)
+						{
+							if (theAction != null)
+							{
+								if (304 <= 304 - 211)
+								{
+								}
+								return !theAction.IsExcluded;
+							}
+							return false;
+						};
+					}
+					IEnumerable<ChatmanAction> source3 = source2.Where((Func<ChatmanAction, bool>)(object)ႥႷႭ.ႭႥ.Ⴐ);
+					if (Ⴐ == null)
+					{
+						Ⴐ = ((ChatmanAction theAction) => theAction.TotalCounter);
+					}
+					chatmanAction = source3.OrderBy(Ⴐ).FirstOrDefault();
+					num = ((chatmanAction != null) ? 2 : 3);
+					break;
+				}
+				case 3:
+					return null;
+				case 2:
+					return chatmanAction.SpecialActionCode;
+				}
+			}
+		}
+
+		private ProactiveScenario ႳႠႭ(ICollection<string> Ⴍ)
+		{
+			<>c__DisplayClass17 CS$<>8__locals0 = new <>c__DisplayClass17();
+			CS$<>8__locals0.eventList = Ⴍ;
+			IEnumerable<ProactiveScenario> source = ((ProactiveData)(object)this.Ⴅ).ProactiveScenarios.Where((ProactiveScenario scenario) => CS$<>8__locals0.eventList.Contains(scenario.ScenarioName));
+			if (Ⴓ == null)
+			{
+				Ⴓ = ((ProactiveScenario scenario) => scenario.IsActive);
+			}
+			List<ProactiveScenario> list = source.Where(Ⴓ).ToList();
+			List<ProactiveScenario> list2 = new List<ProactiveScenario>();
+			int num = -1;
+			foreach (ProactiveScenario item in list)
+			{
+				if (item.Priority >= num)
+				{
+					if (item.Priority > num)
+					{
+						num = item.Priority;
+						list2.Clear();
+					}
+					list2.Add(item);
+				}
+			}
+			if (list2.Count < 1)
+			{
+				return null;
+			}
+			List<KeyValuePair<double, ProactiveScenario>> list3 = new List<KeyValuePair<double, ProactiveScenario>>();
+			DateTime now = DateTime.Now;
+			double totalMinutes = (now - new DateTime(1900, 1, 1)).TotalMinutes;
+			double num2 = 0.0;
+			foreach (ProactiveScenario item2 in list2)
+			{
+				double num3 = totalMinutes;
+				DateTime? dateTime = ႳႳႠ(item2.ScenarioName);
+				if (dateTime.HasValue)
+				{
+					num3 = (now - dateTime.Value).TotalMinutes;
+				}
+				list3.Add(new KeyValuePair<double, ProactiveScenario>(num3, item2));
+				num2 += num3;
+			}
+			double num4 = ((Random)(object)this.Ⴄ).NextDouble() * num2;
+			foreach (KeyValuePair<double, ProactiveScenario> item3 in list3)
+			{
+				if (item3.Key > num4)
+				{
+					return item3.Value;
+				}
+				num4 -= item3.Key;
+			}
+			return null;
+		}
+
+		private void ႳႠႨ()
+		{
+			lock (Ⴗ)
+			{
+				Ⴈ<ProactiveRuntimeData>.ႳႠ((string)(object)this.Ⴍ, (ProactiveRuntimeData)(object)this.Ⴅ);
+			}
+		}
+
+		private unsafe bool ႳႠႣ()
+		{
+			return *(bool*)(&this.Ⴄ);
+		}
+
+		private unsafe void ႳႠႤ(bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0062
+			while (true)
+			{
+				*(bool*)(&this.Ⴄ) = Ⴍ;
+				if (!Ⴍ)
+				{
+					break;
+				}
+				if (733 > 733 - 44)
+				{
+					Ⴅ.ႳႣႳ();
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791530));
+					return;
+				}
+			}
+			((ႥႥႤ.Ⴀ)(object)this.Ⴍ).ႳႣႳ();
+			ႳႠႨ();
+			Ⴅ.ႳႣႣ();
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791529));
+		}
+
+		public void ႳႠႰ()
+		{
+			ႳႠႤ(Ⴍ: false);
+		}
+
+		public void ႳႠႷ()
+		{
+			ႳႠႤ(Ⴍ: true);
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public static void ႳႠႨ(ႷႭႣ.Ⴄ Ⴍ)
+		{
+			Ⴄ = (ႷႭႣ.Ⴄ)Delegate.Combine(Ⴄ, Ⴍ);
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public static void ႳႠႣ(ႷႭႣ.Ⴄ Ⴍ)
+		{
+			Ⴄ = (ႷႭႣ.Ⴄ)Delegate.Remove(Ⴄ, Ⴍ);
+		}
+
+		internal static ProactiveEventOccurrencePattern ႳႠႰ(string Ⴍ)
+		{
+			int num = 4;
+			ProactiveEventOccurrencePattern[] occurrencesList = default(ProactiveEventOccurrencePattern[]);
+			int num2 = default(int);
+			ProactiveEventOccurrencePattern proactiveEventOccurrencePattern = default(ProactiveEventOccurrencePattern);
+			ProactiveEventOccurrencePattern result = default(ProactiveEventOccurrencePattern);
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((ႥႷႭ.ႭႥ.Ⴄ != null) ? 6 : 7);
+					break;
+				case 7:
+					return null;
+				case 6:
+					occurrencesList = ((ProactiveData)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴅ).OccurrencesList;
+					num2 = 0;
+					num = 0;
+					break;
+				case 5:
+					proactiveEventOccurrencePattern = occurrencesList[num2];
+					num = ((!proactiveEventOccurrencePattern.PatternName.Equals(Ⴍ)) ? 8 : 2);
+					break;
+				case 2:
+					result = proactiveEventOccurrencePattern;
+					num = 3;
+					break;
+				case 8:
+					num2++;
+					num = 0;
+					break;
+				case 0:
+					num = ((num2 >= occurrencesList.Length) ? 1 : 5);
+					break;
+				case 1:
+					return null;
+				case 3:
+					return result;
+				}
+			}
+		}
+
+		internal static List<string> ႳႠႷ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0037, IL_004f
+			while (ႥႷႭ.ႭႥ.Ⴄ != null)
+			{
+				if (753 < 753 - 14)
+				{
+					continue;
+				}
+				while (((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).ႳႠႥ().ContainsKey(Ⴍ))
+				{
+					if (398 >= 398 - 141)
+					{
+						return ((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).ႳႠႥ()[Ⴍ];
+					}
+				}
+				break;
+			}
+			return null;
+		}
+
+		internal static DateTime? ႳႠႼ(string Ⴍ)
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((ႥႷႭ.ႭႥ.Ⴄ != null) ? 1 : 0);
+					break;
+				case 0:
+					return null;
+				case 1:
+					num = (((ProactiveRuntimeData)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴅ).EventsHistory.ContainsKey(Ⴍ) ? 3 : 4);
+					break;
+				case 4:
+					return null;
+				case 3:
+					return ((ProactiveRuntimeData)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴅ).EventsHistory[Ⴍ];
+				}
+			}
+		}
+
+		internal static DateTime? ႳႳႠ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_002b, IL_004e
+			DateTime? result = default(DateTime?);
+			while (true)
+			{
+				if (ႥႷႭ.ႭႥ.Ⴄ != null)
+				{
+					if (((ProactiveRuntimeData)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴅ).ScenariosHistory.ContainsKey(Ⴍ))
+					{
+						break;
+					}
+					if (470 <= 470 - 152)
+					{
+						continue;
+					}
+					result = null;
+				}
+				else if (903 >= 903 - 524)
+				{
+					return null;
+				}
+				return result;
+			}
+			return ((ProactiveRuntimeData)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴅ).ScenariosHistory[Ⴍ];
+		}
+
+		internal static SerializableDictionaryStringDateTimeList ႳႠႼ()
+		{
+			int num = 0;
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num2 = ((ႥႷႭ.ႭႥ.Ⴄ == null) ? 1 : 2);
+					break;
+				case 2:
+					return ((ProactiveRuntimeData)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴅ).CustomHistory;
+				case 1:
+					return null;
+				}
+				num = num2;
+			}
+		}
+
+		private static void ႳႳႠ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791528));
+			((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).ႳႠႠ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791543));
+		}
+
+		internal static bool ႭႨ(string Ⴍ, DateTime Ⴓ)
+		{
+			//Discarded unreachable code: IL_0005, IL_0028, IL_006e, IL_00bd, IL_00e7
+			<>c__DisplayClass1a CS$<>8__locals0;
+			List<DateTimeRange> list = default(List<DateTimeRange>);
+			while (true)
+			{
+				CS$<>8__locals0 = new <>c__DisplayClass1a();
+				CS$<>8__locals0.targetDate = Ⴓ;
+				if (ႥႷႭ.ႭႥ.Ⴄ != null)
+				{
+					if (926 >= 926 - 115)
+					{
+						if (((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴄ == null)
+						{
+							if (false)
+							{
+								break;
+							}
+							goto IL_0070;
+						}
+						while (((Dictionary<string, List<DateTimeRange>>)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴄ).ContainsKey(Ⴍ))
+						{
+							list = ((Dictionary<string, List<DateTimeRange>>)(object)((ႭႥ)(object)ႥႷႭ.ႭႥ.Ⴄ).Ⴄ)[Ⴍ];
+							if (list != null)
+							{
+								goto end_IL_0096;
+							}
+							if (806 >= 806 - 689)
+							{
+								ႥႥႨ.Ⴗ.ႳႭ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791541), Ⴍ);
+								return false;
+							}
+						}
+						if (786 < 786 - 651)
+						{
+							continue;
+						}
+					}
+					ႥႥႨ.Ⴗ.ႳႭ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791542), Ⴍ);
+					return false;
+				}
+				goto IL_0070;
+				IL_0070:
+				return false;
+				continue;
+				end_IL_0096:
+				break;
+			}
+			CS$<>8__locals0.targetDate = CS$<>8__locals0.targetDate.Date;
+			return list.Any(delegate(DateTimeRange dateTimeRange)
+			{
+				//Discarded unreachable code: IL_0002
+				DateTime dateStart = dateTimeRange.DateStart;
+				while (dateStart.Date <= CS$<>8__locals0.targetDate)
+				{
+					if (193 > 193 - 12)
+					{
+						return dateTimeRange.DateEnd.Date >= CS$<>8__locals0.targetDate;
+					}
+				}
+				return false;
+			});
+		}
+
+		private static bool <GetScenarioByEventName>b__5(ProactiveScenario scenario)
+		{
+			return scenario.IsActive;
+		}
+
+		private static void <ScenarioPlayer>b__9(object P_0, EventArgs P_1)
+		{
+			((EventWaitHandle)(object)ႥႷႭ.ႭႥ.Ⴍ).Set();
+		}
+
+		private static ChatmanAction <SelectSpecialActionCodeToSubmit>b__c(KeyValuePair<int, ChatmanAction> action)
+		{
+			return action.Value;
+		}
+
+		private static bool <SelectSpecialActionCodeToSubmit>b__d(ChatmanAction theAction)
+		{
+			if (theAction != null)
+			{
+				if (304 <= 304 - 211)
+				{
+				}
+				return !theAction.IsExcluded;
+			}
+			return false;
+		}
+
+		private static int <SelectSpecialActionCodeToSubmit>b__e(ChatmanAction theAction)
+		{
+			return theAction.TotalCounter;
+		}
+
+		private static bool <SelectSenarioToExecute>b__15(ProactiveScenario scenario)
+		{
+			return scenario.IsActive;
+		}
+	}
+}
+namespace ႭႷႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] Ⴓ;
+
+		private static readonly string[] Ⴓ;
+
+		internal static string ႠႣႣ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x73435127;
+			string result;
+			if ((result = Ⴓ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "\u05a1";
+				break;
+			case 1:
+				obj = "म\u05ff\u0cfaచ෦ह\u05b1բछ\u05ad\u0cf0\u0c0d\u0de0ण\u05acԴख़\u05f6ಥఆජ७\u05b6ջऊ\u05ad\u0cfdచ෫ऩ\u05b4սऐת\u0cbb\u0c5b\u0dd7न\u05b9էऑףಯ\u0c5bටऩ\u05b7պख़\u05f9ವఈ\u0df5न\u05b9տफ़ע\u0cfb\u0c5b\u0dfcढ\u05adզफ़ע\u0ce2కට७\u05b7դऊפ\u0cfaకඥत\u05abԴऱ׃\u0cb4";
+				break;
+			case 2:
+				obj = "Մऌע\u0cf4ఘ\u0df1त\u05aeձफ़ר\u0ce3ఞ෫ह\u05f8Գअ\u05bd೨\u0c5cඥण\u05b7ՠफ़ץ\u0cf4క\u0de1ड\u05b1պङ\u05a3ವ\u0c29\u0de0ब\u05abջऐ\u05b7ವక෬प\u05b0ՠफ़ץ\u0cfaఎ\u0df7\u093e\u05f8պऑ\u05fa\u0cb4";
+				break;
+			case 3:
+				obj = "\u059eջऋףೱ\u0c5b\u0dfeॽ\u05a5Դऍ\u05ee\u0cf0క\u0de4\u093f\u05b1ջऍ\u05ad೦ఎ෧\u093e\u05bbզगׯ\u0cf0టඥफ\u05b7զफ़ר\u0ce3ఞ෫ह\u05f8կ\u094fװ";
+				break;
+			case 4:
+				obj = "ञ\u05bdոछ\u05eeೡఞ\u0de1७\u05abշछף\u0cf4ఉ෬ढ\u05f8ՠऑ\u05ad\u0cf0\u0c03\u0de0म\u05adՠछ\u05ad\u0cfcఈ\u0dbf७\u05a3Ԥ\u0903";
+				break;
+			case 5:
+				obj = "\u0dcbघ\u0594\u0558";
+				break;
+			case 6:
+				obj = "న\u0de0ड\u05bdշऊרೱ\u0c5b\u0df6ऽ\u05bdշग\u05ec\u0cf9\u0c5b\u0de4म\u05acսऑףವఘ෪ऩ\u05bdԴऊעವఈ\u0df0य\u05b5սऊ\u05ad\u0cfcఈ\u0dbf७\u05a3Ԥ\u0903";
+				break;
+			case 7:
+				obj = "\u0cdbఴ\u0dcbई";
+				break;
+			case 8:
+				obj = "ם೧ఔ\u0de4म\u05acսईרವఋ෩ब\u05a1ձऌ\u05ad\u0cfcఈඥ\u093a\u05b9սऊפ\u0cfbజඥह\u05b7Դऍ\u05f9\u0cf4ఉ\u0df1७\u05a8ոट״\u0cfcక\u0de2७װՠगנ\u0cf0\u0c5b\u0df1ढ\u05f8գटפೡ\u0c41ඥशרթ\u0957";
+				break;
+			case 9:
+				obj = "म\u05ff\u0cfaచ෦ह\u05b1բछ\u05ad\u0ce2చ෬ह\u05b1պङ\u05ad\u0cf3ఔ\u0df7७\u05bdպङפ\u0cfbఞ\u0dd6ह\u05b9ՠछ\u05ad\u0cfcట෩न\u05f6Ժॐ";
+				break;
+			case 10:
+				obj = "Շऋׯ\u0cf8ఒ\u0df1ह\u05bdհफ़\u05eb\u0cfaఉඥन\u05a0ձझ\u05f8ೡఒ෪णעԴभ\u05fd\u0cf0ఘ෬ब\u05b4Օझ\u05f9\u0cfcఔ෫ऎ\u05b7հछ\u05b0೮\u0c4b\u0df8७װղऑ\u05ffವఈ෦न\u05b6յऌפ\u0cfa\u0c5b\u0dfeॼ\u05a5Ժफ़מ\u0cf6ఞ෫ब\u05acսऑ\u05adೡఞ\u0dfdह\u05f8ԩफ़\u05aa೮\u0c49\u0df8४\u05f6Դऽ\u05f8೧ఉ\u0de0ण\u05acԴऎר೧ఈ෪ण\u05b9ոग\u05f9೬\u0c5bඨ७\u05a3ԧ\u0903";
+				break;
+			case 11:
+				obj = "\u058bշछף\u0cf4ఉ෬ढ\u05f8պऑ\u05f9ವఋ෩ब\u05a1ձच\u05adಽఞ\u0dfdम\u05bdդऊפ\u0cfaకඬ६\u05f6Դऍ\u05fd\u0cf0ఘ෬ब\u05b4Օझ\u05f9\u0cfcఔ෫ऎ\u05b7հछ\u05adನ\u0c5b\u0dfeॽ\u05a5";
+				break;
+			case 12:
+				obj = "ऎ\u05b0յऊנ\u0cf4కඥऽ\u05aaջट\u05eeೡఒ\u0df3न\u05f8էझר\u0cfbచ\u0df7त\u05b7Դऎס\u0cf4\u0c02\u0de0\u093f\u05f8ձआפೡఞ\u0de1\u0963";
+				break;
+			case 13:
+				obj = "\u0dd5\u093f\u05b7յझ\u05f9\u0cfc\u0c0d\u0de0७\u05bdպङפ\u0cfbఞඥत\u05abԴऍ\u05f9\u0cfaఋ\u0df5न\u05bcԺ";
+				break;
+			case 14:
+				obj = "ఫ\u0df7ढ\u05b9շऊפ\u0ce3ఞඥन\u05b6ճगף\u0cf0\u0c5b෬\u093e\u05f8էऊ\u05ec೧ఏ\u0de0ऩ\u05f6";
+				break;
+			case 15:
+				obj = "\u0cc6ఎ෧ठ\u05b1ՠऊפ\u0cfbజඥ४ֈզऑ\u05ec\u0cf6ఏ෬\u093b\u05bdՑऐת\u0cfcక\u0de0ऄ\u05bcոछ\u05aaವఞ\u0df3न\u05b6ՠफ़\u05f9\u0cfa\u0c5b\u0df5\u093f\u05b7յझ\u05f9\u0cfc\u0c0d\u0de0\u0963\u05f6Ժ";
+				break;
+			case 16:
+				obj = "ם೧ఔ\u0de4म\u05acսईר\u0cd0క\u0de2त\u05b6ձषש\u0cf9ఞ";
+				break;
+			case 17:
+				obj = "रעವ\u0c5c\u0dfeॽ\u05a5Գफ़פ\u0cfb\u0c5b\u0dd6ऽ\u05bdշग\u05ec\u0cf9\u0c3f\u0de4ऴ\u05ab\u0558ग\u05feೡ";
+				break;
+			case 18:
+				obj = "՚ऑ\u05adೱచ\u0df1ब\u05f8ղऑ\u05ffಲ\u0c00ඵर\u05ffԴगףವన\u0df5न\u05bbսटס\u0cd1చ\u0dfc\u093e\u0594սऍ\u05f9";
+				break;
+			case 19:
+				obj = "ֈզऑ\u05ec\u0cf6ఏ෬\u093b\u05bdՆऋףೡఒ෨न\u05f6հट\u05f9";
+				break;
+			case 20:
+				obj = "झ\u05aaջट\u05eeೡఒ\u0df3न\u059bջऐ\u05eb\u0cfcజ\u0df0\u093f\u05b9ՠगע\u0cfb\u0c55\u0de1ब\u05ac";
+				break;
+			case 21:
+				obj = "\u0dd6ऽ\u05bdշग\u05ec\u0cf9\u0c3f\u0de4ऴ\u05ab\u0558ग\u05feೡ\u0c55\u0de1ब\u05ac";
+				break;
+			case 22:
+				obj = "ఫ\u0df7ढ\u05b9շऊפ\u0ce3ఞසत\u05aaէऊןೠక";
+				break;
+			case 23:
+				obj = "\u0cc5ఉ෪ब\u05bbՠग\u05fb\u0cf0\u0c5b\u0de3त\u05aaէऊ\u05ad೧ఎ෫७\u05bcձऊר\u0cf6ఏ\u0de0ऩ\u05f6Դ\u093b\u05fb\u0cf0క\u0df1७\u05ffՄऌע\u0cf4ఘ\u0df1त\u05aeձसפ೧ఈ\u0df1ट\u05adպख़\u05ad\u0ce2ఒ෩ड\u05f8նछ\u05ad೦ఎ෧ठ\u05b1ՠऊרೱ\u0c55";
+				break;
+			case 24:
+				obj = "ם೧ఔ\u0de4म\u05acսईרವఝ\u0df0ड\u05b4խफ़ס\u0cfaచ\u0de1न\u05bcԴटףೱ\u0c5b෬ण\u05b1ՠग\u05ec\u0cf9ఒ\u0dffन\u05bcԺफ़מ\u0cf6ఞ෫ब\u05aaսऑ\u05feವఘ෪स\u05b6ՠफ़\u05b0ವ\u0c00ඵर";
+				break;
+			case 25:
+				obj = "मר೧ఈ෪ण\u05b9ոग\u05f9\u0cfcఞ\u0df6";
+				break;
+			case 26:
+				obj = "Րट\u05f9\u0cf4";
+				break;
+			case 27:
+				obj = "ֈզऑ\u05ec\u0cf6ఏ෬\u093b\u05bd";
+				break;
+			case 28:
+				obj = "ञ\u05acյऌ\u05f9\u0cd1చ\u0df1न\u05f8ԩफ़";
+				break;
+			case 29:
+				obj = "\u0de1ऩ\u05f8\u0559ळ׀ವ\u0c02\u0dfcऴ\u05a1";
+				break;
+			case 30:
+				obj = "\u0c40ඥउ\u05adզट\u05f9\u0cfcఔ෫७ץԴ";
+				break;
+			case 31:
+				obj = "ಮ";
+				break;
+			case 32:
+				obj = "׃\u0cf4ఖ\u0de0";
+				break;
+			case 33:
+				obj = "";
+				break;
+			case 34:
+				obj = "Րऋ\u05ff\u0cf4ఏ෬ढ\u05b6՝ऐ\u05c9\u0cf4\u0c02\u0df6";
+				break;
+			case 35:
+				obj = "ש";
+				break;
+			case 36:
+				obj = "\u0900\u0595Իचש\u0cba\u0c02\u0dfcऴ\u05a1Դश\u05c5ಯఖ෨ॷ\u05abէ";
+				break;
+			case 37:
+				obj = "\u0de1ब\u05acձपפ\u0cf8ఞ";
+				break;
+			case 38:
+				obj = "ల\u0df1न\u05b5";
+				break;
+			case 39:
+				obj = "\u0cd6ఓ\u0de0म\u05b3էगףೲ\u0c5b\u0df6ऽ\u05bdշग\u05ec\u0cf9\u0c5b\u0de1ब\u05a1Դअ\u05bd೨\u0c55ණ\u0963\u05f6Դबר೦ఎ෩हעԴअ\u05bc೨";
+				break;
+			case 40:
+				obj = "ם೧ఔ\u0de4म\u05acսईר\u0cd0\u0c0d\u0de0ण\u05ac՛झ\u05eeೠఉ\u0df7न\u05b6շछם\u0cf4ఏ\u0df1न\u05aaպफ़ש\u0cfaకජह\u05f8էऋ\u05fd\u0ce5ఔ\u0df7ह\u05f8զछ\u05ecೱఒ෫प\u05f8ղऌע\u0cf8\u0c5b\u0dcc\u093e\u0599շऊפ\u0ce3ఞඥऽ\u05aaջऎר೧ఏ\u0dfc७\u05bcսऌר\u0cf6ఏ෩ऴ\u05f9";
+				break;
+			case 41:
+				obj = "\u093fףೲఉ\u0dfc";
+				break;
+			case 42:
+				obj = "\u0557खר\u0cf6ఐ෬ण\u05bfԴघע೧\u0c5b\u0de4म\u05acսईרವఘ෭ब\u05acչटףವఋ\u0df7ढ\u05a8ձऌ\u05f9೬\u0c5b\u0dfeॽ\u05a5Դग\u05feವ\u0c00පर\u05f8Լछ\u05f5\u0ce5ఞ\u0dfdह\u05bdհ\u0944\u05aa೮\u0c49\u0df8४\u05f8շऋ\u05ff೧ఞ෫हעԳअ־೨\u0c5cඬ\u0963\u05f8Ն\u093bמ\u0cc0ష\u0dd1ॷ\u05a3Ԡ\u0903";
+				break;
+			case 43:
+				obj = "\u058bյच";
+				break;
+			case 44:
+				obj = "ऋ\u05b7զफ़\u05fe\u0cf6ఞ෫ब\u05aaսऑ\u05adಲ\u0c00ඵर\u05ffԴटס\u0cf9\u0c5b\u0dcaम\u05bbաऌ\u05ff\u0cf0క෦न\u05abՄट\u05f9ೡఞ\u0df7ण\u05abԴट\u05ff\u0cf0\u0c5b\u0df1\u093f\u05adձॐ\u05ad\u0cd6చ\u0df1न\u05bfջऌ״ನ\u0c5c\u0dfeॼ\u05a5Գ";
+				break;
+			case 45:
+				obj = "සढ\u05aaԴऍ\u05ee\u0cf0క\u0de4\u093f\u05b1ջफ़\u05aa೮\u0c4b\u0df8४\u05f8յऒסವ\u0c3e\u0df3न\u05b6ՠऽע\u0cfbట෬ह\u05b1ջऐ\u05feವచ\u0df7न\u05f8ՠऌ\u05f8\u0cf0\u0c55ඥऎ\u05b9ՠछת\u0cfaఉ\u0dfc॰\u05ffկ\u094fװಲ";
+				break;
+			case 46:
+				obj = "స෪ण\u05bcսऊפ\u0cfaక\u0dbf७ֈզऑ\u05ec\u0cf6ఏ෬\u093b\u05bdՇझר\u0cfbచ\u0df7त\u05b7Մऒ\u05ec೬ఞ\u0de1७װղऑ\u05ff೮\u0c4b\u0df8शשթ\u0957\u05a3ವల\u0df6७\u05b9շऊפ\u0ce3ఞඥ\u093f\u05bdէऋסೡ\u0c5bම७\u05a3ԥ\u0903";
+				break;
+			case 47:
+				obj = "ವఈ෦न\u05b6յऌפ\u0cfa\u0c41ඥ४";
+				break;
+			case 48:
+				obj = "\u05aa";
+				break;
+			case 49:
+				obj = "फ़\u05fe\u0cf6ఞ෫ब\u05aaսऑ\u05adೲఉ෪स\u05a8Ԯफ़\u05aa";
+				break;
+			case 50:
+				obj = "Ցईר\u0cfbఏ\u0df6";
+				break;
+			case 51:
+				obj = "\u058bշछף\u0cf4ఉ෬ढ";
+				break;
+			case 52:
+				obj = "ई\u05aeձऐ\u05f9";
+				break;
+			case 53:
+				obj = "ව\u093b\u05bdպऊ\u05c9\u0cf4ఏ\u0de0ङ\u05b1չछ";
+				break;
+			case 54:
+				obj = "\u0c3e\u0df7\u093f\u05b7զफ़\u05feೠఙ෨त\u05acՠगףೲ\u0c5b\u0de0\u093b\u05bdպऊ\u05adೡఔඥऽ\u05aaջट\u05eeೡఒ\u0df3न";
+				break;
+			case 55:
+				obj = "\u0cc6ఎ෧ठ\u05b1ՠछשವఞ\u0df3न\u05b6ՠफ़\u05aa೮\u0c4b\u0df8४\u05f8սऍ\u05ad೮\u0c4a\u0df8थ\u05b9պचס\u0cf0టණ";
+				break;
+			case 56:
+				obj = "ף\u0cfaఏඥ";
+				break;
+			case 57:
+				obj = "भ\u05f9\u0cf4ఉ\u0df1त\u05b6ճफ़\u05fd೧ఔ\u0de4म\u05acսईר\u0cbb\u0c55ණ";
+				break;
+			case 58:
+				obj = "Շऊע\u0ce5ఋ෬ण\u05bfԴऎ\u05ff\u0cfaచ෦ह\u05b1բछ\u05a3\u0cbb\u0c55";
+				break;
+			case 59:
+				obj = "ֈյऋ\u05fe\u0cfcక\u0de2७\u05a8զऑ\u05ec\u0cf6ఏ෬\u093b\u05bdԺॐ\u05a3";
+				break;
+			case 60:
+				obj = "ट\u05bdէऋנ\u0cfcక\u0de2७\u05a8զऑ\u05ec\u0cf6ఏ෬\u093b\u05bdԺॐ\u05a3";
+				break;
+			case 61:
+				obj = "සढ\u05aaԴऍ\u05ee\u0cf0క\u0de4\u093f\u05b1ջफ़\u05aa೮\u0c4b\u0df8४\u05f8ջझ\u05eeೠఉ\u0df7न\u05b6շछ\u05ad\u0ce5చ\u0df1ह\u05bdզऐ\u05adಲ\u0c00භर\u05ffԴग\u05feವ\u0c00පर\u05b9ոऒע\u0ce2చ෧ड\u05bdԴ";
+				break;
+			case 62:
+				obj = "వ\u0dcaङ\u05f8";
+				break;
+			case 63:
+				obj = "\u0cdaఘ෦स\u05aaզछף\u0cf6ఞ\u0dd5ब\u05acՠछ\u05ff\u0cfb\u0c5b\u0de1ढ\u05b6Գऊ\u05ad೦ఎ\u0df5ऽ\u05b7զऊ\u05ad೧ఞ\u0de4ऩ\u05b1պङ\u05ad\u0cf3ఉ෪ठ\u05f8՝ऍ\u05cc\u0cf6ఏ෬\u093b\u05bdԴऎ\u05ff\u0cfaఋ\u0de0\u093f\u05acխय़\u05ad\u0cc0ఈ\u0de0७\u0591էऱ\u05ee\u0cf6ఎ\u0df7\u093f\u05bdպझר\u0cd4గ෩ढ\u05afյजס\u0cf0\u0c5b෨न\u05acռऑש\u0cb4";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴓ = (char[])(object)Ⴍ.Ⴓ;
+			int num2 = ⴓ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴓ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			Ⴓ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴍ.Ⴓ = (string[])(object)array;
+			Ⴓ = new string[64];
+		}
+	}
+}
+namespace ႷႤႰ
+{
+	public class Ⴈ : IDisposable, ႷႭႥ.Ⴜ
+	{
+		private ႭႥ Ⴀ;
+
+		private ႷႭႣ.Ⴄ Ⴀ;
+
+		public event ႷႭႣ.Ⴄ Ⴐ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				Ⴀ = (ႷႭႣ.Ⴄ)Delegate.Combine(Ⴀ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				Ⴀ = (ႷႭႣ.Ⴄ)Delegate.Remove(Ⴀ, value);
+			}
+		}
+
+		public Ⴈ()
+		{
+			this.Ⴀ = (ႷႭႣ.Ⴄ)(object)new ႭႥ();
+			ႭႥ.ႳႠႨ(ႳႠ);
+		}
+
+		private void ႳႠ(ႷႭႼ.Ⴗ Ⴍ, int Ⴓ)
+		{
+			try
+			{
+				if (Ⴀ != null)
+				{
+					Ⴀ(Ⴍ, Ⴓ);
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+		}
+
+		public bool ႤႠႥ(string Ⴍ)
+		{
+			bool flag = false;
+			try
+			{
+				flag = ((ႭႥ)(object)this.Ⴀ).ႳႠႠ(Ⴍ);
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791505), ⴓ);
+			}
+			ႥႥႨ.Ⴗ.ႳႥ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791504), Ⴍ, flag ? ႭႷႭ.Ⴍ.ႠႣႣ(1933791494) : ႭႷႭ.Ⴍ.ႠႣႣ(1933791519));
+			return flag;
+		}
+
+		public ႷႭႼ.Ⴗ ႤႠ(string Ⴍ, out int? Ⴓ)
+		{
+			return ((ႭႥ)(object)this.Ⴀ).ႭႥ(Ⴍ, out Ⴓ);
+		}
+
+		public ႷႭႼ.Ⴗ ႤႤ(string Ⴍ, out int? Ⴓ)
+		{
+			return ((ႭႥ)(object)this.Ⴀ).ႭႭ(Ⴍ, out Ⴓ);
+		}
+
+		public void ႰႼ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791518));
+			((ႭႥ)(object)this.Ⴀ).ႳႠႰ();
+		}
+
+		public void ႤႠႠ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791517));
+			((ႭႥ)(object)this.Ⴀ).ႳႠႷ();
+		}
+
+		public void ႤႠႤ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791516));
+			((ႭႥ)(object)this.Ⴀ).ႳႠႷ();
+		}
+
+		public void ႤႠႰ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႭႷႭ.Ⴍ.ႠႣႣ(1933791515));
+			((ႭႥ)(object)this.Ⴀ).ႳႠႰ();
+		}
+
+		public void Dispose()
+		{
+			//Discarded unreachable code: IL_0002, IL_001a
+			if (this.Ⴀ == null)
+			{
+				if (196 > 196 - 63)
+				{
+					return;
+				}
+			}
+			else
+			{
+				((ႭႥ)(object)this.Ⴀ).ႳႠႷ();
+			}
+			ႭႥ.ႳႠႣ(ႳႠ);
+			this.Ⴀ = null;
+		}
+	}
+}

@@ -1,0 +1,2615 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Applications.dll
+// Rondyo.Chatman.Applications, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Applications;
+using Rondyo.Chatman.Applications.Configuration;
+using Rondyo.Chatman.Applications.Context;
+using Rondyo.Chatman.Data;
+using Rondyo.Chatman.Data.Events;
+using Rondyo.Chatman.Framework.Utils;
+using Rondyo.Chatman.GUI.Controllers.Navigation;
+using Rondyo.Chatman.GUI.Controllers.Routines;
+using Rondyo.Chatman.Interfaces.Public;
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Xml.Serialization;
+using ႠႠ;
+using ႣႨ;
+using ႤႰ;
+using ႥႥႥ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႥ;
+using ႥႥႨႨ;
+using ႥႥႨႰ;
+using ႥႥႳႰ;
+using ႭႥႨ;
+using ႭႥႰ;
+using ႭႨႰ;
+using ႭႰ;
+using ႰႰ;
+using ႷႭႣ;
+using ႷႭႤ;
+using ႷႭႥ;
+using ႷႭႨ;
+using ႷႭႳ;
+
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyTrademark("")]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Guid("f02e68fe-93f2-440b-8867-5e0711702f94")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace Rondyo.Chatman.Applications
+{
+	public class ChatmanApplicationServices : IChatmanApplicationServices
+	{
+		private sealed class <>c__DisplayClass6
+		{
+			public Guid id;
+
+			public bool <GetMood>b__4(IChatmanMood mood)
+			{
+				return mood.ID == id;
+			}
+		}
+
+		private IEnumerable<IChatmanMood> moods;
+
+		private readonly Dictionary<string, ႰႰ.Ⴗ> chatmanApplicationLoggers = new Dictionary<string, ႰႰ.Ⴗ>();
+
+		private static Func<Mood, bool> CS$<>9__CachedAnonymousMethodDelegate2;
+
+		private static Func<Mood, IChatmanMood> CS$<>9__CachedAnonymousMethodDelegate3;
+
+		private static Func<Personality, IChatmanPersonality> CS$<>9__CachedAnonymousMethodDelegate9;
+
+		public string ChatmanName
+		{
+			get
+			{
+				try
+				{
+					return ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴈ.Ⴐ.ChatmanName;
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+					return string.Empty;
+				}
+			}
+			set
+			{
+				try
+				{
+					if (ႭႨႰ.Ⴐ.Ⴐ != null)
+					{
+						ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴈ.Ⴐ.ChatmanName = value;
+					}
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+					throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238842));
+				}
+			}
+		}
+
+		private static ႷႭႳ.Ⴈ ChatmanServices => ႭႨႰ.Ⴐ.Ⴐ.Ⴃ as ႷႭႳ.Ⴈ;
+
+		private static ႷႭႤ.Ⴅ AudioServicesManager
+		{
+			get
+			{
+				try
+				{
+					if (ႭႨႰ.Ⴐ.Ⴐ.Ⴃ == null)
+					{
+						return null;
+					}
+					return ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ?.Ⴈ;
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+					throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238825));
+				}
+			}
+		}
+
+		public short Volume
+		{
+			get
+			{
+				try
+				{
+					return AudioServicesManager.Ⴈ;
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+					throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238824));
+				}
+			}
+			set
+			{
+				try
+				{
+					AudioServicesManager.Ⴈ = value;
+				}
+				catch (Exception ⴍ)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+					throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238823));
+				}
+			}
+		}
+
+		public event VolumeChangedDelegate VolumeChanged;
+
+		public event AudioActionStoppedDelegate AudioPlaybackStopped;
+
+		public event ListeningEventDelegate HearingStopped;
+
+		public event ListeningEventDelegate HearingStarted;
+
+		public event ListeningEventDelegate ListeningStarted;
+
+		public event AudioActionStoppedDelegate DirectPlaybackStopped;
+
+		public void Initialize()
+		{
+			AudioServicesManager.Ⴅ += AudioServicesManager_VolumeChanged;
+			AudioServicesManager.Ⴍ += AudioServicesManager_HearingStarted;
+			AudioServicesManager.Ⴃ += AudioServicesManager_HearingStopped;
+			AudioServicesManager.Ⴈ += AudioServicesManager_AudioPlaybackStopped;
+			AudioServicesManager.Ⴄ += AudioServicesManager_ListeningStarted;
+			AudioServicesManager.Ⴜ += AudioServicesManager_DirectPlaybackStopped;
+		}
+
+		public IEnumerable<IChatmanMood> GetMoods()
+		{
+			try
+			{
+				AssureMoods();
+				return moods;
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238841));
+			}
+		}
+
+		private void AssureMoods()
+		{
+			//Discarded unreachable code: IL_0005, IL_0029, IL_003e, IL_0053, IL_0068, IL_008c, IL_00ba
+			if (moods != null)
+			{
+				return;
+			}
+			if (915 < 915 - 674)
+			{
+				return;
+			}
+			do
+			{
+				ႭႥႨ.Ⴀ source = ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴓ.Ⴗ;
+				if (CS$<>9__CachedAnonymousMethodDelegate2 == null)
+				{
+					CS$<>9__CachedAnonymousMethodDelegate2 = ((Mood mood) => mood.IsVisible);
+				}
+				IEnumerable<Mood> source2 = source.Where(CS$<>9__CachedAnonymousMethodDelegate2);
+				if (CS$<>9__CachedAnonymousMethodDelegate3 == null)
+				{
+					CS$<>9__CachedAnonymousMethodDelegate3 = ((Mood mood) => mood);
+				}
+				moods = source2.Select(CS$<>9__CachedAnonymousMethodDelegate3);
+			}
+			while (442 < 442 - 228);
+		}
+
+		public IChatmanMood GetMood(Guid id)
+		{
+			<>c__DisplayClass6 CS$<>8__locals0 = new <>c__DisplayClass6();
+			CS$<>8__locals0.id = id;
+			try
+			{
+				AssureMoods();
+				return moods.Where((IChatmanMood mood) => mood.ID == CS$<>8__locals0.id).DefaultIfEmpty().First();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238840));
+			}
+		}
+
+		public IChatmanPersonality LoadPersonality(string location)
+		{
+			try
+			{
+				Personality personality = ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴓ.ႨႨႠ(Path.Combine(location, ႠႠ.Ⴀ.Ⴓ(1402238839)));
+				personality.ႼႠ();
+				return personality;
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238838));
+			}
+		}
+
+		public IChatmanApplicationLogger GetLogger(IChatmanApplicationDetails logOwner)
+		{
+			try
+			{
+				string key = logOwner.Name ?? logOwner.ID.ToString();
+				if (!chatmanApplicationLoggers.ContainsKey(key))
+				{
+					chatmanApplicationLoggers[key] = new ႰႰ.Ⴗ(logOwner);
+				}
+				return chatmanApplicationLoggers[key];
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238837));
+			}
+		}
+
+		public IChatmanPersonality GetActivePersonality()
+		{
+			try
+			{
+				return ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴓ.Ⴈ.ႰႠ(ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴈ.Ⴐ.ActivePersonalityId);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				return null;
+			}
+		}
+
+		public IEnumerable<IChatmanPersonality> GetAllPersonalities()
+		{
+			try
+			{
+				ႭႥႰ.Ⴈ source = ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴓ.Ⴐ;
+				if (CS$<>9__CachedAnonymousMethodDelegate9 == null)
+				{
+					CS$<>9__CachedAnonymousMethodDelegate9 = ((Personality personality) => personality);
+				}
+				return source.Select(CS$<>9__CachedAnonymousMethodDelegate9);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238836));
+			}
+		}
+
+		public IChatmanSession CreateSession(IChatmanPersonality personality)
+		{
+			try
+			{
+				Guid guid = Guid.NewGuid();
+				return ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.Ⴅ.Ⴐ(guid.ToString(), 1, personality as Personality, -1, Ⴓ: true) as IChatmanSession;
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238835));
+			}
+		}
+
+		public void SubmitText(string text)
+		{
+			try
+			{
+				EventDetails[] ⴗ = new EventDetails[1]
+				{
+					new EventDetails
+					{
+						Type = 9,
+						Data = text,
+						Source = 1,
+						SessionID = string.Empty
+					}
+				};
+				ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.ႠႨ(ⴗ);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238834));
+			}
+		}
+
+		public void SubmitText(string text, IChatmanSession session)
+		{
+			try
+			{
+				EventDetails[] ⴗ = new EventDetails[1]
+				{
+					new EventDetails
+					{
+						Type = 9,
+						Data = text,
+						Source = 1,
+						SessionID = session.SessionID
+					}
+				};
+				ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.ႠႨ(ⴗ);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238834));
+			}
+		}
+
+		public void SubmitAction(IChatmanAction action)
+		{
+			try
+			{
+				ChatmanServices.ႠႳ(action as ChatmanAction);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238833));
+			}
+		}
+
+		public void SubmitAction(IChatmanAction action, bool stopPreviousAction)
+		{
+			try
+			{
+				ChatmanServices.ႥႤ(action as ChatmanAction, stopPreviousAction);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238833));
+			}
+		}
+
+		public void SubmitAction(IChatmanAction action, MemoryStream audioFileStream, bool stopPreviousAction)
+		{
+			try
+			{
+				ChatmanServices.Ⴀ(action as ChatmanAction, audioFileStream, stopPreviousAction);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238833));
+			}
+		}
+
+		public void SubmitAction(IChatmanAction action, bool stopPreviousAction, IChatmanSession session)
+		{
+			try
+			{
+				ChatmanServices.Ⴀ(action as ChatmanAction, stopPreviousAction, session as ႷႭႨ.Ⴓ);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238833));
+			}
+		}
+
+		public void SubmitAction(IChatmanAction action, bool stopPreviousAction, IChatmanSession session, ActionVolume volume)
+		{
+			try
+			{
+				ChatmanServices.Ⴗ(action as ChatmanAction, stopPreviousAction, session as ႷႭႨ.Ⴓ, volume);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238833));
+			}
+		}
+
+		public void StopAction(IChatmanAction action)
+		{
+			try
+			{
+				ChatmanServices.ႠႼ(action as ChatmanAction);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238832));
+			}
+		}
+
+		public void SubmitDefaultSpecialAction(int specialActionCode)
+		{
+			try
+			{
+				ChatmanServices.ႷႥ(specialActionCode);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238831));
+			}
+		}
+
+		public void SubmitDefaultSpecialAction(int specialActionCode, ActionVolume volume)
+		{
+			try
+			{
+				ChatmanServices.ႥႥ(specialActionCode, volume);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238831));
+			}
+		}
+
+		public void SubmitSpecialAction(IChatmanPersonality personality, int specialActionCode)
+		{
+			try
+			{
+				ChatmanServices.ႥႠ(personality as Personality, specialActionCode);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238830));
+			}
+		}
+
+		public void SubmitSpecialAction(IChatmanPersonality personality, int specialActionCode, IChatmanSession session)
+		{
+			try
+			{
+				ChatmanServices.Ⴗ(personality as Personality, specialActionCode, session as ႷႭႨ.Ⴓ);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238830));
+			}
+		}
+
+		public void SubmitSpecialAction(IChatmanPersonality personality, int specialActionCode, IChatmanSession session, ActionVolume volume)
+		{
+			try
+			{
+				ChatmanServices.Ⴍ(personality as Personality, specialActionCode, session as ႷႭႨ.Ⴓ, volume);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238830));
+			}
+		}
+
+		public void StopSpecialAction(IChatmanPersonality personality, int specialActionCode)
+		{
+			try
+			{
+				ChatmanServices.ႥႠ(personality as Personality, specialActionCode);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238829));
+			}
+		}
+
+		public void StopAllActions()
+		{
+			try
+			{
+				ChatmanServices.ႷႷ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238828));
+			}
+		}
+
+		public void PlaySoundOnPC(string fileName)
+		{
+			try
+			{
+				ChatmanServices.ႷႨ(fileName);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238827));
+			}
+		}
+
+		public void StopPlayingSoundsOnPC()
+		{
+			try
+			{
+				ChatmanServices.ႷႨ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238826));
+			}
+		}
+
+		public void PlaySoundOnChatman(string fileName)
+		{
+			try
+			{
+				AudioServicesManager.Ⴐ(fileName);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238822));
+			}
+		}
+
+		public void PauseSoundOnChatman()
+		{
+			try
+			{
+				AudioServicesManager.Ⴐ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238821));
+			}
+		}
+
+		public void StopSoundOnChatman()
+		{
+			try
+			{
+				AudioServicesManager.Ⴈ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238820));
+			}
+		}
+
+		public void StartListening(string fileName)
+		{
+			try
+			{
+				AudioServicesManager.Ⴅ(fileName);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238819));
+			}
+		}
+
+		public void AddListenEffect(AudioEffects effect)
+		{
+			try
+			{
+				AudioServicesManager.Ⴀ(effect);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238818));
+			}
+		}
+
+		public void RemoveListenEffect(AudioEffects effect)
+		{
+			try
+			{
+				AudioServicesManager.Ⴃ(effect);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238817));
+			}
+		}
+
+		public void SetListeningEffect(AudioEffects effect, params float[] effectParams)
+		{
+			try
+			{
+				AudioServicesManager.Ⴈ(effect, effectParams);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238816));
+			}
+		}
+
+		public void StopListening()
+		{
+			try
+			{
+				AudioServicesManager.Ⴍ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238824));
+			}
+		}
+
+		public void StartDirectPlayback(string fileName)
+		{
+			try
+			{
+				AudioServicesManager.ႷႥ(fileName);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238751));
+			}
+		}
+
+		public void StopDirectPlayback()
+		{
+			try
+			{
+				AudioServicesManager.ႤႳ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238750));
+			}
+		}
+
+		public void PauseDirectPlayback()
+		{
+			try
+			{
+				AudioServicesManager.ႤႷ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238749));
+			}
+		}
+
+		public void ResumeDirectPlayback()
+		{
+			try
+			{
+				AudioServicesManager.ႤႭ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238748));
+			}
+		}
+
+		public float[] GetDirectPlaybackData()
+		{
+			try
+			{
+				return AudioServicesManager.ႤႣ();
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238747));
+			}
+		}
+
+		public void MoveChatman(ChatmanCommandCodes command)
+		{
+			try
+			{
+				if (command != ChatmanCommandCodes.LEDSFrame)
+				{
+					ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.Ⴓ(command, 0);
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238746));
+			}
+		}
+
+		public void ShowLedFrame(int param)
+		{
+			try
+			{
+				ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.Ⴓ(ChatmanCommandCodes.LEDSFrame, param);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238745));
+			}
+		}
+
+		public IChatmanAction GenerateAction(IChatmanPersonality personality, string actionName, Guid moodID, string audioFileName, out string details)
+		{
+			details = ႠႠ.Ⴀ.Ⴓ(1402238846);
+			ChatmanAction chatmanAction = null;
+			try
+			{
+				int value = AudioServicesManager.Ⴈ(audioFileName);
+				ႷႭႳ.Ⴅ[] ⴗ = AudioServicesManager.Ⴓ(audioFileName);
+				chatmanAction = ChatmanServices.Ⴀ((Personality)personality, moodID, audioFileName, value, ⴗ, out details);
+				chatmanAction.Location = Path.GetDirectoryName(audioFileName);
+				ႥႥႨ.Ⴗ.ႨႷႣ(details);
+				chatmanAction.Name = actionName;
+				chatmanAction.IsMy = true;
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238744));
+			}
+			return chatmanAction;
+		}
+
+		public void SaveChitChat(IChatmanAction action, string name)
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238743));
+			try
+			{
+				ChatmanAction chatmanAction = ChatmanAction.Ⴓ(action as ChatmanAction, Ⴓ: true, Ⴈ: true);
+				chatmanAction.Name = name;
+				Personality personality = ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴓ.Ⴓ;
+				string directoryName = Path.GetDirectoryName(personality.FileName);
+				foreach (HardwareAction action2 in chatmanAction.Actions)
+				{
+					if (action2 is SoundHardwareAction)
+					{
+						SoundHardwareAction soundHardwareAction = action2 as SoundHardwareAction;
+						string fileName = soundHardwareAction.FileName;
+						string uniqueFileName = FileUtils.GetUniqueFileName(directoryName, Path.GetFileNameWithoutExtension(fileName), Path.GetExtension(fileName));
+						File.Copy(Path.Combine(action.Location, fileName), uniqueFileName, overwrite: true);
+						soundHardwareAction.FileName = Path.GetFileName(uniqueFileName);
+						chatmanAction.Location = Path.GetDirectoryName(uniqueFileName);
+						break;
+					}
+				}
+				personality.Ⴗ(chatmanAction, Ⴓ: false, Ⴈ: false, null);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238742));
+			}
+		}
+
+		public void ShareChitChat(IChatmanAction action)
+		{
+			try
+			{
+				ActionCommands.TryShareChitChat(action.MoodID.ToString());
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238741));
+			}
+		}
+
+		public void SaveObject<TypeToSerialize>(string fileName, TypeToSerialize theObject)
+		{
+			XmlSerializer xmlSerializer = new XmlSerializer(typeof(TypeToSerialize));
+			if (fileName.Contains(Path.DirectorySeparatorChar))
+			{
+				throw new ArgumentException(ႠႠ.Ⴀ.Ⴓ(1402238740));
+			}
+			string directoryName = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
+			string text = Path.Combine(directoryName, ႠႠ.Ⴀ.Ⴓ(1402238739));
+			if (!Directory.Exists(text))
+			{
+				Directory.CreateDirectory(text);
+			}
+			fileName = Path.Combine(text, fileName);
+			string text2 = fileName + ႠႠ.Ⴀ.Ⴓ(1402238738);
+			try
+			{
+				using (FileStream stream = new FileStream(text2, FileMode.Create, FileAccess.ReadWrite))
+				{
+					xmlSerializer.Serialize(stream, theObject);
+				}
+				File.Copy(text2, fileName, overwrite: true);
+				DeleteFileSafe(text2);
+			}
+			catch
+			{
+				DeleteFileSafe(text2);
+				throw;
+			}
+		}
+
+		private void DeleteFileSafe(string fileName)
+		{
+			try
+			{
+				File.Delete(fileName);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+		}
+
+		public TypeToSerialize LoadObject<TypeToSerialize>(string fileName, bool failOnError)
+		{
+			if (fileName.Contains(Path.DirectorySeparatorChar))
+			{
+				throw new ArgumentException(ႠႠ.Ⴀ.Ⴓ(1402238740));
+			}
+			string directoryName = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
+			string text = Path.Combine(directoryName, ႠႠ.Ⴀ.Ⴓ(1402238739));
+			if (!Directory.Exists(text))
+			{
+				Directory.CreateDirectory(text);
+			}
+			fileName = Path.Combine(text, fileName);
+			if (!File.Exists(fileName))
+			{
+				throw new FileNotFoundException(ႠႠ.Ⴀ.Ⴓ(1402238737), fileName);
+			}
+			XmlSerializer xmlSerializer = new XmlSerializer(typeof(TypeToSerialize));
+			using (FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+			{
+				return (TypeToSerialize)xmlSerializer.Deserialize(stream);
+			}
+		}
+
+		public void ShowMessageBox(string textMessage, GuiMessageBoxType guiMessageBoxType)
+		{
+			try
+			{
+				NavigationService.ShowMessageBox(textMessage, guiMessageBoxType);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238736));
+			}
+		}
+
+		public void ShowMessageBox(string caption, string textMessage, GuiMessageBoxButtons guiMessageBoxButtons, MessageBoxCloseHandler buttonClickHandler)
+		{
+			try
+			{
+				NavigationService.ShowMessageBox(caption, textMessage, guiMessageBoxButtons, buttonClickHandler);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238736));
+			}
+		}
+
+		public void ShowMessageBox(string caption, string textMessage, GuiMessageBoxButtons guiMessageBoxButtons, MessageBoxCloseHandler buttonClickHandler, object buttonClickHandlerParameter)
+		{
+			try
+			{
+				NavigationService.ShowMessageBox(caption, textMessage, guiMessageBoxButtons, buttonClickHandler, buttonClickHandlerParameter);
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				throw new Exception(ႠႠ.Ⴀ.Ⴓ(1402238736));
+			}
+		}
+
+		private void AudioServicesManager_VolumeChanged(int newVolume)
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				case 1:
+					return;
+				default:
+					num = ((this.VolumeChanged == null) ? 1 : 0);
+					break;
+				case 0:
+					this.VolumeChanged(newVolume);
+					num = 1;
+					break;
+				}
+			}
+		}
+
+		private void AudioServicesManager_HearingStarted()
+		{
+			int num = 2;
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				default:
+					num = ((this.HearingStarted != null) ? 1 : 0);
+					break;
+				case 1:
+					this.HearingStarted();
+					num = 0;
+					break;
+				}
+			}
+		}
+
+		private void AudioServicesManager_HearingStopped()
+		{
+			//Discarded unreachable code: IL_001e, IL_003d
+			if (this.HearingStopped != null)
+			{
+				if (804 <= 804 - 416)
+				{
+				}
+				do
+				{
+					this.HearingStopped();
+				}
+				while (500 < 500 - 270);
+			}
+		}
+
+		private void AudioServicesManager_AudioPlaybackStopped()
+		{
+			//Discarded unreachable code: IL_0002, IL_001d, IL_0038
+			while (this.AudioPlaybackStopped != null)
+			{
+				if ((18 + 18 * 18) % 2 == 0)
+				{
+					this.AudioPlaybackStopped();
+				}
+				if (468 >= 468 - 103)
+				{
+					break;
+				}
+			}
+		}
+
+		private void AudioServicesManager_ListeningStarted()
+		{
+			//Discarded unreachable code: IL_0002, IL_0020, IL_003b
+			if (this.ListeningStarted != null)
+			{
+				if (false)
+				{
+				}
+				this.ListeningStarted();
+				while (415 < 415 - 210)
+				{
+				}
+			}
+		}
+
+		private void AudioServicesManager_DirectPlaybackStopped()
+		{
+			int num = 0;
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					return;
+				default:
+					num = ((this.DirectPlaybackStopped != null) ? 1 : 2);
+					break;
+				case 1:
+					this.DirectPlaybackStopped();
+					num = 2;
+					break;
+				}
+			}
+		}
+
+		private static bool <AssureMoods>b__0(Mood mood)
+		{
+			return mood.IsVisible;
+		}
+
+		private static IChatmanMood <AssureMoods>b__1(Mood mood)
+		{
+			return mood;
+		}
+
+		private static IChatmanPersonality <GetAllPersonalities>b__8(Personality personality)
+		{
+			return personality;
+		}
+	}
+}
+namespace Rondyo.Chatman.Applications.Configuration
+{
+	[Serializable]
+	[XmlRoot("ApplicationList")]
+	public class ApplicationList
+	{
+		private List<ChatmanApplicationDetails> applications = new List<ChatmanApplicationDetails>();
+
+		[NonSerialized]
+		private bool applicationsSet;
+
+		[XmlArrayItem("Application", typeof(ChatmanApplicationDetails))]
+		[XmlArray("Applications")]
+		public List<ChatmanApplicationDetails> Applications
+		{
+			get
+			{
+				return applications;
+			}
+			set
+			{
+				//Discarded unreachable code: IL_0002, IL_0033
+				bool flag = !applicationsSet;
+				do
+				{
+					if (flag)
+					{
+						applications = value;
+						applicationsSet = true;
+						return;
+					}
+				}
+				while (606 < 606 - 112);
+				throw new InvalidOperationException();
+			}
+		}
+
+		internal static ApplicationList Ⴜ()
+		{
+			return new ApplicationList();
+		}
+	}
+	[Serializable]
+	public class ChatmanApplicationDetails : IChatmanApplicationDetails
+	{
+		private Guid id;
+
+		private string name;
+
+		private string description;
+
+		private string assemblyPath;
+
+		private string obligatoryChatmanVersion;
+
+		private bool isBackground;
+
+		[NonSerialized]
+		private bool isInternal = false;
+
+		[NonSerialized]
+		private bool showInternal = false;
+
+		private ApplicationLoadStates applicationLoadState = ApplicationLoadStates.None;
+
+		[NonSerialized]
+		private IChatmanApplication applicationInstance;
+
+		[XmlAttribute]
+		public Guid ID
+		{
+			get
+			{
+				return id;
+			}
+			set
+			{
+				id = value;
+			}
+		}
+
+		[XmlAttribute]
+		public string Name
+		{
+			get
+			{
+				return name;
+			}
+			set
+			{
+				name = value;
+			}
+		}
+
+		[XmlAttribute]
+		public string Description
+		{
+			get
+			{
+				return description;
+			}
+			set
+			{
+				description = value;
+			}
+		}
+
+		[XmlAttribute]
+		public string AssemblyPath
+		{
+			get
+			{
+				return assemblyPath;
+			}
+			set
+			{
+				assemblyPath = value;
+			}
+		}
+
+		[XmlAttribute]
+		public string ObligatoryChatmanVersion
+		{
+			get
+			{
+				return obligatoryChatmanVersion;
+			}
+			set
+			{
+				obligatoryChatmanVersion = value;
+			}
+		}
+
+		[XmlAttribute]
+		public bool IsBackground
+		{
+			get
+			{
+				return isBackground;
+			}
+			set
+			{
+				isBackground = value;
+			}
+		}
+
+		[XmlAttribute]
+		public bool IsInternal
+		{
+			get
+			{
+				return isInternal;
+			}
+			set
+			{
+				isInternal = value;
+			}
+		}
+
+		[XmlAttribute]
+		public bool ShowInternal
+		{
+			get
+			{
+				return showInternal;
+			}
+			set
+			{
+				showInternal = value;
+			}
+		}
+
+		[XmlIgnore]
+		public ApplicationLoadStates ApplicationLoadState
+		{
+			get
+			{
+				return applicationLoadState;
+			}
+			set
+			{
+				applicationLoadState = value;
+			}
+		}
+
+		[XmlIgnore]
+		public IChatmanApplication ApplicationInstance
+		{
+			get
+			{
+				return applicationInstance;
+			}
+			set
+			{
+				applicationInstance = value;
+			}
+		}
+	}
+}
+namespace ႠႠ
+{
+	internal sealed class Ⴀ
+	{
+		private static readonly char[] m_Ⴀ;
+
+		private static readonly string[] m_Ⴀ;
+
+		internal static string Ⴓ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x5394775F;
+			string result;
+			if ((result = m_Ⴀ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "\u05c5\u0cf4క\u0de1ड\u05b1պङ\u05ad\u0cd4ఝ\u0df1न\u05aa\u0557ऑףೡఞ\u0dfdह\u0591էभרೡ\u0c5b\u0de0\u093b\u05bdպऊ\u05a3\u0cbb\u0c55";
+				break;
+			case 1:
+				obj = "षף\u0cfcఏ෬ब\u05b4սऄפ\u0cfbజඥऎ\u05b0յऊנ\u0cf4కහऽ\u05a8ոग\u05ee\u0cf4ఏ෬ढ\u05b6\u0557ऑףೡఞ\u0dfdह\u05f8էछ\u05ff\u0ce3ఒ෦न\u05abԺॐ\u05a3";
+				break;
+			case 2:
+				obj = "\u0557ऒר\u0cf4క෬ण\u05bfԴऋף\u0cfcక\u0df6ह\u05b9ոऒרೱ\u0c5b\u0de4ऽ\u05a8ոग\u05ee\u0cf4ఏ෬ढ\u05b6էॐ\u05a3\u0cbb";
+				break;
+			case 3:
+				obj = "\u059bոछ\u05ec\u0cfbఒ෫प\u05f8շऑף\u0cf3ఒ\u0de2स\u05aaյऊפ\u0cfaకණ\u0963\u05f6";
+				break;
+			case 4:
+				obj = "\u0901\u05b7յचפ\u0cfbజඥम\u05b7պघפೲఎ\u0df7ब\u05acսऑף\u0cbb\u0c55ණ";
+				break;
+			case 5:
+				obj = "\u0dccण\u05b1ՠग\u05ec\u0cf9ఒ\u0dffत\u05b6ճफ़\u05ee\u0cfaక\u0de3त\u05bfաऌ\u05ecೡఒ෪ण\u05f6Ժॐ";
+				break;
+			case 6:
+				obj = "\u0c3a\u0df5ऽ\u05b4սझ\u05ecೡఒ෪ण\u0595յऐ\u05ecೲఞ\u0df7ऄ\u05b6սऊפ\u0cf4గ෬ष\u05bdզपץ೧ఞ\u0de4ऩֈզऑ\u05eeವఏ෭\u093f\u05bdյच\u05ad\u0cf0\u0c03෬ह\u05b1պङ\u05a3\u0cbb\u0c55";
+				break;
+			case 7:
+				obj = "\u0cd6చ෫४\u05acԴघפ\u0cfbచ෩त\u05a2ձफ़\u05f8\u0cfbఒ෫\u093e\u05acյऒס\u0cfcక\u0de2७\u05b7ղफ़\u05ee\u0cfdచ\u0df1ठ\u05b9պफ़\u05ec\u0ce5ఋ෩त\u05bbյऊפ\u0cfaకණ";
+				break;
+			case 8:
+				obj = "\u05cb\u0cf4ఒ෩न\u05bcԴऊעವఎ\u0df5ऩ\u05b9ՠछ\u05ad\u0cfaఉඥड\u05b7յच\u05ad\u0cf4ఋ\u0df5\u093e";
+				break;
+			case 9:
+				obj = "\u093f\u05fd\u0ce5గ෬म\u05b9ՠगע\u0cfb\u0c55\u0de1ब\u05ac";
+				break;
+			case 10:
+				obj = "Ցआ\u05ee\u0cf0ఋ\u0df1त\u05b7պफ़פ\u0cfb\u0c5b෩ढ\u05b9հफ़\u05fe\u0cfcక\u0de2ड\u05bdԴट\u05fd\u0ce5\u0c5b෦ढ\u05b6ղगת";
+				break;
+			case 11:
+				obj = "\u0599դऎ\u05fe";
+				break;
+			case 12:
+				obj = "ऄ\u05b6սऊפ\u0cf4గ෬ष\u05b1պङ\u05ad\u0cf4ఋ\u0df5ड\u05b1շट\u05f9\u0cfcఔ෫\u093e";
+				break;
+			case 13:
+				obj = "හऽ\u05a8ոग\u05ee\u0cf4ఏ෬ढ\u05b6էफ़פ\u0cfbఒ\u0df1त\u05b9ոग\u05f7\u0cf0ట";
+				break;
+			case 14:
+				obj = "య\u0de0\u093f\u05b5սऐ\u05ecೡఒ෫प\u05f8յऎ\u05fd\u0cf9ఒ෦ब\u05acսऑף೦";
+				break;
+			case 15:
+				obj = "\u0cc1ఞ\u0df7ठ\u05b1պट\u05f9\u0cfcక\u0de2७";
+				break;
+			case 16:
+				obj = "\u05c8೧ఉ෪\u093f\u05f8ՠछ\u05ff\u0cf8ఒ෫ब\u05acսऐתವఙ\u0de4म\u05b3ճऌעೠక\u0de1७\u05b9դऎס\u0cfcఘ\u0de4ह\u05b1ջऐ\u05ad೮\u0c4b\u0df8७\u05b1պफ़\u05cc\u0ce5ఋ෩त\u05bbյऊפ\u0cfaక\u0dc8ब\u05b6յङר೧\u0c55";
+				break;
+			case 17:
+				obj = "\u093f\u05fd\u0ce5గ෬म\u05b9ՠगע\u0cfbఈඥह\u05bdզओפ\u0cfbచ\u0df1न\u05bc";
+				break;
+			case 18:
+				obj = "Ցऌ\u05ff\u0cfaఉඥ\u093f\u05bdէऋנ\u0cfcక\u0de2७\u05baյझצೲఉ෪स\u05b6հफ़\u05ec\u0ce5ఋ෩त\u05bbյऊפ\u0cfaకඥशרթ";
+				break;
+			case 19:
+				obj = "\u059dզऌע೧\u0c5b\u0df5ब\u05adէगףೲ\u0c5b෧ब\u05bbտङ\u05ff\u0cfaఎ෫ऩ\u05f8յऎ\u05fd\u0cf9ఒ෦ब\u05acսऑףವ\u0c00ඵर";
+				break;
+			case 20:
+				obj = "\u0903\u05bdգ";
+				break;
+			case 21:
+				obj = "හऽ\u05a8Րऑ\u05fa\u0cfbగ෪ब\u05bc";
+				break;
+			case 22:
+				obj = "\u0c3a\u0df5ऽ\u05b4սझ\u05ecೡఒ෪ण\u05f8կ\u094eװವఒ\u0df6७\u05adպगף೦ఏ\u0de4ड\u05b4ձच\u05a3ವస\u0de4ण\u05ffՠफ़\u05f8\u0cfbఒ෫\u093e\u05acյऒסವఒ\u0df1७\u05b7պझרವఖ෪\u093f\u05bdԺ";
+				break;
+			case 23:
+				obj = "\u0cd6చ෫४\u05acԴऋף\u0cfcక\u0df6ह\u05b9ոऒ\u05ad\u0cf4ఋ\u0df5ड\u05b1շट\u05f9\u0cfcఔ෫७";
+				break;
+			case 24:
+				obj = "ט\u0cfbఈ\u0df0ऽ\u05a8ջऌ\u05f9\u0cf0టඥब\u05a8դऒפ\u0cf6చ\u0df1त\u05b7պफ़\u05fb\u0cf0ఉ\u0df6त\u05b7պय़";
+				break;
+			case 25:
+				obj = "ॐש\u0cf9గ";
+				break;
+			case 26:
+				obj = "Օऎ\u05fd\u0cf9ఒ෦ब\u05acսऑףವ\u0c5c\u0dfeॽ\u05a5Գफ़ף\u0cfaఏඥड\u05b7յचרೱ\u0c55";
+				break;
+			case 27:
+				obj = "\u0599էऍר\u0cf8ఙ෩ऴֈյऊץ";
+				break;
+			case 28:
+				obj = "ऋ\u05b9սऒרೱ\u0c5b\u0df1ढ\u05f8սऐפೡ\u0c5b\u0de4ऽ\u05a8ոग\u05ee\u0cf4ఏ෬ढ\u05b6Դगף೦ఏ\u0de4ण\u05bbձऍ";
+				break;
+			case 29:
+				obj = "\u0dfeॽ\u05a5Դट\u05fd\u0ce5గ෬म\u05b9ՠगע\u0cfbఈඥह\u05b7Դगף\u0cfcఏ෬ब\u05b4սऄר\u0cbb";
+				break;
+			case 30:
+				obj = "ల෫त\u05acսटס\u0cfc\u0c01෬ण\u05bfԴअ\u05bd೨";
+				break;
+			case 31:
+				obj = "\u0cd4ఋ\u0df5ड\u05b1շट\u05f9\u0cfcఔ෫४\u05abԴऎ\u05ff\u0cf0ఘ෪ण־սङ\u05f8೧చ\u0df1त\u05b7պफ़פ೦\u0c5b\u0de1ढ\u05b6ձफ़\u05a5೮\u0c4b\u0df8त\u05b6ՠछ\u05ff\u0cfbచ෩७\u05b9դऎ\u05a4\u0cbb";
+				break;
+			case 32:
+				obj = "ף\u0cfaఏඥ";
+				break;
+			case 33:
+				obj = "";
+				break;
+			case 34:
+				obj = "Օऎ\u05fd\u0cf9ఒ෦ब\u05acսऑףವఒ\u0df6७\u05b1պग\u05f9\u0cfcచ෩त\u05a2ձच\u05a3";
+				break;
+			case 35:
+				obj = "\u059dզऌע೧\u0c5b෬ण\u05b1ՠग\u05ec\u0cf9ఒ\u0dffत\u05b6ճफ़\u05ec\u0ce5ఋ෩त\u05bbյऊפ\u0cfaకඥशרթ";
+				break;
+			case 36:
+				obj = "\u0901\u05b7շकרೱ\u0c3a\u0df5ऽ\u05b4սझ\u05ecೡఒ෪ण\u0591պऍ\u05f9\u0cf4గ෩न\u05bc";
+				break;
+			case 37:
+				obj = "සब\u05b1ոछשವఏ෪७\u05abձऊ\u05ad\u0cd6ఓ\u0de4ह\u05b5յऐ\u05ad\u0cfbచ෨न";
+				break;
+			case 38:
+				obj = "ఽ\u0de4त\u05b4ձच\u05adೡఔඥप\u05bdՠफ़נ\u0cfaఔ\u0de1\u093e";
+				break;
+			case 39:
+				obj = "\u0cd3చ෬ड\u05bdհफ़\u05f9\u0cfa\u0c5b\u0de2न\u05acԴओע\u0cfaట";
+				break;
+			case 40:
+				obj = "ם\u0cf0ఉ\u0df6ढ\u05b6յऒפೡ\u0c02ණऩ\u05b9ՠ";
+				break;
+			case 41:
+				obj = "स\u05ec\u0cfcగ\u0de0ऩ\u05f8ՠऑ\u05ad\u0cf9ఔ\u0de4ऩ\u05f8դछ\u05ff೦ఔ෫ब\u05b4սऊ״";
+				break;
+			case 42:
+				obj = "Ւटפ\u0cf9ఞ\u0de1७\u05acջफ़ת\u0cf0ఏඥड\u05b7ճङר೧";
+				break;
+			case 43:
+				obj = "\u059eյगס\u0cf0టඥह\u05b7Դङרೡ\u0c5b\u0de4ड\u05b4Դऎר೧ఈ෪ण\u05b9ոग\u05f9\u0cfcఞ\u0df6";
+				break;
+			case 44:
+				obj = "ऋ\u05b9սऒרೱ\u0c5b\u0df1ढ\u05f8շऌר\u0cf4ఏ\u0de0७\u05abձऍ\u05fe\u0cfcఔ෫";
+				break;
+			case 45:
+				obj = "සब\u05b1ոछשವఏ෪७\u05abաजנ\u0cfcఏඥह\u05bdլऊ";
+				break;
+			case 46:
+				obj = "ఽ\u0de4त\u05b4ձच\u05adೡఔඥ\u093e\u05adնओפೡ\u0c5b\u0de4म\u05acսऑף";
+				break;
+			case 47:
+				obj = "\u0cd3చ෬ड\u05bdհफ़\u05f9\u0cfa\u0c5b\u0df6ह\u05b7դफ़\u05ec\u0cf6ఏ෬ढ\u05b6";
+				break;
+			case 48:
+				obj = "\u05cb\u0cf4ఒ෩न\u05bcԴऊעವఈ\u0df0य\u05b5սऊ\u05ad೦ఋ\u0de0म\u05b1յऒ\u05ad\u0cf4ఘ\u0df1त\u05b7պफ़ע\u0cf3\u0c5b\u0df1थ\u05bdԴचר\u0cf3చ\u0df0ड\u05acԴऎר೧ఈ෪ण\u05b9ոग\u05f9೬";
+				break;
+			case 49:
+				obj = "स\u05ec\u0cfcగ\u0de0ऩ\u05f8ՠऑ\u05ad೦ఎ෧ठ\u05b1ՠफ़\u05fe\u0ce5ఞ෦त\u05b9ոफ़\u05ec\u0cf6ఏ෬ढ\u05b6";
+				break;
+			case 50:
+				obj = "Ւटפ\u0cf9ఞ\u0de1७\u05acջफ़\u05feೡఔ\u0df5७\u05abդछ\u05ee\u0cfcచ෩७\u05b9շऊפ\u0cfaక";
+				break;
+			case 51:
+				obj = "\u059eյगס\u0cf0టඥह\u05b7Դऍ\u05f9\u0cfaఋඥब\u05b4ոफ़\u05fd\u0cf0ఉ\u0de3ढ\u05aaչगףೲ\u0c5b\u0de4म\u05acսऑף";
+				break;
+			case 52:
+				obj = "ऋ\u05b9սऒרೱ\u0c5b\u0df1ढ\u05f8էऊ\u05ec೧ఏඥऽ\u05b4յइפ\u0cfbజඥ\u093e\u05b7աऐשವఔ෫७ֈ\u0557";
+				break;
+			case 53:
+				obj = "සब\u05b1ոछשವఏ෪७\u05abՠऑ\u05fdವఋ෩ब\u05a1սऐתವఈ෪स\u05b6հफ़ע\u0cfb\u0c5b\u0dd5ऎ";
+				break;
+			case 54:
+				obj = "ఽ\u0de4त\u05b4ձच\u05adೡఔඥप\u05bdՠफ़\u05ecೠట෬ढ\u05f8էछ\u05ff\u0ce3ఒ෦न\u05ab";
+				break;
+			case 55:
+				obj = "\u0cd3చ෬ड\u05bdհफ़\u05f9\u0cfa\u0c5b\u0df6ह\u05b7դफ़ס\u0cfcఈ\u0df1न\u05b6սऐת";
+				break;
+			case 56:
+				obj = "\u05cb\u0cf4ఒ෩न\u05bcԴऊעವఈ\u0de0ह\u05f8բऑסೠఖ\u0de0";
+				break;
+			case 57:
+				obj = "स\u05ec\u0cfcగ\u0de0ऩ\u05f8ՠऑ\u05ad\u0ce5గ\u0de4ऴ\u05f8էऑ\u05f8\u0cfbటඥढ\u05b6Դऽץ\u0cf4ఏ෨ब\u05b6";
+				break;
+			case 58:
+				obj = "Ւटפ\u0cf9ఞ\u0de1७\u05acջफ़\u05fd\u0cf4ఎ\u0df6न\u05f8էऑ\u05f8\u0cfbటඥढ\u05b6Դऽץ\u0cf4ఏ෨ब\u05b6";
+				break;
+			case 59:
+				obj = "\u059eյगס\u0cf0టඥह\u05b7Դऍ\u05f9\u0cfaఋඥ\u093e\u05b7աऐשವఔ෫७\u059bռट\u05f9\u0cf8చ෫";
+				break;
+			case 60:
+				obj = "ऋ\u05b9սऒרೱ\u0c5b\u0df1ढ\u05f8էऊ\u05ec೧ఏඥड\u05b1էऊר\u0cfbఒ෫प";
+				break;
+			case 61:
+				obj = "සब\u05b1ոछשವఏ෪७\u05b9հच\u05ad\u0cf9ఒ\u0df6ह\u05bdպगףೲ\u0c5b\u0de0फ־ձझ\u05f9";
+				break;
+			case 62:
+				obj = "ఽ\u0de4त\u05b4ձच\u05adೡఔඥ\u093f\u05bdչऑ\u05fb\u0cf0\u0c5b෩त\u05abՠछף\u0cfcక\u0de2७\u05bdղघר\u0cf6ఏ";
+				break;
+			case 63:
+				obj = "\u0cd3చ෬ड\u05bdհफ़\u05f9\u0cfa\u0c5b\u0df6न\u05acԴऒפ೦ఏ\u0de0ण\u05b1պङ\u05ad\u0cf0ఝ\u0de3न\u05bbՠ";
+				break;
+			case 64:
+				obj = "\u05cb\u0cf4ఒ෩न\u05bcԴऊעವఈ\u0df1ब\u05aaՠफ़ש\u0cfcఉ\u0de0म\u05acԴऎס\u0cf4\u0c02෧ब\u05bbտ";
+				break;
+			case 65:
+				obj = "स\u05ec\u0cfcగ\u0de0ऩ\u05f8ՠऑ\u05ad೦ఏ෪ऽ\u05f8հग\u05ff\u0cf0ఘ\u0df1७\u05a8ոट״\u0cf7చ෦द";
+				break;
+			case 66:
+				obj = "Ւटפ\u0cf9ఞ\u0de1७\u05acջफ़\u05fd\u0cf4ఎ\u0df6न\u05f8հग\u05ff\u0cf0ఘ\u0df1७\u05a8ոट״\u0cf7చ෦द";
+				break;
+			case 67:
+				obj = "\u059eյगס\u0cf0టඥह\u05b7Դऌר೦ఎ෨न\u05f8հग\u05ff\u0cf0ఘ\u0df1७\u05a8ոट״\u0cf7చ෦द";
+				break;
+			case 68:
+				obj = "ऋ\u05b9սऒרೱ\u0c5b\u0df1ढ\u05f8ճछ\u05f9ವట\u0de4ह\u05b9Դघ\u05ff\u0cfaఖඥऩ\u05b1զछ\u05eeೡ\u0c5b\u0df5ड\u05b9խज\u05ec\u0cf6ఐ";
+				break;
+			case 69:
+				obj = "සब\u05b1ոछשವఏ෪७\u05b5ջईרವస෭ब\u05acչटף";
+				break;
+			case 70:
+				obj = "ఽ\u0de4त\u05b4ձच\u05adೡఔඥ\u093e\u05b0ջउ\u05ad\u0cf9ఞ\u0de1\u093e";
+				break;
+			case 71:
+				obj = "\u0cd3చ෬ड\u05bdհफ़\u05f9\u0cfa\u0c5b\u0de2न\u05b6ձऌ\u05ecೡఞඥम\u05b0սऊ\u05ad\u0cf6ఓ\u0de4ह";
+				break;
+			case 72:
+				obj = "מ\u0cf4\u0c0d෬ण\u05bfԴझץ\u0cfcఏ෦थ\u05b9ՠॐ\u05a3\u0cbb";
+				break;
+			case 73:
+				obj = "स\u05ec\u0cfcగ\u0de0ऩ\u05f8ՠऑ\u05ad೦చ\u0df3न\u05f8շखפೡ\u0c5b෦थ\u05b9ՠ";
+				break;
+			case 74:
+				obj = "Ւटפ\u0cf9ఞ\u0de1७\u05acջफ़\u05fe\u0cfdచ\u0df7न\u05f8շखפೡ\u0c5b෦थ\u05b9ՠ";
+				break;
+			case 75:
+				obj = "\u0599զङ\u05f8\u0cf8ఞ෫ह\u05f8ԥफ़\u05a0ವఝ෬ड\u05bd՚टנ\u0cf0\u0c41ඥम\u05b7պऊ\u05ec\u0cfcక\u0df6७\u05b1ոऒרೲచ෩७\u05bbռट\u05ff\u0cf4ఘ\u0df1न\u05aa";
+				break;
+			case 76:
+				obj = "उ\u05b9ՠट";
+				break;
+			case 77:
+				obj = "ණण\u05bdգ";
+				break;
+			case 78:
+				obj = "ఽ෬ड\u05bdԴऐעೡ\u0c5b\u0de3ढ\u05adպच";
+				break;
+			case 79:
+				obj = "\u0cd3చ෬ड\u05bdհफ़\u05f9\u0cfa\u0c5b\u0df6थ\u05b7գफ़נ\u0cf0ఈ\u0df6ब\u05bfձफ़ׯ\u0cfa\u0c03";
+				break;
+			case 80:
+				obj = "\u05fe\u0cf7";
+				break;
+			case 81:
+				obj = "लעೲఈ";
+				break;
+			case 82:
+				obj = "կ\u094eװವ\u0c00පॷ\u05bcհ\u0953׀\u0cd8\u0c56\u0dfcऴ\u05f8՜श\u05a0\u0cf8ఖඨ\u093e\u05abթॐס\u0cfaజ";
+				break;
+			case 83:
+				obj = "\u0591պग\u05f9\u0cfcచ෩त\u05a2սऐתವగ෪प\u05bfձऌ\u05ad\u0cf3ఔ\u0df7७\u059bռट\u05f9\u0cf8చ෫७\u05b9դऎס\u0cfcఘ\u0de4ह\u05b1ջऐ\u05adಲ";
+				break;
+			case 84:
+				obj = "४\u05f6Ժॐ";
+				break;
+			case 85:
+				obj = "ද\u0963\u05b4ջङ";
+				break;
+			case 86:
+				obj = "\u0c3e\u0df7\u093f\u05b7զफ़ש\u0cf0గ\u0de0ह\u05b1պङ\u05ad\u0cfaగ\u0de1७\u05b4ջङ\u05ad\u0cf3ఒ෩न\u05abԵफ़\u05cb\u0cfcగ\u0de0७\u05b6ջऊ\u05adಲ\u0c00\u0df8४\u05f8հछס\u0cf0ఏ\u0de0ऩ\u05f6Դबר\u0cf4ఈ෪णעԴअ\u05bf೨";
+				break;
+			case 87:
+				obj = "\u0cd6చ෫४\u05acԴऍ\u05ec\u0ce3ఞඥऽ\u05aaջईפೱఞ\u0de1७\u05abՠऌפ\u0cfbజඥह\u05b7Դऒעೲ\u0c41ඥ४";
+				break;
+			case 88:
+				obj = "ז\u0cdbమ\u0dc9\u0901օ";
+				break;
+			case 89:
+				obj = "ख़\u05a3ವ\u0c3e\u0df7\u093f\u05b7զ\u0944\u05adಲ";
+				break;
+			case 90:
+				obj = "Գॐ";
+				break;
+			case 91:
+				obj = "\u05a3Ԥ\u0903\u05ad೮\u0c4a\u0df8";
+				break;
+			case 92:
+				obj = "ख\u0595\u0559\u0951שೱ\u0c54\u0dfcऴ\u05a1խफ़\u05c5\u0cdd\u0c41෨ठעէऍא";
+				break;
+			case 93:
+				obj = "ඌ७";
+				break;
+			case 94:
+				obj = "\u0c3e\u0dfdम\u05bdդऊפ\u0cfaక\u0dbf७\u05a3Ԥ\u0903\u05ad೮\u0c4a\u0df8";
+				break;
+			case 95:
+				obj = "ಟల෫ण\u05bdզफ़ר೭ఘ\u0de0ऽ\u05acսऑףಯ\u0c5b\u0dfeॽ\u05a5Դअ\u05bc೨";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴀ = (char[])(object)ႠႠ.Ⴀ.m_Ⴀ;
+			int num2 = ⴀ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴀ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			m_Ⴀ[num] = result;
+			return result;
+		}
+
+		static Ⴀ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႠႠ.Ⴀ.m_Ⴀ = (string[])(object)array;
+			m_Ⴀ = new string[96];
+		}
+	}
+}
+namespace ႰႰ
+{
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
+	[DebuggerNonUserCode]
+	[CompilerGenerated]
+	internal sealed class Ⴈ
+	{
+		private static ResourceManager m_Ⴐ;
+
+		private static CultureInfo m_Ⴐ;
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static ResourceManager Ⴐ
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0002, IL_003c, IL_005f
+				while (object.ReferenceEquals(Ⴈ.Ⴐ, null))
+				{
+					if ((253 + 253 * 253) % 2 == 0)
+					{
+						ResourceManager resourceManager = (ResourceManager)(object)(Ⴈ.Ⴐ = (CultureInfo)(object)new ResourceManager("ႰႰ.Ⴈ", typeof(Ⴈ).Assembly));
+					}
+					if (992 >= 992 - 978)
+					{
+						break;
+					}
+				}
+				return (ResourceManager)(object)Ⴈ.Ⴐ;
+			}
+		}
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static CultureInfo Ⴐ
+		{
+			get
+			{
+				return Ⴈ.Ⴐ;
+			}
+			set
+			{
+				Ⴈ.Ⴐ = value;
+			}
+		}
+
+		internal Ⴈ()
+		{
+		}
+
+		internal static string Ⴜ()
+		{
+			return Ⴈ.Ⴐ.GetString(ႠႠ.Ⴀ.Ⴓ(1402238843), Ⴈ.Ⴐ);
+		}
+	}
+	public class Ⴐ : IDisposable, ႷႭႣ.Ⴓ, ႷႭႨ.Ⴜ
+	{
+		private IChatmanApplicationContext m_Ⴐ;
+
+		private ႷႭႤ.Ⴈ m_Ⴐ;
+
+		private ApplicationList m_Ⴐ;
+
+		private List<Assembly> m_Ⴐ;
+
+		private List<IChatmanApplication> m_Ⴐ = new List<IChatmanApplication>();
+
+		private EventHandler m_Ⴐ;
+
+		private ApplicationList m_Ⴈ;
+
+		private bool m_Ⴐ = false;
+
+		private bool m_Ⴈ = false;
+
+		private static Func<IChatmanApplication, bool> m_Ⴀ;
+
+		private static Func<ChatmanApplicationDetails, bool> m_Ⴀ;
+
+		private static Func<ChatmanApplicationDetails, IChatmanApplicationDetails> m_Ⴗ;
+
+		private static Func<ChatmanApplicationDetails, bool> m_Ⴄ;
+
+		public bool Ⴐ => this.m_Ⴐ;
+
+		public event EventHandler Ⴅ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				this.m_Ⴐ = (EventHandler)Delegate.Combine(this.m_Ⴐ, value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				this.m_Ⴐ = (EventHandler)Delegate.Remove(this.m_Ⴐ, value);
+			}
+		}
+
+		public Ⴐ(ႷႭႥ.Ⴗ Ⴍ)
+		{
+			this.m_Ⴐ = new ChatmanApplicationContext(this, new ChatmanApplicationServices());
+			this.m_Ⴐ = new Ⴓ(this, Ⴍ);
+			ႭႨႰ.Ⴐ.Ⴄ += Ⴐ;
+		}
+
+		private void Ⴐ(ႭႨႰ.Ⴐ Ⴍ)
+		{
+			ႭႨႰ.Ⴐ.Ⴄ -= Ⴐ;
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238815));
+			ႥႥႨႥ.Ⴓ.ႨႷႼ(Ⴓ);
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238814));
+			(ChatmanApplicationContext.Current.Services as ChatmanApplicationServices).Initialize();
+		}
+
+		private void Ⴓ()
+		{
+			try
+			{
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238813));
+				Ⴃ();
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238812));
+				Ⴜ();
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238811));
+				ႨႨ();
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238810));
+				Ⴅ();
+				if (this.m_Ⴐ != null && this.m_Ⴐ.Count > 0)
+				{
+					ႨႷ();
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238809));
+		}
+
+		private void Ⴃ()
+		{
+			string[] array = Ⴀ(Ⴍ: false);
+			foreach (string path in array)
+			{
+				try
+				{
+					Directory.Delete(path, recursive: true);
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(ႠႠ.Ⴀ.Ⴓ(1402238808), ⴓ);
+				}
+			}
+		}
+
+		~Ⴐ()
+		{
+			Ⴃ(Ⴍ: false);
+		}
+
+		private void Ⴜ()
+		{
+			this.m_Ⴈ = new ApplicationList
+			{
+				Applications = new List<ChatmanApplicationDetails>()
+			};
+			this.m_Ⴈ.Applications.Add(ႨႰ<ႤႰ.Ⴐ>());
+			this.m_Ⴈ.Applications.Add(ႨႰ<ႭႰ.Ⴅ>());
+			this.m_Ⴈ.Applications.Add(ႨႰ<ႣႨ.Ⴗ>());
+		}
+
+		private ChatmanApplicationDetails ႨႰ<Ⴍ>() where Ⴍ : BaseChatmanApplication
+		{
+			ChatmanApplicationDetails chatmanApplicationDetails = new ChatmanApplicationDetails();
+			chatmanApplicationDetails.AssemblyPath = string.Empty;
+			chatmanApplicationDetails.IsInternal = true;
+			chatmanApplicationDetails.ObligatoryChatmanVersion = ႥႥႨႰ.Ⴄ.ႨႳႨ();
+			ChatmanApplicationDetails chatmanApplicationDetails2 = chatmanApplicationDetails;
+			BaseChatmanApplication baseChatmanApplication = (BaseChatmanApplication)(chatmanApplicationDetails2.ApplicationInstance = (Ⴍ)Activator.CreateInstance(typeof(Ⴍ)));
+			baseChatmanApplication.PreConfigureChatmanApplication(chatmanApplicationDetails2, this.m_Ⴐ as IChatmanApplicationContext);
+			return chatmanApplicationDetails2;
+		}
+
+		private void ႨႨ()
+		{
+			this.m_Ⴐ = ApplicationList.Ⴜ();
+			this.m_Ⴐ.Applications.AddRange(this.m_Ⴈ.Applications);
+			try
+			{
+				ႨႥ();
+				if (Directory.Exists(ႨႳ()))
+				{
+					string[] directories = Directory.GetDirectories(ႨႳ());
+					foreach (string ⴍ in directories)
+					{
+						Ⴅ(ⴍ, Ⴓ: true);
+					}
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႠႠ.Ⴀ.Ⴓ(1402238807), ⴓ);
+			}
+		}
+
+		private List<ChatmanApplicationDetails> Ⴅ(string Ⴍ, bool Ⴓ)
+		{
+			string text = Path.Combine(Ⴍ, ႠႠ.Ⴀ.Ⴓ(1402238806));
+			if (File.Exists(text))
+			{
+				try
+				{
+					ApplicationList applicationList = Ⴈ<ApplicationList>.ႨႷႭ(text);
+					foreach (ChatmanApplicationDetails application in applicationList.Applications)
+					{
+						application.AssemblyPath = Path.Combine(Ⴍ, application.AssemblyPath);
+					}
+					this.m_Ⴐ.Applications.AddRange(applicationList.Applications);
+					return applicationList.Applications;
+				}
+				catch (Exception ex)
+				{
+					ႥႥႨ.Ⴗ.ႳႭ(ႠႠ.Ⴀ.Ⴓ(1402238805), ex);
+				}
+			}
+			return null;
+		}
+
+		private static string ႨႳ()
+		{
+			return Path.Combine(ႣႳ.Ⴈ, ႠႠ.Ⴀ.Ⴓ(1402238804));
+		}
+
+		public void Ⴅ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႠႠ.Ⴀ.Ⴓ(1402238803));
+			try
+			{
+				ChatmanApplicationDetails[] ⴍ = this.m_Ⴐ.Applications.ToArray();
+				Ⴐ(ⴍ, out this.m_Ⴐ, out this.m_Ⴐ);
+			}
+			catch (Exception ⴍ2)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ2);
+			}
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႠႠ.Ⴀ.Ⴓ(1402238802));
+		}
+
+		public void Ⴈ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႠႠ.Ⴀ.Ⴓ(1402238801));
+			try
+			{
+				IEnumerable<IChatmanApplication> enumerable = Enumerable.Reverse(this.m_Ⴐ);
+				foreach (IChatmanApplication item in enumerable)
+				{
+					try
+					{
+						ႥႥႨ.Ⴗ.ႨႷႤ(ႠႠ.Ⴀ.Ⴓ(1402238800) + item.GetType().Name);
+						item.Terminate();
+					}
+					catch (Exception ⴓ)
+					{
+						ႥႥႨ.Ⴗ.ႳႤ(string.Format(ႠႠ.Ⴀ.Ⴓ(1402238799), item.GetType().FullName), ⴓ);
+					}
+				}
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴓ);
+			}
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႠႠ.Ⴀ.Ⴓ(1402238798));
+		}
+
+		public void Ⴀ()
+		{
+			foreach (IChatmanApplication item in this.m_Ⴐ)
+			{
+				try
+				{
+					if (item is IChatmanBackgroundApplication)
+					{
+						(item as IChatmanBackgroundApplication).Resume();
+					}
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(string.Format(ႠႠ.Ⴀ.Ⴓ(1402238797), item.GetType().FullName), ⴓ);
+				}
+			}
+		}
+
+		public void Ⴄ()
+		{
+			foreach (IChatmanApplication item in this.m_Ⴐ)
+			{
+				try
+				{
+					if (item is IChatmanBackgroundApplication)
+					{
+						(item as IChatmanBackgroundApplication).Pause();
+					}
+				}
+				catch (Exception ⴓ)
+				{
+					ႥႥႨ.Ⴗ.ႳႤ(string.Format(ႠႠ.Ⴀ.Ⴓ(1402238796), item.GetType().FullName), ⴓ);
+				}
+			}
+		}
+
+		public void Ⴅ(string Ⴍ, string Ⴓ, MemoryStream Ⴈ)
+		{
+			string text = ႨႳ();
+			FileUtils.AssureFolder(text);
+			bool flag = false;
+			string text2 = string.Empty;
+			string b = Ⴍ.ToLower();
+			string[] directories = Directory.GetDirectories(text);
+			foreach (string path in directories)
+			{
+				string fileName = Path.GetFileName(path);
+				if (fileName.ToLower() == b)
+				{
+					flag = true;
+					string path2 = FileUtils.RemoveSlash(text) + ႠႠ.Ⴀ.Ⴓ(1402238795);
+					text2 = Path.Combine(path2, fileName);
+					try
+					{
+						FileUtils.DeleteDirectory(text2);
+					}
+					catch (Exception ⴍ)
+					{
+						ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+					}
+				}
+			}
+			if (!flag)
+			{
+				text2 = Path.Combine(text, Ⴍ);
+			}
+			Directory.CreateDirectory(text2);
+			ႥႥႨႨ.Ⴅ.ႤႤ(Ⴈ, text2);
+			if (!flag)
+			{
+				this.Ⴍ(text2);
+				ႨႷ();
+			}
+			else
+			{
+				string ⴍ2 = string.Format(ႰႰ.Ⴈ.Ⴜ(), Ⴓ);
+				ႭႨႰ.Ⴐ.Ⴐ.Ⴍ.ShowMessageBoxInMainWindow(ⴍ2, ႷႭႨ.Ⴗ.Ⴓ);
+			}
+			ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴗ.ႥႥ(ႠႠ.Ⴀ.Ⴓ(1402238794));
+		}
+
+		public IEnumerable<IChatmanApplication> Ⴐ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0024, IL_0035, IL_004a, IL_0064, IL_0071
+			IEnumerable<IChatmanApplication> result = default(IEnumerable<IChatmanApplication>);
+			if (this.m_Ⴐ == null)
+			{
+				if (799 >= 799 - 634)
+				{
+					result = new IChatmanApplication[0];
+				}
+			}
+			else
+			{
+				List<IChatmanApplication> ⴐ = this.m_Ⴐ;
+				if (ႰႰ.Ⴐ.m_Ⴀ == null)
+				{
+					ႰႰ.Ⴐ.m_Ⴀ = delegate(IChatmanApplication application)
+					{
+						int num = 1;
+						int result2;
+						while (true)
+						{
+							switch (num)
+							{
+							default:
+								num = ((!application.Details.IsInternal | application.Details.ShowInternal) ? 3 : 0);
+								continue;
+							case 3:
+								num = ((application is IChatmanGuiApplication) ? 2 : 0);
+								continue;
+							case 2:
+								result2 = ((application.Details.ApplicationLoadState != ApplicationLoadStates.Uninstalled) ? 1 : 0);
+								break;
+							case 0:
+								result2 = 0;
+								break;
+							}
+							break;
+						}
+						return (byte)result2 != 0;
+					};
+				}
+				result = ⴐ.Where(ႰႰ.Ⴐ.m_Ⴀ);
+				if (179 < 179 - 49)
+				{
+				}
+			}
+			return result;
+		}
+
+		public IEnumerable<IChatmanApplicationDetails> Ⴗ()
+		{
+			int num = 2;
+			IEnumerable<IChatmanApplicationDetails> result = default(IEnumerable<IChatmanApplicationDetails>);
+			while (true)
+			{
+				int num2;
+				switch (num)
+				{
+				default:
+					num = ((this.m_Ⴐ == null) ? 5 : 0);
+					break;
+				case 0:
+					num2 = ((this.m_Ⴐ.Applications != null) ? 1 : 0);
+					goto IL_0043;
+				case 5:
+					num2 = 0;
+					goto IL_0043;
+				case 4:
+					result = new IChatmanApplicationDetails[0];
+					num = 1;
+					break;
+				case 3:
+				{
+					List<ChatmanApplicationDetails> applications = this.m_Ⴐ.Applications;
+					if (ႰႰ.Ⴐ.m_Ⴀ == null)
+					{
+						ႰႰ.Ⴐ.m_Ⴀ = delegate(ChatmanApplicationDetails appDetails)
+						{
+							int num3 = 0;
+							int result2;
+							while (true)
+							{
+								switch (num3)
+								{
+								default:
+									num3 = ((appDetails == null) ? 3 : 2);
+									continue;
+								case 2:
+									num3 = ((!appDetails.IsInternal) ? 1 : 3);
+									continue;
+								case 1:
+									num3 = ((appDetails.ApplicationLoadState == ApplicationLoadStates.Loaded) ? 4 : 5);
+									continue;
+								case 5:
+									result2 = ((appDetails.ApplicationLoadState != ApplicationLoadStates.Uninstalled) ? 1 : 0);
+									break;
+								case 4:
+									result2 = 0;
+									break;
+								case 3:
+									result2 = 0;
+									break;
+								}
+								break;
+							}
+							return (byte)result2 != 0;
+						};
+					}
+					IEnumerable<ChatmanApplicationDetails> source = applications.Where(ႰႰ.Ⴐ.m_Ⴀ);
+					if (ႰႰ.Ⴐ.m_Ⴗ == null)
+					{
+						ႰႰ.Ⴐ.m_Ⴗ = ((ChatmanApplicationDetails appDetails) => appDetails);
+					}
+					result = source.Select(ႰႰ.Ⴐ.m_Ⴗ);
+					num = 1;
+					break;
+				}
+				case 1:
+					{
+						return result;
+					}
+					IL_0043:
+					num = ((num2 != 0) ? 3 : 4);
+					break;
+				}
+			}
+		}
+
+		private void ႨႷ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0026, IL_0045
+			bool flag = this.m_Ⴐ == null;
+			do
+			{
+				if (flag)
+				{
+					return;
+				}
+			}
+			while (725 < 725 - 484);
+			this.m_Ⴐ(this, new EventArgs());
+			if (657 < 657 - 464)
+			{
+			}
+		}
+
+		public string[] Ⴀ(bool Ⴍ)
+		{
+			try
+			{
+				List<string> list = new List<string>();
+				string[] directories = Directory.GetDirectories(ႨႳ());
+				string[] array = directories;
+				foreach (string text in array)
+				{
+					if (File.Exists(Path.Combine(text, ႠႠ.Ⴀ.Ⴓ(1402238806))) == Ⴍ)
+					{
+						list.Add(text);
+					}
+				}
+				return list.ToArray();
+			}
+			catch
+			{
+				return new string[0];
+			}
+		}
+
+		public void Ⴄ(IChatmanApplicationDetails Ⴍ)
+		{
+			if (Ⴍ != null && !Ⴍ.IsInternal)
+			{
+				foreach (ChatmanApplicationDetails application in this.m_Ⴐ.Applications)
+				{
+					if (application != null && application.ID.Equals(Ⴍ.ID))
+					{
+						string path = Path.Combine(Path.GetDirectoryName(application.AssemblyPath) ?? string.Empty, ႠႠ.Ⴀ.Ⴓ(1402238806));
+						if (!File.Exists(path))
+						{
+							ႥႥႨ.Ⴗ.ႳႭ(ႠႠ.Ⴀ.Ⴓ(1402238793), application.Name);
+							break;
+						}
+						try
+						{
+							File.Delete(path);
+						}
+						catch (Exception innerException)
+						{
+							throw new ApplicationException(ႠႠ.Ⴀ.Ⴓ(1402238792) + application.Name, innerException);
+						}
+						application.ApplicationLoadState = ApplicationLoadStates.Uninstalled;
+						this.m_Ⴐ(this, null);
+					}
+				}
+			}
+		}
+
+		private void Ⴐ(ChatmanApplicationDetails[] Ⴍ, out List<Assembly> Ⴓ, out List<IChatmanApplication> Ⴈ)
+		{
+			List<ChatmanApplicationDetails> list = new List<ChatmanApplicationDetails>();
+			ChatmanApplicationDetails[] array = Ⴍ;
+			foreach (ChatmanApplicationDetails chatmanApplicationDetails in array)
+			{
+				try
+				{
+					chatmanApplicationDetails.ApplicationLoadState = Ⴗ(chatmanApplicationDetails.ObligatoryChatmanVersion);
+					if (chatmanApplicationDetails.ApplicationLoadState != 0)
+					{
+						throw new ApplicationException(ႠႠ.Ⴀ.Ⴓ(1402238791));
+					}
+					if (chatmanApplicationDetails.AssemblyPath != string.Empty)
+					{
+						string text = chatmanApplicationDetails.AssemblyPath + ႠႠ.Ⴀ.Ⴓ(1402238790);
+						if (File.Exists(text))
+						{
+							File.Delete(text);
+						}
+						ႥႥႨႨ.Ⴈ.ႠႠ(chatmanApplicationDetails.AssemblyPath, ႭႨႰ.Ⴐ.Ⴐ.Ⴃ.Ⴈ.Ⴐ.PersistentCredentials);
+						chatmanApplicationDetails.AssemblyPath = text;
+					}
+					list.Add(chatmanApplicationDetails);
+					chatmanApplicationDetails.ApplicationLoadState = ApplicationLoadStates.Loaded;
+				}
+				catch (Exception ⴍ)
+				{
+					if (chatmanApplicationDetails.ApplicationLoadState == ApplicationLoadStates.None)
+					{
+						this.m_Ⴐ = true;
+						chatmanApplicationDetails.ApplicationLoadState = ApplicationLoadStates.LoadFailed;
+					}
+					ႥႥႨ.Ⴗ.ႳႭ(ႠႠ.Ⴀ.Ⴓ(1402238789), chatmanApplicationDetails.Name);
+					ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+				}
+			}
+			Ⴍ = list.ToArray();
+			Ⴓ = ႥႥႨႨ.Ⴈ.Ⴅ(Ⴍ, ႠႠ.Ⴀ.Ⴓ(1402238788), null, out List<ChatmanApplicationDetails> Ⴃ, out List<IChatmanApplication> list2);
+			Ⴈ = new List<IChatmanApplication>();
+			int num = 0;
+			array = Ⴍ;
+			foreach (ChatmanApplicationDetails chatmanApplicationDetails in array)
+			{
+				if (chatmanApplicationDetails.ApplicationInstance != null)
+				{
+					Ⴃ.Insert(num, chatmanApplicationDetails);
+					list2.Insert(num, chatmanApplicationDetails.ApplicationInstance);
+					num++;
+				}
+			}
+			int j = 0;
+			try
+			{
+				for (int count = Ⴃ.Count; j < count; j++)
+				{
+					if (Ⴃ[j].ApplicationInstance == null)
+					{
+						Ⴃ[j].ApplicationInstance = list2[j];
+					}
+					if (list2[j] is BaseChatmanApplication)
+					{
+						Ⴈ.Add(list2[j]);
+					}
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႠႠ.Ⴀ.Ⴓ(1402238787), ⴍ);
+			}
+			List<ChatmanApplicationDetails> source = Ⴃ;
+			if (ႰႰ.Ⴐ.m_Ⴄ == null)
+			{
+				ႰႰ.Ⴐ.m_Ⴄ = ((ChatmanApplicationDetails appDetails) => appDetails.ApplicationInstance == null);
+			}
+			IEnumerable<ChatmanApplicationDetails> enumerable = source.Where(ႰႰ.Ⴐ.m_Ⴄ);
+			foreach (ChatmanApplicationDetails item in enumerable)
+			{
+				item.ApplicationLoadState = ApplicationLoadStates.LoadFailed;
+			}
+			if (enumerable.Count() > 0)
+			{
+				this.m_Ⴐ = true;
+			}
+			j = 0;
+			ႥႥႨ.Ⴗ.ႳႥ(ႠႠ.Ⴀ.Ⴓ(1402238786), Ⴈ.Count);
+			foreach (IChatmanApplication item2 in Ⴈ)
+			{
+				try
+				{
+					ႥႥႨ.Ⴗ.ႳႭ(ႠႠ.Ⴀ.Ⴓ(1402238785), item2.GetType().Name);
+					ChatmanApplicationDetails chatmanApplicationDetails2 = Ⴃ[j];
+					if (!chatmanApplicationDetails2.IsInternal)
+					{
+						((BaseChatmanApplication)item2).PreConfigureChatmanApplication(chatmanApplicationDetails2, this.m_Ⴐ);
+					}
+					else
+					{
+						((BaseChatmanApplication)item2).PreConfigureChatmanApplication(chatmanApplicationDetails2, this.m_Ⴐ as IChatmanApplicationContext);
+					}
+					ႥႥႨ.Ⴗ.ႳႥ(ႠႠ.Ⴀ.Ⴓ(1402238784), chatmanApplicationDetails2.IsInternal ? ႠႠ.Ⴀ.Ⴓ(1402238846) : ႠႠ.Ⴀ.Ⴓ(1402238847));
+					item2.Initialize();
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႠႠ.Ⴀ.Ⴓ(1402238845));
+					item2.Details.ApplicationLoadState = ApplicationLoadStates.Loaded;
+				}
+				catch (Exception ⴍ)
+				{
+					item2.Details.ApplicationLoadState = ApplicationLoadStates.InitializationFailed;
+					ႥႥႨ.Ⴗ.ႳႤ(string.Format(ႠႠ.Ⴀ.Ⴓ(1402238844), item2.GetType().FullName), ⴍ);
+				}
+				j++;
+			}
+		}
+
+		private ApplicationLoadStates Ⴗ(string Ⴍ)
+		{
+			try
+			{
+				Version version = ႥႥႨႰ.Ⴄ.ႨႳႳ();
+				Version version2 = new Version(Ⴍ);
+				if (version2.Revision != 0 && version2.Revision != version.Revision)
+				{
+					return ApplicationLoadStates.UnsupportedOsVersion;
+				}
+				if (version.Major < version2.Major)
+				{
+					return ApplicationLoadStates.UnsupportedChatmanVersion;
+				}
+				if (version.Major == version2.Major && version.Minor < version2.Minor)
+				{
+					return ApplicationLoadStates.UnsupportedChatmanVersion;
+				}
+				if (version.Major == version2.Major && version.Minor == version2.Minor && version.Build < version2.Build)
+				{
+					return ApplicationLoadStates.UnsupportedChatmanVersion;
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+				return ApplicationLoadStates.LoadFailed;
+			}
+			return ApplicationLoadStates.None;
+		}
+
+		private void Ⴍ(string Ⴍ)
+		{
+			List<ChatmanApplicationDetails> list = Ⴅ(Ⴍ, Ⴓ: true);
+			Ⴐ(list.ToArray(), out List<Assembly> Ⴓ, out List<IChatmanApplication> collection);
+			this.m_Ⴐ.AddRange(Ⴓ);
+			this.m_Ⴐ.AddRange(collection);
+		}
+
+		private void ႨႥ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0032, IL_0057, IL_005c
+			string text = ႨႳ() + ႠႠ.Ⴀ.Ⴓ(1402238795);
+			while (!Directory.Exists(text))
+			{
+				if (false)
+				{
+					continue;
+				}
+				return;
+			}
+			FileUtils.CopyDirectory(text, ႨႳ(), copySubFolders: true, overwrite: true);
+			FileUtils.DeleteDirectory(text);
+			while (257 <= 257 - 134)
+			{
+			}
+		}
+
+		public void Dispose()
+		{
+			Ⴃ(Ⴍ: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected void Ⴃ(bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0020, IL_0032, IL_004a, IL_0063
+			if (this.m_Ⴈ)
+			{
+				goto IL_0004;
+			}
+			if (32 < 32 - 24)
+			{
+				goto IL_0034;
+			}
+			goto IL_004c;
+			IL_0022:
+			if (732 > 732 - 575)
+			{
+				goto IL_0004;
+			}
+			goto IL_003a;
+			IL_0034:
+			Ⴈ();
+			goto IL_003a;
+			IL_003a:
+			if (377 > 377 - 292)
+			{
+				goto IL_0022;
+			}
+			goto IL_004c;
+			IL_004c:
+			if (Ⴍ)
+			{
+				if ((315 + 315 * 315) % 2 == 0)
+				{
+					goto IL_0034;
+				}
+			}
+			goto IL_0022;
+			IL_0004:
+			this.m_Ⴈ = true;
+		}
+
+		private static bool <GetLoadedNonInternalGuiApplications>b__2(IChatmanApplication application)
+		{
+			int num = 1;
+			int result;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((!application.Details.IsInternal | application.Details.ShowInternal) ? 3 : 0);
+					continue;
+				case 3:
+					num = ((application is IChatmanGuiApplication) ? 2 : 0);
+					continue;
+				case 2:
+					result = ((application.Details.ApplicationLoadState != ApplicationLoadStates.Uninstalled) ? 1 : 0);
+					break;
+				case 0:
+					result = 0;
+					break;
+				}
+				break;
+			}
+			return (byte)result != 0;
+		}
+
+		private static bool <GetFailedNonInternalApplications>b__4(ChatmanApplicationDetails appDetails)
+		{
+			int num = 0;
+			int result;
+			while (true)
+			{
+				switch (num)
+				{
+				default:
+					num = ((appDetails == null) ? 3 : 2);
+					continue;
+				case 2:
+					num = ((!appDetails.IsInternal) ? 1 : 3);
+					continue;
+				case 1:
+					num = ((appDetails.ApplicationLoadState == ApplicationLoadStates.Loaded) ? 4 : 5);
+					continue;
+				case 5:
+					result = ((appDetails.ApplicationLoadState != ApplicationLoadStates.Uninstalled) ? 1 : 0);
+					break;
+				case 4:
+					result = 0;
+					break;
+				case 3:
+					result = 0;
+					break;
+				}
+				break;
+			}
+			return (byte)result != 0;
+		}
+
+		private static IChatmanApplicationDetails <GetFailedNonInternalApplications>b__5(ChatmanApplicationDetails appDetails)
+		{
+			return appDetails;
+		}
+
+		private static bool <InitializeApplicationsInList>b__8(ChatmanApplicationDetails appDetails)
+		{
+			return appDetails.ApplicationInstance == null;
+		}
+	}
+	public class Ⴓ : IChatmanApplicationContext, ႷႭႤ.Ⴈ
+	{
+		private static Ⴓ m_Ⴐ;
+
+		private ႷႭႨ.Ⴜ m_Ⴐ;
+
+		private ႷႭႥ.Ⴗ m_Ⴐ;
+
+		public ႷႭႨ.Ⴜ Ⴐ => this.Ⴐ;
+
+		public ႷႭႥ.Ⴗ Ⴈ => (ႷႭႥ.Ⴗ)this.Ⴐ;
+
+		public IChatmanApplicationServices Ⴓ => ChatmanApplicationContext.Current.Services;
+
+		public Ⴓ(ႷႭႨ.Ⴜ Ⴍ, ႷႭႥ.Ⴗ Ⴓ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0025, IL_0048, IL_004d
+			do
+			{
+				if (ႰႰ.Ⴓ.Ⴐ != null)
+				{
+					if ((446 + 446 * 446) % 2 == 0)
+					{
+						break;
+					}
+				}
+				else
+				{
+					this.Ⴐ = Ⴍ;
+					this.Ⴐ = (ႷႭႨ.Ⴜ)Ⴓ;
+				}
+				ႰႰ.Ⴓ.Ⴐ = (ႷႭႨ.Ⴜ)this;
+			}
+			while (339 <= 339 - 53);
+		}
+
+		static Ⴓ()
+		{
+			ႰႰ.Ⴓ.Ⴐ = null;
+		}
+
+		public void Ⴅ(string Ⴍ, object Ⴓ)
+		{
+			try
+			{
+				if (Ⴍ != null && Ⴍ == ႠႠ.Ⴀ.Ⴓ(1402238735))
+				{
+					ႥႥႳႰ.Ⴍ.ႨႰ = Convert.ToBoolean(Ⴓ);
+				}
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ);
+			}
+		}
+	}
+	internal sealed class Ⴗ : IChatmanApplicationLogger
+	{
+		private string m_Ⴐ = string.Empty;
+
+		private readonly string Ⴈ = string.Empty;
+
+		public Ⴗ(IChatmanApplicationDetails Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_002b, IL_0044
+			string fileName = Ⴍ.Name ?? Ⴍ.ID.ToString();
+			Ⴈ = FileUtils.RemoveInvalidFileNameCharacters(fileName);
+		}
+
+		private void Ⴜ()
+		{
+			string text = Path.Combine(Path.Combine(ႣႳ.ႨႷႤ(ႠႠ.Ⴀ.Ⴓ(1402238734)), ႠႠ.Ⴀ.Ⴓ(1402238804)), Ⴈ);
+			FileUtils.AssureFolder(text);
+			string path = string.Format(ႠႠ.Ⴀ.Ⴓ(1402238733), Ⴈ, DateTime.Now);
+			this.m_Ⴐ = Path.Combine(text, path);
+			Ⴐ(text, new TimeSpan(-30, 0, 0, 0));
+			Ⴓ(this.m_Ⴐ, new string('-', 80) + Environment.NewLine);
+			Ⴓ(this.m_Ⴐ, ႠႠ.Ⴀ.Ⴓ(1402238732) + Ⴈ + ႠႠ.Ⴀ.Ⴓ(1402238731) + Environment.NewLine);
+			Ⴓ(this.m_Ⴐ, new string('-', 80) + Environment.NewLine);
+			Ⴓ(this.m_Ⴐ, string.Empty + Environment.NewLine);
+		}
+
+		private void Ⴐ(string Ⴍ, TimeSpan Ⴓ)
+		{
+			DateTime value = DateTime.Now.Add(Ⴓ);
+			string[] files = Directory.GetFiles(Ⴍ, ႠႠ.Ⴀ.Ⴓ(1402238730));
+			foreach (string text in files)
+			{
+				if (File.GetLastWriteTime(text).CompareTo(value) < 0)
+				{
+					try
+					{
+						File.Delete(text);
+					}
+					catch (Exception ex)
+					{
+						WriteLine(ႠႠ.Ⴀ.Ⴓ(1402238729), text, ex.Message);
+					}
+				}
+			}
+		}
+
+		public void WriteLine(string Ⴍ, params object[] Ⴓ)
+		{
+			string ⴍ;
+			try
+			{
+				ⴍ = string.Format(Ⴍ, Ⴓ);
+			}
+			catch (Exception ex)
+			{
+				ⴍ = ႠႠ.Ⴀ.Ⴓ(1402238728) + (Ⴍ ?? ႠႠ.Ⴀ.Ⴓ(1402238727)) + ႠႠ.Ⴀ.Ⴓ(1402238726) + ex.Message + ႠႠ.Ⴀ.Ⴓ(1402238725);
+			}
+			WriteLine(ⴍ);
+		}
+
+		public void WriteException(string Ⴍ, Exception Ⴓ)
+		{
+			WriteLine(ႠႠ.Ⴀ.Ⴓ(1402238724), Ⴍ, Ⴗ.Ⴓ(Ⴓ));
+		}
+
+		public void WriteException(Exception Ⴍ)
+		{
+			WriteLine(Ⴓ(Ⴍ));
+		}
+
+		public void WriteLine(string Ⴍ)
+		{
+			if (string.IsNullOrEmpty(this.m_Ⴐ))
+			{
+				Ⴜ();
+			}
+			try
+			{
+				string str = DateTime.Now.ToString(ႠႠ.Ⴀ.Ⴓ(1402238723)) + ႠႠ.Ⴀ.Ⴓ(1402238722);
+				Ⴓ(this.m_Ⴐ, str + Ⴍ + Environment.NewLine);
+			}
+			catch (Exception)
+			{
+			}
+		}
+
+		private static void Ⴓ(string Ⴍ, string Ⴓ)
+		{
+			File.AppendAllText(Ⴍ, Ⴓ);
+		}
+
+		private static string Ⴓ(Exception Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0036, IL_0052, IL_0091
+			StringBuilder stringBuilder;
+			do
+			{
+				stringBuilder = new StringBuilder();
+				stringBuilder.AppendFormat(ႠႠ.Ⴀ.Ⴓ(1402238721), Ⴍ.Message, Ⴍ.StackTrace);
+				Ⴍ = Ⴍ.InnerException;
+				while (Ⴍ != null)
+				{
+					stringBuilder.AppendFormat(ႠႠ.Ⴀ.Ⴓ(1402238720), Ⴍ.Message, Ⴍ.StackTrace);
+					Ⴍ = Ⴍ.InnerException;
+					if (355 > 355 - 33)
+					{
+					}
+				}
+			}
+			while (false);
+			return stringBuilder.ToString();
+		}
+	}
+}

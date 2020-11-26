@@ -1,0 +1,217 @@
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.EventListeners.AIM.dll
+// Rondyo.Chatman.EventListeners.AIM, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: AnyCPU (64-bit preferred)
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using ႠႳႭ;
+using ႥႥႣ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႥ;
+using ႷႭႣ;
+using ႷႭႥ;
+using ႷႭႨ;
+
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Guid("d0edb889-5fe2-4347-b403-aa0ebf248823")]
+[assembly: ComVisible(false)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace ႠႳႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] Ⴓ;
+
+		private static readonly string[] Ⴓ;
+
+		internal static string ႰႷ(int Ⴃ)
+		{
+			int num = Ⴃ ^ 0x1A7D9A5D;
+			string result;
+			if ((result = Ⴓ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "Շऩב\u0cc7ఔ෫ऩ\u05a1ջ\u093fפ\u0cf8ష෪ब\u05bcձऌ\u05a3ೱగ෩";
+				break;
+			case 1:
+				obj = "\u058bՠट\u05ffೡ\u0c29෪ण\u05bcխऑ\u05b9\u0cd4ఒ෨";
+				break;
+			case 2:
+				obj = "\u05c8೧ఉ෪\u093f\u05f8էऊ\u05ec೧ఏ෬ण\u05bfԴबע\u0cfbట\u0dfcढ\u05ecՕष׀";
+				break;
+			case 3:
+				obj = "\u093f\u05c4\u0cd8న\u0df1ब\u05aaՠछ\u05ff\u0cc5ఉ෪म\u05f8ՠख\u05ff\u0cf0చ\u0de1७\u05bdլग\u05f9\u0cfcక\u0de2\u0963\u05f6Ժ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴓ = (char[])(object)Ⴍ.Ⴓ;
+			int num2 = ⴓ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴓ[(num3 + Ⴃ) % num2]);
+			}
+			result = new string(array);
+			Ⴓ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			Ⴍ.Ⴓ = (string[])(object)array;
+			Ⴓ = new string[4];
+		}
+	}
+}
+namespace ႷႼႨ
+{
+	public class Ⴈ : IDisposable, ႷႭႥ.Ⴈ
+	{
+		private ႷႭႨ.Ⴀ m_Ⴈ;
+
+		private bool m_Ⴈ;
+
+		public bool Ⴐ => false;
+
+		public unsafe Ⴈ()
+		{
+			*(ႷႭႨ.Ⴀ*)(&this.m_Ⴈ) = ႷႭႨ.Ⴀ.Ⴐ;
+			m_Ⴈ = false;
+			base..ctor();
+		}
+
+		~Ⴈ()
+		{
+			ႰႤ(Ⴃ: false);
+		}
+
+		public unsafe void ႰႣ(ႷႭႣ.Ⴜ Ⴃ)
+		{
+			//Discarded unreachable code: IL_0020, IL_0024, IL_0049
+			do
+			{
+				bool flag = *(ႷႭႨ.Ⴀ*)(&this.m_Ⴈ) != ႷႭႨ.Ⴀ.Ⴈ;
+				while (!flag)
+				{
+					if (339 > 339 - 109)
+					{
+						return;
+					}
+				}
+				ႥႥႨႥ.Ⴓ.ႨႷႼ(ႰႠ);
+				*(ႷႭႨ.Ⴀ*)(&this.m_Ⴈ) = ႷႭႨ.Ⴀ.Ⴈ;
+			}
+			while (88 < 88 - 47);
+		}
+
+		private void ႰႠ()
+		{
+			try
+			{
+				ႥႥႣ.Ⴗ.ႳႥ(ႣႳ.ႨႠႰ(ႠႳႭ.Ⴍ.ႰႷ(444439133)), ႠႳႭ.Ⴍ.ႰႷ(444439132));
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႠႳႭ.Ⴍ.ႰႷ(444439135), ⴓ);
+			}
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႠႳႭ.Ⴍ.ႰႷ(444439134));
+		}
+
+		public unsafe void ႰႼ()
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				case 2:
+					return;
+				default:
+					num = ((*(ႷႭႨ.Ⴀ*)(&this.m_Ⴈ) != ႷႭႨ.Ⴀ.Ⴓ) ? 3 : 0);
+					break;
+				case 0:
+					num = 2;
+					break;
+				case 3:
+					*(ႷႭႨ.Ⴀ*)(&this.m_Ⴈ) = ႷႭႨ.Ⴀ.Ⴓ;
+					num = 2;
+					break;
+				}
+			}
+		}
+
+		public void Dispose()
+		{
+			ႰႤ(Ⴃ: true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected void ႰႤ(bool Ⴃ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001c, IL_0037, IL_0051, IL_0069
+			bool flag = m_Ⴈ;
+			while (!flag)
+			{
+				if ((903 + 903 * 903) % 2 == 0)
+				{
+					do
+					{
+						flag = !Ⴃ;
+						if (flag)
+						{
+							break;
+						}
+						if (187 <= 187 - 171)
+						{
+						}
+						ႰႼ();
+					}
+					while (359 < 359 - 202);
+				}
+				if (850 > 850 - 677)
+				{
+					break;
+				}
+			}
+			m_Ⴈ = true;
+		}
+	}
+}

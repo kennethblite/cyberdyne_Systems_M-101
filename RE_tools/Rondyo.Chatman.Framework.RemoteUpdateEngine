@@ -1,0 +1,1000 @@
+// Warning: Some assembly references could not be resolved automatically. This might lead to incorrect decompilation of some parts,
+// for ex. property getter/setter access. To get optimal decompilation results, please manually add the missing references to the list of loaded assemblies.
+
+// /home/kensalt/practice/discord/terminator/Chatman/Rondyo.Chatman.Framework.RemoteUpdateEngine.dll
+// Rondyo.Chatman.Framework.RemoteUpdateEngine, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c5cbd59d58549e5d
+// Global type: <Module>
+// Architecture: x86
+// Runtime: v2.0.50727
+// This assembly is signed with a strong name key.
+// Hash algorithm: SHA1
+// Public key: 0024000004800000940000000602000000240000525341310004000001000100191d59fa159c23ec130eff416767aae23b0533b32ead9676e97436dde82b04dd0aae2f743f0b259ead5186c4f921b0230d12318b1fdb6feb32914e1e733a4a9d1693e0473756c24584e144719025749e0f1333e24fa4d6a34a8e3a811b2cb7ea0cb4698f36cfe0c396ed89b6870fa9c1dd357cf01295ab5914e28faf5c2936d8
+
+using Rondyo.Chatman.Framework.URLConfiguration;
+using Rondyo.Chatman.Framework.Utils;
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Net;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows.Forms;
+using ႣႣႰ;
+using ႥႥႤ;
+using ႥႥႨ;
+using ႥႥႨႠ;
+using ႥႥႨႣ;
+using ႥႥႨႨ;
+using ႥႥႨႰ;
+using ႥႥႨႳ;
+using ႥႥႨႷ;
+using ႥႥႨႼ;
+using ႥႥႳႰ;
+using ႰႳႭ;
+using ႰႳႳ;
+using ႷႭႠ;
+using ႷႭႭ;
+using ႷႭႳ;
+using ႷႭႷ;
+
+[assembly: AssemblyCopyright("© 2008-2011 Rondyo Ltd. All Rights Reserved")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue | DebuggableAttribute.DebuggingModes.DisableOptimizations)]
+[assembly: ComVisible(false)]
+[assembly: Guid("15d5251a-d7d9-40b7-8788-05a21c2d0dee")]
+[assembly: CompilationRelaxations(8)]
+[assembly: AssemblyCompany("Rondyo")]
+[assembly: AssemblyTitle("Chatman")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: AssemblyProduct("Chatman")]
+[assembly: AssemblyVersion("1.1.0.0")]
+namespace ႥႰႰ
+{
+	public class Ⴈ : IDisposable, ႷႭႳ.Ⴐ
+	{
+		private sealed class <>c__DisplayClass1
+		{
+			public Ⴈ <>4__this;
+
+			public ႷႭႳ.Ⴍ newStatus;
+
+			public unsafe void <SetStatus>b__0(object P_0)
+			{
+				Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+				(*(ႷႭႭ.Ⴐ*)(&<>4__this.Ⴀ))(newStatus);
+			}
+		}
+
+		private sealed class <>c__DisplayClass4
+		{
+			public Ⴈ <>4__this;
+
+			public long position;
+
+			public long length;
+
+			public unsafe void <SetProgress>b__3(object P_0)
+			{
+				ႥႥႨ.Ⴗ.ႳႥ(ႰႳႭ.Ⴍ.ႠႣႣ(444439156), position, length);
+				Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+				(*(ႷႭႷ.Ⴗ*)(&<>4__this.Ⴀ))(position, length);
+			}
+		}
+
+		private readonly ႷႭႠ.Ⴐ m_Ⴀ;
+
+		private ႥႥႤ.Ⴀ m_Ⴀ;
+
+		private bool m_Ⴀ;
+
+		private ႷႭႭ.Ⴐ m_Ⴀ;
+
+		private ႷႭႷ.Ⴗ m_Ⴀ;
+
+		private ႷႭႳ.Ⴍ m_Ⴀ;
+
+		private bool Ⴄ = false;
+
+		public ႷႭႳ.Ⴍ Ⴀ => this.Ⴀ;
+
+		public unsafe event ႷႭႭ.Ⴐ Ⴐ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				*(ႷႭႭ.Ⴐ*)(&this.Ⴀ) = (ႷႭႭ.Ⴐ)Delegate.Combine(*(ႷႭႭ.Ⴐ*)(&this.Ⴀ), value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				*(ႷႭႭ.Ⴐ*)(&this.Ⴀ) = (ႷႭႭ.Ⴐ)Delegate.Remove(*(ႷႭႭ.Ⴐ*)(&this.Ⴀ), value);
+			}
+		}
+
+		public unsafe event ႷႭႷ.Ⴗ Ⴈ
+		{
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			add
+			{
+				*(ႷႭႷ.Ⴗ*)(&this.Ⴀ) = (ႷႭႷ.Ⴗ)Delegate.Combine(*(ႷႭႷ.Ⴗ*)(&this.Ⴀ), value);
+			}
+			[MethodImpl(MethodImplOptions.Synchronized)]
+			remove
+			{
+				*(ႷႭႷ.Ⴗ*)(&this.Ⴀ) = (ႷႭႷ.Ⴗ)Delegate.Remove(*(ႷႭႷ.Ⴗ*)(&this.Ⴀ), value);
+			}
+		}
+
+		public unsafe Ⴈ(ႷႭႠ.Ⴐ Ⴍ)
+		{
+			*(ႷႭႠ.Ⴐ*)(&this.Ⴀ) = Ⴍ;
+		}
+
+		private static string ႨႨႼ()
+		{
+			return ႣႳ.ႨႷႼ(ႰႳႭ.Ⴍ.ႠႣႣ(444439134));
+		}
+
+		public void ႰႠ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439129));
+			ႨႳႰ();
+		}
+
+		public void ႰႤ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439128));
+			ႨႳႨ();
+		}
+
+		public void ႰႰ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439131));
+			ႨႳႨ();
+		}
+
+		public void ႰႳ()
+		{
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439130));
+			ႨႳႰ();
+		}
+
+		~Ⴈ()
+		{
+			ႭႷႤ(Ⴍ: false);
+		}
+
+		private unsafe void ႨႳႰ()
+		{
+			int num = 1;
+			while (true)
+			{
+				switch (num)
+				{
+				case 3:
+					return;
+				default:
+					num = ((*(ႥႥႤ.Ⴀ*)(&this.Ⴀ) == null) ? 2 : 0);
+					break;
+				case 2:
+					*(ႥႥႤ.Ⴀ*)(&this.Ⴀ) = ႥႥႤ.Ⴀ.Ⴍ(ႨႳႷ, 30000.0, 86400000.0);
+					num = 3;
+					break;
+				case 0:
+					ႰႣ();
+					num = 3;
+					break;
+				}
+			}
+		}
+
+		private unsafe void ႨႳႨ()
+		{
+			//Discarded unreachable code: IL_0002, IL_001e, IL_0039
+			bool flag = *(ႥႥႤ.Ⴀ*)(&this.Ⴀ) == null;
+			while (!flag)
+			{
+				if ((68 + 68 * 68) % 2 == 0)
+				{
+					((ႥႥႤ.Ⴀ*)(&this.Ⴀ))->ႳႣႳ();
+					if ((179 + 179 * 179) % 2 == 0)
+					{
+						break;
+					}
+				}
+			}
+		}
+
+		public unsafe void ႰႣ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0031, IL_0060
+			ႥႥႨ.Ⴗ.ႨႷႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439125));
+			do
+			{
+				Ⴄ = true;
+				bool flag = *(ႥႥႤ.Ⴀ*)(&this.Ⴀ) == null;
+				do
+				{
+					if (flag)
+					{
+						return;
+					}
+				}
+				while (106 <= 106 - 102);
+				((ႥႥႤ.Ⴀ*)(&this.Ⴀ))->ႳႭ(1.0, 86400000.0);
+			}
+			while (710 < 710 - 498);
+		}
+
+		private bool ႨႳႳ()
+		{
+			string Ⴍ;
+			return ႭႷႭ(out Ⴍ);
+		}
+
+		bool ႷႭႳ.Ⴐ.Ⴓ()
+		{
+			//ILSpy generated this explicit interface implementation from .override directive in ႨႳႳ
+			return this.ႨႳႳ();
+		}
+
+		private unsafe void ႭႷႷ(ႷႭႳ.Ⴍ Ⴍ)
+		{
+			int num = 2;
+			<>c__DisplayClass1 CS$<>8__locals0 = default(<>c__DisplayClass1);
+			while (true)
+			{
+				switch (num)
+				{
+				case 0:
+					return;
+				case 1:
+					ThreadPool.QueueUserWorkItem(delegate
+					{
+						Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+						(*(ႷႭႭ.Ⴐ*)(&CS$<>8__locals0.<>4__this.Ⴀ))(CS$<>8__locals0.newStatus);
+					}, null);
+					num = 0;
+					continue;
+				}
+				CS$<>8__locals0 = new <>c__DisplayClass1();
+				CS$<>8__locals0.newStatus = Ⴍ;
+				CS$<>8__locals0.<>4__this = this;
+				this.Ⴀ = CS$<>8__locals0.newStatus;
+				num = ((*(ႷႭႭ.Ⴐ*)(&this.Ⴀ) != null) ? 1 : 0);
+			}
+		}
+
+		private unsafe void ႠႨ(long Ⴍ, long Ⴓ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0026, IL_005f
+			<>c__DisplayClass4 CS$<>8__locals0 = new <>c__DisplayClass4();
+			CS$<>8__locals0.position = Ⴍ;
+			CS$<>8__locals0.length = Ⴓ;
+			CS$<>8__locals0.<>4__this = this;
+			bool flag = *(ႷႭႷ.Ⴗ*)(&this.Ⴀ) == null;
+			do
+			{
+				if (flag)
+				{
+					return;
+				}
+			}
+			while (false);
+			do
+			{
+				ThreadPool.QueueUserWorkItem(delegate
+				{
+					ႥႥႨ.Ⴗ.ႳႥ(ႰႳႭ.Ⴍ.ႠႣႣ(444439156), CS$<>8__locals0.position, CS$<>8__locals0.length);
+					Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+					(*(ႷႭႷ.Ⴗ*)(&CS$<>8__locals0.<>4__this.Ⴀ))(CS$<>8__locals0.position, CS$<>8__locals0.length);
+				}, null);
+			}
+			while (false);
+		}
+
+		public unsafe void ႨႳႷ()
+		{
+			ႥႥႨ.Ⴗ.ႳႥ(ႰႳႭ.Ⴍ.ႠႣႣ(444439124), Thread.CurrentThread.ManagedThreadId);
+			if (*(bool*)(&this.Ⴀ))
+			{
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439127));
+				return;
+			}
+			Thread.CurrentThread.CurrentUICulture = ႣႳ.Ⴐ;
+			*(bool*)(&this.Ⴀ) = true;
+			try
+			{
+				if (ႨႳႥ())
+				{
+					ႰႷ();
+				}
+				else if (DateTime.Now > ႥႥႳႰ.Ⴍ.Ⴄ || Ⴄ)
+				{
+					Ⴄ = false;
+					try
+					{
+						ႭႷႷ(ႷႭႳ.Ⴍ.Ⴄ);
+						string text = ႥႥႨႰ.Ⴄ.ႨႳႨ();
+						ႥႥႨ.Ⴗ.ႨႷႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439126) + text);
+						string text2 = ႣႳ.ႨႷႼ(ႰႳႭ.Ⴍ.ႠႣႣ(444439121) + text + ႰႳႭ.Ⴍ.ႠႣႣ(444439120));
+						FileUtils.DeleteAllFilesInFolder(ႣႳ.ႨႷႼ(string.Empty), ႰႳႭ.Ⴍ.ႠႣႣ(444439123));
+						DateTime now = DateTime.Now;
+						HttpWebRequest ⴀ = (HttpWebRequest)WebRequest.Create(UrlConfigurationContainer.Ⴀ.ႨႷႠ(ႰႳႭ.Ⴍ.ႠႣႣ(444439122)));
+						NameValueCollection nameValueCollection = new NameValueCollection();
+						nameValueCollection.Add(ႰႳႭ.Ⴍ.ႠႣႣ(444439117), text);
+						nameValueCollection.Add(ႰႳႭ.Ⴍ.ႠႣႣ(444439116), ႥႥႳႰ.Ⴍ.Ⴅ.Ticks.ToString());
+						nameValueCollection.Add(ႰႳႭ.Ⴍ.ႠႣႣ(444439119), Environment.OSVersion.Platform.ToString());
+						nameValueCollection.Add(ႰႳႭ.Ⴍ.ႠႣႣ(444439113), Environment.OSVersion.Version.ToString());
+						string empty = string.Empty;
+						string[] ⴍ = null;
+						try
+						{
+							empty = ((ႷႭႠ.Ⴐ*)(&this.Ⴀ))->ႭႼ();
+							if (empty != string.Empty)
+							{
+								ⴍ = new string[1]
+								{
+									empty
+								};
+							}
+						}
+						catch (Exception ⴍ2)
+						{
+							ႥႥႨ.Ⴗ.ႨႷႼ(ⴍ2);
+						}
+						HttpWebResponse httpWebResponse = ႥႥႨႳ.Ⴀ.Ⴃ(ⴀ, ⴍ, nameValueCollection);
+						DateTime result;
+						if (httpWebResponse.StatusCode == HttpStatusCode.OK)
+						{
+							ႥႥႨ.Ⴗ.ႨႷႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439115));
+							ႭႷႷ(ႷႭႳ.Ⴍ.Ⴐ);
+							if (ႠႤ(httpWebResponse, text2))
+							{
+								if (!DateTime.TryParse(httpWebResponse.Headers[ႰႳႭ.Ⴍ.ႠႣႣ(444439114)], out result))
+								{
+									result = DateTime.Now.AddDays(7.0);
+								}
+								FileUtils.AssureFolder(ႨႨႼ(), throwException: true);
+								FileUtils.DeleteAllFilesInFolder(ႨႨႼ());
+								ႥႥႨႨ.Ⴅ.ႤႠ(text2, ႨႨႼ());
+								try
+								{
+									File.Delete(text2);
+								}
+								catch (Exception ⴍ2)
+								{
+									ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ2);
+								}
+								try
+								{
+									ႥႥႳႰ.Ⴍ.Ⴄ = result;
+									ႥႥႳႰ.Ⴍ.Ⴅ = now;
+								}
+								catch (Exception ⴍ2)
+								{
+									ႥႥႨ.Ⴗ.ႳႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439109), ⴍ2);
+								}
+								ႭႷႷ(ႷႭႳ.Ⴍ.Ⴅ);
+								if (ႭႷႭ(out string Ⴍ))
+								{
+									ႭႷႠ(Ⴍ);
+								}
+							}
+							else
+							{
+								try
+								{
+									ႥႥႳႰ.Ⴍ.Ⴄ = DateTime.Now.AddDays(1.0);
+								}
+								catch (Exception ⴍ2)
+								{
+									ႥႥႨ.Ⴗ.ႳႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439109), ⴍ2);
+								}
+								ႭႷႷ(ႷႭႳ.Ⴍ.Ⴓ);
+							}
+						}
+						else
+						{
+							if (!DateTime.TryParse(httpWebResponse.Headers[ႰႳႭ.Ⴍ.ႠႣႣ(444439114)], out result))
+							{
+								ႥႥႳႰ.Ⴍ.Ⴄ = DateTime.Now.AddDays(7.0);
+							}
+							try
+							{
+								ႥႥႳႰ.Ⴍ.Ⴄ = result;
+							}
+							catch (Exception ⴍ2)
+							{
+								ႥႥႨ.Ⴗ.ႳႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439109), ⴍ2);
+							}
+							ႭႷႷ(ႷႭႳ.Ⴍ.Ⴍ);
+						}
+						((ႷႭႠ.Ⴐ*)(&this.Ⴀ))->ႣႰ();
+					}
+					catch (Exception ⴍ2)
+					{
+						ႥႥႨ.Ⴗ.ႳႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439111), ⴍ2);
+						try
+						{
+							ႥႥႳႰ.Ⴍ.Ⴄ = DateTime.Now.AddDays(1.0);
+						}
+						catch (Exception ⴓ)
+						{
+							ႥႥႨ.Ⴗ.ႳႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439109), ⴓ);
+						}
+						ႭႷႷ(ႷႭႳ.Ⴍ.Ⴓ);
+					}
+				}
+			}
+			finally
+			{
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439107));
+				*(bool*)(&this.Ⴀ) = false;
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439164));
+				((ႷႭႠ.Ⴐ*)(&this.Ⴀ))->ႣႨ();
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439161));
+				ႭႷႷ(ႷႭႳ.Ⴍ.Ⴀ);
+				ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439160));
+			}
+		}
+
+		public static bool ႨႳႥ()
+		{
+			string a = ႨႳႠ();
+			return a != string.Empty;
+		}
+
+		public static bool ႭႷႭ(out string Ⴍ)
+		{
+			Ⴍ = ႨႳႠ();
+			return Ⴍ != string.Empty;
+		}
+
+		private static string ႨႳႠ()
+		{
+			string text = string.Empty;
+			Version version = null;
+			Version v = new ႣႣႰ.Ⴗ().Ⴈ;
+			if (!Directory.Exists(ႨႨႼ()))
+			{
+				return text;
+			}
+			string[] files = Directory.GetFiles(ႨႨႼ(), ႰႳႭ.Ⴍ.ႠႣႣ(444439118));
+			foreach (string text2 in files)
+			{
+				string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(text2);
+				int num = fileNameWithoutExtension.IndexOf(ႰႳႭ.Ⴍ.ႠႣႣ(444439112));
+				if (num > -1)
+				{
+					string version2 = fileNameWithoutExtension.Substring(num + 1);
+					try
+					{
+						Version version3 = new Version(version2);
+						if (version3 > v)
+						{
+							if (version == null || version3 > version)
+							{
+								text = text2;
+								version = version3;
+							}
+						}
+						else
+						{
+							try
+							{
+								File.Delete(text2);
+							}
+							catch
+							{
+							}
+						}
+					}
+					catch
+					{
+					}
+				}
+			}
+			return Path.GetFileName(text);
+		}
+
+		public void ႰႷ()
+		{
+			//Discarded unreachable code: IL_0002, IL_0027, IL_0040, IL_0052
+			string Ⴍ = string.Empty;
+			if (ႭႷႭ(out Ⴍ))
+			{
+				if ((999 + 999 * 999) % 2 == 0)
+				{
+					goto IL_0042;
+				}
+			}
+			else
+			{
+				ႭႷႷ(ႷႭႳ.Ⴍ.Ⴍ);
+			}
+			if (186 >= 186 - 169)
+			{
+				return;
+			}
+			goto IL_0042;
+			IL_0042:
+			ႭႷႷ(ႷႭႳ.Ⴍ.Ⴅ);
+			ႭႷႠ(Ⴍ);
+		}
+
+		private void ႭႷႠ(string Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_001b, IL_0025, IL_0055, IL_006c
+			if (!ႥႥႨႣ.Ⴗ.ႰႼ())
+			{
+				if (666 >= 666 - 659)
+				{
+					goto IL_004e;
+				}
+			}
+			string text = ႰႳႳ.Ⴐ.ႷႰႳ();
+			goto IL_0027;
+			IL_004e:
+			text = ႰႳႳ.Ⴐ.ႰႠ();
+			goto IL_0027;
+			IL_0027:
+			string ⴍ = text;
+			bool flag = ႥႥႨႷ.Ⴈ.Ⴈ(ⴍ, ႰႳႳ.Ⴐ.ႼႼ(), MessageBoxButtons.YesNo) != DialogResult.Yes;
+			while (true)
+			{
+				if (flag)
+				{
+					return;
+				}
+				if (325 <= 325 - 307)
+				{
+					break;
+				}
+				ႠႠ(Ⴍ, Ⴓ: true);
+				if (596 > 596 - 13)
+				{
+					return;
+				}
+			}
+			goto IL_004e;
+		}
+
+		public static bool ႭႷႣ(bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_0002, IL_0033, IL_003f
+			while (true)
+			{
+				string Ⴍ2;
+				bool flag = !ႭႷႭ(out Ⴍ2);
+				while (true)
+				{
+					bool result;
+					if (!flag)
+					{
+						if (false)
+						{
+							break;
+						}
+						result = ႠႠ(Ⴍ2, Ⴍ);
+					}
+					else
+					{
+						result = false;
+						if (512 <= 512 - 290)
+						{
+							continue;
+						}
+					}
+					return result;
+				}
+			}
+		}
+
+		public static bool ႠႠ(string Ⴍ, bool Ⴓ)
+		{
+			string text = Path.Combine(ႨႨႼ(), ႰႳႭ.Ⴍ.ႠႣႣ(444439108));
+			try
+			{
+				FileUtils.DeleteDirectory(text);
+			}
+			catch
+			{
+			}
+			FileUtils.AssureFolder(text);
+			File.Copy(Path.Combine(ႨႨႼ(), Ⴍ), Path.Combine(text, Ⴍ));
+			try
+			{
+				bool flag = !ႥႥႨႣ.Ⴗ.ႰႼ();
+				ႥႥႨ.Ⴗ.ႳႭ(ႰႳႭ.Ⴍ.ႠႣႣ(444439110), (!flag) ? string.Empty : ႰႳႭ.Ⴍ.ႠႣႣ(444439105));
+				ႥႥႨႼ.Ⴅ.Ⴍ(ႰႳႭ.Ⴍ.ႠႣႣ(444439104), ႰႳႭ.Ⴍ.ႠႣႣ(444439106) + ႣႳ.ႨႷႼ(ႰႳႭ.Ⴍ.ႠႣႣ(444439165) + Ⴍ) + ႰႳႭ.Ⴍ.ႠႣႣ(444439167), flag);
+				if (Ⴓ)
+				{
+					ႥႥႨႣ.Ⴀ.ႨႳႥ();
+				}
+				return true;
+			}
+			catch (Exception ⴓ)
+			{
+				ႥႥႨ.Ⴗ.ႳႤ(ႰႳႭ.Ⴍ.ႠႣႣ(444439166), ⴓ);
+				try
+				{
+					FileUtils.DeleteAllFilesInFolder(ႨႨႼ());
+				}
+				catch
+				{
+				}
+				try
+				{
+					FileUtils.DeleteAllFilesInFolder(text);
+				}
+				catch
+				{
+				}
+			}
+			return false;
+		}
+
+		private bool ႠႤ(WebResponse Ⴍ, string Ⴓ)
+		{
+			try
+			{
+				FileStream fileStream = new FileStream(Ⴓ, FileMode.Create, FileAccess.Write);
+				try
+				{
+					int num = 65536;
+					byte[] buffer = new byte[num];
+					int num2 = 0;
+					Stream responseStream = Ⴍ.GetResponseStream();
+					long num3 = 0L;
+					int num4;
+					while ((num4 = responseStream.Read(buffer, num2, num - num2)) > 0)
+					{
+						num3 += num4;
+						ႠႨ(num3, Ⴍ.ContentLength);
+						fileStream.Write(buffer, num2, num4);
+					}
+					ႥႥႨ.Ⴗ.ႳႭ(ႰႳႭ.Ⴍ.ႠႣႣ(444439163), fileStream.Position);
+				}
+				finally
+				{
+					fileStream.Close();
+					fileStream.Dispose();
+				}
+				return true;
+			}
+			catch (Exception ⴍ)
+			{
+				ႥႥႨ.Ⴗ.ႨႷႭ(ⴍ);
+			}
+			return false;
+		}
+
+		public void Dispose()
+		{
+			ႭႷႤ(Ⴍ: true);
+		}
+
+		protected unsafe void ႭႷႤ(bool Ⴍ)
+		{
+			//Discarded unreachable code: IL_001a, IL_0059, IL_0074, IL_00af, IL_00c4
+			if (*(bool*)(&this.Ⴐ))
+			{
+				goto IL_0076;
+			}
+			if ((675 + 675 * 675) % 2 == 0)
+			{
+				goto IL_0002;
+			}
+			goto IL_00b4;
+			IL_0036:
+			*(@null*)(&this.Ⴀ) = null;
+			goto IL_003d;
+			IL_0002:
+			if (Ⴍ)
+			{
+				if (73 < 73 - 44)
+				{
+					goto IL_0036;
+				}
+				goto IL_0090;
+			}
+			goto IL_00b4;
+			IL_003d:
+			ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439157));
+			if (331 > 331 - 103)
+			{
+				goto IL_007e;
+			}
+			goto IL_0090;
+			IL_00b4:
+			if (851 > 851 - 166)
+			{
+				goto IL_0076;
+			}
+			goto IL_0090;
+			IL_0090:
+			if (*(ႥႥႤ.Ⴀ*)(&this.Ⴀ) != null)
+			{
+				if ((496 + 496 * 496) % 2 == 0)
+				{
+					ႥႥႨ.Ⴗ.ႨႷႣ(ႰႳႭ.Ⴍ.ႠႣႣ(444439162));
+					((ႥႥႤ.Ⴀ*)(&this.Ⴀ))->Dispose();
+					goto IL_0036;
+				}
+				goto IL_003d;
+			}
+			goto IL_007e;
+			IL_007e:
+			if (false)
+			{
+				goto IL_0002;
+			}
+			goto IL_00b4;
+			IL_0076:
+			*(bool*)(&this.Ⴐ) = true;
+		}
+	}
+}
+namespace ႰႳႭ
+{
+	internal sealed class Ⴍ
+	{
+		private static readonly char[] m_Ⴍ;
+
+		private static readonly string[] m_Ⴍ;
+
+		internal static string ႠႣႣ(int Ⴍ)
+		{
+			int num = Ⴍ ^ 0x1A7D9A5D;
+			string result;
+			if ((result = ႰႳႭ.Ⴍ.m_Ⴍ[num]) != null)
+			{
+				return result;
+			}
+			object obj;
+			switch (num)
+			{
+			default:
+				obj = null;
+				break;
+			case 0:
+				obj = "\u0557ख\u05ecೡఖ\u0de4ण";
+				break;
+			case 1:
+				obj = "\u0596ձउט\u0ce5ట\u0de4ह\u05bdՆछ\u05ecೱ\u0c02";
+				break;
+			case 2:
+				obj = "׃\u0cf0ఌ\u0dd0ऽ\u05bcյऊר\u0cc7ఞ\u0de4ऩ\u05a1Օचנ\u0cfcక\u0dd7न\u05a9աग\u05ff\u0cf0ట";
+				break;
+			case 3:
+				obj = "फ\u05fdೱచ\u0df1न";
+				break;
+			case 4:
+				obj = "న\u0df1ब\u05aaՠगףೲ\u0c5b\u0df7न\u05b5ջऊרವఎ\u0df5ऩ\u05b9ՠछ\u05ad\u0cf0క\u0de2त\u05b6ձॐ\u05a3\u0cbb";
+				break;
+			case 5:
+				obj = "\u0cc6ఏ෪ऽ\u05a8սऐתವఉ\u0de0ठ\u05b7ՠछ\u05adೠఋ\u0de1ब\u05acձफ़ר\u0cfbజ෬ण\u05bdԺॐ\u05a3";
+				break;
+			case 6:
+				obj = "झ\u05b9աऍפ\u0cfbజඥ\u093f\u05bdչऑ\u05f9\u0cf0\u0c5b\u0df0ऽ\u05bcյऊרವఞ෫प\u05b1պछ\u05a3\u0cbb\u0c55";
+				break;
+			case 7:
+				obj = "\u0dd7न\u05abաओפ\u0cfbజඥ\u093f\u05bdչऑ\u05f9\u0cf0\u0c5b\u0df0ऽ\u05bcյऊרವఞ෫प\u05b1պछ\u05a3\u0cbb\u0c55";
+				break;
+			case 8:
+				obj = "Շऊ\u05ec೧ఏ෬ण\u05bfԴझץ\u0cf0ఘ෮७־ջऌ\u05adೠఋ\u0de1ब\u05acձऍ\u05adೡఒ෨न\u05aa";
+				break;
+			case 9:
+				obj = "\u059cջऽץ\u0cf0ఘ෮ऋ\u05b7զफ\u05fdೱచ\u0df1न\u05abԴछףೡఞ\u0df7त\u05b6ճ\u0952\u05adೡఓ\u0df7न\u05b9հफ़פೱ\u0c5bම७\u05a3Ԥ\u0903";
+				break;
+			case 10:
+				obj = "ף\u0cfaఏ෭त\u05b6ճफ़\u05f9\u0cfa\u0c5b෦थ\u05bdշक\u05a1ವఉ\u0de0ह\u05adզऐפ\u0cfbజ";
+				break;
+			case 11:
+				obj = "ऽץ\u0cf0ఘ෮त\u05b6ճफ़\u05eb\u0cfaఉඥस\u05a8հट\u05f9\u0cf0ఈඥॠ\u05f8շऋ\u05ff೧ఞ෫ह\u05f8բछ\u05ff೦ఒ෪ण\u05f8սऍ\u05ad";
+				break;
+			case 12:
+				obj = "మ\u0df5ऩ";
+				break;
+			case 13:
+				obj = "\u0cbb\u0c01෬ऽ";
+				break;
+			case 14:
+				obj = "घ\u05a8հ\u0954\u05a3\u0cbf";
+				break;
+			case 15:
+				obj = "\u0dd7न\u05b5ջऊר\u0cc0ఋ\u0de1ब\u05acձ";
+				break;
+			case 16:
+				obj = "Ղ";
+				break;
+			case 17:
+				obj = "\u059c";
+				break;
+			case 18:
+				obj = "\u05c2೦ఫ෩ब\u05acղऑ\u05ff\u0cf8";
+				break;
+			case 19:
+				obj = "ऽץ\u0cf4ఏ෨ब\u05b6Ձऎש\u0cf4ఏ\u0de0\u093fײԺ\u0954";
+				break;
+			case 20:
+				obj = "ఴ\u0df6छ\u05bdզऍפ\u0cfaక";
+				break;
+			case 21:
+				obj = "ಸ";
+				break;
+			case 22:
+				obj = "उ\u05b7գऐס\u0cfaచ\u0de1त\u05b6ճफ़\u05f8\u0ce5ట\u0de4ह\u05bdԴघפ\u0cf9ఞ";
+				break;
+			case 23:
+				obj = "\u0dcbउ";
+				break;
+			case 24:
+				obj = "Ցऌ\u05ff\u0cfaఉඥस\u05a8հट\u05f9\u0cfcక\u0de2७\u05bbջऐ\u05eb\u0cfcజ\u0df0\u093f\u05b9ՠगע\u0cfb\u0c5b\u0de4फ\u05acձऌ\u05adೠఋ\u0de1ब\u05acձ";
+				break;
+			case 25:
+				obj = "֊աऐ";
+				break;
+			case 26:
+				obj = "\u05cb\u0cf4ఒ෩न\u05bcԴऊעವట෪\u093a\u05b6ոऑ\u05ecೱ\u0c5b\u0df0ऩ\u05a8յऊר೦";
+				break;
+			case 27:
+				obj = "ऽ\u05f8೧ఉ\u0de0ण\u05acԴऋ\u05fe\u0cf0ఉඥत\u05abկ\u094eװವచ\u0de1ठ\u05b1պ";
+				break;
+			case 28:
+				obj = "\u0c5b෫ढ\u05ac";
+				break;
+			case 29:
+				obj = "\u0cf8ఈ෬न\u05a0ձझ\u05a3\u0cf0\u0c03\u0de0";
+				break;
+			case 30:
+				obj = "फ\u05b1պटס\u0cf9\u0c02ඥ\u093e\u05bdշऊפ\u0cfaక";
+				break;
+			case 31:
+				obj = "ඪत\u05f8Զ";
+				break;
+			case 32:
+				obj = "Ձऎש\u0cf4ఏ\u0de0ऑ֊աऐב";
+				break;
+			case 33:
+				obj = "\u05bcձऒרೡఒ෫प\u05f8շऑנ\u0ce5ఞ\u0df6\u093e\u05bdհफ़ש\u0cf4ఏ\u0de4";
+				break;
+			case 34:
+				obj = "\u05af";
+				break;
+			case 35:
+				obj = "\u093b\u05ff೧ఔ\u0df7७\u05aaաऐף\u0cfcక\u0de2७\u05adդच\u05ecೡఞ";
+				break;
+			case 36:
+				obj = "న\u0de0ह\u05b1պङ\u05ad\u0cc6ఏ\u0de4ह\u05bdԴऊעವఒ\u0de1ड\u05bd";
+				break;
+			case 37:
+				obj = "\u0cc0ఋ\u0de1ब\u05acձफ़\u05f9\u0cfcఖ\u0de0\u093f\u05f8դऌע\u0cf6\u0c5b\u0de0व\u05b1ՠगףೲ";
+				break;
+			case 38:
+				obj = "ञ\u05adշझר೦ఈ\u0de3स\u05b4ոइ\u05adೱఔ\u0df2ण\u05b4ջटש\u0cf0టඥस\u05a8հट\u05f9\u0cf0\u0c41ඥशרթफ़ׯ೬ఏ\u0de0\u093e";
+				break;
+			case 39:
+				obj = "ශत\u05abդऑ\u05fe\u0cfcక\u0de2७֊ձओעೡఞ\u0dd0ऽ\u05bcյऊר\u0cd0క\u0de2त\u05b6ձळ\u05ec\u0cfbచ\u0de2न\u05aaԺॐ\u05a3\u0cbb";
+				break;
+			case 40:
+				obj = "Նछנ\u0cfaఏ\u0de0घ\u05a8հट\u05f9\u0cf0\u0c3e෫प\u05b1պछ׀\u0cf4క\u0de4प\u05bdզफ़\u05c9\u0cfcఈ\u0df5ढ\u05abձच\u05a3";
+				break;
+			case 41:
+				obj = "\u058bձऊ\u05ad\u0ce5ఉ෪प\u05aaձऍ\u05feವ\u0c00ඵर\u05f8Ԯफ़\u05f6ತఆ";
+				break;
+			}
+			string text = (string)obj;
+			int length;
+			char[] array = new char[length = text.Length];
+			char[] ⴍ = (char[])(object)ႰႳႭ.Ⴍ.m_Ⴍ;
+			int num2 = ⴍ.Length;
+			for (int num3 = 0; num3 < length; num3 = 1 + num3)
+			{
+				array[num3] = (char)(ushort)(text[num3] ^ ⴍ[(num3 + Ⴍ) % num2]);
+			}
+			result = new string(array);
+			ႰႳႭ.Ⴍ.m_Ⴍ[num] = result;
+			return result;
+		}
+
+		static Ⴍ()
+		{
+			byte[] publicKeyToken;
+			int num = (publicKeyToken = Assembly.GetExecutingAssembly().GetName().GetPublicKeyToken()).Length;
+			char[] array = new char[num];
+			for (int i = 0; i < num; i++)
+			{
+				int num2 = i;
+				int num3 = publicKeyToken[i] & 0xFF;
+				array[num2] = (char)(num3 ^ (num3 << 4));
+			}
+			ႰႳႭ.Ⴍ.m_Ⴍ = (string[])(object)array;
+			m_Ⴍ = new string[42];
+		}
+	}
+}
+namespace ႰႳႳ
+{
+	[CompilerGenerated]
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
+	[DebuggerNonUserCode]
+	internal sealed class Ⴐ
+	{
+		private static ResourceManager Ⴈ;
+
+		private static CultureInfo Ⴓ;
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static ResourceManager Ⴄ
+		{
+			get
+			{
+				//Discarded unreachable code: IL_0031, IL_0052
+				if (object.ReferenceEquals(Ⴈ, null))
+				{
+					if (302 >= 302 - 25)
+					{
+						goto IL_0002;
+					}
+					goto IL_0022;
+				}
+				goto IL_0054;
+				IL_0054:
+				return Ⴈ;
+				IL_0022:
+				if (false)
+				{
+					goto IL_0002;
+				}
+				goto IL_0054;
+				IL_0002:
+				ResourceManager resourceManager = Ⴈ = new ResourceManager("ႰႳႳ.Ⴐ", typeof(Ⴐ).Assembly);
+				goto IL_0022;
+			}
+		}
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		internal static CultureInfo Ⴄ
+		{
+			get
+			{
+				return Ⴓ;
+			}
+			set
+			{
+				Ⴓ = value;
+			}
+		}
+
+		internal Ⴐ()
+		{
+		}
+
+		internal static string ႼႼ()
+		{
+			return Ⴐ.Ⴄ.GetString(ႰႳႭ.Ⴍ.ႠႣႣ(444439133), Ⴓ);
+		}
+
+		internal static string ႷႰႳ()
+		{
+			return Ⴐ.Ⴄ.GetString(ႰႳႭ.Ⴍ.ႠႣႣ(444439132), Ⴓ);
+		}
+
+		internal static string ႰႠ()
+		{
+			return Ⴐ.Ⴄ.GetString(ႰႳႭ.Ⴍ.ႠႣႣ(444439135), Ⴓ);
+		}
+	}
+}
